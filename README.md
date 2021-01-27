@@ -1,5 +1,10 @@
 # My Best Life
 
+## Links
+
+- Staging: [https://my-best-life.vercel.app/](https://my-best-life.vercel.app/)
+- CMS: [https://my-best-life.vercel.app/admin](https://my-best-life.vercel.app/admin)
+
 ## Development
 
 This project was created with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) using the [`with-typescript-styled-components`](https://github.com/vercel/next.js/tree/canary/examples/with-typescript-styled-components) template.
