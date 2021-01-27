@@ -13,8 +13,8 @@ export default {
   },
   collections: [
     {
-      label: 'Service',
-      label_singular: 'Services',
+      label: 'Services',
+      label_singular: 'Service',
       name: 'service',
       folder: 'content/services',
       create: true,
