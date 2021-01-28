@@ -1,4 +1,10 @@
-import Document, { DocumentContext } from 'next/document'
+import Document, {
+  DocumentContext,
+  Head,
+  Html,
+  Main,
+  NextScript,
+} from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
 interface DocumentProps {
@@ -32,5 +38,32 @@ export default class MyDocument extends Document {
     } finally {
       sheet.seal()
     }
+  }
+
+  render(): JSX.Element {
+    return (
+      <Html>
+        <Head>
+          <link
+            rel="preload"
+            href="/fonts/Catamaran-Bold.ttf"
+            as="font"
+            type="font/ttf"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/Lato-Regular.ttf"
+            as="font"
+            type="font/ttf"
+            crossOrigin="anonymous"
+          />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
   }
 }
