@@ -17,8 +17,9 @@ export default {
       label_singular: 'Service',
       name: 'service',
       folder: 'content/services',
+      slug: '{{slug}}',
       create: true,
-      summary: '{{organisation}}: {{shortDescription}}',
+      summary: '{{organisation}}: {{title}}',
       fields: [
         {
           label: 'Organisation',
@@ -28,9 +29,8 @@ export default {
         },
         {
           label: 'Service or project name',
-          name: 'serviceName',
+          name: 'title',
           widget: 'string',
-          required: false,
         },
         {
           label: 'Short description',
