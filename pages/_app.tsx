@@ -1,6 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
 import type { AppProps } from 'next/app'
+import { ThemeProvider } from 'styled-components'
+
+import { MyBestLifeTheme, GlobalStyle } from '../src/Theme'
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
@@ -8,7 +11,10 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       <Head>
         <title>My Best Life</title>
       </Head>
-      <Component {...pageProps} />
+      <ThemeProvider theme={MyBestLifeTheme}>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   )
 }
