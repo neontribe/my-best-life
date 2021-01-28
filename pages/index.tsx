@@ -20,9 +20,9 @@ interface PageProps {
 export const Home: NextPage<PageProps> = ({ services }) => {
   return (
     <>
-      <Title>My Best Life</Title>
+      <Title>Support in Lambeth</Title>
       <ul>
-        {services.map((service) => (
+        {services.map((service: ServicePreview) => (
           <Card key={service.organisation}>
             <h2>{service.organisation}</h2>
             <p>{service.shortDescription}</p>
@@ -36,11 +36,11 @@ export const Home: NextPage<PageProps> = ({ services }) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const services = getServicePreviews()
+  const servicePreviews = getServicePreviews()
 
   return {
     props: {
-      services,
+      services: servicePreviews,
     },
   }
 }
