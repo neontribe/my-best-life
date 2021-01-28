@@ -2,6 +2,22 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import path from 'path'
 
+// This interface should match the config of the CMS
+interface Service {
+  organisation: string
+  title: string
+  shortDescription: string
+  image?: string
+  description: string
+  categories?: Array<string>
+  cost?: { costValue: number; costQualifier: string; costExplanation: string }
+  age?: { minAge: number; maxAge: number }
+  gender?: string
+  eligibility?: string
+  format?: '' | 'oneToOne' | 'meetingGroup' | 'overThePhone'
+  location?: string
+}
+
 export interface ServicePreview {
   organisation: string
   shortDescription: string
@@ -11,26 +27,12 @@ export interface ServicePreview {
   categories?: Array<string>
 }
 
-export interface ServiceDetail {
-  organisation: string
-  shortDescription: string
-  description: string
-  imagePath?: string
-  cost?: string
-  age?: string
-  gender?: string
-  eligibility?: string
-  format?: string
-  location?: string
-  categories?: Array<string>
-}
-
 const contentDirectory = path.join(process.cwd(), './content/services')
 
-export function getServicePreviews(): Array<ServicePreview> {
+function getServices(): Array<Service> {
   const fileNames = fs.readdirSync(contentDirectory)
 
-  const allServicePreviews: Array<ServicePreview> = fileNames
+  const allServices: Array<Service> = fileNames
     .filter((file) => file.endsWith('.md'))
     .map((fileName) => {
       // Read markdown file as string
@@ -40,31 +42,46 @@ export function getServicePreviews(): Array<ServicePreview> {
       // Use gray-matter to parse the file frontmatter
       const { data } = matter(fileContents)
 
-      const returnObj = {
-        ...{ organisation: data.organisation },
+      // Assert that our result must be a service
+      const service = data as Service
 
-        ...(data.shortDescription && {
-          shortDescription: data.shortDescription,
+      return service
+    })
+
+  return allServices
+}
+
+export function getServicePreviews(): Array<ServicePreview> {
+  const everything = getServices()
+
+  const allServicePreviews: Array<ServicePreview> = everything.map(
+    (service) => {
+      const servicePreview = {
+        organisation: service.organisation,
+        shortDescription: service.shortDescription,
+
+        ...((service.age?.maxAge || service.age?.minAge) && {
+          age: formatAgeDisplay(service.age.minAge, service.age.maxAge),
         }),
 
-        ...((data.age.maxAge || data.age.minAge) && {
-          age: getAgeDisplay(data.age.minAge, data.age.maxAge),
-        }),
-
-        ...((data.cost.costValue ||
-          data.cost.costValue === 0 ||
-          data.cost.costQualifier) && {
-          cost: getCostDisplay(data.cost.costValue, data.cost.costQualifier),
+        ...((service.cost?.costValue ||
+          service.cost?.costValue === 0 ||
+          service.cost?.costQualifier) && {
+          cost: formatCostDisplay(
+            service.cost.costValue,
+            service.cost.costQualifier
+          ),
         }),
       }
 
-      return returnObj
-    })
+      return servicePreview
+    }
+  )
 
   return allServicePreviews
 }
 
-function getAgeDisplay(min: number, max: number): string {
+function formatAgeDisplay(min: number, max: number): string {
   // There is only a minimum age
   if (!max) {
     return `${min}+`
@@ -75,11 +92,15 @@ function getAgeDisplay(min: number, max: number): string {
   }
   // There is an age range
   else {
-    return `${min}-${max}`
+    if (min === max) {
+      return `${min}`
+    } else {
+      return `${min}-${max}`
+    }
   }
 }
 
-function getCostDisplay(cost: number, qualifier: string): string {
+function formatCostDisplay(cost: number, qualifier: string): string {
   if (qualifier) {
     return qualifier
   } else if (cost === 0) {

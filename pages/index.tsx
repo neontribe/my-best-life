@@ -23,6 +23,7 @@ export const Home: NextPage<PageProps> = ({ services }) => {
       <Title>Support in Lambeth</Title>
       <ul>
         {services.map((service: ServicePreview) => (
+          // Temporary card markup
           <Card key={service.organisation}>
             <h2>{service.organisation}</h2>
             <p>{service.shortDescription}</p>
