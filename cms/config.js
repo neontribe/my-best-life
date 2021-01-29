@@ -41,9 +41,22 @@ export default {
         {
           label: 'Image',
           name: 'image',
-          widget: 'image',
+          widget: 'object',
           required: false,
-          hint: '',
+          fields: [
+            {
+              label: 'Image file',
+              name: 'image',
+              widget: 'image',
+            },
+            {
+              label: 'Image alt text',
+              name: 'imageAlt',
+              widget: 'string',
+              hint:
+                'A concise text description of the image, fo screen readers and other assistive technology.',
+            },
+          ],
         },
         {
           label: 'Description',

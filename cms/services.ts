@@ -8,6 +8,7 @@ interface Service {
   title: string
   shortDescription: string
   image?: string
+  imageAlt?: string
   description: string
   categories?: Array<string>
   cost?: { costValue: number; costQualifier: string; costExplanation: string }
@@ -19,9 +20,10 @@ interface Service {
 }
 
 export interface ServicePreview {
-  organisation: string
+  title: string
   shortDescription: string
   imagePath?: string
+  imageAlt?: string
   cost?: string
   age?: string
   categories?: Array<string>
@@ -57,7 +59,7 @@ export function getServicePreviews(): Array<ServicePreview> {
   const allServicePreviews: Array<ServicePreview> = everything.map(
     (service) => {
       const servicePreview = {
-        organisation: service.organisation,
+        title: service.title,
         shortDescription: service.shortDescription,
 
         ...((service.age?.maxAge || service.age?.minAge) && {

@@ -16,6 +16,7 @@ export const MyBestLifeTheme: DefaultTheme = {
     yellow_light: '#FDECC5',
 
     white: '#ffffff',
+    shadow: '#C9C9C9B7',
   },
 
   fontSizes: {
@@ -145,7 +146,7 @@ export const GlobalStyle = createGlobalStyle`
   h1, h2, h3, h4, h5, h6 {
     font-size: 100%;
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
   }
 
 `

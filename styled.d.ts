@@ -12,6 +12,7 @@ declare module 'styled-components' {
       aqua_light: string
       yellow_light: string
       white: string
+      shadow: string
     }
 
     fontSizes: {
