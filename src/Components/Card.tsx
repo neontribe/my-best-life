@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 
-import { ServicePreview } from '../cms/services'
+import { ServicePreview } from '../../cms/services'
+import { VisuallyHidden } from './VisuallyHidden'
 
 const CardContainer = styled.li`
   border-radius: 2rem;
@@ -14,6 +15,7 @@ const CardContainer = styled.li`
 
 const ServiceName = styled.p`
   font-size: ${(props) => props.theme.fontSizes.small};
+  margin-bottom: 1rem;
 `
 
 const Description = styled.h2`
@@ -21,14 +23,16 @@ const Description = styled.h2`
   color: ${(props) => props.theme.colours.purple};
   display: flex;
   font-size: ${(props) => props.theme.fontSizes.heading};
-  margin: 0.5rem 0;
-  min-height: 6rem;
+  margin-bottom: 1rem;
+  min-height: 4rem;
   text-transform: capitalize;
 `
 
 const TitleContainer = styled.div`
   font-family: 'Catamaran', sans-serif;
   font-weight: bold;
+  display: flex;
+  flex-direction: column-reverse;
   width: calc(60% - 1rem);
 `
 
@@ -42,11 +46,32 @@ const ImageContainer = styled.div`
   overflow: hidden;
 `
 
-const Category = styled.li``
+const CategoryList = styled.ul`
+  margin-bottom: 1rem;
+`
 
-const CardFooter = styled.div`
+const Category = styled.li`
+  font-family: 'Catamaran', sans-serif;
+  font-weight: bold;
+  font-size: ${(props) => props.theme.fontSizes.small};
+  display: inline;
+  margin-right: 1rem;
+
+  &:before {
+    content: '';
+    background: ${(props) => props.theme.colours.yellow};
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+`
+
+const DetailContainer = styled.div`
   align-items: flex-end;
   display: flex;
+  justify-content: space-between;
 `
 
 const DetailArea = styled.div`
@@ -65,15 +90,26 @@ const ButtonLink = styled.a`
   font-family: 'Catamaran', sans-serif;
   font-weight: bold;
   height: 2rem;
-  padding: 0.2rem 2.5rem;
+  border: 3px solid transparent;
+  padding: 0.2rem 2rem;
   text-decoration: none;
+
+  &:focus {
+    outline: 2px dashed ${(props) => props.theme.colours.blue};
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    transition: 0.3s;
+    background-color: ${(props) => props.theme.colours.purple_light};
+    color: ${(props) => props.theme.colours.purple};
+  }
 `
 
 export const Card = ({
   title,
   shortDescription,
-  imagePath,
-  imageAlt,
+  image,
   cost,
   age,
   categories,
@@ -81,34 +117,38 @@ export const Card = ({
   return (
     <CardContainer>
       <ImageContainer>
-        <Image
-          src={imagePath ? imagePath : 'https://placeimg.com/640/480/nature'}
-          alt={imageAlt}
-          layout="fill"
-          objectFit="cover"
-        />
+        {image?.image && (
+          <Image
+            src={`/${image.image}`}
+            alt={image.imageAlt ? image.imageAlt : ''}
+            layout="fill"
+            objectFit="cover"
+          />
+        )}
       </ImageContainer>
 
       <TitleContainer>
-        <ServiceName>{title}</ServiceName>
         <Description>{shortDescription}</Description>
+        <ServiceName>{title}</ServiceName>
       </TitleContainer>
 
-      <ul>
+      <CategoryList>
         {categories?.map((cat) => {
           return <Category key={cat}>{cat}</Category>
         })}
-      </ul>
-      <CardFooter>
+        <Category key={'aaa'}>{'Fun'}</Category>
+        <Category key={'bbb'}>{'Some long text category'}</Category>
+      </CategoryList>
+
+      <DetailContainer>
         <DetailArea>
           <p>Cost: {cost}</p>
-
           <p>Age Range: {age}</p>
         </DetailArea>
         <ButtonLink href="/">
-          <span>info</span>
+          <VisuallyHidden>{`${title} `}</VisuallyHidden> <span>info</span>
         </ButtonLink>
-      </CardFooter>
+      </DetailContainer>
     </CardContainer>
   )
 }
