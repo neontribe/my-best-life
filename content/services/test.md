@@ -7,8 +7,8 @@ image:
   imageAlt: A sunlit path in a forest of tall trees.
 description: A longer description of a test service
 categories:
-  category1: mentalHealth
-  category2: friends
+  category1: Keeping Safe
+  category2: My Rights and the Law
 cost:
   costValue: 3
 age:

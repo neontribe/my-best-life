@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 
-import { ServicePreview } from '../../cms/services'
+import { ServicePreview } from '../../pages/index'
 import { VisuallyHidden } from './VisuallyHidden'
 
 const CardContainer = styled.li`
@@ -37,13 +37,13 @@ const TitleContainer = styled.div`
 `
 
 const ImageContainer = styled.div`
+  border-bottom-left-radius: 6rem;
   height: 8rem;
+  overflow: hidden;
   position: absolute;
   right: 0;
   top: 0;
   width: 40%;
-  border-bottom-left-radius: 6rem;
-  overflow: hidden;
 `
 
 const CategoryList = styled.ul`
@@ -60,11 +60,11 @@ const Category = styled.li`
   &:before {
     content: '';
     background: ${(props) => props.theme.colours.yellow};
-    width: 0.8em;
-    height: 0.8em;
     border-radius: 50%;
     display: inline-block;
+    height: 0.8em;
     margin-right: 0.5rem;
+    width: 0.8em;
   }
 `
 
@@ -84,13 +84,13 @@ const ButtonLink = styled.a`
   align-items: center;
   background-color: ${(props) => props.theme.colours.purple};
   border-radius: 5rem;
+  border: 3px solid transparent;
   color: ${(props) => props.theme.colours.white};
   display: block;
   display: flex;
   font-family: 'Catamaran', sans-serif;
   font-weight: bold;
   height: 2rem;
-  border: 3px solid transparent;
   padding: 0.2rem 2rem;
   text-decoration: none;
 
@@ -100,9 +100,9 @@ const ButtonLink = styled.a`
   }
 
   &:hover {
-    transition: 0.3s;
     background-color: ${(props) => props.theme.colours.purple_light};
     color: ${(props) => props.theme.colours.purple};
+    transition: 0.3s;
   }
 `
 
@@ -132,13 +132,13 @@ export const Card = ({
         <ServiceName>{title}</ServiceName>
       </TitleContainer>
 
-      <CategoryList>
-        {categories?.map((cat) => {
-          return <Category key={cat}>{cat}</Category>
-        })}
-        <Category key={'aaa'}>{'Fun'}</Category>
-        <Category key={'bbb'}>{'Some long text category'}</Category>
-      </CategoryList>
+      {categories && (
+        <CategoryList>
+          {categories?.map((cat) => {
+            return <Category key={cat}>{cat}</Category>
+          })}
+        </CategoryList>
+      )}
 
       <DetailContainer>
         <DetailArea>
