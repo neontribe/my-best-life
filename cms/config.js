@@ -54,7 +54,7 @@ export default {
               name: 'imageAlt',
               widget: 'string',
               hint:
-                'A concise text description of the image, fo screen readers and other assistive technology.',
+                'A concise text description of the image, for screen readers and other assistive technology.',
             },
           ],
         },
