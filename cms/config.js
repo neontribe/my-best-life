@@ -220,6 +220,12 @@ export default {
           hint:
             'Where possible an actual address of the service, not the head office',
         },
+        {
+          label: 'How to access',
+          name: 'access',
+          widget: 'text',
+          required: false,
+        },
       ],
     },
   ],

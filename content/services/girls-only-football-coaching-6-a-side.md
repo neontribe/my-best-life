@@ -2,6 +2,9 @@
 organisation: "The St Matthew's Project"
 title: ' Girls only football coaching & 6-a-side'
 shortDescription: Football coaching and 6-side games
+image:
+  image: img/footy.jpg
+  imageAlt: A football in an empty stadium.
 description: Players of all abilities are welcome to join in for two hours of
   coaching and competitive 6-a-side games. You also get free trips out to
   stadiums, theatres, Us Girls events, etc.

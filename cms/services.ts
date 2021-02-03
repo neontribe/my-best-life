@@ -4,6 +4,7 @@ import path from 'path'
 
 // This interface should match the config of the CMS
 export interface Service {
+  id: string
   organisation: string
   title: string
   shortDescription: string
@@ -18,6 +19,22 @@ export interface Service {
   location?: string
 }
 
+export interface ServiceDetail {
+  id: string
+  organisation: string
+  title: string
+  image?: { image: string; imageAlt: string }
+  description: string
+  categories?: { category1: string; category2: string }
+  access?: string
+}
+
+interface idParams {
+  params: {
+    id: string
+  }
+}
+
 const contentDirectory = path.join(process.cwd(), './content/services')
 
 export function getServices(): Array<Service> {
@@ -30,14 +47,43 @@ export function getServices(): Array<Service> {
       const fullPath = path.join(contentDirectory, fileName)
       const fileContents = fs.readFileSync(fullPath, 'utf8')
 
+      const serviceId = fileName.replace(/\.md$/, '')
+
       // Use gray-matter to parse the file frontmatter
       const { data } = matter(fileContents)
 
-      // Assert that our result must be a service
-      const service = data as Service
+      // Add id and assert that our result must be a Service
+      const service = { id: serviceId, ...data } as Service
 
       return service
     })
 
   return allServices
+}
+
+export function getAllServiceIds(): Array<idParams> {
+  const fileNames = fs.readdirSync(contentDirectory)
+
+  return fileNames.map((fileName) => {
+    return {
+      params: {
+        id: fileName.replace(/\.md$/, ''),
+      },
+    }
+  })
+}
+
+export function getServiceData(id: string): ServiceDetail {
+  const fullPath = path.join(contentDirectory, `${id}.md`)
+  const fileContents = fs.readFileSync(fullPath, 'utf8')
+
+  // Use gray-matter to parse the file frontmatter
+  const { data } = matter(fileContents)
+
+  // Assert that our result must be a ServiceDetail
+  const serviceDetails = data as ServiceDetail
+
+  return {
+    ...serviceDetails,
+  }
 }

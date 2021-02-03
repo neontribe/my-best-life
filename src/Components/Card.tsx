@@ -1,5 +1,6 @@
-import styled from 'styled-components'
 import Image from 'next/image'
+import Link from 'next/link'
+import styled from 'styled-components'
 
 import { ServicePreview } from '../../pages/index'
 import { VisuallyHidden } from './VisuallyHidden'
@@ -86,7 +87,6 @@ const ButtonLink = styled.a`
   border-radius: 5rem;
   border: 3px solid transparent;
   color: ${(props) => props.theme.colours.white};
-  display: block;
   display: flex;
   font-family: 'Catamaran', sans-serif;
   font-weight: bold;
@@ -107,6 +107,7 @@ const ButtonLink = styled.a`
 `
 
 export const Card = ({
+  id,
   title,
   shortDescription,
   image,
@@ -145,9 +146,11 @@ export const Card = ({
           <p>Cost: {cost}</p>
           <p>Age Range: {age}</p>
         </DetailArea>
-        <ButtonLink href="/">
-          <VisuallyHidden>{`${title} `}</VisuallyHidden> <span>info</span>
-        </ButtonLink>
+        <Link href={`/service/${id}`} passHref>
+          <ButtonLink>
+            <VisuallyHidden>{`${title} `}</VisuallyHidden> <span>info</span>
+          </ButtonLink>
+        </Link>
       </DetailContainer>
     </CardContainer>
   )

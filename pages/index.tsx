@@ -3,13 +3,15 @@ import styled from 'styled-components'
 
 import { Service, getServices } from '../cms/services'
 import { CardList } from '../src/Components/CardList'
+import { Layout } from '../src/Components/Layout'
 import { VisuallyHidden } from '../src/Components/VisuallyHidden'
 
-interface PageProps {
+interface ListPageProps {
   services: Array<ServicePreview>
 }
 
 export interface ServicePreview {
+  id: string
   title: string
   shortDescription: string
   image?: { image: string; imageAlt: string }
@@ -22,7 +24,7 @@ const Header = styled.header`
   background-color: ${(props) => props.theme.colours.aqua};
   clip-path: url(#wave);
   height: 8rem;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 1;
@@ -34,8 +36,6 @@ const HeaderContents = styled.div`
   height: 6rem;
   justify-content: space-around;
   margin-bottom: 2rem;
-  margin: auto;
-  max-width: 600px;
 `
 
 const Title = styled.h1`
@@ -50,9 +50,9 @@ const ButtonLink = styled.div`
   width: 2.5rem;
 `
 
-export const Home: NextPage<PageProps> = ({ services }) => {
+export const ListPage: NextPage<ListPageProps> = ({ services }) => {
   return (
-    <>
+    <Layout>
       <VisuallyHidden>
         <svg width="0" height="0">
           <defs>
@@ -70,11 +70,11 @@ export const Home: NextPage<PageProps> = ({ services }) => {
         </HeaderContents>
       </Header>
       <CardList services={services} />
-    </>
+    </Layout>
   )
 }
 
-export default Home
+export default ListPage
 
 export const getStaticProps: GetStaticProps = async () => {
   const allServices = getServices()
@@ -82,6 +82,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const allServicePreviews: Array<ServicePreview> = allServices.map(
     (service: Service) => {
       const servicePreview = {
+        id: service.id,
         title: service.title,
         shortDescription: service.shortDescription,
 
