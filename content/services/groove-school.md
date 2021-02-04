@@ -3,13 +3,13 @@ organisation: Yellow Qube
 title: Groove School
 shortDescription: Learn how to use DJ controllers and instrument machines in a
   live performing environment
-description: "Learn how to use vinyl, CDJs and DJ controllers. Compile playlists
+description: 'Learn how to use vinyl, CDJs and DJ controllers. Compile playlists
   for performance to include beats and tracks. Learn how to use drum machines,
   synthesisers, ableton push, native instrument machine and iPads in a live
-  performing environment. "
+  performing environment. '
 categories:
-  category1: mentalHealth
-  category2: friends
+  category1: Mental Health
+  category2: Friends
 cost:
   costValue: 0
 age:

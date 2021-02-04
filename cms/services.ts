@@ -3,13 +3,14 @@ import matter from 'gray-matter'
 import path from 'path'
 
 // This interface should match the config of the CMS
-interface Service {
+export interface Service {
+  id: string
   organisation: string
   title: string
   shortDescription: string
-  image?: string
+  image?: { image: string; imageAlt: string }
   description: string
-  categories?: Array<string>
+  categories?: { category1: string; category2: string }
   cost?: { costValue: number; costQualifier: string; costExplanation: string }
   age?: { minAge: number; maxAge: number }
   gender?: string
@@ -18,18 +19,25 @@ interface Service {
   location?: string
 }
 
-export interface ServicePreview {
+export interface ServiceDetail {
+  id: string
   organisation: string
-  shortDescription: string
-  imagePath?: string
-  cost?: string
-  age?: string
-  categories?: Array<string>
+  title: string
+  image?: { image: string; imageAlt: string }
+  description: string
+  categories?: { category1: string; category2: string }
+  access?: string
+}
+
+interface idParams {
+  params: {
+    id: string
+  }
 }
 
 const contentDirectory = path.join(process.cwd(), './content/services')
 
-function getServices(): Array<Service> {
+export function getServices(): Array<Service> {
   const fileNames = fs.readdirSync(contentDirectory)
 
   const allServices: Array<Service> = fileNames
@@ -39,11 +47,13 @@ function getServices(): Array<Service> {
       const fullPath = path.join(contentDirectory, fileName)
       const fileContents = fs.readFileSync(fullPath, 'utf8')
 
+      const serviceId = fileName.replace(/\.md$/, '')
+
       // Use gray-matter to parse the file frontmatter
       const { data } = matter(fileContents)
 
-      // Assert that our result must be a service
-      const service = data as Service
+      // Add id and assert that our result must be a Service
+      const service = { id: serviceId, ...data } as Service
 
       return service
     })
@@ -51,61 +61,29 @@ function getServices(): Array<Service> {
   return allServices
 }
 
-export function getServicePreviews(): Array<ServicePreview> {
-  const everything = getServices()
+export function getAllServiceIds(): Array<idParams> {
+  const fileNames = fs.readdirSync(contentDirectory)
 
-  const allServicePreviews: Array<ServicePreview> = everything.map(
-    (service) => {
-      const servicePreview = {
-        organisation: service.organisation,
-        shortDescription: service.shortDescription,
-
-        ...((service.age?.maxAge || service.age?.minAge) && {
-          age: formatAgeDisplay(service.age.minAge, service.age.maxAge),
-        }),
-
-        ...((service.cost?.costValue ||
-          service.cost?.costValue === 0 ||
-          service.cost?.costQualifier) && {
-          cost: formatCostDisplay(
-            service.cost.costValue,
-            service.cost.costQualifier
-          ),
-        }),
-      }
-
-      return servicePreview
+  return fileNames.map((fileName) => {
+    return {
+      params: {
+        id: fileName.replace(/\.md$/, ''),
+      },
     }
-  )
-
-  return allServicePreviews
+  })
 }
 
-function formatAgeDisplay(min: number, max: number): string {
-  // There is only a minimum age
-  if (!max) {
-    return `${min}+`
-  }
-  // There is only a maximum age
-  else if (!min) {
-    return `under ${max}`
-  }
-  // There is an age range
-  else {
-    if (min === max) {
-      return `${min}`
-    } else {
-      return `${min}-${max}`
-    }
-  }
-}
+export function getServiceData(id: string): ServiceDetail {
+  const fullPath = path.join(contentDirectory, `${id}.md`)
+  const fileContents = fs.readFileSync(fullPath, 'utf8')
 
-function formatCostDisplay(cost: number, qualifier: string): string {
-  if (qualifier) {
-    return qualifier
-  } else if (cost === 0) {
-    return 'Free'
-  } else {
-    return `£${String(cost)}`
+  // Use gray-matter to parse the file frontmatter
+  const { data } = matter(fileContents)
+
+  // Assert that our result must be a ServiceDetail
+  const serviceDetails = data as ServiceDetail
+
+  return {
+    ...serviceDetails,
   }
 }
