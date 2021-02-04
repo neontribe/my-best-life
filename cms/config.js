@@ -129,38 +129,31 @@ export default {
           ],
         },
         {
-          label: 'Cost',
-          name: 'cost',
-          widget: 'object',
-          fields: [
-            {
-              label: 'Cost value',
-              name: 'costValue',
-              widget: 'number',
-              hint:
-                'The numerical value used for filtering. Choose the lowest value if there are multiple prices',
-              value_type: 'float',
-              min: 0,
-              step: 0.01,
-            },
-            {
-              label: 'Cost qualifier',
-              name: 'costQualifier',
-              widget: 'string',
-              required: false,
-              hint:
-                'A very short cost qualifier for the list view, eg "£5 per week", "£12 per session", "From £18.50"',
-            },
-            {
-              label: 'Cost explanation',
-              name: 'costExplanation',
-              widget: 'string',
-              required: false,
-              hint:
-                'A longer space for more cost explanation on the details view',
-            },
-          ],
+          label: 'Cost value',
+          name: 'costValue',
+          widget: 'number',
+          hint:
+            'The numerical value used for filtering. Choose the lowest value if there are multiple prices',
+          value_type: 'float',
+          min: 0,
+          step: 0.01,
         },
+        {
+          label: 'Cost qualifier',
+          name: 'costQualifier',
+          widget: 'string',
+          required: false,
+          hint:
+            'A very short cost qualifier for the list view, eg "£5 per week", "£12 per session", "From £18.50"',
+        },
+        {
+          label: 'Cost explanation',
+          name: 'costExplanation',
+          widget: 'string',
+          required: false,
+          hint: 'A longer space for more cost explanation on the details view',
+        },
+
         {
           label: 'Age',
           name: 'age',
@@ -219,6 +212,13 @@ export default {
           required: false,
           hint:
             'Where possible an actual address of the service, not the head office',
+        },
+        {
+          label: 'Time',
+          name: 'time',
+          widget: 'string',
+          required: false,
+          hint: 'The actual value, this may be complex for opening hours.',
         },
         {
           label: 'How to access',

@@ -102,13 +102,10 @@ export const getStaticProps: GetStaticProps = async () => {
           age: formatAgeDisplay(service.age.minAge, service.age.maxAge),
         }),
 
-        ...((service.cost?.costValue ||
-          service.cost?.costValue === 0 ||
-          service.cost?.costQualifier) && {
-          cost: formatCostDisplay(
-            service.cost.costValue,
-            service.cost.costQualifier
-          ),
+        ...((service.costValue ||
+          service.costValue === 0 ||
+          service.costQualifier) && {
+          cost: formatCostDisplay(service.costValue, service.costQualifier),
         }),
       }
 
@@ -142,7 +139,10 @@ function formatAgeDisplay(min: number, max: number): string {
   }
 }
 
-function formatCostDisplay(cost: number, qualifier: string): string {
+function formatCostDisplay(
+  cost: number,
+  qualifier: string | undefined
+): string {
   if (qualifier) {
     return qualifier
   } else if (cost === 0) {

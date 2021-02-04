@@ -150,7 +150,7 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         <svg width="0" height="0">
           <defs>
             <clipPath id="footerWave" clipPathUnits="objectBoundingBox">
-              <path d="M 1,0  L 1,1  L 0,1  L 0,0.3  C .25 0, .75 0.5, 1 0.3 L  Z" />
+              <path d="M 1,0  L 1,1  L 0,1  L 0,0.3  C .25 0, .75 0.5, 1 0.3 Z" />
             </clipPath>
           </defs>
         </svg>
@@ -185,6 +185,27 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         <Heading as="h1">{serviceData.title}</Heading>
         <Organisation>{`Run by ${serviceData.organisation}`}</Organisation>
         <p>{serviceData.description}</p>
+      </Section>
+
+      <Section divider={MyBestLifeTheme.colours.yellow}>
+        {serviceData.costExplanation ? (
+          <>
+            <Heading as="h2">Cost:</Heading>
+            <p>{serviceData.costExplanation}</p>
+          </>
+        ) : null}
+        {serviceData.location ? (
+          <>
+            <Heading as="h2">Where is it?</Heading>
+            <p>{serviceData.location}</p>
+          </>
+        ) : null}
+        {serviceData.time ? (
+          <>
+            <Heading as="h2">Time info:</Heading>
+            <p>{serviceData.time}</p>
+          </>
+        ) : null}
       </Section>
 
       {serviceData.access ? (
