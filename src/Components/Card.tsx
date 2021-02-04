@@ -111,10 +111,23 @@ export const Card = ({
   title,
   shortDescription,
   image,
-  cost,
+  costValue,
+  costQualifier,
   age,
   categories,
 }: ServicePreview): JSX.Element => {
+  const theCats = [
+    categories?.category1 ? categories?.category1 : '',
+    categories?.category2 ? categories?.category2 : '',
+  ].filter(Boolean)
+
+  const theAge = age ? formatAgeDisplay(age.minAge, age.maxAge) : null
+
+  const theCost =
+    costValue || costValue === 0 || costQualifier
+      ? formatCostDisplay(costValue, costQualifier)
+      : null
+
   return (
     <CardContainer>
       <ImageContainer>
@@ -133,9 +146,9 @@ export const Card = ({
         <ServiceName>{title}</ServiceName>
       </TitleContainer>
 
-      {categories && (
+      {theCats && (
         <CategoryList>
-          {categories?.map((cat) => {
+          {theCats.map((cat) => {
             return <Category key={cat}>{cat}</Category>
           })}
         </CategoryList>
@@ -143,8 +156,8 @@ export const Card = ({
 
       <DetailContainer>
         <DetailArea>
-          <p>Cost: {cost}</p>
-          <p>Age Range: {age}</p>
+          {theCost && <p>Cost: {theCost}</p>}
+          {theAge && <p>Age Range: {theAge}</p>}
         </DetailArea>
         <Link href={`/service/${id}`} passHref>
           <ButtonLink>
@@ -154,4 +167,36 @@ export const Card = ({
       </DetailContainer>
     </CardContainer>
   )
+}
+
+function formatAgeDisplay(min: number, max: number): string {
+  // There is only a minimum age
+  if (!max) {
+    return `${min}+`
+  }
+  // There is only a maximum age
+  else if (!min) {
+    return `under ${max}`
+  }
+  // There is an age range
+  else {
+    if (min === max) {
+      return `${min}`
+    } else {
+      return `${min}-${max}`
+    }
+  }
+}
+
+function formatCostDisplay(
+  cost: number,
+  qualifier: string | undefined
+): string {
+  if (qualifier) {
+    return qualifier
+  } else if (cost === 0) {
+    return 'Free'
+  } else {
+    return `£${String(cost)}`
+  }
 }
