@@ -5,7 +5,7 @@ interface VisuallyHiddenProps {
   children: React.ReactNode
 }
 
-const StyledDiv = styled.div<VisuallyHiddenProps>`
+const StyledContainer = styled.span<VisuallyHiddenProps>`
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
@@ -18,5 +18,5 @@ const StyledDiv = styled.div<VisuallyHiddenProps>`
 export const VisuallyHidden = ({
   children,
 }: VisuallyHiddenProps): JSX.Element => {
-  return <StyledDiv>{children}</StyledDiv>
+  return <StyledContainer>{children}</StyledContainer>
 }
