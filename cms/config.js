@@ -4,6 +4,8 @@ export default {
     name: 'github',
     repo: 'neontribe/my-best-life',
     branch: 'main',
+    base_url: 'https://my-best-life.vercel.app',
+    auth_endpoint: 'api/auth',
   },
   publish_mode: 'editorial_workflow',
   media_folder: 'public/img',
