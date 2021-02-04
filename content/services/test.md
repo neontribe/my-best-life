@@ -9,8 +9,10 @@ description: Weekly friendly football matches. With the focus on getting healthy
 categories:
   category1: Friends
   category2: My Body
-cost:
-  costValue: 5
+costValue: 12
+costQualifier: £12 per game
+costExplanation: '£12 per game, pay subs to the team manager'
+time: 10am every Saturday morning, until 22nd May 2021
 age:
   minAge: 15
   maxAge: 19

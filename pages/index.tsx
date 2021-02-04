@@ -10,15 +10,17 @@ interface ListPageProps {
   services: Array<ServicePreview>
 }
 
-export interface ServicePreview {
-  id: string
-  title: string
-  shortDescription: string
-  image?: { image: string; imageAlt: string }
-  cost?: string
-  age?: string
-  categories?: Array<string>
-}
+export type ServicePreview = Pick<
+  Service,
+  | 'id'
+  | 'title'
+  | 'shortDescription'
+  | 'image'
+  | 'costValue'
+  | 'costQualifier'
+  | 'age'
+  | 'categories'
+>
 
 const Header = styled.header`
   background-color: ${(props) => props.theme.colours.aqua};
@@ -85,6 +87,7 @@ export const getStaticProps: GetStaticProps = async () => {
         id: service.id,
         title: service.title,
         shortDescription: service.shortDescription,
+        costValue: service.costValue,
 
         ...(service.image?.image && {
           image: {
@@ -93,25 +96,16 @@ export const getStaticProps: GetStaticProps = async () => {
           },
         }),
 
-        categories: [
-          service.categories?.category1 ? service.categories?.category1 : '',
-          service.categories?.category2 ? service.categories?.category2 : '',
-        ].filter(Boolean),
+        ...(service.categories && { categories: service.categories }),
 
-        ...((service.age?.maxAge || service.age?.minAge) && {
-          age: formatAgeDisplay(service.age.minAge, service.age.maxAge),
+        ...(service.age && {
+          age: service.age,
         }),
 
-        ...((service.cost?.costValue ||
-          service.cost?.costValue === 0 ||
-          service.cost?.costQualifier) && {
-          cost: formatCostDisplay(
-            service.cost.costValue,
-            service.cost.costQualifier
-          ),
+        ...(service.costQualifier && {
+          costQualifier: service.costQualifier,
         }),
       }
-
       return servicePreview
     }
   )
@@ -120,34 +114,5 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       services: allServicePreviews,
     },
-  }
-}
-
-function formatAgeDisplay(min: number, max: number): string {
-  // There is only a minimum age
-  if (!max) {
-    return `${min}+`
-  }
-  // There is only a maximum age
-  else if (!min) {
-    return `under ${max}`
-  }
-  // There is an age range
-  else {
-    if (min === max) {
-      return `${min}`
-    } else {
-      return `${min}-${max}`
-    }
-  }
-}
-
-function formatCostDisplay(cost: number, qualifier: string): string {
-  if (qualifier) {
-    return qualifier
-  } else if (cost === 0) {
-    return 'Free'
-  } else {
-    return `£${String(cost)}`
   }
 }

@@ -11,8 +11,9 @@ description: Players of all abilities are welcome to join in for two hours of
 categories:
   category1: My Body
   category2: Friends
-cost:
-  costValue: 0
+costValue: 5
+costQualifier: From £5
+costExplanation: 'Something useful about the cost'
 age:
   minAge: 11
   maxAge: 16
