@@ -19,7 +19,8 @@ export const CardList = ({ services }: CardListProps): JSX.Element => {
               title={service.title}
               shortDescription={service.shortDescription}
               image={service.image}
-              cost={service.cost}
+              costValue={service.costValue}
+              costQualifier={service.costQualifier}
               age={service.age}
               categories={service.categories}
             />

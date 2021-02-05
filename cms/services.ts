@@ -11,23 +11,31 @@ export interface Service {
   image?: { image: string; imageAlt: string }
   description: string
   categories?: { category1: string; category2: string }
-  cost?: { costValue: number; costQualifier: string; costExplanation: string }
+  costValue: number
+  costQualifier?: string
+  costExplanation: string
   age?: { minAge: number; maxAge: number }
   gender?: string
   eligibility?: string
   format?: '' | 'oneToOne' | 'meetingGroup' | 'overThePhone'
+  time?: string
+  access?: string
   location?: string
 }
 
-export interface ServiceDetail {
-  id: string
-  organisation: string
-  title: string
-  image?: { image: string; imageAlt: string }
-  description: string
-  categories?: { category1: string; category2: string }
-  access?: string
-}
+export type ServiceDetail = Pick<
+  Service,
+  | 'id'
+  | 'organisation'
+  | 'description'
+  | 'title'
+  | 'image'
+  | 'categories'
+  | 'costExplanation'
+  | 'location'
+  | 'time'
+  | 'access'
+>
 
 interface idParams {
   params: {

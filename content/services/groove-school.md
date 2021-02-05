@@ -10,8 +10,9 @@ description: 'Learn how to use vinyl, CDJs and DJ controllers. Compile playlists
 categories:
   category1: Mental Health
   category2: Friends
-cost:
-  costValue: 0
+costValue: 0
+costQualifier:
+costExplanation: 'This is a free event'
 age:
   minAge: 13
   maxAge: 19
