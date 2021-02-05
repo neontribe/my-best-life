@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
+import React, { useState, useEffect } from 'react'
 
 import { Layout } from './Layout'
 import { VisuallyHidden } from './VisuallyHidden'
@@ -15,7 +16,7 @@ const Header = styled.header`
   z-index: 1;
 `
 
-const Header2 = styled.header`
+const HeaderWithImage = styled.header`
   background-color: ${(props) => props.theme.colours.aqua};
   clip-path: url(#wave);
   height: 18rem;
@@ -36,12 +37,12 @@ const Title = styled.h1`
   font-size: ${(props) => props.theme.fontSizes.title};
 `
 
-const Slide = styled.li`
+const Slide = styled.section`
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   height: 100vh;
+  justify-content: space-between;
 `
 
 const Text = styled.p`
@@ -60,12 +61,12 @@ const WelcomeImageContainer = styled.div`
 `
 
 const ImageContainer = styled.div`
+  border-radius: 50%;
   height: 8rem;
+  margin: auto;
+  overflow: hidden;
   position: relative;
   width: 8rem;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: auto;
 `
 
 const ControlArea = styled.div`
@@ -100,25 +101,42 @@ const StyledButton = styled.button`
 `
 
 const ProgressIndicator = styled.div`
+  align-items: center;
   display: flex;
   height: 6rem;
-  align-items: center;
-  width: 3.5rem;
   justify-content: space-between;
   margin: auto;
+  width: 3.5rem;
 `
 
 const ProgressStep = styled.div<{ currentStep?: boolean }>`
-  width: 1rem;
-  height: 1rem;
   border-radius: 50%;
+  border: 1px solid ${(props) => props.theme.colours.blue};
+  height: 1rem;
+  width: 1rem;
   ${(props) =>
     props.currentStep ? `background-color: ${props.theme.colours.blue}` : null};
-  border: 1px solid ${(props) => props.theme.colours.blue}; ;
 `
 
 export const Welcome = (): JSX.Element => {
   const router = useRouter()
+  const [showWelcome, setShowWelcome] = useState('')
+  const [current, setCurrent] = useState(1)
+
+  const changeSlide = (step: number) => {
+    setCurrent(step)
+  }
+
+  const closeWelcome = () => {
+    setShowWelcome('false')
+    router.reload()
+  }
+
+  useEffect(() => {
+    if (showWelcome === 'false') {
+      window.localStorage.setItem('showWelcome', 'false')
+    }
+  }, [showWelcome])
 
   return (
     <Layout>
@@ -131,9 +149,9 @@ export const Welcome = (): JSX.Element => {
           </defs>
         </svg>
       </VisuallyHidden>
-      <div>
-        <ul>
-          {/* My Best Life */}
+      <div aria-live="polite">
+        {/* My Best Life */}
+        {current === 1 ? (
           <Slide>
             <Header>
               <HeaderContents>
@@ -153,7 +171,9 @@ export const Welcome = (): JSX.Element => {
             </WelcomeImageContainer>
 
             <ControlArea>
-              <StyledButton>Ok, sounds good</StyledButton>
+              <StyledButton onClick={() => changeSlide(2)}>
+                Ok, sounds good
+              </StyledButton>
               <ProgressIndicator>
                 <VisuallyHidden>Step 1 of 2</VisuallyHidden>
                 <ProgressStep currentStep />
@@ -161,10 +181,12 @@ export const Welcome = (): JSX.Element => {
               </ProgressIndicator>
             </ControlArea>
           </Slide>
+        ) : null}
 
-          {/* How it works */}
+        {/* How it works */}
+        {current === 2 ? (
           <Slide>
-            <Header2>
+            <HeaderWithImage>
               <HeaderContents>
                 <Title>How it Works</Title>
               </HeaderContents>
@@ -176,7 +198,7 @@ export const Welcome = (): JSX.Element => {
                   objectFit="cover"
                 />
               </ImageContainer>
-            </Header2>
+            </HeaderWithImage>
             <Text>
               Browse the organisations that provide support and activities in
               Lambeth
@@ -184,12 +206,7 @@ export const Welcome = (): JSX.Element => {
             <Text>Get in touch with any that interest you</Text>
 
             <ControlArea>
-              <StyledButton
-                onClick={() => {
-                  window.localStorage.setItem('showWelcome', 'false')
-                  router.reload()
-                }}
-              >
+              <StyledButton onClick={closeWelcome}>
                 <div>Got it!</div>
               </StyledButton>
               <ProgressIndicator>
@@ -199,7 +216,7 @@ export const Welcome = (): JSX.Element => {
               </ProgressIndicator>
             </ControlArea>
           </Slide>
-        </ul>
+        ) : null}
       </div>
     </Layout>
   )
