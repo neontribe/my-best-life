@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import styled from 'styled-components'
+import { useRouter } from 'next/router'
 
 import { Layout } from './Layout'
 import { VisuallyHidden } from './VisuallyHidden'
@@ -36,7 +36,43 @@ const Title = styled.h1`
   font-size: ${(props) => props.theme.fontSizes.title};
 `
 
-const ButtonLink = styled.a`
+const Slide = styled.li`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+`
+
+const Text = styled.p`
+  font-family: 'Catamaran', sans-serif;
+  font-size: ${(props) => props.theme.fontSizes.heading};
+  max-width: 20ch;
+  text-align: center;
+`
+
+const WelcomeImageContainer = styled.div`
+  height: 70vw;
+  position: relative;
+  width: 80vw;
+  max-height: 350px;
+  max-width: 400px;
+`
+
+const ImageContainer = styled.div`
+  height: 8rem;
+  position: relative;
+  width: 8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+`
+
+const ControlArea = styled.div`
+  flex: 0 0 10rem;
+`
+
+const StyledButton = styled.button`
   align-items: center;
   background-color: ${(props) => props.theme.colours.purple};
   border-radius: 5rem;
@@ -45,9 +81,11 @@ const ButtonLink = styled.a`
   display: flex;
   font-family: 'Catamaran', sans-serif;
   font-weight: bold;
-  padding: 0.5rem 1.2rem;
-  width: 12rem;
-  text-decoration: none;
+  font-size: ${(props) => props.theme.fontSizes.highlight};
+  padding: 0.5rem;
+  width: 20rem;
+  height: 4rem;
+  justify-content: center;
 
   &:focus {
     outline: 2px dashed ${(props) => props.theme.colours.blue};
@@ -61,37 +99,27 @@ const ButtonLink = styled.a`
   }
 `
 
-const Slide = styled.li`
+const ProgressIndicator = styled.div`
   display: flex;
-  flex-direction: column;
+  height: 6rem;
   align-items: center;
-  height: 100vh;
-`
-
-const Text = styled.p`
-  font-family: 'Catamaran', sans-serif;
-  font-size: ${(props) => props.theme.fontSizes.heading};
-  max-width: 20ch;
-  text-align: center;
-  margin: 2rem 0;
-`
-
-const ImageContainer = styled.div`
-  border-bottom-left-radius: 6rem;
-  height: 8rem;
-  width: 40%;
-`
-
-const Placeholder2 = styled.div`
-  width: 7rem;
-  height: 7rem;
-  border-radius: 50%;
-  background-color: ${(props) => props.theme.colours.yellow};
-  z-index: 2;
+  width: 3.5rem;
+  justify-content: space-between;
   margin: auto;
 `
 
+const ProgressStep = styled.div<{ currentStep?: boolean }>`
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  ${(props) =>
+    props.currentStep ? `background-color: ${props.theme.colours.blue}` : null};
+  border: 1px solid ${(props) => props.theme.colours.blue}; ;
+`
+
 export const Welcome = (): JSX.Element => {
+  const router = useRouter()
+
   return (
     <Layout>
       <VisuallyHidden>
@@ -112,19 +140,26 @@ export const Welcome = (): JSX.Element => {
                 <Title>My Best Life</Title>
               </HeaderContents>
             </Header>
+
             <Text>We help you find support and things to do near you</Text>
 
-            <ImageContainer>
+            <WelcomeImageContainer>
               <Image
                 src="/img/welcome.png"
                 alt=""
                 layout="fill"
                 objectFit="cover"
               />
-            </ImageContainer>
+            </WelcomeImageContainer>
 
-            <ButtonLink>Ok, sounds good</ButtonLink>
-            <div>controls</div>
+            <ControlArea>
+              <StyledButton>Ok, sounds good</StyledButton>
+              <ProgressIndicator>
+                <VisuallyHidden>Step 1 of 2</VisuallyHidden>
+                <ProgressStep currentStep />
+                <ProgressStep />
+              </ProgressIndicator>
+            </ControlArea>
           </Slide>
 
           {/* How it works */}
@@ -133,17 +168,36 @@ export const Welcome = (): JSX.Element => {
               <HeaderContents>
                 <Title>How it Works</Title>
               </HeaderContents>
-              <Placeholder2></Placeholder2>
+              <ImageContainer>
+                <Image
+                  src="/img/how-it-works.png"
+                  alt=""
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </ImageContainer>
             </Header2>
             <Text>
               Browse the organisations that provide support and activities in
               Lambeth
             </Text>
             <Text>Get in touch with any that interest you</Text>
-            <Link href={`/`} passHref>
-              <ButtonLink>Got it!</ButtonLink>
-            </Link>
-            <div>controls</div>
+
+            <ControlArea>
+              <StyledButton
+                onClick={() => {
+                  window.localStorage.setItem('showWelcome', 'false')
+                  router.reload()
+                }}
+              >
+                <div>Got it!</div>
+              </StyledButton>
+              <ProgressIndicator>
+                <VisuallyHidden>Step 2 of 2</VisuallyHidden>
+                <ProgressStep />
+                <ProgressStep currentStep />
+              </ProgressIndicator>
+            </ControlArea>
           </Slide>
         </ul>
       </div>
