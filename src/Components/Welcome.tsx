@@ -46,6 +46,9 @@ const Slide = styled.section`
 `
 
 const Text = styled.p`
+  align-items: center;
+  display: flex;
+  flex: 1 1 20%;
   font-family: 'Catamaran', sans-serif;
   font-size: ${(props) => props.theme.fontSizes.heading};
   max-width: 20ch;
@@ -54,10 +57,10 @@ const Text = styled.p`
 
 const WelcomeImageContainer = styled.div`
   height: 70vw;
-  position: relative;
-  width: 80vw;
   max-height: 350px;
   max-width: 400px;
+  position: relative;
+  width: 80vw;
 `
 
 const ImageContainer = styled.div`
@@ -70,7 +73,7 @@ const ImageContainer = styled.div`
 `
 
 const ControlArea = styled.div`
-  flex: 0 0 10rem;
+  flex: 1 0 8rem;
 `
 
 const StyledButton = styled.button`
@@ -84,9 +87,11 @@ const StyledButton = styled.button`
   font-weight: bold;
   font-size: ${(props) => props.theme.fontSizes.highlight};
   padding: 0.5rem;
-  width: 20rem;
-  height: 4rem;
+  width: 16rem;
+  height: 3rem;
   justify-content: center;
+  margin: auto;
+  max-width: calc(100% - 2rem);
 
   &:focus {
     outline: 2px dashed ${(props) => props.theme.colours.blue};
