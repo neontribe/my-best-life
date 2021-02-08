@@ -25,8 +25,8 @@ const Header = styled.header`
 `
 
 const BackLink = styled.a`
+  border-bottom: 2px solid transparent;
   color: ${(props) => props.theme.colours.blue};
-  flex: 1 0 5rem;
   font-family: 'Catamaran', sans-serif;
   font-weight: bold;
   text-decoration: none;
@@ -44,7 +44,6 @@ const BackLink = styled.a`
 
   &:hover {
     border-bottom: 2px solid ${(props) => props.theme.colours.blue};
-    transition: 0.3s;
   }
 `
 
@@ -147,7 +146,7 @@ const EmailListItem = styled.li`
 `
 
 const ContactListItem = styled.li`
-  flex: 1 0 30%;
+  flex: 1 0 25%;
   margin-right: 0.5rem;
 
   &:last-of-type {
