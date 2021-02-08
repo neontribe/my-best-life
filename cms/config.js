@@ -201,10 +201,13 @@ export default {
           required: false,
           options: [
             { label: '-', value: '' },
-            { label: 'One to one chats', value: 'oneToOne' },
-            { label: 'Meeting a group of people', value: 'meetingGroup' },
-            { label: 'Online', value: 'online' },
-            { label: 'Over the phone', value: 'overThePhone' },
+            { label: 'One to one chats', value: 'One to one chats' },
+            {
+              label: 'Meeting a group of people',
+              value: 'Meeting a group of people',
+            },
+            { label: 'Online', value: 'Online' },
+            { label: 'Over the phone', value: 'Over the phone' },
           ],
         },
         {

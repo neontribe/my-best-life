@@ -5,7 +5,7 @@ interface VisuallyHiddenProps {
   children: React.ReactNode
 }
 
-const StyledContainer = styled.span<VisuallyHiddenProps>`
+const StyledContainer = styled.span`
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
