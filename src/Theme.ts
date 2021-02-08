@@ -43,7 +43,7 @@ export const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'Lato';
-    src: url('fonts/Lato-Regular.ttf') format('truetype');
+    src: url('/fonts/Lato-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: optional;
@@ -51,7 +51,7 @@ export const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'Catamaran';
-    src: url('fonts/Catamaran-Bold.ttf') format('truetype');
+    src: url('/fonts/Catamaran-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: optional;

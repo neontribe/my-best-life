@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react'
 import { NextPage, GetStaticProps } from 'next'
 import styled from 'styled-components'
 
@@ -5,6 +6,7 @@ import { Service, getServices } from '../cms/services'
 import { CardList } from '../src/Components/CardList'
 import { Layout } from '../src/Components/Layout'
 import { VisuallyHidden } from '../src/Components/VisuallyHidden'
+import { Welcome } from '../src/Components/Welcome'
 
 interface ListPageProps {
   services: Array<ServicePreview>
@@ -53,26 +55,43 @@ const ButtonLink = styled.div`
 `
 
 export const ListPage: NextPage<ListPageProps> = ({ services }) => {
+  // Default to showing the welcome screen
+  const [showWelcome, setShowWelcome] = useState<boolean>(true)
+
+  useEffect(() => {
+    // Attempt to retrieve the showWelcome value from local storage
+    const stored = window.localStorage.getItem('showWelcome')
+
+    // If it's been correctly set to false, update state
+    stored === 'false' ? setShowWelcome(false) : setShowWelcome(true)
+  }, [showWelcome])
+
   return (
-    <Layout>
-      <VisuallyHidden>
-        <svg width="0" height="0">
-          <defs>
-            <clipPath id="wave" clipPathUnits="objectBoundingBox">
-              <path d="M 0,1  L 0,0  L 1,0  L 1,0.6  C .75 1.5, .25 .3, 0 1 Z" />
-            </clipPath>
-          </defs>
-        </svg>
-      </VisuallyHidden>
-      <Header>
-        <HeaderContents>
-          <ButtonLink />
-          <Title>Support in Lambeth</Title>
-          <ButtonLink />
-        </HeaderContents>
-      </Header>
-      <CardList services={services} />
-    </Layout>
+    <>
+      {showWelcome ? (
+        <Welcome />
+      ) : (
+        <Layout>
+          <VisuallyHidden>
+            <svg width="0" height="0">
+              <defs>
+                <clipPath id="wave" clipPathUnits="objectBoundingBox">
+                  <path d="M 0,1  L 0,0  L 1,0  L 1,0.7  C .75 1.3, .25 .5, 0 1 Z" />
+                </clipPath>
+              </defs>
+            </svg>
+          </VisuallyHidden>
+          <Header>
+            <HeaderContents>
+              <ButtonLink />
+              <Title>Support in Lambeth</Title>
+              <ButtonLink />
+            </HeaderContents>
+          </Header>
+          <CardList services={services} />
+        </Layout>
+      )}
+    </>
   )
 }
 
