@@ -83,7 +83,6 @@ export const FilterPage: NextPage = () => {
       </Top>
       <FilterSection>
         <h3>Age</h3>
-        <p>Select your age so we can tell you what you are eligible for</p>
         <HorizontalGroup>
           {allAges.map((item) => {
             return (
@@ -97,6 +96,7 @@ export const FilterPage: NextPage = () => {
             )
           })}
         </HorizontalGroup>
+        <p>Select your age so we can tell you what you are eligible for</p>
       </FilterSection>
       <FilterSection>
         <h3>Category</h3>
