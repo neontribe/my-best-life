@@ -3,8 +3,8 @@ import simpleOauthModule from 'simple-oauth2'
 export const create = () =>
   simpleOauthModule.create({
     client: {
-      id: process.env.OAUTH_CLIENT_ID || '',
-      secret: process.env.OAUTH_CLIENT_SECRET || '',
+      id: process.env.OAUTH_CLIENT_ID_NPC || '',
+      secret: process.env.OAUTH_CLIENT_SECRET_NPC || '',
     },
     auth: {
       tokenHost: `https://github.com`,

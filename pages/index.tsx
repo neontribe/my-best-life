@@ -1,9 +1,11 @@
+import React, { useState, useEffect } from 'react'
 import { NextPage, GetStaticProps } from 'next'
 
 import { Service, getServices } from '../cms/services'
 import { CardList } from '../src/Components/CardList'
-import { Layout } from '../src/Components/Layout'
 import { HeaderComponent } from '../src/Components/Header'
+import { Layout } from '../src/Components/Layout'
+import { Welcome } from '../src/Components/Welcome'
 
 interface ListPageProps {
   services: Array<ServicePreview>
@@ -23,11 +25,28 @@ export type ServicePreview = Pick<
 >
 
 export const ListPage: NextPage<ListPageProps> = ({ services }) => {
+  // Default to showing the welcome screen
+  const [showWelcome, setShowWelcome] = useState<boolean>(true)
+
+  useEffect(() => {
+    // Attempt to retrieve the showWelcome value from local storage
+    const stored = window.localStorage.getItem('showWelcome')
+
+    // If it's been correctly set to false, update state
+    stored === 'false' ? setShowWelcome(false) : setShowWelcome(true)
+  }, [showWelcome])
+
   return (
-    <Layout>
-      <HeaderComponent />
-      <CardList services={services} />
-    </Layout>
+    <>
+      {showWelcome ? (
+        <Welcome />
+      ) : (
+        <Layout>
+          <HeaderComponent />
+          <CardList services={services} />
+        </Layout>
+      )}
+    </>
   )
 }
 
