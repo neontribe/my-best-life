@@ -1,5 +1,5 @@
 ---
-organisation: Org
+organisation: Organisation
 title: Service test
 shortDescription: desc
 image:
