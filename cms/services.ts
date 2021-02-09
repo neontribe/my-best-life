@@ -20,6 +20,7 @@ export interface Service {
   format?: '' | 'oneToOne' | 'meetingGroup' | 'overThePhone'
   time?: string
   access?: string
+  quote?: string
   location?: string
 }
 
@@ -34,6 +35,7 @@ export type ServiceDetail = Pick<
   | 'costExplanation'
   | 'location'
   | 'time'
+  | 'quote'
   | 'access'
 >
 

@@ -19,7 +19,7 @@ export default {
       label_singular: 'Service',
       name: 'service',
       folder: 'content/services',
-      slug: '{{slug}}',
+      slug: '{{organisation}}-{{title}}',
       create: true,
       summary: '{{organisation}}: {{title}}',
       fields: [
@@ -44,17 +44,18 @@ export default {
           label: 'Image',
           name: 'image',
           widget: 'object',
-          required: false,
           fields: [
             {
               label: 'Image file',
               name: 'image',
               widget: 'image',
+              required: false,
             },
             {
               label: 'Image alt text',
               name: 'imageAlt',
               widget: 'string',
+              required: false,
               hint:
                 'A concise text description of the image, for screen readers and other assistive technology.',
             },
@@ -221,6 +222,12 @@ export default {
           widget: 'string',
           required: false,
           hint: 'The actual value, this may be complex for opening hours.',
+        },
+        {
+          label: 'What do other young people say?',
+          name: 'quote',
+          widget: 'text',
+          required: false,
         },
         {
           label: 'How to access',

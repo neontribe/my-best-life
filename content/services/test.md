@@ -21,6 +21,7 @@ eligibility: Local residents only
 format: meetingGroup
 location: 101 Example Road, EX1 2RD
 time: 10am every Saturday morning, until 22nd May 2021
+quote: This is great, I love coming here!
 access: To take part you can just turn up any day we are playing. If you are new
   turn up a 10 minutes earlier. You will have some forms to fill in with you
   name and in case of emergency contact.
