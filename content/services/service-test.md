@@ -5,6 +5,6 @@ shortDescription: desc
 image:
   image: img/footy.jpg
   imageAlt: alt
-description: des
+description: Description of this service
 costValue: 7
 ---
