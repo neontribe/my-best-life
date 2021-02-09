@@ -17,7 +17,12 @@ export interface Service {
   age?: { minAge: number; maxAge: number }
   gender?: string
   eligibility?: string
-  format?: '' | 'oneToOne' | 'meetingGroup' | 'overThePhone'
+  format?:
+    | ''
+    | 'One to one chats'
+    | 'Meeting a group of people'
+    | 'Online'
+    | 'Over the phone'
   time?: string
   access?: string
   location?: string

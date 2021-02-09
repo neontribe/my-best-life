@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import styled from 'styled-components'
 
 import { VisuallyHidden } from './VisuallyHidden'
@@ -35,8 +36,9 @@ const ButtonLink = styled.a`
   display: flex;
   font-family: 'Catamaran', sans-serif;
   font-weight: bold;
-  height: 2rem;
-  width: 2rem;
+  height: 44px;
+  width: 44px;
+  padding: 4px;
   text-decoration: none;
 
   &:focus {
@@ -66,11 +68,25 @@ export const HeaderComponent = (): JSX.Element => {
       <Header>
         <HeaderContents>
           <Link href={`/`} passHref>
-            <ButtonLink>H</ButtonLink>
+            <ButtonLink>
+              <Image
+                src="/img/home-icon.png"
+                alt="Home"
+                height={44}
+                width={44}
+              />
+            </ButtonLink>
           </Link>
           <Title>Support in Lambeth</Title>
           <Link href={`/filter`} passHref>
-            <ButtonLink>F</ButtonLink>
+            <ButtonLink>
+              <Image
+                src="/img/filter-icon.png"
+                alt="Filter"
+                height={44}
+                width={44}
+              />
+            </ButtonLink>
           </Link>
         </HeaderContents>
       </Header>

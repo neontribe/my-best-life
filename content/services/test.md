@@ -15,9 +15,9 @@ costExplanation: '£12 per game, pay subs to the team manager'
 time: 10am every Saturday morning, until 22nd May 2021
 age:
   minAge: 15
-  maxAge: 19
+  maxAge:
 eligibility: Local residents only
-format: meetingGroup
+format: Meeting a group of people
 location: 101 Example Road, EX1 2RD
 access: To take part you can just turn up any day we are playing. If you are new turn up a 10 minutes earlier. You will have some forms to fill in with you name and in case of emergency contact.
 ---

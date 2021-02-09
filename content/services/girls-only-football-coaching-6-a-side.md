@@ -18,7 +18,7 @@ age:
   minAge: 11
   maxAge: 16
 gender: 'Girls only'
-format: meetingGroup
+format: Meeting a group of people
 location: |-
   Ferndale Community Sports Centre,
   30 Nursery Road,

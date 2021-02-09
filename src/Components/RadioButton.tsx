@@ -1,44 +1,46 @@
 import styled from 'styled-components'
 
-interface CheckboxProps {
+interface RadioButtonProps {
   label: string
+  name: string
   checked: boolean
   onChange: any
 }
 
-const CheckboxItem = styled.li`
+const RadioButtonItem = styled.li`
   list-style: none;
   margin-bottom: 1rem;
   height: 44px;
 
   label {
+    display: flex;
+    flex-direction: column-reverse;
     align-items: center;
     width: 100%;
     display: flex;
     justify-content: space-between;
-  }
-
-  input {
-    height: 44px;
     width: 44px;
+    height: 50px;
   }
 `
 
-export const Checkbox = ({
+export const RadioButton = ({
   label,
+  name,
   checked,
   onChange,
-}: CheckboxProps): JSX.Element => {
+}: RadioButtonProps): JSX.Element => {
   return (
-    <CheckboxItem>
+    <RadioButtonItem>
       <label>
         {label}
         <input
-          type="checkbox"
+          type="radio"
           checked={checked}
+          name={name}
           onChange={() => onChange(label)}
         ></input>
       </label>
-    </CheckboxItem>
+    </RadioButtonItem>
   )
 }
