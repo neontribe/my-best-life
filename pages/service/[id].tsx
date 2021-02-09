@@ -11,6 +11,7 @@ import {
 import { Layout } from '../../src/Components/Layout'
 import { VisuallyHidden } from '../../src/Components/VisuallyHidden'
 import { MyBestLifeTheme } from '../../src/Theme'
+import { formatAgeDisplay } from '../../src/Components/Card'
 
 interface ServicePageProps {
   serviceData: ServiceDetail
@@ -188,6 +189,20 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
       </Section>
 
       <Section divider={MyBestLifeTheme.colours.yellow}>
+        {serviceData.eligibility || serviceData.age ? (
+          <>
+            <Heading as="h2">Who is Eligible?</Heading>
+            <p>
+              {/* Display an eligibility string if we have one, and if not default to the age */}
+              {serviceData.eligibility
+                ? serviceData.eligibility
+                : formatAgeDisplay(
+                    serviceData.age?.minAge,
+                    serviceData.age?.maxAge
+                  )}
+            </p>
+          </>
+        ) : null}
         {serviceData.costExplanation ? (
           <>
             <Heading as="h2">Cost:</Heading>
