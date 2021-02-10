@@ -12,10 +12,10 @@ categories:
   category1: Job Stuff
   category2: My Body
 costValue: 0
-format: meetingGroup
+format: Meeting a group of people
 location: Football clubs throughout Lambeth
 time: Multiple sessions
-access: "Apply to an ad through London Youth, London Sport, Sported, Deutsche
+access: 'Apply to an ad through London Youth, London Sport, Sported, Deutsche
   Bank and the London F.A. Meet with the Project Coordinator for an informal
-  discussion and attend a taster session. "
+  discussion and attend a taster session. '
 ---

@@ -13,7 +13,7 @@ categories:
 costValue: 0
 age:
   minAge: 7
-format: meetingGroup
+format: Meeting a group of people
 location: 63 Christchurch Road, SW2 3DH
 time: Saturdays 2-3pm
 ---
