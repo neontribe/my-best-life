@@ -1,5 +1,5 @@
 ---
-organisation: Yellow Qube
+organisation: Yellow Qube & Kinetika Bloco
 title: Kinetika Bloco
 shortDescription: Performance group sessions
 image:
