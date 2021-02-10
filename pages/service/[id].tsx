@@ -25,8 +25,8 @@ const Header = styled.header`
 `
 
 const BackLink = styled.a`
+  border-bottom: 2px solid transparent;
   color: ${(props) => props.theme.colours.blue};
-  flex: 1 0 5rem;
   font-family: 'Catamaran', sans-serif;
   font-weight: bold;
   text-decoration: none;
@@ -44,7 +44,6 @@ const BackLink = styled.a`
 
   &:hover {
     border-bottom: 2px solid ${(props) => props.theme.colours.blue};
-    transition: 0.3s;
   }
 `
 
@@ -96,7 +95,7 @@ const Organisation = styled.p`
   margin-bottom: 1.5rem;
 `
 
-const Quote = styled.div`
+const Quotation = styled.div`
   margin-top: 1rem;
   display: flex;
   width: 100%;
@@ -119,7 +118,6 @@ const Footer = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
 `
 
 const ButtonLink = styled.a`
@@ -143,6 +141,56 @@ const ButtonLink = styled.a`
   &:hover {
     background-color: ${(props) => props.theme.colours.purple_light};
     color: ${(props) => props.theme.colours.purple};
+    transition: 0.3s;
+  }
+`
+
+const ContactList = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+`
+
+const EmailListItem = styled.li`
+  flex: 1 0 100%;
+
+  span {
+    color: ${(props) => props.theme.colours.purple};
+    font-weight: bold;
+  }
+`
+
+const ContactListItem = styled.li`
+  flex: 1 0 25%;
+  margin-right: 0.5rem;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+`
+
+const ContactLink = styled.a`
+  align-items: center;
+  border-radius: 5rem;
+  border: 1px solid ${(props) => props.theme.colours.blue};
+  color: ${(props) => props.theme.colours.blue};
+  display: flex;
+  font-family: 'Catamaran', sans-serif;
+  font-weight: bold;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  text-decoration: none;
+
+  &:focus {
+    outline: 2px dashed ${(props) => props.theme.colours.blue};
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    background-color: ${(props) => props.theme.colours.blue};
+    color: ${(props) => props.theme.colours.white};
     transition: 0.3s;
   }
 `
@@ -197,12 +245,14 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         </ImageContainer>
       )}
 
+      {/* Service intro */}
       <Section divider={MyBestLifeTheme.colours.yellow}>
         <Heading as="h1">{serviceData.title}</Heading>
         <Organisation>{`Run by ${serviceData.organisation}`}</Organisation>
         <p>{serviceData.description}</p>
       </Section>
 
+      {/* Service details */}
       <Section divider={MyBestLifeTheme.colours.yellow}>
         {serviceData.costExplanation ? (
           <>
@@ -224,23 +274,74 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         ) : null}
       </Section>
 
-      {serviceData.quote ? (
+      {/* Young person quotation */}
+      {serviceData.quotation ? (
         <Section divider={MyBestLifeTheme.colours.aqua}>
           <Heading as="h2">What do other young people say?</Heading>
-          <Quote>
+          <Quotation>
             <QuoteMark side={'left'}>&ldquo;</QuoteMark>
-            <blockquote>{serviceData.quote}</blockquote>
+            <blockquote>{serviceData.quotation}</blockquote>
             <QuoteMark side={'right'}>&rdquo;</QuoteMark>
-          </Quote>
+          </Quotation>
         </Section>
       ) : null}
 
+      {/* Access info */}
       {serviceData.access ? (
         <Section divider={MyBestLifeTheme.colours.aqua}>
           <Heading as="h2">How do I access it?</Heading>
           <p>{serviceData.access}</p>
         </Section>
       ) : null}
+
+      {/* Contact information */}
+      <Section divider={'transparent'}>
+        {serviceData.contactExplanation ? (
+          <>
+            <Heading as="h2">How to get in touch</Heading>
+            <p>{serviceData.contactExplanation}</p>
+          </>
+        ) : null}
+
+        <Heading as="h3">Contact Details</Heading>
+        <ContactList>
+          {serviceData.email ? (
+            <>
+              <EmailListItem>
+                <span>Email: </span>
+                {serviceData.email}
+              </EmailListItem>
+            </>
+          ) : null}
+          {serviceData.form ? (
+            <>
+              <ContactListItem>
+                <ContactLink href={`${serviceData.form}`}>
+                  <span>Form</span>
+                </ContactLink>
+              </ContactListItem>
+            </>
+          ) : null}
+          {serviceData.phone ? (
+            <>
+              <ContactListItem>
+                <ContactLink href={`tel:${serviceData.phone}`}>
+                  <span>Phone</span>
+                </ContactLink>
+              </ContactListItem>
+            </>
+          ) : null}
+          {serviceData.website ? (
+            <>
+              <ContactListItem>
+                <ContactLink href={`${serviceData.website}`}>
+                  <span>Website</span>
+                </ContactLink>
+              </ContactListItem>
+            </>
+          ) : null}
+        </ContactList>
+      </Section>
 
       <Footer>
         <Link href={`/`} passHref>

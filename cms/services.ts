@@ -20,8 +20,13 @@ export interface Service {
   format?: '' | 'oneToOne' | 'meetingGroup' | 'overThePhone'
   time?: string
   access?: string
-  quote?: string
+  quotation?: string
   location?: string
+  contactExplanation?: string
+  email?: string
+  form?: string
+  phone?: string
+  website?: string
 }
 
 export type ServiceDetail = Pick<
@@ -35,8 +40,13 @@ export type ServiceDetail = Pick<
   | 'costExplanation'
   | 'location'
   | 'time'
-  | 'quote'
+  | 'quotation'
   | 'access'
+  | 'contactExplanation'
+  | 'email'
+  | 'form'
+  | 'phone'
+  | 'website'
 >
 
 interface idParams {
