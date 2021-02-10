@@ -95,6 +95,22 @@ const Organisation = styled.p`
   margin-bottom: 1.5rem;
 `
 
+const Quotation = styled.div`
+  margin-top: 1rem;
+  display: flex;
+  width: 100%;
+`
+
+const QuoteMark = styled.div<{ side: string }>`
+  flex: 1 0 2rem;
+  color: ${(props) => props.theme.colours.aqua};
+  font-size: 50px;
+  text-align: center;
+  line-height: 1;
+  ${(props) => (props.side === 'left' ? 'margin-left: -1rem' : null)};
+  ${(props) => (props.side === 'right' ? 'margin-right: -1rem' : null)};
+`
+
 const Footer = styled.footer`
   background-color: ${(props) => props.theme.colours.aqua};
   clip-path: url(#footerWave);
@@ -257,6 +273,18 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
           </>
         ) : null}
       </Section>
+
+      {/* Young person quotation */}
+      {serviceData.quotation ? (
+        <Section divider={MyBestLifeTheme.colours.aqua}>
+          <Heading as="h2">What do other young people say?</Heading>
+          <Quotation>
+            <QuoteMark side={'left'}>&ldquo;</QuoteMark>
+            <blockquote>{serviceData.quotation}</blockquote>
+            <QuoteMark side={'right'}>&rdquo;</QuoteMark>
+          </Quotation>
+        </Section>
+      ) : null}
 
       {/* Access info */}
       {serviceData.access ? (

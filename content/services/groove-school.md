@@ -5,10 +5,10 @@ shortDescription: DJ lessons and performance opportunities
 image:
   image: img/grooveschool2.jpg
   imageAlt: Young man at mixing decks
-description: "Learn how to use vinyl, CDJs and DJ controllers. Compile playlists
+description: 'Learn how to use vinyl, CDJs and DJ controllers. Compile playlists
   for performance to include beats and tracks. Learn how to use drum machines,
   synthesisers, ableton push, native instrument machine and iPads in a live
-  performing environment. "
+  performing environment. '
 categories:
   category1: Mental Health
   category2: Friends
