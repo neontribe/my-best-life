@@ -12,7 +12,7 @@ categories:
   category2: Mental Health
 costValue: 0
 eligibility: Tulse Hill residents only.
-format: meetingGroup
+format: Meeting a group of people
 location: 63 Christchurch Road, SW2 3DH
 time: Thursdays 4-7 pm during term time
 ---

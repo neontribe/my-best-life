@@ -3,6 +3,7 @@ import Head from 'next/head'
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'styled-components'
 
+import { FilterProvider } from '../src/context/FilterContext'
 import { MyBestLifeTheme, GlobalStyle } from '../src/Theme'
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
@@ -12,8 +13,10 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         <title>My Best Life</title>
       </Head>
       <ThemeProvider theme={MyBestLifeTheme}>
-        <GlobalStyle />
-        <Component {...pageProps} />
+        <FilterProvider>
+          <GlobalStyle />
+          <Component {...pageProps} />
+        </FilterProvider>
       </ThemeProvider>
     </>
   )

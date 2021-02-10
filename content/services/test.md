@@ -16,9 +16,9 @@ costQualifier: £12 per game
 costExplanation: £12 per game, pay subs to the team manager
 age:
   minAge: 15
-  maxAge: 19
+  maxAge:
 eligibility: Local residents only
-format: meetingGroup
+format: Meeting a group of people
 location: 101 Example Road, EX1 2RD
 time: 10am every Saturday morning, until 22nd May 2021
 quotation: This is great, I love coming here!
