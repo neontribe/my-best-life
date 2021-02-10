@@ -1,5 +1,5 @@
 ---
-organisation: Yellow Qube
+organisation: Yellow Qube & Groove School
 title: Groove School
 shortDescription: DJ lessons and performance opportunities
 image:
