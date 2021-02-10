@@ -1,5 +1,5 @@
 ---
-organisation: Yellow Qube
+organisation: Yellow Qube & Scariofunk Collective
 title: Scariofunk Collective
 shortDescription: Street dance classes
 image:
