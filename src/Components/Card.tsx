@@ -169,7 +169,10 @@ export const Card = ({
   )
 }
 
-function formatAgeDisplay(min: number, max: number): string {
+export function formatAgeDisplay(
+  min: number | undefined,
+  max: number | undefined
+): string {
   // There is only a minimum age
   if (!max) {
     return `${min}+`

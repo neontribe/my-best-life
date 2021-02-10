@@ -37,6 +37,8 @@ export type ServiceDetail = Pick<
   | 'title'
   | 'image'
   | 'categories'
+  | 'eligibility'
+  | 'age'
   | 'costExplanation'
   | 'location'
   | 'time'
