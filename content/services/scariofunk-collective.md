@@ -3,8 +3,8 @@ organisation: Yellow Qube
 title: Scariofunk Collective
 shortDescription: Street dance classes
 image:
-  image: img/scariofunk-collective1.jpg
-  imageAlt: Young men dancing and two individuals watching
+  image: img/scariofunk-collective2.jpg
+  imageAlt: A group on young people dancing.
 description: Street dance workshops Scariofunk Collective for you to achieve
   your goals. No experience necessary!
 categories:
