@@ -26,6 +26,11 @@ export interface Service {
   time?: string
   access?: string
   location?: string
+  contactExplanation?: string
+  email?: string
+  form?: string
+  phone?: string
+  website?: string
 }
 
 export type ServiceDetail = Pick<
@@ -40,6 +45,11 @@ export type ServiceDetail = Pick<
   | 'location'
   | 'time'
   | 'access'
+  | 'contactExplanation'
+  | 'email'
+  | 'form'
+  | 'phone'
+  | 'website'
 >
 
 interface idParams {
