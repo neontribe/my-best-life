@@ -11,4 +11,6 @@ costValue: 0.55
 age:
   minAge: 8
   maxAge: 80
+location: 21 Colegate
+time: 9 - 5pm
 ---
