@@ -1,7 +1,7 @@
 ---
 organisation: Community Sports Foundation
 title: "[TEST] Lambeth Women's U19 Football Club"
-shortDescription: "[Test] Women's Football Clubzzzzzzzzzzzz"
+shortDescription: "[Test] Women's Football Club"
 image:
   image: img/example.jpg
   imageAlt: A sunlit path in a forest of tall trees.
