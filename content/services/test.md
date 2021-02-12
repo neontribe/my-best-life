@@ -1,7 +1,7 @@
 ---
 organisation: Community Sports Foundation
 title: "[TEST] Lambeth Women's U19 Football Club"
-shortDescription: "[Test] Women's Football Club"
+shortDescription: "[Test] Women's Football Clubzzzzzzzzzzzz"
 image:
   image: img/example.jpg
   imageAlt: A sunlit path in a forest of tall trees.
@@ -16,7 +16,7 @@ costQualifier: £12 per game
 costExplanation: £12 per game, pay subs to the team manager
 age:
   minAge: 15
-  maxAge:
+  maxAge: null
 eligibility: Local residents only
 format: Meeting a group of people
 location: 101 Example Road, EX1 2RD
