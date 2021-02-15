@@ -2,6 +2,9 @@
 organisation: London Philharmonic Orchestra
 title: LPO Junior Artists
 shortDescription: Annual orchestral programme
+image:
+  image: img/young-orchestra.jpeg
+  imageAlt: Close up of a few individuals playing instruments in an orchestra
 description: "A programme for talented young musicians from under-represented
   backgrounds. One-to-one instrumental sessions with a player mentor from the
   LPO. Insight sessions about the music profession with external guests.
