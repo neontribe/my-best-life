@@ -9,12 +9,18 @@ description: Inclusive music-making. Work as an ensemble alongside musicians
   from the LPO. Rehearse, perform and create your own music. Mixture of both
   traditional and accessible digital instruments. Courses often end with sharing
   music with family and friends. Sessions are structured, but can be flexible to
-  your needs. Places limited to 10 young people per session.
+  your needs. No previous experience needed!
 categories:
   category1: Mental Health
   category2: Friends
 costValue: 0
-eligibility: " You must have a parent or carer with you who stays for the whole session. "
+age:
+  minAge: 11
+  maxAge: 18
+eligibility: "The Open Sound Ensemble is designed to be accessible to young
+  people of secondary school age with special educational needs and
+  disabilities. You must have a parent or carer with you who stays for the whole
+  session. "
 format: Meeting a group of people
 time: "Courses run three times a year in school holidays. Morning group for
   those with little or no musical experience. Afternoon group for those with
