@@ -11,8 +11,11 @@ categories:
   category1: Friends
   category2: Mental Health
 costValue: 0
-eligibility: Tulse Hill residents only.
+eligibility: "The sessions are open to Tulse Hill residents. "
 format: Meeting a group of people
 location: 63 Christchurch Road, SW2 3DH
 time: Thursdays 4-7 pm during term time
+email: info@yellowqube.org
+phone: 020 8671 3822
+website: https://yellowqube.org/project/kinetika-bloco/
 ---
