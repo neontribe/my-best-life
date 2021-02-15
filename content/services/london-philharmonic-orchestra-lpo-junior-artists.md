@@ -23,12 +23,10 @@ format: Meeting a group of people
 time: "Spread over around 14 days between September and July each year. Most of
   the set programme will take place in half terms/holidays or Sundays in term
   time. "
-quotation: >-
-  "It’s really useful working with my mentor... the way he approaches orchestral
-  excerpts is really interesting for me to see, as he’s the one who actually
-  plays them in the orchestra professionally." 
-
-  "The experience you gain is invaluable, from working with LPO players to talking to panels with artists like Sheku Kanneh-Mason and Angel Blue, and going to the office to see what goes on behind the scenes was amazing!" 
+quotation: '"The experience you gain is invaluable, from working with LPO
+  players to talking to panels with artists like Sheku Kanneh-Mason and Angel
+  Blue, and going to the office to see what goes on behind the scenes was
+  amazing!" '
 access: "Applications for LPO Junior Artists 2021/22 will open in Spring 2021.
   To apply, you need to make sure you're eligible in terms of musical experience
   and under-representation. You need to be considering studying music beyond
