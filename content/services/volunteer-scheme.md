@@ -15,7 +15,11 @@ costValue: 0
 format: Meeting a group of people
 location: Football clubs throughout Lambeth
 time: Multiple sessions
-access: 'Apply to an ad through London Youth, London Sport, Sported, Deutsche
-  Bank and the London F.A. Meet with the Project Coordinator for an informal
-  discussion and attend a taster session. '
+access: "Get in touch with the St Matthew's Project or apply to an ad through
+  London Youth, London Sport, Sported, Deutsche Bank and the London F.A.  Once
+  you have applied you will meet with the Project Coordinator for an informal
+  discussion and attend a taster session. "
+email: leedema@aol.com
+phone: 07944 101 134
+website: https://www.thesmp.net/portfolio/volunteer-scheme/
 ---
