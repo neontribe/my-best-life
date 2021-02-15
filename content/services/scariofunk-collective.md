@@ -19,4 +19,5 @@ location: 63 Christchurch Road, SW2 3DH
 time: Saturdays 2-3pm
 email: info@yellowqube.org
 phone: 020 8671 3822
+website: https://yellowqube.org/project/kinetika-bloco/
 ---
