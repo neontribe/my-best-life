@@ -21,7 +21,7 @@ age:
 eligibility: "The sessions are open to Tulse Hill residents. "
 format: Online
 location: 63 Christchurch Road, SW2 3DH
-contactExplanation: Email to express your interest
+contactExplanation: ""
 email: info@grooveschool.co.uk
 phone: 020 8671 3822
 website: https://yellowqube.org/whats-on/
