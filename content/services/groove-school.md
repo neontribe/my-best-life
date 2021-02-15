@@ -19,6 +19,6 @@ age:
   minAge: 13
   maxAge: 19
 eligibility: Tulse Hill residents
-format: Online
+format: Meeting a group of people
 location: 63 Christchurch Road, SW2 3DH
 ---
