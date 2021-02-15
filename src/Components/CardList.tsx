@@ -86,6 +86,7 @@ export const CardList = ({ services }: CardListProps): JSX.Element => {
                 costQualifier={service.costQualifier}
                 age={service.age}
                 categories={service.categories}
+                format={service.format}
               />
             ))}
         </ul>
