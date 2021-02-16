@@ -2,6 +2,8 @@
 organisation: The Young Vic Company
 title: Participation
 shortDescription: Theatre projects and free tickets to shows
+image:
+  image: img/pexels-photo-713149.jpeg
 description: "Free projects and workshops run throughout the year. Free tickets
   to Young Vic shows for young people who live or study in Lambeth and
   Southwark. Workshops and Holiday projects. Specialised projects for groups.
