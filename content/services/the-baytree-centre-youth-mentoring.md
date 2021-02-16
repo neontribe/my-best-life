@@ -4,6 +4,7 @@ title: Youth Mentoring
 shortDescription: Youth mentoring for girls
 image:
   image: img/mentoring.jpg
+  imageAlt: Close up of two girls looking at paper and pens
 description: "You're matched with a mentor and have a one-to-one session with
   them each week. Meant to be a positive environment where you feel safe and
   encouraged. Mentors act as role models and help you develop your motivation
