@@ -4,6 +4,7 @@ title: Between the Tracks+ Afterschool Club
 shortDescription: Afterschool club
 image:
   image: img/between-the-tracks1.png
+  imageAlt: Close of a young male with others in the background
 description: A Wednesday night afterschool club for 13-17 year olds to play
   games, do sports, and get support with their homework.
 categories:
