@@ -4,6 +4,7 @@ title: Into School
 shortDescription: Education support for migrant girls
 image:
   image: img/girls-learning.jpeg
+  imageAlt: Who girls looking at a laptop
 description: "Support to girls who have recently arrived in the UK and have no
   school place, to transition into the education system. ESOL classes Monday to
   Wednesday. Maths, Sport and Art classes. Cooking and having lunch together on
