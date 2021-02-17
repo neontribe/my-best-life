@@ -2,6 +2,9 @@
 organisation: Juvenis
 title: Project YANA
 shortDescription: Relationships help
+image:
+  image: img/group-stood-on-cliff.jpeg
+  imageAlt: Four people linking arms on a hill top
 description: "For those directly affected by gang-related violence, sexual
   grooming, exploitation, domestic violence and abuse. Support if you've
   witnessed domestic abuse or are in a borderline unhealthy relationship. Help
