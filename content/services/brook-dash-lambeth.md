@@ -5,11 +5,8 @@ shortDescription: Drugs and alcohol advice
 image:
   image: img/dashlambeth.jpg
   imageAlt: Close up of three teenagers smiling
-description: "Help with any questions, issues or concerns. Expert-led 1-2-1 and
-  group support sessions. Completely confidential. Free to access. Wellbeing
-  support. Advice and support in building up a healthier lifestyle. Drugs and
-  alcohol awareness. Harm minimisation interventions. Support around drugs and
-  alcohol reduction and/or cessation. Relapse preventive interventions. "
+description: Free, confidential help with advice and support in building up a
+  healthier lifestyle, especially around drugs and alcohol use.
 categories:
   category1: Drink and Drugs
   category2: My Body
