@@ -66,7 +66,7 @@ export const getStaticProps: GetStaticProps = async () => {
         ...(service.image?.image && {
           image: {
             image: service.image.image,
-            imageAlt: service.image.imageAlt,
+            imageAlt: service.image?.imageAlt || '',
           },
         }),
 
