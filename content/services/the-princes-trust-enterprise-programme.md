@@ -11,7 +11,10 @@ description: >-
   business topics. 
 
 
-  You're then provided with 1-2-1 support as you plan and test your ideas for a business. This is where most of your time will be spent. You can also apply for funding. Before launch, you'll present your business plan to the Business Launch Group (designed to be a positive experience for you and give you confidence for your launch). There's additional start-up finance if you need it. 
+  You're then provided with 1-2-1 support as you plan and test your ideas for a business. This is where most of your time will be spent. 
+
+
+  You can also apply for funding. Before launch, you'll present your business plan to the Business Launch Group (designed to be a positive experience for you and give you confidence for your launch). There's additional start-up finance if you need it. 
 categories:
   category1: Money
   category2: Job Stuff
