@@ -2,6 +2,9 @@
 organisation: ChildLawAdvice
 title: LawStuff
 shortDescription: Free legal advice for young people
+image:
+  image: img/campaigning1.jpeg
+  imageAlt: A sign saying amplify your voice
 description: "Free online legal information for young people. Topics range from
   bullying to your rights and what you are allowed to do at every age. "
 categories:
