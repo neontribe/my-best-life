@@ -2,6 +2,9 @@
 organisation: Grooveschool
 title: Young Styles
 shortDescription: DJ and music production sessions
+image:
+  image: img/dj.jpeg
+  imageAlt: A close up of a man using dj mixing decks
 description: "Learn how to use Vinyl Turntables, CDJ's and DJ Controllers,
   compiling a playlist for performance to include beats and tracks. Learn how to
   use Drum Machines, Synthesisers, Ableton Push, Native Instrument Maschine and
