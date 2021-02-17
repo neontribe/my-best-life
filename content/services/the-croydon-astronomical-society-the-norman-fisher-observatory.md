@@ -1,7 +1,7 @@
 ---
 organisation: The Croydon Astronomical Society
 title: The Norman Fisher Observatory
-shortDescription: "0"
+shortDescription: Look at the planets
 image:
   image: img/telescope2.jpeg
   imageAlt: A telescope with the night sky behind.
