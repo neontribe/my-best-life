@@ -18,7 +18,12 @@ costExplanation: This is a free event
 age:
   minAge: 13
   maxAge: 19
-eligibility: Tulse Hill residents
+eligibility: 'The sessions are open to Tulse Hill residents. '
 format: Meeting a group of people
 location: 63 Christchurch Road, SW2 3DH
+access: Email to express your interest
+contactExplanation: ''
+email: info@grooveschool.co.uk
+phone: 020 8671 3822
+website: https://yellowqube.org/whats-on/
 ---
