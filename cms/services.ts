@@ -17,8 +17,7 @@ export interface Service {
   age?: { minAge: number; maxAge: number }
   gender?: string
   eligibility?: string
-  format?:
-    | ''
+  format:
     | 'One to one chats'
     | 'Meeting a group of people'
     | 'Online'

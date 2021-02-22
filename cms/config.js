@@ -199,9 +199,8 @@ export default {
           label: 'Format',
           name: 'format',
           widget: 'select',
-          required: false,
+          required: true,
           options: [
-            { label: '-', value: '' },
             { label: 'One to one chats', value: 'One to one chats' },
             {
               label: 'Meeting a group of people',
