@@ -24,7 +24,7 @@ export const CardList = ({ services }: CardListProps): JSX.Element => {
                   ageNumber = 14
                   break
                 case '15':
-                  ageNumber = 14
+                  ageNumber = 15
                   break
                 case '16':
                   ageNumber = 16
@@ -46,21 +46,31 @@ export const CardList = ({ services }: CardListProps): JSX.Element => {
               if (ageNumber === -1) return true
 
               // There is an age band
-              if (
-                item.age?.minAge &&
-                item.age?.maxAge &&
-                item.age.minAge <= ageNumber &&
-                ageNumber <= item.age.maxAge
-              )
-                return true
+              if (item.age?.minAge && item.age?.maxAge) {
+                if (
+                  item.age.minAge <= ageNumber &&
+                  ageNumber <= item.age.maxAge
+                ) {
+                  return true
+                }
+                return false
+              }
 
               // There is only a minimum age
-              if (item.age?.minAge && item.age.minAge <= ageNumber) return true
+              if (item.age?.minAge && item.age.minAge <= ageNumber) {
+                return true
+              }
 
               // There is only a maximum age
-              if (item.age?.maxAge && item.age.maxAge >= ageNumber) return true
+              if (item.age?.maxAge && item.age.maxAge >= ageNumber) {
+                return true
+              }
             })
             .filter(function (item) {
+              if (categories.length === 0) {
+                return true
+              }
+
               if (
                 item?.categories?.category1 &&
                 categories.includes(item?.categories?.category1)
@@ -73,6 +83,10 @@ export const CardList = ({ services }: CardListProps): JSX.Element => {
                 return true
             })
             .filter(function (item) {
+              if (formats.length === 0) {
+                return true
+              }
+
               if (item?.format && formats.includes(item?.format)) return true
             })
             .map((service: ServicePreview) => (

@@ -49,8 +49,8 @@ export const FilterContext = createContext<FilterContextValue>(
 )
 
 export const FilterProvider: FC<PropsWithChildren<any>> = ({ children }) => {
-  const [categories, setCategories] = useState<Array<string>>(allCategories)
-  const [formats, setFormats] = useState<Array<string>>(allFormats)
+  const [categories, setCategories] = useState<Array<string>>([])
+  const [formats, setFormats] = useState<Array<string>>([])
   const [age, setAge] = useState<string | undefined>()
 
   function ageUpdate(input: string) {
