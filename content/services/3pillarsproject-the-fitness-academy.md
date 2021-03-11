@@ -15,7 +15,8 @@ costValue: 0
 eligibility: This is designed for male ex-offenders.
 format: One to one chats
 location: 3Pillars Project, Black Prince Trust, 5 Beaufoy Walk, London, SE11 6AA
-access: Get in touch with the details below
+access: ""
+contactExplanation: Get in touch with the details below
 email: " info@3pillarsproject.com"
 form: https://www.3pillarsproject.com/contact-us
 website: https://www.3pillarsproject.com/our-work
