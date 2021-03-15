@@ -10,9 +10,9 @@ import { RadioButton } from '../src/Components/RadioButton'
 import {
   FilterContext,
   allAges,
-  allCategories,
   allFormats,
 } from '../src/context/FilterContext'
+import { ButtonBase } from '../src/Components/ButtonBase'
 
 const Top = styled.section`
   border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
@@ -64,15 +64,7 @@ const HorizontalGroup = styled.div`
   justify-content: space-between;
 `
 
-const ButtonLink = styled.a`
-  align-items: center;
-  background-color: ${(props) => props.theme.colours.purple};
-  border-radius: 5rem;
-  border: 3px solid transparent;
-  color: ${(props) => props.theme.colours.white};
-  display: flex;
-  font-family: 'Catamaran', sans-serif;
-  font-weight: bold;
+const ButtonLink = styled(ButtonBase)`
   font-size: ${(props) => props.theme.fontSizes.highlight};
   padding: 0.5rem;
   width: 16rem;
@@ -80,31 +72,13 @@ const ButtonLink = styled.a`
   justify-content: center;
   margin: auto;
   max-width: calc(100% - 2rem);
-  text-decoration: none;
   margin-bottom: 2em;
-
-  &:focus {
-    outline: 2px dashed ${(props) => props.theme.colours.blue};
-    outline-offset: 2px;
-  }
-
-  &:hover {
-    background-color: ${(props) => props.theme.colours.purple_light};
-    color: ${(props) => props.theme.colours.purple};
-    transition: 0.3s;
-  }
 `
 
 export const FilterPage: NextPage = () => {
-  const {
-    age,
-    ageUpdate,
-    categories,
-    categoryUpdate,
-    formats,
-    formatUpdate,
-    clearAll,
-  } = useContext(FilterContext)
+  const { age, ageUpdate, formats, formatUpdate, clearAll } = useContext(
+    FilterContext
+  )
 
   return (
     <Layout>
@@ -129,21 +103,6 @@ export const FilterPage: NextPage = () => {
           })}
         </HorizontalGroup>
         <p>Select your age so we can tell you what you are eligible for</p>
-      </FilterSection>
-      <FilterSection>
-        <h3>Category</h3>
-        <CheckboxGroup>
-          {allCategories.map((category) => {
-            return (
-              <Checkbox
-                key={category}
-                label={category}
-                checked={categories.includes(category)}
-                onChange={categoryUpdate}
-              />
-            )
-          })}
-        </CheckboxGroup>
       </FilterSection>
       {/* <FilterSection>
         <h3>Cost</h3>

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import { ServicePreview } from '../../pages/index'
 import { VisuallyHidden } from './VisuallyHidden'
+import { ButtonBase } from './ButtonBase'
 
 const CardContainer = styled.li`
   border-radius: 2rem;
@@ -81,29 +82,10 @@ const DetailArea = styled.div`
   font-size: ${(props) => props.theme.fontSizes.small};
 `
 
-const ButtonLink = styled.a`
-  align-items: center;
-  background-color: ${(props) => props.theme.colours.purple};
-  border-radius: 5rem;
-  border: 3px solid transparent;
-  color: ${(props) => props.theme.colours.white};
-  display: flex;
-  font-family: 'Catamaran', sans-serif;
-  font-weight: bold;
+const ButtonLink = styled(ButtonBase)`
   height: 2rem;
   padding: 0.2rem 2rem;
   text-decoration: none;
-
-  &:focus {
-    outline: 2px dashed ${(props) => props.theme.colours.blue};
-    outline-offset: 2px;
-  }
-
-  &:hover {
-    background-color: ${(props) => props.theme.colours.purple_light};
-    color: ${(props) => props.theme.colours.purple};
-    transition: 0.3s;
-  }
 `
 
 export const Card = ({
