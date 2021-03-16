@@ -15,6 +15,9 @@ export const MyBestLifeTheme: DefaultTheme = {
     aqua_light: '#C4F5EF',
     yellow_light: '#FDECC5',
 
+    // Highlight colours
+    blue_highlight: '#C0CEFF',
+
     white: '#ffffff',
     shadow: '#C9C9C9B7',
   },
