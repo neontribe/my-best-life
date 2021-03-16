@@ -49,24 +49,6 @@ const BackLink = styled.a`
   }
 `
 
-const Category = styled.li`
-  font-family: 'Catamaran', sans-serif;
-  font-weight: bold;
-  font-size: ${(props) => props.theme.fontSizes.small};
-  display: inline;
-  margin-left: 1rem;
-
-  &:before {
-    content: '';
-    background: ${(props) => props.theme.colours.purple};
-    border-radius: 50%;
-    display: inline-block;
-    height: 0.8em;
-    margin-right: 0.5rem;
-    width: 0.8em;
-  }
-`
-
 const ImageContainer = styled.div`
   height: 15rem;
   clip-path: url(#imageWave);
@@ -198,11 +180,6 @@ const ContactLink = styled.a`
 `
 
 export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
-  const categories = [
-    serviceData.categories?.category1 ? serviceData.categories?.category1 : '',
-    serviceData.categories?.category2 ? serviceData.categories?.category2 : '',
-  ].filter(Boolean)
-
   return (
     <Layout>
       <VisuallyHidden>
@@ -227,13 +204,6 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
             <span>Back</span>
           </BackLink>
         </Link>
-        {categories && (
-          <ul>
-            {categories?.map((cat) => {
-              return <Category key={cat}>{cat}</Category>
-            })}
-          </ul>
-        )}
       </Header>
 
       {serviceData.image?.image && (

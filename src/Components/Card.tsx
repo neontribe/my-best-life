@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { useRef } from 'react'
 
 import { ServicePreview } from '../../pages/index'
-import { VisuallyHidden } from '../Components/VisuallyHidden'
+import { VisuallyHidden } from './VisuallyHidden'
 
 const CardContainer = styled.li`
   border-radius: 1rem;

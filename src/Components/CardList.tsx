@@ -9,7 +9,7 @@ interface CardListProps {
 }
 
 export const CardList = ({ services }: CardListProps): JSX.Element => {
-  const { age, categories, formats } = useContext(FilterContext)
+  const { age, formats } = useContext(FilterContext)
 
   return (
     <>
@@ -65,22 +65,6 @@ export const CardList = ({ services }: CardListProps): JSX.Element => {
               if (item.age?.maxAge && item.age.maxAge >= ageNumber) {
                 return true
               }
-            })
-            .filter(function (item) {
-              if (categories.length === 0) {
-                return true
-              }
-
-              if (
-                item?.categories?.category1 &&
-                categories.includes(item?.categories?.category1)
-              )
-                return true
-              if (
-                item?.categories?.category2 &&
-                categories.includes(item?.categories?.category2)
-              )
-                return true
             })
             .filter(function (item) {
               if (formats.length === 0) {
