@@ -11,6 +11,7 @@ declare module 'styled-components' {
       blue_light: string
       aqua_light: string
       yellow_light: string
+      blue_highlight: string
       white: string
       shadow: string
     }
