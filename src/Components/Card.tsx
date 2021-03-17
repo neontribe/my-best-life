@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import styled from 'styled-components'
-import { useRef } from 'react'
+import { useContext, useRef } from 'react'
 
+import { SaveButton } from './SaveButton'
 import { ServicePreview } from '../../pages/index'
 import { VisuallyHidden } from './VisuallyHidden'
+import { SaveContext } from '../../src/context/SaveContext'
 
 const CardContainer = styled.li`
   border-radius: 1rem;
@@ -79,6 +81,12 @@ const InfoContainer = styled.div`
   }
 `
 
+const SaveButtonContainer = styled.div`
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+`
+
 export const Card = ({
   id,
   title,
@@ -88,6 +96,8 @@ export const Card = ({
   costQualifier,
   age,
 }: ServicePreview): JSX.Element => {
+  const { saved } = useContext(SaveContext)
+
   const ageDisplay = age ? formatAgeDisplay(age.minAge, age.maxAge) : null
 
   const costDisplay =
@@ -131,6 +141,10 @@ export const Card = ({
         {costDisplay && <div>{costDisplay}</div>}
         {ageDisplay && <div>{ageDisplay}</div>}
       </InfoContainer>
+
+      <SaveButtonContainer>
+        <SaveButton id={id} saved={saved.includes(id)} />
+      </SaveButtonContainer>
     </CardContainer>
   )
 }

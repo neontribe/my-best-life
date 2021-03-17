@@ -69,6 +69,9 @@ export const HeaderComponent = (): JSX.Element => {
           </Link>
         </HeaderContents>
       </Header>
+      <Link href={`/saved`} passHref>
+        <a>Saved List</a>
+      </Link>
     </>
   )
 }

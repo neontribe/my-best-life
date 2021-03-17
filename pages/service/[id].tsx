@@ -1,6 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useContext } from 'react'
 import styled from 'styled-components'
 
 import {
@@ -13,6 +14,8 @@ import { VisuallyHidden } from '../../src/Components/VisuallyHidden'
 import { MyBestLifeTheme } from '../../src/Theme'
 import { formatAgeDisplay } from '../../src/Components/Card'
 import { MapLink } from '../../src/Components/MapLink'
+import { SaveButton } from '../../src/Components/SaveButton'
+import { SaveContext } from '../../src/context/SaveContext'
 
 interface ServicePageProps {
   serviceData: ServiceDetail
@@ -26,7 +29,9 @@ const Header = styled.header`
   justify-content: space-between;
 `
 
-const BackLink = styled.a`
+const BackLink = styled.button`
+  background-color: transparent;
+  border: none;
   border-bottom: 2px solid transparent;
   color: ${(props) => props.theme.colours.blue};
   font-family: 'Catamaran', sans-serif;
@@ -55,6 +60,15 @@ const ImageContainer = styled.div`
   overflow: hidden;
   position: relative;
   width: 100%;
+`
+
+const TitleContainer = styled.div`
+  display: flex;
+
+  button {
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
 `
 
 const Section = styled.section<{ divider: string }>`
@@ -104,7 +118,7 @@ const Footer = styled.footer`
   align-items: center;
 `
 
-const ButtonLink = styled.a`
+const ButtonLink = styled.button`
   align-items: center;
   background-color: ${(props) => props.theme.colours.purple};
   border-radius: 5rem;
@@ -180,6 +194,9 @@ const ContactLink = styled.a`
 `
 
 export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
+  const { saved } = useContext(SaveContext)
+  const router = useRouter()
+
   return (
     <Layout>
       <VisuallyHidden>
@@ -199,11 +216,9 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         </svg>
       </VisuallyHidden>
       <Header>
-        <Link href={'/'} passHref>
-          <BackLink>
-            <span>Back</span>
-          </BackLink>
-        </Link>
+        <BackLink onClick={() => router.back()}>
+          <span>Back</span>
+        </BackLink>
       </Header>
 
       {serviceData.image?.image && (
@@ -219,8 +234,16 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
 
       {/* Service intro */}
       <Section divider={MyBestLifeTheme.colours.yellow}>
-        <Heading as="h1">{serviceData.title}</Heading>
-        <Organisation>{`Run by ${serviceData.organisation}`}</Organisation>
+        <TitleContainer>
+          <div>
+            <Heading as="h1">{serviceData.title}</Heading>
+            <Organisation>{`Run by ${serviceData.organisation}`}</Organisation>
+          </div>
+          <SaveButton
+            id={serviceData.id}
+            saved={saved.includes(serviceData.id)}
+          />
+        </TitleContainer>
         <p>{serviceData.description}</p>
       </Section>
 
@@ -331,11 +354,9 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
       </Section>
 
       <Footer>
-        <Link href={`/`} passHref>
-          <ButtonLink>
-            <span>Back to Results</span>
-          </ButtonLink>
-        </Link>
+        <ButtonLink onClick={() => router.back()} type="button">
+          <span>Back to Results</span>
+        </ButtonLink>
       </Footer>
     </Layout>
   )
