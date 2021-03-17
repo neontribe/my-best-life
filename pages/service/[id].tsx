@@ -1,3 +1,4 @@
+import { useState, useRef } from 'react'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -13,6 +14,9 @@ import { VisuallyHidden } from '../../src/Components/VisuallyHidden'
 import { MyBestLifeTheme } from '../../src/Theme'
 import { formatAgeDisplay } from '../../src/Components/Card'
 import { MapLink } from '../../src/Components/MapLink'
+import { FiveStar } from '../../src/Components/FiveStar'
+import { Checkbox } from '../../src/Components/Checkbox'
+import { ButtonBase } from '../../src/Components/ButtonBase'
 
 interface ServicePageProps {
   serviceData: ServiceDetail
@@ -104,29 +108,8 @@ const Footer = styled.footer`
   align-items: center;
 `
 
-const ButtonLink = styled.a`
-  align-items: center;
-  background-color: ${(props) => props.theme.colours.purple};
-  border-radius: 5rem;
-  border: 3px solid transparent;
-  color: ${(props) => props.theme.colours.white};
-  display: flex;
-  font-family: 'Catamaran', sans-serif;
-  font-weight: bold;
+const ButtonLink = styled(ButtonBase)`
   margin-top: 5rem;
-  padding: 0.5rem 1.2rem;
-  text-decoration: none;
-
-  &:focus {
-    outline: 2px dashed ${(props) => props.theme.colours.blue};
-    outline-offset: 2px;
-  }
-
-  &:hover {
-    background-color: ${(props) => props.theme.colours.purple_light};
-    color: ${(props) => props.theme.colours.purple};
-    transition: 0.3s;
-  }
 `
 
 const ContactList = styled.ul`
@@ -179,7 +162,61 @@ const ContactLink = styled.a`
   }
 `
 
+const TextInput = styled.textarea`
+  width: 100%;
+  height: 7rem;
+  padding: 0.5rem;
+`
+
+const SubmitButtonContainer = styled.div`
+  width: 100%;
+  text-align: right;
+`
+
+const SubmitButton = styled(ButtonBase)`
+  display: inline-block;
+`
+
+interface ReviewState {
+  rating: number | undefined
+  hasUsedService: boolean
+  comment: string | undefined
+}
+
 export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
+  const initialReviewState = {
+    rating: undefined,
+    hasUsedService: false,
+    comment: undefined,
+  }
+
+  const [reviewState, setReviewState] = useState<ReviewState>(
+    initialReviewState
+  )
+  const commentInputRef = useRef<HTMLTextAreaElement | null>(null)
+
+  const onRatingChange = (v: number) =>
+    setReviewState((s: ReviewState) => ({ ...s, rating: v }))
+  const onUsedServiceChange = () =>
+    setReviewState((s: ReviewState) => ({
+      ...s,
+      hasUsedService: !s.hasUsedService,
+    }))
+  const onCommentChange = (v: string) =>
+    setReviewState((s: ReviewState) => ({ ...s, comment: v }))
+
+  const clearForm = () => {
+    setReviewState(initialReviewState)
+    if (commentInputRef.current) commentInputRef.current.value = ''
+  }
+
+  const submitReview = () => {
+    // TODO
+    // eslint-disable-next-line
+    console.log('Review submitted: ', reviewState)
+    clearForm()
+  }
+
   return (
     <Layout>
       <VisuallyHidden>
@@ -282,7 +319,7 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
       ) : null}
 
       {/* Contact information */}
-      <Section divider={'transparent'}>
+      <Section divider={MyBestLifeTheme.colours.yellow}>
         {serviceData.contactExplanation ? (
           <>
             <Heading as="h2">How to get in touch</Heading>
@@ -328,6 +365,29 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
             </>
           ) : null}
         </ContactList>
+      </Section>
+
+      <Section divider={'transparent'}>
+        <Heading as="h3">Review</Heading>
+        <FiveStar
+          currentRating={reviewState.rating}
+          onChange={onRatingChange}
+        />
+        <Checkbox
+          label={'I have attended this service'}
+          checked={reviewState.hasUsedService}
+          onChange={onUsedServiceChange}
+        />
+        <span>Leave a review</span>
+        <TextInput
+          onChange={(e) => onCommentChange(e.target.value)}
+          ref={commentInputRef}
+        />
+        <SubmitButtonContainer>
+          <SubmitButton as="button" onClick={submitReview}>
+            <span>Post review</span>
+          </SubmitButton>
+        </SubmitButtonContainer>
       </Section>
 
       <Footer>
