@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Layout } from '../../src/Components/Layout'
 import { VisuallyHidden } from '../../src/Components/VisuallyHidden'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
-import { Checkbox } from '../../src/Components/Checkbox'
+import { ImageCheckboxes } from '../../src/Components/ImageCheckboxes'
 
 const Header = styled.header`
   background-color: ${(props) => props.theme.colours.aqua};
@@ -44,10 +44,6 @@ const QuestionSection = styled.section`
   }
 `
 
-const CheckboxGroup = styled.div`
-  margin: 1rem 0;
-`
-
 const StyledLink = styled.a`
   align-items: center;
   background-color: ${(props) => props.theme.colours.purple};
@@ -78,25 +74,12 @@ const StyledLink = styled.a`
   }
 `
 
-const categories = [
-  "Don't mind, skip",
-  'My money',
-  'School and college',
-  'Sex and relationships',
-  "How I'm feeling",
-  'Keeping safe',
-  'Job stuff',
-  "Where I'm living",
-  'Friends',
-  'Family',
-  'Drink and drugs',
-  'My body',
-  'My rights and the law',
+const feelings = [
+  { title: 'happy', image: '/img/happy.svg' },
+  { title: 'sad', image: '/img/sad.svg' },
 ]
 
-export const WhatsOnYourMindPage = (): JSX.Element => {
-  const [checked, setChecked] = React.useState(true)
-
+export const HowAreYouFeelingPage = (): JSX.Element => {
   return (
     <Layout>
       <Section>
@@ -111,29 +94,19 @@ export const WhatsOnYourMindPage = (): JSX.Element => {
         </VisuallyHidden>
         <Header>
           <HeaderContents>
-            <Title>{"What's on your mind today?"}</Title>
+            <Title>How are you feeling?</Title>
           </HeaderContents>
         </Header>
         <QuestionSection>
           <h3>Choose as many as you like</h3>
-          <VerticalSpacing />
-
-          <CheckboxGroup>
-            {categories.map((category) => {
-              return (
-                <Checkbox
-                  key={category}
-                  label={category}
-                  checked={checked}
-                  // basic change handler placeholder
-                  onChange={() => setChecked(checked ? false : true)}
-                />
-              )
-            })}
-          </CheckboxGroup>
+          <ImageCheckboxes
+            id="feelings-checkboxes"
+            values={feelings}
+            label="how are you feeling?"
+          />
         </QuestionSection>
 
-        <Link href="/quiz/how-are-you-feeling" passHref>
+        <Link href="/quiz/what-are-your-interests" passHref>
           <StyledLink>{'Ok'}</StyledLink>
         </Link>
 
@@ -143,4 +116,4 @@ export const WhatsOnYourMindPage = (): JSX.Element => {
   )
 }
 
-export default WhatsOnYourMindPage
+export default HowAreYouFeelingPage
