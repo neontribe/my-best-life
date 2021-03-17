@@ -13,6 +13,8 @@ import { VisuallyHidden } from '../../src/Components/VisuallyHidden'
 import { MyBestLifeTheme } from '../../src/Theme'
 import { formatAgeDisplay } from '../../src/Components/Card'
 import { MapLink } from '../../src/Components/MapLink'
+import { Carousel } from '../../src/Components/Carousel'
+import { ReviewDisplay } from '../../src/Components/ReviewDisplay'
 
 interface ServicePageProps {
   serviceData: ServiceDetail
@@ -77,22 +79,6 @@ const Organisation = styled.p`
   font-family: 'Catamaran', sans-serif;
   font-weight: bold;
   margin-bottom: 1.5rem;
-`
-
-const Quotation = styled.div`
-  margin-top: 1rem;
-  display: flex;
-  width: 100%;
-`
-
-const QuoteMark = styled.div<{ side: string }>`
-  flex: 1 0 2rem;
-  color: ${(props) => props.theme.colours.aqua};
-  font-size: 50px;
-  text-align: center;
-  line-height: 1;
-  ${(props) => (props.side === 'left' ? 'margin-left: -1rem' : null)};
-  ${(props) => (props.side === 'right' ? 'margin-right: -1rem' : null)};
 `
 
 const Footer = styled.footer`
@@ -261,15 +247,15 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         ) : null}
       </Section>
 
-      {/* Young person quotation */}
-      {serviceData.quotation ? (
+      {/* Reviews */}
+      {serviceData.reviews && serviceData.reviews.length > 0 ? (
         <Section divider={MyBestLifeTheme.colours.aqua}>
           <Heading as="h2">What do other young people say?</Heading>
-          <Quotation>
-            <QuoteMark side={'left'}>&ldquo;</QuoteMark>
-            <blockquote>{serviceData.quotation}</blockquote>
-            <QuoteMark side={'right'}>&rdquo;</QuoteMark>
-          </Quotation>
+          <Carousel>
+            {serviceData.reviews.map((data, i) => {
+              return <ReviewDisplay data={data} key={i} />
+            })}
+          </Carousel>
         </Section>
       ) : null}
 

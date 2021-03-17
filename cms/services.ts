@@ -24,13 +24,13 @@ export interface Service {
     | 'Over the phone'
   time?: string
   access?: string
-  quotation?: string
   location?: string
   contactExplanation?: string
   email?: string
   form?: string
   phone?: string
   website?: string
+  reviews: Array<Review>
 }
 
 export type ServiceDetail = Pick<
@@ -46,14 +46,20 @@ export type ServiceDetail = Pick<
   | 'costExplanation'
   | 'location'
   | 'time'
-  | 'quotation'
   | 'access'
   | 'contactExplanation'
   | 'email'
   | 'form'
   | 'phone'
   | 'website'
+  | 'reviews'
 >
+
+export interface Review {
+  comment?: string
+  rating?: number
+  author?: number
+}
 
 interface idParams {
   params: {
