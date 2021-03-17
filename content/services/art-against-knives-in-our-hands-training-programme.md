@@ -34,7 +34,4 @@ reviews:
       doing nails, I came to interact with the new family that I had made. Being
       around such amazing people taught me to be myself, to open up more, and that
       home is not just where you lay your head to sleep at night.
-  - comment: Lorem ipsum dolar sit amet consecitur etc.
-    author: A. Nonymous
-    rating: 4
 ---
