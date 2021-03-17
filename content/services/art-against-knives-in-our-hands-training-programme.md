@@ -22,15 +22,19 @@ age:
   maxAge: 30
 format: One to one chats
 location: Art Against Knives, Leagas Delaney, 1 Alfred Place, London WC1E 7EB
-quotation: I never thought that coming to Dollis Dolls would become a weekly
-  ritual for me, but after a while I stopped coming with the intention of just
-  doing nails, I came to interact with the new family that I had made. Being
-  around such amazing people taught me to be myself, to open up more, and that
-  home is not just where you lay your head to sleep at night.
 access: Refer yourself at one of ART AGAINST KNIVES' community nail bars, Dollis
   Dolls (Dollis Valley Estate) and Vales Nails (Strawberry Vale Estate) or get
   in touch via the details below.
 email: hello@artagainstknives.com
 form: https://www.artagainstknives.com/contact
 phone: 020 3004 7974
+reviews:
+  - comment: I never thought that coming to Dollis Dolls would become a weekly
+      ritual for me, but after a while I stopped coming with the intention of just
+      doing nails, I came to interact with the new family that I had made. Being
+      around such amazing people taught me to be myself, to open up more, and that
+      home is not just where you lay your head to sleep at night.
+  - comment: Lorem ipsum dolar sit amet consecitur etc.
+    author: A. Nonymous
+    rating: 4
 ---

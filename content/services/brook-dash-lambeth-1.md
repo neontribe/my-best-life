@@ -20,13 +20,14 @@ format: One to one chats
 location: "Multiple locations throughout Lambeth "
 time: "Walk-in sessions. The team generally work Mondays to Fridays, but you can
   leave a message in the evening and over weekends. "
-quotation: I felt comfortable to discuss any issues surrounding my health. I was
-  provided with the help that I needed. I am so grateful to have someone to call
-  and get advice from no matter the situation I find myself in.
 access: "Contact Pippa via phone or email. All sessions are walk-in (no
   appointment needed). You may be able to pick up condoms, pregnancy tests or
   chlamydia screening kits without needing to see a nurse. "
 email: Lambeth@Brook.org
 phone: 07771 390729
 website: https://www.brook.org.uk/services/dash-lambeth/#gethelpfromDASH
+reviews:
+  - comment: I felt comfortable to discuss any issues surrounding my health. I was
+      provided with the help that I needed. I am so grateful to have someone to call
+      and get advice from no matter the situation I find myself in.
 ---
