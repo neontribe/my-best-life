@@ -44,7 +44,7 @@ export const ListPage: NextPage<ListPageProps> = ({ services }) => {
       ) : (
         <Layout>
           <HeaderComponent title="Support in Lambeth" homeButton filterButton />
-          <Link href="/quiz/welcome">Quiz</Link>
+          <Link href="/quiz">Quiz</Link>
           <CardList services={services} />
         </Layout>
       )}
