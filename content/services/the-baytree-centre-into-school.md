@@ -24,6 +24,8 @@ format: Meeting a group of people
 location: The Baytree Centre, 300-302 Brixton Road, London SW9 6AE
 time: "Classes Monday to Wednesday. Currently operating remotely, with two
   lessons from 11am to 12pm and from 12pm to 1pm. "
+quotation: "Baytree makes me feel like I can do something in my life. Like I can
+  achieve my goals. "
 access: "You will need a parents/guardian or youth worker to sign you up for
   support. Get them to fill in the referral form below or call or call 0207 733
   5283. "
@@ -31,7 +33,4 @@ email: olive@baytreecentre.org.uk
 form: https://www.baytreecentre.org/wp-content/uploads/2020/02/Baytree-Referral-Form.docx
 phone: 0207 733 5283
 website: https://www.baytreecentre.org/youth-service/into-school/
-reviews:
-  - comment: Baytree makes me feel like I can do something in my life. Like I can
-      achieve my goals.
 ---
