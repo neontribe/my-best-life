@@ -13,6 +13,7 @@ import {
   allFormats,
 } from '../src/context/FilterContext'
 import { ButtonBase } from '../src/Components/ButtonBase'
+import { NotificationsContext } from '../src/context/NotificationsContext'
 
 const Top = styled.section`
   border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
@@ -76,9 +77,17 @@ const ButtonLink = styled(ButtonBase)`
 `
 
 export const FilterPage: NextPage = () => {
+  const { notify } = useContext(NotificationsContext)
   const { age, ageUpdate, formats, formatUpdate, clearAll } = useContext(
     FilterContext
   )
+
+  const saveNotify = () => {
+    notify({
+      msg: 'Your settings have been saved',
+      time: 5000,
+    })
+  }
 
   return (
     <Layout>
@@ -123,7 +132,7 @@ export const FilterPage: NextPage = () => {
         </CheckboxGroup>
       </FilterSection>
       <Link href={`/`} passHref>
-        <ButtonLink>Apply Filter</ButtonLink>
+        <ButtonLink onClick={saveNotify}>Apply Filter</ButtonLink>
       </Link>
     </Layout>
   )
