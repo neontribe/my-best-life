@@ -6,6 +6,10 @@ import styled from 'styled-components'
 //     const MyButton = styled(ButtonBase)`
 //       height: 3rem;
 //     `
+//
+// Want to use this as a <button> rather than <a>? Use:
+//    <ButtonBase as="button"></ButtonBase>
+//
 export const ButtonBase = styled.a`
   align-items: center;
   background-color: ${(props) => props.theme.colours.purple};
@@ -16,6 +20,8 @@ export const ButtonBase = styled.a`
   font-family: 'Catamaran', sans-serif;
   font-weight: bold;
   text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
 
   &:focus {
     outline: 2px dashed ${(props) => props.theme.colours.blue};
