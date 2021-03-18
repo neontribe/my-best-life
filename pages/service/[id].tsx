@@ -187,6 +187,9 @@ interface ReviewState {
 
 export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
   const { notify } = useContext(NotificationsContext)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [lastSubmission, setLastSubmission] = useState(0)
+  const rateLimit = 30 * 1000
 
   const initialReviewState = {
     rating: undefined,
@@ -215,6 +218,35 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
   }
 
   const submitReview = () => {
+    if (isSubmitting) {
+      return
+    }
+
+    if (Date.now() - lastSubmission < rateLimit) {
+      notify({
+        msg: 'You are doing that too much, try again later',
+        time: 5000,
+      })
+      return
+    }
+
+    const postOK = () => {
+      notify({
+        msg: 'Thank you for submitting your review!',
+        time: 5000,
+      })
+      clearForm()
+      setLastSubmission(Date.now())
+    }
+
+    const postErr = () => {
+      notify({
+        msg: 'Sorry, there was an error submitting your review',
+        time: 5000,
+      })
+    }
+
+    setIsSubmitting(true)
     fetch('/api/review', {
       method: 'POST',
       body: JSON.stringify({
@@ -225,12 +257,15 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         'Content-type': 'application/json; charset=UTF-8',
       },
     })
-
-    clearForm()
-    notify({
-      msg: 'Thank you for submitting your review!',
-      time: 5000,
-    })
+      .then((res: Response) => {
+        if (res.ok) postOK()
+        else postErr()
+        setIsSubmitting(false)
+      })
+      .catch(() => {
+        postErr()
+        setIsSubmitting(false)
+      })
   }
 
   return (
@@ -401,7 +436,7 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         />
         <SubmitButtonContainer>
           <SubmitButton as="button" onClick={submitReview}>
-            <span>Post review</span>
+            <span>{isSubmitting ? 'Posting...' : 'Post review'}</span>
           </SubmitButton>
         </SubmitButtonContainer>
       </Section>
