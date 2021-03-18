@@ -178,15 +178,15 @@ const SubmitButton = styled(ButtonBase)`
 `
 
 interface ReviewState {
-  rating: number | undefined
-  hasUsedService: boolean
-  comment: string | undefined
+  rating?: number
+  usedService: boolean
+  comment?: string
 }
 
 export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
   const initialReviewState = {
     rating: undefined,
-    hasUsedService: false,
+    usedService: false,
     comment: undefined,
   }
 
@@ -200,7 +200,7 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
   const onUsedServiceChange = () =>
     setReviewState((s: ReviewState) => ({
       ...s,
-      hasUsedService: !s.hasUsedService,
+      usedService: !s.usedService,
     }))
   const onCommentChange = (v: string) =>
     setReviewState((s: ReviewState) => ({ ...s, comment: v }))
@@ -211,9 +211,17 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
   }
 
   const submitReview = () => {
-    // TODO
-    // eslint-disable-next-line
-    console.log('Review submitted: ', reviewState)
+    fetch('/api/review', {
+      method: 'POST',
+      body: JSON.stringify({
+        ...reviewState,
+        serviceId: serviceData.id,
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    })
+
     clearForm()
   }
 
@@ -375,7 +383,7 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         />
         <Checkbox
           label={'I have attended this service'}
-          checked={reviewState.hasUsedService}
+          checked={reviewState.usedService}
           onChange={onUsedServiceChange}
         />
         <span>Leave a review</span>
