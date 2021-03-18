@@ -1,26 +1,11 @@
 import styled from 'styled-components'
 import { Review as IReview } from '../../cms/services'
 import { StarDisplay } from './StarDisplay'
+import { Quotation } from './Quotation'
 
 interface ReviewProps {
   data: IReview
 }
-
-const Quotation = styled.div`
-  margin-top: 1rem;
-  display: flex;
-  width: 100%;
-`
-
-const QuoteMark = styled.div<{ side: string }>`
-  flex: 1 0 2rem;
-  color: ${(props) => props.theme.colours.aqua};
-  font-size: 50px;
-  text-align: center;
-  line-height: 1;
-  ${(props) => (props.side === 'left' ? 'margin-left: -1rem' : null)};
-  ${(props) => (props.side === 'right' ? 'margin-right: -1rem' : null)};
-`
 
 const ReviewBody = styled.div``
 
@@ -45,13 +30,7 @@ const StarContainer = styled.div`
 export const ReviewDisplay = ({ data }: ReviewProps): JSX.Element => {
   return (
     <ReviewBody>
-      {data.comment && (
-        <Quotation>
-          <QuoteMark side={'left'}>&ldquo;</QuoteMark>
-          <blockquote>{data.comment}</blockquote>
-          <QuoteMark side={'right'}>&rdquo;</QuoteMark>
-        </Quotation>
-      )}
+      {data.comment && <Quotation>{data.comment}</Quotation>}
       {
         <BottomContainer>
           {data.author && <Author>&#8212; {data.author}</Author>}

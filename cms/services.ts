@@ -23,6 +23,7 @@ export interface Service {
     | 'Online'
     | 'Over the phone'
   time?: string
+  quotation?: string
   access?: string
   location?: string
   contactExplanation?: string
@@ -30,7 +31,7 @@ export interface Service {
   form?: string
   phone?: string
   website?: string
-  reviews: Array<Review>
+  reviews?: Array<Review>
 }
 
 export type ServiceDetail = Pick<
@@ -46,6 +47,7 @@ export type ServiceDetail = Pick<
   | 'costExplanation'
   | 'location'
   | 'time'
+  | 'quotation'
   | 'access'
   | 'contactExplanation'
   | 'email'

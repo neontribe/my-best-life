@@ -19,6 +19,7 @@ import { ReviewDisplay } from '../../src/Components/ReviewDisplay'
 import { FiveStar } from '../../src/Components/FiveStar'
 import { Checkbox } from '../../src/Components/Checkbox'
 import { ButtonBase } from '../../src/Components/ButtonBase'
+import { Quotation } from '../../src/Components/Quotation'
 
 interface ServicePageProps {
   serviceData: ServiceDetail
@@ -284,10 +285,18 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         ) : null}
       </Section>
 
+      {/* Young person quotation */}
+      {serviceData.quotation ? (
+        <Section divider={MyBestLifeTheme.colours.aqua}>
+          <Heading as="h2">What do other young people say?</Heading>
+          <Quotation>{serviceData.quotation}</Quotation>
+        </Section>
+      ) : null}
+
       {/* Reviews */}
       {serviceData.reviews && serviceData.reviews.length > 0 ? (
         <Section divider={MyBestLifeTheme.colours.aqua}>
-          <Heading as="h2">What do other young people say?</Heading>
+          <Heading as="h2">Reviews for this service</Heading>
           <Carousel>
             {serviceData.reviews.map((data, i) => {
               return <ReviewDisplay data={data} key={i} />

@@ -226,6 +226,12 @@ export default {
           hint: 'The actual value, this may be complex for opening hours.',
         },
         {
+          label: 'What do other young people say?',
+          name: 'quotation',
+          widget: 'text',
+          required: false,
+        },
+        {
           label: 'How to access',
           name: 'access',
           widget: 'text',
@@ -293,7 +299,7 @@ export default {
               step: 1,
             },
           ],
-          required: true,
+          required: false,
           default: [],
         },
       ],
