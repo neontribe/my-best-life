@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 interface NotificationOptions {
   msg: string
-  time?: number
+  time: number
 }
 
 interface INotificationsContext {
@@ -57,6 +57,17 @@ const NotificationContainer = styled.div<INotificationContainer>`
   transition: all ${(props) => props.fadeTime / 1000}s;
   opacity: ${(props) => props.opacity};
   pointer-events: auto;
+
+  button {
+    position: absolute;
+    opacity: 0;
+  }
+
+  button:focus {
+    position: inherit;
+    opacity: 1;
+    outline: 2px dashed ${(props) => props.theme.colours.blue};
+  }
 `
 
 const Notification = ({
@@ -65,6 +76,7 @@ const Notification = ({
 }: NotificationProps) => {
   const [opacity, setOpacity] = useState(0)
   const fadeTime = 500
+  time = Math.max(time, fadeTime * 2)
 
   useEffect(() => {
     if (!time) return
@@ -94,6 +106,7 @@ const Notification = ({
       onClick={() => onHide()}
       opacity={opacity}
       fadeTime={fadeTime}
+      role="alert"
     >
       {msg}
     </NotificationContainer>
