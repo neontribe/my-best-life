@@ -95,7 +95,7 @@ const categories = [
 ]
 
 export const WhatsOnYourMindPage = (): JSX.Element => {
-  const [checked, setChecked] = React.useState(true)
+  const [checked, setChecked] = React.useState(false)
 
   return (
     <Layout>
@@ -115,7 +115,7 @@ export const WhatsOnYourMindPage = (): JSX.Element => {
           </HeaderContents>
         </Header>
         <QuestionSection>
-          <h3>Choose as many as you like</h3>
+          <p>Choose as many as you like</p>
           <VerticalSpacing />
 
           <CheckboxGroup>

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Layout } from '../../src/Components/Layout'
 import { VisuallyHidden } from '../../src/Components/VisuallyHidden'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
-import { ImageCheckboxes } from '../../src/Components/ImageCheckboxes'
+import { Checkbox } from '../../src/Components/Checkbox'
 
 const Header = styled.header`
   background-color: ${(props) => props.theme.colours.aqua};
@@ -44,6 +44,10 @@ const QuestionSection = styled.section`
   }
 `
 
+const CheckboxGroup = styled.div`
+  margin: 1rem 0;
+`
+
 const StyledLink = styled.a`
   align-items: center;
   background-color: ${(props) => props.theme.colours.purple};
@@ -74,12 +78,19 @@ const StyledLink = styled.a`
   }
 `
 
-const feelings = [
-  { title: 'happy', image: '/img/happy.svg' },
-  { title: 'sad', image: '/img/sad.svg' },
+const waitingPrefs = [
+  "Don't mind, skip",
+  "I don't want to wait",
+  'Up to a day',
+  'Up to a week',
+  'Up to two weeks',
+  'Up to a month',
+  'Longer than a month',
 ]
 
-export const HowAreYouFeelingPage = (): JSX.Element => {
+export const HowLongWillYouWaitPage = (): JSX.Element => {
+  const [checked, setChecked] = React.useState(false)
+
   return (
     <Layout>
       <Section>
@@ -94,19 +105,29 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
         </VisuallyHidden>
         <Header>
           <HeaderContents>
-            <Title>How are you feeling?</Title>
+            <Title>How long are you willing to wait?</Title>
           </HeaderContents>
         </Header>
         <QuestionSection>
-          <p>Choose as many as you like</p>
-          <ImageCheckboxes
-            id="feelings-checkboxes"
-            values={feelings}
-            label="how are you feeling?"
-          />
+          <p>Sometimes support in your area will have a waiting time</p>
+          <VerticalSpacing />
+
+          <CheckboxGroup>
+            {waitingPrefs.map((waitingPref) => {
+              return (
+                <Checkbox
+                  key={waitingPref}
+                  label={waitingPref}
+                  checked={checked}
+                  // basic change handler placeholder
+                  onChange={() => setChecked(checked ? false : true)}
+                />
+              )
+            })}
+          </CheckboxGroup>
         </QuestionSection>
 
-        <Link href="/quiz/what-are-your-interests" passHref>
+        <Link href="/quiz/thanks" passHref>
           <StyledLink>{'Ok'}</StyledLink>
         </Link>
 
@@ -116,4 +137,4 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
   )
 }
 
-export default HowAreYouFeelingPage
+export default HowLongWillYouWaitPage

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Layout } from '../../src/Components/Layout'
 import { VisuallyHidden } from '../../src/Components/VisuallyHidden'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
-import { ImageCheckboxes } from '../../src/Components/ImageCheckboxes'
+import { Checkbox } from '../../src/Components/Checkbox'
 
 const Header = styled.header`
   background-color: ${(props) => props.theme.colours.aqua};
@@ -44,6 +44,10 @@ const QuestionSection = styled.section`
   }
 `
 
+const CheckboxGroup = styled.div`
+  margin: 1rem 0;
+`
+
 const StyledLink = styled.a`
   align-items: center;
   background-color: ${(props) => props.theme.colours.purple};
@@ -74,12 +78,20 @@ const StyledLink = styled.a`
   }
 `
 
-const feelings = [
-  { title: 'happy', image: '/img/happy.svg' },
-  { title: 'sad', image: '/img/sad.svg' },
+const preferences = [
+  "Don't mind, skip",
+  'I like one to one chats',
+  'Meeting a group of people',
+  'Online',
+  'Over the phone',
+  'With people my own age',
+  "I don't want my friends/family to know",
+  'Something to read',
 ]
 
-export const HowAreYouFeelingPage = (): JSX.Element => {
+export const WhatsYourPreferencePage = (): JSX.Element => {
+  const [checked, setChecked] = React.useState(true)
+
   return (
     <Layout>
       <Section>
@@ -94,19 +106,34 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
         </VisuallyHidden>
         <Header>
           <HeaderContents>
-            <Title>How are you feeling?</Title>
+            <Title>{"What's your preference?"}</Title>
           </HeaderContents>
         </Header>
         <QuestionSection>
+          <h3>
+            Let us know what you like so we can show you the most relevant
+            support available to you
+          </h3>
+          <VerticalSpacing />
           <p>Choose as many as you like</p>
-          <ImageCheckboxes
-            id="feelings-checkboxes"
-            values={feelings}
-            label="how are you feeling?"
-          />
+          <VerticalSpacing />
+
+          <CheckboxGroup>
+            {preferences.map((preference) => {
+              return (
+                <Checkbox
+                  key={preference}
+                  label={preference}
+                  checked={checked}
+                  // basic change handler placeholder
+                  onChange={() => setChecked(checked ? false : true)}
+                />
+              )
+            })}
+          </CheckboxGroup>
         </QuestionSection>
 
-        <Link href="/quiz/what-are-your-interests" passHref>
+        <Link href="/quiz/how-long-will-you-wait" passHref>
           <StyledLink>{'Ok'}</StyledLink>
         </Link>
 
@@ -116,4 +143,4 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
   )
 }
 
-export default HowAreYouFeelingPage
+export default WhatsYourPreferencePage

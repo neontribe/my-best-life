@@ -1,11 +1,9 @@
-import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 
 import { Layout } from '../../src/Components/Layout'
 import { VisuallyHidden } from '../../src/Components/VisuallyHidden'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
-import { ImageCheckboxes } from '../../src/Components/ImageCheckboxes'
 
 const Header = styled.header`
   background-color: ${(props) => props.theme.colours.aqua};
@@ -32,16 +30,18 @@ const Section = styled.section`
   align-items: center;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   justify-content: space-between;
 `
 
-const QuestionSection = styled.section`
-  margin: 1rem;
-  padding: 1rem 0;
-
-  h3 {
-    font-size: ${(props) => props.theme.fontSizes.heading};
-  }
+const Text = styled.p`
+  align-items: center;
+  display: flex;
+  flex: 1 1 20%;
+  font-family: 'Catamaran', sans-serif;
+  font-size: ${(props) => props.theme.fontSizes.heading};
+  max-width: 20ch;
+  text-align: center;
 `
 
 const StyledLink = styled.a`
@@ -74,12 +74,7 @@ const StyledLink = styled.a`
   }
 `
 
-const feelings = [
-  { title: 'happy', image: '/img/happy.svg' },
-  { title: 'sad', image: '/img/sad.svg' },
-]
-
-export const HowAreYouFeelingPage = (): JSX.Element => {
+export const IfYouNeedHelpPage = (): JSX.Element => {
   return (
     <Layout>
       <Section>
@@ -94,20 +89,20 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
         </VisuallyHidden>
         <Header>
           <HeaderContents>
-            <Title>How are you feeling?</Title>
+            <Title>Do you need help?</Title>
           </HeaderContents>
         </Header>
-        <QuestionSection>
-          <p>Choose as many as you like</p>
-          <ImageCheckboxes
-            id="feelings-checkboxes"
-            values={feelings}
-            label="how are you feeling?"
-          />
-        </QuestionSection>
+        <Text>If you are in immediate danger, call 999.</Text>
+        <Text>
+          If you are not in immediate danger but need to talk to someone. Speak
+          to helpline - the mix helpline: 0808 808 4994/Crisis Text: Text THEMIX
+          to 85258
+        </Text>
+
+        <VerticalSpacing />
 
         <Link href="/quiz/what-are-your-interests" passHref>
-          <StyledLink>{'Ok'}</StyledLink>
+          <StyledLink>{'Back to the quiz'}</StyledLink>
         </Link>
 
         <VerticalSpacing />
@@ -116,4 +111,4 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
   )
 }
 
-export default HowAreYouFeelingPage
+export default IfYouNeedHelpPage
