@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useContext } from 'react'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -17,6 +17,8 @@ import { MapLink } from '../../src/Components/MapLink'
 import { FiveStar } from '../../src/Components/FiveStar'
 import { Checkbox } from '../../src/Components/Checkbox'
 import { ButtonBase } from '../../src/Components/ButtonBase'
+
+import { NotificationsContext } from '../../src/context/NotificationsContext'
 
 interface ServicePageProps {
   serviceData: ServiceDetail
@@ -184,6 +186,8 @@ interface ReviewState {
 }
 
 export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
+  const { notify } = useContext(NotificationsContext)
+
   const initialReviewState = {
     rating: undefined,
     usedService: false,
@@ -223,6 +227,10 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
     })
 
     clearForm()
+    notify({
+      msg: 'Thank you for submitting your review!',
+      time: 5000,
+    })
   }
 
   return (
