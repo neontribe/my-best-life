@@ -103,7 +103,7 @@ export const WhatAreYourInterestsPage = (): JSX.Element => {
           </CheckboxGroup>
         </QuestionSection>
 
-        <Link href="/quiz/whats-your-preference" passHref>
+        <Link href="/quiz/about-you" passHref>
           <StyledLink>{'Ok'}</StyledLink>
         </Link>
 

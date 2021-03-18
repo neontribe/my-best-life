@@ -82,7 +82,7 @@ export const FilterPage: NextPage = () => {
 
   return (
     <Layout>
-      <HeaderComponent />
+      <HeaderComponent title="Support in Lambeth" homeButton filterButton />
       <Top>
         <h2>Filter</h2>
         <button onClick={() => clearAll()}>Clear All</button>
