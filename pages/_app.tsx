@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components'
 import { FilterProvider } from '../src/context/FilterContext'
 import { MyBestLifeTheme, GlobalStyle } from '../src/Theme'
 import { NotificationsProvider } from '../src/context/NotificationsContext'
+import { QuizProvider } from '../src/context/QuizContext'
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
@@ -15,10 +16,12 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       </Head>
       <ThemeProvider theme={MyBestLifeTheme}>
         <NotificationsProvider>
-          <FilterProvider>
-            <GlobalStyle />
-            <Component {...pageProps} />
-          </FilterProvider>
+          <QuizProvider>
+            <FilterProvider>
+              <GlobalStyle />
+              <Component {...pageProps} />
+            </FilterProvider>
+          </QuizProvider>
         </NotificationsProvider>
       </ThemeProvider>
     </>
