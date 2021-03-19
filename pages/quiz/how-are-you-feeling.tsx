@@ -11,7 +11,6 @@ const Section = styled.section`
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 `
 
 const QuestionSection = styled.section`
@@ -54,8 +53,18 @@ const StyledLink = styled.a`
 `
 
 const feelings = [
-  { title: 'happy', image: '/img/happy.svg' },
-  { title: 'sad', image: '/img/sad.svg' },
+  { title: 'unsure', image: '/img/unsure.svg' },
+  { title: 'ok', image: '/img/ok.svg' },
+  { title: 'calm', image: '/img/calm.svg' },
+  { title: 'anxious', image: '/img/anxious.svg' },
+  { title: 'hopeful', image: '/img/hopeful.svg' },
+  { title: 'confused', image: '/img/confused.svg' },
+  { title: 'angry', image: '/img/angry.svg' },
+  { title: 'excited', image: '/img/excited.svg' },
+  { title: 'enthusiastic', image: '/img/enthusiastic.svg' },
+  { title: 'scared', image: '/img/scared.svg' },
+  { title: 'unsafe', image: '/img/unsafe.svg' },
+  { title: 'ignored', image: '/img/ignored.svg' },
 ]
 
 export const HowAreYouFeelingPage = (): JSX.Element => {
@@ -68,7 +77,7 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
           filterButton={false}
         />
         <QuestionSection>
-          <p>Choose as many as you like</p>
+          <h3>Choose as many as you like</h3>
           <ImageCheckboxes
             id="feelings-checkboxes"
             values={feelings}

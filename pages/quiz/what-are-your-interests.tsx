@@ -62,15 +62,15 @@ const interests = [
   'Sports',
   'Music',
   'Films and TV',
-  'Gaming',
-  'Art',
+  'Art and Design',
   'Drama',
   'Reading',
-  'Friends',
   'Writing',
   'Cooking',
   'Volunteering',
-  'Outdoor activities',
+  'Outdoor Activities',
+  'Activism',
+  'Fashion and Beauty',
 ]
 
 export const WhatAreYourInterestsPage = (): JSX.Element => {
