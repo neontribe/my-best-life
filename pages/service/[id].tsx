@@ -1,8 +1,7 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useContext } from 'react'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import { useContext } from 'react'
 import styled from 'styled-components'
 
 import {
@@ -20,6 +19,8 @@ import { SaveContext } from '../../src/context/SaveContext'
 import { FiveStar } from '../../src/Components/FiveStar'
 import { Checkbox } from '../../src/Components/Checkbox'
 import { ButtonBase } from '../../src/Components/ButtonBase'
+
+import { NotificationsContext } from '../../src/context/NotificationsContext'
 
 interface ServicePageProps {
   serviceData: ServiceDetail
@@ -200,6 +201,7 @@ interface ReviewState {
 
 export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
   const { saved } = useContext(SaveContext)
+  const { notify } = useContext(NotificationsContext)
   const router = useRouter()
 
   const initialReviewState = {
@@ -236,6 +238,10 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
     // eslint-disable-next-line
     console.log('Review submitted: ', reviewState)
     clearForm()
+    notify({
+      msg: 'Thank you for submitting your review!',
+      time: 5000,
+    })
   }
 
   return (

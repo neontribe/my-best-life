@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components'
 import { FilterProvider } from '../src/context/FilterContext'
 import { SaveProvider } from '../src/context/SaveContext'
 import { MyBestLifeTheme, GlobalStyle } from '../src/Theme'
+import { NotificationsProvider } from '../src/context/NotificationsContext'
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
@@ -14,12 +15,14 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         <title>My Best Life</title>
       </Head>
       <ThemeProvider theme={MyBestLifeTheme}>
-        <FilterProvider>
-          <SaveProvider>
-            <GlobalStyle />
-            <Component {...pageProps} />
-          </SaveProvider>
-        </FilterProvider>
+        <NotificationsProvider>
+          <FilterProvider>
+            <SaveProvider>
+              <GlobalStyle />
+              <Component {...pageProps} />
+            </SaveProvider>
+          </FilterProvider>
+        </NotificationsProvider>
       </ThemeProvider>
     </>
   )

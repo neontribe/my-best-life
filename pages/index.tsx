@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { NextPage, GetStaticProps } from 'next'
+import Link from 'next/link'
 
 import { Service, getServices } from '../cms/services'
 import { CardList } from '../src/Components/CardList'
@@ -42,7 +43,10 @@ export const ListPage: NextPage<ListPageProps> = ({ services }) => {
         <Welcome />
       ) : (
         <Layout>
-          <HeaderComponent />
+          <HeaderComponent title="Support in Lambeth" homeButton filterButton />
+          <Link href="/quiz">Quiz</Link>
+          <br />
+          <Link href={`/saved`}>Saved</Link>
           <CardList services={services} listType="filtered" />
         </Layout>
       )}
