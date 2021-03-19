@@ -19,14 +19,14 @@ costValue: 0
 age:
   minAge: 6
   maxAge: 20
-gender: Girls only
+gender: women
 eligibility: ""
 format: Online
 location: The Baytree Centre, 300-302 Brixton Road, London SW9 6AE
 time: " A one-to-one session each week for at least one year. Monday to Thursday
   between 4.00 pm and 6.00 pm (Tuesdays until 7 pm) and Saturdays between 10.00
   am and 12.30 pm."
-access: Fill out the mentoring application form linked below.
+contactExplanation: Fill out the mentoring application form linked below.
 email: olive@baytreecentre.org.uk
 form: https://www.baytreecentre.org/wp-content/uploads/2020/03/Application-form-for-Youth-Mentoring-2.pdf
 phone: 020 7733 5283

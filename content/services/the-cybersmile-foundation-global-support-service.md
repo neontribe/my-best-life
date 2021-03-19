@@ -25,7 +25,7 @@ quotation: '"You have helped me so much. The support you have given me in the
   afraid to contact Cybersmile because they will always send you a smile back!
   The advice and help is brilliant and I highly recommend them to anyone who is
   being cyber bullied." - Abigail'
-access: "Reach out to the trained support team via email. The email should
+contactExplanation: "Reach out to the trained support team via email. The email should
   contain as much information about your problem as possible - include evidence
   of cyberbullying, online abuse or harassment - as this could be needed at a
   later date. Due to a very high demand, there can be a wait before being

@@ -25,6 +25,6 @@ time: Saturday nights, if the skies are clear. Normally open by 8:00pm,
   depending on the time of sunset. Sometimes open on other days/nights (eg, for
   special meteor showers or for solar viewing). Opening information published on
   Facebook and on the website.
-access: "Just turn up. No need to book in advance. "
+contactExplanation: "Just turn up. No need to book in advance. "
 website: http://www.croydonastro.org.uk/observatory.html
 ---
