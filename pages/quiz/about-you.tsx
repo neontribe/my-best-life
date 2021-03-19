@@ -79,7 +79,7 @@ const categories = [
 const allAges = ['<15', '15', '16', '17', '18', '18+']
 
 export const AboutYouPage = (): JSX.Element => {
-  const { aboutYou, aboutYouUpdate } = useContext(QuizContext)
+  const { aboutYou, aboutYouUpdate, setQuizComplete } = useContext(QuizContext)
 
   return (
     <Layout>
@@ -139,7 +139,7 @@ export const AboutYouPage = (): JSX.Element => {
         <VerticalSpacing />
 
         <Link href="/quiz/results" passHref>
-          <StyledLink>{'Ok'}</StyledLink>
+          <StyledLink onClick={() => setQuizComplete(true)}>{'Ok'}</StyledLink>
         </Link>
 
         <VerticalSpacing />
