@@ -5,7 +5,7 @@ interface LayoutProps {
   children: React.ReactNode
 }
 
-const StyledDiv = styled.div<LayoutProps>`
+const StyledDiv = styled.div`
   margin: auto;
   max-width: 600px;
 `
