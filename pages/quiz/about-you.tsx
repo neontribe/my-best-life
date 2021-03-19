@@ -65,10 +65,14 @@ const HorizontalGroup = styled.div`
 `
 
 const categories = [
-  'For women',
-  'For men',
-  'Gender neutral',
-  "I don't mind, show me everything",
+  'men',
+  'women',
+  'non-binary',
+  'transgender',
+  'intersex',
+  'gender non-conforming',
+  'genderqueer',
+  'agender',
 ]
 
 const allAges = ['<15', '15', '16', '17', '18', '18+']

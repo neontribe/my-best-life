@@ -61,7 +61,7 @@ const feelings = [
   { title: 'confused', image: '/img/confused.svg' },
   { title: 'angry', image: '/img/angry.svg' },
   { title: 'excited', image: '/img/excited.svg' },
-  { title: 'enthused', image: '/img/enthusiastic.svg' },
+  { title: 'enthusiastic', image: '/img/enthusiastic.svg' },
   { title: 'scared', image: '/img/scared.svg' },
   { title: 'unsafe', image: '/img/unsafe.svg' },
   { title: 'ignored', image: '/img/ignored.svg' },
