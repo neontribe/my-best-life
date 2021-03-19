@@ -1,6 +1,6 @@
 # How to setup access to a Google Sheet
 
-A short guide on how to obtain the secrets you need to allow feedback obtained through this website to be sabed to a Google Sheet.
+A short guide on how to obtain the secrets you need to allow feedback obtained through this website to be saved to a Google Sheet.
 
 ## Section 1: creating a service account
 
