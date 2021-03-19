@@ -41,7 +41,7 @@ const CheckedDisplay = styled.div`
 const Text = styled.div`
   align-items: center;
   display: flex;
-  font-size: ${(props) => props.theme.fontSizes.small};
+  font-size: ${(props) => props.theme.fontSizes.extraSmall};
   font-weight: bold;
   justify-content: center;
   letter-spacing: 0.05em;

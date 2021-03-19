@@ -22,6 +22,7 @@ declare module 'styled-components' {
       highlight: string
       normal: string
       small: string
+      extraSmall: string
     }
 
     screenSizes: {
