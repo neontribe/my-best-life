@@ -125,7 +125,7 @@ export const FilterPage: NextPage = () => {
                 key={format}
                 label={format}
                 checked={formats.includes(format)}
-                onChange={formatUpdate}
+                onChange={() => formatUpdate(format)}
               />
             )
           })}

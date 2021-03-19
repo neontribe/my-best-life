@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 
@@ -7,6 +7,7 @@ import { HeaderComponent } from '../../src/Components/Header'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { Checkbox } from '../../src/Components/Checkbox'
 import { RadioButton } from '../../src/Components/RadioButton'
+import { QuizContext } from '../../src/context/QuizContext'
 
 const Section = styled.section`
   align-items: center;
@@ -78,7 +79,7 @@ const categories = [
 const allAges = ['<15', '15', '16', '17', '18', '18+']
 
 export const AboutYouPage = (): JSX.Element => {
-  const [checked, setChecked] = React.useState(true)
+  const { aboutYou, aboutYouUpdate } = useContext(QuizContext)
 
   return (
     <Layout>
@@ -99,10 +100,13 @@ export const AboutYouPage = (): JSX.Element => {
                   key={item}
                   label={item}
                   name={'age'}
-                  checked={false}
-                  onChange={() => {
-                    null
-                  }}
+                  checked={aboutYou.age === item}
+                  onChange={() =>
+                    aboutYouUpdate((old) => {
+                      old.age = item
+                      return { ...old }
+                    })
+                  }
                 />
               )
             })}
@@ -120,9 +124,13 @@ export const AboutYouPage = (): JSX.Element => {
                 <Checkbox
                   key={category}
                   label={category}
-                  checked={checked}
-                  // basic change handler placeholder
-                  onChange={() => setChecked(checked ? false : true)}
+                  checked={aboutYou.genderPreference === category}
+                  onChange={() =>
+                    aboutYouUpdate((old) => {
+                      old.genderPreference = category
+                      return { ...old }
+                    })
+                  }
                 />
               )
             })}
