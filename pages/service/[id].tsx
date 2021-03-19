@@ -318,11 +318,11 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         </Section>
       ) : null}
 
-      {/* Access info */}
-      {serviceData.access ? (
+      {/* Expectation info */}
+      {serviceData.expectation ? (
         <Section divider={MyBestLifeTheme.colours.aqua}>
-          <Heading as="h2">How do I access it?</Heading>
-          <p>{serviceData.access}</p>
+          <Heading as="h2">What can I expect?</Heading>
+          <p>{serviceData.expectation}</p>
         </Section>
       ) : null}
 

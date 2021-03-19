@@ -22,10 +22,9 @@ eligibility: "Needs a referral to participate. Takes referrals from partners in
 format: Meeting a group of people
 quotation: Leap’s training has made me more aware of my own actions. I am more
   considerate of others, and I am softer as a person.
-access: "By referral. Get in touch with the Improving prospects team to ask
+contactExplanation: "By referral. Get in touch with the Improving prospects team to ask
   more. You can ask for Sherée Prospere, Chloe Thorogood or Aaliyah Glasgow. "
-contactExplanation: ""
 email: info@leapcc.org.uk
-phone: "020 7561 3700    "
+phone: "020 7561 3700"
 website: https://www.leapconfrontingconflict.org.uk/support-young-people
 ---

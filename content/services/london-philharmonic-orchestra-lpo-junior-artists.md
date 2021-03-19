@@ -26,11 +26,10 @@ time: "Spread over around 14 days between September and July each year. Most of
 quotation: The experience you gain is invaluable, from working with LPO players
   to talking to panels with artists like Sheku Kanneh-Mason and Angel Blue, and
   going to the office to see what goes on behind the scenes was amazing!
-access: "Applications for LPO Junior Artists 2021/22 will open in Spring 2021.
+contactExplanation: "Applications for LPO Junior Artists 2021/22 will open in Spring 2021.
   To apply, you need to make sure you're eligible in terms of musical experience
   and under-representation. You need to be considering studying music beyond
   school, and interested in finding out more about the orchestral profession. "
-contactExplanation: ""
 email: juniorartists@lpo.org.uk
 phone: 020 784 4203
 website: ""

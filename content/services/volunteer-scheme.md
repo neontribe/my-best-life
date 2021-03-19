@@ -15,7 +15,7 @@ costValue: 0
 format: Meeting a group of people
 location: Football clubs throughout Lambeth
 time: Multiple sessions
-access: "Get in touch with the St Matthew's Project or apply to an ad through
+contactExplanation: "Get in touch with the St Matthew's Project or apply to an ad through
   London Youth, London Sport, Sported, Deutsche Bank and the London F.A.  Once
   you have applied you will meet with the Project Coordinator for an informal
   discussion and attend a taster session. "
