@@ -77,7 +77,7 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
           filterButton={false}
         />
         <QuestionSection>
-          <p>Choose as many as you like</p>
+          <h3>Choose as many as you like</h3>
           <ImageCheckboxes
             id="feelings-checkboxes"
             values={feelings}
