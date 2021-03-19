@@ -46,7 +46,6 @@ const Text = styled.div`
   justify-content: center;
   letter-spacing: 0.05em;
   margin: 0 0.5rem 0.5rem 0.5rem;
-  min-height: 3.4rem;
   z-index: 1;
 `
 
@@ -55,31 +54,19 @@ const CheckboxItem = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 0 0 50%;
+  flex: 0 0 33%;
   padding: 0 0.5rem;
   margin: 0.5rem 0;
 
-  ${(props) => props.theme.screenSizes.tabletPortraitPlus} {
-    flex: 0 0 25%;
-  }
-
-  ${(props) => props.theme.screenSizes.desktopPlus} {
-    flex: 0 0 20%;
-  }
-
   label {
-    background-color: ${(props) => props.theme.colours.blue_light};
     border-radius: 1rem;
+    border-top-right-radius: 1.5rem;
+    box-shadow: 0 0 9px 2px ${(props) => props.theme.colours.shadow};
     cursor: pointer;
     display: flex;
     flex-direction: column;
     position: relative;
     text-align: center;
-
-    &:hover,
-    &:hover img {
-      background-color: ${(props) => props.theme.colours.blue_highlight};
-    }
   }
 
   input {
@@ -97,11 +84,11 @@ const CheckboxItem = styled.div`
     }
 
     &:checked ~ ${CheckedDisplay} {
-      background-color: ${(props) => props.theme.colours.yellow};
+      background-color: ${(props) => props.theme.colours.aqua_light};
     }
 
     &:checked ~ ${Text} {
-      color: ${(props) => props.theme.colours.blue};
+      color: ${(props) => props.theme.colours.purple};
     }
 
     &:checked ~ img {
@@ -110,7 +97,6 @@ const CheckboxItem = styled.div`
   }
 
   img {
-    background-color: ${(props) => props.theme.colours.blue_light};
     border-radius: 1rem;
     border: 5px solid transparent;
     height: auto;
@@ -129,7 +115,6 @@ export const ImageCheckboxes = ({
   return (
     <>
       <CheckboxGroup>
-        <VerticalSpacing />
         <fieldset>
           <VisuallyHidden>
             <legend>{label}</legend>
