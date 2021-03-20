@@ -5,12 +5,12 @@ shortDescription: 6-week interior design course
 image:
   image: img/interior-design.jpeg
   imageAlt: A women making models
-description: "An introduction to the basics in interior design: psychology of
-  colour, basic colour theory, space planning, lighting effects, design and
-  furniture styles. Fun, informal workshops which cover tips and techniques to
-  maintain your home. There are also bespoke workshop packages; get in touch if
-  you have some spare furniture lying around, or a room that needs some
-  attention. "
+description: "An introduction to the basics in interior design including, the
+  psychology of colour, basic colour theory, space planning, lighting effects,
+  design and furniture styles. Fun, informal workshops which cover tips and
+  techniques to maintain your home. There are also bespoke workshop packages;
+  get in touch if you have some spare furniture lying around, or a room that
+  needs some attention. "
 categories:
   category1: Job Stuff
   category2: Where I'm Living
