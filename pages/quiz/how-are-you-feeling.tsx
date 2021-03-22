@@ -1,12 +1,14 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import { Layout } from '../../src/Components/Layout'
 import { HeaderComponent } from '../../src/Components/Header'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { QuizContext } from '../../src/context/QuizContext'
 import { VisuallyHidden } from '../../src/Components/VisuallyHidden'
+import { LinkButton } from '../../src/Components/LinkButton'
 
 interface ImageCheckboxesProps {
   id: string
@@ -158,12 +160,18 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
 `
+const Navigation = styled.section`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+`
 
 const QuestionSection = styled.section`
   margin: 1rem;
-  padding: 1rem 0;
 
-  h3 {
+  h2 {
     font-size: ${(props) => props.theme.fontSizes.heading};
   }
 `
@@ -214,6 +222,8 @@ const feelings = [
 ]
 
 export const HowAreYouFeelingPage = (): JSX.Element => {
+  const router = useRouter()
+
   return (
     <Layout>
       <Section>
@@ -222,8 +232,20 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
           homeButton={false}
           filterButton={false}
         />
+        <Navigation>
+          <LinkButton
+            textContent="back"
+            arrow="back"
+            onClick={() => router.back()}
+          />
+          <LinkButton
+            textContent="skip"
+            arrow="forward"
+            onClick={() => router.push('/quiz/what-are-your-interests')}
+          />
+        </Navigation>
         <QuestionSection>
-          <h3>Choose as many as you like</h3>
+          <h2>Choose as many as you like</h2>
           <ImageCheckboxes
             id="feelings-checkboxes"
             values={feelings}
