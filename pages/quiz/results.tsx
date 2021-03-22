@@ -8,23 +8,11 @@ import { Layout } from '../../src/Components/Layout'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { QuizContext } from '../../src/context/QuizContext'
 import { useRouter } from 'next/router'
+import { ServicePreview } from '../index'
 
 interface QuizListPageProps {
   services: Array<ServicePreview>
 }
-
-export type ServicePreview = Pick<
-  Service,
-  | 'id'
-  | 'title'
-  | 'shortDescription'
-  | 'image'
-  | 'costValue'
-  | 'costQualifier'
-  | 'age'
-  | 'categories'
-  | 'format'
->
 
 const StyledButton = styled.button`
   align-items: center;

@@ -91,7 +91,7 @@ export const AboutYouPage = (): JSX.Element => {
         />
 
         <QuestionSection>
-          <h3>How old are you?</h3>
+          <h2>How old are you?</h2>
           <VerticalSpacing />
           <HorizontalGroup>
             {allAges.map((item) => {

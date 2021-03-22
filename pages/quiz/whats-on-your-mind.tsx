@@ -87,7 +87,7 @@ export const WhatsOnYourMindPage = (): JSX.Element => {
         />
 
         <QuestionSection>
-          <h3>Choose as many as you like</h3>
+          <h2>Choose as many as you like</h2>
           <VerticalSpacing />
 
           <CheckboxGroup>
