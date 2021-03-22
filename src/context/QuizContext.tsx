@@ -1,24 +1,16 @@
-import React, { createContext, useEffect, useState } from 'react'
+import React, { createContext, useEffect, useState, useMemo } from 'react'
 
 // We store checkbox inputs (and anything else that can be toggled)
 // using this structure. If a checkbox is checked, its id is present in
 // the array; if it is unchecked, it is not present.
 type CategoryList = Array<string>
 
-interface IAboutYou {
-  age: string
-  genderPreference: string
-}
-
-interface AboutYouUpdater {
-  (old: IAboutYou): IAboutYou
-}
-
 interface FullData {
   whatsOnMind: CategoryList
   howAreFeeling: CategoryList
   interests: CategoryList
-  aboutYou: IAboutYou
+  gender: CategoryList
+  age: string
 }
 
 interface IQuizContext {
@@ -28,17 +20,14 @@ interface IQuizContext {
   howAreFeelingToggle(key: string): void
   interestsGet(key: string): boolean
   interestsToggle(key: string): void
-  aboutYou: IAboutYou
-  aboutYouUpdate(updateFunc: AboutYouUpdater): void
+  genderGet(key: string): boolean
+  genderToggle(key: string): void
+  ageGet(): string
+  ageSet(val: string): void
   fullDataGet(): FullData | undefined
   clearProgress(): void
   quizComplete: boolean
   setQuizComplete(val: boolean): void
-}
-
-const aboutYouDefault: IAboutYou = {
-  age: '',
-  genderPreference: '',
 }
 
 const defaultValue = {
@@ -48,8 +37,10 @@ const defaultValue = {
   howAreFeelingToggle: () => undefined,
   interestsGet: () => false,
   interestsToggle: () => undefined,
-  aboutYou: aboutYouDefault,
-  aboutYouUpdate: () => undefined,
+  genderGet: () => false,
+  genderToggle: () => undefined,
+  ageGet: () => '',
+  ageSet: () => undefined,
   fullDataGet: () => undefined,
   clearProgress: () => undefined,
   quizComplete: false,
@@ -68,7 +59,8 @@ export const QuizProvider = ({ children }: QuizProviderProps): JSX.Element => {
   const [whatsOnMind, setWhatsOnMind] = useState<CategoryList>([])
   const [howAreFeeling, setHowAreFeeling] = useState<CategoryList>([])
   const [interests, setInterests] = useState<CategoryList>([])
-  const [aboutYou, setAboutYou] = useState<IAboutYou>(aboutYouDefault)
+  const [gender, setGender] = useState<CategoryList>([])
+  const [age, setAge] = useState<string>('')
   const [quizComplete, setQuizComplete] = useState(false)
 
   interface GenericGetter {
@@ -89,7 +81,8 @@ export const QuizProvider = ({ children }: QuizProviderProps): JSX.Element => {
     setWhatsOnMind(getFromLocalStorage('quiz/whatsOnMind', []))
     setHowAreFeeling(getFromLocalStorage('quiz/howAreFeeling', []))
     setInterests(getFromLocalStorage('quiz/interests', []))
-    setAboutYou(getFromLocalStorage('quiz/aboutYou', aboutYouDefault))
+    setGender(getFromLocalStorage('quiz/gender', []))
+    setAge(getFromLocalStorage('quiz/age', ''))
   }, [])
 
   interface GenericSetter {
@@ -113,8 +106,12 @@ export const QuizProvider = ({ children }: QuizProviderProps): JSX.Element => {
   }, [interests])
 
   useEffect(() => {
-    setInLocalStorage('quiz/aboutYou', aboutYou)
-  }, [aboutYou])
+    setInLocalStorage('quiz/gender', gender)
+  }, [gender])
+
+  useEffect(() => {
+    setInLocalStorage('quiz/age', age)
+  }, [age])
 
   //
   // External API for quiz context.
@@ -124,7 +121,8 @@ export const QuizProvider = ({ children }: QuizProviderProps): JSX.Element => {
     setWhatsOnMind([])
     setHowAreFeeling([])
     setInterests([])
-    setAboutYou(aboutYouDefault)
+    setAge('')
+    setGender([])
     setQuizComplete(false)
   }
 
@@ -157,25 +155,47 @@ export const QuizProvider = ({ children }: QuizProviderProps): JSX.Element => {
     return category.includes(key)
   }
 
-  const value: IQuizContext = {
-    howAreFeelingGet: (key) => getCategoryValue(howAreFeeling, key),
-    whatsOnMindGet: (key) => getCategoryValue(whatsOnMind, key),
-    interestsGet: (key) => getCategoryValue(interests, key),
-    aboutYou,
-    howAreFeelingToggle: (key) => toggleCategoryValue(setHowAreFeeling, key),
-    whatsOnMindToggle: (key) => toggleCategoryValue(setWhatsOnMind, key),
-    interestsToggle: (key) => toggleCategoryValue(setInterests, key),
-    aboutYouUpdate: setAboutYou,
-    fullDataGet: () => ({
+  const value: IQuizContext = useMemo(
+    () => ({
+      howAreFeelingGet: (key) => getCategoryValue(howAreFeeling, key),
+      whatsOnMindGet: (key) => getCategoryValue(whatsOnMind, key),
+      interestsGet: (key) => getCategoryValue(interests, key),
+      genderGet: (key) => getCategoryValue(gender, key),
+      howAreFeelingToggle: (key) => toggleCategoryValue(setHowAreFeeling, key),
+      whatsOnMindToggle: (key) => toggleCategoryValue(setWhatsOnMind, key),
+      interestsToggle: (key) => toggleCategoryValue(setInterests, key),
+      genderToggle: (key) => toggleCategoryValue(setGender, key),
+      ageGet: () => age,
+      ageSet: setAge,
+      fullDataGet: () => ({
+        howAreFeeling,
+        whatsOnMind,
+        interests,
+        gender,
+        age,
+      }),
+      clearProgress,
+      quizComplete,
+      setQuizComplete,
+    }),
+    [
+      getCategoryValue,
+      toggleCategoryValue,
       howAreFeeling,
       whatsOnMind,
       interests,
-      aboutYou,
-    }),
-    clearProgress,
-    quizComplete,
-    setQuizComplete,
-  }
+      gender,
+      age,
+      setHowAreFeeling,
+      setWhatsOnMind,
+      setInterests,
+      setGender,
+      setAge,
+      clearProgress,
+      quizComplete,
+      setQuizComplete,
+    ]
+  )
 
   return <QuizContext.Provider value={value}>{children}</QuizContext.Provider>
 }

@@ -79,7 +79,13 @@ const categories = [
 const allAges = ['<15', '15', '16', '17', '18', '18+']
 
 export const AboutYouPage = (): JSX.Element => {
-  const { aboutYou, aboutYouUpdate, setQuizComplete } = useContext(QuizContext)
+  const {
+    ageGet,
+    ageSet,
+    genderGet,
+    genderToggle,
+    setQuizComplete,
+  } = useContext(QuizContext)
 
   return (
     <Layout>
@@ -100,13 +106,8 @@ export const AboutYouPage = (): JSX.Element => {
                   key={item}
                   label={item}
                   name={'age'}
-                  checked={aboutYou.age === item}
-                  onChange={() =>
-                    aboutYouUpdate((old) => {
-                      old.age = item
-                      return { ...old }
-                    })
-                  }
+                  checked={ageGet() === item}
+                  onChange={() => ageSet(item)}
                 />
               )
             })}
@@ -124,13 +125,8 @@ export const AboutYouPage = (): JSX.Element => {
                 <Checkbox
                   key={category}
                   label={category}
-                  checked={aboutYou.genderPreference === category}
-                  onChange={() =>
-                    aboutYouUpdate((old) => {
-                      old.genderPreference = category
-                      return { ...old }
-                    })
-                  }
+                  checked={genderGet(category)}
+                  onChange={() => genderToggle(category)}
                 />
               )
             })}
