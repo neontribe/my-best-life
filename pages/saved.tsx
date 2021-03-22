@@ -1,60 +1,27 @@
-import React, { useState, useEffect } from 'react'
 import { NextPage, GetStaticProps } from 'next'
-import Link from 'next/link'
 
 import { Service, getServices } from '../cms/services'
 import { CardList } from '../src/Components/CardList'
 import { HeaderComponent } from '../src/Components/Header'
 import { Layout } from '../src/Components/Layout'
-import { Welcome } from '../src/Components/Welcome'
+import { ServicePreview } from './index'
 
 interface ListPageProps {
   services: Array<ServicePreview>
 }
 
-export type ServicePreview = Pick<
-  Service,
-  | 'id'
-  | 'title'
-  | 'shortDescription'
-  | 'image'
-  | 'costValue'
-  | 'costQualifier'
-  | 'age'
-  | 'categories'
-  | 'format'
->
-
-export const ListPage: NextPage<ListPageProps> = ({ services }) => {
-  // Default to showing the welcome screen
-  const [showWelcome, setShowWelcome] = useState<boolean>(true)
-
-  useEffect(() => {
-    // Attempt to retrieve the showWelcome value from local storage
-    const stored = window.localStorage.getItem('showWelcome')
-
-    // If it's been correctly set to false, update state
-    stored === 'false' ? setShowWelcome(false) : setShowWelcome(true)
-  }, [showWelcome])
-
+export const SavedPage: NextPage<ListPageProps> = ({ services }) => {
   return (
     <>
-      {showWelcome ? (
-        <Welcome />
-      ) : (
-        <Layout>
-          <HeaderComponent title="Support in Lambeth" homeButton filterButton />
-          <Link href="/quiz">Quiz</Link>
-          <br />
-          <Link href={`/saved`}>Saved</Link>
-          <CardList services={services} listType="filtered" />
-        </Layout>
-      )}
+      <Layout>
+        <HeaderComponent title="Support in Lambeth" homeButton />
+        <CardList services={services} listType="saved" />
+      </Layout>
     </>
   )
 }
 
-export default ListPage
+export default SavedPage
 
 export const getStaticProps: GetStaticProps = async () => {
   const allServices = getServices()
@@ -66,6 +33,7 @@ export const getStaticProps: GetStaticProps = async () => {
         title: service.title,
         shortDescription: service.shortDescription,
         costValue: service.costValue,
+        saved: false,
 
         ...(service.image?.image && {
           image: {

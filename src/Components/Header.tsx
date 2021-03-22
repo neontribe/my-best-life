@@ -6,8 +6,8 @@ import { VisuallyHidden } from './VisuallyHidden'
 import { ButtonBase } from './ButtonBase'
 
 interface HeaderProps {
-  homeButton: boolean
-  filterButton: boolean
+  homeButton?: boolean
+  filterButton?: boolean
   title: string
 }
 

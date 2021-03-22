@@ -28,6 +28,7 @@ export interface Service {
   form?: string
   phone?: string
   website?: string
+  saved: boolean
 }
 
 type Category =
@@ -149,7 +150,7 @@ export function getServiceData(id: string): ServiceDetail {
   const { data } = matter(fileContents)
 
   // Assert that our result must be a ServiceDetail
-  const serviceDetails = data as ServiceDetail
+  const serviceDetails = { id: id, ...data } as ServiceDetail
 
   return {
     ...serviceDetails,
