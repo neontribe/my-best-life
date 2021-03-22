@@ -19,6 +19,7 @@ import { SaveContext } from '../../src/context/SaveContext'
 import { FiveStar } from '../../src/Components/FiveStar'
 import { Checkbox } from '../../src/Components/Checkbox'
 import { ButtonBase } from '../../src/Components/ButtonBase'
+import { LinkButton } from '../../src/Components/LinkButton'
 
 import { NotificationsContext } from '../../src/context/NotificationsContext'
 
@@ -32,31 +33,6 @@ const Header = styled.header`
   width: 100%;
   display: flex;
   justify-content: space-between;
-`
-
-const BackLink = styled.button`
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid transparent;
-  color: ${(props) => props.theme.colours.blue};
-  font-family: 'Catamaran', sans-serif;
-  font-weight: bold;
-  text-decoration: none;
-
-  &:before {
-    content: '<';
-    display: inline-block;
-    margin-right: 0.5rem;
-  }
-
-  &:focus {
-    outline: 2px dashed ${(props) => props.theme.colours.blue};
-    outline-offset: 2px;
-  }
-
-  &:hover {
-    border-bottom: 2px solid ${(props) => props.theme.colours.blue};
-  }
 `
 
 const ImageContainer = styled.div`
@@ -306,9 +282,11 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         </svg>
       </VisuallyHidden>
       <Header>
-        <BackLink onClick={() => router.back()}>
-          <span>Back</span>
-        </BackLink>
+        <LinkButton
+          textContent="Back"
+          arrow="back"
+          onClick={() => router.back()}
+        />
       </Header>
 
       {serviceData.image?.image && (
