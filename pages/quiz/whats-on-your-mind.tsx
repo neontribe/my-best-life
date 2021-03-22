@@ -1,11 +1,14 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import { Layout } from '../../src/Components/Layout'
 import { HeaderComponent } from '../../src/Components/Header'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { Checkbox } from '../../src/Components/Checkbox'
+import { LinkButton } from '../../src/Components/LinkButton'
+
 import { QuizContext } from '../../src/context/QuizContext'
 
 const Section = styled.section`
@@ -15,11 +18,16 @@ const Section = styled.section`
   justify-content: space-between;
 `
 
+const Navigation = styled.section`
+  padding: 1rem;
+  width: 100%;
+  text-align: right;
+`
+
 const QuestionSection = styled.section`
   margin: 1rem;
-  padding: 1rem 0;
 
-  h3 {
+  h2 {
     font-size: ${(props) => props.theme.fontSizes.heading};
   }
 `
@@ -59,7 +67,6 @@ const StyledLink = styled.a`
 `
 
 const categories = [
-  "Don't mind, skip",
   'My money',
   'School and college',
   'Sex and relationships',
@@ -76,12 +83,19 @@ const categories = [
 
 export const WhatsOnYourMindPage = (): JSX.Element => {
   const { whatsOnMindGet, whatsOnMindToggle } = useContext(QuizContext)
+  const router = useRouter()
 
   return (
     <Layout>
       <Section>
         <HeaderComponent title="What's on your mind today?" />
-
+        <Navigation>
+          <LinkButton
+            textContent="skip"
+            arrow="forward"
+            onClick={() => router.push('/quiz/how-are-you-feeling')}
+          />
+        </Navigation>
         <QuestionSection>
           <h2>Choose as many as you like</h2>
           <VerticalSpacing />

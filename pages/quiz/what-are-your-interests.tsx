@@ -1,12 +1,14 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import { Layout } from '../../src/Components/Layout'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { HeaderComponent } from '../../src/Components/Header'
 import { Checkbox } from '../../src/Components/Checkbox'
 import { QuizContext } from '../../src/context/QuizContext'
+import { LinkButton } from '../../src/Components/LinkButton'
 
 const Section = styled.section`
   align-items: center;
@@ -15,11 +17,18 @@ const Section = styled.section`
   justify-content: space-between;
 `
 
+const Navigation = styled.section`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+`
+
 const QuestionSection = styled.section`
   margin: 1rem;
-  padding: 1rem 0;
 
-  h3 {
+  h2 {
     font-size: ${(props) => props.theme.fontSizes.heading};
   }
 `
@@ -59,7 +68,6 @@ const StyledLink = styled.a`
 `
 
 const interests = [
-  "Don't mind, skip",
   'Sports',
   'Music',
   'Films and TV',
@@ -76,11 +84,24 @@ const interests = [
 
 export const WhatAreYourInterestsPage = (): JSX.Element => {
   const { interestsGet, interestsToggle } = useContext(QuizContext)
+  const router = useRouter()
 
   return (
     <Layout>
       <Section>
         <HeaderComponent title="What are your interests?" />
+        <Navigation>
+          <LinkButton
+            textContent="back"
+            arrow="back"
+            onClick={() => router.back()}
+          />
+          <LinkButton
+            textContent="skip"
+            arrow="forward"
+            onClick={() => router.push('/quiz/about-you')}
+          />
+        </Navigation>
         <QuestionSection>
           <h2>Choose as many as you like</h2>
           <VerticalSpacing />
