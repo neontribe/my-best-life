@@ -63,7 +63,13 @@ export const ListPage: NextPage<ListPageProps> = ({ services }) => {
         <Layout>
           <HeaderComponent title="Support in Lambeth" homeButton filterButton />
           <Link href="/quiz">Quiz</Link>
-          <CardList services={services} onLoad={scrollToLastPos} />
+          <br />
+          <Link href={`/saved`}>Saved</Link>
+          <CardList
+            services={services}
+            listType="filtered"
+            onLoad={scrollToLastPos}
+          />
         </Layout>
       )}
     </>
