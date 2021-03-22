@@ -50,7 +50,7 @@ export const GlobalStyle = createGlobalStyle`
     src: url('/fonts/Lato-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
-    font-display: optional;
+    font-display: swap;
   }
 
   @font-face {
@@ -58,7 +58,7 @@ export const GlobalStyle = createGlobalStyle`
     src: url('/fonts/Catamaran-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
-    font-display: optional;
+    font-display: swap;
   }
 
   //

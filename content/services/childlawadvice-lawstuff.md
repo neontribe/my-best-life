@@ -16,7 +16,7 @@ age:
   maxAge: 25
 format: Online
 time: Online content available 24/7, but office open Monday to Friday, 8am-6pm.
-access: Browse the content on the website and, if you need further help, fill in
+contactExplanation: Browse the content on the website and, if you need further help, fill in
   their form.
 form: https://lawstuff.org.uk/contact-us/
 website: https://lawstuff.org.uk/

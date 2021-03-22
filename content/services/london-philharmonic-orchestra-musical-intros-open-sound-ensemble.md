@@ -26,10 +26,9 @@ time: "Courses run three times a year in school holidays. Morning group for
   those with little or no musical experience. Afternoon group for those with
   more musical experience. Both are two hours long, with time to get to know the
   space, and time for breaks if needed. "
-access: "Online application form to provide basic details (filled in by parent
+contactExplanation: "Online application form to provide basic details (filled in by parent
   or carer). then a follow-up conversation with a member of the LPO Education
   and Community team. "
-contactExplanation: "Please get in touch via email. "
 email: hannah.tripp@lpo.org.uk
 phone: 07887 501531
 website: https://www.lpo.org.uk/education/open-sound.html

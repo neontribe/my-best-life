@@ -4,6 +4,7 @@ import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'styled-components'
 
 import { FilterProvider } from '../src/context/FilterContext'
+import { SaveProvider } from '../src/context/SaveContext'
 import { MyBestLifeTheme, GlobalStyle } from '../src/Theme'
 import { NotificationsProvider } from '../src/context/NotificationsContext'
 import { QuizProvider } from '../src/context/QuizContext'
@@ -18,8 +19,10 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         <NotificationsProvider>
           <QuizProvider>
             <FilterProvider>
-              <GlobalStyle />
-              <Component {...pageProps} />
+              <SaveProvider>
+                <GlobalStyle />
+                <Component {...pageProps} />
+              </SaveProvider>
             </FilterProvider>
           </QuizProvider>
         </NotificationsProvider>
