@@ -32,7 +32,7 @@ quotation: The LIT programme I believe has been paramount to making me stand out
   engineering which I wish to go into, is becoming ever more competitive and
   opportunities like the LIT program is something that will help me become more
   hireable.
-access: Fill out the application form. If you have any questions, get in touch
+contactExplanation: Fill out the application form. If you have any questions, get in touch
   via email.
 email: info@reachinghigher.org.uk
 form: https://app.upshot.org.uk/signup/137b5125/embed/

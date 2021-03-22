@@ -19,7 +19,7 @@ format: One to one chats
 location: Multiple locations throughout Lambeth and surrounding boroughs.
 quotation: "The nurse helping me was extremely kind and helpful and really
   helped me open up which I was originally scared to do. "
-access: Contact Valentina via phone or email.
+contactExplanation: Contact Valentina via phone or email.
 email: Lambeth@Brook.org
 phone: 07917 460749
 website: https://www.brook.org.uk/services/dash-lambeth/#gethelpfromDASH

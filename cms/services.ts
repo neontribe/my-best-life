@@ -10,20 +10,17 @@ export interface Service {
   shortDescription: string
   image?: { image: string; imageAlt: string }
   description: string
-  categories?: { category1: string; category2: string }
+  categories?: { category1: Category; category2: Category }
+  interest: Interest
   costValue: number
   costQualifier?: string
   costExplanation: string
   age?: { minAge: number; maxAge: number }
-  gender?: string
+  gender?: Gender
   eligibility?: string
-  format:
-    | 'One to one chats'
-    | 'Meeting a group of people'
-    | 'Online'
-    | 'Over the phone'
+  format: Formats
   time?: string
-  access?: string
+  expectation?: string
   quotation?: string
   location?: string
   contactExplanation?: string
@@ -31,7 +28,52 @@ export interface Service {
   form?: string
   phone?: string
   website?: string
+  saved: boolean
 }
+
+type Category =
+  | 'Money'
+  | 'School and College'
+  | 'Sex and Relationships'
+  | 'Mental Health'
+  | 'Keeping Safe'
+  | 'Job Stuff'
+  | "Where I'm Living"
+  | 'Friends'
+  | 'Family'
+  | 'Drink and Drugs'
+  | 'My Body'
+  | 'My Rights and the Law'
+
+type Formats =
+  | 'One to one chats'
+  | 'Meeting a group of people'
+  | 'Online'
+  | 'Over the phone'
+
+type Gender =
+  | 'men'
+  | 'women'
+  | 'non-binary'
+  | 'transgender'
+  | 'intersex'
+  | 'gender non-conforming'
+  | 'genderqueer'
+  | 'agender'
+
+type Interest =
+  | 'Sports'
+  | 'Music'
+  | 'Films and TV'
+  | 'Art and Design'
+  | 'Drama'
+  | 'Reading'
+  | 'Writing'
+  | 'Cooking'
+  | 'Volunteering'
+  | 'Outdoor Activities'
+  | 'Activism'
+  | 'Fashion and Beauty'
 
 export type ServiceDetail = Pick<
   Service,
@@ -47,12 +89,13 @@ export type ServiceDetail = Pick<
   | 'location'
   | 'time'
   | 'quotation'
-  | 'access'
+  | 'expectation'
   | 'contactExplanation'
   | 'email'
   | 'form'
   | 'phone'
   | 'website'
+  | 'format'
 >
 
 interface idParams {
