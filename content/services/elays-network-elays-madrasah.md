@@ -19,7 +19,7 @@ age:
 format: Meeting a group of people
 location: 2 Thessaly Road, Nine Elms, London SW8 4HT
 time: Saturdays, 10.00am - 1.30pm
-access: Fill in the Elays Madrasah registration form online below.
+contactExplanation: Fill in the Elays Madrasah registration form online below.
 email: info@elaysnetwork.com
 form: https://www.elaysnetwork.com/elays-madrasah
 phone: 020 7720 6864

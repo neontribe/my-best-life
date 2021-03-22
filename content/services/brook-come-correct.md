@@ -23,7 +23,7 @@ format: One to one chats
 location: "Wherever you see the Come Correct logo (at the top of this page) in
   clinics, youth centres and pharmacies throughout Lambeth and surrounding
   boroughs. "
-access: "Register either at the outlet or online - check on the website to see
+contactExplanation: "Register either at the outlet or online - check on the website to see
   what to do in your borough. Call ahead or check online to make sure the outlet
   you wish to visit is open. "
 form: http://www.comecorrect.org.uk/Map.aspx
