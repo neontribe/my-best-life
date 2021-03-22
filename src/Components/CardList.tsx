@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 
 import { Card } from './Card'
 import { ServicePreview } from '../../pages/index'
@@ -6,10 +6,15 @@ import { FilterContext } from '../context/FilterContext'
 
 interface CardListProps {
   services: Array<ServicePreview>
+  onLoad?(): void
 }
 
-export const CardList = ({ services }: CardListProps): JSX.Element => {
+export const CardList = ({ services, onLoad }: CardListProps): JSX.Element => {
   const { age, formats } = useContext(FilterContext)
+
+  useEffect(() => {
+    onLoad && onLoad()
+  }, [onLoad])
 
   return (
     <>

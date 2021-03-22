@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { NextPage, GetStaticProps } from 'next'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import { Service, getServices } from '../cms/services'
 import { CardList } from '../src/Components/CardList'
@@ -28,6 +29,7 @@ export type ServicePreview = Pick<
 export const ListPage: NextPage<ListPageProps> = ({ services }) => {
   // Default to showing the welcome screen
   const [showWelcome, setShowWelcome] = useState<boolean>(true)
+  const router = useRouter()
 
   useEffect(() => {
     // Attempt to retrieve the showWelcome value from local storage
@@ -37,6 +39,22 @@ export const ListPage: NextPage<ListPageProps> = ({ services }) => {
     stored === 'false' ? setShowWelcome(false) : setShowWelcome(true)
   }, [showWelcome])
 
+  // Store last scroll position so we can return to it when we load the page next time
+  useEffect(() => {
+    const handler = () => {
+      localStorage.setItem('lastScroll', window.pageYOffset.toString())
+    }
+
+    router.events.on('beforeHistoryChange', handler)
+    return () => {
+      router.events.off('beforeHistoryChange', handler)
+    }
+  }, [router.events])
+
+  const scrollToLastPos = () => {
+    window.scrollTo(0, parseInt(localStorage.getItem('lastScroll') || '0'))
+  }
+
   return (
     <>
       {showWelcome ? (
@@ -45,7 +63,7 @@ export const ListPage: NextPage<ListPageProps> = ({ services }) => {
         <Layout>
           <HeaderComponent title="Support in Lambeth" homeButton filterButton />
           <Link href="/quiz">Quiz</Link>
-          <CardList services={services} />
+          <CardList services={services} onLoad={scrollToLastPos} />
         </Layout>
       )}
     </>
