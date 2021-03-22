@@ -28,6 +28,7 @@ export const MyBestLifeTheme: DefaultTheme = {
     highlight: '18px',
     normal: '16px',
     small: '15px',
+    extraSmall: '14px',
   },
 
   screenSizes: {

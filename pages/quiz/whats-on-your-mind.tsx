@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 
@@ -6,6 +6,7 @@ import { Layout } from '../../src/Components/Layout'
 import { HeaderComponent } from '../../src/Components/Header'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { Checkbox } from '../../src/Components/Checkbox'
+import { QuizContext } from '../../src/context/QuizContext'
 
 const Section = styled.section`
   align-items: center;
@@ -74,7 +75,7 @@ const categories = [
 ]
 
 export const WhatsOnYourMindPage = (): JSX.Element => {
-  const [checked, setChecked] = React.useState(false)
+  const { whatsOnMindGet, whatsOnMindToggle } = useContext(QuizContext)
 
   return (
     <Layout>
@@ -86,7 +87,7 @@ export const WhatsOnYourMindPage = (): JSX.Element => {
         />
 
         <QuestionSection>
-          <p>Choose as many as you like</p>
+          <h2>Choose as many as you like</h2>
           <VerticalSpacing />
 
           <CheckboxGroup>
@@ -95,9 +96,8 @@ export const WhatsOnYourMindPage = (): JSX.Element => {
                 <Checkbox
                   key={category}
                   label={category}
-                  checked={checked}
-                  // basic change handler placeholder
-                  onChange={() => setChecked(checked ? false : true)}
+                  checked={whatsOnMindGet(category)}
+                  onChange={() => whatsOnMindToggle(category)}
                 />
               )
             })}

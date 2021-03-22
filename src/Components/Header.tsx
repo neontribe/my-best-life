@@ -18,7 +18,7 @@ const Header = styled.header`
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 `
 
 const HeaderContents = styled.div`
