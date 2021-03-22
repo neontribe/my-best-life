@@ -69,7 +69,7 @@ export const QuizListPage: NextPage<QuizListPageProps> = ({ services }) => {
       <HeaderComponent title="Results" homeButton filterButton />
       <VerticalSpacing />
       <StyledButton onClick={onReset}>Reset Quiz</StyledButton>
-      <CardList services={services} />
+      <CardList services={services} listType="filtered" />
     </Layout>
   )
 }
