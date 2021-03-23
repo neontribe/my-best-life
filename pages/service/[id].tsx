@@ -14,7 +14,6 @@ import { VisuallyHidden } from '../../src/Components/VisuallyHidden'
 import { MyBestLifeTheme } from '../../src/Theme'
 import { formatAgeDisplay } from '../../src/Components/Card'
 import { MapLink } from '../../src/Components/MapLink'
-import { Carousel } from '../../src/Components/Carousel'
 import { ReviewDisplay } from '../../src/Components/ReviewDisplay'
 import { SaveButton } from '../../src/Components/SaveButton'
 import { SaveContext } from '../../src/context/SaveContext'
@@ -373,11 +372,9 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
       {serviceData.reviews && serviceData.reviews.length > 0 ? (
         <Section divider={MyBestLifeTheme.colours.aqua}>
           <Heading as="h2">Reviews for this service</Heading>
-          <Carousel>
-            {serviceData.reviews.map((data, i) => {
-              return <ReviewDisplay data={data} key={i} />
-            })}
-          </Carousel>
+          {serviceData.reviews.map((data, i) => {
+            return <ReviewDisplay data={data} key={i} />
+          })}
         </Section>
       ) : null}
 

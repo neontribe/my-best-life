@@ -7,7 +7,9 @@ interface ReviewProps {
   data: IReview
 }
 
-const ReviewBody = styled.div``
+const ReviewBody = styled.div`
+  margin-bottom: 2rem;
+`
 
 const BottomContainer = styled.div`
   margin: 1rem 2rem 0 2rem;
