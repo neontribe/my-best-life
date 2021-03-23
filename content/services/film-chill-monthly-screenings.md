@@ -3,8 +3,8 @@ organisation: Film & Chill
 title: Monthly screenings
 shortDescription: Monthly cinema screenings
 image:
-  image: img/theatre.jpeg
-  imageAlt: Theatre curtains
+  image: img/film-and-chill.jpg
+  imageAlt: People sitting in a cinema
 description: "A small and relaxing cinema club with monthly screenings of
   brand-new films and independent films. A wide variety of films spanning a
   multitude of genres. Independent filmmakers screen their short films prior to
