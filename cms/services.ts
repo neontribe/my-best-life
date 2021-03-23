@@ -22,12 +22,14 @@ export interface Service {
   time?: string
   expectation?: string
   quotation?: string
+  access?: string
   location?: string
   contactExplanation?: string
   email?: string
   form?: string
   phone?: string
   website?: string
+  reviews?: Array<Review>
   saved: boolean
 }
 
@@ -95,8 +97,15 @@ export type ServiceDetail = Pick<
   | 'form'
   | 'phone'
   | 'website'
+  | 'reviews'
   | 'format'
 >
+
+export interface Review {
+  comment?: string
+  rating?: number
+  author?: number
+}
 
 interface idParams {
   params: {
