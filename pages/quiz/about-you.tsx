@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 
@@ -6,6 +6,8 @@ import { Layout } from '../../src/Components/Layout'
 import { HeaderComponent } from '../../src/Components/Header'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { Checkbox } from '../../src/Components/Checkbox'
+import { RadioButton } from '../../src/Components/RadioButton'
+import { QuizContext } from '../../src/context/QuizContext'
 
 const Section = styled.section`
   align-items: center;
@@ -56,15 +58,34 @@ const StyledLink = styled.a`
     transition: 0.3s;
   }
 `
+
+const HorizontalGroup = styled.div`
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+`
+
 const categories = [
-  'For women',
-  'For men',
-  'Gender neutral',
-  "I don't mind, show me everything",
+  'men',
+  'women',
+  'non-binary',
+  'transgender',
+  'intersex',
+  'gender non-conforming',
+  'genderqueer',
+  'agender',
 ]
 
+const allAges = ['<15', '15', '16', '17', '18', '18+']
+
 export const AboutYouPage = (): JSX.Element => {
-  const [checked, setChecked] = React.useState(true)
+  const {
+    ageGet,
+    ageSet,
+    genderGet,
+    genderToggle,
+    setQuizComplete,
+  } = useContext(QuizContext)
 
   return (
     <Layout>
@@ -75,11 +96,22 @@ export const AboutYouPage = (): JSX.Element => {
           filterButton={false}
         />
 
-        <VerticalSpacing />
         <QuestionSection>
-          <h3>How old are you?</h3>
+          <h2>How old are you?</h2>
           <VerticalSpacing />
-          <input></input>
+          <HorizontalGroup>
+            {allAges.map((item) => {
+              return (
+                <RadioButton
+                  key={item}
+                  label={item}
+                  name={'age'}
+                  checked={ageGet() === item}
+                  onChange={() => ageSet(item)}
+                />
+              )
+            })}
+          </HorizontalGroup>
           <VerticalSpacing />
           <p>
             Some support and activities in your area are gender specific. To
@@ -93,23 +125,17 @@ export const AboutYouPage = (): JSX.Element => {
                 <Checkbox
                   key={category}
                   label={category}
-                  checked={checked}
-                  // basic change handler placeholder
-                  onChange={() => setChecked(checked ? false : true)}
+                  checked={genderGet(category)}
+                  onChange={() => genderToggle(category)}
                 />
               )
             })}
           </CheckboxGroup>
-          <VerticalSpacing />
-          <h3>{"What's your postcode?"}</h3>
-          <VerticalSpacing />
-
-          <input></input>
         </QuestionSection>
         <VerticalSpacing />
 
         <Link href="/quiz/results" passHref>
-          <StyledLink>{'Ok'}</StyledLink>
+          <StyledLink onClick={() => setQuizComplete(true)}>{'Ok'}</StyledLink>
         </Link>
 
         <VerticalSpacing />

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { NextPage, GetStaticProps } from 'next'
 import Link from 'next/link'
 
@@ -8,6 +8,7 @@ import { HeaderComponent } from '../src/Components/Header'
 import { Layout } from '../src/Components/Layout'
 import { Welcome } from '../src/Components/Welcome'
 import { useScrollRemember } from '../src/hooks/scrollRemember'
+import { QuizContext } from '../src/context/QuizContext'
 
 interface ListPageProps {
   services: Array<ServicePreview>
@@ -30,6 +31,7 @@ export const ListPage: NextPage<ListPageProps> = ({ services }) => {
   // Default to showing the welcome screen
   const [showWelcome, setShowWelcome] = useState<boolean>(true)
   const { resumePosition } = useScrollRemember()
+  const { quizComplete } = useContext(QuizContext)
 
   useEffect(() => {
     // Attempt to retrieve the showWelcome value from local storage
@@ -46,7 +48,7 @@ export const ListPage: NextPage<ListPageProps> = ({ services }) => {
       ) : (
         <Layout>
           <HeaderComponent title="Support in Lambeth" homeButton filterButton />
-          <Link href="/quiz">Quiz</Link>
+          <Link href={quizComplete ? '/quiz/results' : '/quiz'}>Quiz</Link>
           <br />
           <Link href={`/saved`}>Saved</Link>
           <CardList

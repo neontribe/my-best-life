@@ -28,6 +28,7 @@ export const MyBestLifeTheme: DefaultTheme = {
     highlight: '18px',
     normal: '16px',
     small: '15px',
+    extraSmall: '14px',
   },
 
   screenSizes: {
@@ -49,7 +50,7 @@ export const GlobalStyle = createGlobalStyle`
     src: url('/fonts/Lato-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
-    font-display: optional;
+    font-display: swap;
   }
 
   @font-face {
@@ -57,7 +58,7 @@ export const GlobalStyle = createGlobalStyle`
     src: url('/fonts/Catamaran-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
-    font-display: optional;
+    font-display: swap;
   }
 
   //

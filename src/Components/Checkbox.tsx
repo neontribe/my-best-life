@@ -3,7 +3,7 @@ import styled from 'styled-components'
 interface CheckboxProps {
   label: string
   checked: boolean
-  onChange: any
+  onChange(): void
 }
 
 const CheckboxItem = styled.li`
@@ -33,11 +33,7 @@ export const Checkbox = ({
     <CheckboxItem>
       <label>
         {label}
-        <input
-          type="checkbox"
-          checked={checked}
-          onChange={() => onChange(label)}
-        ></input>
+        <input type="checkbox" checked={checked} onChange={onChange}></input>
       </label>
     </CheckboxItem>
   )

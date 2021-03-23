@@ -7,6 +7,7 @@ import { FilterProvider } from '../src/context/FilterContext'
 import { SaveProvider } from '../src/context/SaveContext'
 import { MyBestLifeTheme, GlobalStyle } from '../src/Theme'
 import { NotificationsProvider } from '../src/context/NotificationsContext'
+import { QuizProvider } from '../src/context/QuizContext'
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
@@ -16,12 +17,14 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       </Head>
       <ThemeProvider theme={MyBestLifeTheme}>
         <NotificationsProvider>
-          <FilterProvider>
-            <SaveProvider>
-              <GlobalStyle />
-              <Component {...pageProps} />
-            </SaveProvider>
-          </FilterProvider>
+          <QuizProvider>
+            <FilterProvider>
+              <SaveProvider>
+                <GlobalStyle />
+                <Component {...pageProps} />
+              </SaveProvider>
+            </FilterProvider>
+          </QuizProvider>
         </NotificationsProvider>
       </ThemeProvider>
     </>

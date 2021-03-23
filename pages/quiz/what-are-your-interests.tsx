@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 
@@ -6,6 +6,7 @@ import { Layout } from '../../src/Components/Layout'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { HeaderComponent } from '../../src/Components/Header'
 import { Checkbox } from '../../src/Components/Checkbox'
+import { QuizContext } from '../../src/context/QuizContext'
 
 const Section = styled.section`
   align-items: center;
@@ -62,19 +63,19 @@ const interests = [
   'Sports',
   'Music',
   'Films and TV',
-  'Gaming',
-  'Art',
+  'Art and Design',
   'Drama',
   'Reading',
-  'Friends',
   'Writing',
   'Cooking',
   'Volunteering',
-  'Outdoor activities',
+  'Outdoor Activities',
+  'Activism',
+  'Fashion and Beauty',
 ]
 
 export const WhatAreYourInterestsPage = (): JSX.Element => {
-  const [checked, setChecked] = React.useState(false)
+  const { interestsGet, interestsToggle } = useContext(QuizContext)
 
   return (
     <Layout>
@@ -85,18 +86,17 @@ export const WhatAreYourInterestsPage = (): JSX.Element => {
           filterButton={false}
         />
         <QuestionSection>
-          <h3>Choose as many as you like</h3>
+          <h2>Choose as many as you like</h2>
           <VerticalSpacing />
 
           <CheckboxGroup>
-            {interests.map((interested) => {
+            {interests.map((interest) => {
               return (
                 <Checkbox
-                  key={interested}
-                  label={interested}
-                  checked={checked}
-                  // basic change handler placeholder
-                  onChange={() => setChecked(checked ? false : true)}
+                  key={interest}
+                  label={interest}
+                  checked={interestsGet(interest)}
+                  onChange={() => interestsToggle(interest)}
                 />
               )
             })}

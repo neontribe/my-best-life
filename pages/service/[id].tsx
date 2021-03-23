@@ -194,19 +194,22 @@ const SubmitButton = styled(ButtonBase)`
 `
 
 interface ReviewState {
-  rating: number | undefined
-  hasUsedService: boolean
-  comment: string | undefined
+  rating?: number
+  usedService: boolean
+  comment?: string
 }
 
 export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
   const { saved } = useContext(SaveContext)
   const { notify } = useContext(NotificationsContext)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [lastSubmission, setLastSubmission] = useState(0)
+  const rateLimit = 30 * 1000
   const router = useRouter()
 
   const initialReviewState = {
     rating: undefined,
-    hasUsedService: false,
+    usedService: false,
     comment: undefined,
   }
 
@@ -222,7 +225,7 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
   const onUsedServiceChange = () =>
     setReviewState((s: ReviewState) => ({
       ...s,
-      hasUsedService: !s.hasUsedService,
+      usedService: !s.usedService,
     }))
 
   const onCommentChange = (v: string) =>
@@ -234,14 +237,54 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
   }
 
   const submitReview = () => {
-    // TODO
-    // eslint-disable-next-line
-    console.log('Review submitted: ', reviewState)
-    clearForm()
-    notify({
-      msg: 'Thank you for submitting your review!',
-      time: 5000,
+    if (isSubmitting) {
+      return
+    }
+
+    if (Date.now() - lastSubmission < rateLimit) {
+      notify({
+        msg: 'You are doing that too much, try again later',
+        time: 5000,
+      })
+      return
+    }
+
+    const postOK = () => {
+      notify({
+        msg: 'Thank you for submitting your review!',
+        time: 5000,
+      })
+      clearForm()
+      setLastSubmission(Date.now())
+    }
+
+    const postErr = () => {
+      notify({
+        msg: 'Sorry, there was an error submitting your review',
+        time: 5000,
+      })
+    }
+
+    setIsSubmitting(true)
+    fetch('/api/review', {
+      method: 'POST',
+      body: JSON.stringify({
+        ...reviewState,
+        serviceId: serviceData.id,
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
     })
+      .then((res: Response) => {
+        if (res.ok) postOK()
+        else postErr()
+        setIsSubmitting(false)
+      })
+      .catch(() => {
+        postErr()
+        setIsSubmitting(false)
+      })
   }
 
   return (
@@ -408,7 +451,7 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         />
         <Checkbox
           label={'I have attended this service'}
-          checked={reviewState.hasUsedService}
+          checked={reviewState.usedService}
           onChange={onUsedServiceChange}
         />
         <span>Leave a review</span>
@@ -418,7 +461,7 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         />
         <SubmitButtonContainer>
           <SubmitButton as="button" onClick={submitReview}>
-            <span>Post review</span>
+            <span>{isSubmitting ? 'Posting...' : 'Post review'}</span>
           </SubmitButton>
         </SubmitButtonContainer>
       </Section>
