@@ -1,4 +1,10 @@
-import React, { createContext, useEffect, useState, useMemo } from 'react'
+import React, {
+  createContext,
+  useEffect,
+  useState,
+  useMemo,
+  useCallback,
+} from 'react'
 
 // We store checkbox inputs (and anything else that can be toggled)
 // using this structure. If a checkbox is checked, its id is present in
@@ -117,14 +123,21 @@ export const QuizProvider = ({ children }: QuizProviderProps): JSX.Element => {
   // External API for quiz context.
   //
 
-  const clearProgress = () => {
+  const clearProgress = useCallback(() => {
     setWhatsOnMind([])
     setHowAreFeeling([])
     setInterests([])
     setAge('')
     setGender([])
     setQuizComplete(false)
-  }
+  }, [
+    setWhatsOnMind,
+    setHowAreFeeling,
+    setInterests,
+    setAge,
+    setGender,
+    setQuizComplete,
+  ])
 
   interface CategoryToggler {
     (
@@ -135,25 +148,31 @@ export const QuizProvider = ({ children }: QuizProviderProps): JSX.Element => {
 
   // This function generalises a way of storing checkbox inputs. It is generalised to any state that stores
   // a value of type CategoryList.
-  const toggleCategoryValue: CategoryToggler = (setStateFunc, key) => {
-    setStateFunc((cur) => {
-      if (cur === null) return cur
+  const toggleCategoryValue: CategoryToggler = useCallback(
+    (setStateFunc, key) => {
+      setStateFunc((cur) => {
+        if (cur === null) return cur
 
-      const idx = cur.indexOf(key)
-      const isSet = idx > -1
-      if (isSet) {
-        cur.splice(idx, 1)
-      } else {
-        cur.push(key)
-      }
+        const idx = cur.indexOf(key)
+        const isSet = idx > -1
+        if (isSet) {
+          cur.splice(idx, 1)
+        } else {
+          cur.push(key)
+        }
 
-      return [...cur]
-    })
-  }
+        return [...cur]
+      })
+    },
+    []
+  )
 
-  const getCategoryValue = (category: CategoryList, key: string): boolean => {
-    return category.includes(key)
-  }
+  const getCategoryValue = useCallback(
+    (category: CategoryList, key: string): boolean => {
+      return category.includes(key)
+    },
+    []
+  )
 
   const value: IQuizContext = useMemo(
     () => ({
