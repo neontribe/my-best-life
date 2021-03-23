@@ -1,7 +1,7 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useContext } from 'react'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
+import { useRouter } from 'next/router'
 import styled from 'styled-components'
 
 import {
@@ -16,10 +16,14 @@ import { formatAgeDisplay } from '../../src/Components/Card'
 import { MapLink } from '../../src/Components/MapLink'
 import { Carousel } from '../../src/Components/Carousel'
 import { ReviewDisplay } from '../../src/Components/ReviewDisplay'
+import { SaveButton } from '../../src/Components/SaveButton'
+import { SaveContext } from '../../src/context/SaveContext'
 import { FiveStar } from '../../src/Components/FiveStar'
 import { Checkbox } from '../../src/Components/Checkbox'
 import { ButtonBase } from '../../src/Components/ButtonBase'
 import { Quotation } from '../../src/Components/Quotation'
+
+import { NotificationsContext } from '../../src/context/NotificationsContext'
 
 interface ServicePageProps {
   serviceData: ServiceDetail
@@ -33,7 +37,9 @@ const Header = styled.header`
   justify-content: space-between;
 `
 
-const BackLink = styled.a`
+const BackLink = styled.button`
+  background-color: transparent;
+  border: none;
   border-bottom: 2px solid transparent;
   color: ${(props) => props.theme.colours.blue};
   font-family: 'Catamaran', sans-serif;
@@ -62,6 +68,16 @@ const ImageContainer = styled.div`
   overflow: hidden;
   position: relative;
   width: 100%;
+`
+
+const TitleContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
 `
 
 const Section = styled.section<{ divider: string }>`
@@ -165,30 +181,40 @@ const SubmitButton = styled(ButtonBase)`
 `
 
 interface ReviewState {
-  rating: number | undefined
-  hasUsedService: boolean
-  comment: string | undefined
+  rating?: number
+  usedService: boolean
+  comment?: string
 }
 
 export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
+  const { saved } = useContext(SaveContext)
+  const { notify } = useContext(NotificationsContext)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [lastSubmission, setLastSubmission] = useState(0)
+  const rateLimit = 30 * 1000
+  const router = useRouter()
+
   const initialReviewState = {
     rating: undefined,
-    hasUsedService: false,
+    usedService: false,
     comment: undefined,
   }
 
   const [reviewState, setReviewState] = useState<ReviewState>(
     initialReviewState
   )
+
   const commentInputRef = useRef<HTMLTextAreaElement | null>(null)
 
   const onRatingChange = (v: number) =>
     setReviewState((s: ReviewState) => ({ ...s, rating: v }))
+
   const onUsedServiceChange = () =>
     setReviewState((s: ReviewState) => ({
       ...s,
-      hasUsedService: !s.hasUsedService,
+      usedService: !s.usedService,
     }))
+
   const onCommentChange = (v: string) =>
     setReviewState((s: ReviewState) => ({ ...s, comment: v }))
 
@@ -198,10 +224,54 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
   }
 
   const submitReview = () => {
-    // TODO
-    // eslint-disable-next-line
-    console.log('Review submitted: ', reviewState)
-    clearForm()
+    if (isSubmitting) {
+      return
+    }
+
+    if (Date.now() - lastSubmission < rateLimit) {
+      notify({
+        msg: 'You are doing that too much, try again later',
+        time: 5000,
+      })
+      return
+    }
+
+    const postOK = () => {
+      notify({
+        msg: 'Thank you for submitting your review!',
+        time: 5000,
+      })
+      clearForm()
+      setLastSubmission(Date.now())
+    }
+
+    const postErr = () => {
+      notify({
+        msg: 'Sorry, there was an error submitting your review',
+        time: 5000,
+      })
+    }
+
+    setIsSubmitting(true)
+    fetch('/api/review', {
+      method: 'POST',
+      body: JSON.stringify({
+        ...reviewState,
+        serviceId: serviceData.id,
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    })
+      .then((res: Response) => {
+        if (res.ok) postOK()
+        else postErr()
+        setIsSubmitting(false)
+      })
+      .catch(() => {
+        postErr()
+        setIsSubmitting(false)
+      })
   }
 
   return (
@@ -223,11 +293,9 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         </svg>
       </VisuallyHidden>
       <Header>
-        <Link href={'/'} passHref>
-          <BackLink>
-            <span>Back</span>
-          </BackLink>
-        </Link>
+        <BackLink onClick={() => router.back()}>
+          <span>Back</span>
+        </BackLink>
       </Header>
 
       {serviceData.image?.image && (
@@ -243,8 +311,16 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
 
       {/* Service intro */}
       <Section divider={MyBestLifeTheme.colours.yellow}>
-        <Heading as="h1">{serviceData.title}</Heading>
-        <Organisation>{`Run by ${serviceData.organisation}`}</Organisation>
+        <TitleContainer>
+          <div>
+            <Heading as="h1">{serviceData.title}</Heading>
+            <Organisation>{`Run by ${serviceData.organisation}`}</Organisation>
+          </div>
+          <SaveButton
+            id={serviceData.id}
+            saved={saved.includes(serviceData.id)}
+          />
+        </TitleContainer>
         <p>{serviceData.description}</p>
       </Section>
 
@@ -305,11 +381,11 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         </Section>
       ) : null}
 
-      {/* Access info */}
-      {serviceData.access ? (
+      {/* Expectation info */}
+      {serviceData.expectation ? (
         <Section divider={MyBestLifeTheme.colours.aqua}>
-          <Heading as="h2">How do I access it?</Heading>
-          <p>{serviceData.access}</p>
+          <Heading as="h2">What can I expect?</Heading>
+          <p>{serviceData.expectation}</p>
         </Section>
       ) : null}
 
@@ -370,7 +446,7 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         />
         <Checkbox
           label={'I have attended this service'}
-          checked={reviewState.hasUsedService}
+          checked={reviewState.usedService}
           onChange={onUsedServiceChange}
         />
         <span>Leave a review</span>
@@ -380,17 +456,15 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         />
         <SubmitButtonContainer>
           <SubmitButton as="button" onClick={submitReview}>
-            <span>Post review</span>
+            <span>{isSubmitting ? 'Posting...' : 'Post review'}</span>
           </SubmitButton>
         </SubmitButtonContainer>
       </Section>
 
       <Footer>
-        <Link href={`/`} passHref>
-          <ButtonLink>
-            <span>Back to Results</span>
-          </ButtonLink>
-        </Link>
+        <ButtonLink as="button" onClick={() => router.back()} type="button">
+          <span>Back to Results</span>
+        </ButtonLink>
       </Footer>
     </Layout>
   )

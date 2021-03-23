@@ -5,6 +5,12 @@ import styled from 'styled-components'
 import { VisuallyHidden } from './VisuallyHidden'
 import { ButtonBase } from './ButtonBase'
 
+interface HeaderProps {
+  homeButton?: boolean
+  filterButton?: boolean
+  title: string
+}
+
 const Header = styled.header`
   background-color: ${(props) => props.theme.colours.aqua};
   clip-path: url(#wave);
@@ -12,7 +18,7 @@ const Header = styled.header`
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 `
 
 const HeaderContents = styled.div`
@@ -39,7 +45,11 @@ const ButtonLinkText = styled(ButtonBase)`
   color: ${(props) => props.theme.colours.yellow};
 `
 
-export const HeaderComponent = (): JSX.Element => {
+export const HeaderComponent = ({
+  homeButton,
+  filterButton,
+  title,
+}: HeaderProps): JSX.Element => {
   return (
     <>
       <VisuallyHidden>
@@ -53,20 +63,24 @@ export const HeaderComponent = (): JSX.Element => {
       </VisuallyHidden>
       <Header>
         <HeaderContents>
-          <Link href={`/`} passHref>
-            <ButtonLink>
-              <Image
-                src="/img/home-icon.png"
-                alt="Home"
-                height={44}
-                width={44}
-              />
-            </ButtonLink>
-          </Link>
-          <Title>Support in Lambeth</Title>
-          <Link href={`/filter`} passHref>
-            <ButtonLinkText>Filter</ButtonLinkText>
-          </Link>
+          {homeButton && (
+            <Link href={`/`} passHref>
+              <ButtonLink>
+                <Image
+                  src="/img/home-icon.png"
+                  alt="Home"
+                  height={44}
+                  width={44}
+                />
+              </ButtonLink>
+            </Link>
+          )}
+          <Title>{title}</Title>
+          {filterButton && (
+            <Link href={`/filter`} passHref>
+              <ButtonLinkText>Filter</ButtonLinkText>
+            </Link>
+          )}
         </HeaderContents>
       </Header>
     </>

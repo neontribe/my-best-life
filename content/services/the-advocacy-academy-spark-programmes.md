@@ -16,7 +16,7 @@ age:
   maxAge: 18
 eligibility: Your home or school Post Code begins with SW or SE
 format: Meeting a group of people
-access: Apply by filling the form and providing 200 words or a 3 minute video
+contactExplanation: Apply by filling the form and providing 200 words or a 3 minute video
   via the application form below.
 email: hello@theadvocacyacademy.com
 form: https://advocacyapplication.paperform.co/

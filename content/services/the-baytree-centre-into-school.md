@@ -17,7 +17,6 @@ categories:
   category1: School and College
   category2: Friends
 costValue: 0
-gender: ""
 eligibility: "Support to girls who have recently arrived in the UK and have no
   school place, to transition into the education system. "
 format: Meeting a group of people
@@ -26,7 +25,7 @@ time: "Classes Monday to Wednesday. Currently operating remotely, with two
   lessons from 11am to 12pm and from 12pm to 1pm. "
 quotation: "Baytree makes me feel like I can do something in my life. Like I can
   achieve my goals. "
-access: "You will need a parents/guardian or youth worker to sign you up for
+contactExplanation: "You will need a parents/guardian or youth worker to sign you up for
   support. Get them to fill in the referral form below or call or call 0207 733
   5283. "
 email: olive@baytreecentre.org.uk

@@ -72,13 +72,14 @@ export default {
           label: 'Categories',
           name: 'categories',
           widget: 'object',
+          hint:
+            'Add categories for the service. Not currently displayed, but influences the quiz results',
           fields: [
             {
               label: 'Category 1',
               name: 'category1',
               widget: 'select',
               required: false,
-              hint: 'Displayed on list and details view',
               options: [
                 { label: '-', value: '' },
                 { label: 'Money', value: 'Money' },
@@ -106,7 +107,6 @@ export default {
               name: 'category2',
               widget: 'select',
               required: false,
-              hint: 'Displayed on list and details view',
               options: [
                 { label: '-', value: '' },
                 { label: 'Money', value: 'Money' },
@@ -129,6 +129,52 @@ export default {
                 },
               ],
             },
+          ],
+        },
+        {
+          label: 'Interest group',
+          name: 'interest',
+          widget: 'select',
+          hint:
+            'Add an interest group for the service. Not currently displayed, but influences the quiz results',
+          required: false,
+          options: [
+            { label: '-', value: '' },
+            { label: 'Sports', value: 'Sports' },
+            { label: 'Music', value: 'Music' },
+            { label: 'Films and TV', value: 'Films and TV' },
+            { label: 'Art and Design', value: 'Art and Design' },
+            { label: 'Drama', value: 'Drama' },
+            { label: 'Reading', value: 'Reading' },
+            { label: 'Writing', value: 'Writing' },
+            { label: 'Cooking', value: 'Cooking' },
+            { label: 'Volunteering', value: 'Volunteering' },
+            { label: 'Outdoor Activities', value: 'Outdoor Activities' },
+            { label: 'Activism', value: 'Activism' },
+            { label: 'Fashion and Beauty', value: 'Fashion and Beauty' },
+          ],
+        },
+        {
+          label: 'Feelings',
+          name: 'feelings',
+          widget: 'select',
+          hint:
+            'Add feelings the service addresses. Not currently displayed, but influences the quiz results',
+          required: false,
+          multiple: true,
+          options: [
+            { label: 'unsure', value: 'unsure' },
+            { label: 'okay', value: 'okay' },
+            { label: 'calm', value: 'calm' },
+            { label: 'anxious', value: 'anxious' },
+            { label: 'hopeful', value: 'hopeful' },
+            { label: 'confused', value: 'confused' },
+            { label: 'angry', value: 'angry' },
+            { label: 'excited', value: 'excited' },
+            { label: 'enthusiastic', value: 'enthusiastic' },
+            { label: 'scared', value: 'scared' },
+            { label: 'unsafe', value: 'unsafe' },
+            { label: 'ignored', value: 'ignored' },
           ],
         },
         {
@@ -183,10 +229,21 @@ export default {
         {
           label: 'Gender',
           name: 'gender',
-          widget: 'string',
-          hint:
-            'Write this as the service refers to, so we can understand what terminology services are using',
+          widget: 'select',
+          multiple: true,
           required: false,
+          hint:
+            'Specify if a service will only allow certain genders. Leave blank if unknown',
+          options: [
+            { label: 'men', value: 'men' },
+            { label: 'women', value: 'women' },
+            { label: 'non-binary', value: 'non-binary' },
+            { label: 'transgender', value: 'transgender' },
+            { label: 'intersex', value: 'intersex' },
+            { label: 'gender non-conforming', value: 'gender non-conforming' },
+            { label: 'genderqueer', value: 'genderqueer' },
+            { label: 'agender', value: 'agender' },
+          ],
         },
         {
           label: 'Eligibility',
@@ -232,9 +289,11 @@ export default {
           required: false,
         },
         {
-          label: 'How to access',
-          name: 'access',
+          label: 'What to expect',
+          name: 'expectation',
           widget: 'text',
+          hint:
+            "Add some details to help set a service user's expectations before attending",
           required: false,
         },
         {

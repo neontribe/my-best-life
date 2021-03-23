@@ -19,8 +19,7 @@ eligibility: 13-17 year olds from the Lairdale, Peabody Hill and Rosendale Road
 format: Meeting a group of people
 location: Rosendale Community Centre, Rosendale Road Estate, SE27 9DR
 time: Wednesdays from 6.30 – 8.30pm
-access: "Get in touch for more information about the club. "
-contactExplanation: ""
+contactExplanation: "Get in touch for more information about the club. "
 email: info@4-all.org.uk
 phone: 07432 118 859
 website: https://www.4-all.org.uk/whatwedo
