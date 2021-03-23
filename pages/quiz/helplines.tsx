@@ -57,11 +57,7 @@ export const IfYouNeedHelpPage = (): JSX.Element => {
   return (
     <Layout>
       <Section>
-        <HeaderComponent
-          title="Do you need help?"
-          homeButton={false}
-          filterButton={false}
-        />
+        <HeaderComponent title="Do you need help?" />
         <Text>If you are in immediate danger, call 999.</Text>
         <Text>
           If you are not in immediate danger but need to talk to someone. Speak

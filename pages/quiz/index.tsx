@@ -9,7 +9,6 @@ const Section = styled.section`
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   justify-content: space-between;
 `
 
@@ -21,6 +20,7 @@ const Text = styled.p`
   font-size: ${(props) => props.theme.fontSizes.heading};
   max-width: 20ch;
   text-align: center;
+  margin-bottom: 1rem;
 `
 
 const StyledLink = styled.a`
@@ -56,9 +56,8 @@ const StyledLink = styled.a`
 export const QuizWelcomePage = (): JSX.Element => {
   return (
     <Layout>
+      <HeaderComponent title="Quiz" />
       <Section>
-        <HeaderComponent title="Quiz" homeButton={false} filterButton={false} />
-
         <Text>Welcome!</Text>
         <Text>
           We can help you find available support, relevant to your needs and

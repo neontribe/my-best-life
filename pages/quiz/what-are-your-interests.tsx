@@ -80,11 +80,7 @@ export const WhatAreYourInterestsPage = (): JSX.Element => {
   return (
     <Layout>
       <Section>
-        <HeaderComponent
-          title="What are your interests?"
-          homeButton={false}
-          filterButton={false}
-        />
+        <HeaderComponent title="What are your interests?" />
         <QuestionSection>
           <h2>Choose as many as you like</h2>
           <VerticalSpacing />

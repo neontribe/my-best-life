@@ -90,11 +90,7 @@ export const AboutYouPage = (): JSX.Element => {
   return (
     <Layout>
       <Section>
-        <HeaderComponent
-          title="About you"
-          homeButton={false}
-          filterButton={false}
-        />
+        <HeaderComponent title="About you" />
 
         <QuestionSection>
           <h2>How old are you?</h2>

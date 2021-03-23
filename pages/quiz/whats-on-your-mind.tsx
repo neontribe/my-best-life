@@ -80,11 +80,7 @@ export const WhatsOnYourMindPage = (): JSX.Element => {
   return (
     <Layout>
       <Section>
-        <HeaderComponent
-          title="What's on your mind today?"
-          homeButton={false}
-          filterButton={false}
-        />
+        <HeaderComponent title="What's on your mind today?" />
 
         <QuestionSection>
           <h2>Choose as many as you like</h2>
