@@ -14,7 +14,7 @@ export const SavedPage: NextPage<ListPageProps> = ({ services }) => {
   return (
     <>
       <Layout>
-        <HeaderComponent title="Support in Lambeth" homeButton />
+        <HeaderComponent title="Support in Lambeth" />
         <CardList services={services} listType="saved" />
       </Layout>
     </>
