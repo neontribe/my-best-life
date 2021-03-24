@@ -271,7 +271,7 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         <LinkButton
           textContent="Back"
           arrow="back"
-          onClick={() => router.back()}
+          onClick={() => router.push('/')}
         />
       </Header>
 
@@ -437,7 +437,7 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
       </Section>
 
       <Footer>
-        <ButtonLink as="button" onClick={() => router.back()} type="button">
+        <ButtonLink as="button" onClick={() => router.push('/')} type="button">
           <span>Back to Results</span>
         </ButtonLink>
       </Footer>

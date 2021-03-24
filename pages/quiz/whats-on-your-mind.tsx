@@ -93,7 +93,7 @@ export const WhatsOnYourMindPage = (): JSX.Element => {
           <LinkButton
             textContent="skip"
             arrow="forward"
-            onClick={() => router.push('/quiz/how-are-you-feeling')}
+            onClick={() => router.push('how-are-you-feeling')}
           />
         </Navigation>
         <QuestionSection>
