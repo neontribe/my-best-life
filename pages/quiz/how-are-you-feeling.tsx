@@ -236,12 +236,12 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
           <LinkButton
             textContent="back"
             arrow="back"
-            onClick={() => router.back()}
+            onClick={() => router.push('whats-on-your-mind')}
           />
           <LinkButton
             textContent="skip"
             arrow="forward"
-            onClick={() => router.push('/quiz/what-are-your-interests')}
+            onClick={() => router.push('what-are-your-interests')}
           />
         </Navigation>
         <QuestionSection>

@@ -98,12 +98,12 @@ export const WhatAreYourInterestsPage = (): JSX.Element => {
           <LinkButton
             textContent="back"
             arrow="back"
-            onClick={() => router.back()}
+            onClick={() => router.push('how-are-you-feeling')}
           />
           <LinkButton
             textContent="skip"
             arrow="forward"
-            onClick={() => router.push('/quiz/about-you')}
+            onClick={() => router.push('about-you')}
           />
         </Navigation>
         <QuestionSection>
