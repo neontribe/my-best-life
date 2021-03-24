@@ -42,7 +42,7 @@ const MapPin = styled.div`
 const formMapLink = (location: string): string =>
   `https://www.google.com/maps/search/${encodeURIComponent(location)}`
 
-const excludePattern = /(?:multiple locations)|(?:online)/gi
+const excludePattern = /(?:multiple locations)|(?:online)/i
 
 export const MapLink = ({ location }: MapLinkProps): JSX.Element => {
   if (excludePattern.test(location)) return <></>
