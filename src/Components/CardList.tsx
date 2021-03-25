@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 
 import { Card } from './Card'
 import { EmptyList } from './EmptyList'
@@ -9,14 +9,20 @@ import { SaveContext } from '../context/SaveContext'
 interface CardListProps {
   services: Array<ServicePreview>
   listType: 'filtered' | 'saved'
+  onLoad?(): void
 }
 
 export const CardList = ({
   services,
   listType,
+  onLoad,
 }: CardListProps): JSX.Element => {
   const { age, formats } = useContext(FilterContext)
   const { saved } = useContext(SaveContext)
+
+  useEffect(() => {
+    onLoad && onLoad()
+  }, [onLoad])
 
   function ageFilter(item: ServicePreview) {
     let ageNumber: number
