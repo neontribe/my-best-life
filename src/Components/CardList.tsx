@@ -5,10 +5,13 @@ import { EmptyList } from './EmptyList'
 import { ServicePreview } from '../../pages/index'
 import { FilterContext } from '../context/FilterContext'
 import { SaveContext } from '../context/SaveContext'
+import { QuizContext } from '../context/QuizContext'
+import { Interest, Gender } from '../../cms/services'
 
+export type ListType = 'filtered' | 'saved' | 'quiz'
 interface CardListProps {
   services: Array<ServicePreview>
-  listType: 'filtered' | 'saved'
+  listType: ListType
 }
 
 export const CardList = ({
@@ -17,11 +20,18 @@ export const CardList = ({
 }: CardListProps): JSX.Element => {
   const { age, formats } = useContext(FilterContext)
   const { saved } = useContext(SaveContext)
+  const { fullDataGet } = useContext(QuizContext)
 
-  function ageFilter(item: ServicePreview) {
+  const quizAnswers = fullDataGet()
+  // Define weight values to modify results later
+  const categoryWeight = 1
+  const interestWeight = 1
+  const feelingWeight = 1
+
+  function ageFilter(item: ServicePreview, ageInput: string | undefined) {
     let ageNumber: number
 
-    switch (age) {
+    switch (ageInput) {
       case '<15':
         ageNumber = 14
         break
@@ -74,14 +84,88 @@ export const CardList = ({
     if (item?.format && formats.includes(item?.format)) return true
   }
 
+  function genderFilter(
+    item: ServicePreview,
+    genderInput: Array<string> | undefined
+  ) {
+    // If no preference is set for user or service, return everything
+    if (genderInput?.length === 0 || item?.gender?.length === 0) {
+      return true
+    }
+
+    genderInput?.filter((gen) => {
+      const gender = gen as Gender
+      if (!item?.gender?.includes(gender)) {
+        return false
+      } else {
+        return true
+      }
+    })
+  }
+
+  function assignQuizScore(item: ServicePreview) {
+    item.score = 0
+
+    // Make sure we won't have any casing inconsistency for matching categories
+    const quizCategories = quizAnswers?.whatsOnMind.map((item) => {
+      return item.toLowerCase()
+    })
+
+    // Category matching
+    if (
+      item.categories?.category1 &&
+      quizCategories?.includes(item.categories?.category1.toLowerCase())
+    ) {
+      item.score += categoryWeight
+    }
+
+    if (
+      item.categories?.category2 &&
+      quizCategories?.includes(item.categories?.category2.toLowerCase())
+    ) {
+      item.score += categoryWeight
+    }
+
+    const interestMatches = quizAnswers?.interests?.filter((value) => {
+      const interest = value as Interest
+      if (item?.interests.includes(interest)) return true
+    })
+
+    item.score += (interestMatches?.length || 0) * interestWeight
+
+    // Feeling matching
+    const feelingMatches = quizAnswers?.howAreFeeling?.filter((value) => {
+      if (item?.feelings.includes(value)) return true
+    })
+
+    item.score += (feelingMatches?.length || 0) * feelingWeight
+
+    // filter this list by only services that receive a score and are eligible
+    if (item.score > 0) {
+      return true
+    }
+  }
+
   let filteredServices
 
   if (listType === 'saved') {
     filteredServices = services.filter((item) => saved.includes(item.id))
   }
 
+  if (listType === 'quiz') {
+    filteredServices = services
+      .filter(assignQuizScore)
+      .filter((item) => ageFilter(item, quizAnswers?.age))
+      .filter((item) => genderFilter(item, quizAnswers?.gender))
+      .sort((a, b) => {
+        return b.score - a.score
+      })
+  }
+
   if (listType === 'filtered') {
-    filteredServices = services.filter(ageFilter).filter(formatFilter)
+    filteredServices = services
+      .filter((item) => ageFilter(item, age))
+      .filter(formatFilter)
   }
 
   return (
@@ -98,7 +182,6 @@ export const CardList = ({
               costValue={service.costValue}
               costQualifier={service.costQualifier}
               age={service.age}
-              categories={service.categories}
               format={service.format}
             />
           ))}
