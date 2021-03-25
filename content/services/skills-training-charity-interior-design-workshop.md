@@ -14,7 +14,8 @@ description: "An introduction to the basics in interior design including, the
 categories:
   category1: Job Stuff
   category2: Where I'm Living
-interest: Art and Design
+interests:
+  - Art and Design
 costValue: 0
 age:
   minAge: 16

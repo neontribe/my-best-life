@@ -133,7 +133,7 @@ export default {
         },
         {
           label: 'Interest group',
-          name: 'interest',
+          name: 'interests',
           widget: 'select',
           multiple: true,
           max: 3,

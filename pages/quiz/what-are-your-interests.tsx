@@ -59,7 +59,6 @@ const StyledLink = styled.a`
 `
 
 const interests = [
-  "Don't mind, skip",
   'Sports',
   'Music',
   'Films and TV',

@@ -57,7 +57,7 @@ export const QuizListPage: NextPage<QuizListPageProps> = ({ services }) => {
       <HeaderComponent title="Results" homeButton filterButton />
       <VerticalSpacing />
       <StyledButton onClick={onReset}>Reset Quiz</StyledButton>
-      <CardList services={services} listType="filtered" />
+      <CardList services={services} listType="quiz" />
     </Layout>
   )
 }
@@ -74,6 +74,10 @@ export const getStaticProps: GetStaticProps = async () => {
         title: service.title,
         shortDescription: service.shortDescription,
         costValue: service.costValue,
+        interests: service.interests || [],
+        feelings: service.feelings || [],
+        gender: service.gender || [],
+        score: 0,
 
         ...(service.image?.image && {
           image: {

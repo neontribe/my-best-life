@@ -23,7 +23,11 @@ export type ServicePreview = Pick<
   | 'costQualifier'
   | 'age'
   | 'categories'
+  | 'interests'
+  | 'feelings'
+  | 'gender'
   | 'format'
+  | 'score'
 >
 
 export const ListPage: NextPage<ListPageProps> = ({ services }) => {
@@ -68,6 +72,10 @@ export const getStaticProps: GetStaticProps = async () => {
         title: service.title,
         shortDescription: service.shortDescription,
         costValue: service.costValue,
+        interests: service.interests || [],
+        feelings: service.feelings || [],
+        gender: service.gender || [],
+        score: 0,
 
         ...(service.image?.image && {
           image: {

@@ -16,7 +16,8 @@ description: "A small and relaxing cinema club with monthly screenings of
 categories:
   category1: Friends
   category2: Mental Health
-interest: Films and TV
+interests:
+  - Films and TV
 costValue: 8.5
 costQualifier: From
 eligibility: At this current time, unfortunately they don’t have access for

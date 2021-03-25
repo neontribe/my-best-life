@@ -8,14 +8,15 @@ image:
 description: >-
   Extra-curricular activities and workshops, one-to-one support, volunteering
   and work experience opportunities, and a leadership programme. Spark Youth
-  Club (14+) focusing on leadership skills and empowering girls. 
+  Club (14+) focusing on leadership skills and empowering girls.
 
 
-  Volunteering opportunities for young women aged 16 and over, who are trained for their volunteer role and supported throughout. One- and two-week work experience placements at Baytree or with partner organisations. 
+  Volunteering opportunities for young women aged 16 and over, who are trained for their volunteer role and supported throughout. One- and two-week work experience placements at Baytree or with partner organisations.
 categories:
   category1: Job Stuff
   category2: Mental Health
-interest: Volunteering
+interests:
+  - Volunteering
 costValue: 0
 gender:
   - women
