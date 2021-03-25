@@ -1,7 +1,8 @@
 import styled from 'styled-components'
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 
 import { SaveContext } from '../context/SaveContext'
+import { NotificationsContext } from '../context/NotificationsContext'
 
 interface SaveButtonProps {
   id: string
@@ -39,16 +40,23 @@ const RadioButtonItem = styled.button<{ saved: boolean }>`
 
 export const SaveButton = ({ id, saved }: SaveButtonProps): JSX.Element => {
   const { savedUpdate } = useContext(SaveContext)
+  const { notify } = useContext(NotificationsContext)
+
+  const handleClick = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    const isSaved = savedUpdate(id)
+    notify({
+      msg: isSaved ? 'Added to saved list' : 'Removed from saved list',
+      time: 2000,
+    })
+  }
 
   return (
     <RadioButtonItem
       aria-label={'Save'}
       aria-pressed={saved}
       saved={saved}
-      onClick={(e) => {
-        e.stopPropagation()
-        savedUpdate(id)
-      }}
+      onClick={handleClick}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
