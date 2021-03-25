@@ -383,6 +383,14 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
               </EmailListItem>
             </>
           ) : null}
+          {serviceData.phone ? (
+            <>
+              <EmailListItem>
+                <span>Phone: </span>
+                {serviceData.phone}
+              </EmailListItem>
+            </>
+          ) : null}
           {serviceData.form ? (
             <>
               <ContactListItem>
