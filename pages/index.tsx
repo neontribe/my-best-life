@@ -1,13 +1,12 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect } from 'react'
 import { NextPage, GetStaticProps } from 'next'
-import Link from 'next/link'
 
 import { Service, getServices } from '../cms/services'
 import { CardList } from '../src/Components/CardList'
 import { HeaderComponent } from '../src/Components/Header'
 import { Layout } from '../src/Components/Layout'
 import { Welcome } from '../src/Components/Welcome'
-import { QuizContext } from '../src/context/QuizContext'
+import { useScrollRemember } from '../src/hooks/scrollRemember'
 
 interface ListPageProps {
   services: Array<ServicePreview>
@@ -33,7 +32,7 @@ export type ServicePreview = Pick<
 export const ListPage: NextPage<ListPageProps> = ({ services }) => {
   // Default to showing the welcome screen
   const [showWelcome, setShowWelcome] = useState<boolean>(true)
-  const { quizComplete } = useContext(QuizContext)
+  const { resumePosition } = useScrollRemember()
 
   useEffect(() => {
     // Attempt to retrieve the showWelcome value from local storage
@@ -49,11 +48,12 @@ export const ListPage: NextPage<ListPageProps> = ({ services }) => {
         <Welcome />
       ) : (
         <Layout>
-          <HeaderComponent title="Support in Lambeth" homeButton filterButton />
-          <Link href={quizComplete ? '/quiz/results' : '/quiz'}>Quiz</Link>
-          <br />
-          <Link href={`/saved`}>Saved</Link>
-          <CardList services={services} listType="filtered" />
+          <HeaderComponent title="Support in Lambeth" filterButton />
+          <CardList
+            onLoad={resumePosition}
+            services={services}
+            listType="filtered"
+          />
         </Layout>
       )}
     </>

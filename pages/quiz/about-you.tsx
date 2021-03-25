@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import { Layout } from '../../src/Components/Layout'
 import { HeaderComponent } from '../../src/Components/Header'
@@ -8,6 +9,7 @@ import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { Checkbox } from '../../src/Components/Checkbox'
 import { RadioButton } from '../../src/Components/RadioButton'
 import { QuizContext } from '../../src/context/QuizContext'
+import { LinkButton } from '../../src/Components/LinkButton'
 
 const Section = styled.section`
   align-items: center;
@@ -15,12 +17,18 @@ const Section = styled.section`
   flex-direction: column;
   justify-content: space-between;
 `
+const Navigation = styled.section`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+`
 
 const QuestionSection = styled.section`
   margin: 1rem;
-  padding: 1rem 0;
 
-  h3 {
+  h2 {
     font-size: ${(props) => props.theme.fontSizes.heading};
   }
 `
@@ -79,6 +87,8 @@ const categories = [
 const allAges = ['<15', '15', '16', '17', '18', '18+']
 
 export const AboutYouPage = (): JSX.Element => {
+  const router = useRouter()
+
   const {
     ageGet,
     ageSet,
@@ -90,12 +100,14 @@ export const AboutYouPage = (): JSX.Element => {
   return (
     <Layout>
       <Section>
-        <HeaderComponent
-          title="About you"
-          homeButton={false}
-          filterButton={false}
-        />
-
+        <HeaderComponent title="About you" />
+        <Navigation>
+          <LinkButton
+            textContent="back"
+            arrow="back"
+            onClick={() => router.back()}
+          />
+        </Navigation>
         <QuestionSection>
           <h2>How old are you?</h2>
           <VerticalSpacing />

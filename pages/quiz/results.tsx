@@ -54,7 +54,7 @@ export const QuizListPage: NextPage<QuizListPageProps> = ({ services }) => {
 
   return (
     <Layout>
-      <HeaderComponent title="Results" homeButton filterButton />
+      <HeaderComponent title="Results" />
       <VerticalSpacing />
       <StyledButton onClick={onReset}>Reset Quiz</StyledButton>
       <CardList services={services} listType="quiz" />
