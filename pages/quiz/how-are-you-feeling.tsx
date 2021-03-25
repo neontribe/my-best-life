@@ -217,11 +217,7 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
   return (
     <Layout>
       <Section>
-        <HeaderComponent
-          title="How are you feeling?"
-          homeButton={false}
-          filterButton={false}
-        />
+        <HeaderComponent title="How are you feeling?" />
         <QuestionSection>
           <h3>Choose as many as you like</h3>
           <ImageCheckboxes

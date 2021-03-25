@@ -14,11 +14,13 @@ import { VisuallyHidden } from '../../src/Components/VisuallyHidden'
 import { MyBestLifeTheme } from '../../src/Theme'
 import { formatAgeDisplay } from '../../src/Components/Card'
 import { MapLink } from '../../src/Components/MapLink'
+import { ReviewDisplay } from '../../src/Components/ReviewDisplay'
 import { SaveButton } from '../../src/Components/SaveButton'
 import { SaveContext } from '../../src/context/SaveContext'
 import { FiveStar } from '../../src/Components/FiveStar'
 import { Checkbox } from '../../src/Components/Checkbox'
 import { ButtonBase } from '../../src/Components/ButtonBase'
+import { Quotation } from '../../src/Components/Quotation'
 
 import { NotificationsContext } from '../../src/context/NotificationsContext'
 
@@ -97,22 +99,6 @@ const Organisation = styled.p`
   font-family: 'Catamaran', sans-serif;
   font-weight: bold;
   margin-bottom: 1.5rem;
-`
-
-const Quotation = styled.div`
-  margin-top: 1rem;
-  display: flex;
-  width: 100%;
-`
-
-const QuoteMark = styled.div<{ side: string }>`
-  flex: 1 0 2rem;
-  color: ${(props) => props.theme.colours.aqua};
-  font-size: 50px;
-  text-align: center;
-  line-height: 1;
-  ${(props) => (props.side === 'left' ? 'margin-left: -1rem' : null)};
-  ${(props) => (props.side === 'right' ? 'margin-right: -1rem' : null)};
 `
 
 const Footer = styled.footer`
@@ -378,11 +364,17 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
       {serviceData.quotation ? (
         <Section divider={MyBestLifeTheme.colours.aqua}>
           <Heading as="h2">What do other young people say?</Heading>
-          <Quotation>
-            <QuoteMark side={'left'}>&ldquo;</QuoteMark>
-            <blockquote>{serviceData.quotation}</blockquote>
-            <QuoteMark side={'right'}>&rdquo;</QuoteMark>
-          </Quotation>
+          <Quotation>{serviceData.quotation}</Quotation>
+        </Section>
+      ) : null}
+
+      {/* Reviews */}
+      {serviceData.reviews && serviceData.reviews.length > 0 ? (
+        <Section divider={MyBestLifeTheme.colours.aqua}>
+          <Heading as="h2">Reviews for this service</Heading>
+          {serviceData.reviews.map((data, i) => {
+            return <ReviewDisplay data={data} key={i} />
+          })}
         </Section>
       ) : null}
 
