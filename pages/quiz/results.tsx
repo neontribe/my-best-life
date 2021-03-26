@@ -9,6 +9,7 @@ import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { QuizContext } from '../../src/context/QuizContext'
 import { useRouter } from 'next/router'
 import { ServicePreview } from '../index'
+import { useScrollRemember } from '../../src/hooks/scrollRemember'
 
 interface QuizListPageProps {
   services: Array<ServicePreview>
@@ -46,6 +47,7 @@ const StyledButton = styled.button`
 export const QuizListPage: NextPage<QuizListPageProps> = ({ services }) => {
   const { clearProgress } = useContext(QuizContext)
   const router = useRouter()
+  const { resumePosition } = useScrollRemember()
 
   const onReset = () => {
     clearProgress()
@@ -57,7 +59,11 @@ export const QuizListPage: NextPage<QuizListPageProps> = ({ services }) => {
       <HeaderComponent title="Results" />
       <VerticalSpacing />
       <StyledButton onClick={onReset}>Reset Quiz</StyledButton>
-      <CardList services={services} listType="filtered" />
+      <CardList
+        services={services}
+        listType="filtered"
+        onLoad={resumePosition}
+      />
     </Layout>
   )
 }

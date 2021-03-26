@@ -19,9 +19,9 @@ export const useScrollRemember = (): UseScrollRememberReturns => {
       localStorage.setItem(id, '0')
     }
 
+    router.events.on('beforeHistoryChange', handler)
     window.addEventListener('beforeunload', unloadHandler)
 
-    router.events.on('beforeHistoryChange', handler)
     return () => {
       router.events.off('beforeHistoryChange', handler)
       window.removeEventListener('beforeunload', unloadHandler)
