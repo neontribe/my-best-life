@@ -21,7 +21,7 @@ const NavContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 2rem;
+  margin: 1rem 0;
   align-items: center;
 `
 
@@ -30,8 +30,57 @@ const NavigationButton = styled(ButtonBase)`
 
   &:disabled {
     opacity: 0;
+    cursor: normal;
   }
 `
+
+interface NavigationProps {
+  onForward(): void
+  onBack(): void
+  isFirstPage: boolean
+  isLastPage: boolean
+  page: number | null
+  totalPages: number
+}
+
+const Navigation = ({
+  onForward,
+  onBack,
+  isFirstPage,
+  isLastPage,
+  page,
+  totalPages,
+}: NavigationProps) => {
+  if (totalPages < 2) {
+    return null
+  }
+
+  return (
+    <NavContainer>
+      {
+        <NavigationButton
+          disabled={isFirstPage}
+          as="button"
+          onClick={() => !isFirstPage && onBack()}
+          aria-label="Previous page"
+        >
+          Back
+        </NavigationButton>
+      }
+      {<div>{page !== null && `${page + 1} / ${totalPages}`}</div>}
+      {
+        <NavigationButton
+          disabled={isLastPage}
+          as="button"
+          onClick={() => !isLastPage && onForward()}
+          aria-label="Next page"
+        >
+          Next
+        </NavigationButton>
+      }
+    </NavContainer>
+  )
+}
 
 export const CardList = ({
   services,
@@ -149,53 +198,54 @@ export const CardList = ({
         )
       : []
 
-  return (
+  return page !== null ? (
     <>
       {filteredServices && filteredServices.length > 0 ? (
-        <ul>
-          {page !== null &&
-            toRender.map((service: ServicePreview, id: number) => (
-              <Card
-                key={service.id}
-                id={service.id}
-                title={service.title}
-                shortDescription={service.shortDescription}
-                image={service.image}
-                costValue={service.costValue}
-                costQualifier={service.costQualifier}
-                age={service.age}
-                categories={service.categories}
-                format={service.format}
-                ref={
-                  id === toRender.length - 1 ? (ref) => setLoadedRef(ref) : null
-                }
-              />
-            ))}
-          <NavContainer>
-            {
-              <NavigationButton
-                disabled={isFirstPage}
-                as="button"
-                onClick={() => !isFirstPage && pageChange(-1)}
-              >
-                Back
-              </NavigationButton>
-            }
-            {<div>{page !== null && `${page + 1} / ${totalPages}`}</div>}
-            {
-              <NavigationButton
-                disabled={isLastPage}
-                as="button"
-                onClick={() => !isLastPage && pageChange(1)}
-              >
-                Next
-              </NavigationButton>
-            }
-          </NavContainer>
-        </ul>
+        <>
+          <Navigation
+            onForward={() => pageChange(1)}
+            onBack={() => pageChange(-1)}
+            page={page}
+            totalPages={totalPages}
+            isFirstPage={isFirstPage}
+            isLastPage={isLastPage}
+          />
+          <ul>
+            {page !== null &&
+              toRender.map((service: ServicePreview, id: number) => (
+                <Card
+                  key={service.id}
+                  id={service.id}
+                  title={service.title}
+                  shortDescription={service.shortDescription}
+                  image={service.image}
+                  costValue={service.costValue}
+                  costQualifier={service.costQualifier}
+                  age={service.age}
+                  categories={service.categories}
+                  format={service.format}
+                  ref={
+                    id === toRender.length - 1
+                      ? (ref) => setLoadedRef(ref)
+                      : null
+                  }
+                />
+              ))}
+          </ul>
+          <Navigation
+            onForward={() => pageChange(1)}
+            onBack={() => pageChange(-1)}
+            page={page}
+            totalPages={totalPages}
+            isFirstPage={isFirstPage}
+            isLastPage={isLastPage}
+          />
+        </>
       ) : (
         <EmptyList listType={listType} />
       )}
     </>
+  ) : (
+    <></>
   )
 }
