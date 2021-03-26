@@ -11,20 +11,26 @@ export const useScrollRemember = (): UseScrollRememberReturns => {
 
   // Store last scroll position so we can return to it when we load the page next time
   useEffect(() => {
-    const handler = () => {
+    const onLeavePage = () => {
       localStorage.setItem(id, window.pageYOffset.toString())
     }
 
-    const unloadHandler = () => {
-      localStorage.setItem(id, '0')
+    const onLeaveWebsite = () => {
+      const remembered = Object.keys(localStorage).filter((key) => {
+        return key.split('/')[0] === 'lastScroll'
+      })
+
+      remembered.forEach((key) => {
+        localStorage.setItem(key, '0')
+      })
     }
 
-    router.events.on('beforeHistoryChange', handler)
-    window.addEventListener('beforeunload', unloadHandler)
+    router.events.on('beforeHistoryChange', onLeavePage)
+    window.addEventListener('beforeunload', onLeaveWebsite)
 
     return () => {
-      router.events.off('beforeHistoryChange', handler)
-      window.removeEventListener('beforeunload', unloadHandler)
+      router.events.off('beforeHistoryChange', onLeavePage)
+      window.removeEventListener('beforeunload', onLeaveWebsite)
     }
   }, [router.events, id])
 
