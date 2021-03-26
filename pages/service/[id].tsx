@@ -296,6 +296,7 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
           <SaveButton
             id={serviceData.id}
             saved={saved.includes(serviceData.id)}
+            label={serviceData.title}
           />
         </TitleContainer>
         <p>{serviceData.description}</p>
