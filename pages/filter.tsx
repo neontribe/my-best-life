@@ -14,13 +14,16 @@ import {
 } from '../src/context/FilterContext'
 import { ButtonBase } from '../src/Components/ButtonBase'
 import { NotificationsContext } from '../src/context/NotificationsContext'
+import { VerticalSpacing } from '../src/Components/VerticalSpacing'
 
 const Top = styled.section`
   border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
   display: flex;
   justify-content: space-between;
-  margin: 1rem;
-  padding: 1rem 0;
+  margin: auto;
+  max-width: 50ch;
+  padding: 1rem;
+  width: 100%;
 
   h2 {
     font-family: 'Catamaran', sans-serif;
@@ -47,11 +50,19 @@ const Top = styled.section`
 
 const FilterSection = styled.section`
   border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
-  margin: 1rem;
-  padding: 1rem 0;
+  max-width: 50ch;
+  margin: auto;
+  padding: 1rem;
+  width: 100%;
 
-  h3 {
+  legend {
+    font-family: 'Catamaran', sans-serif;
     font-size: ${(props) => props.theme.fontSizes.heading};
+  }
+
+  fieldset {
+    border: none;
+    padding: 0;
   }
 `
 
@@ -96,41 +107,47 @@ export const FilterPage: NextPage = () => {
         <h2>Filter</h2>
         <button onClick={() => clearAll()}>Clear All</button>
       </Top>
+      <VerticalSpacing />
       <FilterSection>
-        <h3>Age</h3>
-        <HorizontalGroup>
-          {allAges.map((item) => {
-            return (
-              <RadioButton
-                key={item}
-                label={item}
-                name={'age'}
-                checked={item === age}
-                onChange={ageUpdate}
-              />
-            )
-          })}
-        </HorizontalGroup>
-        <p>Select your age so we can tell you what you are eligible for</p>
+        <fieldset>
+          <legend>Age</legend>
+          <HorizontalGroup>
+            {allAges.map((item) => {
+              return (
+                <RadioButton
+                  key={item}
+                  label={item}
+                  name={'age'}
+                  checked={item === age}
+                  onChange={ageUpdate}
+                />
+              )
+            })}
+          </HorizontalGroup>
+          <p>Select your age so we can tell you what you are eligible for</p>
+        </fieldset>
       </FilterSection>
       {/* <FilterSection>
         <h3>Cost</h3>
       </FilterSection> */}
       <FilterSection>
-        <h3>Format of Support / Activity</h3>
-        <CheckboxGroup>
-          {allFormats.map((format) => {
-            return (
-              <Checkbox
-                key={format}
-                label={format}
-                checked={formats.includes(format)}
-                onChange={() => formatUpdate(format)}
-              />
-            )
-          })}
-        </CheckboxGroup>
+        <fieldset>
+          <legend>Format of Support / Activity</legend>
+          <CheckboxGroup>
+            {allFormats.map((format) => {
+              return (
+                <Checkbox
+                  key={format}
+                  label={format}
+                  checked={formats.includes(format)}
+                  onChange={() => formatUpdate(format)}
+                />
+              )
+            })}
+          </CheckboxGroup>
+        </fieldset>
       </FilterSection>
+      <VerticalSpacing />
       <Link href={`/`} passHref>
         <ButtonLink onClick={saveNotify}>Apply Filter</ButtonLink>
       </Link>

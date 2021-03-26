@@ -143,7 +143,11 @@ export const Card = ({
       </InfoContainer>
 
       <SaveButtonContainer>
-        <SaveButton id={id} saved={saved.includes(id)} />
+        <SaveButton
+          id={id}
+          saved={saved.includes(id)}
+          label={shortDescription}
+        />
       </SaveButtonContainer>
     </CardContainer>
   )

@@ -11,29 +11,28 @@ import { LinkButton } from '../../src/Components/LinkButton'
 
 import { QuizContext } from '../../src/context/QuizContext'
 
-const Section = styled.section`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-`
-
 const Navigation = styled.section`
   padding: 1rem;
   width: 100%;
   text-align: right;
 `
 
-const QuestionSection = styled.section`
-  margin: 1rem;
+const CheckboxGroup = styled.div`
+  max-width: 50ch;
+  margin: auto;
+  padding: 1rem;
+  width: 100%;
 
-  h2 {
+  legend {
+    border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
+    font-family: 'Catamaran', sans-serif;
     font-size: ${(props) => props.theme.fontSizes.heading};
   }
-`
 
-const CheckboxGroup = styled.div`
-  margin: 1rem 0;
+  fieldset {
+    border: none;
+    padding: 0;
+  }
 `
 
 const StyledLink = styled.a`
@@ -87,39 +86,37 @@ export const WhatsOnYourMindPage = (): JSX.Element => {
 
   return (
     <Layout>
-      <Section>
-        <HeaderComponent title="What's on your mind today?" />
-        <Navigation>
-          <LinkButton
-            textContent="skip"
-            arrow="forward"
-            onClick={() => router.push('how-are-you-feeling')}
-          />
-        </Navigation>
-        <QuestionSection>
-          <h2>Choose as many as you like</h2>
+      <HeaderComponent title="Support in Lambeth" />
+      <Navigation>
+        <LinkButton
+          textContent="skip"
+          arrow="forward"
+          onClick={() => router.push('how-are-you-feeling')}
+        />
+      </Navigation>
+
+      <CheckboxGroup>
+        <fieldset>
+          <legend>What&apos;s on your mind today?</legend>
           <VerticalSpacing />
+          {categories.map((category) => {
+            return (
+              <Checkbox
+                key={category}
+                label={category}
+                checked={whatsOnMindGet(category)}
+                onChange={() => whatsOnMindToggle(category)}
+              />
+            )
+          })}
+        </fieldset>
+      </CheckboxGroup>
 
-          <CheckboxGroup>
-            {categories.map((category) => {
-              return (
-                <Checkbox
-                  key={category}
-                  label={category}
-                  checked={whatsOnMindGet(category)}
-                  onChange={() => whatsOnMindToggle(category)}
-                />
-              )
-            })}
-          </CheckboxGroup>
-        </QuestionSection>
+      <Link href="/quiz/how-are-you-feeling" passHref>
+        <StyledLink>{'Ok'}</StyledLink>
+      </Link>
 
-        <Link href="/quiz/how-are-you-feeling" passHref>
-          <StyledLink>{'Ok'}</StyledLink>
-        </Link>
-
-        <VerticalSpacing />
-      </Section>
+      <VerticalSpacing />
     </Layout>
   )
 }

@@ -7,7 +7,6 @@ import { Layout } from '../../src/Components/Layout'
 import { HeaderComponent } from '../../src/Components/Header'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { QuizContext } from '../../src/context/QuizContext'
-import { VisuallyHidden } from '../../src/Components/VisuallyHidden'
 import { LinkButton } from '../../src/Components/LinkButton'
 
 interface ImageCheckboxesProps {
@@ -19,12 +18,14 @@ interface ImageCheckboxesProps {
 // Wraps the checkbox area of component
 const CheckboxGroup = styled.div`
   legend {
+    border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
+    font-family: 'Catamaran', sans-serif;
     font-size: ${(props) => props.theme.fontSizes.heading};
   }
 
   fieldset {
-    padding: 0;
     border: none;
+    padding: 0;
   }
 `
 
@@ -38,6 +39,7 @@ const CheckboxContainer = styled.div`
 // This is the visual representation of the checked status
 const CheckedDisplay = styled.div`
   border-radius: 1rem;
+  border-top-right-radius: 2rem;
   height: 100%;
   position: absolute;
   width: 100%;
@@ -66,7 +68,7 @@ const CheckboxItem = styled.div`
 
   label {
     border-radius: 1rem;
-    border-top-right-radius: 1.5rem;
+    border-top-right-radius: 2rem;
     box-shadow: 0 0 9px 2px ${(props) => props.theme.colours.shadow};
     cursor: pointer;
     display: flex;
@@ -124,9 +126,7 @@ export const ImageCheckboxes = ({
     <>
       <CheckboxGroup>
         <fieldset>
-          <VisuallyHidden>
-            <legend>{label}</legend>
-          </VisuallyHidden>
+          <legend>{label}</legend>
           <VerticalSpacing />
           <CheckboxContainer>
             {values.map((checkbox) => {
@@ -227,7 +227,7 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
   return (
     <Layout>
       <Section>
-        <HeaderComponent title="How are you feeling?" />
+        <HeaderComponent title="Support in Lambeth" />
         <Navigation>
           <LinkButton
             textContent="back"
@@ -241,11 +241,10 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
           />
         </Navigation>
         <QuestionSection>
-          <h2>Choose as many as you like</h2>
           <ImageCheckboxes
             id="feelings-checkboxes"
             values={feelings}
-            label="how are you feeling?"
+            label="How are you feeling?"
           />
         </QuestionSection>
 

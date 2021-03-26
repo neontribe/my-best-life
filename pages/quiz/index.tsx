@@ -56,7 +56,7 @@ const StyledLink = styled.a`
 export const QuizWelcomePage = (): JSX.Element => {
   return (
     <Layout>
-      <HeaderComponent title="Quiz" />
+      <HeaderComponent title="Support in Lambeth" />
       <Section>
         <Text>Welcome!</Text>
         <Text>

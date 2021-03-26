@@ -6,6 +6,7 @@ import { NotificationsContext } from '../context/NotificationsContext'
 
 interface SaveButtonProps {
   id: string
+  label: string
   saved: boolean
 }
 
@@ -38,7 +39,11 @@ const RadioButtonItem = styled.button<{ saved: boolean }>`
   }
 `
 
-export const SaveButton = ({ id, saved }: SaveButtonProps): JSX.Element => {
+export const SaveButton = ({
+  id,
+  label,
+  saved,
+}: SaveButtonProps): JSX.Element => {
   const { savedUpdate } = useContext(SaveContext)
   const { notify } = useContext(NotificationsContext)
 
@@ -53,7 +58,7 @@ export const SaveButton = ({ id, saved }: SaveButtonProps): JSX.Element => {
 
   return (
     <RadioButtonItem
-      aria-label={'Save'}
+      aria-label={`Add ${label} to saved list`}
       aria-pressed={saved}
       saved={saved}
       onClick={handleClick}
