@@ -89,6 +89,7 @@ export const QuizProvider = ({ children }: QuizProviderProps): JSX.Element => {
     setInterests(getFromLocalStorage('quiz/interests', []))
     setGender(getFromLocalStorage('quiz/gender', []))
     setAge(getFromLocalStorage('quiz/age', ''))
+    setQuizComplete(getFromLocalStorage('quiz/complete', false))
   }, [])
 
   interface GenericSetter {
@@ -118,6 +119,10 @@ export const QuizProvider = ({ children }: QuizProviderProps): JSX.Element => {
   useEffect(() => {
     setInLocalStorage('quiz/age', age)
   }, [age])
+
+  useEffect(() => {
+    setInLocalStorage('quiz/complete', quizComplete)
+  }, [quizComplete])
 
   //
   // External API for quiz context.
