@@ -6,7 +6,6 @@ import { CardList } from '../src/Components/CardList'
 import { HeaderComponent } from '../src/Components/Header'
 import { Layout } from '../src/Components/Layout'
 import { Welcome } from '../src/Components/Welcome'
-import { useScrollRemember } from '../src/hooks/scrollRemember'
 
 interface ListPageProps {
   services: Array<ServicePreview>
@@ -28,7 +27,6 @@ export type ServicePreview = Pick<
 export const ListPage: NextPage<ListPageProps> = ({ services }) => {
   // Default to showing the welcome screen
   const [showWelcome, setShowWelcome] = useState<boolean>(true)
-  const { resumePosition } = useScrollRemember()
 
   useEffect(() => {
     // Attempt to retrieve the showWelcome value from local storage
@@ -45,11 +43,7 @@ export const ListPage: NextPage<ListPageProps> = ({ services }) => {
       ) : (
         <Layout>
           <HeaderComponent title="Support in Lambeth" filterButton />
-          <CardList
-            onLoad={resumePosition}
-            services={services}
-            listType="filtered"
-          />
+          <CardList services={services} listType="filtered" />
         </Layout>
       )}
     </>

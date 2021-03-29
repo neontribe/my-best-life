@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import styled from 'styled-components'
-import { useContext, useRef } from 'react'
+import React, { useContext, useRef } from 'react'
 
 import { SaveButton } from './SaveButton'
 import { ServicePreview } from '../../pages/index'
@@ -87,15 +87,19 @@ const SaveButtonContainer = styled.div`
   top: 1rem;
 `
 
-export const Card = ({
-  id,
-  title,
-  shortDescription,
-  image,
-  costValue,
-  costQualifier,
-  age,
-}: ServicePreview): JSX.Element => {
+// Name the function Card so it shows up in DevTools
+export const Card = React.forwardRef(function Card(
+  {
+    id,
+    title,
+    shortDescription,
+    image,
+    costValue,
+    costQualifier,
+    age,
+  }: ServicePreview,
+  ref: React.Ref<HTMLLIElement>
+): JSX.Element {
   const { saved } = useContext(SaveContext)
 
   const ageDisplay = age ? formatAgeDisplay(age.minAge, age.maxAge) : null
@@ -108,7 +112,7 @@ export const Card = ({
   const cardLink = useRef<HTMLAnchorElement | null>(null)
 
   return (
-    <CardContainer onClick={() => cardLink.current?.click()}>
+    <CardContainer ref={ref} onClick={() => cardLink.current?.click()}>
       <Description>
         <Link href={`/service/${id}`} passHref>
           <a ref={cardLink}>{shortDescription}</a>
@@ -151,7 +155,7 @@ export const Card = ({
       </SaveButtonContainer>
     </CardContainer>
   )
-}
+})
 
 export function formatAgeDisplay(
   min: number | undefined,
