@@ -36,6 +36,10 @@ export const ListPage: NextPage<ListPageProps> = ({ services }) => {
     stored === 'false' ? setShowWelcome(false) : setShowWelcome(true)
   }, [showWelcome])
 
+  if (showWelcome === null || showWelcome === undefined) {
+    return <></>
+  }
+
   return (
     <>
       {showWelcome ? (
