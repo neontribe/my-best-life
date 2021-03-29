@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react'
+import Link from 'next/link'
 import styled from 'styled-components'
 
+import { Arrow } from './Arrow'
 import { Card } from './Card'
 import { EmptyList } from './EmptyList'
 import { ServicePreview } from '../../pages/index'
@@ -8,7 +10,7 @@ import { FilterContext } from '../context/FilterContext'
 import { SaveContext } from '../context/SaveContext'
 import { useRemember } from '../hooks/remember'
 import { useScrollRemember } from '../hooks/scrollRemember'
-import { ButtonBase } from './ButtonBase'
+import { MyBestLifeTheme } from '../../src/Theme'
 
 const ITEMS_PER_PAGE = 20
 
@@ -20,18 +22,37 @@ interface CardListProps {
 const NavContainer = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 1rem 0;
   align-items: center;
+  padding: 0 2rem;
 `
 
-const NavigationButton = styled(ButtonBase)`
-  display: inline-block;
+const NavigationButton = styled.a`
+  align-items: center;
+  background-color: ${(props) => props.theme.colours.white};
+  border-radius: 5px;
+  border: 2px solid ${(props) => props.theme.colours.blue};
+  color: ${(props) => props.theme.colours.blue};
+  display: flex;
+  font-family: 'Catamaran', sans-serif;
+  font-weight: bold;
+  min-height: 44px;
+  min-width: 44px;
+  text-decoration: none;
+
+  &::visited {
+    color: ${(props) => props.theme.colours.blue};
+  }
 
   &:disabled {
-    opacity: 0;
-    cursor: normal;
+    border: 2px solid ${(props) => props.theme.colours.grey};
+    color: ${(props) => props.theme.colours.grey};
   }
+`
+
+const NavigationTextButton = styled(NavigationButton)`
+  padding: 0 1rem;
 `
 
 interface NavigationProps {
@@ -41,6 +62,7 @@ interface NavigationProps {
   isLastPage: boolean
   page: number | null
   totalPages: number
+  top?: boolean
 }
 
 const Navigation = ({
@@ -50,6 +72,7 @@ const Navigation = ({
   isLastPage,
   page,
   totalPages,
+  top,
 }: NavigationProps) => {
   if (totalPages < 2) {
     return null
@@ -57,27 +80,45 @@ const Navigation = ({
 
   return (
     <NavContainer>
-      {
-        <NavigationButton
-          disabled={isFirstPage}
-          as="button"
-          onClick={() => !isFirstPage && onBack()}
-          aria-label="Previous page"
-        >
-          Back
-        </NavigationButton>
-      }
-      {<div>{page !== null && `${page + 1} / ${totalPages}`}</div>}
-      {
-        <NavigationButton
-          disabled={isLastPage}
-          as="button"
-          onClick={() => !isLastPage && onForward()}
-          aria-label="Next page"
-        >
-          Next
-        </NavigationButton>
-      }
+      <NavigationButton
+        disabled={isFirstPage}
+        as="button"
+        onClick={() => !isFirstPage && onBack()}
+        aria-label="Previous page"
+      >
+        <Arrow
+          direction={'left'}
+          colour={
+            isFirstPage
+              ? MyBestLifeTheme.colours.grey
+              : MyBestLifeTheme.colours.blue
+          }
+        />
+      </NavigationButton>
+
+      <div>{page !== null && `${page + 1} / ${totalPages}`}</div>
+
+      <NavigationButton
+        disabled={isLastPage}
+        as="button"
+        onClick={() => !isLastPage && onForward()}
+        aria-label="Next page"
+      >
+        <Arrow
+          direction={'right'}
+          colour={
+            isLastPage
+              ? MyBestLifeTheme.colours.grey
+              : MyBestLifeTheme.colours.blue
+          }
+        />
+      </NavigationButton>
+
+      {top && (
+        <Link href={`/filter`} passHref>
+          <NavigationTextButton>Filter</NavigationTextButton>
+        </Link>
+      )}
     </NavContainer>
   )
 }
@@ -209,6 +250,7 @@ export const CardList = ({
             totalPages={totalPages}
             isFirstPage={isFirstPage}
             isLastPage={isLastPage}
+            top
           />
           <ul>
             {page !== null &&

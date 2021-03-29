@@ -18,7 +18,8 @@ export const MyBestLifeTheme: DefaultTheme = {
     // Highlight colours
     blue_highlight: '#C0CEFF',
 
-    white: '#ffffff',
+    white: '#FFFFFF',
+    grey: '#76768F',
     shadow: '#C9C9C9B7',
   },
 

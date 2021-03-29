@@ -42,7 +42,7 @@ export const ListPage: NextPage<ListPageProps> = ({ services }) => {
         <Welcome />
       ) : (
         <Layout>
-          <HeaderComponent title="Support in Lambeth" filterButton />
+          <HeaderComponent title="Support in Lambeth" />
           <CardList services={services} listType="filtered" />
         </Layout>
       )}
