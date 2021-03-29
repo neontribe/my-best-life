@@ -433,8 +433,9 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
           checked={reviewState.usedService}
           onChange={onUsedServiceChange}
         />
-        <span>Leave a review</span>
+        <label htmlFor="reviewBody">Leave a review</label>
         <TextInput
+          id="reviewBody"
           onChange={(e) => onCommentChange(e.target.value)}
           ref={commentInputRef}
         />
