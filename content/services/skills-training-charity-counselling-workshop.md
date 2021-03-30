@@ -24,6 +24,7 @@ eligibility: Counseling is offered to all, regardless of background, gender,
   sexual orientation, religious or ethnic origin.
 format: Meeting a group of people
 location: 42 Camps Hill Road, Lewisham, London SE13 6QT
+makeMapLink: true
 time: "Thursdays, 7pm - 8pm. "
 contactExplanation: Get in touch via email or phone.
 email: info@skillstrainingcharity.org

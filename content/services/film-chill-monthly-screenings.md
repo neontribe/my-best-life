@@ -16,13 +16,15 @@ description: "A small and relaxing cinema club with monthly screenings of
 categories:
   category1: Friends
   category2: Mental Health
-interest: Films and TV
+interests:
+  - Films and TV
 costValue: 8.5
 costQualifier: From
 eligibility: At this current time, unfortunately they don’t have access for
   disabled customers.
 format: Meeting a group of people
 location: Renaissance Studios, 34-44 Tunstall Road, Brixton, London SW9 8DA
+makeMapLink: true
 time: "Open from 2pm in the afternoon to 11pm at night on event days. "
 expectation: >-
   It is a small cinema, so you will seated with up to 20 other people. You will

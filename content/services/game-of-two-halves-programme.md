@@ -16,7 +16,6 @@ age:
 gender: men
 eligibility: "This project is specifically designed to support young fathers. "
 format: Meeting a group of people
-location: ""
 contactExplanation: "Get in touch with the St Matthew's Project via phone or email. "
 email: leedema@aol.com
 phone: 07944 101 134

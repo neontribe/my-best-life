@@ -133,10 +133,12 @@ export default {
         },
         {
           label: 'Interest group',
-          name: 'interest',
+          name: 'interests',
           widget: 'select',
+          multiple: true,
+          max: 3,
           hint:
-            'Add an interest group for the service. Not currently displayed, but influences the quiz results',
+            'Maximum 3 - Add interest groups for the service. Not currently displayed, but influences the quiz results',
           required: false,
           options: [
             { label: '-', value: '' },
@@ -274,6 +276,14 @@ export default {
           required: false,
           hint:
             'Where possible an actual address of the service, not the head office',
+        },
+        {
+          label: 'Make map link from location',
+          name: 'makeMapLink',
+          widget: 'boolean',
+          required: false,
+          hint:
+            'Make a Google Maps link from the provided location, to be shown on the service page',
         },
         {
           label: 'Time',

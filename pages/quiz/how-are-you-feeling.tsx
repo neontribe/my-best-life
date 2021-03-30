@@ -243,10 +243,10 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
         <Navigation>
           <LinkButton
             textContent="back"
-            arrow="back"
+            arrow="left"
             onClick={() => router.push('whats-on-your-mind')}
           />
-          <LinkButton textContent="skip" arrow="forward" onClick={nextPage} />
+          <LinkButton textContent="skip" arrow="right" onClick={nextPage} />
         </Navigation>
         <QuestionSection>
           <ImageCheckboxes

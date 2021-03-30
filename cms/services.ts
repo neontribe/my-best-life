@@ -11,12 +11,13 @@ export interface Service {
   image?: { image: string; imageAlt: string }
   description: string
   categories?: { category1: Category; category2: Category }
-  interest: Interest
+  interests: Array<Interest>
+  feelings: Array<string>
   costValue: number
   costQualifier?: string
   costExplanation: string
   age?: { minAge: number; maxAge: number }
-  gender?: Gender
+  gender?: Array<Gender>
   eligibility?: string
   format: Formats
   time?: string
@@ -24,6 +25,7 @@ export interface Service {
   quotation?: string
   access?: string
   location?: string
+  makeMapLink?: boolean
   contactExplanation?: string
   email?: string
   form?: string
@@ -31,6 +33,7 @@ export interface Service {
   website?: string
   reviews?: Array<Review>
   saved: boolean
+  score: number
 }
 
 type Category =
@@ -53,7 +56,7 @@ type Formats =
   | 'Online'
   | 'Over the phone'
 
-type Gender =
+export type Gender =
   | 'men'
   | 'women'
   | 'non-binary'
@@ -63,7 +66,7 @@ type Gender =
   | 'genderqueer'
   | 'agender'
 
-type Interest =
+export type Interest =
   | 'Sports'
   | 'Music'
   | 'Films and TV'
@@ -89,6 +92,7 @@ export type ServiceDetail = Pick<
   | 'age'
   | 'costExplanation'
   | 'location'
+  | 'makeMapLink'
   | 'time'
   | 'quotation'
   | 'expectation'

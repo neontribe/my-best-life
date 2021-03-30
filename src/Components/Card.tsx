@@ -8,6 +8,19 @@ import { ServicePreview } from '../../pages/index'
 import { VisuallyHidden } from './VisuallyHidden'
 import { SaveContext } from '../../src/context/SaveContext'
 
+export type CardDisplay = Pick<
+  ServicePreview,
+  | 'id'
+  | 'title'
+  | 'shortDescription'
+  | 'image'
+  | 'costValue'
+  | 'costQualifier'
+  | 'age'
+  | 'gender'
+  | 'format'
+>
+
 const CardContainer = styled.li`
   border-radius: 1rem;
   border-top-right-radius: 3rem;
@@ -97,7 +110,7 @@ export const Card = React.forwardRef(function Card(
     costValue,
     costQualifier,
     age,
-  }: ServicePreview,
+  }: CardDisplay,
   ref: React.Ref<HTMLLIElement>
 ): JSX.Element {
   const { saved } = useContext(SaveContext)

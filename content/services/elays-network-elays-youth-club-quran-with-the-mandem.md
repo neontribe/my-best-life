@@ -19,7 +19,8 @@ gender:
   - men
 eligibility: This is a boys only service.
 format: Meeting a group of people
-location: 68 St Rule Street, Battersea, Lodon SW8 3ED
+location: 68 St Rule Street, Battersea, London SW8 3ED
+makeMapLink: true
 time: Sundays, 5.30pm - 8.00pm
 expectation: The session is open to all young people regardless of their
   background or knowledge level. The session is light and everyone is friendly.

@@ -18,6 +18,7 @@ costValue: 0
 format: Meeting a group of people
 location: Springfield Community and Activities Centre, 1st Floor, 110 Union
   Road, London SW8 2SH
+makeMapLink: true
 contactExplanation: "You will need to scroll to the bottom of the page and get in touch via
   the online form "
 form: https://www.code7.live/

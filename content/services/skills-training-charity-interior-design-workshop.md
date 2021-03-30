@@ -14,7 +14,8 @@ description: "An introduction to the basics in interior design including, the
 categories:
   category1: Job Stuff
   category2: Where I'm Living
-interest: Art and Design
+interests:
+  - Art and Design
 costValue: 0
 age:
   minAge: 16
@@ -24,6 +25,7 @@ eligibility: This course is open to anyone over 16, who has a passion for
   just like to learn interior design as a hobby.
 format: Meeting a group of people
 location: 42 Camps Hill Road, Lewisham, London SE13 6QT
+makeMapLink: true
 time: "Timings TBC. Duration of 6 weeks. "
 contactExplanation: Get in touch via email or phone.
 email: info@skillstrainingcharity.org

@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import Link from 'next/link'
 
 import { Layout } from '../src/Components/Layout'
-import { HeaderComponent } from '../src/Components/Header'
 import { Checkbox } from '../src/Components/Checkbox'
 import { RadioButton } from '../src/Components/RadioButton'
 import {
@@ -102,7 +101,6 @@ export const FilterPage: NextPage = () => {
 
   return (
     <Layout>
-      <HeaderComponent title="Support in Lambeth" filterButton />
       <Top>
         <h2>Filter</h2>
         <button onClick={() => clearAll()}>Clear All</button>

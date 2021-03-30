@@ -35,7 +35,8 @@ const RadioButtonItem = styled.button<{ saved: boolean }>`
 
   svg {
     fill: ${(props) => (props.saved ? props.theme.colours.yellow : 'none')};
-    stroke: ${(props) => (props.saved ? props.theme.colours.yellow : 'grey')};
+    stroke: ${(props) =>
+      props.saved ? props.theme.colours.yellow : props.theme.colours.grey};
   }
 `
 

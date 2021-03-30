@@ -21,12 +21,16 @@ export type ServicePreview = Pick<
   | 'costQualifier'
   | 'age'
   | 'categories'
+  | 'interests'
+  | 'feelings'
+  | 'gender'
   | 'format'
+  | 'score'
 >
 
 export const ListPage: NextPage<ListPageProps> = ({ services }) => {
   // Default to showing the welcome screen
-  const [showWelcome, setShowWelcome] = useState<boolean>(true)
+  const [showWelcome, setShowWelcome] = useState<boolean | undefined>()
 
   useEffect(() => {
     // Attempt to retrieve the showWelcome value from local storage
@@ -36,13 +40,17 @@ export const ListPage: NextPage<ListPageProps> = ({ services }) => {
     stored === 'false' ? setShowWelcome(false) : setShowWelcome(true)
   }, [showWelcome])
 
+  if (showWelcome === undefined) {
+    return <></>
+  }
+
   return (
     <>
       {showWelcome ? (
         <Welcome />
       ) : (
         <Layout>
-          <HeaderComponent title="Support in Lambeth" filterButton />
+          <HeaderComponent title="Support in Lambeth" />
           <CardList services={services} listType="filtered" />
         </Layout>
       )}
@@ -62,6 +70,10 @@ export const getStaticProps: GetStaticProps = async () => {
         title: service.title,
         shortDescription: service.shortDescription,
         costValue: service.costValue,
+        interests: service.interests || [],
+        feelings: service.feelings || [],
+        gender: service.gender || [],
+        score: 0,
 
         ...(service.image?.image && {
           image: {

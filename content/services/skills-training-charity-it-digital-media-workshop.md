@@ -12,7 +12,8 @@ description: "6-month IT and digital media course. Covers a number of topics
   media business. "
 categories:
   category1: Job Stuff
-interest: Films and TV
+interests:
+  - Films and TV
 costValue: 0
 age:
   minAge: 16
@@ -21,6 +22,7 @@ eligibility: "You will need basic knowledge of how to use a computer to
   participate in this workshop. "
 format: Meeting a group of people
 location: 42 Camps Hill Road, Lewisham, London SE13 6QT
+makeMapLink: true
 time: "Timings TBC. Duration of 6 months. "
 contactExplanation: Get in touch via email or phone.
 email: info@skillstrainingcharity.org

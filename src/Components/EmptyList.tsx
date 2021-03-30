@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 
+import { ListType } from '../Components/CardList'
+
 interface EmptyListProps {
-  listType: 'filtered' | 'saved'
+  listType: ListType
 }
 
 const Message = styled.p`
@@ -11,7 +13,7 @@ const Message = styled.p`
 
   svg {
     height: 1.2em;
-    stroke: grey;
+    stroke: ${(props) => props.theme.colours.grey};
     vertical-align: middle;
   }
 `
@@ -46,6 +48,14 @@ export const EmptyList = ({ listType }: EmptyListProps): JSX.Element => {
             />
           </svg>{' '}
           save button to add services to your saved list here.
+        </span>
+      )
+      break
+    case 'quiz':
+      content = (
+        <span>
+          We weren&apos;t able to find any services matching your quiz answers.
+          Please try again later, or retake the quiz with the link above.
         </span>
       )
       break

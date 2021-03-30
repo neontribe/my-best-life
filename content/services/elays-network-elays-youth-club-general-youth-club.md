@@ -13,14 +13,14 @@ description: "Games and activities. Arts and crafts. Baking and cooking
 categories:
   category1: Keeping Safe
   category2: Where I'm Living
-interest: null
 costValue: 0
 costQualifier: ""
 age:
   minAge: 8
   maxAge: 19
 format: Meeting a group of people
-location: 68 St Rule Street, Battersea, Lodon SW8 3ED
+location: 68 St Rule Street, Battersea, London SW8 3ED
+makeMapLink: true
 time: Tuesdays, Wednesdays and Thursdays, 4.00pm - 7.00pm
 contactExplanation: "To get involved or find out more, get in touch via email,
   phone or the online form. "

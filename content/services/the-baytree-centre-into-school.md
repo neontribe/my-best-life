@@ -21,6 +21,7 @@ eligibility: "Support to girls who have recently arrived in the UK and have no
   school place, to transition into the education system. "
 format: Meeting a group of people
 location: The Baytree Centre, 300-302 Brixton Road, London SW9 6AE
+makeMapLink: true
 time: "Classes Monday to Wednesday. Currently operating remotely, with two
   lessons from 11am to 12pm and from 12pm to 1pm. "
 quotation: "Baytree makes me feel like I can do something in my life. Like I can

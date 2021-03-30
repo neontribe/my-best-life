@@ -12,7 +12,8 @@ description: "Learn the individual skills to DJ and how to incorporate this into
 categories:
   category1: Job Stuff
   category2: Mental Health
-interest: Music
+interests:
+  - Music
 costValue: 35
 costQualifier: ""
 costExplanation: Prices start at £35 per hour
