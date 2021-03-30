@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 import { Layout } from '../../src/Components/Layout'
@@ -223,6 +222,19 @@ const feelings = [
 
 export const HowAreYouFeelingPage = (): JSX.Element => {
   const router = useRouter()
+  const { howAreFeelingGet } = useContext(QuizContext)
+
+  const nextPage = () => {
+    const triggerFeelings = ['scared', 'unsafe', 'angry', 'ignored']
+
+    const mustShowHelp =
+      triggerFeelings.filter((x) => howAreFeelingGet(x)).length > 0
+    if (mustShowHelp) {
+      router.push('helplines')
+    } else {
+      router.push('what-are-your-interests')
+    }
+  }
 
   return (
     <Layout>
@@ -234,11 +246,7 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
             arrow="left"
             onClick={() => router.push('whats-on-your-mind')}
           />
-          <LinkButton
-            textContent="skip"
-            arrow="right"
-            onClick={() => router.push('what-are-your-interests')}
-          />
+          <LinkButton textContent="skip" arrow="right" onClick={nextPage} />
         </Navigation>
         <QuestionSection>
           <ImageCheckboxes
@@ -248,10 +256,9 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
           />
         </QuestionSection>
 
-        <Link href="/quiz/what-are-your-interests" passHref>
-          <StyledLink>{'Ok'}</StyledLink>
-        </Link>
-
+        <StyledLink as="button" onClick={nextPage}>
+          {'Ok'}
+        </StyledLink>
         <VerticalSpacing />
       </Section>
     </Layout>
