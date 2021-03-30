@@ -11,7 +11,7 @@ const Message = styled.p`
 
   svg {
     height: 1.2em;
-    stroke: grey;
+    stroke: ${(props) => props.theme.colours.grey};
     vertical-align: middle;
   }
 `

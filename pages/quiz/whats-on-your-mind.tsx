@@ -12,9 +12,15 @@ import { LinkButton } from '../../src/Components/LinkButton'
 import { QuizContext } from '../../src/context/QuizContext'
 
 const Navigation = styled.section`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
   padding: 1rem;
   width: 100%;
-  text-align: right;
+
+  button {
+    margin-left: auto;
+  }
 `
 
 const CheckboxGroup = styled.div`
@@ -90,7 +96,7 @@ export const WhatsOnYourMindPage = (): JSX.Element => {
       <Navigation>
         <LinkButton
           textContent="skip"
-          arrow="forward"
+          arrow="right"
           onClick={() => router.push('how-are-you-feeling')}
         />
       </Navigation>

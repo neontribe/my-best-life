@@ -125,7 +125,7 @@ export const AboutYouPage = (): JSX.Element => {
       <Navigation>
         <LinkButton
           textContent="back"
-          arrow="back"
+          arrow="left"
           onClick={() => router.push('what-are-your-interests')}
         />
       </Navigation>

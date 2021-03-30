@@ -3,19 +3,17 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
 
-import { ButtonBase } from './ButtonBase'
 import { VisuallyHidden } from './VisuallyHidden'
 import { QuizContext } from '../context/QuizContext'
 
 interface HeaderProps {
-  filterButton?: boolean
   title: string
 }
 
 const Header = styled.header`
   background-color: ${(props) => props.theme.colours.aqua};
   clip-path: url(#wave);
-  height: 10rem;
+  height: 9rem;
   padding: 0 2rem;
   position: sticky;
   top: 0;
@@ -35,11 +33,6 @@ const Title = styled.h1`
   font-size: ${(props) => props.theme.fontSizes.title};
 `
 
-const ButtonLinkText = styled(ButtonBase)`
-  padding: 0.5rem 1rem;
-  color: ${(props) => props.theme.colours.yellow};
-`
-
 const Nav = styled.nav`
   width: 100%;
 `
@@ -55,9 +48,10 @@ const LinkList = styled.ul`
 `
 
 const NavPill = styled.a<{ activePage: boolean }>`
-  border-radius: 1rem;
+  border-radius: 2rem;
   display: block;
   font-family: 'Catamaran', sans-serif;
+  font-size: ${(props) => props.theme.fontSizes.highlight};
   font-weight: bold;
   padding: 4px;
   margin: auto;
@@ -82,10 +76,7 @@ const NavPill = styled.a<{ activePage: boolean }>`
   }
 `
 
-export const HeaderComponent = ({
-  filterButton,
-  title,
-}: HeaderProps): JSX.Element => {
+export const HeaderComponent = ({ title }: HeaderProps): JSX.Element => {
   const currentPage = useRouter().pathname
   const { quizComplete } = useContext(QuizContext)
 
@@ -95,7 +86,7 @@ export const HeaderComponent = ({
         <svg width="0" height="0">
           <defs>
             <clipPath id="wave" clipPathUnits="objectBoundingBox">
-              <path d="M 0,1  L 0,0  L 1,0  L 1,0.6  C .75 1.5, .25 .3, 0 1 Z" />
+              <path d="M 0,1  L 0,0  L 1,0  L 1,0.9  C .75 1.2, .25 .7, 0 1 Z" />
             </clipPath>
           </defs>
         </svg>
@@ -103,11 +94,6 @@ export const HeaderComponent = ({
       <Header>
         <HeaderContents>
           <Title>{title}</Title>
-          {filterButton && (
-            <Link href={`/filter`} passHref>
-              <ButtonLinkText>Filter</ButtonLinkText>
-            </Link>
-          )}
         </HeaderContents>
         <Nav>
           <LinkList>
