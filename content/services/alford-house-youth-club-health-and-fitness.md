@@ -18,7 +18,8 @@ age:
   minAge: 12
   maxAge: 21
 format: One to one chats
-location: "Aveline Street, Kennington, London, SE11 5DQ "
+location: Aveline Street, Kennington, London, SE11 5DQ
+makeMapLink: true
 time: "Mondays 3pm - 6pm, Tuesdays 3pm - 6pm, Wednesdays 3pm - 6pm and Thursdays
   3pm - 6pm. "
 contactExplanation: Get in touch before or just drop-in.

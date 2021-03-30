@@ -24,6 +24,7 @@ eligibility: This course is open to anyone over 16, who has a passion for
   just like to learn interior design as a hobby.
 format: Meeting a group of people
 location: 42 Camps Hill Road, Lewisham, London SE13 6QT
+makeMapLink: true
 time: "Timings TBC. Duration of 6 weeks. "
 contactExplanation: Get in touch via email or phone.
 email: info@skillstrainingcharity.org

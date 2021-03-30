@@ -23,6 +23,7 @@ eligibility: This course is open to anyone between the ages of 16yrs to 50yrs
   a career in beautician or would just like to learn it as a hobby.
 format: Meeting a group of people
 location: 42 Camps Hill Road, Lewisham, London SE13 6QT
+makeMapLink: true
 time: "Timings TBC. Duration of 6 months. "
 contactExplanation: Get in touch via email or phone.
 email: info@skillstrainingcharity.org
