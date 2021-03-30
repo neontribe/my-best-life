@@ -26,7 +26,7 @@ export type ServicePreview = Pick<
 
 export const ListPage: NextPage<ListPageProps> = ({ services }) => {
   // Default to showing the welcome screen
-  const [showWelcome, setShowWelcome] = useState<boolean>(true)
+  const [showWelcome, setShowWelcome] = useState<boolean | undefined>()
 
   useEffect(() => {
     // Attempt to retrieve the showWelcome value from local storage
@@ -35,6 +35,10 @@ export const ListPage: NextPage<ListPageProps> = ({ services }) => {
     // If it's been correctly set to false, update state
     stored === 'false' ? setShowWelcome(false) : setShowWelcome(true)
   }, [showWelcome])
+
+  if (showWelcome === undefined) {
+    return <></>
+  }
 
   return (
     <>
