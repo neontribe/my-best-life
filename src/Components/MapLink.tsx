@@ -42,10 +42,11 @@ const MapPin = styled.div`
 const formMapLink = (location: string): string =>
   `https://www.google.com/maps/search/${encodeURIComponent(location)}`
 
-const excludePattern = /(?:multiple locations)|(?:online)/i
+// Get rid of unnecessary whitespace
+const sanitizer = /(?:\n|\t|(?:\s{2,}))/gi
 
 export const MapLink = ({ location }: MapLinkProps): JSX.Element => {
-  if (excludePattern.test(location)) return <></>
+  location = location.replace(sanitizer, ' ')
 
   return (
     <InvisibleLink href={formMapLink(location)} target="_blank" rel="noopener">

@@ -24,6 +24,7 @@ export interface Service {
   quotation?: string
   access?: string
   location?: string
+  makeMapLink?: boolean
   contactExplanation?: string
   email?: string
   form?: string
@@ -89,6 +90,7 @@ export type ServiceDetail = Pick<
   | 'age'
   | 'costExplanation'
   | 'location'
+  | 'makeMapLink'
   | 'time'
   | 'quotation'
   | 'expectation'

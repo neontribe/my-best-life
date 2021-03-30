@@ -276,6 +276,14 @@ export default {
             'Where possible an actual address of the service, not the head office',
         },
         {
+          label: 'Make map link from location',
+          name: 'makeMapLink',
+          widget: 'boolean',
+          required: false,
+          hint:
+            'Make a Google Maps link from the provided location, to be shown on the service page',
+        },
+        {
           label: 'Time',
           name: 'time',
           widget: 'string',
