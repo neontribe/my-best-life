@@ -19,6 +19,7 @@ age:
 eligibility: Those living or studying in Lambeth or Southwark
 format: Meeting a group of people
 location: Young Vic, 66 The Cut, Waterloo, London SE1 8LZ
+makeMapLink: true
 time: "Throughout the year. "
 contactExplanation: "Email Lorna McGinty or pop in to the Young Vic’s box office and pick up
   a red sign-up form. "

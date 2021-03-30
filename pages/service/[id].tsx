@@ -328,7 +328,9 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
           <>
             <Heading as="h2">Where is it?</Heading>
             <p>{serviceData.location}</p>
-            <MapLink location={serviceData.location}></MapLink>
+            {serviceData.makeMapLink && (
+              <MapLink location={serviceData.location}></MapLink>
+            )}
           </>
         ) : null}
         {serviceData.time ? (

@@ -24,7 +24,8 @@ eligibility: You need to be available on Tuesday evenings; complete a minimum of
   five volunteering days; be willing to learn and be challenged; and write a
   successful application form.
 format: Meeting a group of people
-location: South Norwood Methodist Church, Suffolk Road , London  SE25 6EG
+location: South Norwood Methodist Church, Suffolk Road, London SE25 6EG
+makeMapLink: true
 time: "Tuesday evenings, 6.30pm - 8.30pm. A one-year programme. "
 quotation: The LIT programme I believe has been paramount to making me stand out
   to the other numerous students my age. This is something I have proudly put on

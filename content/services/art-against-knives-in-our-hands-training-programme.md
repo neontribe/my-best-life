@@ -22,6 +22,7 @@ age:
   maxAge: 30
 format: One to one chats
 location: Art Against Knives, Leagas Delaney, 1 Alfred Place, London WC1E 7EB
+makeMapLink: true
 quotation: I never thought that coming to Dollis Dolls would become a weekly
   ritual for me, but after a while I stopped coming with the intention of just
   doing nails, I came to interact with the new family that I had made. Being

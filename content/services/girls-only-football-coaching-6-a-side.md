@@ -24,6 +24,7 @@ location: |-
   30 Nursery Road,
   Brixton
   SW9 8PB
+makeMapLink: true
 time: Saturdays 10am to 12pm (except summer holiday period)
 quotation: “Coming to St. Matthew’s has really helped me as a person because
   playing here is like a dream. In Madrid, I used to play football, but on the
