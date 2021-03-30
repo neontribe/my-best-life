@@ -33,6 +33,9 @@ export const getStaticProps: GetStaticProps = async () => {
         title: service.title,
         shortDescription: service.shortDescription,
         costValue: service.costValue,
+        interests: service.interests || [],
+        feelings: service.feelings || [],
+        score: 0,
         saved: false,
 
         ...(service.image?.image && {

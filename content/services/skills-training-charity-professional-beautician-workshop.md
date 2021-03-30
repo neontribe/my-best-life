@@ -13,7 +13,8 @@ description: "A full range of beautician workshops. Involves training in how to
 categories:
   category1: Job Stuff
   category2: My Body
-interest: Fashion and Beauty
+interests:
+  - Fashion and Beauty
 costValue: 0
 age:
   minAge: 16

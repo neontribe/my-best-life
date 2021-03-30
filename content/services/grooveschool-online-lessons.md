@@ -13,7 +13,8 @@ description: "DJs learn software to compile, construct, perform and record their
 categories:
   category1: Job Stuff
   category2: Mental Health
-interest: Music
+interests:
+  - Music
 costValue: 0
 costExplanation: Further detail and cost on request.
 age:

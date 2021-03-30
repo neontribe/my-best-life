@@ -14,7 +14,8 @@ description: "A 4-day workshop for anyone thinking of a career in the arts or
 categories:
   category1: Job Stuff
   category2: School and College
-interest: Art and Design
+interests:
+  - Art and Design
 costValue: 165
 costQualifier: for non-members
 costExplanation: £165 (£140.25 for members)

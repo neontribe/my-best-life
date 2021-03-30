@@ -13,7 +13,6 @@ description: "Games and activities. Arts and crafts. Baking and cooking
 categories:
   category1: Keeping Safe
   category2: Where I'm Living
-interest: null
 costValue: 0
 costQualifier: ""
 age:

@@ -10,7 +10,8 @@ description: Drop in to see staff and discuss your health and fitness. Drop in
 categories:
   category1: My Body
   category2: Mental Health
-interest: Sports
+interests:
+  - Sports
 costValue: 0.25
 costQualifier: 25p subscription per session
 costExplanation: 25p subscription payable on any night you attend the club

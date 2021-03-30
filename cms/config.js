@@ -133,10 +133,12 @@ export default {
         },
         {
           label: 'Interest group',
-          name: 'interest',
+          name: 'interests',
           widget: 'select',
+          multiple: true,
+          max: 3,
           hint:
-            'Add an interest group for the service. Not currently displayed, but influences the quiz results',
+            'Maximum 3 - Add interest groups for the service. Not currently displayed, but influences the quiz results',
           required: false,
           options: [
             { label: '-', value: '' },

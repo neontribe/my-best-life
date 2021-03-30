@@ -72,10 +72,10 @@ const StyledLink = styled.a`
 `
 
 const categories = [
-  'My money',
+  'Money',
   'School and college',
   'Sex and relationships',
-  "How I'm feeling",
+  'Mental Health',
   'Keeping safe',
   'Job stuff',
   "Where I'm living",

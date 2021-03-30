@@ -11,7 +11,8 @@ description: "A 12 week non-contact boxing course. Coaches are from the
 categories:
   category1: Keeping Safe
   category2: My Body
-interest: Sports
+interests:
+  - Sports
 costValue: 0
 format: Meeting a group of people
 location: Near the Angel Town Estate in Brixton

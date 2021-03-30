@@ -15,7 +15,8 @@ description: >-
 categories:
   category1: Job Stuff
   category2: Mental Health
-interest: Volunteering
+interests:
+  - Volunteering
 costValue: 0
 gender:
   - women

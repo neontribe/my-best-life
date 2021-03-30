@@ -12,7 +12,8 @@ description: "6-month IT and digital media course. Covers a number of topics
   media business. "
 categories:
   category1: Job Stuff
-interest: Films and TV
+interests:
+  - Films and TV
 costValue: 0
 age:
   minAge: 16
