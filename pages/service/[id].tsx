@@ -296,6 +296,7 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
           <SaveButton
             id={serviceData.id}
             saved={saved.includes(serviceData.id)}
+            label={serviceData.title}
           />
         </TitleContainer>
         <p>{serviceData.description}</p>
@@ -383,6 +384,14 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
               </EmailListItem>
             </>
           ) : null}
+          {serviceData.phone ? (
+            <>
+              <EmailListItem>
+                <span>Phone: </span>
+                {serviceData.phone}
+              </EmailListItem>
+            </>
+          ) : null}
           {serviceData.form ? (
             <>
               <ContactListItem>
@@ -424,8 +433,9 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
           checked={reviewState.usedService}
           onChange={onUsedServiceChange}
         />
-        <span>Leave a review</span>
+        <label htmlFor="reviewBody">Leave a review</label>
         <TextInput
+          id="reviewBody"
           onChange={(e) => onCommentChange(e.target.value)}
           ref={commentInputRef}
         />

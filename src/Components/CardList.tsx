@@ -1,4 +1,5 @@
-import { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import styled from 'styled-components'
 
 import { Card } from './Card'
 import { EmptyList } from './EmptyList'
@@ -7,6 +8,11 @@ import { FilterContext } from '../context/FilterContext'
 import { SaveContext } from '../context/SaveContext'
 import { QuizContext } from '../context/QuizContext'
 import { Interest, Gender } from '../../cms/services'
+import { useRemember } from '../hooks/remember'
+import { useScrollRemember } from '../hooks/scrollRemember'
+import { ButtonBase } from './ButtonBase'
+
+const ITEMS_PER_PAGE = 20
 
 export type ListType = 'filtered' | 'saved' | 'quiz'
 interface CardListProps {
@@ -15,10 +21,74 @@ interface CardListProps {
   onLoad?(): void
 }
 
+const NavContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+  align-items: center;
+`
+
+const NavigationButton = styled(ButtonBase)`
+  display: inline-block;
+
+  &:disabled {
+    opacity: 0;
+    cursor: normal;
+  }
+`
+
+interface NavigationProps {
+  onForward(): void
+  onBack(): void
+  isFirstPage: boolean
+  isLastPage: boolean
+  page: number | null
+  totalPages: number
+}
+
+const Navigation = ({
+  onForward,
+  onBack,
+  isFirstPage,
+  isLastPage,
+  page,
+  totalPages,
+}: NavigationProps) => {
+  if (totalPages < 2) {
+    return null
+  }
+
+  return (
+    <NavContainer>
+      {
+        <NavigationButton
+          disabled={isFirstPage}
+          as="button"
+          onClick={() => !isFirstPage && onBack()}
+          aria-label="Previous page"
+        >
+          Back
+        </NavigationButton>
+      }
+      {<div>{page !== null && `${page + 1} / ${totalPages}`}</div>}
+      {
+        <NavigationButton
+          disabled={isLastPage}
+          as="button"
+          onClick={() => !isLastPage && onForward()}
+          aria-label="Next page"
+        >
+          Next
+        </NavigationButton>
+      }
+    </NavContainer>
+  )
+}
+
 export const CardList = ({
   services,
   listType,
-  onLoad,
 }: CardListProps): JSX.Element => {
   const { age, formats } = useContext(FilterContext)
   const { saved } = useContext(SaveContext)
@@ -29,10 +99,39 @@ export const CardList = ({
   const categoryWeight = 1
   const interestWeight = 1
   const feelingWeight = 1
+  const [page, setPage] = useState<number | null>(null)
+
+  // We use a reference to the last element in the card list so that we can
+  // tell when the card list has rendered, and thus know when it is ok
+  // to set the scroll position.
+  const [loadedRef, setLoadedRef] = useState<HTMLLIElement | null>(null)
+
+  const { resumePosition, resetPosition } = useScrollRemember()
+  const { recall: recallPage } = useRemember({
+    name: 'page',
+    value: () => (page ? page.toString() : '0'),
+  })
 
   useEffect(() => {
-    onLoad && onLoad()
-  }, [onLoad])
+    // Reset the page as remembered on initial render
+    setPage(parseInt(recallPage() || '0'))
+    // eslint-disable-next-line
+  }, [])
+
+  useEffect(() => {
+    if (loadedRef === null) return
+    resumePosition()
+    // eslint-disable-next-line
+  }, [loadedRef])
+
+  const pageChange = (direction: 1 | -1) => {
+    setPage((last) => {
+      if (last === null) return 0
+      const newPage = last + direction
+      resetPosition()
+      return newPage
+    })
+  }
 
   function ageFilter(item: ServicePreview, ageInput: string | undefined) {
     let ageNumber: number
@@ -152,7 +251,7 @@ export const CardList = ({
     }
   }
 
-  let filteredServices
+  let filteredServices: Array<ServicePreview>
 
   if (listType === 'saved') {
     filteredServices = services.filter((item) => saved.includes(item.id))
@@ -166,35 +265,70 @@ export const CardList = ({
       .sort((a, b) => {
         return b.score - a.score
       })
-  }
-
-  if (listType === 'filtered') {
+  } else {
     filteredServices = services
       .filter((item) => ageFilter(item, age))
       .filter(formatFilter)
   }
 
-  return (
+  const totalPages = Math.ceil(filteredServices.length / ITEMS_PER_PAGE)
+  const isFirstPage = page === 0
+  const isLastPage = page === totalPages - 1
+  const toRender =
+    page !== null
+      ? filteredServices.slice(
+          page * ITEMS_PER_PAGE,
+          (page + 1) * ITEMS_PER_PAGE
+        )
+      : []
+
+  return page !== null ? (
     <>
       {filteredServices && filteredServices.length > 0 ? (
-        <ul>
-          {filteredServices.map((service: ServicePreview) => (
-            <Card
-              key={service.id}
-              id={service.id}
-              title={service.title}
-              shortDescription={service.shortDescription}
-              image={service.image}
-              costValue={service.costValue}
-              costQualifier={service.costQualifier}
-              age={service.age}
-              format={service.format}
-            />
-          ))}
-        </ul>
+        <>
+          <Navigation
+            onForward={() => pageChange(1)}
+            onBack={() => pageChange(-1)}
+            page={page}
+            totalPages={totalPages}
+            isFirstPage={isFirstPage}
+            isLastPage={isLastPage}
+          />
+          <ul>
+            {page !== null &&
+              toRender.map((service: ServicePreview, id: number) => (
+                <Card
+                  key={service.id}
+                  id={service.id}
+                  title={service.title}
+                  shortDescription={service.shortDescription}
+                  image={service.image}
+                  costValue={service.costValue}
+                  costQualifier={service.costQualifier}
+                  age={service.age}
+                  format={service.format}
+                  ref={
+                    id === toRender.length - 1
+                      ? (ref) => setLoadedRef(ref)
+                      : null
+                  }
+                />
+              ))}
+          </ul>
+          <Navigation
+            onForward={() => pageChange(1)}
+            onBack={() => pageChange(-1)}
+            page={page}
+            totalPages={totalPages}
+            isFirstPage={isFirstPage}
+            isLastPage={isLastPage}
+          />
+        </>
       ) : (
         <EmptyList listType={listType} />
       )}
     </>
+  ) : (
+    <></>
   )
 }

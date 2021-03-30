@@ -11,12 +11,6 @@ import { RadioButton } from '../../src/Components/RadioButton'
 import { QuizContext } from '../../src/context/QuizContext'
 import { LinkButton } from '../../src/Components/LinkButton'
 
-const Section = styled.section`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-`
 const Navigation = styled.section`
   align-items: center;
   display: flex;
@@ -26,15 +20,43 @@ const Navigation = styled.section`
 `
 
 const QuestionSection = styled.section`
-  margin: 1rem;
+  max-width: 50ch;
+  margin: auto;
+  padding: 1rem;
+  width: 100%;
 
-  h2 {
+  legend {
+    border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
+    font-family: 'Catamaran', sans-serif;
     font-size: ${(props) => props.theme.fontSizes.heading};
+  }
+
+  fieldset {
+    border: none;
+    padding: 0;
   }
 `
 
 const CheckboxGroup = styled.div`
-  margin: 1rem 0;
+  max-width: 50ch;
+  margin: auto;
+  padding: 1rem;
+  width: 100%;
+
+  legend {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  fieldset {
+    border: none;
+    padding: 0;
+  }
 `
 
 const StyledLink = styled.a`
@@ -99,17 +121,17 @@ export const AboutYouPage = (): JSX.Element => {
 
   return (
     <Layout>
-      <Section>
-        <HeaderComponent title="About you" />
-        <Navigation>
-          <LinkButton
-            textContent="back"
-            arrow="back"
-            onClick={() => router.back()}
-          />
-        </Navigation>
-        <QuestionSection>
-          <h2>How old are you?</h2>
+      <HeaderComponent title="Support in Lambeth" />
+      <Navigation>
+        <LinkButton
+          textContent="back"
+          arrow="back"
+          onClick={() => router.push('what-are-your-interests')}
+        />
+      </Navigation>
+      <QuestionSection>
+        <fieldset>
+          <legend>How old are you?</legend>
           <VerticalSpacing />
           <HorizontalGroup>
             {allAges.map((item) => {
@@ -124,34 +146,36 @@ export const AboutYouPage = (): JSX.Element => {
               )
             })}
           </HorizontalGroup>
-          <VerticalSpacing />
-          <p>
-            Some support and activities in your area are gender specific. To
-            find something right for you, are you interested in services that
-            are:
-          </p>
+        </fieldset>
+      </QuestionSection>
 
-          <CheckboxGroup>
-            {categories.map((category) => {
-              return (
-                <Checkbox
-                  key={category}
-                  label={category}
-                  checked={genderGet(category)}
-                  onChange={() => genderToggle(category)}
-                />
-              )
-            })}
-          </CheckboxGroup>
-        </QuestionSection>
+      <CheckboxGroup>
+        <p>
+          Some support and activities in your area are gender specific. To find
+          something right for you, are you interested in services that are:
+        </p>
         <VerticalSpacing />
+        <fieldset>
+          <legend>Are you interested in services for:</legend>
+          {categories.map((category) => {
+            return (
+              <Checkbox
+                key={category}
+                label={category}
+                checked={genderGet(category)}
+                onChange={() => genderToggle(category)}
+              />
+            )
+          })}
+        </fieldset>
+      </CheckboxGroup>
+      <VerticalSpacing />
 
-        <Link href="/quiz/results" passHref>
-          <StyledLink onClick={() => setQuizComplete(true)}>{'Ok'}</StyledLink>
-        </Link>
+      <Link href="/quiz/results" passHref>
+        <StyledLink onClick={() => setQuizComplete(true)}>{'Ok'}</StyledLink>
+      </Link>
 
-        <VerticalSpacing />
-      </Section>
+      <VerticalSpacing />
     </Layout>
   )
 }

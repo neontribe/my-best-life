@@ -36,7 +36,7 @@ const Toaster = styled.div`
   flex-wrap: wrap;
   align-items: center;
   pointer-events: none;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 `
 
 interface INotificationContainer {
@@ -48,12 +48,13 @@ const NotificationContainer = styled.div<INotificationContainer>`
   padding: 1rem 2rem;
   border-radius: 0.25rem;
   max-width: 500px;
+  min-width: 300px;
   text-align: center;
   background: ${(props) => props.theme.colours.purple};
   color: white;
   box-shadow: 0 0 9px ${(props) => props.theme.colours.shadow};
   font-weight: bold;
-  margin-top: 1rem;
+  margin: 1rem 1rem 0 1rem;
   transition: all ${(props) => props.fadeTime / 1000}s;
   opacity: ${(props) => props.opacity};
   pointer-events: auto;

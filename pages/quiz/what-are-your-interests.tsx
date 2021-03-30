@@ -10,13 +10,6 @@ import { Checkbox } from '../../src/Components/Checkbox'
 import { QuizContext } from '../../src/context/QuizContext'
 import { LinkButton } from '../../src/Components/LinkButton'
 
-const Section = styled.section`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-`
-
 const Navigation = styled.section`
   align-items: center;
   display: flex;
@@ -25,16 +18,22 @@ const Navigation = styled.section`
   width: 100%;
 `
 
-const QuestionSection = styled.section`
-  margin: 1rem;
+const CheckboxGroup = styled.div`
+  max-width: 50ch;
+  margin: auto;
+  padding: 1rem;
+  width: 100%;
 
-  h2 {
+  legend {
+    border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
+    font-family: 'Catamaran', sans-serif;
     font-size: ${(props) => props.theme.fontSizes.heading};
   }
-`
 
-const CheckboxGroup = styled.div`
-  margin: 1rem 0;
+  fieldset {
+    border: none;
+    padding: 0;
+  }
 `
 
 const StyledLink = styled.a`
@@ -88,44 +87,42 @@ export const WhatAreYourInterestsPage = (): JSX.Element => {
 
   return (
     <Layout>
-      <Section>
-        <HeaderComponent title="What are your interests?" />
-        <Navigation>
-          <LinkButton
-            textContent="back"
-            arrow="back"
-            onClick={() => router.push('how-are-you-feeling')}
-          />
-          <LinkButton
-            textContent="skip"
-            arrow="forward"
-            onClick={() => router.push('about-you')}
-          />
-        </Navigation>
-        <QuestionSection>
-          <h2>Choose as many as you like</h2>
+      <HeaderComponent title="Support in Lambeth" />
+      <Navigation>
+        <LinkButton
+          textContent="back"
+          arrow="back"
+          onClick={() => router.push('how-are-you-feeling')}
+        />
+        <LinkButton
+          textContent="skip"
+          arrow="forward"
+          onClick={() => router.push('about-you')}
+        />
+      </Navigation>
+
+      <CheckboxGroup>
+        <fieldset>
+          <legend>What are your interests?</legend>
           <VerticalSpacing />
+          {interests.map((interest) => {
+            return (
+              <Checkbox
+                key={interest}
+                label={interest}
+                checked={interestsGet(interest)}
+                onChange={() => interestsToggle(interest)}
+              />
+            )
+          })}
+        </fieldset>
+      </CheckboxGroup>
 
-          <CheckboxGroup>
-            {interests.map((interest) => {
-              return (
-                <Checkbox
-                  key={interest}
-                  label={interest}
-                  checked={interestsGet(interest)}
-                  onChange={() => interestsToggle(interest)}
-                />
-              )
-            })}
-          </CheckboxGroup>
-        </QuestionSection>
+      <Link href="/quiz/about-you" passHref>
+        <StyledLink>{'Ok'}</StyledLink>
+      </Link>
 
-        <Link href="/quiz/about-you" passHref>
-          <StyledLink>{'Ok'}</StyledLink>
-        </Link>
-
-        <VerticalSpacing />
-      </Section>
+      <VerticalSpacing />
     </Layout>
   )
 }
