@@ -41,13 +41,18 @@ const NavigationButton = styled.a`
   min-width: 44px;
   text-decoration: none;
 
-  &::visited {
+  &:visited {
     color: ${(props) => props.theme.colours.blue};
   }
 
   &:disabled {
     border: 2px solid ${(props) => props.theme.colours.grey};
     color: ${(props) => props.theme.colours.grey};
+  }
+
+  svg {
+    height: 28px;
+    width: 28px;
   }
 `
 

@@ -270,7 +270,7 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
       <Header>
         <LinkButton
           textContent="Back"
-          arrow="back"
+          arrow="left"
           onClick={() => router.back()}
         />
       </Header>

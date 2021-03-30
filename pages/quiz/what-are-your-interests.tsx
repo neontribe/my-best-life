@@ -91,12 +91,12 @@ export const WhatAreYourInterestsPage = (): JSX.Element => {
       <Navigation>
         <LinkButton
           textContent="back"
-          arrow="back"
+          arrow="left"
           onClick={() => router.push('how-are-you-feeling')}
         />
         <LinkButton
           textContent="skip"
-          arrow="forward"
+          arrow="right"
           onClick={() => router.push('about-you')}
         />
       </Navigation>
