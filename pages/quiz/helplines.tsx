@@ -5,14 +5,6 @@ import { Layout } from '../../src/Components/Layout'
 import { HeaderComponent } from '../../src/Components/Header'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 
-const Section = styled.section`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: space-between;
-`
-
 const Heading = styled.h2`
   display: inline-block;
   border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
@@ -75,28 +67,26 @@ const StyledLink = styled.a`
 export const IfYouNeedHelpPage = (): JSX.Element => {
   return (
     <Layout>
-      <Section>
-        <HeaderComponent title="Support in Lambeth" />
-        <MainBody>
-          <Heading>Do you need help?</Heading>
-          <VerticalSpacing />
-          <Text>If you are in immediate danger, call 999.</Text>
-          <Text>
-            If you are not in immediate danger but need to talk to someone, call
-            The Mix helpline on <a href="tel:0808 808 4994">0808 808 4994</a>
-            <br />
-            or, <a href="sms:85258?body=THEMIX">text THEMIX to 85258</a>.
-          </Text>
-        </MainBody>
-
+      <HeaderComponent title="Support in Lambeth" />
+      <MainBody>
+        <Heading>Do you need help?</Heading>
         <VerticalSpacing />
+        <Text>If you are in immediate danger, call 999.</Text>
+        <Text>
+          If you are not in immediate danger but need to talk to someone, call
+          The Mix helpline on <a href="tel:0808 808 4994">0808 808 4994</a>
+          <br />
+          or, <a href="sms:85258?body=THEMIX">text THEMIX to 85258</a>.
+        </Text>
+      </MainBody>
 
-        <Link href="/quiz/what-are-your-interests" passHref>
-          <StyledLink>{'Back to the quiz'}</StyledLink>
-        </Link>
+      <VerticalSpacing />
 
-        <VerticalSpacing />
-      </Section>
+      <Link href="/quiz/what-are-your-interests" passHref>
+        <StyledLink>{'Back to the quiz'}</StyledLink>
+      </Link>
+
+      <VerticalSpacing />
     </Layout>
   )
 }
