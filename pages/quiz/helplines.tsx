@@ -5,22 +5,33 @@ import { Layout } from '../../src/Components/Layout'
 import { HeaderComponent } from '../../src/Components/Header'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 
-const Section = styled.section`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: space-between;
+const Heading = styled.h2`
+  display: inline-block;
+  border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
+  font-family: 'Catamaran', sans-serif;
+  font-size: ${(props) => props.theme.fontSizes.heading};
 `
 
 const Text = styled.p`
-  align-items: center;
-  display: flex;
-  flex: 1 1 20%;
   font-family: 'Catamaran', sans-serif;
   font-size: ${(props) => props.theme.fontSizes.heading};
-  max-width: 20ch;
+  margin: 2rem auto;
+  max-width: 30rem;
+  text-align: left;
+
+  a {
+    color: ${(props) => props.theme.colours.blue};
+    text-decoration-color: ${(props) => props.theme.colours.aqua};
+    box-sizing: border-box;
+    height: 2px;
+  }
+`
+
+const MainBody = styled.div`
   text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
 `
 
 const StyledLink = styled.a`
@@ -38,7 +49,7 @@ const StyledLink = styled.a`
   width: 16rem;
   height: 3rem;
   justify-content: center;
-  margin: auto;
+  margin: 0 auto;
   max-width: calc(100% - 2rem);
 
   &:focus {
@@ -56,23 +67,26 @@ const StyledLink = styled.a`
 export const IfYouNeedHelpPage = (): JSX.Element => {
   return (
     <Layout>
-      <Section>
-        <HeaderComponent title="Do you need help?" />
+      <HeaderComponent title="Support in Lambeth" />
+      <MainBody>
+        <Heading>Do you need help?</Heading>
+        <VerticalSpacing />
         <Text>If you are in immediate danger, call 999.</Text>
         <Text>
-          If you are not in immediate danger but need to talk to someone. Speak
-          to helpline - the mix helpline: 0808 808 4994/Crisis Text: Text THEMIX
-          to 85258
+          If you are not in immediate danger but need to talk to someone, call
+          The Mix helpline on <a href="tel:0808 808 4994">0808 808 4994</a>
+          <br />
+          or, <a href="sms:85258?body=THEMIX">text THEMIX to 85258</a>.
         </Text>
+      </MainBody>
 
-        <VerticalSpacing />
+      <VerticalSpacing />
 
-        <Link href="/quiz/what-are-your-interests" passHref>
-          <StyledLink>{'Back to the quiz'}</StyledLink>
-        </Link>
+      <Link href="/quiz/what-are-your-interests" passHref>
+        <StyledLink>{'Back to the quiz'}</StyledLink>
+      </Link>
 
-        <VerticalSpacing />
-      </Section>
+      <VerticalSpacing />
     </Layout>
   )
 }
