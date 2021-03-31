@@ -301,9 +301,7 @@ export const CardList = ({
 
   if (listType === 'saved') {
     filteredServices = services.filter((item) => saved.includes(item.id))
-  }
-
-  if (listType === 'quiz') {
+  } else if (listType === 'quiz') {
     filteredServices = services
       .filter(assignQuizScore)
       .filter((item) => ageFilter(item, quizAnswers?.age))
