@@ -29,7 +29,7 @@ const NavContainer = styled.div`
   justify-content: space-between;
   margin: 1rem 0;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 var(--gutter-width);
 `
 
 const NavigationButton = styled.a`
@@ -62,6 +62,10 @@ const NavigationButton = styled.a`
 
 const NavigationTextButton = styled(NavigationButton)`
   padding: 0 1rem;
+`
+
+const List = styled.ul`
+  padding: 0 var(--gutter-width);
 `
 
 interface NavigationProps {
@@ -339,7 +343,7 @@ export const CardList = ({
             isLastPage={isLastPage}
             top
           />
-          <ul>
+          <List>
             {page !== null &&
               toRender.map((service: ServicePreview, id: number) => (
                 <Card
@@ -359,7 +363,7 @@ export const CardList = ({
                   }
                 />
               ))}
-          </ul>
+          </List>
           <Navigation
             onForward={() => pageChange(1)}
             onBack={() => pageChange(-1)}

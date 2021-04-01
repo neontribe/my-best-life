@@ -28,7 +28,7 @@ const CardContainer = styled.li`
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  margin: 1.5rem 2rem;
+  margin: 1.5rem 0;
   overflow: hidden;
   position: relative;
 

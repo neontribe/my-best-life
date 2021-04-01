@@ -27,10 +27,16 @@ declare module 'styled-components' {
     }
 
     screenSizes: {
-      phoneOnly: string
+      smallPhoneOnly: string
+      phonePlus: string
       tabletPortraitPlus: string
       tabletLandscapePlus: string
       desktopPlus: string
+    }
+
+    gutters: {
+      small: string
+      large: string
     }
   }
 }

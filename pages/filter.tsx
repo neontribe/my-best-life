@@ -21,7 +21,7 @@ const Top = styled.section`
   justify-content: space-between;
   margin: auto;
   max-width: 50ch;
-  padding: 1rem;
+  padding: 1rem var(--gutter-width);
   width: 100%;
 
   h2 {
@@ -51,7 +51,7 @@ const FilterSection = styled.section`
   border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
   max-width: 50ch;
   margin: auto;
-  padding: 1rem;
+  padding: 1rem var(--gutter-width);
   width: 100%;
 
   legend {
