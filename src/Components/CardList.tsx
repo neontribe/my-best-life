@@ -87,10 +87,6 @@ const Navigation = ({
   totalPages,
   top,
 }: NavigationProps) => {
-  if (totalPages < 2) {
-    return null
-  }
-
   return (
     <NavContainer>
       <NavigationButton
