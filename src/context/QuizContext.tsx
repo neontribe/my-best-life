@@ -179,6 +179,19 @@ export const QuizProvider = ({ children }: QuizProviderProps): JSX.Element => {
     []
   )
 
+  // Have to memoize this to prevent infinite useEffect loops with anything
+  // that uses this result as a dependency.
+  const fullData = useMemo(
+    (): FullData => ({
+      howAreFeeling,
+      whatsOnMind,
+      interests,
+      gender,
+      age,
+    }),
+    [howAreFeeling, whatsOnMind, interests, gender, age]
+  )
+
   const value: IQuizContext = useMemo(
     () => ({
       howAreFeelingGet: (key) => getCategoryValue(howAreFeeling, key),
@@ -191,13 +204,7 @@ export const QuizProvider = ({ children }: QuizProviderProps): JSX.Element => {
       genderToggle: (key) => toggleCategoryValue(setGender, key),
       ageGet: () => age,
       ageSet: setAge,
-      fullDataGet: () => ({
-        howAreFeeling,
-        whatsOnMind,
-        interests,
-        gender,
-        age,
-      }),
+      fullDataGet: () => fullData,
       clearProgress,
       quizComplete,
       setQuizComplete,
