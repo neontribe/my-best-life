@@ -10,6 +10,8 @@ import { Checkbox } from '../../src/Components/Checkbox'
 import { QuizContext } from '../../src/context/QuizContext'
 import { LinkButton } from '../../src/Components/LinkButton'
 
+import { Interest } from '../../cms/services'
+
 const Navigation = styled.section`
   align-items: center;
   display: flex;
@@ -66,7 +68,7 @@ const StyledLink = styled.a`
   }
 `
 
-const interests = [
+const interests: Array<Interest> = [
   'Sports',
   'Music',
   'Films and TV',

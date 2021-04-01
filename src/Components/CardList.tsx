@@ -9,7 +9,7 @@ import { ServicePreview } from '../../pages/index'
 import { FilterContext } from '../context/FilterContext'
 import { SaveContext } from '../context/SaveContext'
 import { QuizContext } from '../context/QuizContext'
-import { Interest, Gender } from '../../cms/services'
+import { Gender } from '../../cms/services'
 import { useRemember } from '../hooks/remember'
 import { useScrollRemember } from '../hooks/scrollRemember'
 import { MyBestLifeTheme } from '../../src/Theme'
@@ -235,17 +235,13 @@ export const CardList = ({
     if (item?.format && formats.includes(item?.format)) return true
   }
 
-  function genderFilter(
-    item: ServicePreview,
-    genderInput: Array<string> | undefined
-  ) {
+  function genderFilter(item: ServicePreview, genderInput?: Array<Gender>) {
     // If no preference is set for user or service, return everything
     if (genderInput?.length === 0 || item?.gender?.length === 0) {
       return true
     }
 
-    genderInput?.filter((gen) => {
-      const gender = gen as Gender
+    genderInput?.filter((gender) => {
       if (!item?.gender?.includes(gender)) {
         return false
       } else {
@@ -277,8 +273,7 @@ export const CardList = ({
       item.score += categoryWeight
     }
 
-    const interestMatches = quizAnswers?.interests?.filter((value) => {
-      const interest = value as Interest
+    const interestMatches = quizAnswers?.interests?.filter((interest) => {
       if (item?.interests.includes(interest)) return true
     })
 

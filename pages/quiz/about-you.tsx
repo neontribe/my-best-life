@@ -11,6 +11,8 @@ import { RadioButton } from '../../src/Components/RadioButton'
 import { QuizContext } from '../../src/context/QuizContext'
 import { LinkButton } from '../../src/Components/LinkButton'
 
+import { Gender } from '../../cms/services'
+
 const Navigation = styled.section`
   align-items: center;
   display: flex;
@@ -95,7 +97,7 @@ const HorizontalGroup = styled.div`
   justify-content: space-between;
 `
 
-const categories = [
+const categories: Array<Gender> = [
   'men',
   'women',
   'non-binary',
