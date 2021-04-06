@@ -6,28 +6,30 @@ import React, {
   useCallback,
 } from 'react'
 
+import { Gender, Interest } from '../../cms/services'
+import { Feeling } from '../../pages/quiz/how-are-you-feeling'
+import { OnMind } from '../../pages/quiz/whats-on-your-mind'
+
 // We store checkbox inputs (and anything else that can be toggled)
 // using this structure. If a checkbox is checked, its id is present in
 // the array; if it is unchecked, it is not present.
-type CategoryList = Array<string>
-
 interface FullData {
-  whatsOnMind: CategoryList
-  howAreFeeling: CategoryList
-  interests: CategoryList
-  gender: CategoryList
+  whatsOnMind: Array<OnMind>
+  howAreFeeling: Array<Feeling>
+  interests: Array<Interest>
+  gender: Array<Gender>
   age: string
 }
 
 interface IQuizContext {
-  whatsOnMindGet(key: string): boolean
-  whatsOnMindToggle(key: string): void
-  howAreFeelingGet(key: string): boolean
-  howAreFeelingToggle(key: string): void
-  interestsGet(key: string): boolean
-  interestsToggle(key: string): void
-  genderGet(key: string): boolean
-  genderToggle(key: string): void
+  whatsOnMindGet(key: OnMind): boolean
+  whatsOnMindToggle(key: OnMind): void
+  howAreFeelingGet(key: Feeling): boolean
+  howAreFeelingToggle(key: Feeling): void
+  interestsGet(key: Interest): boolean
+  interestsToggle(key: Interest): void
+  genderGet(key: Gender): boolean
+  genderToggle(key: Gender): void
   ageGet(): string
   ageSet(val: string): void
   fullDataGet(): FullData | undefined
@@ -62,10 +64,10 @@ interface QuizProviderProps {
 }
 
 export const QuizProvider = ({ children }: QuizProviderProps): JSX.Element => {
-  const [whatsOnMind, setWhatsOnMind] = useState<CategoryList>([])
-  const [howAreFeeling, setHowAreFeeling] = useState<CategoryList>([])
-  const [interests, setInterests] = useState<CategoryList>([])
-  const [gender, setGender] = useState<CategoryList>([])
+  const [whatsOnMind, setWhatsOnMind] = useState<Array<OnMind>>([])
+  const [howAreFeeling, setHowAreFeeling] = useState<Array<Feeling>>([])
+  const [interests, setInterests] = useState<Array<Interest>>([])
+  const [gender, setGender] = useState<Array<Gender>>([])
   const [age, setAge] = useState<string>('')
   const [quizComplete, setQuizComplete] = useState(false)
 
@@ -145,14 +147,14 @@ export const QuizProvider = ({ children }: QuizProviderProps): JSX.Element => {
   ])
 
   interface CategoryToggler {
-    (
-      setStateFunc: React.Dispatch<React.SetStateAction<CategoryList>>,
-      key: string
+    <T>(
+      setStateFunc: React.Dispatch<React.SetStateAction<Array<T>>>,
+      key: T
     ): void
   }
 
   // This function generalises a way of storing checkbox inputs. It is generalised to any state that stores
-  // a value of type CategoryList.
+  // a value of type Array.
   const toggleCategoryValue: CategoryToggler = useCallback(
     (setStateFunc, key) => {
       setStateFunc((cur) => {
@@ -172,12 +174,13 @@ export const QuizProvider = ({ children }: QuizProviderProps): JSX.Element => {
     []
   )
 
-  const getCategoryValue = useCallback(
-    (category: CategoryList, key: string): boolean => {
-      return category.includes(key)
-    },
-    []
-  )
+  interface CategoryValueGetter {
+    <T>(category: Array<T>, key: T): boolean
+  }
+
+  const getCategoryValue: CategoryValueGetter = useCallback((category, key) => {
+    return category.includes(key)
+  }, [])
 
   const value: IQuizContext = useMemo(
     () => ({
