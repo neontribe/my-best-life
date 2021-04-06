@@ -10,7 +10,7 @@ import { LinkButton } from '../../src/Components/LinkButton'
 
 interface ImageCheckboxesProps {
   id: string
-  values: Array<{ title: string; image: string }>
+  values: readonly { title: Feeling; image: string }[]
   label: string
 }
 
@@ -218,14 +218,21 @@ const feelings = [
   { title: 'scared', image: '/img/scared.svg' },
   { title: 'unsafe', image: '/img/unsafe.svg' },
   { title: 'ignored', image: '/img/ignored.svg' },
-]
+] as const
+
+export type Feeling = typeof feelings[number]['title']
 
 export const HowAreYouFeelingPage = (): JSX.Element => {
   const router = useRouter()
   const { howAreFeelingGet } = useContext(QuizContext)
 
   const nextPage = () => {
-    const triggerFeelings = ['scared', 'unsafe', 'angry', 'ignored']
+    const triggerFeelings: Array<Feeling> = [
+      'scared',
+      'unsafe',
+      'angry',
+      'ignored',
+    ]
 
     const mustShowHelp =
       triggerFeelings.filter((x) => howAreFeelingGet(x)).length > 0

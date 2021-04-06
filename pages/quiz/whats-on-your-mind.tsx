@@ -84,7 +84,9 @@ const categories = [
   'Drink and drugs',
   'My body',
   'My rights and the law',
-]
+] as const
+
+export type OnMind = typeof categories[number]
 
 export const WhatsOnYourMindPage = (): JSX.Element => {
   const { whatsOnMindGet, whatsOnMindToggle } = useContext(QuizContext)

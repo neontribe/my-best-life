@@ -58,6 +58,12 @@ export default class MyDocument extends Document {
             type="font/ttf"
             crossOrigin="anonymous"
           />
+          <script
+            async
+            defer
+            data-domain="my-best-life.vercel.app"
+            src="https://plausible.io/js/plausible.js"
+          ></script>
         </Head>
         <body>
           <Main />
