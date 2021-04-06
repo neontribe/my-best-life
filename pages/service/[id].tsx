@@ -56,7 +56,7 @@ const TitleContainer = styled.div`
 `
 
 const Section = styled.section<{ divider: string }>`
-  margin: 0 2rem;
+  margin: 0 var(--gutter-width);
   border-bottom: 1px solid ${(props) => props.divider};
   padding: 1.5rem 0;
 

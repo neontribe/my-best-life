@@ -33,10 +33,16 @@ export const MyBestLifeTheme: DefaultTheme = {
   },
 
   screenSizes: {
-    phoneOnly: '@media (max-width: 599px)',
+    smallPhoneOnly: '@media (max-width: 349px)',
+    phonePlus: '@media (min-width: 350px)',
     tabletPortraitPlus: '@media (min-width: 600px)',
     tabletLandscapePlus: '@media (min-width: 900px)',
     desktopPlus: '@media (min-width: 1200px),',
+  },
+
+  gutters: {
+    small: '1rem',
+    large: '2rem',
   },
 }
 
@@ -146,6 +152,15 @@ export const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme.colours.blue};
     font-family: Lato, sans-serif;
     font-size: 100%;
+
+    ${(props) => props.theme.screenSizes.smallPhoneOnly} {
+      --gutter-width: ${(props) => props.theme.gutters.small};
+    }
+
+    ${(props) => props.theme.screenSizes.phonePlus} {
+      --gutter-width: ${(props) => props.theme.gutters.large};
+    }
+
   }
 
   h1, h2, h3, h4, h5, h6 {

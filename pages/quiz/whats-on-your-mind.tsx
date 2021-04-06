@@ -26,7 +26,7 @@ const Navigation = styled.section`
 const CheckboxGroup = styled.div`
   max-width: 50ch;
   margin: auto;
-  padding: 1rem;
+  padding: 1rem var(--gutter-width);
   width: 100%;
 
   legend {
