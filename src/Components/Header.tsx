@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { useRouter } from 'next/router'
 
 import { VisuallyHidden } from './VisuallyHidden'
+import { VerticalSpacing } from './VerticalSpacing'
 import { QuizContext } from '../context/QuizContext'
 
 interface HeaderProps {
@@ -24,11 +25,12 @@ const Header = styled.header`
 const HeaderContents = styled.div`
   align-items: center;
   display: flex;
-  height: 5rem;
+  min-height: 4rem;
   justify-content: space-between;
 `
 
 const Title = styled.h1`
+  align-self: flex-end;
   font-family: 'Catamaran', sans-serif;
   font-size: ${(props) => props.theme.fontSizes.title};
 `
@@ -65,6 +67,16 @@ const NavPill = styled.a<{ activePage: boolean }>`
       : `background-color: ${props.theme.colours.white};;
       color: ${props.theme.colours.purple}; `}
 
+  &:hover {
+    background-color: ${(props) => props.theme.colours.purple_light};
+    color: ${(props) => props.theme.colours.purple};
+  }
+
+  &:focus {
+    outline: 2px dashed ${(props) => props.theme.colours.blue};
+    outline-offset: 2px;
+  }
+
   svg {
     height: 1.2em;
     margin-right: 4px;
@@ -73,6 +85,31 @@ const NavPill = styled.a<{ activePage: boolean }>`
       props.activePage
         ? `stroke: ${props.theme.colours.white};`
         : `stroke: ${props.theme.colours.purple};`}
+  }
+`
+
+const Help = styled.a`
+  align-self: flex-start;
+  background-color: ${(props) => props.theme.colours.blue};
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: ${(props) => props.theme.colours.white};
+  display: flex;
+  flex-direction: column;
+  font-family: 'Catamaran', sans-serif;
+  font-size: ${(props) => props.theme.fontSizes.small};
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    background-color: ${(props) => props.theme.colours.blue_light};
+    color: ${(props) => props.theme.colours.blue};
+  }
+
+  &:focus {
+    outline: 2px dashed ${(props) => props.theme.colours.purple};
+    outline-offset: 2px;
   }
 `
 
@@ -94,7 +131,12 @@ export const HeaderComponent = ({ title }: HeaderProps): JSX.Element => {
       <Header>
         <HeaderContents>
           <Title>{title}</Title>
+          <Help href="/helplines">
+            <span>URGENT</span>
+            <span>HELP</span>
+          </Help>
         </HeaderContents>
+        <VerticalSpacing size={1} />
         <Nav>
           <LinkList>
             <li>
