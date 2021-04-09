@@ -8,68 +8,68 @@ A short guide on how to obtain the secrets you need to allow feedback obtained t
 2. Go to: https://console.cloud.google.com/
 3. Accept the terms and conditions:
 
-   ![terms and conditions](sheets-1.png)
+   ![terms and conditions](img/sheets-1.png)
 
 4. Press 'Create project'
 
-   ![create project](sheets-2.png)
+   ![create project](img/sheets-2.png)
 
 5. Give the project a name, e.g. 'NPC Feedback'
 
-   ![name project](sheets-3.png)
+   ![name project](img/sheets-3.png)
 
 6. Click 'Create'
 7. You will see a rather complicated dashboard. Open the navigation menu on the left and select 'APIs & Services' > 'Library'
 
-   ![apis and services](sheets-4.png)
+   ![apis and services](img/sheets-4.png)
 
 8. Search for 'google sheets'
 
-   ![search](sheets-5.png)
+   ![search](img/sheets-5.png)
 
 9. Click on the result 'Google Sheets' that appears
 10. Click 'Enable'
 
-   ![enable sheets](sheets-6.png)
+   ![enable sheets](img/sheets-6.png)
 
 11. From the navigation menu on the left, select 'Credentials'
 
-   ![credentials](sheets-7.png)
+   ![credentials](img/sheets-7.png)
 
 12. Click 'create credentials'
 
-   ![create credentials](sheets-8.png)
+   ![create credentials](img/sheets-8.png)
 
 13. Select 'service account'
 
-   ![service account](sheets-9.png)
+   ![service account](img/sheets-9.png)
 
 14. Give the account a name, e.g. 'NPC Feedback Bot' and click 'Create'
 
-   ![create account](sheets-10.png)
+   ![create account](img/sheets-10.png)
 
 15. From the 'Select a role' dropdown, select 'Basic' > 'Editor'
 
-   ![select a role](sheets-11.png)
+   ![select a role](img/sheets-11.png)
 
 16. Press 'Continue'
 17. Press 'Done' at the bottom
 18. Copy the service account's email, and paste it somewhere safe - you will need it in section 2!
 19. Click on the service account's email
 
-   ![bot email](sheets-12.png)
+   ![bot email](img/sheets-12.png)
 
 19. From the top navigation bar, select 'Keys'
 
-   ![keys](sheets-13.png)
+   ![keys](img/sheets-13.png)
 
 20. Select 'Add key' > 'Create new key'
 
-   ![create new key](sheets-14.png)
+   ![create new key](img/sheets-14.png)
 
 21. Select 'JSON' and click 'Create'
 
-   ![JSON](sheets-15.png)
+   ![JSON](img/sheets-15.png)
 
 22. A `.json` file will be downloaded to your computer. This contains the private key, among other things. Securely send us this file, and then
     delete it from your computer (but only after making sure we have got it - it can't be regenerated!)
@@ -81,7 +81,7 @@ A short guide on how to obtain the secrets you need to allow feedback obtained t
 3. Create a new blank spreadsheet
 4. Fill in the top cells with the following text (case-sensitive):
 
-   ![cells](sheets-16.png)
+   ![cells](img/sheets-16.png)
 
    That is: `service`, `rating`, `comment`, `usedService`, `timestamp`
 
@@ -92,3 +92,14 @@ A short guide on how to obtain the secrets you need to allow feedback obtained t
 9. Uncheck 'Notify people' and press 'Share'
 
 **Congratulations!** You have successfully set everything up. Once we get things configured on our end, feedback for services will go to this spreadsheet.
+
+## Dev instructions
+
+Set the following environment variables from the JSON file provided:
+
+- `REVIEW_PRIVATE_KEY` from `"private_key"`
+- `REVIEW_CLIENT_EMAIL` from `""client_email"`
+
+And set:
+
+- `REVIEW_SHEET_ID` from the URL of the sheet being used (the long string of letters and numbers)
