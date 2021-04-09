@@ -35,7 +35,7 @@ export const EmptyList = ({ listType }: EmptyListProps): JSX.Element => {
         <span>
           We weren&apos;t able to find any services matching your current
           filters. Try{' '}
-          <Link href="/filters" passHref>
+          <Link href="/filter" passHref>
             <LinkInner>expanding your filters</LinkInner>
           </Link>{' '}
           to show more results.
