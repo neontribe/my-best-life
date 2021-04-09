@@ -1,6 +1,8 @@
 import styled from 'styled-components'
+import Link from 'next/link'
 
 import { ListType } from '../Components/CardList'
+import { CardListNavigation } from '../Components/CardListNavigation'
 
 interface EmptyListProps {
   listType: ListType
@@ -18,6 +20,12 @@ const Message = styled.p`
   }
 `
 
+const LinkInner = styled.a`
+  color: ${(props) => props.theme.colours.blue};
+  text-decoration: underline;
+  text-decoration-color: ${(props) => props.theme.colours.aqua};
+`
+
 export const EmptyList = ({ listType }: EmptyListProps): JSX.Element => {
   let content: JSX.Element
 
@@ -26,7 +34,11 @@ export const EmptyList = ({ listType }: EmptyListProps): JSX.Element => {
       content = (
         <span>
           We weren&apos;t able to find any services matching your current
-          filters. Try expanding your filters to show more results.
+          filters. Try{' '}
+          <Link href="/filter" passHref>
+            <LinkInner>expanding your filters</LinkInner>
+          </Link>{' '}
+          to show more results.
         </span>
       )
       break
@@ -68,5 +80,18 @@ export const EmptyList = ({ listType }: EmptyListProps): JSX.Element => {
       )
   }
 
-  return <Message>{content}</Message>
+  return (
+    <>
+      <CardListNavigation
+        onForward={() => {}}
+        onBack={() => {}}
+        isFirstPage
+        isLastPage
+        page={-1}
+        totalPages={0}
+        showFilterBtn={true}
+      />
+      <Message>{content}</Message>
+    </>
+  )
 }

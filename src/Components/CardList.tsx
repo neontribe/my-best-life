@@ -1,8 +1,7 @@
 import React, { useContext, useEffect, useState, useCallback } from 'react'
-import Link from 'next/link'
 import styled from 'styled-components'
 
-import { Arrow } from './Arrow'
+import { CardListNavigation } from './CardListNavigation'
 import { Card } from './Card'
 import { EmptyList } from './EmptyList'
 import { ServicePreview } from '../../pages/index'
@@ -12,7 +11,6 @@ import { QuizContext } from '../context/QuizContext'
 import { Gender } from '../../cms/services'
 import { useRemember } from '../hooks/remember'
 import { useScrollRemember } from '../hooks/scrollRemember'
-import { MyBestLifeTheme } from '../../src/Theme'
 import { QuizEncouragement } from './QuizEncouragement'
 
 const ITEMS_PER_PAGE = 20
@@ -24,118 +22,9 @@ interface CardListProps {
   onLoad?(): void
 }
 
-const NavContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin: 1rem 0;
-  align-items: center;
-  padding: 0 var(--gutter-width);
-`
-
-const NavigationButton = styled.a`
-  align-items: center;
-  background-color: ${(props) => props.theme.colours.white};
-  border-radius: 5px;
-  border: 2px solid ${(props) => props.theme.colours.blue};
-  color: ${(props) => props.theme.colours.blue};
-  display: flex;
-  font-family: 'Catamaran', sans-serif;
-  font-weight: bold;
-  min-height: 44px;
-  min-width: 44px;
-  text-decoration: none;
-
-  &:visited {
-    color: ${(props) => props.theme.colours.blue};
-  }
-
-  &:disabled {
-    border: 2px solid ${(props) => props.theme.colours.grey};
-    color: ${(props) => props.theme.colours.grey};
-  }
-
-  svg {
-    height: 28px;
-    width: 28px;
-  }
-`
-
-const NavigationTextButton = styled(NavigationButton)`
-  padding: 0 1rem;
-`
-
 const List = styled.ul`
   padding: 0 var(--gutter-width);
 `
-
-interface NavigationProps {
-  onForward(): void
-  onBack(): void
-  isFirstPage: boolean
-  isLastPage: boolean
-  page: number | null
-  totalPages: number
-  top?: boolean
-}
-
-const Navigation = ({
-  onForward,
-  onBack,
-  isFirstPage,
-  isLastPage,
-  page,
-  totalPages,
-  top,
-}: NavigationProps) => {
-  if (totalPages < 2) {
-    return null
-  }
-
-  return (
-    <NavContainer>
-      <NavigationButton
-        disabled={isFirstPage}
-        as="button"
-        onClick={() => !isFirstPage && onBack()}
-        aria-label="Previous page"
-      >
-        <Arrow
-          direction={'left'}
-          colour={
-            isFirstPage
-              ? MyBestLifeTheme.colours.grey
-              : MyBestLifeTheme.colours.blue
-          }
-        />
-      </NavigationButton>
-
-      <div>{page !== null && `${page + 1} / ${totalPages}`}</div>
-
-      <NavigationButton
-        disabled={isLastPage}
-        as="button"
-        onClick={() => !isLastPage && onForward()}
-        aria-label="Next page"
-      >
-        <Arrow
-          direction={'right'}
-          colour={
-            isLastPage
-              ? MyBestLifeTheme.colours.grey
-              : MyBestLifeTheme.colours.blue
-          }
-        />
-      </NavigationButton>
-
-      {top && (
-        <Link href={`/filter`} passHref>
-          <NavigationTextButton>Filter</NavigationTextButton>
-        </Link>
-      )}
-    </NavContainer>
-  )
-}
 
 export const CardList = ({
   services,
@@ -397,18 +286,18 @@ export const CardList = ({
     assignQuizScore,
   ])
 
-  return page !== null && filteredServices !== null ? (
+  return filteredServices !== null ? (
     <>
       {filteredServices && filteredServices.length > 0 ? (
         <>
-          <Navigation
+          <CardListNavigation
             onForward={() => pageChange(1)}
             onBack={() => pageChange(-1)}
             page={page}
             totalPages={totalPages}
             isFirstPage={isFirstPage}
             isLastPage={isLastPage}
-            top
+            showFilterBtn
           />
           <List>
             {listType === 'filtered' ? <QuizEncouragement /> : null}
@@ -432,7 +321,7 @@ export const CardList = ({
                 />
               ))}
           </List>
-          <Navigation
+          <CardListNavigation
             onForward={() => pageChange(1)}
             onBack={() => pageChange(-1)}
             page={page}
