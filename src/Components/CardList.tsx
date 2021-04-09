@@ -11,6 +11,7 @@ import { QuizContext } from '../context/QuizContext'
 import { Gender } from '../../cms/services'
 import { useRemember } from '../hooks/remember'
 import { useScrollRemember } from '../hooks/scrollRemember'
+import { QuizEncouragement } from './QuizEncouragement'
 
 const ITEMS_PER_PAGE = 20
 
@@ -299,6 +300,7 @@ export const CardList = ({
             showFilterBtn
           />
           <List>
+            {listType === 'filtered' ? <QuizEncouragement /> : null}
             {page !== null &&
               toRender.map((service: ServicePreview, id: number) => (
                 <Card
