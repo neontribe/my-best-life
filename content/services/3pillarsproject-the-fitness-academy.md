@@ -13,6 +13,8 @@ categories:
   category2: Job Stuff
 interests: null
 costValue: 0
+gender:
+  - transgender
 eligibility: This is designed for male ex-offenders.
 format: One to one chats
 location: 3Pillars Project, Black Prince Trust, 5 Beaufoy Walk, London, SE11 6AA
