@@ -11,6 +11,10 @@ description: A paid fitness apprenticeship and mentoring for male ex-offenders.
 categories:
   category1: My Body
   category2: Job Stuff
+interests:
+  - Sports
+  - Drama
+  - Outdoor Activities
 costValue: 0
 eligibility: This is designed for male ex-offenders.
 format: One to one chats
