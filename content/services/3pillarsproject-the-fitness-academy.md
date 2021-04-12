@@ -11,10 +11,10 @@ description: A paid fitness apprenticeship and mentoring for male ex-offenders.
 categories:
   category1: My Body
   category2: Job Stuff
-interests: null
+interests:
+  - Sports
 costValue: 0
-gender:
-  - transgender
+gender: null
 eligibility: This is designed for male ex-offenders.
 format: One to one chats
 location: 3Pillars Project, Black Prince Trust, 5 Beaufoy Walk, London, SE11 6AA
