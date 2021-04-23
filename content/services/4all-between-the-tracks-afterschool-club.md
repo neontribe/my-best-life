@@ -1,6 +1,6 @@
 ---
 organisation: 4all
-title: Between the Tracks+ Afterschool Club
+title: Between the Tracks + Afterschool Club
 shortDescription: Afterschool club
 image:
   image: img/between-the-tracks1.png
