@@ -19,7 +19,7 @@ categories:
 interests:
   - Films and TV
 costValue: 8.5
-costQualifier: From
+costQualifier: From £8.50
 eligibility: At this current time, unfortunately they don’t have access for
   disabled customers.
 format: Meeting a group of people
