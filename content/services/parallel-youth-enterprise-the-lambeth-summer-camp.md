@@ -5,16 +5,12 @@ shortDescription: 4-week summer activity camp
 image:
   image: img/group-stood-on-cliff.jpeg
   imageAlt: Four young people hugging and look out at the view
-description: "A 4-week summer camp coming soon in July and August 2021. On-site,
-  there will be several workshops, including music, dance, computers, filming,
-  beautician, face painting, and arts & crafts. The themes of crime reduction
-  and gang awareness will feature in many of the workshops. There will be
-  ongoing day-long sports, including badminton, football, table tennis, cricket,
-  basketball and athletics. Off-site, there will be daily trips outside London
-  to enjoy time in the countryside. These will involve more unusual activities:
-  sailing, canoeing, rock climbing, ice skating, ten pin bowling, trampolining,
-  Adventure Camps and more. There will also be trips to museums, cinemas, the
-  park, Quasar, the London Dungeon, and London Zoo. "
+description: "A 4-week summer camp coming soon in July and August 2021. It will
+  involve workshops, (e.g. for music, dance, computers, filming), day-long
+  sports (e.g. badminton, football, table tennis, cricket), daily trips outside
+  London, unusual activities (e.g sailing, canoeing, rock climbing, ice
+  skating). There will also be trips to museums, cinemas, the park, Quasar, the
+  London Dungeon, and London Zoo. "
 categories:
   category1: Friends
   category2: Where I'm Living
