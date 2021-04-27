@@ -2,6 +2,9 @@
 organisation: Grove Adventure Playground
 title: Online Games and Interaction
 shortDescription: Online Game sessions
+image:
+  image: img/pexels-photo-278918.jpeg
+  imageAlt: A close up of a boardgame with counters on it
 description: "Games and activities to do online with your family. Arts, crafts
   and drama. Chess. Minecraft. Family fitness sessions. Advice for keeping happy
   in lockdown. "
