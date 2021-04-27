@@ -3,8 +3,8 @@ organisation: High Trees
 title: Youth Sessions
 shortDescription: Youth Sessions
 image:
-  image: img/pexels-photo-442576.jpeg
-  imageAlt: Two individuals using gaming controllers
+  image: img/powderpaint-980x715.jpg
+  imageAlt: A child playing on a climbing frame
 description: "Table tennis, table football, air hockey and pool. Video games
   (PS3, PS4 and Wii). Quizzes, card games and board games. Sports sessions and
   team games. Learn some bike maintenance. Woodwork and construction activities.
