@@ -2,6 +2,9 @@
 organisation: Just for Kids Law
 title: Legal support
 shortDescription: Free legal support
+image:
+  image: img/people-woman-coffee-meeting.jpg
+  imageAlt: People working around a desk
 description: Free legal advice for anyone between the ages of 10 to 25 years
   old. They can help with talking to the police and social service, with your
   housing needs if you don't have somewhere to stay, immigration status and
