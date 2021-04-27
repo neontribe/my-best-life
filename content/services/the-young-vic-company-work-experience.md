@@ -1,6 +1,6 @@
 ---
 organisation: The Young Vic Company
-title: Work experience
+title: Work Experience
 shortDescription: Theatre Work Experience for School Students in Lambeth or Southwark
 image:
   image: img/theatre.jpeg
