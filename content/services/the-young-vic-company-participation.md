@@ -1,6 +1,6 @@
 ---
 organisation: The Young Vic Company
-title: Participation
+title: Free tickets to shows
 shortDescription: Theatre projects and free tickets to shows
 image:
   image: img/theatre.jpeg
@@ -21,8 +21,8 @@ format: Meeting a group of people
 location: Young Vic, 66 The Cut, Waterloo, London SE1 8LZ
 makeMapLink: true
 time: "Throughout the year. "
-contactExplanation: "Email Lorna McGinty or pop in to the Young Vic’s box office and pick up
-  a red sign-up form. "
+contactExplanation: "Email Lorna McGinty or pop in to the Young Vic’s box office
+  and pick up a red sign-up form. "
 email: participation@youngvic.org
 phone: 020 7922 2974
 website: https://www.youngvic.org/taking-part/participation
