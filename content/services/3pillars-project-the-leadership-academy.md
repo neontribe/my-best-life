@@ -34,27 +34,5 @@ makeMapLink: true
 contactExplanation: Send an email or visit the website for more info.
 email: " info@3pillarsproject.com"
 website: https://www.3pillarsproject.com/our-work
-reviews:
-  - comment: '"I felt comfortable to discuss any issues surrounding my health. I was
-      provided with the help that I needed." - Young person "I am so grateful to
-      have someone to call and get advice from no matter the situation I find
-      myself in."'
-    rating: 3
-  - comment: "“Jenni Steele has a vision on how a community should support each
-      other. The biggest experience for me was seeing how impactful being a
-      young role model is to my community. I really enjoyed speaking on my
-      journey. I was able to share with the kids real life’s truths. Life isn’t
-      easy but you have to keep going. Congratulations on your tour Jenni. Long
-      may it continue.” "
-    rating: 4
-  - comment: "\"Enterprise helped me see the bigger picture and make a business out
-      of my passion, with the support of my amazing mentor!\" - Jazmin. \"I
-      don't come from a business background at all, so the programme was crucial
-      in giving me support.\" - Onome. \"I would say, close your eyes and just
-      go for it, because what have you got to lose?\" "
-    author: Abiola
-    rating: 2
-  - comment: Before I joined Spark, I didn't really have anyone I could talk to -
-      but I really trust the girls I have met and I know they have my back
-    rating: 2
+reviews: []
 ---
