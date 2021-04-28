@@ -54,4 +54,7 @@ reviews:
       go for it, because what have you got to lose?\" "
     author: Abiola
     rating: 2
+  - comment: Before I joined Spark, I didn't really have anyone I could talk to -
+      but I really trust the girls I have met and I know they have my back
+    rating: 2
 ---
