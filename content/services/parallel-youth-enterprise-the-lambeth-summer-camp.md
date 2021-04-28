@@ -15,7 +15,7 @@ categories:
   category1: Friends
   category2: Where I'm Living
 costValue: 150
-costQualifier: per person
+costQualifier: £150 per person
 costExplanation: £150 per person for the 4-week camp
 age:
   minAge: 9
