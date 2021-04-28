@@ -2,6 +2,8 @@
 organisation: Just for Kids Law
 title: Youth Opportunities
 shortDescription: Support with education and jobs
+image:
+  image: img/pexels-photo.jpg
 description: >-
   Youth opportunities workers will help you to get into education, find a job
   and get involved in other positive activities. 
