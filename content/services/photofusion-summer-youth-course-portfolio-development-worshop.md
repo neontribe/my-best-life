@@ -17,7 +17,7 @@ categories:
 interests:
   - Art and Design
 costValue: 165
-costQualifier: for non-members
+costQualifier: £165 for non-members (£140.25 for members)
 costExplanation: £165 (£140.25 for members)
 age:
   minAge: 14
