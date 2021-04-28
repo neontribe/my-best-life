@@ -2,6 +2,9 @@
 organisation: St Michael's Fellowship
 title: The Outreach Young Parent Support Service
 shortDescription: Young Parent Support Service
+image:
+  image: img/banners_st-michael-f__37a4645_claudia-leisinger.jpg
+  imageAlt: A women kissing her child
 description: >-
   For those who may need support to make the transition to being a parent.
   Support can be 1-2-1 or a group setting. 
