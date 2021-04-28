@@ -21,6 +21,7 @@ feelings:
   - excited
   - ignored
 costValue: 7.5
+costQualifier: £7.50 per week
 costExplanation: £7.50 per week. All payments taken via the Love Admin website.
   Parents should activate the direct debit via the Love Admin registration form.
   Cash payments are no longer permitted.
