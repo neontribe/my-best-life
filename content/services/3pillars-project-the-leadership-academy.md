@@ -40,4 +40,11 @@ reviews:
       have someone to call and get advice from no matter the situation I find
       myself in."'
     rating: 3
+  - comment: "“Jenni Steele has a vision on how a community should support each
+      other. The biggest experience for me was seeing how impactful being a
+      young role model is to my community. I really enjoyed speaking on my
+      journey. I was able to share with the kids real life’s truths. Life isn’t
+      easy but you have to keep going. Congratulations on your tour Jenni. Long
+      may it continue.” "
+    rating: 4
 ---
