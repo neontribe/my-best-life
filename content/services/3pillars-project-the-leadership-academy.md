@@ -47,4 +47,11 @@ reviews:
       easy but you have to keep going. Congratulations on your tour Jenni. Long
       may it continue.” "
     rating: 4
+  - comment: "\"Enterprise helped me see the bigger picture and make a business out
+      of my passion, with the support of my amazing mentor!\" - Jazmin. \"I
+      don't come from a business background at all, so the programme was crucial
+      in giving me support.\" - Onome. \"I would say, close your eyes and just
+      go for it, because what have you got to lose?\" "
+    author: Abiola
+    rating: 2
 ---
