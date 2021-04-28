@@ -34,5 +34,10 @@ makeMapLink: true
 contactExplanation: Send an email or visit the website for more info.
 email: " info@3pillarsproject.com"
 website: https://www.3pillarsproject.com/our-work
-reviews: []
+reviews:
+  - comment: '"I felt comfortable to discuss any issues surrounding my health. I was
+      provided with the help that I needed." - Young person "I am so grateful to
+      have someone to call and get advice from no matter the situation I find
+      myself in."'
+    rating: 3
 ---
