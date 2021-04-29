@@ -2,6 +2,8 @@
 organisation: Youth Empowerment Solutions
 title: 3 2 B Me-dia
 shortDescription: Film production course
+image:
+  image: img/camera.jpeg
 description: "Follow your passion for film. Plan, write and develop a script,
   film, pilot or web series. Get online guidance from industry professionals.
   Experiment and test your own style and voice. Research, design and test a
