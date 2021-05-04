@@ -61,6 +61,7 @@ export const getStaticProps: GetStaticProps = async () => {
         interests: service.interests || [],
         feelings: service.feelings || [],
         gender: service.gender || [],
+        promoted: service.promoted || false,
         score: 0,
 
         ...(service.image?.image && {

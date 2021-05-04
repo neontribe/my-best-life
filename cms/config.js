@@ -41,7 +41,7 @@ export default {
           hint: 'Friendly service name. This will be shown on the list view',
         },
         {
-          label: 'Promoted to top of list',
+          label: 'Promote this service',
           name: 'promoted',
           widget: 'boolean',
           hint:
