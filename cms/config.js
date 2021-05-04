@@ -41,6 +41,13 @@ export default {
           hint: 'Friendly service name. This will be shown on the list view',
         },
         {
+          label: 'Promoted to top of list',
+          name: 'promoted',
+          widget: 'boolean',
+          hint:
+            'Check to move this service to the top of the list of all services',
+        },
+        {
           label: 'Image',
           name: 'image',
           widget: 'object',

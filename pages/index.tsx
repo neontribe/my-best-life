@@ -26,6 +26,7 @@ export type ServicePreview = Pick<
   | 'gender'
   | 'format'
   | 'score'
+  | 'promoted'
 >
 
 export const ListPage: NextPage<ListPageProps> = ({ services }) => {
@@ -74,6 +75,7 @@ export const getStaticProps: GetStaticProps = async () => {
         feelings: service.feelings || [],
         gender: service.gender || [],
         score: 0,
+        promoted: service.promoted || false,
 
         ...(service.image?.image && {
           image: {
