@@ -157,6 +157,7 @@ export const HeaderComponent = ({ title }: HeaderProps): JSX.Element => {
               <Link href={`/saved`} passHref>
                 <NavPill activePage={currentPage === '/saved'}>
                   <svg
+                    role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
