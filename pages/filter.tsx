@@ -47,8 +47,11 @@ const Top = styled.section`
   }
 `
 
-const FilterSection = styled.section`
-  border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
+const FilterSection = styled.section<{ borderBottom?: boolean }>`
+  ${(props) =>
+    props.borderBottom &&
+    `border-bottom: 1px solid ${props.theme.colours.yellow};`}
+
   max-width: 50ch;
   margin: auto;
   padding: 1rem var(--gutter-width);
@@ -69,6 +72,17 @@ const CheckboxGroup = styled.div`
   margin: 1rem 0;
 `
 
+const Footer = styled.div`
+  padding: 1rem;
+  background-color: #ffffff;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  max-width: 50ch;
+  margin: auto;
+  border-top: 1px solid ${(props) => props.theme.colours.yellow};
+`
+
 const HorizontalGroup = styled.div`
   margin: 1rem 0;
   display: flex;
@@ -83,7 +97,7 @@ const ButtonLink = styled(ButtonBase)`
   justify-content: center;
   margin: auto;
   max-width: calc(100% - 2rem);
-  margin-bottom: 2em;
+  margin-bottom: 1rem;
 `
 
 export const FilterPage: NextPage = () => {
@@ -106,7 +120,7 @@ export const FilterPage: NextPage = () => {
         <button onClick={() => clearAll()}>Clear All</button>
       </Top>
       <VerticalSpacing />
-      <FilterSection>
+      <FilterSection borderBottom>
         <fieldset>
           <legend>Age</legend>
           <HorizontalGroup>
@@ -146,9 +160,11 @@ export const FilterPage: NextPage = () => {
         </fieldset>
       </FilterSection>
       <VerticalSpacing />
-      <Link href={`/`} passHref>
-        <ButtonLink onClick={saveNotify}>Apply Filter</ButtonLink>
-      </Link>
+      <Footer>
+        <Link href={`/`} passHref>
+          <ButtonLink onClick={saveNotify}>Apply Filter</ButtonLink>
+        </Link>
+      </Footer>
     </Layout>
   )
 }
