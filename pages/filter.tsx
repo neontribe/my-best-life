@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import { NextPage } from 'next'
 import styled from 'styled-components'
 import Link from 'next/link'
@@ -15,6 +15,15 @@ import { ButtonBase } from '../src/Components/ButtonBase'
 import { NotificationsContext } from '../src/context/NotificationsContext'
 import { VerticalSpacing } from '../src/Components/VerticalSpacing'
 
+const Heading = styled.section`
+  padding: 1rem var(--gutter-width);
+  margin: auto;
+  h1 {
+    font-family: 'Catamaran', sans-serif;
+    font-size: ${(props) => props.theme.fontSizes.title};
+  }
+`
+
 const Top = styled.section`
   border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
   display: flex;
@@ -24,9 +33,16 @@ const Top = styled.section`
   padding: 1rem var(--gutter-width);
   width: 100%;
 
-  h2 {
-    font-family: 'Catamaran', sans-serif;
-    font-size: ${(props) => props.theme.fontSizes.title};
+  a {
+    background-color: transparent;
+    border: none;
+    color: ${(props) => props.theme.colours.blue};
+    text-decoration: none;
+
+    &:focus {
+      outline: 2px dashed ${(props) => props.theme.colours.blue};
+      outline-offset: 2px;
+    }
   }
 
   button {
@@ -115,8 +131,11 @@ export const FilterPage: NextPage = () => {
 
   return (
     <Layout>
+      <Heading>
+        <h1>Filter</h1>
+      </Heading>
       <Top>
-        <h2>Filter</h2>
+        <Link href={'/'}>{'< back'}</Link>
         <button onClick={() => clearAll()}>Clear All</button>
       </Top>
       <VerticalSpacing />
