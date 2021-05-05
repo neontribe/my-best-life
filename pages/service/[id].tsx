@@ -446,7 +446,7 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         />
         <VerticalSpacing />
         <Checkbox
-          single
+          singleCheckbox
           label={
             <span>
               [xXx] I confirm I have read the{' '}

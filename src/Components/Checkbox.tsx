@@ -4,8 +4,7 @@ interface CheckboxProps {
   label: string | React.ReactNode
   checked: boolean
   onChange(): void
-  // comments here
-  single?: boolean
+  singleCheckbox?: boolean
 }
 
 const CheckboxItem = styled.li`
@@ -32,10 +31,10 @@ export const Checkbox = ({
   label,
   checked,
   onChange,
-  single,
+  singleCheckbox,
 }: CheckboxProps): JSX.Element => {
   return (
-    <CheckboxItem as={single ? 'div' : 'li'}>
+    <CheckboxItem as={singleCheckbox ? 'div' : 'li'}>
       <label>
         {label}
         <input type="checkbox" checked={checked} onChange={onChange}></input>
