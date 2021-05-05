@@ -373,5 +373,30 @@ export default {
         },
       ],
     },
+    {
+      label: 'Privacy Policy',
+      label_singular: 'Privacy Policy',
+      name: 'privacy',
+      folder: 'content/privacy',
+      create: false,
+      fields: [
+        {
+          label: 'Privacy Policy',
+          name: 'content',
+          widget: 'markdown',
+          buttons: [
+            'bold',
+            'italic',
+            'link',
+            'heading-two',
+            'heading-three',
+            'heading-four',
+            'bulleted-list',
+          ],
+          hint:
+            'There will already be a heading level 1 in the page, so this content should use a maximum of heading level 2.',
+        },
+      ],
+    },
   ],
 }
