@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Link from 'next/link'
 import { MyBestLifeTheme } from '../../src/Theme'
 import { Arrow } from './Arrow'
 
@@ -40,10 +39,6 @@ const NavigationButton = styled.a`
   }
 `
 
-const NavigationTextButton = styled(NavigationButton)`
-  padding: 0 1rem;
-`
-
 interface NavigationProps {
   onForward(): void
   onBack(): void
@@ -51,7 +46,6 @@ interface NavigationProps {
   isLastPage: boolean
   page: number | null
   totalPages: number
-  showFilterBtn?: boolean
 }
 
 export const CardListNavigation = ({
@@ -61,7 +55,6 @@ export const CardListNavigation = ({
   isLastPage,
   page,
   totalPages,
-  showFilterBtn,
 }: NavigationProps): JSX.Element => {
   return (
     <NavContainer>
@@ -98,12 +91,6 @@ export const CardListNavigation = ({
           }
         />
       </NavigationButton>
-
-      {showFilterBtn && (
-        <Link href={`/filter`} passHref>
-          <NavigationTextButton>Filter</NavigationTextButton>
-        </Link>
-      )}
     </NavContainer>
   )
 }

@@ -12,6 +12,7 @@ import { Gender } from '../../cms/services'
 import { useRemember } from '../hooks/remember'
 import { useScrollRemember } from '../hooks/scrollRemember'
 import { QuizEncouragement } from './QuizEncouragement'
+import { FilterButton } from './FilterButton'
 
 const ITEMS_PER_PAGE = 20
 
@@ -302,10 +303,10 @@ export const CardList = ({
             totalPages={totalPages}
             isFirstPage={isFirstPage}
             isLastPage={isLastPage}
-            showFilterBtn
           />
           <List>
             {listType === 'filtered' ? <QuizEncouragement /> : null}
+            {listType === 'filtered' ? <FilterButton /> : null}
             {page !== null &&
               toRender.map((service: ServicePreview, id: number) => (
                 <Card
