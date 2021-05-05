@@ -11,18 +11,6 @@ import { LinkButton } from '../../src/Components/LinkButton'
 
 import { QuizContext } from '../../src/context/QuizContext'
 
-const Navigation = styled.section`
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  width: 100%;
-
-  button {
-    margin-left: auto;
-  }
-`
-
 const CheckboxGroup = styled.div`
   max-width: 50ch;
   margin: auto;
@@ -95,18 +83,18 @@ export const WhatsOnYourMindPage = (): JSX.Element => {
   return (
     <Layout>
       <HeaderComponent title="Support in Lambeth" />
-      <Navigation>
-        <LinkButton
-          textContent="skip"
-          arrow="right"
-          onClick={() => router.push('how-are-you-feeling')}
-        />
-      </Navigation>
-
+      <VerticalSpacing size={3} />
       <CheckboxGroup>
         <fieldset>
           <legend>What&apos;s on your mind today?</legend>
-          <VerticalSpacing />
+          <VerticalSpacing size={1} />
+
+          <LinkButton
+            textContent="skip this question"
+            arrow="right"
+            onClick={() => router.push('how-are-you-feeling')}
+          />
+          <VerticalSpacing size={1} />
           {categories.map((category) => {
             return (
               <Checkbox
