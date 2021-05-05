@@ -9,7 +9,7 @@ import { Layout } from '../src/Components/Layout'
 import { VerticalSpacing } from '../src/Components/VerticalSpacing'
 
 interface PrivacyPageProps {
-  content: any
+  content: string
 }
 
 const Policy = styled.article`
