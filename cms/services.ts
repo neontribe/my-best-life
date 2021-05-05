@@ -34,6 +34,7 @@ export interface Service {
   reviews?: Array<Review>
   saved: boolean
   score: number
+  promoted: boolean
 }
 
 type Category =

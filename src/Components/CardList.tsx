@@ -272,6 +272,11 @@ export const CardList = ({
       filtered = services
         .filter((item) => ageFilter(item, age))
         .filter(formatFilter)
+        .sort((a, b) => {
+          if (a.promoted && !b.promoted) return -1
+          if (b.promoted && !a.promoted) return 1
+          return 0
+        })
     }
 
     setFilteredServices(filtered)
