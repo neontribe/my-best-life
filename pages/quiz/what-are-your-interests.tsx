@@ -16,7 +16,7 @@ const Navigation = styled.section`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 0 1rem 0;
   width: 100%;
 `
 
@@ -96,17 +96,18 @@ export const WhatAreYourInterestsPage = (): JSX.Element => {
           arrow="left"
           onClick={() => router.push('how-are-you-feeling')}
         />
-        <LinkButton
-          textContent="skip"
-          arrow="right"
-          onClick={() => router.push('about-you')}
-        />
       </Navigation>
 
       <CheckboxGroup>
         <fieldset>
           <legend>What are your interests?</legend>
-          <VerticalSpacing />
+          <VerticalSpacing size={1} />
+          <LinkButton
+            textContent="skip this question"
+            arrow="right"
+            onClick={() => router.push('about-you')}
+          />
+
           {interests.map((interest) => {
             return (
               <Checkbox

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import { useRouter } from 'next/router'
+import { NextRouter, useRouter } from 'next/router'
 
 import { Layout } from '../../src/Components/Layout'
 import { HeaderComponent } from '../../src/Components/Header'
@@ -12,6 +12,7 @@ interface ImageCheckboxesProps {
   id: string
   values: readonly { title: Feeling; image: string }[]
   label: string
+  router: NextRouter
 }
 
 // Wraps the checkbox area of component
@@ -118,6 +119,7 @@ export const ImageCheckboxes = ({
   id,
   values,
   label,
+  router,
 }: ImageCheckboxesProps): JSX.Element => {
   const { howAreFeelingGet, howAreFeelingToggle } = useContext(QuizContext)
 
@@ -126,6 +128,12 @@ export const ImageCheckboxes = ({
       <CheckboxGroup>
         <fieldset>
           <legend>{label}</legend>
+          <VerticalSpacing size={1} />
+          <LinkButton
+            textContent="skip this question"
+            arrow="right"
+            onClick={() => router.push('what-are-your-interests')}
+          />
           <VerticalSpacing />
           <CheckboxContainer>
             {values.map((checkbox) => {
@@ -163,7 +171,7 @@ const Navigation = styled.section`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 0 1rem 0;
   width: 100%;
 `
 
@@ -253,13 +261,13 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
             arrow="left"
             onClick={() => router.push('whats-on-your-mind')}
           />
-          <LinkButton textContent="skip" arrow="right" onClick={nextPage} />
         </Navigation>
         <QuestionSection>
           <ImageCheckboxes
             id="feelings-checkboxes"
             values={feelings}
             label="How are you feeling?"
+            router={router}
           />
         </QuestionSection>
 
