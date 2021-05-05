@@ -44,6 +44,7 @@ export default {
           label: 'Promote this service',
           name: 'promoted',
           widget: 'boolean',
+          required: false,
           hint:
             'Check to move this service to the top of the list of all services',
         },
