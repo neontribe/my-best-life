@@ -301,7 +301,7 @@ export const CardList = ({
           />
           <List>
             {listType === 'filtered' ? <QuizEncouragement /> : null}
-            <FilterButton />
+            {listType === 'filtered' ? <FilterButton /> : null}
             {page !== null &&
               toRender.map((service: ServicePreview, id: number) => (
                 <Card
