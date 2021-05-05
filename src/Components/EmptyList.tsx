@@ -89,7 +89,6 @@ export const EmptyList = ({ listType }: EmptyListProps): JSX.Element => {
         isLastPage
         page={-1}
         totalPages={0}
-        showFilterBtn={true}
       />
       <Message>{content}</Message>
     </>
