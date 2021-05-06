@@ -17,7 +17,7 @@ const Navigation = styled.section`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 0 1rem 0;
   width: 100%;
 `
 
@@ -121,6 +121,11 @@ export const AboutYouPage = (): JSX.Element => {
     setQuizComplete,
   } = useContext(QuizContext)
 
+  const skipQuestionAndSeeResults = () => {
+    setQuizComplete(true)
+    router.push('results')
+  }
+
   return (
     <Layout>
       <HeaderComponent title="Support in Lambeth" />
@@ -134,7 +139,13 @@ export const AboutYouPage = (): JSX.Element => {
       <QuestionSection>
         <fieldset>
           <legend>How old are you?</legend>
-          <VerticalSpacing />
+          <VerticalSpacing size={1} />
+          <LinkButton
+            textContent="skip this question"
+            arrow="right"
+            onClick={() => skipQuestionAndSeeResults()}
+          />
+          <VerticalSpacing size={1} />
           <HorizontalGroup>
             {allAges.map((item) => {
               return (
