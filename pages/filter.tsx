@@ -137,6 +137,7 @@ export const FilterPage: NextPage = () => {
     <Layout>
       <Top>
         <h1>Filter</h1>
+        <VerticalSpacing />
         <Link href={'/'} passHref>
           <a>
             <Arrow direction={'left'} />
