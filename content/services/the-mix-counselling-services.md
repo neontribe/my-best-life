@@ -2,7 +2,7 @@
 organisation: The Mix
 title: Counselling services
 shortDescription: Free short-term counselling sessions
-promoted: true
+promoted: false
 image:
   image: img/pexels-photo-1181712.jpeg
   imageAlt: Two women sat opposite each other on a table
