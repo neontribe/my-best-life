@@ -4,12 +4,14 @@ import Link from 'next/link'
 import { Layout } from '../../src/Components/Layout'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { HeaderComponent } from '../../src/Components/Header'
+import { StickyNavBar } from '../../src/Components/StickyNavBar'
 
 const Section = styled.section`
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: 30px;
 `
 
 const Text = styled.p`
@@ -40,6 +42,7 @@ const StyledLink = styled.a`
   justify-content: center;
   margin: auto;
   max-width: calc(100% - 2rem);
+  margin-bottom: 30px;
 
   &:focus {
     outline: 2px dashed ${(props) => props.theme.colours.blue};
@@ -77,6 +80,7 @@ export const QuizWelcomePage = (): JSX.Element => {
 
         <VerticalSpacing />
       </Section>
+      <StickyNavBar />
     </Layout>
   )
 }

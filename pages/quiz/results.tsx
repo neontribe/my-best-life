@@ -10,6 +10,7 @@ import { QuizContext } from '../../src/context/QuizContext'
 import { useRouter } from 'next/router'
 import { ServicePreview } from '../index'
 import { ButtonBase } from '../../src/Components/ButtonBase'
+import { StickyNavBar } from '../../src/Components/StickyNavBar'
 
 interface QuizListPageProps {
   services: Array<ServicePreview>
@@ -42,6 +43,7 @@ export const QuizListPage: NextPage<QuizListPageProps> = ({ services }) => {
         Reset Quiz
       </StyledButton>
       <CardList services={services} listType="quiz" />
+      <StickyNavBar />
     </Layout>
   )
 }

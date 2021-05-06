@@ -7,13 +7,14 @@ import styled from 'styled-components'
 import { QuizContext } from '../context/QuizContext'
 
 const Footer = styled.nav`
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 100%;
   padding: 0 var(--gutter-width);
   z-index: 2;
   background-color: ${(props) => props.theme.colours.white};
   box-shadow: 0px -15px 10px -10px ${(props) => props.theme.colours.shadow};
+  max-height: 70px;
 `
 
 const FooterNavList = styled.ul`
