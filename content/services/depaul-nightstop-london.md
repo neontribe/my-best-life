@@ -18,6 +18,7 @@ age:
   maxAge: 25
 format: One to one chats
 location: Sherborne House, 34 Decima St, London, SE1 4QQ
+makeMapLink: true
 time: If you need somewhere to stay tonight, please call any of the numbers
   below between 10am and 4pm, Monday to Friday.
 expectation: You will need to give them a call so the team can understand your
