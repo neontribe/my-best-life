@@ -1,5 +1,5 @@
 ---
-organisation: The mix
+organisation: The Mix
 title: Counselling services
 shortDescription: Free short-term counselling sessions
 promoted: true
