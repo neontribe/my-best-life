@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 interface CheckboxProps {
-  label: string | React.ReactNode
+  label: string | React.ReactElement
   checked: boolean
   onChange(): void
   singleCheckbox?: boolean
