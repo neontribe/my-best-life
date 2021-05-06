@@ -3,14 +3,18 @@ import Link from 'next/link'
 
 import { ListType } from '../Components/CardList'
 import { CardListNavigation } from '../Components/CardListNavigation'
+import { MiniCard } from '../Components/MiniCard'
+import { ServicePreview } from '../../pages/index'
+import { VerticalSpacing } from './VerticalSpacing'
 
 interface EmptyListProps {
   listType: ListType
+  mix?: ServicePreview
 }
 
-const Message = styled.p`
+const Message = styled.div`
   width: 100%;
-  padding: 4rem;
+  padding: 0 var(--gutter-width);
   text-align: center;
 
   svg {
@@ -21,25 +25,41 @@ const Message = styled.p`
 `
 
 const LinkInner = styled.a`
-  color: ${(props) => props.theme.colours.blue};
-  text-decoration: underline;
-  text-decoration-color: ${(props) => props.theme.colours.aqua};
+  font-weight: bold;
+  border-bottom: 2px solid ${(props) => props.theme.colours.blue};
+  text-decoration: none;
 `
 
-export const EmptyList = ({ listType }: EmptyListProps): JSX.Element => {
+export const EmptyList = ({ listType, mix }: EmptyListProps): JSX.Element => {
   let content: JSX.Element
 
   switch (listType) {
     case 'filtered':
       content = (
-        <span>
-          We weren&apos;t able to find any services matching your current
-          filters. Try{' '}
-          <Link href="/filter" passHref>
-            <LinkInner>expanding your filters</LinkInner>
-          </Link>{' '}
-          to show more results.
-        </span>
+        <>
+          <VerticalSpacing />
+          <p>
+            We weren&apos;t able to find any services matching your current
+            filters. Try{' '}
+            <Link href="/filter" passHref>
+              <LinkInner>expanding your filters</LinkInner>
+            </Link>{' '}
+            to show more results.
+          </p>
+          <VerticalSpacing />
+          {mix && (
+            <>
+              <p>[xXx] Someone you can always talk to is these guys</p>
+              <VerticalSpacing />
+              <MiniCard
+                id={mix.id}
+                image={mix.image}
+                title={mix.title}
+                shortDescription={mix.shortDescription}
+              />
+            </>
+          )}
+        </>
       )
       break
     case 'saved':
