@@ -30,6 +30,7 @@ export const getStaticProps: GetStaticProps = async () => {
     (service: Service) => {
       const servicePreview = {
         id: service.id,
+        organisation: service.organisation,
         title: service.title,
         shortDescription: service.shortDescription,
         costValue: service.costValue,

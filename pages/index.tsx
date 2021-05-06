@@ -14,6 +14,7 @@ interface ListPageProps {
 export type ServicePreview = Pick<
   Service,
   | 'id'
+  | 'organisation'
   | 'title'
   | 'shortDescription'
   | 'image'
@@ -68,6 +69,7 @@ export const getStaticProps: GetStaticProps = async () => {
     (service: Service) => {
       const servicePreview = {
         id: service.id,
+        organisation: service.organisation,
         title: service.title,
         shortDescription: service.shortDescription,
         costValue: service.costValue,

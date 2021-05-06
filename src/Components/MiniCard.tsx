@@ -8,7 +8,7 @@ import { VisuallyHidden } from './VisuallyHidden'
 
 export type MiniCard = Pick<
   ServicePreview,
-  'id' | 'title' | 'shortDescription' | 'image'
+  'id' | 'image' | 'shortDescription' | 'organisation'
 >
 
 const CardContainer = styled.div`
@@ -27,9 +27,9 @@ const CardContainer = styled.div`
   }
 `
 
-const ServiceName = styled.p`
+const Organisation = styled.p`
   font-family: 'Catamaran', sans-serif;
-  font-size: ${(props) => props.theme.fontSizes.small};
+  font-size: ${(props) => props.theme.fontSizes.highlight};
   font-weight: bold;
   margin-bottom: 0.5rem;
   order: 2;
@@ -73,7 +73,7 @@ export const MiniCard = ({
   id,
   image,
   shortDescription,
-  title,
+  organisation,
 }: MiniCard): JSX.Element => {
   const cardLink = useRef<HTMLAnchorElement | null>(null)
 
@@ -105,7 +105,7 @@ export const MiniCard = ({
         )}
       </ImageContainer>
 
-      <ServiceName>{title}</ServiceName>
+      <Organisation>{organisation}</Organisation>
     </CardContainer>
   )
 }
