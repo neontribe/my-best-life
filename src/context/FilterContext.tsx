@@ -8,7 +8,7 @@ interface FilterContextValue {
   formats: Array<string>
   formatUpdate: (input: string) => void
   areas: Array<Area>
-  areaUpdate: (input: string) => void
+  areaUpdate: (input: Area) => void
   clearAll: () => void
 }
 
@@ -31,7 +31,7 @@ export const allFormats = [
   'Over the phone',
 ]
 
-export const allAreas = [
+export const allAreas: Array<Area> = [
   'Gipsy Hill',
   'Thurlow Park',
   'Herne Hill',
@@ -79,7 +79,7 @@ export const FilterProvider: FC<PropsWithChildren<any>> = ({ children }) => {
     }
   }
 
-  function areaUpdate(input: string) {
+  function areaUpdate(input: Area) {
     const currentItems = areas
 
     if (currentItems.includes(input)) {
