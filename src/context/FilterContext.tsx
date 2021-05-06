@@ -1,10 +1,14 @@
 import { createContext, FC, PropsWithChildren, useState } from 'react'
 
+import { Area } from '../../cms/services'
+
 interface FilterContextValue {
   age: string | undefined
   ageUpdate: (input: string) => void
   formats: Array<string>
   formatUpdate: (input: string) => void
+  areas: Array<Area>
+  areaUpdate: (input: string) => void
   clearAll: () => void
 }
 
@@ -13,6 +17,8 @@ const defaultValueShape = {
   ageUpdate: () => undefined,
   formats: [''],
   formatUpdate: () => undefined,
+  areas: [],
+  areaUpdate: () => undefined,
   clearAll: () => undefined,
 }
 
@@ -25,6 +31,30 @@ export const allFormats = [
   'Over the phone',
 ]
 
+export const allAreas = [
+  'Gipsy Hill',
+  'Thurlow Park',
+  'Herne Hill',
+  'Clapham Common',
+  'Clapham Town',
+  "Bishop's",
+  'Streatham South',
+  'Thornton',
+  "Knight's Hill",
+  "St Leonard's",
+  "Prince's",
+  'Oval',
+  'Stockwell',
+  'Vassall',
+  'Coldharbour',
+  'Streatham Wells',
+  'Streatham Hill',
+  'Ferndale',
+  'Tulse Hill',
+  'Brixton Hill',
+  'Larkhall',
+]
+
 export const FilterContext = createContext<FilterContextValue>(
   defaultValueShape
 )
@@ -32,6 +62,7 @@ export const FilterContext = createContext<FilterContextValue>(
 export const FilterProvider: FC<PropsWithChildren<any>> = ({ children }) => {
   const [formats, setFormats] = useState<Array<string>>([])
   const [age, setAge] = useState<string | undefined>()
+  const [areas, setAreas] = useState<Array<Area>>([])
 
   function ageUpdate(input: string) {
     setAge(input)
@@ -48,9 +79,21 @@ export const FilterProvider: FC<PropsWithChildren<any>> = ({ children }) => {
     }
   }
 
+  function areaUpdate(input: string) {
+    const currentItems = areas
+
+    if (currentItems.includes(input)) {
+      setAreas(currentItems.filter((item) => item !== input))
+    } else {
+      currentItems.push(input)
+      setAreas([...currentItems])
+    }
+  }
+
   function clearAll() {
     setAge(undefined)
     setFormats([])
+    setAreas([])
   }
 
   return (
@@ -60,6 +103,8 @@ export const FilterProvider: FC<PropsWithChildren<any>> = ({ children }) => {
         ageUpdate,
         formats,
         formatUpdate,
+        areas,
+        areaUpdate,
         clearAll,
       }}
     >

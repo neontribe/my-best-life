@@ -31,7 +31,7 @@ export const CardList = ({
   services,
   listType,
 }: CardListProps): JSX.Element => {
-  const { age, formats } = useContext(FilterContext)
+  const { age, formats, areas } = useContext(FilterContext)
   const { saved } = useContext(SaveContext)
   const { fullDataGet } = useContext(QuizContext)
 
@@ -193,6 +193,21 @@ export const CardList = ({
     [formats]
   )
 
+  const areaFilter = useCallback(
+    (item: ServicePreview) => {
+      if (areas.length === 0 || item?.area?.length === 0) {
+        return true
+      }
+
+      const areaIntersection = item.area?.filter((value) =>
+        areas.includes(value)
+      )
+
+      if (areaIntersection?.length) return true
+    },
+    [areas]
+  )
+
   const genderFilter = useCallback(
     (item: ServicePreview, genderInput?: Array<Gender>) => {
       // If no preference is set for user or service, return everything
@@ -273,6 +288,7 @@ export const CardList = ({
       filtered = services
         .filter((item) => ageFilter(item, age))
         .filter(formatFilter)
+        .filter(areaFilter)
         .sort((a, b) => {
           if (a.promoted && !b.promoted) return -1
           if (b.promoted && !a.promoted) return 1
@@ -284,11 +300,13 @@ export const CardList = ({
   }, [
     quizAnswers,
     saved,
+    age,
     services,
     listType,
     ageFilter,
     genderFilter,
     formatFilter,
+    areaFilter,
     assignQuizScore,
   ])
 
