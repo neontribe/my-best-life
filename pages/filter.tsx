@@ -14,34 +14,38 @@ import {
 import { ButtonBase } from '../src/Components/ButtonBase'
 import { NotificationsContext } from '../src/context/NotificationsContext'
 import { VerticalSpacing } from '../src/Components/VerticalSpacing'
-
-const Heading = styled.section`
-  padding: 1rem var(--gutter-width);
-  margin: auto;
-  h1 {
-    font-family: 'Catamaran', sans-serif;
-    font-size: ${(props) => props.theme.fontSizes.title};
-  }
-`
+import { Arrow } from './../src/Components/Arrow'
 
 const Top = styled.section`
   border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: auto;
   max-width: 50ch;
   padding: 1rem var(--gutter-width);
   width: 100%;
 
+  h1 {
+    font-family: 'Catamaran', sans-serif;
+    font-size: ${(props) => props.theme.fontSizes.title};
+    flex-basis: 100%;
+  }
+
   a {
-    background-color: transparent;
-    border: none;
     color: ${(props) => props.theme.colours.blue};
     text-decoration: none;
+    display: flex;
+    align-items: center;
 
     &:focus {
       outline: 2px dashed ${(props) => props.theme.colours.blue};
       outline-offset: 2px;
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
     }
   }
 
@@ -131,11 +135,14 @@ export const FilterPage: NextPage = () => {
 
   return (
     <Layout>
-      <Heading>
-        <h1>Filter</h1>
-      </Heading>
       <Top>
-        <Link href={'/'}>{'< back'}</Link>
+        <h1>Filter</h1>
+        <Link href={'/'} passHref>
+          <a>
+            <Arrow direction={'left'} />
+            {'Back'}
+          </a>
+        </Link>
         <button onClick={() => clearAll()}>Clear All</button>
       </Top>
       <VerticalSpacing />
