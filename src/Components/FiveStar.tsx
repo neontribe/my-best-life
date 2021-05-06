@@ -65,8 +65,6 @@ const Star = ({ highlight, onHover, onSelect, value }: StarInterface) => {
 const Container = styled.div`
   display: flex;
   width: 100%;
-  padding: 2rem 0;
-  justify-content: center;
 `
 
 const InnerContainer = styled.div`

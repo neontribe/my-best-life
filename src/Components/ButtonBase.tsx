@@ -33,4 +33,11 @@ export const ButtonBase = styled.a`
     color: ${(props) => props.theme.colours.purple};
     transition: 0.3s background-color, 0.3s color;
   }
+
+  &:disabled {
+    background-color: ${(props) => props.theme.colours.shadow};
+    color: ${(props) => props.theme.colours.grey_dark};
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 `

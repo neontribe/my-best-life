@@ -22,6 +22,7 @@ import { Checkbox } from '../../src/Components/Checkbox'
 import { ButtonBase } from '../../src/Components/ButtonBase'
 import { LinkButton } from '../../src/Components/LinkButton'
 import { Quotation } from '../../src/Components/Quotation'
+import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 
 import { NotificationsContext } from '../../src/context/NotificationsContext'
 
@@ -141,18 +142,22 @@ const ContactLink = styled.a`
 `
 
 const TextInput = styled.textarea`
-  width: 100%;
-  height: 7rem;
+  border: 1px solid ${(props) => props.theme.colours.blue};
+  border-radius: 0.25rem;
   padding: 0.5rem;
+  resize: none;
+  width: 100%;
+
+  &:focus {
+    outline: 2px dashed ${(props) => props.theme.colours.blue};
+    outline-offset: 2px;
+  }
 `
 
 const SubmitButtonContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
   width: 100%;
-  text-align: right;
-`
-
-const SubmitButton = styled(ButtonBase)`
-  display: inline-block;
 `
 
 interface ReviewState {
@@ -425,26 +430,48 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
       </Section>
 
       <Section divider={'transparent'}>
-        <Heading as="h3">Review</Heading>
+        <Heading as="h3">
+          <label htmlFor="reviewBody">Leave a review</label>
+        </Heading>
+        <TextInput
+          id="reviewBody"
+          rows={5}
+          onChange={(e) => onCommentChange(e.target.value)}
+          ref={commentInputRef}
+        />
+        <VerticalSpacing size={1} />
         <FiveStar
           currentRating={reviewState.rating}
           onChange={onRatingChange}
         />
+        <VerticalSpacing />
         <Checkbox
-          label={'I have attended this service'}
+          singleCheckbox
+          label={
+            <span>
+              [xXx] I confirm I have read the{' '}
+              <a
+                href="/privacy-policy"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                privacy policy
+              </a>{' '}
+              and that I have attended this service.
+            </span>
+          }
           checked={reviewState.usedService}
           onChange={onUsedServiceChange}
         />
-        <label htmlFor="reviewBody">Leave a review</label>
-        <TextInput
-          id="reviewBody"
-          onChange={(e) => onCommentChange(e.target.value)}
-          ref={commentInputRef}
-        />
+        <VerticalSpacing />
         <SubmitButtonContainer>
-          <SubmitButton as="button" onClick={submitReview}>
+          <ButtonBase
+            as="button"
+            onClick={submitReview}
+            disabled={!reviewState.usedService}
+          >
             <span>{isSubmitting ? 'Posting...' : 'Post review'}</span>
-          </SubmitButton>
+          </ButtonBase>
         </SubmitButtonContainer>
       </Section>
 

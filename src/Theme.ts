@@ -20,6 +20,7 @@ export const MyBestLifeTheme: DefaultTheme = {
 
     white: '#FFFFFF',
     grey: '#76768F',
+    grey_dark: '#56576c',
     shadow: '#C9C9C9B7',
   },
 
