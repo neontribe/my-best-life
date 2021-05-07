@@ -15,6 +15,7 @@ import { QuizEncouragement } from './QuizEncouragement'
 import { FilterButton } from './FilterButton'
 
 const ITEMS_PER_PAGE = 20
+const DEFAULT_SERVICE_ID = 'the-mix-free-online-support-for-under-25s'
 
 export type ListType = 'filtered' | 'saved' | 'quiz'
 interface CardListProps {
@@ -355,7 +356,10 @@ export const CardList = ({
           />
         </>
       ) : (
-        <EmptyList listType={listType} />
+        <EmptyList
+          defaultService={services.find((el) => el.id === DEFAULT_SERVICE_ID)}
+          listType={listType}
+        />
       )}
     </>
   ) : (

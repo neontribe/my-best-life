@@ -24,7 +24,7 @@ feelings:
   - hopeful
 costValue: 0
 age:
-  maxAge: 22
+  maxAge: 25
 eligibility: Open to anyone under 25 years of age
 format: One to one chats
 time: Our phones are open 7 days a week from 3pm to 12am. You can also webchat
