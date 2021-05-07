@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import { NextPage } from 'next'
 import styled from 'styled-components'
 import Link from 'next/link'
@@ -14,19 +14,39 @@ import {
 import { ButtonBase } from '../src/Components/ButtonBase'
 import { NotificationsContext } from '../src/context/NotificationsContext'
 import { VerticalSpacing } from '../src/Components/VerticalSpacing'
+import { Arrow } from './../src/Components/Arrow'
 
 const Top = styled.section`
   border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: auto;
   max-width: 50ch;
   padding: 1rem var(--gutter-width);
   width: 100%;
 
-  h2 {
+  h1 {
     font-family: 'Catamaran', sans-serif;
     font-size: ${(props) => props.theme.fontSizes.title};
+    flex-basis: 100%;
+  }
+
+  a {
+    color: ${(props) => props.theme.colours.blue};
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+    &:focus {
+      outline: 2px dashed ${(props) => props.theme.colours.blue};
+      outline-offset: 2px;
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
   }
 
   button {
@@ -47,8 +67,11 @@ const Top = styled.section`
   }
 `
 
-const FilterSection = styled.section`
-  border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
+const FilterSection = styled.section<{ borderBottom?: boolean }>`
+  ${(props) =>
+    props.borderBottom &&
+    `border-bottom: 1px solid ${props.theme.colours.yellow};`}
+
   max-width: 50ch;
   margin: auto;
   padding: 1rem var(--gutter-width);
@@ -69,6 +92,17 @@ const CheckboxGroup = styled.div`
   margin: 1rem 0;
 `
 
+const Footer = styled.div`
+  padding: 1rem;
+  background-color: #ffffff;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  max-width: 50ch;
+  margin: auto;
+  border-top: 1px solid ${(props) => props.theme.colours.yellow};
+`
+
 const HorizontalGroup = styled.div`
   margin: 1rem 0;
   display: flex;
@@ -83,7 +117,7 @@ const ButtonLink = styled(ButtonBase)`
   justify-content: center;
   margin: auto;
   max-width: calc(100% - 2rem);
-  margin-bottom: 2em;
+  margin-bottom: 1rem;
 `
 
 export const FilterPage: NextPage = () => {
@@ -102,11 +136,18 @@ export const FilterPage: NextPage = () => {
   return (
     <Layout>
       <Top>
-        <h2>Filter</h2>
+        <h1>Filter</h1>
+        <VerticalSpacing />
+        <Link href={'/'} passHref>
+          <a>
+            <Arrow direction={'left'} />
+            {'Back'}
+          </a>
+        </Link>
         <button onClick={() => clearAll()}>Clear All</button>
       </Top>
       <VerticalSpacing />
-      <FilterSection>
+      <FilterSection borderBottom>
         <fieldset>
           <legend>Age</legend>
           <HorizontalGroup>
@@ -146,9 +187,11 @@ export const FilterPage: NextPage = () => {
         </fieldset>
       </FilterSection>
       <VerticalSpacing />
-      <Link href={`/`} passHref>
-        <ButtonLink onClick={saveNotify}>Apply Filter</ButtonLink>
-      </Link>
+      <Footer>
+        <Link href={`/`} passHref>
+          <ButtonLink onClick={saveNotify}>Apply Filter</ButtonLink>
+        </Link>
+      </Footer>
     </Layout>
   )
 }
