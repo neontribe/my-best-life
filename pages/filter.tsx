@@ -10,6 +10,7 @@ import {
   FilterContext,
   allAges,
   allFormats,
+  allAreas,
 } from '../src/context/FilterContext'
 import { ButtonBase } from '../src/Components/ButtonBase'
 import { NotificationsContext } from '../src/context/NotificationsContext'
@@ -122,9 +123,15 @@ const ButtonLink = styled(ButtonBase)`
 
 export const FilterPage: NextPage = () => {
   const { notify } = useContext(NotificationsContext)
-  const { age, ageUpdate, formats, formatUpdate, clearAll } = useContext(
-    FilterContext
-  )
+  const {
+    age,
+    ageUpdate,
+    formats,
+    formatUpdate,
+    areas,
+    areaUpdate,
+    clearAll,
+  } = useContext(FilterContext)
 
   const saveNotify = () => {
     notify({
@@ -180,6 +187,23 @@ export const FilterPage: NextPage = () => {
                   label={format}
                   checked={formats.includes(format)}
                   onChange={() => formatUpdate(format)}
+                />
+              )
+            })}
+          </CheckboxGroup>
+        </fieldset>
+      </FilterSection>
+      <FilterSection>
+        <fieldset>
+          <legend>Area</legend>
+          <CheckboxGroup>
+            {allAreas.map((area) => {
+              return (
+                <Checkbox
+                  key={area}
+                  label={area}
+                  checked={areas.includes(area)}
+                  onChange={() => areaUpdate(area)}
                 />
               )
             })}

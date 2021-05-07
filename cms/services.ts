@@ -35,6 +35,7 @@ export interface Service {
   saved: boolean
   score: number
   promoted: boolean
+  area?: Array<Area>
 }
 
 type Category =
@@ -80,6 +81,29 @@ export type Interest =
   | 'Outdoor Activities'
   | 'Activism'
   | 'Fashion and Beauty'
+
+export type Area =
+  | 'Gipsy Hill'
+  | 'Thurlow Park'
+  | 'Herne Hill'
+  | 'Clapham Common'
+  | 'Clapham Town'
+  | "Bishop's"
+  | 'Streatham South'
+  | 'Thornton'
+  | "Knight's Hill"
+  | "St Leonard's"
+  | "Prince's"
+  | 'Oval'
+  | 'Stockwell'
+  | 'Vassall'
+  | 'Coldharbour'
+  | 'Streatham Wells'
+  | 'Streatham Hill'
+  | 'Ferndale'
+  | 'Tulse Hill'
+  | 'Brixton Hill'
+  | 'Larkhall'
 
 export type ServiceDetail = Pick<
   Service,
