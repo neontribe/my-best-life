@@ -1,11 +1,14 @@
-import { useContext } from 'react'
+import { useContext, useState, useRef } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
+import useOnClickOutside from '../hooks/useOnClickOutside'
 
 import { VisuallyHidden } from './VisuallyHidden'
 import { VerticalSpacing } from './VerticalSpacing'
 import { QuizContext } from '../context/QuizContext'
+import { Burger } from './Burger'
+import { Menu } from './Menu'
 
 interface HeaderProps {
   title: string
@@ -23,16 +26,16 @@ const Header = styled.header`
 `
 
 const HeaderContents = styled.div`
-  align-items: center;
+  align-items: flex-end;
   display: flex;
   min-height: 4rem;
   justify-content: space-between;
 `
 
 const Title = styled.h1`
-  align-self: flex-end;
   font-family: 'Catamaran', sans-serif;
   font-size: ${(props) => props.theme.fontSizes.title};
+  line-height: 1;
 `
 
 const Nav = styled.nav`
@@ -88,34 +91,14 @@ const NavPill = styled.a<{ activePage: boolean }>`
   }
 `
 
-const Help = styled.a`
-  align-self: flex-start;
-  background-color: ${(props) => props.theme.colours.blue};
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  color: ${(props) => props.theme.colours.white};
-  display: flex;
-  flex-direction: column;
-  font-family: 'Catamaran', sans-serif;
-  font-size: ${(props) => props.theme.fontSizes.small};
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-
-  &:hover {
-    background-color: ${(props) => props.theme.colours.blue_light};
-    color: ${(props) => props.theme.colours.blue};
-  }
-
-  &:focus {
-    outline: 2px dashed ${(props) => props.theme.colours.purple};
-    outline-offset: 2px;
-  }
-`
-
 export const HeaderComponent = ({ title }: HeaderProps): JSX.Element => {
   const currentPage = useRouter().pathname
   const { quizComplete } = useContext(QuizContext)
+
+  const ref = useRef<HTMLDivElement>(null)
+  useOnClickOutside(ref, () => setOpenMenu(false))
+
+  const [openMenu, setOpenMenu] = useState(false)
 
   return (
     <>
@@ -131,10 +114,7 @@ export const HeaderComponent = ({ title }: HeaderProps): JSX.Element => {
       <Header>
         <HeaderContents>
           <Title>{title}</Title>
-          <Help href="/helplines">
-            <span>URGENT</span>
-            <span>HELP</span>
-          </Help>
+          <Burger open={openMenu} setOpen={setOpenMenu} />
         </HeaderContents>
         <VerticalSpacing size={1} />
         <Nav>
@@ -177,6 +157,9 @@ export const HeaderComponent = ({ title }: HeaderProps): JSX.Element => {
           </LinkList>
         </Nav>
       </Header>
+      <div ref={ref}>
+        <Menu open={openMenu} />
+      </div>
     </>
   )
 }
