@@ -27,10 +27,18 @@ const Top = styled.section`
   padding: 1rem var(--gutter-width);
   width: 100%;
 
+  div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
   h1 {
     font-family: 'Catamaran', sans-serif;
     font-size: ${(props) => props.theme.fontSizes.title};
     flex-basis: 100%;
+    display: flex;
+    align-items: center;
   }
 
   a {
@@ -55,6 +63,8 @@ const Top = styled.section`
     background-color: transparent;
     border: none;
     border-bottom: 1px solid ${(props) => props.theme.colours.purple};
+    font-size: ${(props) => props.theme.fontSizes.small};
+    padding: 0;
 
     &:focus {
       outline: 2px dashed ${(props) => props.theme.colours.blue};
@@ -65,6 +75,12 @@ const Top = styled.section`
       background-color: ${(props) => props.theme.colours.purple_light};
       transition: 0.3s;
     }
+  }
+
+  svg {
+    height: 1em;
+    margin-left: 4px;
+    vertical-align: sub;
   }
 `
 
@@ -143,15 +159,32 @@ export const FilterPage: NextPage = () => {
   return (
     <Layout>
       <Top>
-        <h1>Filter</h1>
-        <VerticalSpacing />
-        <Link href={'/'} passHref>
-          <a>
-            <Arrow direction={'left'} />
-            {'Back'}
-          </a>
-        </Link>
+        <div>
+          <h1>
+            Filter
+            <svg
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </h1>
+          <Link href={'/'} passHref>
+            <a>
+              <Arrow direction={'left'} />
+              {'Back'}
+            </a>
+          </Link>
+        </div>
+        <VerticalSpacing size={0.5} />
         <button onClick={() => clearAll()}>Clear All</button>
+        <VerticalSpacing size={0.25} />
       </Top>
       <VerticalSpacing />
       <FilterSection borderBottom>
