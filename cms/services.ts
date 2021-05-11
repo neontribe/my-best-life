@@ -81,6 +81,7 @@ export type Interest =
   | 'Outdoor Activities'
   | 'Activism'
   | 'Fashion and Beauty'
+  | 'Gaming'
 
 export type Area =
   | 'Gipsy Hill'

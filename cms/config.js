@@ -99,11 +99,11 @@ export default {
                 { label: 'Mental Health', value: 'Mental Health' },
                 { label: 'Keeping Safe', value: 'Keeping Safe' },
                 { label: 'Job Stuff', value: 'Job Stuff' },
-                { label: "Where I'm Living", value: "Where I'm Living" },
+                { label: "Housing", value: "Housing" },
                 { label: 'Friends', value: 'Friends' },
                 { label: 'Family', value: 'Family' },
                 { label: 'Drink and Drugs', value: 'Drink and Drugs' },
-                { label: 'My Body', value: 'My Body' },
+                { label: 'Physical health', value: 'Physical health' },
                 {
                   label: 'My Rights and the Law',
                   value: 'My Rights and the Law',
@@ -126,11 +126,11 @@ export default {
                 { label: 'Mental Health', value: 'Mental Health' },
                 { label: 'Keeping Safe', value: 'Keeping Safe' },
                 { label: 'Job Stuff', value: 'Job Stuff' },
-                { label: "Where I'm Living", value: "Where I'm Living" },
+                { label: "Housing", value: "Housing" },
                 { label: 'Friends', value: 'Friends' },
                 { label: 'Family', value: 'Family' },
                 { label: 'Drink and Drugs', value: 'Drink and Drugs' },
-                { label: 'My Body', value: 'My Body' },
+                { label: 'Physical health', value: 'Physical health' },
                 {
                   label: 'My Rights and the Law',
                   value: 'My Rights and the Law',
@@ -162,6 +162,7 @@ export default {
             { label: 'Outdoor Activities', value: 'Outdoor Activities' },
             { label: 'Activism', value: 'Activism' },
             { label: 'Fashion and Beauty', value: 'Fashion and Beauty' },
+            { label: 'Gaming', value: 'Gaming'}
           ],
         },
         {
