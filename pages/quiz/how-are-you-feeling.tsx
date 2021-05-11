@@ -7,6 +7,7 @@ import { HeaderComponent } from '../../src/Components/Header'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { QuizContext } from '../../src/context/QuizContext'
 import { LinkButton } from '../../src/Components/LinkButton'
+import { StickyNavBar } from '../../src/Components/StickyNavBar'
 
 interface ImageCheckboxesProps {
   id: string
@@ -200,6 +201,7 @@ const StyledLink = styled.a`
   justify-content: center;
   margin: auto;
   max-width: calc(100% - 2rem);
+  margin-bottom: 30px;
 
   &:focus {
     outline: 2px dashed ${(props) => props.theme.colours.blue};
@@ -276,6 +278,7 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
         </StyledLink>
         <VerticalSpacing />
       </Section>
+      <StickyNavBar />
     </Layout>
   )
 }

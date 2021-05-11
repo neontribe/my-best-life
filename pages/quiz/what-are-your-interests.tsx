@@ -11,6 +11,7 @@ import { QuizContext } from '../../src/context/QuizContext'
 import { LinkButton } from '../../src/Components/LinkButton'
 
 import { Interest } from '../../cms/services'
+import { StickyNavBar } from '../../src/Components/StickyNavBar'
 
 const Navigation = styled.section`
   align-items: center;
@@ -55,6 +56,7 @@ const StyledLink = styled.a`
   justify-content: center;
   margin: auto;
   max-width: calc(100% - 2rem);
+  margin-bottom: 100px;
 
   &:focus {
     outline: 2px dashed ${(props) => props.theme.colours.blue};
@@ -126,6 +128,7 @@ export const WhatAreYourInterestsPage = (): JSX.Element => {
       </Link>
 
       <VerticalSpacing />
+      <StickyNavBar />
     </Layout>
   )
 }

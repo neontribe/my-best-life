@@ -10,6 +10,7 @@ import { Checkbox } from '../../src/Components/Checkbox'
 import { LinkButton } from '../../src/Components/LinkButton'
 
 import { QuizContext } from '../../src/context/QuizContext'
+import { StickyNavBar } from '../../src/Components/StickyNavBar'
 
 const CheckboxGroup = styled.div`
   max-width: 50ch;
@@ -46,6 +47,7 @@ const StyledLink = styled.a`
   justify-content: center;
   margin: auto;
   max-width: calc(100% - 2rem);
+  margin-bottom: 100px;
 
   &:focus {
     outline: 2px dashed ${(props) => props.theme.colours.blue};
@@ -113,6 +115,7 @@ export const WhatsOnYourMindPage = (): JSX.Element => {
       </Link>
 
       <VerticalSpacing />
+      <StickyNavBar />
     </Layout>
   )
 }

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Layout } from '../../src/Components/Layout'
 import { HeaderComponent } from '../../src/Components/Header'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
+import { StickyNavBar } from '../../src/Components/StickyNavBar'
 
 const Heading = styled.h2`
   display: inline-block;
@@ -87,6 +88,7 @@ export const IfYouNeedHelpPage = (): JSX.Element => {
       </Link>
 
       <VerticalSpacing />
+      <StickyNavBar />
     </Layout>
   )
 }
