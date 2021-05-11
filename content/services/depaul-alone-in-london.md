@@ -12,7 +12,7 @@ description: Support services for young people aged 16-25 who are homeless or at
   getting into education, training & employment; counselling service; family
   mediation and mediation for young ex-offenders and their families.
 categories:
-  category1: Where I'm Living
+  category1: Housing
   category2: Family
 feelings: null
 costValue: 0

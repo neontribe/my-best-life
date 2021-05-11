@@ -8,7 +8,7 @@ image:
 description: "Football sessions and practical support for young fathers. "
 categories:
   category1: Family
-  category2: My Body
+  category2: Physical Health
 costValue: 0
 age:
   minAge: 16

@@ -83,6 +83,7 @@ const interests: Array<Interest> = [
   'Outdoor Activities',
   'Activism',
   'Fashion and Beauty',
+  'Gaming',
 ]
 
 export const WhatAreYourInterestsPage = (): JSX.Element => {

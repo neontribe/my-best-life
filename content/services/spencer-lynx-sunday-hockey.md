@@ -8,7 +8,7 @@ description: "Sessions built around fun and enjoyment. Teaching hockey skills.
   training. Lynx 1 is Year 6 training. "
 categories:
   category1: Mental Health
-  category2: My Body
+  category2: Physical Health
 interests:
   - Sports
 feelings:

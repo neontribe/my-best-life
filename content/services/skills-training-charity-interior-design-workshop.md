@@ -13,7 +13,7 @@ description: "An introduction to the basics in interior design including, the
   needs some attention. "
 categories:
   category1: Job Stuff
-  category2: Where I'm Living
+  category2: Housing
 interests:
   - Art and Design
 costValue: 0

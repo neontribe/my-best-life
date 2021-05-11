@@ -10,7 +10,7 @@ description: Nightstop London places young people who have nowhere to stay in
   trained volunteers’ spare rooms along with a hot meal. The team will also help
   you to look for more permanent accommodation, where needed.
 categories:
-  category1: Where I'm Living
+  category1: Housing
   category2: Keeping Safe
 costValue: 0
 age:
