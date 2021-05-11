@@ -39,7 +39,7 @@ const FooterLink = styled.a<{ activePage: boolean }>`
       : `color: ${props.theme.colours.blue}; `}
 
   &:hover {
-    color: ${(props) => props.theme.colours.yellow};
+    color: ${(props) => props.theme.colours.purple};
   }
 
   &:focus {
