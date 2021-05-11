@@ -8,7 +8,7 @@ description: Training at least once a week to build fitness, learn new skills
   the training.
 categories:
   category1: Friends
-  category2: My Body
+  category2: Physical health
 interests:
   - Sports
 feelings:

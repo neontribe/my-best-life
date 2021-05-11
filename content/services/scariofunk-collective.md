@@ -9,7 +9,7 @@ description: Street dance workshops Scariofunk Collective for you to achieve
   your goals. No experience necessary!
 categories:
   category1: Friends
-  category2: My Body
+  category2: Physical health
 costValue: 0
 age:
   minAge: 7

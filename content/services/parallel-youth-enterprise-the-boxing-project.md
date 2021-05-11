@@ -10,7 +10,7 @@ description: "A 12 week non-contact boxing course. Coaches are from the
   course. "
 categories:
   category1: Keeping Safe
-  category2: My Body
+  category2: Physical health
 interests:
   - Sports
 costValue: 0

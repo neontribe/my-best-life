@@ -45,11 +45,11 @@ type Category =
   | 'Mental Health'
   | 'Keeping Safe'
   | 'Job Stuff'
-  | "Where I'm Living"
+  | 'Housing'
   | 'Friends'
   | 'Family'
   | 'Drink and Drugs'
-  | 'My Body'
+  | 'Physical health'
   | 'My Rights and the Law'
 
 type Formats =

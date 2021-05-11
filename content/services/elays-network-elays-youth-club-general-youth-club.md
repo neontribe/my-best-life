@@ -12,7 +12,7 @@ description: "Games and activities. Arts and crafts. Baking and cooking
   programmes. Attracts young people from a mix of ethnicities and backgrounds. "
 categories:
   category1: Keeping Safe
-  category2: Where I'm Living
+  category2: Housing
 costValue: 0
 costQualifier: ""
 age:

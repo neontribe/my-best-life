@@ -9,7 +9,7 @@ description: Free, confidential help with advice and support in building up a
   healthier lifestyle, especially around drugs and alcohol use.
 categories:
   category1: Drink and Drugs
-  category2: My Body
+  category2: Physical health
 costValue: 0
 age:
   maxAge: 21

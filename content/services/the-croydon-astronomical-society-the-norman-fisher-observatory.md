@@ -12,7 +12,7 @@ description: "Observatory open to the public. A telescope which should give you
   visiting groups. Kitchen for hot drinks. Wireless broadband Internet. No
   toilets. No heating. No parking spaces. "
 categories:
-  category1: Where I'm Living
+  category1: Housing
 costValue: 0
 eligibility: "Visitors under 16 must be accompanied by a responsible adult.
   Unsuitable for people with limited mobility; no access to the main dome other

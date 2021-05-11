@@ -12,7 +12,7 @@ description: "A full range of beautician workshops. Involves training in how to
   holistic therapies and beauty treatments to relax and invigorate. "
 categories:
   category1: Job Stuff
-  category2: My Body
+  category2: Physical health
 interests:
   - Fashion and Beauty
 costValue: 0

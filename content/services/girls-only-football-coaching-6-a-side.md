@@ -9,7 +9,7 @@ description: Players of all abilities are welcome to join in for two hours of
   coaching and competitive 6-a-side games. You also get free trips out to
   stadiums, theatres, Us Girls events, etc.
 categories:
-  category1: My Body
+  category1: Physical health
   category2: Friends
 costValue: 0
 costQualifier: ""

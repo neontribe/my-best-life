@@ -10,7 +10,7 @@ description: "Hone your football skills, technique and fitness. Bring football
   tackling. "
 categories:
   category1: Friends
-  category2: My Body
+  category2: Physical health
 interests:
   - Sports
 feelings:

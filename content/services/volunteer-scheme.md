@@ -10,7 +10,7 @@ description: Get football coaching experience by helping run local football
   coaching course. You also get a tracksuit and vouchers for other kit.
 categories:
   category1: Job Stuff
-  category2: My Body
+  category2: Physical health
 costValue: 0
 format: Meeting a group of people
 location: Football clubs throughout Lambeth
