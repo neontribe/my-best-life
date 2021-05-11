@@ -65,14 +65,14 @@ const categories = [
   'Money',
   'School and college',
   'Sex and relationships',
-  'Mental Health',
+  'Mental health',
   'Keeping safe',
   'Job stuff',
-  "Where I'm living",
+  'Housing',
   'Friends',
   'Family',
   'Drink and drugs',
-  'My body',
+  'Physical health',
   'My rights and the law',
 ] as const
 
