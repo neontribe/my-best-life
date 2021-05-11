@@ -40,7 +40,11 @@ const StarContainer = styled.div`
 const Star = ({ highlight, onHover, onSelect, value }: StarInterface) => {
   const fill = highlight
     ? MyBestLifeTheme.colours.yellow
-    : MyBestLifeTheme.colours.blue_light
+    : MyBestLifeTheme.colours.white
+
+  const strokeColor = highlight
+    ? MyBestLifeTheme.colours.purple
+    : MyBestLifeTheme.colours.grey
 
   return (
     <StarContainer onMouseEnter={() => onHover()}>
@@ -50,13 +54,18 @@ const Star = ({ highlight, onHover, onSelect, value }: StarInterface) => {
         name="starRating"
         onChange={() => onSelect()}
       />
-      <svg version="1.1" viewBox="0 0 226.75 215.81">
-        <g transform="translate(237.35 107.06)">
-          <path
-            d="m-10.601-24.957-69.036 51.368 26.048 82.013-70.187-49.783-69.95 50.117 25.658-82.136-69.279-51.039 86.045-0.97944 27.133-81.661 27.521 81.531z"
-            fill={fill}
-          />
-        </g>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill={fill}
+        viewBox="0 0 24 24"
+        stroke={strokeColor}
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1"
+          d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+        />
       </svg>
     </StarContainer>
   )
