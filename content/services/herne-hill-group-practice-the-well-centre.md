@@ -12,7 +12,7 @@ description: "Discuss any concerns in a safe, confidential space. Access 1-1
   you'd prefer one. "
 categories:
   category1: Mental Health
-  category2: Physical health
+  category2: Physical Health
 costValue: 0
 costExplanation: Free
 age:

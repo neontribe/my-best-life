@@ -8,7 +8,7 @@ image:
 description: Drop in to see staff and discuss your health and fitness. Drop in
   to see staff on Mondays, Tuesdays, Wednesdays or Thursdays.
 categories:
-  category1: Physical health
+  category1: Physical Health
   category2: Mental Health
 interests:
   - Sports

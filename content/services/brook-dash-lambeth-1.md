@@ -12,7 +12,7 @@ description: "Help with any questions, issues or concerns. Completely
   advice. "
 categories:
   category1: Sex and Relationships
-  category2: Physical health
+  category2: Physical Health
 costValue: 0
 age:
   maxAge: 21

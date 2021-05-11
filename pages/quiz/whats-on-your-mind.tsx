@@ -11,6 +11,7 @@ import { LinkButton } from '../../src/Components/LinkButton'
 
 import { QuizContext } from '../../src/context/QuizContext'
 import { StickyNavBar } from '../../src/Components/StickyNavBar'
+import { Category } from '../../cms/services'
 
 const CheckboxGroup = styled.div`
   max-width: 50ch;
@@ -61,20 +62,20 @@ const StyledLink = styled.a`
   }
 `
 
-const categories = [
+const categories: Array<Category> = [
   'Money',
-  'School and college',
-  'Sex and relationships',
-  'Mental health',
-  'Keeping safe',
-  'Job stuff',
+  'School and College',
+  'Sex and Relationships',
+  'Mental Health',
+  'Keeping Safe',
+  'Job Stuff',
   'Housing',
   'Friends',
   'Family',
-  'Drink and drugs',
-  'Physical health',
-  'My rights and the law',
-] as const
+  'Drink and Drugs',
+  'Physical Health',
+  'My Rights and the Law',
+]
 
 export type OnMind = typeof categories[number]
 

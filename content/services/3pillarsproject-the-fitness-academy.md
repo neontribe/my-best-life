@@ -9,7 +9,7 @@ description: A paid fitness apprenticeship and mentoring for male ex-offenders.
   You'll receive 1-2-1 mentoring, complete fitness qualifications and support to
   get a job.
 categories:
-  category1: Physical health
+  category1: Physical Health
   category2: Job Stuff
 interests: null
 feelings:

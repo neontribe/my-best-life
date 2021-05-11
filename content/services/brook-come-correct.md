@@ -15,7 +15,7 @@ description: "Access to free condoms in lots of places (called Outlets) across
   displaying the Come Correct logo. "
 categories:
   category1: Sex and Relationships
-  category2: Physical health
+  category2: Physical Health
 costValue: 0
 age:
   maxAge: 25

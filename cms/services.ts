@@ -38,7 +38,7 @@ export interface Service {
   area?: Array<Area>
 }
 
-type Category =
+export type Category =
   | 'Money'
   | 'School and College'
   | 'Sex and Relationships'
@@ -49,7 +49,7 @@ type Category =
   | 'Friends'
   | 'Family'
   | 'Drink and Drugs'
-  | 'Physical health'
+  | 'Physical Health'
   | 'My Rights and the Law'
 
 type Formats =

@@ -103,7 +103,7 @@ export default {
                 { label: 'Friends', value: 'Friends' },
                 { label: 'Family', value: 'Family' },
                 { label: 'Drink and Drugs', value: 'Drink and Drugs' },
-                { label: 'Physical health', value: 'Physical health' },
+                { label: 'Physical Health', value: 'Physical Health' },
                 {
                   label: 'My Rights and the Law',
                   value: 'My Rights and the Law',
@@ -130,7 +130,7 @@ export default {
                 { label: 'Friends', value: 'Friends' },
                 { label: 'Family', value: 'Family' },
                 { label: 'Drink and Drugs', value: 'Drink and Drugs' },
-                { label: 'Physical health', value: 'Physical health' },
+                { label: 'Physical Health', value: 'Physical Health' },
                 {
                   label: 'My Rights and the Law',
                   value: 'My Rights and the Law',
