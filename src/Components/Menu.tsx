@@ -4,16 +4,15 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: ${(props) => props.theme.colours.white};
-  box-shadow: 0 0 9px 2px ${(props) => props.theme.colours.shadow};
+  background: ${(props) => props.theme.colours.aqua};
   height: 400px
   text-align: left;
-  padding: 0.5rem;
+  padding: 1rem 0 5rem 2rem;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 5rem;
+  left:0;
   z-index: 3;
-  width: 150px;
+  width: 100%;
 
   ${(props) =>
     !props.open &&
@@ -22,7 +21,7 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   `}
 
   a {
-    font-size: ${(props) => props.theme.fontSizes.small};
+    font-size: ${(props) => props.theme.fontSizes.normal};
     padding: 1rem;
     color: ${(props) => props.theme.colours.blue};
     transition: color 0.3s linear;
@@ -47,8 +46,8 @@ export const Menu = ({ open }: MenuProps): JSX.Element => {
   return (
     <StyledMenu open={open} aria-expanded={open}>
       <a href="/">About</a>
-      <a href="/">Privacy</a>
-      <a href="/helplines">Urgent help</a>
+      <a href="/helplines">Urgent Help</a>
+      <a href="/">Privacy Policy</a>
     </StyledMenu>
   )
 }
