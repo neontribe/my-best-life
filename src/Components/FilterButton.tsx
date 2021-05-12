@@ -55,10 +55,12 @@ export const FilterButton = (): JSX.Element => {
 
   return (
     <ButtonContainer>
-      <ActiveFilters>
-        {activeFilterItems}
-        <VisuallyHidden>filters applied.</VisuallyHidden>
-      </ActiveFilters>
+      {activeFilterItems > 0 ? (
+        <ActiveFilters>
+          {activeFilterItems}
+          <VisuallyHidden>filters applied.</VisuallyHidden>
+        </ActiveFilters>
+      ) : null}
       <Link href={`/filter`} passHref>
         <ButtonLink>
           <svg
