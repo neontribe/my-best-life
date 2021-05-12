@@ -7,7 +7,7 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   background: ${(props) => props.theme.colours.aqua};
   height: 400px
   text-align: left;
-  padding: 1rem 0 5rem 2rem;
+  padding: 1rem 2rem 5rem 2rem;
   position: absolute;
   top: 5rem;
   left:0;
