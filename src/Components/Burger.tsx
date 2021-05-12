@@ -4,20 +4,20 @@ const StyledBurger = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
 
-  &:focus {
-    outline: none;
+  &:focus > div {
+    background: ${(props) => props.theme.colours.purple};
   }
 
   div {
-    width: 2rem;
-    height: 0.25rem;
+    width: 3rem;
+    height: 0.5rem;
     background: ${(props) => props.theme.colours.blue};
     border-radius: 10px;
     transition: all 0.3s linear;
@@ -33,7 +33,7 @@ interface BurgerProps {
 
 export const Burger = ({ open, setOpen }: BurgerProps): JSX.Element => {
   return (
-    <StyledBurger onClick={() => setOpen(!open)}>
+    <StyledBurger onClick={() => setOpen(!open)} aria-label="Menu">
       <div />
       <div />
       <div />

@@ -45,7 +45,7 @@ interface MenuProps {
 
 export const Menu = ({ open }: MenuProps): JSX.Element => {
   return (
-    <StyledMenu open={open}>
+    <StyledMenu open={open} aria-expanded={open}>
       <a href="/">About</a>
       <a href="/">Privacy</a>
       <a href="/helplines">Urgent help</a>
