@@ -23,15 +23,15 @@ age:
   minAge: 11
   maxAge: 24
 format: One to one chats
-location: King's College Hospital, St Mary's Hospital, St George's Hospital, The
-  Royal London, Homerton University Hospital, Queen's Medical Centre
-  (Nottingham), Queen Elizabeth Hospital (Birmingham), Heartlands Hospital
-  (Birmingham)
 reviews: [{comment: "You’ve motivated me. You’ve been there. I knew you knew I could do
   it and that’s what has made me do it."}]
+location: "They are based in multiple hospitals across London including; King's
+  College Hospital, St Mary's Hospital, St George's Hospital and The Royal
+  London. "
+area:
+  - Herne Hill
 contactExplanation: "If you find yourself in hospital due to youth violence you
   may be approached by a redthread worker. "
 phone: 0203 744 6888
-website: https://www.redthread.org.uk/what-we-do/
- 
+website: https://www.redthread.org.uk/what-we-do/ 
 ---
