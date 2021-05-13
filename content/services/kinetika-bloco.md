@@ -13,8 +13,10 @@ categories:
 costValue: 0
 eligibility: "The sessions are open to Tulse Hill residents. "
 format: Meeting a group of people
-location: 63 Christchurch Road, SW2 3DH
+location: Yellow Cube CIC, 63 Christchurch Road, SW2 3DH
 makeMapLink: true
+area:
+  - Tulse Hill
 time: Thursdays 4-7 pm during term time
 email: info@yellowqube.org
 phone: 020 8671 3822
