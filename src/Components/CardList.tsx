@@ -137,7 +137,7 @@ export const CardList = ({
       let ageNumber: number
 
       switch (ageInput) {
-        case '<15':
+        case 'under 15':
           ageNumber = 14
           break
         case '15':
@@ -152,7 +152,7 @@ export const CardList = ({
         case '18':
           ageNumber = 18
           break
-        case '18+':
+        case 'over 18':
           ageNumber = 19
           break
         default:
