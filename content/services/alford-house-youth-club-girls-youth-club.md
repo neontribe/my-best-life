@@ -36,8 +36,10 @@ age:
 gender:
   - women
 format: Meeting a group of people
-location: Aveline Street, Kennington, London, SE11 5DQ
+location: Alford House, Aveline Street, Kennington, London, SE11 5DQ
 makeMapLink: true
+area:
+  - Prince's
 time: Wednesdays 6.15-9pm
 contactExplanation: Just drop in or alternatively visit the website for more info.
 email: theclub@alfordhouse.org.uk
