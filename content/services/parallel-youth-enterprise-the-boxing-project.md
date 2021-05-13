@@ -3,8 +3,8 @@ organisation: Parallel Youth Enterprise
 title: The Boxing Project
 shortDescription: Boxing course
 image:
-  image: img/pexels-photo-6739946.jpeg
-  imageAlt: Boxing gloves
+  image: img/48ff3d_2c2669db0443411c9285374ab8c63c7c.webp
+  imageAlt: A group of young people with boxing gloves
 description: "A 12 week non-contact boxing course. Coaches are from the
   community and the local police. Approximately 20 young people attend each
   course. "
