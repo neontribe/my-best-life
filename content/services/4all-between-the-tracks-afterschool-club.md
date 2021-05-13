@@ -17,8 +17,11 @@ age:
 eligibility: 13-17 year olds from the Lairdale, Peabody Hill and Rosendale Road
   estates are welcome to come along as much as they like.
 format: Meeting a group of people
-location: Rosendale Community Centre, Rosendale Road Estate, SE27 9DR
+location: " Rosendale Community Centre, 147 Peabody Cottages, Rosendale Road
+  Estate, SE24 9DR"
 makeMapLink: true
+area:
+  - Thurlow Park
 time: Wednesdays from 6.30 – 8.30pm
 contactExplanation: "Get in touch for more information about the club. "
 email: info@4-all.org.uk
