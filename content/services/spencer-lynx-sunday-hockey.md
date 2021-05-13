@@ -2,15 +2,19 @@
 organisation: Spencer Lynx
 title: Sunday Hockey
 shortDescription: "Sunday hockey sessions "
+image:
+  image: img/field-hockey-player-girls-game-163526.jpeg
+  imageAlt: Girls playing hockney
 description: "Sessions built around fun and enjoyment. Teaching hockey skills.
   Nurturing general sporting ability. Can provide a pathway into Spencer Hockey
   Club, with financial support if needed. Aims to inspire. Lynx 2 is Year 5
   training. Lynx 1 is Year 6 training. "
 categories:
-  category1: Mental Health
-  category2: Physical Health
+  category1: Physical Health
+  category2: Mental Health
 interests:
   - Sports
+  - Outdoor Activities
 feelings:
   - unsure
   - okay
@@ -26,8 +30,10 @@ eligibility: Open to state school children in south-west London (primarily
 format: Meeting a group of people
 location: La Retraite School, Atkins Road, London SW12 0AB
 makeMapLink: true
+area:
+  - Thornton
+time: Sundays
 contactExplanation: Email at spencerlynxhockey@gmail.com
 email: spencerlynxhockey@gmail.com
 website: https://spencerlynx.com/
- 
 ---
