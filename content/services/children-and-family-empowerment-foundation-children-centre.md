@@ -22,7 +22,8 @@ age:
   minAge: 5
   maxAge: 16
 format: Meeting a group of people
-location: 54, Camberwell Road, Methodist Church, Walworth SE5 0EW
+location: Walworth Methodist Church, 54, Camberwell Road, Methodist Church,
+  Walworth SE5 0EW
 makeMapLink: true
 contactExplanation: "If you have any questions about their services, please telephone or email. "
 email: admin@cfefcentre.com
