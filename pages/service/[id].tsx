@@ -348,7 +348,7 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
       {/*  Young person quotation and Reviews */}
       {serviceData.reviews && serviceData.reviews.length > 0 ? (
         <Section divider={MyBestLifeTheme.colours.aqua}>
-          <Heading as="h2">What do other young people say?</Heading>
+          <Heading as="h2">What do other people say?</Heading>
           {serviceData.reviews.map((data, i) => {
             return <ReviewDisplay data={data} key={i} />
           })}
