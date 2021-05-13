@@ -16,7 +16,13 @@ costValue: 0
 age:
   maxAge: 21
 format: One to one chats
-location: "Multiple locations throughout Lambeth "
+location: >+
+  There are six DASH Lambeth sites across Lambeth: Lillian Bayliss School,
+  Evolve Housing, Lambeth Youth Offending Service, Lambeth College (under 21s),
+  Gracefield Gardens Health Centre (under 21s) and Park Campus Academy.
+
+area:
+  - Oval
 time: "Walk-in sessions. The team generally work Mondays to Fridays, but you can
   leave a message in the evening and over weekends. "
 quotation: I felt comfortable to discuss any issues surrounding my health. I was
@@ -31,4 +37,9 @@ contactExplanation: "Contact Pippa via phone or email. All sessions are walk-in
 email: Lambeth@Brook.org
 phone: 07771 390729
 website: https://www.brook.org.uk/services/dash-lambeth/#gethelpfromDASH
+reviews:
+  - comment: The nurse helping me was extremely kind and helpful and really helped
+      me open up which i was originally scared to do.
+  - comment: I felt comfortable to discuss any issues surrounding my health. I was
+      provided with the help that I needed.
 ---
