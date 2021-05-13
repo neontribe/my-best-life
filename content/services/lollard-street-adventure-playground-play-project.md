@@ -28,6 +28,8 @@ eligibility: "Appropriate clothing and footwear must be worn at all times. "
 format: Meeting a group of people
 location: 102 Lollard Street, Kennington, London SE11 6PX
 makeMapLink: true
+area:
+  - Prince's
 time: After school and in all school holidays
 contactExplanation: >-
   For all enquiries get in touch via phone or email. You must be registered
