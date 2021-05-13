@@ -1,7 +1,7 @@
 ---
 organisation: Brook
 title: Dash Lambeth
-shortDescription: Drugs and alcohol advice
+shortDescription: Free drugs and alcohol advice
 image:
   image: img/dashlambeth.jpg
   imageAlt: Close up of three teenagers smiling
@@ -29,10 +29,12 @@ area:
   - Larkhall
 time: "The team generally work Mondays to Fridays, but you can leave a message
   in the evening and over weekends. "
-quotation: "The nurse helping me was extremely kind and helpful and really
-  helped me open up which I was originally scared to do. "
+quotation: ""
 contactExplanation: Contact Valentina via phone or email.
 email: Lambeth@Brook.org
 phone: 07917 460749
 website: https://www.brook.org.uk/services/dash-lambeth/#gethelpfromDASH
+reviews:
+  - comment: I am so grateful to have someone to call and get advice from no matter
+      the situation I find myself in.
 ---
