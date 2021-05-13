@@ -23,10 +23,11 @@ age:
   minAge: 11
   maxAge: 24
 format: One to one chats
-location: King's College Hospital, St Mary's Hospital, St George's Hospital, The
-  Royal London, Homerton University Hospital, Queen's Medical Centre
-  (Nottingham), Queen Elizabeth Hospital (Birmingham), Heartlands Hospital
-  (Birmingham)
+location: "They are based in multiple hospitals across London including; King's
+  College Hospital, St Mary's Hospital, St George's Hospital and The Royal
+  London. "
+area:
+  - Herne Hill
 quotation: '"You’ve motivated me. You’ve been there. I knew you knew I could do
   it and that’s what has made me do it." Young person accessing the Youth
   Violence Intervention Programme '
