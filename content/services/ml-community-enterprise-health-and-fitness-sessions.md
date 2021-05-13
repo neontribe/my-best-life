@@ -23,6 +23,8 @@ eligibility: "All support to open to anyone, except the Teenage Pregnancy
 format: Meeting a group of people
 location: Marcus Lipton Centre, Minet Road, Brixton, London SW9 7UH
 makeMapLink: true
+area:
+  - Coldharbour
 contactExplanation: If you are in need of support, please telephone the Office
   and General Enquiries number or the young person's key worker.
 email: info@mlcommunity.co.uk
