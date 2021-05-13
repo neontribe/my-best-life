@@ -19,6 +19,10 @@ costQualifier: ""
 costExplanation: Prices start at £35 per hour
 eligibility: Open to all ages and abilities
 format: One to one chats
+location: Grooveschool, Business Launchpad, 3Space, International House,
+  Canterbury Cres, Brixton, London SW9 7QD
+area:
+  - Coldharbour
 time: Various times, subject to availability.
 quotation: You're never to old to learn something new! But forget youtube
   tutorials, I had a good few hours at Grooveschool learning the basics and
@@ -29,4 +33,10 @@ email: "info@grooveschool.org "
 form: https://www.grooveschool.org/contact
 phone: 07577 810285
 website: https://www.grooveschool.org/one-2-one
+reviews:
+  - comment: You're never to old to learn something new! But forget youtube
+      tutorials, I had a good few hours at Grooveschool learning the basics and
+      after just one session I was able to go away and put together my first
+      mix! Thanks I'll be back soon
+    author: Amy Lee
 ---
