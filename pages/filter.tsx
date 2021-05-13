@@ -15,7 +15,6 @@ import {
 import { ButtonBase } from '../src/Components/ButtonBase'
 import { NotificationsContext } from '../src/context/NotificationsContext'
 import { VerticalSpacing } from '../src/Components/VerticalSpacing'
-import { Arrow } from './../src/Components/Arrow'
 
 const Top = styled.section`
   border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
@@ -41,21 +40,7 @@ const Top = styled.section`
     align-items: center;
   }
 
-  a {
-    color: ${(props) => props.theme.colours.blue};
-    text-decoration: none;
-    display: flex;
-    align-items: center;
 
-    &:focus {
-      outline: 2px dashed ${(props) => props.theme.colours.blue};
-      outline-offset: 2px;
-    }
-
-    svg {
-      width: 18px;
-      height: 18px;
-    }
   }
 
   button {
@@ -135,6 +120,24 @@ const ButtonLink = styled(ButtonBase)`
   margin-bottom: 1rem;
 `
 
+const CloseButton = styled.a`
+  color: ${(props) => props.theme.colours.blue};
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  &:focus {
+    outline: 2px dashed ${(props) => props.theme.colours.blue};
+    outline-offset: 2px;
+  }
+
+  svg {
+    height: 44px;
+    width: 44px;
+    margin-left: 0;
+  }
+`
+
 export const FilterPage: NextPage = () => {
   const { notify } = useContext(NotificationsContext)
   const {
@@ -174,10 +177,21 @@ export const FilterPage: NextPage = () => {
             </svg>
           </h1>
           <Link href={'/'} passHref>
-            <a>
-              <Arrow direction={'left'} />
-              {'Back'}
-            </a>
+            <CloseButton>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </CloseButton>
           </Link>
         </div>
         <VerticalSpacing size={0.5} />
