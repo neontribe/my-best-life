@@ -11,6 +11,8 @@ description: "Games and activities to do online with your family. Arts, crafts
 categories:
   category1: Family
   category2: Friends
+interests:
+  - Gaming
 costValue: 0
 format: Online
 time: "Arts and Drama: Thursdays 3:30pm. Chess Club: Fridays 3pm. Minecraft:
