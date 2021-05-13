@@ -22,7 +22,6 @@ export interface Service {
   format: Formats
   time?: string
   expectation?: string
-  quotation?: string
   access?: string
   location?: string
   makeMapLink?: boolean
@@ -119,7 +118,6 @@ export type ServiceDetail = Pick<
   | 'location'
   | 'makeMapLink'
   | 'time'
-  | 'quotation'
   | 'expectation'
   | 'contactExplanation'
   | 'email'

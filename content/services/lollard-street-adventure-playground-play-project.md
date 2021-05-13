@@ -39,5 +39,5 @@ contactExplanation: >-
 email: "info@lollardstplay.org.uk "
 phone: 0207 793 9592
 website: https://www.lollardstplay.org.uk/what-happens-here/
-reviews: []
+ 
 ---

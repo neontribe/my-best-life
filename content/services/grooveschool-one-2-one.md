@@ -20,10 +20,10 @@ costExplanation: Prices start at £35 per hour
 eligibility: Open to all ages and abilities
 format: One to one chats
 time: Various times, subject to availability.
-quotation: You're never to old to learn something new! But forget youtube
+reviews: [{comment: "You're never to old to learn something new! But forget youtube
   tutorials, I had a good few hours at Grooveschool learning the basics and
   after just one session I was able to go away and put together my first mix!
-  Thanks I'll be back soon
+  Thanks I'll be back soon."}]
 contactExplanation: To apply, email, call or use the online form.
 email: "info@grooveschool.org "
 form: https://www.grooveschool.org/contact

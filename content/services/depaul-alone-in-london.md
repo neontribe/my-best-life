@@ -27,5 +27,5 @@ contactExplanation: You can call or email the team.
 email: alshousingadvice@depaulcharity.org.uk
 phone: 0207 278 4224 then press option 2
 website: http://uk.depaulcharity.org/alone-london
-reviews: []
+ 
 ---

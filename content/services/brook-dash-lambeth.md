@@ -17,8 +17,8 @@ eligibility: "Available to all young people in Lambeth under 21 (or under 25 if
   you have SEND). "
 format: One to one chats
 location: Multiple locations throughout Lambeth and surrounding boroughs.
-quotation: "The nurse helping me was extremely kind and helpful and really
-  helped me open up which I was originally scared to do. "
+reviews: [{comment: "The nurse helping me was extremely kind and helpful and really
+  helped me open up which I was originally scared to do."}]
 contactExplanation: Contact Valentina via phone or email.
 email: Lambeth@Brook.org
 phone: 07917 460749

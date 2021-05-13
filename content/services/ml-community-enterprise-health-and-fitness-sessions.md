@@ -29,5 +29,5 @@ email: info@mlcommunity.co.uk
 phone: 020 8001 2188 (Office and General Enquiries) or 07960 331 223 (Andrew the
   young person's key worker)
 website: http://www.mlcommunity.co.uk/projects.html
-reviews: []
+ 
 ---

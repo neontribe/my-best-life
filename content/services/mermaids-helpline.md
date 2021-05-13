@@ -28,5 +28,5 @@ expectation: "Calls to Mermaids are confidential and any details recorded will
 email: " info@mermaidsuk.org.uk"
 phone: 0808 801 0400
 website: https://mermaidsuk.org.uk/contact-us/
-reviews: []
+ 
 ---

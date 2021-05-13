@@ -43,5 +43,5 @@ contactExplanation: Just drop in or alternatively visit the website for more inf
 email: theclub@alfordhouse.org.uk
 phone: 020 7735 1519
 website: https://alfordhouse.org.uk/youth-club/whats-on/
-reviews: []
+ 
 ---

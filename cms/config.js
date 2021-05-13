@@ -333,12 +333,6 @@ export default {
           hint: 'The actual value, this may be complex for opening hours.',
         },
         {
-          label: 'What do other young people say?',
-          name: 'quotation',
-          widget: 'text',
-          required: false,
-        },
-        {
           label: 'What to expect',
           name: 'expectation',
           widget: 'text',

@@ -27,12 +27,11 @@ location: King's College Hospital, St Mary's Hospital, St George's Hospital, The
   Royal London, Homerton University Hospital, Queen's Medical Centre
   (Nottingham), Queen Elizabeth Hospital (Birmingham), Heartlands Hospital
   (Birmingham)
-quotation: '"You’ve motivated me. You’ve been there. I knew you knew I could do
-  it and that’s what has made me do it." Young person accessing the Youth
-  Violence Intervention Programme '
+reviews: [{comment: "You’ve motivated me. You’ve been there. I knew you knew I could do
+  it and that’s what has made me do it."}]
 contactExplanation: "If you find yourself in hospital due to youth violence you
   may be approached by a redthread worker. "
 phone: 0203 744 6888
 website: https://www.redthread.org.uk/what-we-do/
-reviews: []
+ 
 ---
