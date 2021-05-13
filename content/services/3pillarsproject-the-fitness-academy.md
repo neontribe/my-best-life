@@ -1,7 +1,7 @@
 ---
 organisation: 3Pillars Project
 title: The Fitness Academy
-shortDescription: Paid fitness apprenticeship
+shortDescription: Paid fitness apprenticeship for ex-offenders
 image:
   image: img/male-fitness.jpeg
   imageAlt: Man lifting a barbell
@@ -22,6 +22,8 @@ eligibility: This is designed for male ex-offenders.
 format: One to one chats
 location: 3Pillars Project, Black Prince Trust, 5 Beaufoy Walk, London, SE11 6AA
 makeMapLink: true
+area:
+  - Prince's
 contactExplanation: Get in touch with the details below
 email: " info@3pillarsproject.com"
 form: https://www.3pillarsproject.com/contact-us
