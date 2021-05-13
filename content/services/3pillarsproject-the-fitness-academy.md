@@ -1,7 +1,7 @@
 ---
 organisation: 3Pillars Project
 title: The Fitness Academy
-shortDescription: Paid fitness apprenticeship
+shortDescription: Paid fitness apprenticeship for ex-offenders
 image:
   image: img/male-fitness.jpeg
   imageAlt: Man lifting a barbell
