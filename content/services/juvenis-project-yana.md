@@ -25,6 +25,8 @@ eligibility: This is open to girls only and you will need a referral from an adu
 format: Meeting a group of people
 location: 3space International House, Canterbury Crescent, Brixton SW9 7QD
 makeMapLink: true
+area:
+  - Coldharbour
 quotation: Jenni Steele has a vision on how a community should support each
   other. The biggest experience for me was seeing how impactful being a young
   role model is to my community. I really enjoyed speaking on my journey. I was
