@@ -5,11 +5,10 @@ shortDescription: Free sexual health advice
 image:
   image: img/mentoring.jpg
   imageAlt: Two people talking at a table with paperwork
-description: "Help with any questions, issues or concerns. Completely
-  confidential. Free to access. Sexual health, relationships and contraception
-  advice. Wellbeing support. STI testing and treatment. HIV testing and support.
-  Contraception, including emergency contraception. Pregnancy testing and
-  advice. "
+description: "Free and confidential help with any questions, issues or concerns
+  around sexual health, relationships and contraception, wellbeing. They also
+  offer STI testing and treatment, HIV testing and support, contraception,
+  including emergency contraception and pregnancy testing and advice. "
 categories:
   category1: Sex and Relationships
   category2: Physical Health
