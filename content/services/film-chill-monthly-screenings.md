@@ -16,12 +16,14 @@ categories:
 interests:
   - Films and TV
 costValue: 8.5
-costQualifier: From £8.50
+costQualifier: From £8.50 per film
 eligibility: At this current time, unfortunately they don’t have access for
   disabled customers.
 format: Meeting a group of people
 location: Renaissance Studios, 34-44 Tunstall Road, Brixton, London SW9 8DA
 makeMapLink: true
+area:
+  - Ferndale
 time: "Open from 2pm in the afternoon to 11pm at night on event days. "
 expectation: "It is a small cinema, so you will seated with up to 20 other
   people. You will need to purchase a ticket online. "

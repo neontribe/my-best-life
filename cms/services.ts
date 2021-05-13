@@ -37,18 +37,18 @@ export interface Service {
   area?: Array<Area>
 }
 
-type Category =
+export type Category =
   | 'Money'
   | 'School and College'
   | 'Sex and Relationships'
   | 'Mental Health'
   | 'Keeping Safe'
   | 'Job Stuff'
-  | "Where I'm Living"
+  | 'Housing'
   | 'Friends'
   | 'Family'
   | 'Drink and Drugs'
-  | 'My Body'
+  | 'Physical Health'
   | 'My Rights and the Law'
 
 type Formats =
@@ -80,6 +80,7 @@ export type Interest =
   | 'Outdoor Activities'
   | 'Activism'
   | 'Fashion and Beauty'
+  | 'Gaming'
 
 export type Area =
   | 'Gipsy Hill'

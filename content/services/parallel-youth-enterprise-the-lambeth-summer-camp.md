@@ -13,7 +13,7 @@ description: "A 4-week summer camp coming soon in July and August 2021. It will
   London Dungeon, and London Zoo. "
 categories:
   category1: Friends
-  category2: Where I'm Living
+  category2: Housing
 costValue: 150
 costQualifier: £150 per person
 costExplanation: £150 per person for the 4-week camp

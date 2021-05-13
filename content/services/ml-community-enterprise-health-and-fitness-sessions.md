@@ -12,7 +12,7 @@ description: "A fully-equipped fitness gym, basketball court and 5-a-side
   females. Hygiene and Healthy Diet sessions. Healthy cooking classes. Look at
   risk-taking behaviour, including drug and alcohol abuse. "
 categories:
-  category1: My Body
+  category1: Physical Health
   category2: Drink and Drugs
 interests:
   - Sports

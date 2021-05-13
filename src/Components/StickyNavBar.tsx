@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-
 import styled from 'styled-components'
 
 import { QuizContext } from '../context/QuizContext'
+
+import Bookmark from '../Components/Bookmark'
 
 const Footer = styled.nav`
   position: fixed;
@@ -102,19 +103,7 @@ export const StickyNavBar = (): JSX.Element => {
         <li>
           <Link href={'/saved'} passHref>
             <FooterLink activePage={currentPage === '/saved'}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
-                />
-              </svg>
+              <Bookmark />
               Saved
             </FooterLink>
           </Link>

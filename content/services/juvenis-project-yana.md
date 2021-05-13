@@ -30,7 +30,9 @@ reviews: [{comment: "Jenni Steele has a vision on how a community should support
   role model is to my community. I really enjoyed speaking on my journey. I was
   able to share with the kids real life’s truths. Life isn’t easy but you have
   to keep going. Congratulations on your tour Jenni. Long may it continue."}]
-contactExplanation: "By referral. "
+area:
+  - Coldharbour
+contactExplanation: "By referral."
 email: jenni@jennisteele.co.uk
 form: https://www.jennisteele.co.uk/contact/
 website: https://www.juvenis.org.uk/portfolio/yana-project/

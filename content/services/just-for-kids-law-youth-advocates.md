@@ -11,7 +11,7 @@ description: "Youth advocates will help you to understand your rights and the
   processes to you. "
 categories:
   category1: My Rights and the Law
-  category2: Where I'm Living
+  category2: Housing
 costValue: 0
 age:
   minAge: 10

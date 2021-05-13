@@ -1,6 +1,10 @@
+import { useContext } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
+
 import { ButtonBase } from './ButtonBase'
+import { FilterContext } from '../context/FilterContext'
+import { VisuallyHidden } from './VisuallyHidden'
 
 const ButtonContainer = styled.div`
   width: 100%;
@@ -12,11 +16,13 @@ const ButtonContainer = styled.div`
 
 const ButtonLink = styled(ButtonBase)`
   font-size: ${(props) => props.theme.fontSizes.highlight};
-  padding: 0.5rem;
-  width: 7rem;
   height: 3rem;
   justify-content: center;
-  max-width: calc(100% - 2rem);
+  padding: 0.5rem;
+  position: relative;
+  width: 7rem;
+  z-index: 5;
+
   svg {
     height: 1.2em;
     margin-right: 4px;
@@ -24,9 +30,37 @@ const ButtonLink = styled(ButtonBase)`
   }
 `
 
+const ActiveFilters = styled.div`
+  align-items: center;
+  background-color: ${(props) => props.theme.colours.white};
+  border-radius: 5rem;
+  border: 2px solid ${(props) => props.theme.colours.purple};
+  color: ${(props) => props.theme.colours.purple};
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  min-height: 1.8rem;
+  min-width: 1.8rem;
+  position: relative;
+  right: -7.8rem;
+  top: -1.3rem;
+  z-index: 6;
+`
+
 export const FilterButton = (): JSX.Element => {
+  const { age, formats, areas } = useContext(FilterContext)
+
+  const ageValue = age?.length ? 1 : 0
+  const activeFilterItems = formats.length + areas.length + ageValue
+
   return (
     <ButtonContainer>
+      {activeFilterItems > 0 ? (
+        <ActiveFilters>
+          {activeFilterItems}
+          <VisuallyHidden>filters applied.</VisuallyHidden>
+        </ActiveFilters>
+      ) : null}
       <Link href={`/filter`} passHref>
         <ButtonLink>
           <svg

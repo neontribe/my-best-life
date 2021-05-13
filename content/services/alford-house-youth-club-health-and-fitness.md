@@ -8,7 +8,7 @@ image:
 description: Drop in to see staff and discuss your health and fitness. Drop in
   to see staff on Mondays, Tuesdays, Wednesdays or Thursdays.
 categories:
-  category1: My Body
+  category1: Physical Health
   category2: Mental Health
 interests:
   - Sports
@@ -19,8 +19,10 @@ age:
   minAge: 12
   maxAge: 21
 format: One to one chats
-location: Aveline Street, Kennington, London, SE11 5DQ
+location: Alford House, Aveline Street, Kennington, London, SE11 5DQ
 makeMapLink: true
+area:
+  - Prince's
 time: "Mondays 3pm - 6pm, Tuesdays 3pm - 6pm, Wednesdays 3pm - 6pm and Thursdays
   3pm - 6pm. "
 contactExplanation: Get in touch before or just drop-in.

@@ -12,7 +12,7 @@ description: "Discuss any concerns in a safe, confidential space. Access 1-1
   you'd prefer one. "
 categories:
   category1: Mental Health
-  category2: My Body
+  category2: Physical Health
 costValue: 0
 costExplanation: Free
 age:
@@ -22,6 +22,8 @@ format: One to one chats
 location: Herne Hill Group Practice, 74 Herne Hill, London  SE24 9QP (entrance
   via Kestrel Avenue)
 makeMapLink: true
+area:
+  - Herne Hill
 time: "Mon, Weds and Thurs 11.00-18.30, Fri 8.00-16.00. "
 contactExplanation: "Contact the Well Centre for an appointment so it can ensure
   social distancing is in place. Currently running a mixture of face-to-face,

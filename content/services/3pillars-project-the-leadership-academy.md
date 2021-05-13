@@ -1,7 +1,7 @@
 ---
 organisation: 3Pillars Project
 title: The Leadership Academy
-shortDescription: Leadership & business skills
+shortDescription: Leadership & business skills for ex-offenders
 image:
   image: img/screenshot-2021-04-27-at-20.44.18.png
   imageAlt: Boxer and coach
@@ -31,6 +31,8 @@ eligibility: Ex-offenders; have to have completed the 3Pillars Project's Fitness
 format: One to one chats
 location: 3Pillars Project, Black Prince Trust, 5 Beaufoy Walk, London, SE11 6AA
 makeMapLink: true
+area:
+  - Prince's
 contactExplanation: Send an email or visit the website for more info.
 email: " info@3pillarsproject.com"
 website: https://www.3pillarsproject.com/our-work
