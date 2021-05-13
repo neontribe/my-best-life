@@ -16,6 +16,9 @@ import { ButtonBase } from '../src/Components/ButtonBase'
 import { NotificationsContext } from '../src/context/NotificationsContext'
 import { VerticalSpacing } from '../src/Components/VerticalSpacing'
 
+const FilterLayout = styled.div`
+  padding: 3rem;
+`
 const Top = styled.section`
   border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
   display: flex;
@@ -23,7 +26,6 @@ const Top = styled.section`
   justify-content: space-between;
   margin: auto;
   max-width: 50ch;
-  padding: 1rem var(--gutter-width);
   width: 100%;
 
   div {
@@ -38,9 +40,6 @@ const Top = styled.section`
     flex-basis: 100%;
     display: flex;
     align-items: center;
-  }
-
-
   }
 
   button {
@@ -76,8 +75,8 @@ const FilterSection = styled.section<{ borderBottom?: boolean }>`
 
   max-width: 50ch;
   margin: auto;
-  padding: 1rem var(--gutter-width);
   width: 100%;
+  padding: 2rem 0;
 
   legend {
     font-family: 'Catamaran', sans-serif;
@@ -159,108 +158,111 @@ export const FilterPage: NextPage = () => {
 
   return (
     <Layout>
-      <Top>
-        <div>
-          <h1>
-            Filter
-            <svg
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </h1>
-          <Link href={'/'} passHref>
-            <CloseButton>
+      <FilterLayout>
+        <Top>
+          <div>
+            <h1>
+              Filter
               <svg
+                role="img"
                 xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+                viewBox="0 0 20 20"
+                fill="currentColor"
               >
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
+                  fillRule="evenodd"
+                  d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z"
+                  clipRule="evenodd"
                 />
               </svg>
-            </CloseButton>
-          </Link>
-        </div>
-        <VerticalSpacing size={0.5} />
-        <button onClick={() => clearAll()}>Clear All</button>
-        <VerticalSpacing size={0.25} />
-      </Top>
-      <VerticalSpacing />
-      <FilterSection borderBottom>
-        <fieldset>
-          <legend>Age</legend>
-          <RadioGroup>
-            {allAges.map((item) => {
-              return (
-                <RadioButton
-                  key={item}
-                  label={item}
-                  name={'age'}
-                  checked={item === age}
-                  onChange={ageUpdate}
-                />
-              )
-            })}
-          </RadioGroup>
-          <p>Select your age so we can tell you what you are eligible for</p>
-        </fieldset>
-      </FilterSection>
-      {/* <FilterSection>
+            </h1>
+            <Link href={'/'} passHref>
+              <CloseButton>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </CloseButton>
+            </Link>
+          </div>
+          <VerticalSpacing size={0.5} />
+          <button onClick={() => clearAll()}>Clear All</button>
+          <VerticalSpacing size={1} />
+        </Top>
+        <VerticalSpacing />
+        <FilterSection borderBottom>
+          <fieldset>
+            <legend>Age</legend>
+            <VerticalSpacing size={1} />
+            <p>Select your age so we can tell you what you are eligible for</p>
+            <RadioGroup>
+              {allAges.map((item) => {
+                return (
+                  <RadioButton
+                    key={item}
+                    label={item}
+                    name={'age'}
+                    checked={item === age}
+                    onChange={ageUpdate}
+                  />
+                )
+              })}
+            </RadioGroup>
+          </fieldset>
+        </FilterSection>
+        {/* <FilterSection>
         <h3>Cost</h3>
       </FilterSection> */}
-      <FilterSection>
-        <fieldset>
-          <legend>Format of Support / Activity</legend>
-          <CheckboxGroup>
-            {allFormats.map((format) => {
-              return (
-                <Checkbox
-                  key={format}
-                  label={format}
-                  checked={formats.includes(format)}
-                  onChange={() => formatUpdate(format)}
-                />
-              )
-            })}
-          </CheckboxGroup>
-        </fieldset>
-      </FilterSection>
-      <FilterSection>
-        <fieldset>
-          <legend>Area</legend>
-          <CheckboxGroup>
-            {allAreas.map((area) => {
-              return (
-                <Checkbox
-                  key={area}
-                  label={area}
-                  checked={areas.includes(area)}
-                  onChange={() => areaUpdate(area)}
-                />
-              )
-            })}
-          </CheckboxGroup>
-        </fieldset>
-      </FilterSection>
-      <VerticalSpacing />
-      <Footer>
-        <Link href={`/`} passHref>
-          <ButtonLink onClick={saveNotify}>Apply Filter</ButtonLink>
-        </Link>
-      </Footer>
+        <FilterSection borderBottom>
+          <fieldset>
+            <legend>Format of Support / Activity</legend>
+            <CheckboxGroup>
+              {allFormats.map((format) => {
+                return (
+                  <Checkbox
+                    key={format}
+                    label={format}
+                    checked={formats.includes(format)}
+                    onChange={() => formatUpdate(format)}
+                  />
+                )
+              })}
+            </CheckboxGroup>
+          </fieldset>
+        </FilterSection>
+        <FilterSection>
+          <fieldset>
+            <legend>Area</legend>
+            <CheckboxGroup>
+              {allAreas.map((area) => {
+                return (
+                  <Checkbox
+                    key={area}
+                    label={area}
+                    checked={areas.includes(area)}
+                    onChange={() => areaUpdate(area)}
+                  />
+                )
+              })}
+            </CheckboxGroup>
+          </fieldset>
+        </FilterSection>
+        <VerticalSpacing />
+        <Footer>
+          <Link href={`/`} passHref>
+            <ButtonLink onClick={saveNotify}>Apply Filter</ButtonLink>
+          </Link>
+        </Footer>
+      </FilterLayout>
     </Layout>
   )
 }
