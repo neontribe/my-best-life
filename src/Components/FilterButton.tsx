@@ -7,11 +7,14 @@ import { FilterContext } from '../context/FilterContext'
 import { VisuallyHidden } from './VisuallyHidden'
 
 const ButtonContainer = styled.div`
-  width: 100%;
+  align-items: center;
   display: flex;
   justify-content: flex-end;
   margin: 1rem 0;
-  align-items: center;
+  position: sticky;
+  top: calc(${(props) => props.theme.headerHeight} - 1.5rem);
+  width: 100%;
+  z-index: 5;
 `
 
 const ButtonLink = styled(ButtonBase)`
@@ -21,7 +24,6 @@ const ButtonLink = styled(ButtonBase)`
   padding: 0.5rem;
   position: relative;
   width: 7rem;
-  z-index: 5;
 
   svg {
     height: 1.2em;

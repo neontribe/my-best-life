@@ -39,5 +39,7 @@ declare module 'styled-components' {
       small: string
       large: string
     }
+
+    headerHeight: string
   }
 }
