@@ -23,6 +23,11 @@ location: >+
 
 area:
   - Oval
+  - Larkhall
+  - Brixton Hill
+  - Clapham Common
+  - Streatham Wells
+  - Gipsy Hill
 time: "Walk-in sessions. The team generally work Mondays to Fridays, but you can
   leave a message in the evening and over weekends. "
 quotation: I felt comfortable to discuss any issues surrounding my health. I was
