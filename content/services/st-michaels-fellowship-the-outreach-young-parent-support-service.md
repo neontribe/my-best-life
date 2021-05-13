@@ -20,7 +20,8 @@ age:
 eligibility: "For parents living in Lambeth, including expectant young parents,
   and their children. "
 format: One to one chats
-location: Weekly groups are run throughout the year at different Lambeth
+location: We offer highly bespoke 1 to 1 support as needed by the individual
+  parent, and weekly groups are run throughout the year at different Lambeth
   Children's Centres.
 expectation: "It aims to be a safe and non-judgemental support. Can provide help
   if you're unsure of what decisions to make or where to go for support. Can
@@ -35,5 +36,4 @@ email: admin@stmichaelsfellowship.org.uk
 form: https://stmichaelsfellowship.org.uk/services/Outreach
 phone: "020 8835 8570 "
 website: https://stmichaelsfellowship.org.uk/services/Outreach
- 
 ---
