@@ -31,5 +31,5 @@ contactExplanation: "Contact the Well Centre for an appointment so it can ensure
 email: lamccg.thewellcentre@nhs.net
 phone: 020 8473 1581
 website: https://www.thewellcentre.org/
-reviews: []
+ 
 ---

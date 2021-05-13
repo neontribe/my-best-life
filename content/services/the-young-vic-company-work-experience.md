@@ -32,5 +32,5 @@ time: "Runs year-round (except August) and usually lasts one week. Often booked
   up to a year in advance. "
 email: schools@youngvic.org
 website: https://www.youngvic.org/about-us/work-experience-and-placements
-reviews: []
+ 
 ---

@@ -30,9 +30,6 @@ area:
   - Gipsy Hill
 time: "Walk-in sessions. The team generally work Mondays to Fridays, but you can
   leave a message in the evening and over weekends. "
-quotation: I felt comfortable to discuss any issues surrounding my health. I was
-  provided with the help that I needed. I am so grateful to have someone to call
-  and get advice from no matter the situation I find myself in.
 expectation: If you have got in touch or you have been referred to the service,
   you can expect to hear from a member of our team within 2-3 working days. They
   will discuss your situation with you and arrange ongoing support as required.
@@ -44,7 +41,8 @@ phone: 07771 390729
 website: https://www.brook.org.uk/services/dash-lambeth/#gethelpfromDASH
 reviews:
   - comment: The nurse helping me was extremely kind and helpful and really helped
-      me open up which i was originally scared to do.
+      me open up which i was originally scared to do. I am so grateful to have someone to call
+      and get advice from no matter the situation I find myself in.
   - comment: I felt comfortable to discuss any issues surrounding my health. I was
       provided with the help that I needed.
 ---

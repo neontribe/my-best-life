@@ -31,12 +31,6 @@ format: Meeting a group of people
 location: South Norwood Methodist Church, Suffolk Road, London SE25 6EG
 makeMapLink: true
 time: "Tuesday evenings, 6.30pm - 8.30pm. A one-year programme. "
-quotation: The LIT programme I believe has been paramount to making me stand out
-  to the other numerous students my age. This is something I have proudly put on
-  my CV and personal statement. Entering work, especially the industry of
-  engineering which I wish to go into, is becoming ever more competitive and
-  opportunities like the LIT program is something that will help me become more
-  hireable.
 contactExplanation: Fill out the application form. If you have any questions,
   get in touch via email.
 email: info@reachinghigher.org.uk

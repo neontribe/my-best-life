@@ -8,7 +8,7 @@ interface ReviewProps {
 }
 
 const ReviewBody = styled.div`
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
 `
 
 const BottomContainer = styled.div`

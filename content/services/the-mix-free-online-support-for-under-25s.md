@@ -35,5 +35,5 @@ expectation: ""
 form: https://www.themix.org.uk/get-support/speak-to-our-team/email-us
 phone: 0808 808 4994 or text 85258
 website: https://www.themix.org.uk/
-reviews: []
+ 
 ---

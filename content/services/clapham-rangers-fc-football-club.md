@@ -44,5 +44,4 @@ contactExplanation: New players need to register in advance by completing the
   your ability assessed to ensure you play in a team of a similar skill set.
 form: https://claphamrangersfc.com/registration/
 website: https://claphamrangersfc.com/
-reviews: []
 ---

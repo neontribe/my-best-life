@@ -42,5 +42,4 @@ contactExplanation: New players need to register in advance on the club
   link below to register.
 form: https://claphamrangersfc.com/registration/
 website: https://claphamrangersfc.com/clapham-rangers-fc-girls-academy/
-reviews: []
 ---

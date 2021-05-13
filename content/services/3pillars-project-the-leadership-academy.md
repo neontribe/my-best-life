@@ -36,5 +36,4 @@ area:
 contactExplanation: Send an email or visit the website for more info.
 email: " info@3pillarsproject.com"
 website: https://www.3pillarsproject.com/our-work
-reviews: []
 ---

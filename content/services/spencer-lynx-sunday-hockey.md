@@ -29,5 +29,5 @@ makeMapLink: true
 contactExplanation: Email at spencerlynxhockey@gmail.com
 email: spencerlynxhockey@gmail.com
 website: https://spencerlynx.com/
-reviews: []
+ 
 ---

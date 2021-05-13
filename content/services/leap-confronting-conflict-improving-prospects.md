@@ -21,8 +21,8 @@ eligibility: "This is open to anyone young person living in London, but you will
   can also refer yourself onto the course. Please get in contact with the team
   to find out more, or use the referral form. "
 format: Meeting a group of people
-quotation: Leap’s training has made me more aware of my own actions. I am more
-  considerate of others, and I am softer as a person.
+reviews: [{comment: "Leap’s training has made me more aware of my own actions. I am more
+  considerate of others, and I am softer as a person."}]
 contactExplanation: "By referral. Get in touch with the Improving prospects team
   to ask more. You can ask for Sherée Prospere, Chloe Thorogood or Aaliyah
   Glasgow. "

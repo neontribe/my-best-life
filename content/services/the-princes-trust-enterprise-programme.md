@@ -26,8 +26,8 @@ eligibility: Based in the South of England (from Devon and Cornwall right up to 
 format: Online
 time: "A 4-day programme that runs regularly. Complete an application for more
   info and upcoming dates. "
-quotation: Enterprise helped me see the bigger picture and make a business out
-  of my passion, with the support of my amazing mentor!
+reviews: [{comment: "Enterprise helped me see the bigger picture and make a business out
+  of my passion, with the support of my amazing mentor!"}]
 contactExplanation: Get in touch to sign up. Online application will open again soon. Call
   or start a live chat session online via their website.
 phone: 0800 842 842

@@ -35,5 +35,5 @@ email: admin@stmichaelsfellowship.org.uk
 form: https://stmichaelsfellowship.org.uk/services/Outreach
 phone: "020 8835 8570 "
 website: https://stmichaelsfellowship.org.uk/services/Outreach
-reviews: []
+ 
 ---

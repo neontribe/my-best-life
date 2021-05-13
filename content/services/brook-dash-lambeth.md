@@ -29,7 +29,6 @@ area:
   - Larkhall
 time: "The team generally work Mondays to Fridays, but you can leave a message
   in the evening and over weekends. "
-quotation: ""
 contactExplanation: Contact Valentina via phone or email.
 email: Lambeth@Brook.org
 phone: 07917 460749

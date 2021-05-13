@@ -27,7 +27,6 @@ area:
 time: "Spread over around 14 days between September and July each year. Most of
   the set programme will take place in half terms/holidays or Sundays in term
   time. "
-quotation: ""
 contactExplanation: "Applications for LPO Junior Artists 2021/22 will open in
   Spring 2021. To apply, you need to make sure you're eligible in terms of
   musical experience and under-representation. You need to be considering
