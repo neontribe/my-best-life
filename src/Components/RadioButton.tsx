@@ -31,6 +31,11 @@ const RadioButtonItem = styled.li<{ checked: boolean }>`
     clip: rect(0, 0, 0, 0);
     white-space: nowrap; /* added line */
     border: 0;
+
+    &:focus ~ span {
+      outline: 2px dashed ${(props) => props.theme.colours.blue};
+      outline-offset: 4px;
+    }
   }
 
   span {

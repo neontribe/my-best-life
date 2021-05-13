@@ -177,7 +177,7 @@ export const FilterPage: NextPage = () => {
               </svg>
             </h1>
             <Link href={'/'} passHref>
-              <CloseButton>
+              <CloseButton aria-label="back to card list">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
