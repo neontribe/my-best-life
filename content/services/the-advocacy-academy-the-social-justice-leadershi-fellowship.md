@@ -1,6 +1,6 @@
 ---
 organisation: The Advocacy Academy
-title: The Social Justice Leadershi Fellowship
+title: The Social Justice Leadership Fellowship
 shortDescription: Campaigning training programme
 image:
   image: img/campaigning1.jpeg
