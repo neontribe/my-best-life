@@ -16,7 +16,19 @@ age:
 eligibility: "Available to all young people in Lambeth under 21 (or under 25 if
   you have SEND). "
 format: One to one chats
-location: Multiple locations throughout Lambeth and surrounding boroughs.
+location: "There are six DASH Lambeth sites across Lambeth: Lillian Bayliss
+  School, Evolve Housing, Lambeth Youth Offending Service, Lambeth College
+  (under 21s), Gracefield Gardens Health Centre (under 21s) and Park Campus
+  Academy."
+area:
+  - Clapham Common
+  - Oval
+  - Gipsy Hill
+  - Streatham Wells
+  - Brixton Hill
+  - Larkhall
+time: "The team generally work Mondays to Fridays, but you can leave a message
+  in the evening and over weekends. "
 quotation: "The nurse helping me was extremely kind and helpful and really
   helped me open up which I was originally scared to do. "
 contactExplanation: Contact Valentina via phone or email.
