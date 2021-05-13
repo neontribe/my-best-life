@@ -109,6 +109,10 @@ const CheckboxGroup = styled.div`
   margin: 1rem 0;
 `
 
+const RadioGroup = styled.div`
+  margin: 1rem 0;
+`
+
 const Footer = styled.div`
   padding: 1rem;
   background-color: #ffffff;
@@ -118,12 +122,6 @@ const Footer = styled.div`
   max-width: 50ch;
   margin: auto;
   border-top: 1px solid ${(props) => props.theme.colours.yellow};
-`
-
-const HorizontalGroup = styled.div`
-  margin: 1rem 0;
-  display: flex;
-  justify-content: space-between;
 `
 
 const ButtonLink = styled(ButtonBase)`
@@ -190,7 +188,7 @@ export const FilterPage: NextPage = () => {
       <FilterSection borderBottom>
         <fieldset>
           <legend>Age</legend>
-          <HorizontalGroup>
+          <RadioGroup>
             {allAges.map((item) => {
               return (
                 <RadioButton
@@ -202,7 +200,7 @@ export const FilterPage: NextPage = () => {
                 />
               )
             })}
-          </HorizontalGroup>
+          </RadioGroup>
           <p>Select your age so we can tell you what you are eligible for</p>
         </fieldset>
       </FilterSection>
