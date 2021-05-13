@@ -20,6 +20,10 @@ age:
   minAge: 15
   maxAge: 18
 format: Meeting a group of people
+location: London Philharmonic Orchestra Ltd. 89 Albert Embankment, London SE1 7TP
+makeMapLink: true
+area:
+  - Prince's
 time: "Spread over around 14 days between September and July each year. Most of
   the set programme will take place in half terms/holidays or Sundays in term
   time. "
