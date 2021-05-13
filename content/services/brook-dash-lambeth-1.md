@@ -22,6 +22,9 @@ time: "Walk-in sessions. The team generally work Mondays to Fridays, but you can
 quotation: I felt comfortable to discuss any issues surrounding my health. I was
   provided with the help that I needed. I am so grateful to have someone to call
   and get advice from no matter the situation I find myself in.
+expectation: If you have got in touch or you have been referred to the service,
+  you can expect to hear from a member of our team within 2-3 working days. They
+  will discuss your situation with you and arrange ongoing support as required.
 contactExplanation: "Contact Pippa via phone or email. All sessions are walk-in
   (no appointment needed). You may be able to pick up condoms, pregnancy tests
   or chlamydia screening kits without needing to see a nurse. "
