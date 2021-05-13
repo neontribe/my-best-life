@@ -17,10 +17,13 @@ interests:
 costValue: 35
 costQualifier: ""
 costExplanation: Prices start at £35 per hour
+age:
+  minAge: 8
 eligibility: Open to all ages and abilities
 format: One to one chats
 location: Grooveschool, Business Launchpad, 3Space, International House,
   Canterbury Cres, Brixton, London SW9 7QD
+makeMapLink: true
 area:
   - Coldharbour
 time: Various times, subject to availability.
