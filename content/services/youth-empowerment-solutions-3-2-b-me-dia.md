@@ -39,10 +39,12 @@ location: |-
   SW16 6HG
   England & Wales
 makeMapLink: true
+area:
+  - St Leonard's
+time: ""
 contactExplanation: Use the email link or phone number below to contact the
   organisation about what's on.
 email: info@yescharity.org
 phone: 07725 231 613
 website: http://yescharity.org/services
- 
 ---
