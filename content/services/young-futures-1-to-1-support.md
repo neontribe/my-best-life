@@ -20,9 +20,6 @@ eligibility: You must be leaving care
 format: One to one chats
 location: 127 Lambeth Walk, London, SE11 6EE
 makeMapLink: true
-reviews: [{comment: "When I first met them, I was someone who couldn't even leave the house. Now
-  I've got some independence back. It's a big deal - I feel like people can see
-  I'm worth something. Thank you for never judging me. Thank you for helping me learn to fear the world less and express myself more."}]
 area:
   - Prince's
 contactExplanation: "You will need a referral from an adult. "

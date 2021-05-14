@@ -47,5 +47,4 @@ contactExplanation: Use the email link or phone number below to contact the
 email: info@yescharity.org
 phone: 07725 231 613
 website: http://yescharity.org/services
-
 ---
