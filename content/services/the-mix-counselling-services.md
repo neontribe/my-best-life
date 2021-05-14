@@ -41,5 +41,5 @@ contactExplanation: You will need to fill in the online form linked below and
   The Mix will get in touch with your shortly.
 form: https://www.themix.org.uk/get-support/speak-to-our-team/the-mix-counselling-service
 website: https://www.themix.org.uk/get-support/speak-to-our-team/the-mix-counselling-service
-reviews: []
+ 
 ---

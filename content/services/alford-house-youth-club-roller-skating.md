@@ -26,12 +26,14 @@ age:
   minAge: 11
   maxAge: 13
 format: Meeting a group of people
-location: Aveline Street, Kennington, London, SE11 5DQ
+location: Alford House, Aveline Street, Kennington, London, SE11 5DQ
 makeMapLink: true
+area:
+  - Prince's
 time: Tuesdays 6.30pm - 8pm.
 contactExplanation: Just drop in or alternatively visit the website for more info.
 email: theclub@alfordhouse.org.uk
 phone: 020 7735 1519
 website: https://alfordhouse.org.uk/youth-club/whats-on/
-reviews: []
+ 
 ---

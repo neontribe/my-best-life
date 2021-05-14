@@ -25,12 +25,14 @@ eligibility: This is open to girls only and you will need a referral from an adu
 format: Meeting a group of people
 location: 3space International House, Canterbury Crescent, Brixton SW9 7QD
 makeMapLink: true
-quotation: Jenni Steele has a vision on how a community should support each
+reviews: [{comment: "Jenni Steele has a vision on how a community should support each
   other. The biggest experience for me was seeing how impactful being a young
   role model is to my community. I really enjoyed speaking on my journey. I was
   able to share with the kids real life’s truths. Life isn’t easy but you have
-  to keep going. Congratulations on your tour Jenni. Long may it continue.
-contactExplanation: "By referral. "
+  to keep going. Congratulations on your tour Jenni. Long may it continue."}]
+area:
+  - Coldharbour
+contactExplanation: "By referral."
 email: jenni@jennisteele.co.uk
 form: https://www.jennisteele.co.uk/contact/
 website: https://www.juvenis.org.uk/portfolio/yana-project/

@@ -18,7 +18,6 @@ age:
   maxAge: 19
 eligibility: "You must live in south or south-west London. "
 format: Meeting a group of people
-quotation: ""
 expectation: >-
   It is a series of workshops which lift the lid on the different facets of
   digital, led by a team of industry thinkers who will encourage you to consider
@@ -38,11 +37,10 @@ contactExplanation: "If you live in South/South West London and would like to
 email: hellodigitaldisruptors@gmail.com
 form: https://www.surveymonkey.co.uk/r/Disruptors2019
 website: https://digitaldisruptors.org.uk/
-reviews:
-  - comment: "\"I really enjoyed the programme. All the workshops were interesting
+reviews: [{comment: "I really enjoyed the programme. All the workshops were interesting
       and informative and I learnt much more than I thought I would. Not just
-      about adverts, which is what initially came to my mind when I thought of
-      'digital marketing', but about film-making, storytelling, and even colour
+      about advers, which is what initially came to my mind when I thought of
+      'digital marketing'but about film-making, storytelling, and even colour
       psychology. My favourite part of the programme was definitely the final
       pitch. ... I realise now how many careers there are in the digital
       marketing field, and although I’m still not completely sure about the path
@@ -50,6 +48,4 @@ reviews:
       shown me that entrepreneurship and changing the community around me isn’t
       as difficult as it seems. ... If you want to build your confidence and use
       your creativity while developing a digital solution that will help others
-      around you, go for it!\""
-    author: Katie Jyemfa, 2018 Digital Disruptor Winner
----
+      around you, go for it!"}]

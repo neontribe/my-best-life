@@ -22,6 +22,8 @@ format: One to one chats
 location: Herne Hill Group Practice, 74 Herne Hill, London  SE24 9QP (entrance
   via Kestrel Avenue)
 makeMapLink: true
+area:
+  - Herne Hill
 time: "Mon, Weds and Thurs 11.00-18.30, Fri 8.00-16.00. "
 contactExplanation: "Contact the Well Centre for an appointment so it can ensure
   social distancing is in place. Currently running a mixture of face-to-face,
@@ -29,5 +31,5 @@ contactExplanation: "Contact the Well Centre for an appointment so it can ensure
 email: lamccg.thewellcentre@nhs.net
 phone: 020 8473 1581
 website: https://www.thewellcentre.org/
-reviews: []
+ 
 ---

@@ -20,11 +20,11 @@ categories:
 costValue: 0
 format: Online
 time: Get in touch at any time of the day - advisors work around the clock
-quotation: '"You have helped me so much. The support you have given me in the
+reviews: [{author: 'Abigail', comment: "You have helped me so much. The support you have given me in the
   past is amazing and I have beat the cyber bullies all because of you. Never be
   afraid to contact Cybersmile because they will always send you a smile back!
   The advice and help is brilliant and I highly recommend them to anyone who is
-  being cyber bullied." - Abigail'
+  being cyber bullied."}]
 contactExplanation: "Reach out to the trained support team via email. The email should
   contain as much information about your problem as possible - include evidence
   of cyberbullying, online abuse or harassment - as this could be needed at a

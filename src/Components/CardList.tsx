@@ -24,7 +24,7 @@ interface CardListProps {
   onLoad?(): void
 }
 
-const List = styled.ul`
+const Content = styled.div`
   padding: 0 var(--gutter-width);
 `
 
@@ -43,10 +43,8 @@ export const CardList = ({
   const feelingWeight = 1
   const [page, setPage] = useState<number | null>(null)
 
-  const [
-    filteredServices,
-    setFilteredServices,
-  ] = useState<Array<ServicePreview> | null>(null)
+  const [filteredServices, setFilteredServices] =
+    useState<Array<ServicePreview> | null>(null)
 
   // Derive some things we need to know from the filtered services
   const totalPages = filteredServices
@@ -311,58 +309,52 @@ export const CardList = ({
     assignQuizScore,
   ])
 
-  return filteredServices !== null ? (
-    <>
-      {filteredServices && filteredServices.length > 0 ? (
-        <>
-          <CardListNavigation
-            onForward={() => pageChange(1)}
-            onBack={() => pageChange(-1)}
-            page={page}
-            totalPages={totalPages}
-            isFirstPage={isFirstPage}
-            isLastPage={isLastPage}
-          />
-          <List>
-            {listType === 'filtered' ? <QuizEncouragement /> : null}
-            {listType === 'filtered' ? <FilterButton /> : null}
-            {page !== null &&
-              toRender.map((service: ServicePreview, id: number) => (
-                <Card
-                  key={service.id}
-                  id={service.id}
-                  title={service.title}
-                  shortDescription={service.shortDescription}
-                  image={service.image}
-                  costValue={service.costValue}
-                  costQualifier={service.costQualifier}
-                  age={service.age}
-                  format={service.format}
-                  ref={
-                    id === toRender.length - 1
-                      ? (ref) => setLoadedRef(ref)
-                      : null
-                  }
-                />
-              ))}
-          </List>
-          <CardListNavigation
-            onForward={() => pageChange(1)}
-            onBack={() => pageChange(-1)}
-            page={page}
-            totalPages={totalPages}
-            isFirstPage={isFirstPage}
-            isLastPage={isLastPage}
-          />
-        </>
-      ) : (
-        <EmptyList
-          defaultService={services.find((el) => el.id === DEFAULT_SERVICE_ID)}
-          listType={listType}
-        />
-      )}
-    </>
+  if (filteredServices === null) return <></>
+
+  return filteredServices && filteredServices.length > 0 ? (
+    <Content>
+      <CardListNavigation
+        onForward={() => pageChange(1)}
+        onBack={() => pageChange(-1)}
+        page={page}
+        totalPages={totalPages}
+        isFirstPage={isFirstPage}
+        isLastPage={isLastPage}
+      />
+      {listType === 'filtered' ? <QuizEncouragement /> : null}
+      {listType === 'filtered' ? <FilterButton /> : null}
+      <ul>
+        {page !== null &&
+          toRender.map((service: ServicePreview, id: number) => (
+            <Card
+              key={service.id}
+              id={service.id}
+              title={service.title}
+              shortDescription={service.shortDescription}
+              image={service.image}
+              costValue={service.costValue}
+              costQualifier={service.costQualifier}
+              age={service.age}
+              format={service.format}
+              ref={
+                id === toRender.length - 1 ? (ref) => setLoadedRef(ref) : null
+              }
+            />
+          ))}
+      </ul>
+      <CardListNavigation
+        onForward={() => pageChange(1)}
+        onBack={() => pageChange(-1)}
+        page={page}
+        totalPages={totalPages}
+        isFirstPage={isFirstPage}
+        isLastPage={isLastPage}
+      />
+    </Content>
   ) : (
-    <></>
+    <EmptyList
+      defaultService={services.find((el) => el.id === DEFAULT_SERVICE_ID)}
+      listType={listType}
+    />
   )
 }

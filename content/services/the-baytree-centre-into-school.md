@@ -24,8 +24,8 @@ location: The Baytree Centre, 300-302 Brixton Road, London SW9 6AE
 makeMapLink: true
 time: "Classes Monday to Wednesday. Currently operating remotely, with two
   lessons from 11am to 12pm and from 12pm to 1pm. "
-quotation: "Baytree makes me feel like I can do something in my life. Like I can
-  achieve my goals. "
+reviews: [{comment: "Baytree makes me feel like I can do something in my life. Like I can
+  achieve my goals."}]
 contactExplanation: "You will need a parents/guardian or youth worker to sign you up for
   support. Get them to fill in the referral form below or call or call 0207 733
   5283. "

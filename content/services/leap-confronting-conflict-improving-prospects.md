@@ -15,13 +15,14 @@ costValue: 0
 age:
   minAge: 15
   maxAge: 21
-eligibility: "Needs a referral to participate. Takes referrals from partners in
-  the community like local councils, youth services, youth offending services
-  and schools. You can also refer yourself onto the course. Please get in
-  contact with the team to find out more, or use the referral form. "
+eligibility: "This is open to anyone young person living in London, but you will
+  need a referral to participate. Takes referrals from partners in the community
+  like local councils, youth services, youth offending services and schools. You
+  can also refer yourself onto the course. Please get in contact with the team
+  to find out more, or use the referral form. "
 format: Meeting a group of people
-quotation: Leap’s training has made me more aware of my own actions. I am more
-  considerate of others, and I am softer as a person.
+reviews: [{comment: "Leap’s training has made me more aware of my own actions. I am more
+  considerate of others, and I am softer as a person."}]
 contactExplanation: "By referral. Get in touch with the Improving prospects team
   to ask more. You can ask for Sherée Prospere, Chloe Thorogood or Aaliyah
   Glasgow. "

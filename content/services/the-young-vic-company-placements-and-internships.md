@@ -35,5 +35,5 @@ contactExplanation: "Check out the website link and send a current CV and cover
   rachelsalenius@youngvic.org, following the instructions on the website. "
 email: "rachelsalenius@youngvic.org "
 website: https://www.youngvic.org/about-us/work-experience-and-placements
-reviews: []
+ 
 ---
