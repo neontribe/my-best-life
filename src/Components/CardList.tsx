@@ -43,10 +43,8 @@ export const CardList = ({
   const feelingWeight = 1
   const [page, setPage] = useState<number | null>(null)
 
-  const [
-    filteredServices,
-    setFilteredServices,
-  ] = useState<Array<ServicePreview> | null>(null)
+  const [filteredServices, setFilteredServices] =
+    useState<Array<ServicePreview> | null>(null)
 
   // Derive some things we need to know from the filtered services
   const totalPages = filteredServices
