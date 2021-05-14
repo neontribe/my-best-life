@@ -29,6 +29,7 @@
     "next": "latest",
     "react": "16.14.0",
     "react-dom": "16.13.0",
+    "react-hotjar": "2.2.1",
     "remark": "13.0.0",
     "remark-html": "13.0.1",
     "simple-oauth2": "2.5.2",
