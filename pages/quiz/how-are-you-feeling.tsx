@@ -116,8 +116,8 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
 
   return (
     <Layout>
+      <HeaderComponent title="Support in Lambeth" />
       <Section>
-        <HeaderComponent title="Support in Lambeth" />
         <Navigation>
           <LinkButton
             textContent="back"
