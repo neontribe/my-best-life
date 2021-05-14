@@ -10,25 +10,12 @@ import { LinkButton } from '../../src/Components/LinkButton'
 import { StickyNavBar } from '../../src/Components/StickyNavBar'
 import ImageCheckboxes from '../../src/Components/ImageCheckboxes'
 
-const Section = styled.section`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-`
 const Navigation = styled.section`
   align-items: center;
   display: flex;
   justify-content: space-between;
   padding: 1rem 0 1rem 0;
   width: 100%;
-`
-
-const QuestionSection = styled.section`
-  margin: 1rem;
-
-  h2 {
-    font-size: ${(props) => props.theme.fontSizes.heading};
-  }
 `
 
 const StyledLink = styled.a`
@@ -62,8 +49,12 @@ const StyledLink = styled.a`
   }
 `
 
-// Wraps the checkbox area of component
 const CheckboxGroup = styled.div`
+  max-width: 50ch;
+  margin: auto;
+  padding: 1rem var(--gutter-width);
+  width: 100%;
+
   legend {
     border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
     font-family: 'Catamaran', sans-serif;
@@ -117,41 +108,40 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
   return (
     <Layout>
       <HeaderComponent title="Support in Lambeth" />
-      <Section>
-        <Navigation>
-          <LinkButton
-            textContent="back"
-            arrow="left"
-            onClick={() => router.push('whats-on-your-mind')}
-          />
-        </Navigation>
-        <QuestionSection>
-          <CheckboxGroup>
-            <fieldset>
-              <legend>How are you feeling?</legend>
-              <VerticalSpacing size={1} />
-              <LinkButton
-                textContent="skip this question"
-                arrow="right"
-                onClick={() => router.push('what-are-your-interests')}
-              />
-              <VerticalSpacing />
-              <ImageCheckboxes
-                id="feelings-checkboxes"
-                values={feelings}
-                contextGet={howAreFeelingGet}
-                contextToggle={howAreFeelingToggle}
-              />
-            </fieldset>
-          </CheckboxGroup>
-          <VerticalSpacing />
-        </QuestionSection>
+      <Navigation>
+        <LinkButton
+          textContent="back"
+          arrow="left"
+          onClick={() => router.push('whats-on-your-mind')}
+        />
+      </Navigation>
 
-        <StyledLink as="button" onClick={nextPage}>
-          {'Ok'}
-        </StyledLink>
-        <VerticalSpacing />
-      </Section>
+      <CheckboxGroup>
+        <fieldset>
+          <legend>How are you feeling?</legend>
+          <VerticalSpacing size={1} />
+
+          <LinkButton
+            textContent="skip this question"
+            arrow="right"
+            onClick={() => router.push('what-are-your-interests')}
+          />
+          <VerticalSpacing />
+
+          <ImageCheckboxes
+            id="feelings-checkboxes"
+            values={feelings}
+            contextGet={howAreFeelingGet}
+            contextToggle={howAreFeelingToggle}
+          />
+        </fieldset>
+      </CheckboxGroup>
+      <VerticalSpacing />
+
+      <StyledLink as="button" onClick={nextPage}>
+        {'Ok'}
+      </StyledLink>
+      <VerticalSpacing />
       <StickyNavBar />
     </Layout>
   )
