@@ -98,7 +98,7 @@ export const AboutYouPage = (): JSX.Element => {
         <LinkButton
           textContent="back"
           arrow="left"
-          onClick={() => router.push('what-are-your-interests')}
+          onClick={() => router.push('age')}
         />
       </Navigation>
       <QuestionSection>
