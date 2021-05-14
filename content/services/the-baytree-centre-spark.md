@@ -19,7 +19,7 @@ interests:
   - Volunteering
 costValue: 0
 gender:
-  - women
+  - female
 eligibility: "Girls only. All encouraged to explore and be daring, while
   supported and guided by inspirational women. "
 format: Meeting a group of people
