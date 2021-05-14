@@ -35,7 +35,7 @@ const StyledLink = styled.a`
   justify-content: center;
   margin: auto;
   max-width: calc(100% - 2rem);
-  margin-bottom: 30px;
+  margin-bottom: 100px;
 
   &:focus {
     outline: 2px dashed ${(props) => props.theme.colours.blue};
