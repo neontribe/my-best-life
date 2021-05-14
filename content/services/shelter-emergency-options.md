@@ -9,7 +9,7 @@ description: "Find out about hostels and other emergency housing options if you
   have nowhere to stay. Shelter have all the key information you need about
   housing options that you could access. "
 categories:
-  category1: Where I'm Living
+  category1: Housing
   category2: My Rights and the Law
 costValue: 0
 costExplanation: "This service is free to access. "
@@ -20,5 +20,5 @@ format: Online
 contactExplanation: "Explore the information on the page and use the links
   within it to access the right support for you. "
 website: https://england.shelter.org.uk/housing_advice/homelessness/emergency_options_for_homeless_16_to_25_year_olds
- 
+
 ---
