@@ -26,7 +26,7 @@ const StickyContainer = styled.div<{ open: boolean }>`
 `
 
 const HeaderContents = styled.div`
-  align-items: center;
+  align-items: flex-end;
   display: flex;
   min-height: 4rem;
   justify-content: space-between;

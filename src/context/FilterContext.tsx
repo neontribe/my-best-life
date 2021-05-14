@@ -22,7 +22,7 @@ const defaultValueShape = {
   clearAll: () => undefined,
 }
 
-export const allAges = ['<15', '15', '16', '17', '18', '18+']
+export const allAges = ['under 15', '15', '16', '17', '18', 'over 18']
 
 export const allFormats = [
   'One to one chats',
@@ -55,9 +55,8 @@ export const allAreas: Array<Area> = [
   'Larkhall',
 ]
 
-export const FilterContext = createContext<FilterContextValue>(
-  defaultValueShape
-)
+export const FilterContext =
+  createContext<FilterContextValue>(defaultValueShape)
 
 export const FilterProvider: FC<PropsWithChildren<any>> = ({ children }) => {
   const [formats, setFormats] = useState<Array<string>>([])

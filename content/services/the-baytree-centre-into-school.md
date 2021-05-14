@@ -22,6 +22,8 @@ eligibility: "Support to girls who have recently arrived in the UK and have no
 format: Meeting a group of people
 location: The Baytree Centre, 300-302 Brixton Road, London SW9 6AE
 makeMapLink: true
+area:
+  - Ferndale
 time: "Classes Monday to Wednesday. Currently operating remotely, with two
   lessons from 11am to 12pm and from 12pm to 1pm. "
 reviews: [{comment: "Baytree makes me feel like I can do something in my life. Like I can
@@ -33,4 +35,7 @@ email: olive@baytreecentre.org.uk
 form: https://www.baytreecentre.org/wp-content/uploads/2020/02/Baytree-Referral-Form.docx
 phone: 0207 733 5283
 website: https://www.baytreecentre.org/youth-service/into-school/
+reviews:
+  - comment: Baytree makes me feel like I can do something in my life. Like I can
+      achieve my goals.
 ---
