@@ -14,7 +14,6 @@ const CheckboxContainer = styled.div`
 // This is the visual representation of the checked status
 const CheckedDisplay = styled.div`
   border-radius: 1rem;
-  border-top-right-radius: 2rem;
   height: 100%;
   position: absolute;
   width: 100%;
@@ -43,7 +42,6 @@ const CheckboxItem = styled.div`
 
   label {
     border-radius: 1rem;
-    border-top-right-radius: 2rem;
     box-shadow: 0 0 9px 2px ${(props) => props.theme.colours.shadow};
     cursor: pointer;
     display: flex;
