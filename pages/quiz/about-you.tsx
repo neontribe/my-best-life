@@ -115,13 +115,8 @@ const allAges = ['<15', '15', '16', '17', '18', '18+']
 export const AboutYouPage = (): JSX.Element => {
   const router = useRouter()
 
-  const {
-    ageGet,
-    ageSet,
-    genderGet,
-    genderToggle,
-    setQuizComplete,
-  } = useContext(QuizContext)
+  const { ageGet, ageSet, genderGet, genderToggle, setQuizComplete } =
+    useContext(QuizContext)
 
   const skipQuestionAndSeeResults = () => {
     setQuizComplete(true)
