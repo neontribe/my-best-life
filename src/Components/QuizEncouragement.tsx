@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { ButtonBase } from './ButtonBase'
 import { VerticalSpacing } from './VerticalSpacing'
 
-const QuizListItem = styled.li`
+const QuizCard = styled.div`
   background-color: ${(props) => props.theme.colours.yellow_light};
   border-radius: 0.5rem;
   display: flex;
@@ -50,7 +50,7 @@ const QuizButton = styled(ButtonBase)`
 
 export const QuizEncouragement = (): JSX.Element => {
   return (
-    <QuizListItem>
+    <QuizCard>
       <Content>
         <h2>Want more personalised results?</h2>
         <VerticalSpacing size={1} />
@@ -66,6 +66,6 @@ export const QuizEncouragement = (): JSX.Element => {
           />
         </ImageContainer>
       </Content>
-    </QuizListItem>
+    </QuizCard>
   )
 }

@@ -45,8 +45,7 @@ export default {
           name: 'promoted',
           widget: 'boolean',
           required: false,
-          hint:
-            'Check to move this service to the top of the list of all services',
+          hint: 'Check to move this service to the top of the list of all services',
         },
         {
           label: 'Image',
@@ -64,8 +63,7 @@ export default {
               name: 'imageAlt',
               widget: 'string',
               required: false,
-              hint:
-                'A concise text description of the image, for screen readers and other assistive technology.',
+              hint: 'A concise text description of the image, for screen readers and other assistive technology.',
             },
           ],
         },
@@ -73,15 +71,13 @@ export default {
           label: 'Description',
           name: 'description',
           widget: 'text',
-          hint:
-            'What I am going into and how could I get out? What does it do for me? We want to explain what it looks like when you take part and what are the benefits of being involved',
+          hint: 'What I am going into and how could I get out? What does it do for me? We want to explain what it looks like when you take part and what are the benefits of being involved',
         },
         {
           label: 'Categories',
           name: 'categories',
           widget: 'object',
-          hint:
-            'Add categories for the service. Not currently displayed, but influences the quiz results',
+          hint: 'Add categories for the service. Not currently displayed, but influences the quiz results',
           fields: [
             {
               label: 'Category 1',
@@ -145,8 +141,7 @@ export default {
           widget: 'select',
           multiple: true,
           max: 3,
-          hint:
-            'Maximum 3 - Add interest groups for the service. Not currently displayed, but influences the quiz results',
+          hint: 'Maximum 3 - Add interest groups for the service. Not currently displayed, but influences the quiz results',
           required: false,
           options: [
             { label: '-', value: '' },
@@ -169,8 +164,7 @@ export default {
           label: 'Feelings',
           name: 'feelings',
           widget: 'select',
-          hint:
-            'Add feelings the service addresses. Not currently displayed, but influences the quiz results',
+          hint: 'Add feelings the service addresses. Not currently displayed, but influences the quiz results',
           required: false,
           multiple: true,
           options: [
@@ -192,8 +186,7 @@ export default {
           label: 'Cost value',
           name: 'costValue',
           widget: 'number',
-          hint:
-            'The numerical value used for filtering. Choose the lowest value if there are multiple prices',
+          hint: 'The numerical value used for filtering. Choose the lowest value if there are multiple prices',
           value_type: 'float',
           min: 0,
           step: 0.01,
@@ -203,8 +196,7 @@ export default {
           name: 'costQualifier',
           widget: 'string',
           required: false,
-          hint:
-            'A very short cost qualifier for the list view, eg "£5 per week", "£12 per session", "From £18.50"',
+          hint: 'A very short cost qualifier for the list view, eg "£5 per week", "£12 per session", "From £18.50"',
         },
         {
           label: 'Cost explanation',
@@ -243,8 +235,7 @@ export default {
           widget: 'select',
           multiple: true,
           required: false,
-          hint:
-            'Specify if a service will only allow certain genders. Leave blank if unknown',
+          hint: 'Specify if a service will only allow certain genders. Leave blank if unknown',
           options: [
             { label: 'men', value: 'men' },
             { label: 'women', value: 'women' },
@@ -283,16 +274,14 @@ export default {
           name: 'location',
           widget: 'text',
           required: false,
-          hint:
-            'Where possible an actual address of the service, not the head office',
+          hint: 'Where possible an actual address of the service, not the head office',
         },
         {
           label: 'Make map link from location',
           name: 'makeMapLink',
           widget: 'boolean',
           required: false,
-          hint:
-            'Make a Google Maps link from the provided location, to be shown on the service page',
+          hint: 'Make a Google Maps link from the provided location, to be shown on the service page',
         },
         {
           label: 'Ward',
@@ -300,8 +289,7 @@ export default {
           widget: 'select',
           multiple: true,
           required: false,
-          hint:
-            'Select the ward(s) the service operates in. Leave blank for online services',
+          hint: 'Select the ward(s) the service operates in. Leave blank for online services',
           options: [
             { label: 'Gipsy Hill', value: 'Gipsy Hill' },
             { label: 'Thurlow Park', value: 'Thurlow Park' },
@@ -337,8 +325,7 @@ export default {
           label: 'What to expect',
           name: 'expectation',
           widget: 'text',
-          hint:
-            "Add some details to help set a service user's expectations before attending",
+          hint: "Add some details to help set a service user's expectations before attending",
           required: false,
         },
         {
@@ -382,8 +369,7 @@ export default {
               name: 'author',
               widget: 'string',
               required: false,
-              hint:
-                "Who wrote this review? Feel free to include more than the author's name, e.g. 'Isaac, age 17'",
+              hint: "Who wrote this review? Feel free to include more than the author's name, e.g. 'Isaac, age 17'",
             },
             {
               label: 'Comment',
@@ -428,8 +414,7 @@ export default {
             'heading-four',
             'bulleted-list',
           ],
-          hint:
-            'There will already be a heading level 1 in the page, so this content should use a maximum of heading level 2.',
+          hint: 'There will already be a heading level 1 in the page, so this content should use a maximum of heading level 2.',
         },
       ],
     },

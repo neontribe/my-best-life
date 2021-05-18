@@ -81,7 +81,7 @@ const categories: Array<Gender> = [
   'agender',
 ]
 
-export const AboutYouPage = (): JSX.Element => {
+export const GenderPage = (): JSX.Element => {
   const router = useRouter()
 
   const { genderGet, genderToggle, setQuizComplete } = useContext(QuizContext)
@@ -144,4 +144,4 @@ export const AboutYouPage = (): JSX.Element => {
   )
 }
 
-export default AboutYouPage
+export default GenderPage

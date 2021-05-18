@@ -1,24 +1,19 @@
 import styled from 'styled-components'
+import Link from 'next/link'
 
 export const StyledMenu = styled.nav<{ open: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: ${(props) => props.theme.colours.aqua};
-  height: 400px
-  text-align: left;
-  padding: 1rem 2rem 5rem 2rem;
-  position: absolute;
-  top: 5rem;
-  left:0;
-  z-index: 3;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 4rem;
+  z-index: 10;
   width: 100%;
+  max-width: 600px;
 
-  ${(props) =>
-    !props.open &&
-    `
-  display: none;
-  `}
+  ${(props) => !props.open && `display: none;`}
 
   a {
     font-size: ${(props) => props.theme.fontSizes.normal};
@@ -32,9 +27,9 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
       color: ${(props) => props.theme.colours.purple};
     }
 
-      &:focus {
-    background: ${(props) => props.theme.colours.blue_light};
-  }
+    &:focus {
+      background: ${(props) => props.theme.colours.blue_light};
+    }
   }
 `
 
@@ -45,9 +40,15 @@ interface MenuProps {
 export const Menu = ({ open }: MenuProps): JSX.Element => {
   return (
     <StyledMenu open={open} aria-expanded={open}>
-      <a href="/">About</a>
-      <a href="/helplines">Urgent Help</a>
-      <a href="/">Privacy Policy</a>
+      <Link href="/">
+        <a>About</a>
+      </Link>
+      <Link href="/helplines">
+        <a>Urgent Help</a>
+      </Link>
+      <Link href="/privacy-policy" passHref>
+        <a>Privacy Policy</a>
+      </Link>
     </StyledMenu>
   )
 }

@@ -9,15 +9,15 @@ const StyledBurger = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 0.5rem;
 
   &:focus > div {
     background: ${(props) => props.theme.colours.purple};
   }
 
   div {
-    width: 3rem;
-    height: 0.5rem;
+    width: 100%;
+    height: 4px;
     background: ${(props) => props.theme.colours.blue};
     border-radius: 10px;
     transition: all 0.3s linear;

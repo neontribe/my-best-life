@@ -7,10 +7,10 @@ image:
   imageAlt: A women kissing her child
 description: >-
   For those who may need support to make the transition to being a parent.
-  Support can be 1-2-1 or a group setting. 
+  Support can be 1-2-1 or a group setting.
 
 
-  Highly bespoke 1-2-1 support, which could be drop-ins, following a programme, or having a mixture of socialising, informal learning, user-led learning and short-term projects. Weekly groups throughout the year at different Lambeth Children's Centres. Young people are supported by and learn from each other, mentors and facilitators. 
+  Highly bespoke 1-2-1 support, which could be drop-ins, following a programme, or having a mixture of socialising, informal learning, user-led learning and short-term projects. Weekly groups throughout the year at different Lambeth Children's Centres. Young people are supported by and learn from each other, mentors and facilitators.
 categories:
   category1: Family
   category2: Sex and Relationships

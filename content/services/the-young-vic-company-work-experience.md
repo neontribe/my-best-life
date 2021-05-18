@@ -28,9 +28,10 @@ eligibility: "Email schools@youngvic.org. Tell them what you hope to experience
 format: Meeting a group of people
 location: Young Vic, 66 The Cut, Waterloo, London SE1 8LZ
 makeMapLink: true
+area:
+  - Bishop's
 time: "Runs year-round (except August) and usually lasts one week. Often booked
   up to a year in advance. "
 email: schools@youngvic.org
 website: https://www.youngvic.org/about-us/work-experience-and-placements
- 
 ---

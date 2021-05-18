@@ -75,7 +75,7 @@ const RadioGroup = styled.div`
 
 const allAges = ['under 15', '15', '16', '17', '18', 'over 18']
 
-export const AboutYouPage = (): JSX.Element => {
+export const AgePage = (): JSX.Element => {
   const router = useRouter()
 
   const { ageGet, ageSet } = useContext(QuizContext)
@@ -126,4 +126,4 @@ export const AboutYouPage = (): JSX.Element => {
   )
 }
 
-export default AboutYouPage
+export default AgePage

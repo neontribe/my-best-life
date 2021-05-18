@@ -25,12 +25,15 @@ eligibility: "Girls only. All encouraged to explore and be daring, while
 format: Meeting a group of people
 location: The Baytree Centre, 300-302 Brixton Road, London SW9 6AE
 makeMapLink: true
+area:
+  - Ferndale
 time: Wednesdays from 5pm to 6.30pm
-reviews: [{comment: "Before I joined Spark, I didn't really have anyone I could talk to -
-  but I really trust the girls I have met and I know they have my back."}]
 contactExplanation: "To register email, call or text (07494 679982) or visit the Baytree Centre. "
 email: youth@baytreecentre.org.uk or rosanna@baytreecentre.org.uk
 form: https://www.baytreecentre.org/wp-content/uploads/2020/02/Baytree-Referral-Form.docx
 phone: 020 7733 5283
 website: https://www.baytreecentre.org/youth-service/spark/
+reviews:
+  - comment: Before I joined Spark, I didn't really have anyone I could talk to -
+      but I really trust the girls I have met and I know they have my back.
 ---
