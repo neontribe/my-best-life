@@ -34,7 +34,7 @@ age:
   minAge: 8
   maxAge: 17
 gender:
-  - women
+  - female
 format: Meeting a group of people
 location: Alford House, Aveline Street, Kennington, London, SE11 5DQ
 makeMapLink: true
@@ -45,5 +45,5 @@ contactExplanation: Just drop in or alternatively visit the website for more inf
 email: theclub@alfordhouse.org.uk
 phone: 020 7735 1519
 website: https://alfordhouse.org.uk/youth-club/whats-on/
- 
+
 ---

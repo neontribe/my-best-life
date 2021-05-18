@@ -4,13 +4,13 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 import { Layout } from '../../src/Components/Layout'
-import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { HeaderComponent } from '../../src/Components/Header'
+import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { Checkbox } from '../../src/Components/Checkbox'
 import { QuizContext } from '../../src/context/QuizContext'
 import { LinkButton } from '../../src/Components/LinkButton'
 
-import { Interest } from '../../cms/services'
+import { Gender } from '../../cms/services'
 import { StickyNavBar } from '../../src/Components/StickyNavBar'
 
 const Navigation = styled.section`
@@ -21,7 +21,7 @@ const Navigation = styled.section`
   width: 100%;
 `
 
-const CheckboxGroup = styled.div`
+const QuestionSection = styled.section`
   max-width: 50ch;
   margin: auto;
   padding: 1rem var(--gutter-width);
@@ -70,25 +70,26 @@ const StyledLink = styled.a`
   }
 `
 
-const interests: Array<Interest> = [
-  'Sports',
-  'Music',
-  'Films and TV',
-  'Art and Design',
-  'Drama',
-  'Reading',
-  'Writing',
-  'Cooking',
-  'Volunteering',
-  'Outdoor Activities',
-  'Activism',
-  'Fashion and Beauty',
-  'Gaming',
+const categories: Array<Gender> = [
+  'male',
+  'female',
+  'non-binary',
+  'transgender',
+  'intersex',
+  'gender non-conforming',
+  'genderqueer',
+  'agender',
 ]
 
-export const WhatAreYourInterestsPage = (): JSX.Element => {
-  const { interestsGet, interestsToggle } = useContext(QuizContext)
+export const GenderPage = (): JSX.Element => {
   const router = useRouter()
+
+  const { genderGet, genderToggle, setQuizComplete } = useContext(QuizContext)
+
+  const skipQuestionAndSeeResults = () => {
+    setQuizComplete(true)
+    router.push('results')
+  }
 
   return (
     <Layout>
@@ -97,35 +98,44 @@ export const WhatAreYourInterestsPage = (): JSX.Element => {
         <LinkButton
           textContent="back"
           arrow="left"
-          onClick={() => router.push('how-are-you-feeling')}
+          onClick={() => router.push('age')}
         />
       </Navigation>
-
-      <CheckboxGroup>
+      <QuestionSection>
         <fieldset>
-          <legend>What are your interests?</legend>
+          <legend>What is your gender identity?</legend>
           <VerticalSpacing size={1} />
           <LinkButton
             textContent="skip this question"
             arrow="right"
-            onClick={() => router.push('age')}
+            onClick={() => skipQuestionAndSeeResults()}
           />
+          <VerticalSpacing size={1} />
 
-          {interests.map((interest) => {
+          <p>
+            Some support and activities in your area are gender specific. To
+            find something right for you, you can let us know which gender you
+            identify with (if you would like to).
+          </p>
+
+          <VerticalSpacing size={1} />
+          {categories.map((category) => {
             return (
               <Checkbox
-                key={interest}
-                label={interest}
-                checked={interestsGet(interest)}
-                onChange={() => interestsToggle(interest)}
+                key={category}
+                label={category}
+                checked={genderGet(category)}
+                onChange={() => genderToggle(category)}
               />
             )
           })}
         </fieldset>
-      </CheckboxGroup>
+      </QuestionSection>
 
-      <Link href="/quiz/age" passHref>
-        <StyledLink>{'Ok'}</StyledLink>
+      <VerticalSpacing />
+
+      <Link href="/quiz/results" passHref>
+        <StyledLink onClick={() => setQuizComplete(true)}>{'Ok'}</StyledLink>
       </Link>
 
       <VerticalSpacing />
@@ -134,4 +144,4 @@ export const WhatAreYourInterestsPage = (): JSX.Element => {
   )
 }
 
-export default WhatAreYourInterestsPage
+export default GenderPage
