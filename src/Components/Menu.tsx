@@ -7,7 +7,7 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   background: ${(props) => props.theme.colours.aqua};
   height: 400px
   text-align: left;
-  padding: 1rem 2rem 5rem 2rem;
+  padding: 1rem 2rem 2rem 2rem;
   position: absolute;
   top: 5rem;
   left:0;
@@ -48,6 +48,7 @@ export const Menu = ({ open }: MenuProps): JSX.Element => {
       <a href="/">About</a>
       <a href="/helplines">Urgent Help</a>
       <a href="/">Privacy Policy</a>
+      <a href="/cookies">Cookies</a>
     </StyledMenu>
   )
 }
