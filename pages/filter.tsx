@@ -157,7 +157,7 @@ export const FilterPage: NextPage = () => {
   }
 
   return (
-    <Layout>
+    <Layout hideNav>
       <FilterLayout>
         <Top>
           <div>

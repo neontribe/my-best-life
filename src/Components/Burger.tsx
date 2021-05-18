@@ -10,6 +10,7 @@ const StyledBurger = styled.button`
   border: none;
   cursor: pointer;
   padding: 0.5rem;
+  margin-left: auto;
 
   &:focus > div {
     background: ${(props) => props.theme.colours.purple};
@@ -23,6 +24,10 @@ const StyledBurger = styled.button`
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
+  }
+
+  ${(props) => props.theme.screenSizes.tabletLandscapePlus} {
+    display: none;
   }
 `
 

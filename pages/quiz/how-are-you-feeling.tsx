@@ -3,11 +3,9 @@ import styled from 'styled-components'
 import { NextRouter, useRouter } from 'next/router'
 
 import { Layout } from '../../src/Components/Layout'
-import { HeaderComponent } from '../../src/Components/Header'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { QuizContext } from '../../src/context/QuizContext'
 import { LinkButton } from '../../src/Components/LinkButton'
-import { StickyNavBar } from '../../src/Components/StickyNavBar'
 
 interface ImageCheckboxesProps {
   id: string
@@ -256,7 +254,6 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
   return (
     <Layout>
       <Section>
-        <HeaderComponent title="Support in Lambeth" />
         <Navigation>
           <LinkButton
             textContent="back"
@@ -278,7 +275,6 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
         </StyledLink>
         <VerticalSpacing />
       </Section>
-      <StickyNavBar />
     </Layout>
   )
 }

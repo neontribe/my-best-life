@@ -4,13 +4,11 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 import { Layout } from '../../src/Components/Layout'
-import { HeaderComponent } from '../../src/Components/Header'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { Checkbox } from '../../src/Components/Checkbox'
 import { LinkButton } from '../../src/Components/LinkButton'
 
 import { QuizContext } from '../../src/context/QuizContext'
-import { StickyNavBar } from '../../src/Components/StickyNavBar'
 import { Category } from '../../cms/services'
 
 const CheckboxGroup = styled.div`
@@ -85,7 +83,6 @@ export const WhatsOnYourMindPage = (): JSX.Element => {
 
   return (
     <Layout>
-      <HeaderComponent title="Support in Lambeth" />
       <VerticalSpacing size={3} />
       <CheckboxGroup>
         <fieldset>
@@ -116,7 +113,6 @@ export const WhatsOnYourMindPage = (): JSX.Element => {
       </Link>
 
       <VerticalSpacing />
-      <StickyNavBar />
     </Layout>
   )
 }

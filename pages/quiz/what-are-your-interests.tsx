@@ -5,13 +5,11 @@ import { useRouter } from 'next/router'
 
 import { Layout } from '../../src/Components/Layout'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
-import { HeaderComponent } from '../../src/Components/Header'
 import { Checkbox } from '../../src/Components/Checkbox'
 import { QuizContext } from '../../src/context/QuizContext'
 import { LinkButton } from '../../src/Components/LinkButton'
 
 import { Interest } from '../../cms/services'
-import { StickyNavBar } from '../../src/Components/StickyNavBar'
 
 const Navigation = styled.section`
   align-items: center;
@@ -92,7 +90,6 @@ export const WhatAreYourInterestsPage = (): JSX.Element => {
 
   return (
     <Layout>
-      <HeaderComponent title="Support in Lambeth" />
       <Navigation>
         <LinkButton
           textContent="back"
@@ -129,7 +126,6 @@ export const WhatAreYourInterestsPage = (): JSX.Element => {
       </Link>
 
       <VerticalSpacing />
-      <StickyNavBar />
     </Layout>
   )
 }

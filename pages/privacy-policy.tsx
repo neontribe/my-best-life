@@ -4,7 +4,6 @@ import html from 'remark-html'
 import styled from 'styled-components'
 
 import { getPrivacy } from '../cms/privacy'
-import { HeaderComponent } from '../src/Components/Header'
 import { Layout } from '../src/Components/Layout'
 import { VerticalSpacing } from '../src/Components/VerticalSpacing'
 
@@ -47,7 +46,6 @@ const Policy = styled.article`
 export const PrivacyPage: NextPage<PrivacyPageProps> = ({ content }) => {
   return (
     <Layout>
-      <HeaderComponent title="Support in Lambeth" />
       <VerticalSpacing />
       <Policy dangerouslySetInnerHTML={{ __html: content }} />
       <VerticalSpacing />

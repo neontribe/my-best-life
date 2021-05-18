@@ -1,21 +1,32 @@
 import { useState, useRef } from 'react'
 import styled from 'styled-components'
-import useOnClickOutside from '../hooks/useOnClickOutside'
+import Image from 'next/image'
+import Link from 'next/link'
 
+import useOnClickOutside from '../hooks/useOnClickOutside'
 import { VisuallyHidden } from './VisuallyHidden'
 import { Burger } from './Burger'
+import { DesktopNav } from './DesktopNav'
 import { Menu } from './Menu'
-
-interface HeaderProps {
-  title: string
-}
 
 const Header = styled.header`
   background-color: ${(props) => props.theme.colours.aqua};
   clip-path: url(#wave);
   height: ${(props) => props.theme.headerHeight};
-  padding: 0 var(--gutter-width);
+  padding: 1rem var(--gutter-width);
   width: 100%;
+
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: ${(props) => props.theme.colours.blue};
+
+    &:focus {
+      outline: 2px dashed ${(props) => props.theme.colours.blue};
+      outline-offset: 4px;
+    }
+  }
 `
 
 const StickyContainer = styled.div<{ open: boolean }>`
@@ -26,19 +37,22 @@ const StickyContainer = styled.div<{ open: boolean }>`
 `
 
 const HeaderContents = styled.div`
-  align-items: flex-end;
+  align-items: center;
   display: flex;
-  min-height: 4rem;
   justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 var(--gutter-width);
 `
 
 const Title = styled.h1`
   font-family: 'Catamaran', sans-serif;
   font-size: ${(props) => props.theme.fontSizes.title};
   line-height: 1;
+  margin-left: 1rem;
 `
 
-export const HeaderComponent = ({ title }: HeaderProps): JSX.Element => {
+export const HeaderComponent = (): JSX.Element => {
   const ref = useRef<HTMLDivElement>(null)
   useOnClickOutside(ref, () => setOpenMenu(false))
 
@@ -57,7 +71,18 @@ export const HeaderComponent = ({ title }: HeaderProps): JSX.Element => {
           </svg>
         </VisuallyHidden>
         <HeaderContents>
-          <Title>{title}</Title>
+          <Link href="/" passHref>
+            <a>
+              <Image
+                src="/site/my_best_life.svg"
+                alt={''}
+                width="48"
+                height="48"
+              />
+              <Title>my best life</Title>
+            </a>
+          </Link>
+          <DesktopNav />
           <Burger open={openMenu} setOpen={setOpenMenu} />
         </HeaderContents>
       </Header>
