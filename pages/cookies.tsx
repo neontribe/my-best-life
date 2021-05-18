@@ -177,7 +177,7 @@ export const Cookies = (): JSX.Element => {
           </div>
           <SubHeading>Strictly necessary cookies</SubHeading>
           <Text>
-            We use essential cookies to remember your cookie preferences.
+            We use essential cookies to remember your cookie preferences and to remember your quiz answers.
           </Text>
           <Text>They always need to be on.</Text>
           <SubmitButton type="submit">Save changes</SubmitButton>
