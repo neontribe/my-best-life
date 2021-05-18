@@ -47,6 +47,7 @@ export const MyBestLifeTheme: DefaultTheme = {
   },
 
   headerHeight: '6rem',
+  mobileNavHeight: '70px',
 }
 
 export const GlobalStyle = createGlobalStyle`
