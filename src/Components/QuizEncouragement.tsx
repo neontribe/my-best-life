@@ -66,7 +66,7 @@ const QuizButton = styled.div`
 export const QuizEncouragement = (): JSX.Element => {
   return (
     <Link href={`/quiz`} passHref>
-      <QuizCard aria-label="Take our quiz">
+      <QuizCard>
         <Content>
           <h2>Want more personalised results?</h2>
           <VerticalSpacing size={1} />
