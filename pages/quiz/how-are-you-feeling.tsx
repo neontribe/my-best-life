@@ -217,17 +217,17 @@ const StyledLink = styled.a`
 
 const feelings = [
   { title: 'unsure', image: '/img/unsure.svg' },
-  { title: 'ok', image: '/img/ok.svg' },
+  { title: 'hopeful', image: '/img/hopeful.svg' },
+  { title: 'scared', image: '/img/scared.svg' },
+  { title: 'excited', image: '/img/excited.svg' },
+  { title: 'ignored', image: '/img/ignored.svg' },
   { title: 'calm', image: '/img/calm.svg' },
   { title: 'anxious', image: '/img/anxious.svg' },
-  { title: 'hopeful', image: '/img/hopeful.svg' },
   { title: 'confused', image: '/img/confused.svg' },
   { title: 'angry', image: '/img/angry.svg' },
-  { title: 'excited', image: '/img/excited.svg' },
-  { title: 'enthusiastic', image: '/img/enthusiastic.svg' },
-  { title: 'scared', image: '/img/scared.svg' },
+  { title: 'sad', image: '/img/sad.svg' },
   { title: 'unsafe', image: '/img/unsafe.svg' },
-  { title: 'ignored', image: '/img/ignored.svg' },
+  { title: 'ok', image: '/img/ok.svg' },
 ] as const
 
 export type Feeling = typeof feelings[number]['title']
@@ -242,6 +242,7 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
       'unsafe',
       'angry',
       'ignored',
+      'sad',
     ]
 
     const mustShowHelp =
