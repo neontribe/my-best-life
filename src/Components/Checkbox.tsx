@@ -59,6 +59,7 @@ const CheckboxItem = styled.li`
 
 export const Checkbox = ({
   label,
+  checked,
   onChange,
   singleCheckbox,
 }: CheckboxProps): JSX.Element => {
@@ -66,7 +67,7 @@ export const Checkbox = ({
     <CheckboxItem as={singleCheckbox ? 'div' : 'li'}>
       <label>
         {label}
-        <input type="checkbox" onChange={onChange}></input>
+        <input type="checkbox" checked={checked} onChange={onChange}></input>
         <CheckboxBackground>
           <svg
             xmlns="http://www.w3.org/2000/svg"
