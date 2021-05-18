@@ -19,7 +19,6 @@ feelings:
   - anxious
   - hopeful
   - confused
-  - enthusiastic
   - excited
   - calm
 costValue: 7.5

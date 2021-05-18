@@ -176,7 +176,7 @@ export default {
             { label: 'confused', value: 'confused' },
             { label: 'angry', value: 'angry' },
             { label: 'excited', value: 'excited' },
-            { label: 'enthusiastic', value: 'enthusiastic' },
+            { label: 'sad', value: 'sad' },
             { label: 'scared', value: 'scared' },
             { label: 'unsafe', value: 'unsafe' },
             { label: 'ignored', value: 'ignored' },

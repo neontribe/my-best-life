@@ -16,7 +16,6 @@ feelings:
   - okay
   - anxious
   - hopeful
-  - enthusiastic
 costValue: 0
 age:
   minAge: 9

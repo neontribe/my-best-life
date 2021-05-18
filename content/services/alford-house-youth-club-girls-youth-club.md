@@ -19,7 +19,6 @@ feelings:
   - okay
   - calm
   - anxious
-  - enthusiastic
   - excited
   - ignored
   - unsure
