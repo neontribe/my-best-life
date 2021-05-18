@@ -13,7 +13,7 @@ const Header = styled.header`
   background-color: ${(props) => props.theme.colours.aqua};
   clip-path: url(#wave);
   height: ${(props) => props.theme.headerHeight};
-  padding: 1rem var(--gutter-width);
+  padding: 1rem 0;
   width: 100%;
 
   a {
