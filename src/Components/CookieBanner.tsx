@@ -11,6 +11,12 @@ const CookieBannerContainer = styled.nav`
   z-index: 6;
   background-color: ${(props) => props.theme.colours.blue};
 
+  h3 {
+    padding-top: 1em;
+    color: ${(props) => props.theme.colours.white};
+    font-size: ${(props) => props.theme.fontSizes.highlight};
+  }
+
   p {
     color: ${(props) => props.theme.colours.white};
     display: flex;
@@ -46,9 +52,7 @@ export const CookieBanner = (): JSX.Element => {
   }
   return (
     <CookieBannerContainer>
-      <p>
-        <b>Can we use cookies to help improve this site?</b>
-      </p>
+      <h3>Can we use cookies to help improve this site?</h3>
       <p>
         We would like to use Hotjar cookies to collect information on how people
         use the site. For more information please see our privacy policy page.

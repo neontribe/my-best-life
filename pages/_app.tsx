@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     const isHotjarCookiesAccepted = localStorage.getItem(
       'hotjarCookiesAccepted'
     )
-    if (isHotjarCookiesAccepted) {
+    if (isHotjarCookiesAccepted === 'true') {
       hotjar.initialize(2392323, 6)
     }
   })
