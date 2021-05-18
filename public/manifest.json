@@ -1,0 +1,30 @@
+{
+  "name": "My Best Life",
+  "short_name": "My Best Life",
+  "description": "My Best Life",
+
+   "lang": "en-GB",
+
+  "start_url": "/",
+  "scope": "/",
+
+ "icons": [
+        {
+            "src": "/img/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+
+  "background_color": "#8BE2D8",
+  "theme_color": "#8BE2D8",
+
+  "display": "minimal-ui",
+  "orientation": "portrait-primary"
+
+}
