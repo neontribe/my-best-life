@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { GetStaticProps, NextPage } from 'next'
+import { GetStaticProps } from 'next'
 import Link from 'next/link'
 
 import { getServiceData, ServiceDetail } from '../../cms/services'
@@ -76,7 +76,7 @@ const StyledLink = styled.a`
   font-size: ${(props) => props.theme.fontSizes.highlight};
   padding: 1rem;
   width: 20rem;
-  height: 4rem;
+  height: 3rem;
   justify-content: center;
   margin: 0 auto;
   margin-bottom: 2em;
@@ -94,7 +94,7 @@ const StyledLink = styled.a`
   }
 `
 
-export const IfYouNeedHelpPage: NextPage<IfYouNeedHelpPage> = ({
+export const IfYouNeedHelpPage = ({
   serviceData1,
   serviceData2,
 }: HelplinePageProps): JSX.Element => {
@@ -138,9 +138,7 @@ export const IfYouNeedHelpPage: NextPage<IfYouNeedHelpPage> = ({
         </MainText>
         <VerticalSpacing size={2} />
         <Link href="/quiz/what-are-your-interests" passHref>
-          <StyledLink>
-            {'Just having a bad day, carry on with the quiz'}
-          </StyledLink>
+          <StyledLink>{'A bad day, carry on with the quiz'}</StyledLink>
         </Link>
 
         <VerticalSpacing size={4} />
