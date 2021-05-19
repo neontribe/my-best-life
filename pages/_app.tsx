@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Head from 'next/head'
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'styled-components'
+import { hotjar } from 'react-hotjar'
 
 import { FilterProvider } from '../src/context/FilterContext'
 import { SaveProvider } from '../src/context/SaveContext'
@@ -10,6 +11,15 @@ import { NotificationsProvider } from '../src/context/NotificationsContext'
 import { QuizProvider } from '../src/context/QuizContext'
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+  // Check cookies haven't already been selected and if so don't show banner
+  useEffect(() => {
+    const isHotjarCookiesAccepted = localStorage.getItem(
+      'hotjarCookiesAccepted'
+    )
+    if (isHotjarCookiesAccepted === 'true') {
+      hotjar.initialize(2392323, 6)
+    }
+  })
   return (
     <>
       <Head>
