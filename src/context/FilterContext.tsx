@@ -55,9 +55,8 @@ export const allAreas: Array<Area> = [
   'Larkhall',
 ]
 
-export const FilterContext = createContext<FilterContextValue>(
-  defaultValueShape
-)
+export const FilterContext =
+  createContext<FilterContextValue>(defaultValueShape)
 
 export const FilterProvider: FC<PropsWithChildren<any>> = ({ children }) => {
   const [formats, setFormats] = useState<Array<string>>([])

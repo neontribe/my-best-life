@@ -5,11 +5,9 @@ import { useRouter } from 'next/router'
 
 import { Layout } from '../../src/Components/Layout'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
-import { Checkbox } from '../../src/Components/Checkbox'
-import { QuizContext } from '../../src/context/QuizContext'
 import { LinkButton } from '../../src/Components/LinkButton'
-
-import { Interest } from '../../cms/services'
+import { QuizContext } from '../../src/context/QuizContext'
+import ImageCheckboxes from '../../src/Components/ImageCheckboxes'
 
 const Navigation = styled.section`
   align-items: center;
@@ -68,21 +66,23 @@ const StyledLink = styled.a`
   }
 `
 
-const interests: Array<Interest> = [
-  'Sports',
-  'Music',
-  'Films and TV',
-  'Art and Design',
-  'Drama',
-  'Reading',
-  'Writing',
-  'Cooking',
-  'Volunteering',
-  'Outdoor Activities',
-  'Activism',
-  'Fashion and Beauty',
-  'Gaming',
-]
+const interests = [
+  { title: 'Sports', image: '/img/sports.svg' },
+  { title: 'Music', image: '/img/music.svg' },
+  { title: 'Films and TV', image: '/img/films and tv.svg' },
+  { title: 'Art and Design', image: '/img/art and design.svg' },
+  { title: 'Drama', image: '/img/drama.svg' },
+  { title: 'Reading', image: '/img/reading.svg' },
+  { title: 'Writing', image: '/img/writing.svg' },
+  { title: 'Cooking', image: '/img/cooking.svg' },
+  { title: 'Volunteering', image: '/img/volunteering.svg' },
+  { title: 'Outdoor Activities', image: '/img/outdoor activities.svg' },
+  { title: 'Activism', image: '/img/activism.svg' },
+  { title: 'Fashion and Beauty', image: '/img/fashion and beauty.svg' },
+  { title: 'Gaming', image: '/img/gaming.svg' },
+] as const
+
+export type Interest = typeof interests[number]['title']
 
 export const WhatAreYourInterestsPage = (): JSX.Element => {
   const { interestsGet, interestsToggle } = useContext(QuizContext)
@@ -102,26 +102,25 @@ export const WhatAreYourInterestsPage = (): JSX.Element => {
         <fieldset>
           <legend>What are your interests?</legend>
           <VerticalSpacing size={1} />
+
           <LinkButton
             textContent="skip this question"
             arrow="right"
-            onClick={() => router.push('about-you')}
+            onClick={() => router.push('age')}
           />
+          <VerticalSpacing />
 
-          {interests.map((interest) => {
-            return (
-              <Checkbox
-                key={interest}
-                label={interest}
-                checked={interestsGet(interest)}
-                onChange={() => interestsToggle(interest)}
-              />
-            )
-          })}
+          <ImageCheckboxes
+            id="interests-checkboxes"
+            values={interests}
+            contextGet={interestsGet}
+            contextToggle={interestsToggle}
+          />
         </fieldset>
       </CheckboxGroup>
+      <VerticalSpacing />
 
-      <Link href="/quiz/about-you" passHref>
+      <Link href="/quiz/age" passHref>
         <StyledLink>{'Ok'}</StyledLink>
       </Link>
 

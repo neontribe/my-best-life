@@ -176,9 +176,8 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
     comment: undefined,
   }
 
-  const [reviewState, setReviewState] = useState<ReviewState>(
-    initialReviewState
-  )
+  const [reviewState, setReviewState] =
+    useState<ReviewState>(initialReviewState)
 
   const commentInputRef = useRef<HTMLTextAreaElement | null>(null)
 

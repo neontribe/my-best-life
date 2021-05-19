@@ -1,185 +1,19 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import { NextRouter, useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 
 import { Layout } from '../../src/Components/Layout'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { QuizContext } from '../../src/context/QuizContext'
 import { LinkButton } from '../../src/Components/LinkButton'
+import ImageCheckboxes from '../../src/Components/ImageCheckboxes'
 
-interface ImageCheckboxesProps {
-  id: string
-  values: readonly { title: Feeling; image: string }[]
-  label: string
-  router: NextRouter
-}
-
-// Wraps the checkbox area of component
-const CheckboxGroup = styled.div`
-  legend {
-    border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
-    font-family: 'Catamaran', sans-serif;
-    font-size: ${(props) => props.theme.fontSizes.heading};
-  }
-
-  fieldset {
-    border: none;
-    padding: 0;
-  }
-`
-
-// Contains all the CheckboxItems
-const CheckboxContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -0.5rem;
-`
-
-// This is the visual representation of the checked status
-const CheckedDisplay = styled.div`
-  border-radius: 1rem;
-  border-top-right-radius: 2rem;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-`
-
-// This is the text of the checkbox item
-const Text = styled.div`
-  align-items: center;
-  display: flex;
-  font-size: ${(props) => props.theme.fontSizes.extraSmall};
-  font-weight: bold;
-  justify-content: center;
-  letter-spacing: 0.05em;
-  margin: 0 0.5rem 0.5rem 0.5rem;
-  z-index: 1;
-`
-
-// Contains label, input, image
-const CheckboxItem = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 0 0 33%;
-  padding: 0 0.5rem;
-  margin: 0.5rem 0;
-
-  label {
-    border-radius: 1rem;
-    border-top-right-radius: 2rem;
-    box-shadow: 0 0 9px 2px ${(props) => props.theme.colours.shadow};
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    text-align: center;
-  }
-
-  input {
-    appearance: none;
-    background: none;
-    height: 1px;
-    opacity: 0.00001;
-    position: absolute;
-    width: 100%;
-    cursor: pointer;
-
-    &:focus ~ ${CheckedDisplay} {
-      outline: 3px dashed ${(props) => props.theme.colours.blue};
-      outline-offset: 5px;
-    }
-
-    &:checked ~ ${CheckedDisplay} {
-      background-color: ${(props) => props.theme.colours.aqua_light};
-    }
-
-    &:checked ~ ${Text} {
-      color: ${(props) => props.theme.colours.purple};
-    }
-
-    &:checked ~ img {
-      border-radius: 50%;
-    }
-  }
-
-  img {
-    border-radius: 1rem;
-    border: 5px solid transparent;
-    height: auto;
-    margin: auto;
-    margin-top: 5px;
-    width: calc(100% - 10px);
-    z-index: 1;
-  }
-`
-
-export const ImageCheckboxes = ({
-  id,
-  values,
-  label,
-  router,
-}: ImageCheckboxesProps): JSX.Element => {
-  const { howAreFeelingGet, howAreFeelingToggle } = useContext(QuizContext)
-
-  return (
-    <>
-      <CheckboxGroup>
-        <fieldset>
-          <legend>{label}</legend>
-          <VerticalSpacing size={1} />
-          <LinkButton
-            textContent="skip this question"
-            arrow="right"
-            onClick={() => router.push('what-are-your-interests')}
-          />
-          <VerticalSpacing />
-          <CheckboxContainer>
-            {values.map((checkbox) => {
-              return (
-                <CheckboxItem key={checkbox.title}>
-                  <label>
-                    <input
-                      type="checkbox"
-                      name={id}
-                      value={checkbox.title}
-                      checked={howAreFeelingGet(checkbox.title)}
-                      onChange={() => howAreFeelingToggle(checkbox.title)}
-                    />
-                    <img src={checkbox.image} alt="" />
-                    <Text>{checkbox.title}</Text>
-                    <CheckedDisplay />
-                  </label>
-                </CheckboxItem>
-              )
-            })}
-          </CheckboxContainer>
-        </fieldset>
-      </CheckboxGroup>
-      <VerticalSpacing />
-    </>
-  )
-}
-
-const Section = styled.section`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-`
 const Navigation = styled.section`
   align-items: center;
   display: flex;
   justify-content: space-between;
   padding: 1rem 0 1rem 0;
   width: 100%;
-`
-
-const QuestionSection = styled.section`
-  margin: 1rem;
-
-  h2 {
-    font-size: ${(props) => props.theme.fontSizes.heading};
-  }
 `
 
 const StyledLink = styled.a`
@@ -199,7 +33,7 @@ const StyledLink = styled.a`
   justify-content: center;
   margin: auto;
   max-width: calc(100% - 2rem);
-  margin-bottom: 30px;
+  margin-bottom: 100px;
 
   &:focus {
     outline: 2px dashed ${(props) => props.theme.colours.blue};
@@ -213,26 +47,44 @@ const StyledLink = styled.a`
   }
 `
 
+const CheckboxGroup = styled.div`
+  max-width: 50ch;
+  margin: auto;
+  padding: 1rem var(--gutter-width);
+  width: 100%;
+
+  legend {
+    border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
+    font-family: 'Catamaran', sans-serif;
+    font-size: ${(props) => props.theme.fontSizes.heading};
+  }
+
+  fieldset {
+    border: none;
+    padding: 0;
+  }
+`
+
 const feelings = [
   { title: 'unsure', image: '/img/unsure.svg' },
-  { title: 'ok', image: '/img/ok.svg' },
+  { title: 'hopeful', image: '/img/hopeful.svg' },
+  { title: 'scared', image: '/img/scared.svg' },
+  { title: 'excited', image: '/img/excited.svg' },
+  { title: 'ignored', image: '/img/ignored.svg' },
   { title: 'calm', image: '/img/calm.svg' },
   { title: 'anxious', image: '/img/anxious.svg' },
-  { title: 'hopeful', image: '/img/hopeful.svg' },
   { title: 'confused', image: '/img/confused.svg' },
   { title: 'angry', image: '/img/angry.svg' },
-  { title: 'excited', image: '/img/excited.svg' },
-  { title: 'enthusiastic', image: '/img/enthusiastic.svg' },
-  { title: 'scared', image: '/img/scared.svg' },
+  { title: 'sad', image: '/img/sad.svg' },
   { title: 'unsafe', image: '/img/unsafe.svg' },
-  { title: 'ignored', image: '/img/ignored.svg' },
+  { title: 'ok', image: '/img/ok.svg' },
 ] as const
 
 export type Feeling = typeof feelings[number]['title']
 
 export const HowAreYouFeelingPage = (): JSX.Element => {
   const router = useRouter()
-  const { howAreFeelingGet } = useContext(QuizContext)
+  const { howAreFeelingGet, howAreFeelingToggle } = useContext(QuizContext)
 
   const nextPage = () => {
     const triggerFeelings: Array<Feeling> = [
@@ -240,6 +92,7 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
       'unsafe',
       'angry',
       'ignored',
+      'sad',
     ]
 
     const mustShowHelp =
@@ -253,28 +106,44 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
 
   return (
     <Layout>
-      <Section>
-        <Navigation>
+      <Navigation>
+        <LinkButton
+          textContent="back"
+          arrow="left"
+          onClick={() => router.push('whats-on-your-mind')}
+        />
+      </Navigation>
+
+      <CheckboxGroup>
+        <fieldset>
+          <legend>How are you feeling?</legend>
+          <VerticalSpacing size={1} />
+
           <LinkButton
-            textContent="back"
-            arrow="left"
-            onClick={() => router.push('whats-on-your-mind')}
+            textContent="skip this question"
+            arrow="right"
+            onClick={() => router.push('what-are-your-interests')}
           />
-        </Navigation>
-        <QuestionSection>
+          <VerticalSpacing />
+
           <ImageCheckboxes
             id="feelings-checkboxes"
             values={feelings}
-            label="How are you feeling?"
-            router={router}
+            contextGet={howAreFeelingGet}
+            contextToggle={howAreFeelingToggle}
           />
-        </QuestionSection>
+        </fieldset>
+      </CheckboxGroup>
+      <VerticalSpacing />
 
-        <StyledLink as="button" onClick={nextPage}>
-          {'Ok'}
-        </StyledLink>
-        <VerticalSpacing />
-      </Section>
+      <StyledLink as="button" onClick={nextPage}>
+        {'Ok'}
+      </StyledLink>
+      <VerticalSpacing />
+      <StyledLink as="button" onClick={nextPage}>
+        {'Ok'}
+      </StyledLink>
+      <VerticalSpacing />
     </Layout>
   )
 }

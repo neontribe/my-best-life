@@ -18,7 +18,6 @@ interests:
 feelings:
   - hopeful
   - excited
-  - enthusiastic
   - confused
   - calm
   - okay

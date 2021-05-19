@@ -13,7 +13,6 @@ categories:
 interests:
   - Drama
 feelings:
-  - enthusiastic
   - hopeful
   - excited
   - unsure
