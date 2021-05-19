@@ -13,7 +13,6 @@ const Header = styled.header`
   background-color: ${(props) => props.theme.colours.aqua};
   clip-path: url(#wave);
   height: ${(props) => props.theme.headerHeight};
-  padding: 1rem 0;
   width: 100%;
 
   a {
@@ -45,6 +44,10 @@ const HeaderContents = styled.div`
   padding: 0 var(--gutter-width);
 `
 
+const Logo = styled.div`
+  margin-top: 1rem;
+`
+
 const Title = styled.h1`
   font-family: 'Catamaran', sans-serif;
   font-size: ${(props) => props.theme.fontSizes.title};
@@ -71,17 +74,19 @@ export const HeaderComponent = (): JSX.Element => {
           </svg>
         </VisuallyHidden>
         <HeaderContents>
-          <Link href="/" passHref>
-            <a>
-              <Image
-                src="/site/my_best_life.svg"
-                alt={''}
-                width="48"
-                height="48"
-              />
-              <Title>my best life</Title>
-            </a>
-          </Link>
+          <Logo>
+            <Link href="/" passHref>
+              <a>
+                <Image
+                  src="/site/my_best_life.svg"
+                  alt={''}
+                  width="48"
+                  height="48"
+                />
+                <Title>my best life</Title>
+              </a>
+            </Link>
+          </Logo>
           <DesktopNav />
           <Burger open={openMenu} setOpen={setOpenMenu} />
         </HeaderContents>
