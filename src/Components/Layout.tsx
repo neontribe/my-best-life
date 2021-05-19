@@ -41,10 +41,10 @@ export const Layout = ({ children, hideNav }: LayoutProps): JSX.Element => {
 
   return (
     <PageLayout hideNav={hideNav || false}>
+      {showCookieBanner ? <CookieBanner /> : <></>}
       {!hideNav && <HeaderComponent />}
       {children}
       {!hideNav && <StickyNavBar />}
-      {showCookieBanner ? <CookieBanner /> : <></>}
     </PageLayout>
   )
 }

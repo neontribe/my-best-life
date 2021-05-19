@@ -3,19 +3,13 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-import { Layout } from '../../src/Components/Layout'
-import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
+import { Layout, Content } from '../../src/Components/Layout'
 import { LinkButton } from '../../src/Components/LinkButton'
-
 import { QuizContext } from '../../src/context/QuizContext'
+import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import ImageCheckboxes from '../../src/Components/ImageCheckboxes'
 
 const CheckboxGroup = styled.div`
-  max-width: 50ch;
-  margin: auto;
-  padding: 1rem var(--gutter-width);
-  width: 100%;
-
   legend {
     border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
     font-family: 'Catamaran', sans-serif;
@@ -58,6 +52,7 @@ const StyledLink = styled.a`
     transition: 0.3s;
   }
 `
+
 const onMind = [
   { title: 'Money', image: '/img/money.svg' },
   { title: 'School and college', image: '/img/school and college.svg' },
@@ -81,33 +76,35 @@ export const WhatsOnYourMindPage = (): JSX.Element => {
 
   return (
     <Layout>
-      <VerticalSpacing size={3} />
-      <CheckboxGroup>
-        <fieldset>
-          <legend>What&apos;s on your mind today?</legend>
-          <VerticalSpacing size={1} />
+      <Content>
+        <VerticalSpacing size={3} />
+        <CheckboxGroup>
+          <fieldset>
+            <legend>What&apos;s on your mind today?</legend>
+            <VerticalSpacing size={1} />
 
-          <LinkButton
-            textContent="skip this question"
-            arrow="right"
-            onClick={() => router.push('how-are-you-feeling')}
-          />
-          <VerticalSpacing />
-          <ImageCheckboxes
-            id="on-mind-checkboxes"
-            values={onMind}
-            contextGet={whatsOnMindGet}
-            contextToggle={whatsOnMindToggle}
-          />
-        </fieldset>
-      </CheckboxGroup>
-      <VerticalSpacing />
+            <LinkButton
+              textContent="skip this question"
+              arrow="right"
+              onClick={() => router.push('how-are-you-feeling')}
+            />
+            <VerticalSpacing />
+            <ImageCheckboxes
+              id="on-mind-checkboxes"
+              values={onMind}
+              contextGet={whatsOnMindGet}
+              contextToggle={whatsOnMindToggle}
+            />
+          </fieldset>
+        </CheckboxGroup>
+        <VerticalSpacing />
 
-      <Link href="/quiz/how-are-you-feeling" passHref>
-        <StyledLink>{'Ok'}</StyledLink>
-      </Link>
+        <Link href="/quiz/how-are-you-feeling" passHref>
+          <StyledLink>{'Ok'}</StyledLink>
+        </Link>
 
-      <VerticalSpacing />
+        <VerticalSpacing />
+      </Content>
     </Layout>
   )
 }

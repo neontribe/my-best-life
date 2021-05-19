@@ -34,8 +34,7 @@ const CardContainer = styled.li`
   width: 100%;
 
   ${(props) => props.theme.screenSizes.tabletLandscapePlus} {
-    margin: 1.5rem 1rem;
-    width: calc(50% - 2rem);
+    width: calc(50% - 1rem);
   }
 
   &:hover {

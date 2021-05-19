@@ -4,7 +4,7 @@ import html from 'remark-html'
 import styled from 'styled-components'
 
 import { getPrivacy } from '../cms/privacy'
-import { Layout } from '../src/Components/Layout'
+import { Layout, Content } from '../src/Components/Layout'
 import { VerticalSpacing } from '../src/Components/VerticalSpacing'
 
 interface PrivacyPageProps {
@@ -12,8 +12,6 @@ interface PrivacyPageProps {
 }
 
 const Policy = styled.article`
-  padding: 0 var(--gutter-width);
-
   h2 {
     border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
     display: inline-block;
@@ -46,9 +44,11 @@ const Policy = styled.article`
 export const PrivacyPage: NextPage<PrivacyPageProps> = ({ content }) => {
   return (
     <Layout>
-      <VerticalSpacing />
-      <Policy dangerouslySetInnerHTML={{ __html: content }} />
-      <VerticalSpacing />
+      <Content>
+        <VerticalSpacing />
+        <Policy dangerouslySetInnerHTML={{ __html: content }} />
+        <VerticalSpacing />
+      </Content>
     </Layout>
   )
 }

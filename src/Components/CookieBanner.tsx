@@ -1,13 +1,12 @@
 import styled from 'styled-components'
 
 import { ButtonBase } from './ButtonBase'
+import { Content } from './Layout'
 
-const CookieBannerContainer = styled.nav`
+const CookieBannerContainer = styled.div`
   position: fixed;
   bottom: 0;
   width: 100%;
-  max-width: 600px;
-  padding: 0 var(--gutter-width);
   z-index: 6;
   background-color: ${(props) => props.theme.colours.blue};
 
@@ -52,13 +51,16 @@ export const CookieBanner = (): JSX.Element => {
   }
   return (
     <CookieBannerContainer>
-      <h2>Can we use cookies to help improve this site?</h2>
-      <p>
-        We would like to use Hotjar cookies to collect information on how people
-        use the site. For more information please see our privacy policy page.
-      </p>
-      <CookieButton onClick={onAccept}>Accept cookies</CookieButton>
-      <CookieButton onClick={onReject}>Reject cookies</CookieButton>
+      <Content>
+        <h2>Can we use cookies to help improve this site?</h2>
+        <p>
+          We would like to use Hotjar cookies to collect information on how
+          people use the site. For more information please see our privacy
+          policy page.
+        </p>
+        <CookieButton onClick={onAccept}>Accept cookies</CookieButton>
+        <CookieButton onClick={onReject}>Reject cookies</CookieButton>
+      </Content>
     </CookieBannerContainer>
   )
 }

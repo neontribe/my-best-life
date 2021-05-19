@@ -47,7 +47,7 @@ export const MyBestLifeTheme: DefaultTheme = {
   },
 
   headerHeight: '6rem',
-  mobileNavHeight: '70px',
+  mobileNavHeight: '75px',
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -157,11 +157,9 @@ export const GlobalStyle = createGlobalStyle`
     font-family: Lato, sans-serif;
     font-size: 100%;
 
-    ${(props) => props.theme.screenSizes.smallPhoneOnly} {
-      --gutter-width: ${(props) => props.theme.gutters.small};
-    }
+    --gutter-width: ${(props) => props.theme.gutters.small};
 
-    ${(props) => props.theme.screenSizes.phonePlus} {
+    ${(props) => props.theme.screenSizes.tabletPortraitPlus} {
       --gutter-width: ${(props) => props.theme.gutters.large};
     }
 

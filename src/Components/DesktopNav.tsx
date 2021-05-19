@@ -54,6 +54,8 @@ const LinkItem = styled.a<{ activePage: boolean }>`
 
 const SmallLinkItem = styled(LinkItem)`
   font-size: ${(props) => props.theme.fontSizes.normal};
+  padding: 0;
+  padding-bottom: 2px;
 `
 
 export const DesktopNav = (): JSX.Element => {
