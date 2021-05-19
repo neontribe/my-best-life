@@ -13,12 +13,16 @@ interface HeaderProps {
 const Header = styled.header`
   background-color: ${(props) => props.theme.colours.aqua};
   clip-path: url(#wave);
-  height: 6rem;
+  height: ${(props) => props.theme.headerHeight};
   padding: 0 var(--gutter-width);
+  width: 100%;
+`
+
+const StickyContainer = styled.div<{ open: boolean }>`
   position: sticky;
   top: 0;
-  width: 100%;
-  z-index: 2;
+  // Change z-index to cover sticky button when menu is open
+  z-index: ${(props) => (props.open ? 5 : 2)};
 `
 
 const HeaderContents = styled.div`
@@ -41,8 +45,8 @@ export const HeaderComponent = ({ title }: HeaderProps): JSX.Element => {
   const [openMenu, setOpenMenu] = useState(false)
 
   return (
-    <>
-      <div ref={ref}>
+    <StickyContainer ref={ref} open={openMenu}>
+      <Header>
         <VisuallyHidden>
           <svg width="0" height="0">
             <defs>
@@ -52,16 +56,13 @@ export const HeaderComponent = ({ title }: HeaderProps): JSX.Element => {
             </defs>
           </svg>
         </VisuallyHidden>
-        <Header>
-          <HeaderContents>
-            <Title>{title}</Title>
-            <Burger open={openMenu} setOpen={setOpenMenu} />
-          </HeaderContents>
-        </Header>
-
-        <Menu open={openMenu} />
-      </div>
-    </>
+        <HeaderContents>
+          <Title>{title}</Title>
+          <Burger open={openMenu} setOpen={setOpenMenu} />
+        </HeaderContents>
+      </Header>
+      <Menu open={openMenu} />
+    </StickyContainer>
   )
 }
 

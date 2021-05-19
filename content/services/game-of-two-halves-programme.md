@@ -13,7 +13,7 @@ costValue: 0
 age:
   minAge: 16
   maxAge: 25
-gender: men
+gender: male
 eligibility: "This project is specifically designed to support young fathers. "
 format: Meeting a group of people
 location: "The programme runs from three locations:  Brockwell Park Bowling

@@ -16,7 +16,6 @@ feelings:
   - okay
   - calm
   - anxious
-  - enthusiastic
   - excited
 costValue: 0.25
 costQualifier: Subscription payable on any night you attend the club

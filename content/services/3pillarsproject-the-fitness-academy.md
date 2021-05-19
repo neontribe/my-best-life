@@ -15,7 +15,6 @@ interests: null
 feelings:
   - unsure
   - anxious
-  - enthusiastic
 costValue: 0
 gender: null
 eligibility: This is designed for male ex-offenders.

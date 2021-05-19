@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Link from 'next/link'
 
 export const StyledMenu = styled.nav<{ open: boolean }>`
   display: flex;
@@ -7,18 +8,14 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   background: ${(props) => props.theme.colours.aqua};
   height: 400px
   text-align: left;
-  padding: 1rem 2rem 2rem 2rem;
-  position: absolute;
+  padding: 1rem 2rem;
+  position: fixed;
   top: 5rem;
-  left:0;
-  z-index: 3;
+  z-index: 10;
   width: 100%;
+  max-width: 600px;
 
-  ${(props) =>
-    !props.open &&
-    `
-  display: none;
-  `}
+  ${(props) => !props.open && `display: none;`}
 
   a {
     font-size: ${(props) => props.theme.fontSizes.normal};
@@ -32,9 +29,9 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
       color: ${(props) => props.theme.colours.purple};
     }
 
-      &:focus {
-    background: ${(props) => props.theme.colours.blue_light};
-  }
+    &:focus {
+      background: ${(props) => props.theme.colours.blue_light};
+    }
   }
 `
 
@@ -47,7 +44,7 @@ export const Menu = ({ open }: MenuProps): JSX.Element => {
     <StyledMenu open={open} aria-expanded={open}>
       <a href="/">About</a>
       <a href="/helplines">Urgent Help</a>
-      <a href="/">Privacy Policy</a>
+      <a href="/privacy-policy">Privacy Policy</a>
       <a href="/cookies">Cookies</a>
     </StyledMenu>
   )

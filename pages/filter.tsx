@@ -139,15 +139,8 @@ const CloseButton = styled.a`
 
 export const FilterPage: NextPage = () => {
   const { notify } = useContext(NotificationsContext)
-  const {
-    age,
-    ageUpdate,
-    formats,
-    formatUpdate,
-    areas,
-    areaUpdate,
-    clearAll,
-  } = useContext(FilterContext)
+  const { age, ageUpdate, formats, formatUpdate, areas, areaUpdate, clearAll } =
+    useContext(FilterContext)
 
   const saveNotify = () => {
     notify({

@@ -24,7 +24,6 @@ feelings:
   - hopeful
   - confused
   - excited
-  - enthusiastic
   - ignored
 costValue: 0
 age:

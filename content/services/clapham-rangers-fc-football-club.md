@@ -17,7 +17,6 @@ feelings:
   - anxious
   - hopeful
   - confused
-  - enthusiastic
   - excited
   - ignored
 costValue: 7.5
@@ -29,7 +28,7 @@ age:
   minAge: 7
   maxAge: 16
 gender:
-  - men
+  - male
 eligibility: ""
 format: Meeting a group of people
 location: Clapham Common Long Road, opposite Victoria Rise, SW4 0AA

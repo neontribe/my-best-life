@@ -19,7 +19,7 @@ costValue: 0
 age:
   minAge: 6
   maxAge: 20
-gender: women
+gender: female
 eligibility: ""
 format: Online
 location: The Baytree Centre, 300-302 Brixton Road, London SW9 6AE
