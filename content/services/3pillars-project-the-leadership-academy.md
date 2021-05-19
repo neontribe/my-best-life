@@ -3,7 +3,7 @@ organisation: 3Pillars Project
 title: The Leadership Academy
 shortDescription: Leadership & business skills for ex-offenders
 image:
-  image: img/screenshot-2021-04-27-at-20.44.18.png
+  image: img/sad.svg
   imageAlt: Boxer and coach
 description: A coaching programme to build up leadership and business skills,
   for male ex-offenders who have completed either of the 3Pillars Project's
