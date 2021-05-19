@@ -1,21 +1,49 @@
 import styled from 'styled-components'
+import { GetStaticProps, NextPage } from 'next'
 import Link from 'next/link'
 
+import { getServiceData, ServiceDetail } from '../../cms/services'
 import { Layout } from '../../src/Components/Layout'
 import { HeaderComponent } from '../../src/Components/Header'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { StickyNavBar } from '../../src/Components/StickyNavBar'
+import { MiniCard } from '../../src/Components/MiniCard'
+import { useEffect, useState } from 'react'
+
+interface HelplinePageProps {
+  serviceData1: ServiceDetail
+  serviceData2: ServiceDetail
+}
+
+const THE_MIX = 'the-mix-free-online-support-for-under-25s'
+const CHILDLINE = 'childline-childline'
 
 const Heading = styled.h2`
-  display: inline-block;
+  display: flex;
   border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
   font-family: 'Catamaran', sans-serif;
   font-size: ${(props) => props.theme.fontSizes.heading};
+  top-margin: 2rem;
+`
+
+const MainText = styled.p`
+  font-family: 'Catamaran', sans-serif;
+  font-size: ${(props) => props.theme.fontSizes.highlight};
+  margin: 2rem auto;
+  max-width: 30rem;
+  text-align: left;
+
+  a {
+    color: ${(props) => props.theme.colours.blue};
+    text-decoration-color: ${(props) => props.theme.colours.aqua};
+    box-sizing: border-box;
+    height: 2px;
+  }
 `
 
 const Text = styled.p`
   font-family: 'Catamaran', sans-serif;
-  font-size: ${(props) => props.theme.fontSizes.heading};
+  font-size: ${(props) => props.theme.fontSizes.normal};
   margin: 2rem auto;
   max-width: 30rem;
   text-align: left;
@@ -46,11 +74,12 @@ const StyledLink = styled.a`
   font-weight: bold;
   text-decoration: none;
   font-size: ${(props) => props.theme.fontSizes.highlight};
-  padding: 0.5rem;
-  width: 16rem;
-  height: 3rem;
+  padding: 1rem;
+  width: 20rem;
+  height: 4rem;
   justify-content: center;
   margin: 0 auto;
+  margin-bottom: 2em;
   max-width: calc(100% - 2rem);
 
   &:focus {
@@ -65,27 +94,80 @@ const StyledLink = styled.a`
   }
 `
 
-export const IfYouNeedHelpPage = (): JSX.Element => {
+export const IfYouNeedHelpPage: NextPage<IfYouNeedHelpPage> = ({
+  serviceData1,
+  serviceData2,
+}: HelplinePageProps): JSX.Element => {
+  const [selectedTriggerFeelings, setSelectedTriggerFeelings] = useState<
+    Array<string>
+  >([])
+
+  useEffect(() => {
+    const feelings = JSON.parse(
+      localStorage.getItem('quiz/howAreFeeling') || ''
+    )
+
+    const triggerFeelings = ['scared', 'unsafe', 'angry', 'ignored', 'sad']
+    const newTriggerFeelings = []
+
+    for (let i = 0; i < feelings.length; i++) {
+      if (triggerFeelings.find((element) => element === feelings[i])) {
+        newTriggerFeelings.push(feelings[i])
+        setSelectedTriggerFeelings(newTriggerFeelings)
+      }
+    }
+  }, [])
+
+  const makeFeelingsList = (array: string[]) => {
+    if (array.length === 1) return array[0]
+    const firstFeelings = array.slice(0, array.length - 1)
+    const lastFeeling = array[array.length - 1]
+    return firstFeelings.join(', ') + ' and ' + lastFeeling + '.'
+  }
+
   return (
     <Layout>
       <HeaderComponent title="Support in Lambeth" />
       <MainBody>
-        <Heading>Do you need help?</Heading>
-        <VerticalSpacing />
-        <Text>If you are in immediate danger, call 999.</Text>
+        <MainText>{`You've selected that you feel ${makeFeelingsList(
+          selectedTriggerFeelings
+        )}`}</MainText>
+        <VerticalSpacing size={2} />
+        <MainText>
+          Do you need help now or you are just having a bad day?
+        </MainText>
+        <VerticalSpacing size={2} />
+        <Link href="/quiz/what-are-your-interests" passHref>
+          <StyledLink>
+            {'Just having a bad day, carry on with the quiz'}
+          </StyledLink>
+        </Link>
+
+        <VerticalSpacing size={4} />
+
+        <Heading>Need help now?</Heading>
+
         <Text>
-          If you are not in immediate danger but need to talk to someone, call
-          The Mix helpline on <a href="tel:0808 808 4994">0808 808 4994</a>
-          <br />
-          or, <a href="sms:85258?body=THEMIX">text THEMIX to 85258</a>.
+          If you are worried about something and need advice, it is ok to ask
+          for support. You are not alone. You can use these links to get help.
         </Text>
+
+        <MiniCard
+          id={serviceData1.id}
+          image={serviceData1.image}
+          organisation={serviceData1.organisation}
+          shortDescription={serviceData1.shortDescription}
+        />
+        <VerticalSpacing size={4} />
+        <MiniCard
+          id={serviceData2.id}
+          image={serviceData2.image}
+          organisation={serviceData2.organisation}
+          shortDescription={serviceData2.shortDescription}
+        />
       </MainBody>
 
-      <VerticalSpacing />
-
-      <Link href="/quiz/what-are-your-interests" passHref>
-        <StyledLink>{'Back to the quiz'}</StyledLink>
-      </Link>
+      <VerticalSpacing size={4} />
 
       <VerticalSpacing />
       <StickyNavBar />
@@ -94,3 +176,14 @@ export const IfYouNeedHelpPage = (): JSX.Element => {
 }
 
 export default IfYouNeedHelpPage
+
+export const getStaticProps: GetStaticProps = async () => {
+  const serviceData1 = getServiceData(THE_MIX)
+  const serviceData2 = getServiceData(CHILDLINE)
+  return {
+    props: {
+      serviceData1,
+      serviceData2,
+    },
+  }
+}
