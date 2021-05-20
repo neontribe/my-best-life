@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 
 import { Layout, Content } from '../src/Components/Layout'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+
+import { NotificationsContext } from '../src/context/NotificationsContext'
 
 const Heading = styled.h2`
   border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
@@ -83,6 +85,7 @@ const SubmitButton = styled.button`
 `
 
 export const Cookies = (): JSX.Element => {
+  const { notify } = useContext(NotificationsContext)
   const [cookiesAccepted, setCookiesAccepted] = useState<boolean>()
   useEffect(() => {
     setCookiesAccepted(
@@ -101,6 +104,10 @@ export const Cookies = (): JSX.Element => {
       'hotjarCookiesAccepted',
       JSON.stringify(cookiesAccepted)
     )
+    notify({
+      msg: 'Your cookie preferences have been updated',
+      time: 2000,
+    })
   }
 
   return (
