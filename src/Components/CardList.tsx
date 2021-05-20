@@ -62,8 +62,16 @@ export const CardList = ({
     value: () => (numServices ? numServices.toString() : '0'),
   })
 
-  const stuff = recallNumItems()
-  const startItems = stuff !== null ? parseInt(stuff) : ITEMS_PER_PAGE
+  let previousItems
+
+  useEffect(() => {
+    previousItems = recallNumItems()
+  })
+
+  const startItems =
+    previousItems !== null && previousItems !== undefined
+      ? parseInt(previousItems)
+      : ITEMS_PER_PAGE
 
   const [loadedRef, setLoadedRef] = useState<HTMLLIElement | null>(null)
   const [numServices, setNumServices] = useState<number>(startItems)
