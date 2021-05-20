@@ -418,5 +418,29 @@ export default {
         },
       ],
     },
+    {
+      label: 'About',
+      label_singular: 'About',
+      name: 'about',
+      folder: 'content/about',
+      create: false,
+      fields: [
+        {
+          label: 'About',
+          name: 'content',
+          widget: 'markdown',
+          buttons: [
+            'bold',
+            'italic',
+            'link',
+            'heading-two',
+            'heading-three',
+            'heading-four',
+            'bulleted-list',
+          ],
+          hint: 'There will already be a heading level 1 in the page, so this content should use a maximum of heading level 2.',
+        },
+      ],
+    },
   ],
 }
