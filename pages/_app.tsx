@@ -32,6 +32,27 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     <>
       <Head>
         <title>My Best Life</title>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#8BE2D8" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/img/apple-touch-icon.png"
+        />
+        <meta name="apple-mobile-web-app-status-bar" content="#8BE2D8" />
+
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/img/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/img/favicon-16x16.png"
+        />
         <meta name="description" content={metaData.description} />
 
         {/* Google / Search Engine Tags */}
