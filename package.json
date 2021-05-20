@@ -23,7 +23,7 @@
     ]
   },
   "dependencies": {
-    "@vercel/node": "1.9.0",
+    "@vercel/node": "1.10.0",
     "google-spreadsheet": "3.1.15",
     "gray-matter": "4.0.2",
     "next": "latest",
