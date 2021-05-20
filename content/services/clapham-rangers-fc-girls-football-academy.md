@@ -19,7 +19,6 @@ feelings:
   - anxious
   - hopeful
   - confused
-  - enthusiastic
   - excited
   - calm
 costValue: 7.5
@@ -28,7 +27,7 @@ age:
   minAge: 6
   maxAge: 11
 gender:
-  - women
+  - female
 eligibility: "Under-9s team for girls currently in Years 1, 2 and 3. Under-11s
   team for girls currently in Years 4, 5 and 6. "
 format: Meeting a group of people

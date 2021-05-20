@@ -11,27 +11,31 @@ const Footer = styled.nav`
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding: 0 var(--gutter-width);
   z-index: 2;
   background-color: ${(props) => props.theme.colours.white};
   box-shadow: 0px -15px 10px -10px ${(props) => props.theme.colours.shadow};
-  max-height: 70px;
+  height: ${(props) => props.theme.mobileNavHeight};
+
+  ${(props) => props.theme.screenSizes.tabletLandscapePlus} {
+    display: none;
+  }
 `
 
 const FooterNavList = styled.ul`
   display: flex;
-  justify-content: space-between;
-  padding: 0.5rem 2rem;
+  justify-content: space-evenly;
+  padding: 0.5rem 0;
   flex-direction: row;
   color: ${(props) => props.theme.colours.blue};
 `
 
 const FooterLink = styled.a<{ activePage: boolean }>`
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   font-family: 'Catamaran', sans-serif;
   font-size: ${(props) => props.theme.fontSizes.highlight};
+  min-width: 4rem;
   text-decoration: none;
 
   ${(props) =>

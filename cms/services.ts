@@ -58,8 +58,8 @@ type Formats =
   | 'Over the phone'
 
 export type Gender =
-  | 'men'
-  | 'women'
+  | 'male'
+  | 'female'
   | 'non-binary'
   | 'transgender'
   | 'intersex'

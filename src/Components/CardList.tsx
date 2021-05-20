@@ -13,6 +13,7 @@ import { useRemember } from '../hooks/remember'
 import { useScrollRemember } from '../hooks/scrollRemember'
 import { QuizEncouragement } from './QuizEncouragement'
 import { FilterButton } from './FilterButton'
+import { Content } from './Layout'
 
 const ITEMS_PER_PAGE = 20
 const DEFAULT_SERVICE_ID = 'the-mix-free-online-support-for-under-25s'
@@ -24,8 +25,11 @@ interface CardListProps {
   onLoad?(): void
 }
 
-const Content = styled.div`
-  padding: 0 var(--gutter-width);
+const List = styled.ul`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `
 
 export const CardList = ({
@@ -323,7 +327,7 @@ export const CardList = ({
       />
       {listType === 'filtered' ? <QuizEncouragement /> : null}
       {listType === 'filtered' ? <FilterButton /> : null}
-      <ul>
+      <List>
         {page !== null &&
           toRender.map((service: ServicePreview, id: number) => (
             <Card
@@ -341,7 +345,7 @@ export const CardList = ({
               }
             />
           ))}
-      </ul>
+      </List>
       <CardListNavigation
         onForward={() => pageChange(1)}
         onBack={() => pageChange(-1)}

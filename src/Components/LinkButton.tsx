@@ -19,6 +19,7 @@ const StyledButton = styled.button`
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 0;
 
   &:focus {
     outline: 2px dashed ${(props) => props.theme.colours.blue};

@@ -16,7 +16,7 @@ costQualifier: ""
 age:
   minAge: 11
   maxAge: 16
-gender: women
+gender: female
 eligibility: Girls aged 11-16 only.
 format: Meeting a group of people
 location: |-

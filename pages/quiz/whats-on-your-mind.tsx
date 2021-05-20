@@ -3,22 +3,13 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-import { Layout } from '../../src/Components/Layout'
-import { HeaderComponent } from '../../src/Components/Header'
-import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
-import { Checkbox } from '../../src/Components/Checkbox'
+import { Layout, Content } from '../../src/Components/Layout'
 import { LinkButton } from '../../src/Components/LinkButton'
-
 import { QuizContext } from '../../src/context/QuizContext'
-import { StickyNavBar } from '../../src/Components/StickyNavBar'
-import { Category } from '../../cms/services'
+import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
+import ImageCheckboxes from '../../src/Components/ImageCheckboxes'
 
 const CheckboxGroup = styled.div`
-  max-width: 50ch;
-  margin: auto;
-  padding: 1rem var(--gutter-width);
-  width: 100%;
-
   legend {
     border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
     font-family: 'Catamaran', sans-serif;
@@ -62,22 +53,22 @@ const StyledLink = styled.a`
   }
 `
 
-const categories: Array<Category> = [
-  'Money',
-  'School and College',
-  'Sex and Relationships',
-  'Mental Health',
-  'Keeping Safe',
-  'Job Stuff',
-  'Housing',
-  'Friends',
-  'Family',
-  'Drink and Drugs',
-  'Physical Health',
-  'My Rights and the Law',
-]
+const onMind = [
+  { title: 'Money', image: '/img/money.svg' },
+  { title: 'School and college', image: '/img/school and college.svg' },
+  { title: 'Sex and Relationships', image: '/img/sex and relationships.svg' },
+  { title: 'Mental Health', image: '/img/mental health.svg' },
+  { title: 'Keeping Safe', image: '/img/keeping safe.svg' },
+  { title: 'Job Stuff', image: '/img/job stuff.svg' },
+  { title: 'Housing', image: '/img/housing.svg' },
+  { title: 'Friends', image: '/img/friends.svg' },
+  { title: 'Family', image: '/img/family.svg' },
+  { title: 'Drink and Drugs', image: '/img/drink and drugs.svg' },
+  { title: 'Physical Health', image: '/img/physical health.svg' },
+  { title: 'My Rights and the Law', image: '/img/rights and the law.svg' },
+] as const
 
-export type OnMind = typeof categories[number]
+export type OnMind = typeof onMind[number]['title']
 
 export const WhatsOnYourMindPage = (): JSX.Element => {
   const { whatsOnMindGet, whatsOnMindToggle } = useContext(QuizContext)
@@ -85,38 +76,35 @@ export const WhatsOnYourMindPage = (): JSX.Element => {
 
   return (
     <Layout>
-      <HeaderComponent title="Support in Lambeth" />
-      <VerticalSpacing size={3} />
-      <CheckboxGroup>
-        <fieldset>
-          <legend>What&apos;s on your mind today?</legend>
-          <VerticalSpacing size={1} />
+      <Content>
+        <VerticalSpacing size={3} />
+        <CheckboxGroup>
+          <fieldset>
+            <legend>What&apos;s on your mind today?</legend>
+            <VerticalSpacing size={1} />
 
-          <LinkButton
-            textContent="skip this question"
-            arrow="right"
-            onClick={() => router.push('how-are-you-feeling')}
-          />
-          <VerticalSpacing size={1} />
-          {categories.map((category) => {
-            return (
-              <Checkbox
-                key={category}
-                label={category}
-                checked={whatsOnMindGet(category)}
-                onChange={() => whatsOnMindToggle(category)}
-              />
-            )
-          })}
-        </fieldset>
-      </CheckboxGroup>
+            <LinkButton
+              textContent="skip this question"
+              arrow="right"
+              onClick={() => router.push('how-are-you-feeling')}
+            />
+            <VerticalSpacing />
+            <ImageCheckboxes
+              id="on-mind-checkboxes"
+              values={onMind}
+              contextGet={whatsOnMindGet}
+              contextToggle={whatsOnMindToggle}
+            />
+          </fieldset>
+        </CheckboxGroup>
+        <VerticalSpacing />
 
-      <Link href="/quiz/how-are-you-feeling" passHref>
-        <StyledLink>{'Ok'}</StyledLink>
-      </Link>
+        <Link href="/quiz/how-are-you-feeling" passHref>
+          <StyledLink>{'Ok'}</StyledLink>
+        </Link>
 
-      <VerticalSpacing />
-      <StickyNavBar />
+        <VerticalSpacing />
+      </Content>
     </Layout>
   )
 }

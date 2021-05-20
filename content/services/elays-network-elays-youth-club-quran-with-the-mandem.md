@@ -16,7 +16,7 @@ costValue: 0
 age:
   minAge: 16
 gender:
-  - men
+  - male
 eligibility: This is a boys only service.
 format: Meeting a group of people
 location: 68 St Rule Street, Battersea, London SW8 3ED

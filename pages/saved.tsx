@@ -2,10 +2,8 @@ import { NextPage, GetStaticProps } from 'next'
 
 import { Service, getServices } from '../cms/services'
 import { CardList } from '../src/Components/CardList'
-import { HeaderComponent } from '../src/Components/Header'
 import { Layout } from '../src/Components/Layout'
 import { ServicePreview } from './index'
-import { StickyNavBar } from '../src/Components/StickyNavBar'
 
 interface ListPageProps {
   services: Array<ServicePreview>
@@ -13,13 +11,9 @@ interface ListPageProps {
 
 export const SavedPage: NextPage<ListPageProps> = ({ services }) => {
   return (
-    <>
-      <Layout>
-        <HeaderComponent title="Support in Lambeth" />
-        <CardList services={services} listType="saved" />
-        <StickyNavBar />
-      </Layout>
-    </>
+    <Layout>
+      <CardList services={services} listType="saved" />
+    </Layout>
   )
 }
 

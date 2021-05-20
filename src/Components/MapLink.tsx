@@ -31,7 +31,7 @@ const MapLinkContainer = styled.div`
 `
 
 const MapPin = styled.div`
-  background-image: url('/assets/map_pin.svg');
+  background-image: url('/site/map_pin.svg');
   background-size: contain;
   background-repeat: no-repeat;
   height: 1.8rem;

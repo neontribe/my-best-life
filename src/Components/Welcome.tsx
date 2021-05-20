@@ -144,7 +144,7 @@ export const Welcome = (): JSX.Element => {
   }, [showWelcome])
 
   return (
-    <Layout>
+    <Layout hideNav>
       <VisuallyHidden>
         <svg width="0" height="0">
           <defs>
