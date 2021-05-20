@@ -28,6 +28,7 @@ const Text = styled.div`
   justify-content: center;
   letter-spacing: 0.05em;
   margin: 0 0.5rem 0.5rem 0.5rem;
+  min-height: 42px;
   z-index: 1;
 `
 
@@ -36,9 +37,17 @@ const CheckboxItem = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 0 0 33%;
+  flex: 0 0 calc(100% / 3);
   padding: 0 0.5rem;
   margin: 0.5rem 0;
+
+  ${(props) => props.theme.screenSizes.tabletPortraitPlus} {
+    flex: 0 0 calc(100% / 4);
+  }
+
+  ${(props) => props.theme.screenSizes.tabletLandscapePlus} {
+    flex: 0 0 calc(100% / 6);
+  }
 
   label {
     border-radius: 1rem;
@@ -48,6 +57,7 @@ const CheckboxItem = styled.div`
     flex-direction: column;
     position: relative;
     text-align: center;
+    height: 100%;
   }
 
   input {
@@ -70,10 +80,6 @@ const CheckboxItem = styled.div`
 
     &:checked ~ ${Text} {
       color: ${(props) => props.theme.colours.purple};
-    }
-
-    &:checked ~ img {
-      border-radius: 50%;
     }
   }
 

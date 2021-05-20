@@ -12,7 +12,6 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   top: 5rem;
   z-index: 10;
   width: 100%;
-  max-width: 600px;
 
   ${(props) => !props.open && `display: none;`}
 

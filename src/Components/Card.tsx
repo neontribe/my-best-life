@@ -31,6 +31,11 @@ const CardContainer = styled.li`
   margin: 1.5rem 0;
   overflow: hidden;
   position: relative;
+  width: 100%;
+
+  ${(props) => props.theme.screenSizes.tabletLandscapePlus} {
+    width: calc(50% - 1rem);
+  }
 
   &:hover {
     box-shadow: 0 0 15px 7px ${(props) => props.theme.colours.shadow};

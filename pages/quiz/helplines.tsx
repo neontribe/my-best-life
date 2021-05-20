@@ -2,9 +2,7 @@ import styled from 'styled-components'
 import Link from 'next/link'
 
 import { Layout } from '../../src/Components/Layout'
-import { HeaderComponent } from '../../src/Components/Header'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
-import { StickyNavBar } from '../../src/Components/StickyNavBar'
 
 const Heading = styled.h2`
   display: inline-block;
@@ -68,7 +66,6 @@ const StyledLink = styled.a`
 export const IfYouNeedHelpPage = (): JSX.Element => {
   return (
     <Layout>
-      <HeaderComponent title="Support in Lambeth" />
       <MainBody>
         <Heading>Do you need help?</Heading>
         <VerticalSpacing />
@@ -88,7 +85,6 @@ export const IfYouNeedHelpPage = (): JSX.Element => {
       </Link>
 
       <VerticalSpacing />
-      <StickyNavBar />
     </Layout>
   )
 }

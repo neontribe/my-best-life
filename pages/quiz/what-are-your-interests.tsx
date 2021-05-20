@@ -3,13 +3,10 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-import { Layout } from '../../src/Components/Layout'
+import { Layout, Content } from '../../src/Components/Layout'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
-import { HeaderComponent } from '../../src/Components/Header'
-import { QuizContext } from '../../src/context/QuizContext'
 import { LinkButton } from '../../src/Components/LinkButton'
-
-import { StickyNavBar } from '../../src/Components/StickyNavBar'
+import { QuizContext } from '../../src/context/QuizContext'
 import ImageCheckboxes from '../../src/Components/ImageCheckboxes'
 
 const Navigation = styled.section`
@@ -21,11 +18,6 @@ const Navigation = styled.section`
 `
 
 const CheckboxGroup = styled.div`
-  max-width: 50ch;
-  margin: auto;
-  padding: 1rem var(--gutter-width);
-  width: 100%;
-
   legend {
     border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
     font-family: 'Catamaran', sans-serif;
@@ -93,43 +85,43 @@ export const WhatAreYourInterestsPage = (): JSX.Element => {
 
   return (
     <Layout>
-      <HeaderComponent title="Support in Lambeth" />
-      <Navigation>
-        <LinkButton
-          textContent="back"
-          arrow="left"
-          onClick={() => router.push('how-are-you-feeling')}
-        />
-      </Navigation>
-
-      <CheckboxGroup>
-        <fieldset>
-          <legend>What are your interests?</legend>
-          <VerticalSpacing size={1} />
-
+      <Content>
+        <Navigation>
           <LinkButton
-            textContent="skip this question"
-            arrow="right"
-            onClick={() => router.push('age')}
+            textContent="back"
+            arrow="left"
+            onClick={() => router.push('how-are-you-feeling')}
           />
-          <VerticalSpacing />
+        </Navigation>
 
-          <ImageCheckboxes
-            id="interests-checkboxes"
-            values={interests}
-            contextGet={interestsGet}
-            contextToggle={interestsToggle}
-          />
-        </fieldset>
-      </CheckboxGroup>
-      <VerticalSpacing />
+        <CheckboxGroup>
+          <fieldset>
+            <legend>What are your interests?</legend>
+            <VerticalSpacing size={1} />
 
-      <Link href="/quiz/age" passHref>
-        <StyledLink>{'Ok'}</StyledLink>
-      </Link>
+            <LinkButton
+              textContent="skip this question"
+              arrow="right"
+              onClick={() => router.push('age')}
+            />
+            <VerticalSpacing />
 
-      <VerticalSpacing />
-      <StickyNavBar />
+            <ImageCheckboxes
+              id="interests-checkboxes"
+              values={interests}
+              contextGet={interestsGet}
+              contextToggle={interestsToggle}
+            />
+          </fieldset>
+        </CheckboxGroup>
+        <VerticalSpacing />
+
+        <Link href="/quiz/age" passHref>
+          <StyledLink>{'Ok'}</StyledLink>
+        </Link>
+
+        <VerticalSpacing />
+      </Content>
     </Layout>
   )
 }

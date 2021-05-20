@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
-import { Layout } from '../src/Components/Layout'
-import { HeaderComponent } from '../src/Components/Header'
+import { Layout, Content } from '../src/Components/Layout'
 import { useState, useEffect } from 'react'
 
 const Heading = styled.h2`
@@ -35,10 +34,6 @@ const Text = styled.p`
 `
 
 const MainBody = styled.div`
-  width: 100%;
-  margin: 0;
-  padding: 2rem;
-
   ul {
     list-style: disc;
     margin-bottom: 1rem;
@@ -110,79 +105,81 @@ export const Cookies = (): JSX.Element => {
 
   return (
     <Layout>
-      <HeaderComponent title="Support in Lambeth" />
-      <MainBody>
-        <Heading>Cookies</Heading>
-        <Text>
-          Cookies are files saved on your phone, tablet or computer when you
-          visit a website.
-        </Text>
-        <Text>
-          We use cookies to store information about how you use this site, such
-          as the pages you visit.
-        </Text>
-        <Heading>Cookie Settings</Heading>
-        <Text>
-          We use 2 types of cookies. You can choose which cookies you are happy
-          for us to use.
-        </Text>
-        <SubHeading>
-          Hotjar cookies that measure website use and collect feedback
-        </SubHeading>
-        <Text>
-          We use Hotjar Analytics to measure how you use the website to collect
-          feedback from you about our website so we can improve it based on user
-          needs.
-        </Text>
-        <Text>
-          Hotjar sets cookies that store anonymised information about:
-        </Text>
-        <ul>
-          <li>how you got to the site</li>
-          <li>the pages you visit on and how long you spend on each page</li>
-          <li>what you click on while you are visiting the site</li>
-          <li>whether you have already visited the site</li>
-        </ul>
-        <Text>
-          For further details please see the about Hotjar section of{' '}
-          <a href="https://help.hotjar.com/hc/en-us/categories/115001323967-About-Hotjar">
-            Hotjar support site
-          </a>
-          .
-        </Text>
-        <form id="hotjarCookies" onSubmit={handleSubmit}>
-          <div>
-            <label>
-              <input
-                onChange={handleChange}
-                type="radio"
-                id="hotjarCookiesAccept"
-                name="hotjarCookiesAccepted"
-                value="true"
-                checked={cookiesAccepted}
-              />
-              Use Hotjar cookies
-            </label>
-            <label>
-              <input
-                onChange={handleChange}
-                type="radio"
-                id="hotjarCookiesReject"
-                name="hotjarCookiesAccepted"
-                value="false"
-                checked={!cookiesAccepted}
-              />
-              Do not use Hotjar cookies
-            </label>
-          </div>
-          <SubHeading>Strictly necessary cookies</SubHeading>
+      <Content>
+        <MainBody>
+          <Heading>Cookies</Heading>
           <Text>
-            We use essential cookies to remember your cookie preferences and to remember your quiz answers.
+            Cookies are files saved on your phone, tablet or computer when you
+            visit a website.
           </Text>
-          <Text>They always need to be on.</Text>
-          <SubmitButton type="submit">Save changes</SubmitButton>
-        </form>
-      </MainBody>
+          <Text>
+            We use cookies to store information about how you use this site,
+            such as the pages you visit.
+          </Text>
+          <Heading>Cookie Settings</Heading>
+          <Text>
+            We use 2 types of cookies. You can choose which cookies you are
+            happy for us to use.
+          </Text>
+          <SubHeading>
+            Hotjar cookies that measure website use and collect feedback
+          </SubHeading>
+          <Text>
+            We use Hotjar Analytics to measure how you use the website to
+            collect feedback from you about our website so we can improve it
+            based on user needs.
+          </Text>
+          <Text>
+            Hotjar sets cookies that store anonymised information about:
+          </Text>
+          <ul>
+            <li>how you got to the site</li>
+            <li>the pages you visit on and how long you spend on each page</li>
+            <li>what you click on while you are visiting the site</li>
+            <li>whether you have already visited the site</li>
+          </ul>
+          <Text>
+            For further details please see the about Hotjar section of{' '}
+            <a href="https://help.hotjar.com/hc/en-us/categories/115001323967-About-Hotjar">
+              Hotjar support site
+            </a>
+            .
+          </Text>
+          <form id="hotjarCookies" onSubmit={handleSubmit}>
+            <div>
+              <label>
+                <input
+                  onChange={handleChange}
+                  type="radio"
+                  id="hotjarCookiesAccept"
+                  name="hotjarCookiesAccepted"
+                  value="true"
+                  checked={cookiesAccepted}
+                />
+                Use Hotjar cookies
+              </label>
+              <label>
+                <input
+                  onChange={handleChange}
+                  type="radio"
+                  id="hotjarCookiesReject"
+                  name="hotjarCookiesAccepted"
+                  value="false"
+                  checked={!cookiesAccepted}
+                />
+                Do not use Hotjar cookies
+              </label>
+            </div>
+            <SubHeading>Strictly necessary cookies</SubHeading>
+            <Text>
+              We use essential cookies to remember your cookie preferences and
+              to remember your quiz answers.
+            </Text>
+            <Text>They always need to be on.</Text>
+            <SubmitButton type="submit">Save changes</SubmitButton>
+          </form>
+        </MainBody>
+      </Content>
     </Layout>
   )
 }

@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import Link from 'next/link'
 
 import { Layout } from '../src/Components/Layout'
-import { HeaderComponent } from '../src/Components/Header'
 import { VerticalSpacing } from '../src/Components/VerticalSpacing'
 
 const Heading = styled.h2`
@@ -67,7 +66,6 @@ const StyledLink = styled.a`
 export const IfYouNeedHelpPage = (): JSX.Element => {
   return (
     <Layout>
-      <HeaderComponent title="Support in Lambeth" />
       <MainBody>
         <Heading>Do you need help?</Heading>
         <VerticalSpacing />

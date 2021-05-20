@@ -3,10 +3,8 @@ import { NextPage, GetStaticProps } from 'next'
 
 import { Service, getServices } from '../cms/services'
 import { CardList } from '../src/Components/CardList'
-import { HeaderComponent } from '../src/Components/Header'
 import { Layout } from '../src/Components/Layout'
 import { Welcome } from '../src/Components/Welcome'
-import { StickyNavBar } from '../src/Components/StickyNavBar'
 
 interface ListPageProps {
   services: Array<ServicePreview>
@@ -54,9 +52,7 @@ export const ListPage: NextPage<ListPageProps> = ({ services }) => {
         <Welcome />
       ) : (
         <Layout>
-          <HeaderComponent title="Support in Lambeth" />
           <CardList services={services} listType="filtered" />
-          <StickyNavBar />
         </Layout>
       )}
     </>
