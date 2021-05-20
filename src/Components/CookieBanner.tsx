@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-import { ButtonBase } from './ButtonBase'
 import { Content } from './Layout'
 
 const CookieBannerContainer = styled.div`
@@ -24,17 +23,36 @@ const CookieBannerContainer = styled.div`
     padding-bottom: 0.5em;
   }
 `
-const CookieButton = styled(ButtonBase)`
-  font-size: ${(props) => props.theme.fontSizes.highlight};
+const CookieButton = styled.button`
+  align-items: center;
   background-color: ${(props) => props.theme.colours.aqua};
+  border-radius: 5rem;
+  border: 3px solid transparent;
   color: ${(props) => props.theme.colours.blue};
+  cursor: pointer;
+  display: flex;
+  font-family: 'Catamaran', sans-serif;
+  font-size: ${(props) => props.theme.fontSizes.highlight};
+  font-weight: bold;
   justify-content: center;
-  padding: 0.5rem;
-  margin-top: 0.5em;
   margin-bottom: 1em;
-  position: relative;
-  z-index: 5;
+  margin-top: 0.5em;
   max-width: 180px;
+  padding: 0.5rem 1.2rem;
+  padding: 0.5rem;
+  position: relative;
+  text-decoration: none;
+  z-index: 5;
+
+  &:hover {
+    background-color: ${(props) => props.theme.colours.yellow_light};
+    transition: 0.3s background-color, 0.3s color;
+  }
+
+  &:focus {
+    outline: 2px dashed ${(props) => props.theme.colours.white};
+    outline-offset: 2px;
+  }
 `
 
 export const CookieBanner = (): JSX.Element => {
