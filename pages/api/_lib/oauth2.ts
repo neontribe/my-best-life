@@ -1,6 +1,6 @@
-import simpleOauthModule from 'simple-oauth2'
+import simpleOauthModule, { OAuthClient } from 'simple-oauth2'
 
-export const create = () =>
+export const create = (): OAuthClient<string> =>
   simpleOauthModule.create({
     client: {
       id: process.env.OAUTH_CLIENT_ID_NPC || '',
