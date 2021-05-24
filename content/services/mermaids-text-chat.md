@@ -2,6 +2,9 @@
 organisation: Mermaids
 title: Text Chat
 shortDescription: 24/7 transgender crisis text line
+image:
+  image: img/pexels-photo-348530.jpeg
+  imageAlt: Close of someone texting
 description: "Text MERMAIDS to 85258 for 24/7 crisis support. All texts are
   answered by trained volunteers, with support from experienced clinical
   supervisors. The Text Chat service is powered by Crisis Text Line. "
