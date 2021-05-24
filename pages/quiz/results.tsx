@@ -35,11 +35,13 @@ export const QuizListPage: NextPage<QuizListPageProps> = ({ services }) => {
 
   return (
     <Layout>
-      <VerticalSpacing />
-      <StyledButton as="button" onClick={onReset}>
-        Reset Quiz
-      </StyledButton>
-      <CardList services={services} listType="quiz" />
+      <main>
+        <VerticalSpacing />
+        <StyledButton as="button" onClick={onReset}>
+          Reset Quiz
+        </StyledButton>
+        <CardList services={services} listType="quiz" />
+      </main>
     </Layout>
   )
 }

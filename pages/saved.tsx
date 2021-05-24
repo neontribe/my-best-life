@@ -12,7 +12,9 @@ interface ListPageProps {
 export const SavedPage: NextPage<ListPageProps> = ({ services }) => {
   return (
     <Layout>
-      <CardList services={services} listType="saved" />
+      <main>
+        <CardList services={services} listType="saved" />
+      </main>
     </Layout>
   )
 }

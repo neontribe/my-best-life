@@ -44,7 +44,7 @@ const About = styled.article`
 export const AboutPage: NextPage<AboutProps> = ({ content }) => {
   return (
     <Layout>
-      <Content>
+      <Content as="main">
         <VerticalSpacing />
         <About dangerouslySetInnerHTML={{ __html: content }} />
         <VerticalSpacing />

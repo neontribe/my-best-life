@@ -66,7 +66,7 @@ const StyledLink = styled.a`
 export const IfYouNeedHelpPage = (): JSX.Element => {
   return (
     <Layout>
-      <MainBody>
+      <MainBody as="main">
         <Heading>Do you need help?</Heading>
         <VerticalSpacing />
         <Text>If you are in immediate danger, call 999.</Text>
@@ -76,13 +76,13 @@ export const IfYouNeedHelpPage = (): JSX.Element => {
           <br />
           or, <a href="sms:85258?body=THEMIX">text THEMIX to 85258</a>.
         </Text>
+
+        <VerticalSpacing />
+
+        <Link href="/" passHref>
+          <StyledLink>{'Go back'}</StyledLink>
+        </Link>
       </MainBody>
-
-      <VerticalSpacing />
-
-      <Link href="/" passHref>
-        <StyledLink>{'Go back'}</StyledLink>
-      </Link>
 
       <VerticalSpacing />
     </Layout>

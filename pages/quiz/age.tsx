@@ -75,7 +75,7 @@ export const AgePage = (): JSX.Element => {
 
   return (
     <Layout>
-      <Content>
+      <Content as="main">
         <Navigation>
           <LinkButton
             textContent="back"

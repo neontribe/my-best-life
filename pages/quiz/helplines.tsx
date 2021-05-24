@@ -66,7 +66,7 @@ const StyledLink = styled.a`
 export const IfYouNeedHelpPage = (): JSX.Element => {
   return (
     <Layout>
-      <MainBody>
+      <MainBody as="main">
         <Heading>Do you need help?</Heading>
         <VerticalSpacing />
         <Text>If you are in immediate danger, call 999.</Text>

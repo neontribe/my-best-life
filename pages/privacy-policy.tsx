@@ -44,7 +44,7 @@ const Policy = styled.article`
 export const PrivacyPage: NextPage<PrivacyPageProps> = ({ content }) => {
   return (
     <Layout>
-      <Content>
+      <Content as="main">
         <VerticalSpacing />
         <Policy dangerouslySetInnerHTML={{ __html: content }} />
         <VerticalSpacing />

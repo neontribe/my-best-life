@@ -112,7 +112,7 @@ export const Cookies = (): JSX.Element => {
 
   return (
     <Layout>
-      <Content>
+      <Content as="main">
         <MainBody>
           <Heading>Cookies</Heading>
           <Text>
