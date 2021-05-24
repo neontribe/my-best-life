@@ -12,6 +12,11 @@ description: "Mermaids' online community is a safe space for you to ask
 categories:
   category1: Friends
   category2: Sex and Relationships
+feelings:
+  - unsure
+  - anxious
+  - confused
+  - ignored
 costValue: 0
 age:
   minAge: 12
