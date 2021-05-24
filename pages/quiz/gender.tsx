@@ -66,6 +66,8 @@ const StyledLink = styled.a`
   }
 `
 
+const CheckboxGroup = styled.ul``
+
 const categories: Array<Gender> = [
   'male',
   'female',
@@ -115,16 +117,18 @@ export const GenderPage = (): JSX.Element => {
             </p>
 
             <VerticalSpacing size={1} />
-            {categories.map((category) => {
-              return (
-                <Checkbox
-                  key={category}
-                  label={category}
-                  checked={genderGet(category)}
-                  onChange={() => genderToggle(category)}
-                />
-              )
-            })}
+            <CheckboxGroup>
+              {categories.map((category) => {
+                return (
+                  <Checkbox
+                    key={category}
+                    label={category}
+                    checked={genderGet(category)}
+                    onChange={() => genderToggle(category)}
+                  />
+                )
+              })}
+            </CheckboxGroup>
           </fieldset>
         </QuestionSection>
 

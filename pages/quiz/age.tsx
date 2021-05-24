@@ -64,7 +64,7 @@ const StyledLink = styled.a`
   }
 `
 
-const RadioGroup = styled.div``
+const RadioGroup = styled.ul``
 
 const allAges = ['under 15', '15', '16', '17', '18', 'over 18']
 

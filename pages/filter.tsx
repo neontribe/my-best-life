@@ -89,11 +89,11 @@ const FilterSection = styled.section<{ borderBottom?: boolean }>`
   }
 `
 
-const CheckboxGroup = styled.div`
+const CheckboxGroup = styled.ul`
   margin: 1rem 0;
 `
 
-const RadioGroup = styled.div`
+const RadioGroup = styled.ul`
   margin: 1rem 0;
 `
 
