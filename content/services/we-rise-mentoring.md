@@ -2,6 +2,9 @@
 organisation: We Rise
 title: Mentoring
 shortDescription: One-to-one career mentoring
+image:
+  image: img/we-rise-mentoring.jpg
+  imageAlt: A group of young people and mentors
 description: >-
   Weekly one-to-one on-line mentoring from professional volunteers to support
   your careers journey and personal development. We Rise mentors helps you
@@ -33,5 +36,11 @@ contactExplanation: You will need to create a Mentee profile via the We Rise
   induction training is complete, you will be matched with a mentor on the
   mentoring platform and you can start arranging your sessions.
 form: https://werise.sfgmentornet.com/User/Register?program=1&role=Mentee
-reviews: []
+website: https://www.werise.org.uk/youth-opportunities/
+reviews:
+  - comment: We Rise helped me by thinking of things I could bring to a job and
+      understanding by strengths and weaknesses
+    author: Marisha
+  - author: Marissa
+    comment: Coaching has helped me focus more in class
 ---
