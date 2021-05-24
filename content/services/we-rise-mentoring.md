@@ -28,6 +28,7 @@ age:
   minAge: 15
   maxAge: 19
 format: Online
+location: ""
 expectation: All participants will be able to use the secure online mentoring
   platform for your weekly mentoring sessions. You will also have access to
   networking and social events to connect with other mentees on the programme
