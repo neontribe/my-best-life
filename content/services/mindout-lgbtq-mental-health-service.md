@@ -2,6 +2,9 @@
 organisation: MindOut
 title: LGBTQ Mental Health Service
 shortDescription: LGBTQ mental health live chat support
+image:
+  image: img/pexels-miguel-á-padriñán-1111369.jpg
+  imageAlt: A chat bubble
 description: >-
   Confidential non-judgemental and anonymous support for LGBTQ people via an
   online instant messaging service. 
