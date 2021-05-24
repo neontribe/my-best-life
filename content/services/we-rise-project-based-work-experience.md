@@ -9,11 +9,26 @@ description: Work alongside professionals and others your age to deliver real
   project-work for clients. Get great experience for your CV and personal
   statement. Project include; research with IPSOS MORI, video and media
   production, and showcasing young people's views.
+categories:
+  category1: Job Stuff
+  category2: School and College
+interests:
+  - Films and TV
+  - Activism
+  - Fashion and Beauty
+feelings:
+  - unsure
+  - hopeful
+  - confused
 costValue: 0
 age:
   minAge: 16
-  maxAge: 17
+  maxAge: 18
+eligibility: Based on Lambeth
 format: Meeting a group of people
+location: 3Space International House, Canterbury Crescent, Brixton, London SW9 7QD
+area:
+  - Coldharbour
 reviews:
   - comment: I have learnt I am a young person who can speak out and represent the
       voice of youth
