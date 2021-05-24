@@ -2,6 +2,9 @@
 organisation: Mermaids
 title: Web Chat
 shortDescription: Free webchat for trans people
+image:
+  image: img/pexels-miguel-á-padriñán-1111368.jpg
+  imageAlt: Two chat boxes
 description: "Have a confidential chat online with a qualified webchat operator. "
 categories:
   category1: Sex and Relationships
