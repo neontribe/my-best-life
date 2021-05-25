@@ -4,8 +4,6 @@ import Image from 'next/image'
 
 import { Layout } from '../../src/Components/Layout'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
-import { HeaderComponent } from '../../src/Components/Header'
-import { StickyNavBar } from '../../src/Components/StickyNavBar'
 
 const Title = styled.h1`
   font-family: 'Catamaran', sans-serif;
@@ -65,7 +63,6 @@ const StyledLink = styled.a`
 export const QuizWelcomePage = (): JSX.Element => {
   return (
     <Layout>
-      <HeaderComponent title="Support in Lambeth" />
       <Section>
         <Title>Welcome!</Title>
 
@@ -93,7 +90,6 @@ export const QuizWelcomePage = (): JSX.Element => {
 
         <VerticalSpacing />
       </Section>
-      <StickyNavBar />
     </Layout>
   )
 }

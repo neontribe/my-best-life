@@ -41,5 +41,6 @@ declare module 'styled-components' {
     }
 
     headerHeight: string
+    mobileNavHeight: string
   }
 }

@@ -3,15 +3,13 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-import { Layout } from '../../src/Components/Layout'
-import { HeaderComponent } from '../../src/Components/Header'
+import { Layout, Content } from '../../src/Components/Layout'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { Checkbox } from '../../src/Components/Checkbox'
 import { QuizContext } from '../../src/context/QuizContext'
 import { LinkButton } from '../../src/Components/LinkButton'
 
 import { Gender } from '../../cms/services'
-import { StickyNavBar } from '../../src/Components/StickyNavBar'
 
 const Navigation = styled.section`
   align-items: center;
@@ -22,10 +20,8 @@ const Navigation = styled.section`
 `
 
 const QuestionSection = styled.section`
-  max-width: 50ch;
   margin: auto;
-  padding: 1rem var(--gutter-width);
-  width: 100%;
+  max-width: 50ch;
 
   legend {
     border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
@@ -93,53 +89,53 @@ export const GenderPage = (): JSX.Element => {
 
   return (
     <Layout>
-      <HeaderComponent title="Support in Lambeth" />
-      <Navigation>
-        <LinkButton
-          textContent="back"
-          arrow="left"
-          onClick={() => router.push('age')}
-        />
-      </Navigation>
-      <QuestionSection>
-        <fieldset>
-          <legend>What is your gender identity?</legend>
-          <VerticalSpacing size={1} />
+      <Content>
+        <Navigation>
           <LinkButton
-            textContent="skip this question"
-            arrow="right"
-            onClick={() => skipQuestionAndSeeResults()}
+            textContent="back"
+            arrow="left"
+            onClick={() => router.push('age')}
           />
-          <VerticalSpacing size={1} />
+        </Navigation>
+        <QuestionSection>
+          <fieldset>
+            <legend>What is your gender identity?</legend>
+            <VerticalSpacing size={1} />
+            <LinkButton
+              textContent="skip this question"
+              arrow="right"
+              onClick={() => skipQuestionAndSeeResults()}
+            />
+            <VerticalSpacing size={1} />
 
-          <p>
-            Some support and activities in your area are gender specific. To
-            find something right for you, you can let us know which gender you
-            identify with (if you would like to).
-          </p>
+            <p>
+              Some support and activities in your area are gender specific. To
+              find something right for you, you can let us know which gender you
+              identify with (if you would like to).
+            </p>
 
-          <VerticalSpacing size={1} />
-          {categories.map((category) => {
-            return (
-              <Checkbox
-                key={category}
-                label={category}
-                checked={genderGet(category)}
-                onChange={() => genderToggle(category)}
-              />
-            )
-          })}
-        </fieldset>
-      </QuestionSection>
+            <VerticalSpacing size={1} />
+            {categories.map((category) => {
+              return (
+                <Checkbox
+                  key={category}
+                  label={category}
+                  checked={genderGet(category)}
+                  onChange={() => genderToggle(category)}
+                />
+              )
+            })}
+          </fieldset>
+        </QuestionSection>
 
-      <VerticalSpacing />
+        <VerticalSpacing />
 
-      <Link href="/quiz/results" passHref>
-        <StyledLink onClick={() => setQuizComplete(true)}>{'Ok'}</StyledLink>
-      </Link>
+        <Link href="/quiz/results" passHref>
+          <StyledLink onClick={() => setQuizComplete(true)}>{'Ok'}</StyledLink>
+        </Link>
 
-      <VerticalSpacing />
-      <StickyNavBar />
+        <VerticalSpacing />
+      </Content>
     </Layout>
   )
 }

@@ -228,6 +228,7 @@ export const QuizProvider = ({ children }: QuizProviderProps): JSX.Element => {
       clearProgress,
       quizComplete,
       setQuizComplete,
+      fullData,
     ]
   )
 

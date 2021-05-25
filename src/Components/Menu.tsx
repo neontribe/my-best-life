@@ -12,7 +12,6 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   top: 5rem;
   z-index: 10;
   width: 100%;
-  max-width: 600px;
 
   ${(props) => !props.open && `display: none;`}
 
@@ -41,7 +40,7 @@ interface MenuProps {
 export const Menu = ({ open }: MenuProps): JSX.Element => {
   return (
     <StyledMenu open={open} aria-expanded={open}>
-      <a href="/">About</a>
+      <a href="/about">About</a>
       <a href="/helplines">Urgent Help</a>
       <a href="/privacy-policy">Privacy Policy</a>
       <a href="/cookies">Cookies</a>

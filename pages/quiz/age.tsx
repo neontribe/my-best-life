@@ -3,14 +3,11 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-import { Layout } from '../../src/Components/Layout'
-import { HeaderComponent } from '../../src/Components/Header'
+import { Layout, Content } from '../../src/Components/Layout'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { RadioButton } from '../../src/Components/RadioButton'
 import { QuizContext } from '../../src/context/QuizContext'
 import { LinkButton } from '../../src/Components/LinkButton'
-
-import { StickyNavBar } from '../../src/Components/StickyNavBar'
 
 const Navigation = styled.section`
   align-items: center;
@@ -21,10 +18,8 @@ const Navigation = styled.section`
 `
 
 const QuestionSection = styled.section`
-  max-width: 50ch;
   margin: auto;
-  padding: 1rem var(--gutter-width);
-  width: 100%;
+  max-width: 50ch;
 
   legend {
     border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
@@ -69,9 +64,7 @@ const StyledLink = styled.a`
   }
 `
 
-const RadioGroup = styled.div`
-  margin: 1rem 0;
-`
+const RadioGroup = styled.div``
 
 const allAges = ['under 15', '15', '16', '17', '18', 'over 18']
 
@@ -82,46 +75,51 @@ export const AgePage = (): JSX.Element => {
 
   return (
     <Layout>
-      <HeaderComponent title="Support in Lambeth" />
-      <Navigation>
-        <LinkButton
-          textContent="back"
-          arrow="left"
-          onClick={() => router.push('what-are-your-interests')}
-        />
-      </Navigation>
-      <QuestionSection>
-        <fieldset>
-          <legend>How old are you?</legend>
-          <VerticalSpacing size={1} />
+      <Content>
+        <Navigation>
           <LinkButton
-            textContent="skip this question"
-            arrow="right"
-            onClick={() => router.push('gender')}
+            textContent="back"
+            arrow="left"
+            onClick={() => router.push('what-are-your-interests')}
           />
-          <VerticalSpacing size={1} />
-          <RadioGroup>
-            {allAges.map((item) => {
-              return (
-                <RadioButton
-                  key={item}
-                  label={item}
-                  name={'age'}
-                  checked={ageGet() === item}
-                  onChange={() => ageSet(item)}
-                />
-              )
-            })}
-          </RadioGroup>
-        </fieldset>
-      </QuestionSection>
+        </Navigation>
 
-      <Link href="/quiz/results" passHref>
-        <StyledLink onClick={() => router.push('gender')}>{'Ok'}</StyledLink>
-      </Link>
+        <VerticalSpacing />
 
-      <VerticalSpacing />
-      <StickyNavBar />
+        <QuestionSection>
+          <fieldset>
+            <legend>How old are you?</legend>
+            <VerticalSpacing size={1} />
+            <LinkButton
+              textContent="skip this question"
+              arrow="right"
+              onClick={() => router.push('gender')}
+            />
+            <VerticalSpacing size={1} />
+            <RadioGroup>
+              {allAges.map((item) => {
+                return (
+                  <RadioButton
+                    key={item}
+                    label={item}
+                    name={'age'}
+                    checked={ageGet() === item}
+                    onChange={() => ageSet(item)}
+                  />
+                )
+              })}
+            </RadioGroup>
+          </fieldset>
+        </QuestionSection>
+
+        <VerticalSpacing />
+
+        <Link href="/quiz/gender" passHref>
+          <StyledLink>{'Ok'}</StyledLink>
+        </Link>
+
+        <VerticalSpacing />
+      </Content>
     </Layout>
   )
 }

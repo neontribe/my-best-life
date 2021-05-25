@@ -4,11 +4,10 @@ import Link from 'next/link'
 
 import { getServiceData, ServiceDetail } from '../../cms/services'
 import { Layout } from '../../src/Components/Layout'
-import { HeaderComponent } from '../../src/Components/Header'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
-import { StickyNavBar } from '../../src/Components/StickyNavBar'
 import { MiniCard } from '../../src/Components/MiniCard'
 import { useEffect, useState } from 'react'
+
 
 interface HelplinePageProps {
   serviceData1: ServiceDetail
@@ -256,7 +255,7 @@ export const IfYouNeedHelpPage = ({
 
   return (
     <Layout>
-      <HeaderComponent title="Support in Lambeth" />
+
       <CopyBody>
         <MainText>{`You've selected that you feel ${makeFeelingsList(
           selectedTriggerFeelings
@@ -282,7 +281,6 @@ export const IfYouNeedHelpPage = ({
       <VerticalSpacing size={4} />
 
       <VerticalSpacing />
-      <StickyNavBar />
     </Layout>
   )
 }

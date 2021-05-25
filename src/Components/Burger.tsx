@@ -10,19 +10,25 @@ const StyledBurger = styled.button`
   border: none;
   cursor: pointer;
   padding: 0.5rem;
+  margin-left: auto;
 
-  &:focus > div {
-    background: ${(props) => props.theme.colours.purple};
+  &:focus {
+    outline: 2px dashed ${(props) => props.theme.colours.blue};
+    outline-offset: 2px;
   }
 
   div {
     width: 100%;
     height: 4px;
-    background: ${(props) => props.theme.colours.blue};
+    background: ${(props) => props.theme.colours.purple};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
+  }
+
+  ${(props) => props.theme.screenSizes.tabletLandscapePlus} {
+    display: none;
   }
 `
 

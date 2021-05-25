@@ -9,7 +9,7 @@ import {
   getServiceData,
   ServiceDetail,
 } from '../../cms/services'
-import { Layout } from '../../src/Components/Layout'
+import { Layout, Content } from '../../src/Components/Layout'
 import { VisuallyHidden } from '../../src/Components/VisuallyHidden'
 import { MyBestLifeTheme } from '../../src/Theme'
 import { formatAgeDisplay } from '../../src/Components/Card'
@@ -31,10 +31,8 @@ interface ServicePageProps {
 
 const Header = styled.header`
   background-color: ${(props) => props.theme.colours.aqua};
-  padding: 1rem;
+  padding: 1rem 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
 `
 
 const ImageContainer = styled.div`
@@ -56,7 +54,6 @@ const TitleContainer = styled.div`
 `
 
 const Section = styled.section<{ divider: string }>`
-  margin: 0 var(--gutter-width);
   border-bottom: 1px solid ${(props) => props.divider};
   padding: 1.5rem 0;
 
@@ -253,7 +250,7 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
   }
 
   return (
-    <Layout>
+    <Layout hideNav>
       <VisuallyHidden>
         <svg width="0" height="0">
           <defs>
@@ -271,11 +268,13 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         </svg>
       </VisuallyHidden>
       <Header>
-        <LinkButton
-          textContent="Back"
-          arrow="left"
-          onClick={() => router.back()}
-        />
+        <Content>
+          <LinkButton
+            textContent="Back"
+            arrow="left"
+            onClick={() => router.back()}
+          />
+        </Content>
       </Header>
 
       {serviceData.image?.image && (
@@ -289,181 +288,183 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
         </ImageContainer>
       )}
 
-      {/* Service intro */}
-      <Section divider={MyBestLifeTheme.colours.yellow}>
-        <TitleContainer>
-          <div>
-            <Heading as="h1">{serviceData.title}</Heading>
-            <Organisation>{`Run by ${serviceData.organisation}`}</Organisation>
-          </div>
-          <SaveButton
-            id={serviceData.id}
-            saved={saved.includes(serviceData.id)}
-            label={serviceData.title}
+      <Content>
+        {/* Service intro */}
+        <Section divider={MyBestLifeTheme.colours.yellow}>
+          <TitleContainer>
+            <div>
+              <Heading as="h1">{serviceData.title}</Heading>
+              <Organisation>{`Run by ${serviceData.organisation}`}</Organisation>
+            </div>
+            <SaveButton
+              id={serviceData.id}
+              saved={saved.includes(serviceData.id)}
+              label={serviceData.title}
+            />
+          </TitleContainer>
+          <p>{serviceData.description}</p>
+        </Section>
+
+        {/* Service details */}
+        <Section divider={MyBestLifeTheme.colours.yellow}>
+          {serviceData.eligibility || serviceData.age ? (
+            <>
+              <Heading as="h2">Who is Eligible?</Heading>
+              <p>
+                {/* Display an eligibility string if we have one, and if not default to the age */}
+                {serviceData.eligibility
+                  ? serviceData.eligibility
+                  : formatAgeDisplay(
+                      serviceData.age?.minAge,
+                      serviceData.age?.maxAge
+                    )}
+              </p>
+            </>
+          ) : null}
+          {serviceData.costExplanation ? (
+            <>
+              <Heading as="h2">Cost:</Heading>
+              <p>{serviceData.costExplanation}</p>
+            </>
+          ) : null}
+          {serviceData.location ? (
+            <>
+              <Heading as="h2">Where is it?</Heading>
+              <p>{serviceData.location}</p>
+              {serviceData.makeMapLink && (
+                <MapLink location={serviceData.location}></MapLink>
+              )}
+            </>
+          ) : null}
+          {serviceData.time ? (
+            <>
+              <Heading as="h2">Time info:</Heading>
+              <p>{serviceData.time}</p>
+            </>
+          ) : null}
+        </Section>
+
+        {/*  Young person quotation and Reviews */}
+        {serviceData.reviews && serviceData.reviews.length > 0 ? (
+          <Section divider={MyBestLifeTheme.colours.aqua}>
+            <Heading as="h2">What do other people say?</Heading>
+            {serviceData.reviews.map((data, i) => {
+              return <ReviewDisplay data={data} key={i} />
+            })}
+          </Section>
+        ) : null}
+
+        {/* Expectation info */}
+        {serviceData.expectation ? (
+          <Section divider={MyBestLifeTheme.colours.aqua}>
+            <Heading as="h2">What can I expect?</Heading>
+            <p>{serviceData.expectation}</p>
+          </Section>
+        ) : null}
+
+        {/* Contact information */}
+        <Section divider={MyBestLifeTheme.colours.yellow}>
+          {serviceData.contactExplanation ? (
+            <>
+              <Heading as="h2">How to get in touch</Heading>
+              <p>{serviceData.contactExplanation}</p>
+            </>
+          ) : null}
+
+          <Heading as="h3">Contact Details</Heading>
+          <ContactList>
+            {serviceData.email ? (
+              <>
+                <EmailListItem>
+                  <span>Email: </span>
+                  {serviceData.email}
+                </EmailListItem>
+              </>
+            ) : null}
+            {serviceData.phone ? (
+              <>
+                <EmailListItem>
+                  <span>Phone: </span>
+                  {serviceData.phone}
+                </EmailListItem>
+              </>
+            ) : null}
+            {serviceData.form ? (
+              <>
+                <ContactListItem>
+                  <ContactLink href={`${serviceData.form}`}>
+                    <span>Form</span>
+                  </ContactLink>
+                </ContactListItem>
+              </>
+            ) : null}
+            {serviceData.phone ? (
+              <>
+                <ContactListItem>
+                  <ContactLink href={`tel:${serviceData.phone}`}>
+                    <span>Phone</span>
+                  </ContactLink>
+                </ContactListItem>
+              </>
+            ) : null}
+            {serviceData.website ? (
+              <>
+                <ContactListItem>
+                  <ContactLink href={`${serviceData.website}`}>
+                    <span>Website</span>
+                  </ContactLink>
+                </ContactListItem>
+              </>
+            ) : null}
+          </ContactList>
+        </Section>
+
+        <Section divider={'transparent'}>
+          <Heading as="h3">
+            <label htmlFor="reviewBody">Leave a review</label>
+          </Heading>
+          <TextInput
+            id="reviewBody"
+            rows={5}
+            onChange={(e) => onCommentChange(e.target.value)}
+            ref={commentInputRef}
           />
-        </TitleContainer>
-        <p>{serviceData.description}</p>
-      </Section>
-
-      {/* Service details */}
-      <Section divider={MyBestLifeTheme.colours.yellow}>
-        {serviceData.eligibility || serviceData.age ? (
-          <>
-            <Heading as="h2">Who is Eligible?</Heading>
-            <p>
-              {/* Display an eligibility string if we have one, and if not default to the age */}
-              {serviceData.eligibility
-                ? serviceData.eligibility
-                : formatAgeDisplay(
-                    serviceData.age?.minAge,
-                    serviceData.age?.maxAge
-                  )}
-            </p>
-          </>
-        ) : null}
-        {serviceData.costExplanation ? (
-          <>
-            <Heading as="h2">Cost:</Heading>
-            <p>{serviceData.costExplanation}</p>
-          </>
-        ) : null}
-        {serviceData.location ? (
-          <>
-            <Heading as="h2">Where is it?</Heading>
-            <p>{serviceData.location}</p>
-            {serviceData.makeMapLink && (
-              <MapLink location={serviceData.location}></MapLink>
-            )}
-          </>
-        ) : null}
-        {serviceData.time ? (
-          <>
-            <Heading as="h2">Time info:</Heading>
-            <p>{serviceData.time}</p>
-          </>
-        ) : null}
-      </Section>
-
-      {/*  Young person quotation and Reviews */}
-      {serviceData.reviews && serviceData.reviews.length > 0 ? (
-        <Section divider={MyBestLifeTheme.colours.aqua}>
-          <Heading as="h2">What do other people say?</Heading>
-          {serviceData.reviews.map((data, i) => {
-            return <ReviewDisplay data={data} key={i} />
-          })}
+          <VerticalSpacing size={1} />
+          <FiveStar
+            currentRating={reviewState.rating}
+            onChange={onRatingChange}
+          />
+          <VerticalSpacing />
+          <Checkbox
+            singleCheckbox
+            label={
+              <span>
+                [xXx] I confirm I have read the{' '}
+                <a
+                  href="/privacy-policy"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  privacy policy
+                </a>{' '}
+                and that I have attended this service.
+              </span>
+            }
+            checked={reviewState.usedService}
+            onChange={onUsedServiceChange}
+          />
+          <VerticalSpacing />
+          <SubmitButtonContainer>
+            <ButtonBase
+              as="button"
+              onClick={submitReview}
+              disabled={!reviewState.usedService}
+            >
+              <span>{isSubmitting ? 'Posting...' : 'Post review'}</span>
+            </ButtonBase>
+          </SubmitButtonContainer>
         </Section>
-      ) : null}
-
-      {/* Expectation info */}
-      {serviceData.expectation ? (
-        <Section divider={MyBestLifeTheme.colours.aqua}>
-          <Heading as="h2">What can I expect?</Heading>
-          <p>{serviceData.expectation}</p>
-        </Section>
-      ) : null}
-
-      {/* Contact information */}
-      <Section divider={MyBestLifeTheme.colours.yellow}>
-        {serviceData.contactExplanation ? (
-          <>
-            <Heading as="h2">How to get in touch</Heading>
-            <p>{serviceData.contactExplanation}</p>
-          </>
-        ) : null}
-
-        <Heading as="h3">Contact Details</Heading>
-        <ContactList>
-          {serviceData.email ? (
-            <>
-              <EmailListItem>
-                <span>Email: </span>
-                {serviceData.email}
-              </EmailListItem>
-            </>
-          ) : null}
-          {serviceData.phone ? (
-            <>
-              <EmailListItem>
-                <span>Phone: </span>
-                {serviceData.phone}
-              </EmailListItem>
-            </>
-          ) : null}
-          {serviceData.form ? (
-            <>
-              <ContactListItem>
-                <ContactLink href={`${serviceData.form}`}>
-                  <span>Form</span>
-                </ContactLink>
-              </ContactListItem>
-            </>
-          ) : null}
-          {serviceData.phone ? (
-            <>
-              <ContactListItem>
-                <ContactLink href={`tel:${serviceData.phone}`}>
-                  <span>Phone</span>
-                </ContactLink>
-              </ContactListItem>
-            </>
-          ) : null}
-          {serviceData.website ? (
-            <>
-              <ContactListItem>
-                <ContactLink href={`${serviceData.website}`}>
-                  <span>Website</span>
-                </ContactLink>
-              </ContactListItem>
-            </>
-          ) : null}
-        </ContactList>
-      </Section>
-
-      <Section divider={'transparent'}>
-        <Heading as="h3">
-          <label htmlFor="reviewBody">Leave a review</label>
-        </Heading>
-        <TextInput
-          id="reviewBody"
-          rows={5}
-          onChange={(e) => onCommentChange(e.target.value)}
-          ref={commentInputRef}
-        />
-        <VerticalSpacing size={1} />
-        <FiveStar
-          currentRating={reviewState.rating}
-          onChange={onRatingChange}
-        />
-        <VerticalSpacing />
-        <Checkbox
-          singleCheckbox
-          label={
-            <span>
-              [xXx] I confirm I have read the{' '}
-              <a
-                href="/privacy-policy"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                privacy policy
-              </a>{' '}
-              and that I have attended this service.
-            </span>
-          }
-          checked={reviewState.usedService}
-          onChange={onUsedServiceChange}
-        />
-        <VerticalSpacing />
-        <SubmitButtonContainer>
-          <ButtonBase
-            as="button"
-            onClick={submitReview}
-            disabled={!reviewState.usedService}
-          >
-            <span>{isSubmitting ? 'Posting...' : 'Post review'}</span>
-          </ButtonBase>
-        </SubmitButtonContainer>
-      </Section>
+      </Content>
 
       <Footer>
         <ButtonLink as="button" onClick={() => router.back()} type="button">

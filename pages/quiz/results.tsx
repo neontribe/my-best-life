@@ -3,14 +3,12 @@ import styled from 'styled-components'
 import { NextPage, GetStaticProps } from 'next'
 import { Service, getServices } from '../../cms/services'
 import { CardList } from '../../src/Components/CardList'
-import { HeaderComponent } from '../../src/Components/Header'
 import { Layout } from '../../src/Components/Layout'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { QuizContext } from '../../src/context/QuizContext'
 import { useRouter } from 'next/router'
 import { ServicePreview } from '../index'
 import { ButtonBase } from '../../src/Components/ButtonBase'
-import { StickyNavBar } from '../../src/Components/StickyNavBar'
 
 interface QuizListPageProps {
   services: Array<ServicePreview>
@@ -37,13 +35,11 @@ export const QuizListPage: NextPage<QuizListPageProps> = ({ services }) => {
 
   return (
     <Layout>
-      <HeaderComponent title="Results" />
       <VerticalSpacing />
       <StyledButton as="button" onClick={onReset}>
         Reset Quiz
       </StyledButton>
       <CardList services={services} listType="quiz" />
-      <StickyNavBar />
     </Layout>
   )
 }
