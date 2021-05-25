@@ -184,24 +184,29 @@ content: >-
   d. in connection with any legal proceedings or prospective legal proceedings, in order to establish, exercise or defend our legal rights.
 
 
-  International Data Transfers
+  ## International Data Transfers
+
 
   As we sometimes use third parties to process personal information, it is possible that personal information we collect from you will be transferred to and stored in a location outside the UK.
+
 
   Please note that certain countries outside of the UK have a lower standard of protection for personal information, including lower security protections. Where your personal information is transferred, stored, and/or otherwise processed outside the UK in a country which does not offer an equivalent standard of protection to the UK, we will take all reasonable steps necessary (such as entering into standard contractual clauses to protect your personal information) to ensure that the recipient implements appropriate safeguards designed to protect your personal information. If you have any questions about the transfer of your personal information, please contact us using the details at clause 13.
 
 
-  Securing your personal information
+  ## Securing your personal information
+
 
   We will take reasonable technical and organisational precautions to prevent the loss, misuse or alteration of your personal information.  We will store all the personal information you provide on secure servers.
 
 
-  How long do we keep your personal information?
-
-  We will generally remove your personal information from our records six years after the date that it was collected unless    (a) we are required to hold for longer for legal or regulatory purposes; or (b) still required in connection with the purpose for which it was collected and/or processed. However, we will remove your personal information from our records before this date if we become aware that (a) your personal information is no longer required in connection with such purpose(s); (b) we are no longer lawfully entitled to process it; or (c) you validly exercise one of your right of erasure under clause 10.
+  ## How long do we keep your personal information?
 
 
-  Your rights and preferences
+  We will generally remove your personal information from our records six years after the date that it was collected unless (a) we are required to hold for longer for legal or regulatory purposes; or (b) still required in connection with the purpose for which it was collected and/or processed. However, we will remove your personal information from our records before this date if we become aware that (a) your personal information is no longer required in connection with such purpose(s); (b) we are no longer lawfully entitled to process it; or (c) you validly exercise one of your right of erasure under clause 10.
+
+
+  ## Your rights and preferences
+
 
   We may contact you by telephone, email, text, social media or other electronic means depending on the communication preferences you have previously indicated.  Where we rely on your consent to use your personal information, you have the right to:
 
