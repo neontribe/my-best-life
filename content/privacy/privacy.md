@@ -1,4 +1,5 @@
 ---
+title: Privacy Policy
 content: |-
   ## \[xXx] Privacy Policy
 
