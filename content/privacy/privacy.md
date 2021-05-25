@@ -88,13 +88,15 @@ content: >-
 
   We may collect, store and otherwise process the following kinds of personal information:
 
-  a. Personal identifiers, contacts and characteristics (for example, your name and contact details, including email address and telephone number, if you consent to speaking to us about your experience of the app).
 
-  b. Information about your computer/ mobile device and your visits to and use of this website, including, for example, your IP address and geographical location.
+  * Personal identifiers, contacts and characteristics (for example, your name and contact details, including email address and telephone number, if you consent to speaking to us about your experience of the app).
 
-  d. Any other personal information which you choose to share with us as per clause 1.\
+    Information about your computer/ mobile device and your visits to and use of this website, including, for example, your IP address and geographical location.
 
-  Special categories of data
+    Any other personal information which you choose to share with us as per clause 1.
+
+  ### Special categories of data
+
 
   The General Data Protection Regulation (“GDPR”) recognises certain categories of personal information as sensitive, and therefore requiring more protection. These categories of data include information about your health, ethnicity, and political opinions.  In certain situations, we may collect and/or use special categories of data. We do not ask for special category data, but in certain situations we might. If so, we will only process these special categories of data if there is a valid reason for doing so and where the GDPR allows us to do so. For instance, by seeking your explicit consent to use such data.
 
