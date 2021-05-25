@@ -173,16 +173,17 @@ content: >-
 
   We will not sell, rent or lease your personal information to others. However, we may disclose your personal information to selected third party processors (such as partners, or sub-contractors) for the purposes outlined at clause 4. The third party in question will be obligated to use any personal data they receive in accordance our instructions.
 
+
   In particular, we reserve the right to disclose your personal information to third parties:
 
-  a. in the event that we buy or sell any business or assets, in which case we will disclose your personal information to the prospective buyer or seller or such business or assets;
 
-  b. if substantially all of our assets are acquired by a third party, personal information held by us may be one of the transferred assets;
+  * in the event that we buy or sell any business or assets, in which case we will disclose your personal information to the prospective buyer or seller or such business or assets;
 
-  c. if we are under any legal or regulatory obligation to do so; and
+    if substantially all of our assets are acquired by a third party, personal information held by us may be one of the transferred assets;
 
-  d. in connection with any legal proceedings or prospective legal proceedings, in order to establish, exercise or defend our legal rights.
+    if we are under any legal or regulatory obligation to do so; and
 
+    in connection with any legal proceedings or prospective legal proceedings, in order to establish, exercise or defend our legal rights.
 
   ## International Data Transfers
 
@@ -210,19 +211,21 @@ content: >-
 
   We may contact you by telephone, email, text, social media or other electronic means depending on the communication preferences you have previously indicated.  Where we rely on your consent to use your personal information, you have the right to:
 
-  a. Ask us for confirmation of what personal information we hold about you, and to request a copy of that information. If we are satisfied that you have a legal entitlement to see this personal information, and we are able to confirm your identity, we will provide you with this information.
 
-  b. Request that we delete the personal information we hold about you, as far as we are legally required to do so.
+  * Ask us for confirmation of what personal information we hold about you, and to request a copy of that information. If we are satisfied that you have a legal entitlement to see this personal information, and we are able to confirm your identity, we will provide you with this information.
 
-  c. Ask that we correct any personal information that we hold about you which you believe to be inaccurate.
+    Request that we delete the personal information we hold about you, as far as we are legally required to do so.
 
-  d. Object to the processing of your personal information where we: (i) process on the basis of the legitimate interests ground; (ii) use the personal information for direct marketing; or (iii) use the personal information for statistical purposes.
+    Ask that we correct any personal information that we hold about you which you believe to be inaccurate.
 
-  e. Ask for the provision of your personal information in a machine-readable format  to either yourself or a third party, provided that the personal information in question has been provided to us by you, and is being processed by us: (i) in reliance on your consent; or (ii) because it is necessary for the performance of a contract to which you are party; and in either instance, we are processing using automated means.
+    Object to the processing of your personal information where we: (i) process on the basis of the legitimate interests ground; (ii) use the personal information for direct marketing; or (iii) use the personal information for statistical purposes.
 
-  f. Ask for processing of your personal information to be restricted if there is disagreement about its accuracy or legitimate usage.
+    Ask for the provision of your personal information in a machine-readable format  to either yourself or a third party, provided that the personal information in question has been provided to us by you, and is being processed by us: (i) in reliance on your consent; or (ii) because it is necessary for the performance of a contract to which you are party; and in either instance, we are processing using automated means.
+
+    Ask for processing of your personal information to be restricted if there is disagreement about its accuracy or legitimate usage.
 
   Please note that where you ask us to delete your personal information, we will maintain a skeleton record comprising your name and organisation to ensure that we do not inadvertently contact you in the future.  We may also need to retain some records for statutory purposes.
+
 
   Please note that you also have the right to lodge a complaint with the Information Commissioner’s Office at www.ico.org.uk/concerns
 
