@@ -135,10 +135,7 @@ const StyledHelpButton = styled.button`
 `
 
 export const StyledHelp = styled.div<{ open: boolean }>`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 400px
+  display: inline-block;
   text-align: left;
   top: 5rem;
   width: 100%;
