@@ -222,7 +222,8 @@ content: >-
   Please note that you also have the right to lodge a complaint with the Information Commissioner’s Office at www.ico.org.uk/concerns
 
 
-  Other websites
+  ## Other websites
+
 
   The Terms of Use apply only to the My Best life progressive web app and not to any of the sites that it hyperlinks to. My Best Life is not responsible for the privacy practices or the content of linked web sites. 
 
@@ -233,18 +234,23 @@ content: >-
   Under no circumstances will NPC, its officers, employees, contractors or content providers be liable, directly or indirectly, for any loss or damage resulting from you accessing or using, or otherwise in connection with, any website either hyperlinked to or otherwise referred to on our Site.
 
 
-  Updating this privacy statement
+  ## Updating this privacy statement
+
 
   We may update this privacy statement by posting a new version here. If we update this privacy statement in a way that significantly changes how we use your personal information, we will use reasonable efforts to bring these changes to your attention where we have your contact details. Otherwise, we would recommend that you periodically review this privacy statement to be aware of any other revisions. 
 
 
-  How to contact us
+  ## How to contact us
+
 
   Tris Lumley, Project Sponsor, is responsible for monitoring compliance with relevant legislation in relation to personal data. You can also contact the Programme Manager if you have any questions about this privacy statement or our treatment of your personal information:
 
+
   Email: info@thinknpc.org
 
+
   Telephone: 0207 620 4850
+
 
   Post: FAO Tris Lumley, My Best Life, New Philanthropy Capital, Harling House, 47-51 Great Suffolk St, London, SE1 0BS.
 ---
