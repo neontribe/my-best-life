@@ -4,11 +4,7 @@ content: >-
   ## My Best Life Privacy Policy
 
 
-
-
   ## Too much information? Here are the key facts:
-
-
 
 
   **You can always ask us:**
@@ -64,18 +60,24 @@ content: >-
   For example, personal information that you submit through our website by sharing feedback with us or any personal data that you share with us when you communicate with us by email, phone, or post.
 
 
-  When we obtain it indirectly.
+  ### When we obtain it indirectly.
 
 
-  Your personal information may be shared with us by third parties, including our programme partners, our sub-contractors in technical and payment services, advertising networks, research providers and search information providers.\
+  Your personal information may be shared with us by third parties, including our programme partners, our sub-contractors in technical and payment services, advertising networks, research providers and search information providers.
 
-  c. When it is publicly available.
+
+  ### When it is publicly available.
+
 
   Your personal data may be available to us from external publicly available sources.
 
-  d. When you visit our website.
+
+  ### When you visit our website.
+
 
   As is common practice with almost all professional websites this site uses cookies, which are tiny files that are downloaded to your computer, to improve your experience. My Best Life uses cookies to improve your experience on our website. A cookie is a small text file that we store on your device that provide us with information about how this website is used so we can keep it as up to date, relevant and error-free as possible. You will be asked for permission to use cookies on any parts of the site where we wish to use them. 
+
+
 
   My Best Life uses Plausible and HotJar analytics gather non-personally identifiable information on our visitors. This information helps us understand where our website traffic is coming from, how the app is being used, how people are moving around the app and what content are being viewed and for how long.\
 
