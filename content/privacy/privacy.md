@@ -135,48 +135,63 @@ content: >-
 
     in order to capture your contact details when you have expressed a desire to remain in contact with us without wanting to opt-in to our direct mailing.
 
-  How we use your personal information
+  ## How we use your personal information
 
 
   Once you choose to provide us with personal information we will make reasonable efforts to ensure that your personal information is only used for the purposes specified in this privacy policy.
 
+
   We may use your personal information:
 
-  a. to provide you with services, products or information that you have requested;
 
-  b. to provide updates about our work, services, activities, publications or products (where necessary, and only where you have provided your consent to receive such information);
+  * to provide you with services, products or information that you have requested;
 
-  c. to invite you to user testing sessions which we feel that you might be interested in;
+    to provide updates about our work, services, activities, publications or products (where necessary, and only where you have provided your consent to receive such information);
 
-  d. to answer your questions/ requests and communicate with you in general;
+    to invite you to user testing sessions which we feel that you might be interested in;
 
-  e.  to analyse and improve our work, services, activities, products or information (including our website) or for our internal records;
+    to answer your questions/ requests and communicate with you in general;
 
-  f. to satisfy legal obligations which are binding on us, for example in relation to regulatory, government and/ or law enforcement bodies with whom we may work,;
+    to analyse and improve our work, services, activities, products or information (including our website) or for our internal records;
 
-  g. for the prevention of fraud or misuse of service; and
+    to satisfy legal obligations which are binding on us, for example in relation to regulatory, government and/ or law enforcement bodies with whom we may work,;
 
-  h. for the establishment, defence of enforcement of legal claims.
+    for the prevention of fraud or misuse of service; and
+
+    for the establishment, defence of enforcement of legal claims.
+
+  ### Research
 
 
-  1. Research
-     We may analyse your personal information to create a record of your interests and preferences to help us manage our records efficiently and effectively.  This allows us to ensure that communications (e.g. by post, telephone, email, text or social media) are appropriate and to generally provide you with an improved user experience.
-     If you would prefer us not to use your personal information in this way, please let us know by using the contact details included at clause 13.
-  2. Do we share your personal information?
-     We will not sell, rent or lease your personal information to others. However, we may disclose your personal information to selected third party processors (such as partners, or sub-contractors) for the purposes outlined at clause 4. The third party in question will be obligated to use any personal data they receive in accordance our instructions.
-     In particular, we reserve the right to disclose your personal information to third parties:
-     a. in the event that we buy or sell any business or assets, in which case we will disclose your personal information to the prospective buyer or seller or such business or assets;
-     b. if substantially all of our assets are acquired by a third party, personal information held by us may be one of the transferred assets;
-     c. if we are under any legal or regulatory obligation to do so; and
-     d. in connection with any legal proceedings or prospective legal proceedings, in order to establish, exercise or defend our legal rights.
-  3. International Data Transfers
+  We may analyse your personal information to create a record of your interests and preferences to help us manage our records efficiently and effectively.  This allows us to ensure that communications (e.g. by post, telephone, email, text or social media) are appropriate and to generally provide you with an improved user experience.
+
+  If you would prefer us not to use your personal information in this way, please let us know by using the contact details included at clause 13.
+
+
+  ## Do we share your personal information?
+
+
+  We will not sell, rent or lease your personal information to others. However, we may disclose your personal information to selected third party processors (such as partners, or sub-contractors) for the purposes outlined at clause 4. The third party in question will be obligated to use any personal data they receive in accordance our instructions.
+
+  In particular, we reserve the right to disclose your personal information to third parties:
+
+  a. in the event that we buy or sell any business or assets, in which case we will disclose your personal information to the prospective buyer or seller or such business or assets;
+
+  b. if substantially all of our assets are acquired by a third party, personal information held by us may be one of the transferred assets;
+
+  c. if we are under any legal or regulatory obligation to do so; and
+
+  d. in connection with any legal proceedings or prospective legal proceedings, in order to establish, exercise or defend our legal rights.
+
+
+  1. International Data Transfers
      As we sometimes use third parties to process personal information, it is possible that personal information we collect from you will be transferred to and stored in a location outside the UK.
      Please note that certain countries outside of the UK have a lower standard of protection for personal information, including lower security protections. Where your personal information is transferred, stored, and/or otherwise processed outside the UK in a country which does not offer an equivalent standard of protection to the UK, we will take all reasonable steps necessary (such as entering into standard contractual clauses to protect your personal information) to ensure that the recipient implements appropriate safeguards designed to protect your personal information. If you have any questions about the transfer of your personal information, please contact us using the details at clause 13.
-  4. Securing your personal information
+  2. Securing your personal information
      We will take reasonable technical and organisational precautions to prevent the loss, misuse or alteration of your personal information.  We will store all the personal information you provide on secure servers.
-  5. How long do we keep your personal information?
+  3. How long do we keep your personal information?
      We will generally remove your personal information from our records six years after the date that it was collected unless    (a) we are required to hold for longer for legal or regulatory purposes; or (b) still required in connection with the purpose for which it was collected and/or processed. However, we will remove your personal information from our records before this date if we become aware that (a) your personal information is no longer required in connection with such purpose(s); (b) we are no longer lawfully entitled to process it; or (c) you validly exercise one of your right of erasure under clause 10.
-  6. Your rights and preferences
+  4. Your rights and preferences
      We may contact you by telephone, email, text, social media or other electronic means depending on the communication preferences you have previously indicated.  Where we rely on your consent to use your personal information, you have the right to:
      a. Ask us for confirmation of what personal information we hold about you, and to request a copy of that information. If we are satisfied that you have a legal entitlement to see this personal information, and we are able to confirm your identity, we will provide you with this information.
      b. Request that we delete the personal information we hold about you, as far as we are legally required to do so.
@@ -186,7 +201,7 @@ content: >-
      f. Ask for processing of your personal information to be restricted if there is disagreement about its accuracy or legitimate usage.
      Please note that where you ask us to delete your personal information, we will maintain a skeleton record comprising your name and organisation to ensure that we do not inadvertently contact you in the future.  We may also need to retain some records for statutory purposes.
      Please note that you also have the right to lodge a complaint with the Information Commissioner’s Office at www.ico.org.uk/concerns
-  7. Other websites
+  5. Other websites
      The Terms of Use apply only to the My Best life progressive web app and not to any of the sites that it hyperlinks to. My Best Life is not responsible for the privacy practices or the content of linked web sites. 
 
   In particular, we do not assume any responsibility for any information or content on such sites (including but not limited to any views, advice, opinions, advertising, or recommendations). Nor do we assume any responsibility in connection with any product or service such sites may offer. Please review the privacy notices of such websites.
