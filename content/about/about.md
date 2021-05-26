@@ -1,6 +1,7 @@
 ---
+title: About
 content: |-
-  ## \[xXx] About
+  ## \[xXx] About 
 
   Example content.
 

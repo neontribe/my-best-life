@@ -399,8 +399,14 @@ export default {
       label_singular: 'Privacy Policy',
       name: 'privacy',
       folder: 'content/privacy',
+      slug: '{{title}}',
       create: false,
       fields: [
+        {
+          label: 'Content Name',
+          name: 'title',
+          widget: 'string',
+        },
         {
           label: 'Privacy Policy',
           name: 'content',
@@ -423,8 +429,14 @@ export default {
       label_singular: 'About',
       name: 'about',
       folder: 'content/about',
+      slug: '{{title}}',
       create: false,
       fields: [
+        {
+          label: 'Content Name',
+          name: 'title',
+          widget: 'string',
+        },
         {
           label: 'About',
           name: 'content',
