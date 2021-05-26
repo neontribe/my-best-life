@@ -1,7 +1,7 @@
 ---
 title: About
 content: |-
-  ## \[xXx] About {Editable text}
+  ## \[xXx] About 
 
   Example content.
 
