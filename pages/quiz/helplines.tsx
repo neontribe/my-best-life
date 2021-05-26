@@ -277,7 +277,6 @@ export const IfYouNeedHelpPage = ({
 
       <VerticalSpacing size={4} />
 
-      <VerticalSpacing />
     </Layout>
   )
 }
