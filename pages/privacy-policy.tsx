@@ -60,9 +60,7 @@ const CookieButton = styled.a`
   align-items: center;
   background-color: ${(props) => props.theme.colours.blue};
   border-radius: 5rem;
-  border: 3px solid transparent;
   color: ${(props) => props.theme.colours.white};
-  cursor: pointer;
   display: flex;
   font-family: 'Catamaran', sans-serif;
   font-size: ${(props) => props.theme.fontSizes.highlight};
