@@ -89,11 +89,11 @@ const FilterSection = styled.section<{ borderBottom?: boolean }>`
   }
 `
 
-const CheckboxGroup = styled.div`
+const CheckboxGroup = styled.ul`
   margin: 1rem 0;
 `
 
-const RadioGroup = styled.div`
+const RadioGroup = styled.ul`
   margin: 1rem 0;
 `
 
@@ -151,7 +151,7 @@ export const FilterPage: NextPage = () => {
 
   return (
     <Layout hideNav>
-      <FilterLayout>
+      <FilterLayout as="main">
         <Top>
           <div>
             <h1>
@@ -161,6 +161,7 @@ export const FilterPage: NextPage = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
+                aria-hidden
               >
                 <path
                   fillRule="evenodd"

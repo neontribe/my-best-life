@@ -8,7 +8,6 @@ import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
 import { MiniCard } from '../../src/Components/MiniCard'
 import { useEffect, useState } from 'react'
 
-
 interface HelplinePageProps {
   serviceData1: ServiceDetail
   serviceData2: ServiceDetail
@@ -252,8 +251,7 @@ export const IfYouNeedHelpPage = ({
 
   return (
     <Layout>
-
-      <CopyBody>
+      <CopyBody as="main">
         <MainText>{`You've selected that you feel ${makeFeelingsList(
           selectedTriggerFeelings
         )}`}</MainText>
@@ -276,7 +274,6 @@ export const IfYouNeedHelpPage = ({
       </MainBody>
 
       <VerticalSpacing size={4} />
-
     </Layout>
   )
 }

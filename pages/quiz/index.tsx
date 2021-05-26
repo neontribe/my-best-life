@@ -63,7 +63,7 @@ const StyledLink = styled.a`
 export const QuizWelcomePage = (): JSX.Element => {
   return (
     <Layout>
-      <Section>
+      <Section as="main">
         <Title>Welcome!</Title>
 
         <Image

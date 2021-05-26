@@ -71,6 +71,7 @@ export const FilterButton = (): JSX.Element => {
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
+            aria-hidden
           >
             <path
               strokeLinecap="round"

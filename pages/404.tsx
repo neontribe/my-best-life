@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import { Layout, Content } from '../src/Components/Layout'
 import { VerticalSpacing } from '../src/Components/VerticalSpacing'
 
-
-
 const Heading = styled.h2`
   border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
   display: inline-block;
@@ -76,19 +74,22 @@ const BackButton = styled.a`
 export const NotFound = (): JSX.Element => {
   return (
     <Layout>
-      <Content>
+      <Content as="main">
         <MainBody>
-            <div>
-        <VerticalSpacing size={2}/>
-          <Heading>
-            Sorry we can&apos;t seem to find the page you are looking for.
-          </Heading>
-          <SubHeading>Code error: 404</SubHeading>
-          <Text>
-            Check out all the services and activities to find what you are looking for.
-          </Text>
-          <VerticalSpacing size={1}/>
-          <BackButton role="button" href="/">Back to services</BackButton>
+          <div>
+            <VerticalSpacing size={2} />
+            <Heading>
+              Sorry we can&apos;t seem to find the page you are looking for.
+            </Heading>
+            <SubHeading>Code error: 404</SubHeading>
+            <Text>
+              Check out all the services and activities to find what you are
+              looking for.
+            </Text>
+            <VerticalSpacing size={1} />
+            <BackButton role="button" href="/">
+              Back to services
+            </BackButton>
           </div>
         </MainBody>
       </Content>

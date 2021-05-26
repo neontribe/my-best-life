@@ -316,7 +316,7 @@ export const CardList = ({
   if (filteredServices === null) return <></>
 
   return filteredServices && filteredServices.length > 0 ? (
-    <Content>
+    <Content as="main">
       <CardListNavigation
         onForward={() => pageChange(1)}
         onBack={() => pageChange(-1)}

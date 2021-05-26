@@ -101,7 +101,7 @@ export const HowAreYouFeelingPage = (): JSX.Element => {
 
   return (
     <Layout>
-      <Content>
+      <Content as="main">
         <Navigation>
           <LinkButton
             textContent="back"
