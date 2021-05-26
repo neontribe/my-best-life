@@ -1,6 +1,9 @@
 ---
 title: Privacy Policy
 content: >-
+  ## Editable text
+
+
   ## My Best Life Privacy Policy
 
 
