@@ -38,7 +38,7 @@
     "styled-components": "5.3.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "11.0.0",
+    "@commitlint/cli": "12.1.4",
     "@commitlint/config-conventional": "12.1.4",
     "@types/google-spreadsheet": "3.0.2",
     "@types/node": "14.14.45",
