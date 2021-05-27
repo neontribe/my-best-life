@@ -9,7 +9,7 @@ import Bookmark from './Bookmark'
 const Nav = styled.nav`
   // Mobile first, so hide by default
   display: none;
-  flex-basis: 70%;
+  flex-basis: 65%;
 
   ${(props) => props.theme.screenSizes.tabletLandscapePlus} {
     display: block;
@@ -19,7 +19,7 @@ const Nav = styled.nav`
 const NavList = styled.ul`
   align-items: stretch;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
   li:nth-child(3) {
     margin-left: 5rem;
