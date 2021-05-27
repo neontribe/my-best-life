@@ -5,7 +5,6 @@ import React, { useContext, useRef } from 'react'
 
 import { SaveButton } from './SaveButton'
 import { ServicePreview } from '../../pages/index'
-import { VisuallyHidden } from './VisuallyHidden'
 import { SaveContext } from '../../src/context/SaveContext'
 
 export type CardDisplay = Pick<
@@ -138,15 +137,6 @@ export const Card = React.forwardRef(function Card(
       </Description>
 
       <ImageContainer>
-        <VisuallyHidden>
-          <svg width="0" height="0">
-            <defs>
-              <clipPath id="cardWave" clipPathUnits="objectBoundingBox">
-                <path d="M 0,1  L 0,0  L 1,0  L 1,0.95  C .75 1.05, .25 .7, 0 0.8 Z" />
-              </clipPath>
-            </defs>
-          </svg>
-        </VisuallyHidden>
         {image?.image && (
           <Image
             src={`/${image.image}`}

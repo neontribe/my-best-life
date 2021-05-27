@@ -8,6 +8,7 @@ import { EmptyList } from './EmptyList'
 import { FilterButton } from './FilterButton'
 import { QuizEncouragement } from './QuizEncouragement'
 import { VerticalSpacing } from './VerticalSpacing'
+import { VisuallyHidden } from './VisuallyHidden'
 import { ServicePreview } from '../../pages/index'
 import { FilterContext } from '../context/FilterContext'
 import { SaveContext } from '../context/SaveContext'
@@ -289,6 +290,15 @@ export const CardList = ({
       {listType === 'filtered' ? <QuizEncouragement /> : null}
       {listType === 'filtered' ? <FilterButton /> : null}
       <List>
+        <VisuallyHidden>
+          <svg width="0" height="0">
+            <defs>
+              <clipPath id="cardWave" clipPathUnits="objectBoundingBox">
+                <path d="M 0,1  L 0,0  L 1,0  L 1,0.95  C .75 1.05, .25 .7, 0 0.8 Z" />
+              </clipPath>
+            </defs>
+          </svg>
+        </VisuallyHidden>
         {toRender.map((service: ServicePreview, id: number) => (
           <Card
             key={service.id}
