@@ -11,6 +11,7 @@ const StyledBurger = styled.button`
   cursor: pointer;
   padding: 0.5rem;
   margin-left: auto;
+  margin-top: 1rem;
 
   &:focus {
     outline: 2px dashed ${(props) => props.theme.colours.blue};
