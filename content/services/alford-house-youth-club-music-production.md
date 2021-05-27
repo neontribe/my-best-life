@@ -2,6 +2,7 @@
 organisation: Alford House Youth Club
 title: Music Production
 shortDescription: Learn how to produce music
+promoted: true
 image:
   image: img/alford-house.jpeg
 description: Alford House is open to all young people aged 8-21 and offers a
@@ -32,5 +33,4 @@ contactExplanation: Just drop in or alternatively visit the website for more inf
 email: theclub@alfordhouse.org.uk
 phone: 020 7735 1519
 website: https://alfordhouse.org.uk/youth-club/whats-on/
- 
 ---
