@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useRouter } from 'next/router'
 import React, { useState, useEffect } from 'react'
 
-import { Layout } from './Layout'
+import { Layout, Content } from './Layout'
 import { VisuallyHidden } from './VisuallyHidden'
 
 const Header = styled.header`
@@ -35,6 +35,7 @@ const HeaderContents = styled.div`
 const Title = styled.h1`
   font-family: 'Catamaran', sans-serif;
   font-size: ${(props) => props.theme.fontSizes.title};
+  margin-left: 1rem;
 `
 
 const Slide = styled.section`
@@ -159,9 +160,17 @@ export const Welcome = (): JSX.Element => {
         {current === 1 ? (
           <Slide>
             <Header>
-              <HeaderContents>
-                <Title>My Best Life</Title>
-              </HeaderContents>
+              <Content>
+                <HeaderContents>
+                  <Image
+                    src="/site/my_best_life.svg"
+                    alt={''}
+                    width="48"
+                    height="48"
+                  />
+                  <Title>my best life</Title>
+                </HeaderContents>
+              </Content>
             </Header>
 
             <Text>We help you find support and things to do near you</Text>
@@ -192,9 +201,11 @@ export const Welcome = (): JSX.Element => {
         {current === 2 ? (
           <Slide>
             <HeaderWithImage>
-              <HeaderContents>
-                <Title>How it Works</Title>
-              </HeaderContents>
+              <Content>
+                <HeaderContents>
+                  <Title>How it Works</Title>
+                </HeaderContents>
+              </Content>
               <ImageContainer>
                 <Image
                   src="/img/how-it-works.png"
