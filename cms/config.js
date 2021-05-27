@@ -399,10 +399,46 @@ export default {
       label_singular: 'Privacy Policy',
       name: 'privacy',
       folder: 'content/privacy',
+      slug: '{{title}}',
       create: false,
       fields: [
         {
+          label: 'Content Name',
+          name: 'title',
+          widget: 'string',
+        },
+        {
           label: 'Privacy Policy',
+          name: 'content',
+          widget: 'markdown',
+          buttons: [
+            'bold',
+            'italic',
+            'link',
+            'heading-two',
+            'heading-three',
+            'heading-four',
+            'bulleted-list',
+          ],
+          hint: 'There will already be a heading level 1 in the page, so this content should use a maximum of heading level 2.',
+        },
+      ],
+    },
+    {
+      label: 'About',
+      label_singular: 'About',
+      name: 'about',
+      folder: 'content/about',
+      slug: '{{title}}',
+      create: false,
+      fields: [
+        {
+          label: 'Content Name',
+          name: 'title',
+          widget: 'string',
+        },
+        {
+          label: 'About',
           name: 'content',
           widget: 'markdown',
           buttons: [

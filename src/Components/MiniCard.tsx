@@ -48,6 +48,7 @@ const Description = styled.h2`
   order: 3;
   padding: 0 1rem;
   text-transform: capitalize;
+  text-align: left;
 
   a {
     color: inherit;

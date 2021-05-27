@@ -76,7 +76,7 @@ export const WhatsOnYourMindPage = (): JSX.Element => {
 
   return (
     <Layout>
-      <Content>
+      <Content as="main">
         <VerticalSpacing size={3} />
         <CheckboxGroup>
           <fieldset>

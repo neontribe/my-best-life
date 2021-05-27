@@ -77,10 +77,8 @@ export const CardList = ({
   const [numServices, setNumServices] = useState<number>(startItems)
   const [scrollHeight, setScrollHeight] = useState<number>(0)
 
-  const [
-    filteredServices,
-    setFilteredServices,
-  ] = useState<Array<ServicePreview> | null>(null)
+  const [filteredServices, setFilteredServices] =
+    useState<Array<ServicePreview> | null>(null)
 
   const toRender = filteredServices
     ? filteredServices.slice(0, numServices)
@@ -287,7 +285,7 @@ export const CardList = ({
   if (filteredServices === null) return <></>
 
   return filteredServices && filteredServices.length > 0 ? (
-    <Content>
+    <Content as="main">
       {listType === 'filtered' ? <QuizEncouragement /> : null}
       {listType === 'filtered' ? <FilterButton /> : null}
       <List>

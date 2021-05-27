@@ -127,6 +127,7 @@ export type ServiceDetail = Pick<
   | 'website'
   | 'reviews'
   | 'format'
+  | 'shortDescription'
 >
 
 export interface Review {
