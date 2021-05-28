@@ -1,92 +1,125 @@
-import styled from 'styled-components'
+import { GetStaticProps } from 'next'
 import Link from 'next/link'
+import styled from 'styled-components'
 
-import { Layout } from '../src/Components/Layout'
+import { Layout, Content } from '../src/Components/Layout'
 import { VerticalSpacing } from '../src/Components/VerticalSpacing'
+import { getServiceData, ServiceDetail } from '../cms/services'
+import { MiniCard } from '../src/Components/MiniCard'
+import { ButtonBase } from '../src/Components/ButtonBase'
+
+interface HelplinePageProps {
+  serviceData1: ServiceDetail
+  serviceData2: ServiceDetail
+}
+
+const THE_MIX = 'the-mix-free-online-support-for-under-25s'
+const CHILDLINE = 'childline-childline'
 
 const Heading = styled.h2`
-  display: inline-block;
-  border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
   font-family: 'Catamaran', sans-serif;
   font-size: ${(props) => props.theme.fontSizes.heading};
+  margin: auto;
+  margin-top: -50px;
+  max-width: 15rem;
+  text-align: center;
 `
 
+const EmergencyText = styled.p`
+  font-family: 'Catamaran', sans-serif;
+  font-size: ${(props) => props.theme.fontSizes.highlight};
+  margin: 2rem auto;
+  max-width: 30rem;
+  text-align: center;
+`
 const Text = styled.p`
   font-family: 'Catamaran', sans-serif;
-  font-size: ${(props) => props.theme.fontSizes.heading};
+  font-size: ${(props) => props.theme.fontSizes.normal};
   margin: 2rem auto;
   max-width: 30rem;
   text-align: left;
-
-  a {
-    color: ${(props) => props.theme.colours.blue};
-    text-decoration-color: ${(props) => props.theme.colours.aqua};
-    box-sizing: border-box;
-    height: 2px;
-  }
 `
 
-const MainBody = styled.div`
-  text-align: center;
-  width: 100%;
-  margin: 0;
-  padding: 2rem;
-`
-
-const StyledLink = styled.a`
-  align-items: center;
-  background-color: ${(props) => props.theme.colours.purple};
-  border-radius: 5rem;
-  border: 3px solid transparent;
-  color: ${(props) => props.theme.colours.white};
-  display: flex;
-  font-family: 'Catamaran', sans-serif;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: ${(props) => props.theme.fontSizes.highlight};
-  padding: 0.5rem;
-  width: 16rem;
-  height: 3rem;
+const StyledLink = styled(ButtonBase)`
+  margin: auto;
   justify-content: center;
-  margin: 0 auto;
   max-width: calc(100% - 2rem);
-
-  &:focus {
-    outline: 2px dashed ${(props) => props.theme.colours.blue};
-    outline-offset: 2px;
-  }
-
-  &:hover {
-    background-color: ${(props) => props.theme.colours.purple_light};
-    color: ${(props) => props.theme.colours.purple};
-    transition: 0.3s;
-  }
+  width: 16rem;
 `
 
-export const IfYouNeedHelpPage = (): JSX.Element => {
+const ImageContainer = styled.div`
+  background-image: url('/img/hands_for_support_.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding-top: 50px;
+  overflow: hidden;
+`
+
+const CardContainer = styled.div`
+  margin: auto;
+  max-width: 30rem;
+  width: 100%;
+`
+
+export const IfYouNeedHelpPage = ({
+  serviceData1,
+  serviceData2,
+}: HelplinePageProps): JSX.Element => {
   return (
     <Layout>
-      <MainBody as="main">
-        <Heading>Do you need help?</Heading>
+      <Content as="main">
+        <ImageContainer as="main">
+          <Heading>Do you need help?</Heading>
+        </ImageContainer>
+
         <VerticalSpacing />
-        <Text>If you are in immediate danger, call 999.</Text>
+
+        <EmergencyText>If you are in immediate danger, call 999.</EmergencyText>
         <Text>
-          If you are not in immediate danger but need to talk to someone, call
-          The Mix helpline on <a href="tel:0808 808 4994">0808 808 4994</a>
-          <br />
-          or, <a href="sms:85258?body=THEMIX">text THEMIX to 85258</a>.
+          If you are worried about something and need advice, it is ok to ask
+          for support. You are not alone. You can use these links to get help.
         </Text>
 
         <VerticalSpacing />
 
+        <CardContainer>
+          <MiniCard
+            id={serviceData1.id}
+            image={serviceData1.image}
+            organisation={serviceData1.organisation}
+            shortDescription={serviceData1.shortDescription}
+          />
+          <MiniCard
+            id={serviceData2.id}
+            image={serviceData2.image}
+            organisation={serviceData2.organisation}
+            shortDescription={serviceData2.shortDescription}
+          />
+        </CardContainer>
+
         <Link href="/" passHref>
           <StyledLink>{'Go back'}</StyledLink>
         </Link>
-      </MainBody>
-
-      <VerticalSpacing />
+        <VerticalSpacing />
+      </Content>
     </Layout>
   )
 }
 
 export default IfYouNeedHelpPage
+
+export const getStaticProps: GetStaticProps = async () => {
+  const serviceData1 = getServiceData(THE_MIX)
+  const serviceData2 = getServiceData(CHILDLINE)
+  return {
+    props: {
+      serviceData1,
+      serviceData2,
+    },
+  }
+}
