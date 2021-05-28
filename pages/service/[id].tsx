@@ -439,15 +439,16 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
               singleCheckbox
               label={
                 <span>
-                  [xXx] I confirm I have read the{' '}
+                  I confirm that I am over 13 years old, the review is my own
+                  genuine experience and I have read the{' '}
                   <a
                     href="/privacy-policy"
                     target="_blank"
                     rel="noreferrer noopener"
                   >
                     privacy policy
-                  </a>{' '}
-                  and that I have attended this service.
+                  </a>
+                  .
                 </span>
               }
               checked={reviewState.usedService}

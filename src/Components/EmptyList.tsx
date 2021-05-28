@@ -52,7 +52,7 @@ export const EmptyList = ({
           <VerticalSpacing />
           {defaultService && (
             <>
-              <p>[xXx] Or try this service that we recommend:</p>
+              <p>Or try this service that we recommend:</p>
               <VerticalSpacing size={1} />
               <MiniCard
                 id={defaultService.id}
