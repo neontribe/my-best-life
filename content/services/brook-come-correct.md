@@ -2,7 +2,7 @@
 organisation: Brook
 title: Come Correct
 shortDescription: Free condoms
-promoted: true
+promoted: false
 image:
   image: img/come-correct1.jpg
   imageAlt: Come Correct logo
