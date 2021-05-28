@@ -54,7 +54,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         'Number of visits': numberOfVisits,
       })
     }
-  })
+  }, [])
   return (
     <>
       <Head>
