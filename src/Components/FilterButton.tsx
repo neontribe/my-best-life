@@ -10,7 +10,6 @@ const ButtonContainer = styled.div`
   align-items: center;
   display: flex;
   justify-content: flex-end;
-  margin: 1rem 0;
   position: sticky;
   top: calc(${(props) => props.theme.headerHeight} - 1rem);
   width: 100%;

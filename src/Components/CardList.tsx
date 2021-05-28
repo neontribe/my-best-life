@@ -1,9 +1,14 @@
 import React, { useContext, useEffect, useState, useCallback } from 'react'
 import styled from 'styled-components'
 
-import { CardListNavigation } from './CardListNavigation'
+import { ButtonBase } from './ButtonBase'
 import { Card } from './Card'
+import { Content } from './Layout'
 import { EmptyList } from './EmptyList'
+import { FilterButton } from './FilterButton'
+import { QuizEncouragement } from './QuizEncouragement'
+import { VerticalSpacing } from './VerticalSpacing'
+import { VisuallyHidden } from './VisuallyHidden'
 import { ServicePreview } from '../../pages/index'
 import { FilterContext } from '../context/FilterContext'
 import { SaveContext } from '../context/SaveContext'
@@ -11,9 +16,6 @@ import { QuizContext } from '../context/QuizContext'
 import { Gender } from '../../cms/services'
 import { useRemember } from '../hooks/remember'
 import { useScrollRemember } from '../hooks/scrollRemember'
-import { QuizEncouragement } from './QuizEncouragement'
-import { FilterButton } from './FilterButton'
-import { Content } from './Layout'
 
 const ITEMS_PER_PAGE = 20
 const DEFAULT_SERVICE_ID = 'the-mix-free-online-support-for-under-25s'
@@ -32,6 +34,14 @@ const List = styled.ul`
   justify-content: space-between;
 `
 
+const LoadMore = styled(ButtonBase).attrs({
+  as: 'button',
+})`
+  background-color: ${(props) => props.theme.colours.blue};
+  margin: auto;
+  padding: 0.5rem 2rem;
+`
+
 export const CardList = ({
   services,
   listType,
@@ -45,23 +55,16 @@ export const CardList = ({
   const categoryWeight = 1
   const interestWeight = 1
   const feelingWeight = 1
-  const [page, setPage] = useState<number | null>(null)
+
+  const [loadedServices, setLoadedServices] = useState<number>(0)
+  const [loadMoreClicked, setLoadMoreClicked] = useState<boolean>(false)
 
   const [filteredServices, setFilteredServices] =
     useState<Array<ServicePreview> | null>(null)
 
-  // Derive some things we need to know from the filtered services
-  const totalPages = filteredServices
-    ? Math.ceil(filteredServices.length / ITEMS_PER_PAGE)
-    : 0
-  const isFirstPage = page === 0
-  const isLastPage = page === totalPages - 1
   const toRender =
-    page !== null && filteredServices
-      ? filteredServices.slice(
-          page * ITEMS_PER_PAGE,
-          (page + 1) * ITEMS_PER_PAGE
-        )
+    loadedServices !== null && filteredServices
+      ? filteredServices.slice(0, loadedServices)
       : []
 
   // We use a reference to the last element in the card list so that we can
@@ -70,9 +73,9 @@ export const CardList = ({
   const [loadedRef, setLoadedRef] = useState<HTMLLIElement | null>(null)
 
   const { resumePosition, resetPosition } = useScrollRemember()
-  const { recall: recallPage } = useRemember({
-    name: 'page',
-    value: () => (page ? page.toString() : '0'),
+  const { recall: recallNum } = useRemember({
+    name: 'servicesLoaded',
+    value: () => (loadedServices ? loadedServices.toString() : '0'),
   })
 
   // Slightly hacky way of checking if we have changed the stuff that's in the card list
@@ -83,7 +86,7 @@ export const CardList = ({
   })
 
   useEffect(() => {
-    if (filteredServices === null || totalPages === 0) {
+    if (filteredServices === null) {
       return
     }
 
@@ -91,10 +94,10 @@ export const CardList = ({
     // hasn't changed since we were last here, and if it has, reset to
     // the start of the list.
     if (parseInt(recallNumItems() || '0') !== filteredServices.length) {
-      setPage(0)
+      setLoadedServices(ITEMS_PER_PAGE)
       resetPosition()
     } else {
-      setPage(parseInt(recallPage() || '0'))
+      setLoadedServices(parseInt(recallNum() || '0'))
     }
 
     // We only want to run this once, once the filtered services list has been loaded
@@ -102,36 +105,23 @@ export const CardList = ({
   }, [filteredServices === null])
 
   useEffect(() => {
-    // If the number of filtered services has changed without navigation, i.e. because
-    // the save button on a card has been clicked in the saved list mode, check we're not
-    // in an invalid pagination position.
-    if (!filteredServices || filteredServices.length === 0 || page === null) {
+    if (loadedRef === null) return
+
+    // if the loadedRef has changed because we added more results, don't resume position
+    if (loadMoreClicked) {
+      setLoadMoreClicked(false)
       return
     }
 
-    if (page >= totalPages) {
-      setPage(totalPages - 1)
-      resetPosition()
-    }
-
-    // Run this every time the number of pages changes, since that is what will
-    // cause problems (e.g. being stuck on a non-existent page)
-    // eslint-disable-next-line
-  }, [totalPages])
-
-  useEffect(() => {
-    if (loadedRef === null) return
     resumePosition()
     // eslint-disable-next-line
   }, [loadedRef])
 
-  const pageChange = (direction: 1 | -1) => {
-    setPage((last) => {
-      if (last === null) return 0
-      const newPage = last + direction
-      resetPosition()
-      return newPage
-    })
+  const totalServicesAvailable = filteredServices?.length
+
+  const loadMore = () => {
+    setLoadMoreClicked(true)
+    setLoadedServices(loadedServices + ITEMS_PER_PAGE)
   }
 
   const ageFilter = useCallback(
@@ -317,43 +307,42 @@ export const CardList = ({
 
   return filteredServices && filteredServices.length > 0 ? (
     <Content as="main">
-      <CardListNavigation
-        onForward={() => pageChange(1)}
-        onBack={() => pageChange(-1)}
-        page={page}
-        totalPages={totalPages}
-        isFirstPage={isFirstPage}
-        isLastPage={isLastPage}
-      />
       {listType === 'filtered' ? <QuizEncouragement /> : null}
       {listType === 'filtered' ? <FilterButton /> : null}
       <List>
-        {page !== null &&
-          toRender.map((service: ServicePreview, id: number) => (
-            <Card
-              key={service.id}
-              id={service.id}
-              title={service.title}
-              shortDescription={service.shortDescription}
-              image={service.image}
-              costValue={service.costValue}
-              costQualifier={service.costQualifier}
-              age={service.age}
-              format={service.format}
-              ref={
-                id === toRender.length - 1 ? (ref) => setLoadedRef(ref) : null
-              }
-            />
-          ))}
+        <VisuallyHidden>
+          <svg width="0" height="0">
+            <defs>
+              <clipPath id="cardWave" clipPathUnits="objectBoundingBox">
+                <path d="M 0,1  L 0,0  L 1,0  L 1,0.95  C .75 1.05, .25 .7, 0 0.8 Z" />
+              </clipPath>
+            </defs>
+          </svg>
+        </VisuallyHidden>
+        {toRender.map((service: ServicePreview, id: number) => (
+          <Card
+            key={service.id}
+            id={service.id}
+            title={service.title}
+            shortDescription={service.shortDescription}
+            image={service.image}
+            costValue={service.costValue}
+            costQualifier={service.costQualifier}
+            age={service.age}
+            format={service.format}
+            ref={id === toRender.length - 1 ? (ref) => setLoadedRef(ref) : null}
+          />
+        ))}
       </List>
-      <CardListNavigation
-        onForward={() => pageChange(1)}
-        onBack={() => pageChange(-1)}
-        page={page}
-        totalPages={totalPages}
-        isFirstPage={isFirstPage}
-        isLastPage={isLastPage}
-      />
+      {totalServicesAvailable &&
+      loadedServices &&
+      totalServicesAvailable > loadedServices ? (
+        <div>
+          <VerticalSpacing />
+          <LoadMore onClick={() => loadMore()}>Load more</LoadMore>
+        </div>
+      ) : null}
+      <VerticalSpacing />
     </Content>
   ) : (
     <EmptyList

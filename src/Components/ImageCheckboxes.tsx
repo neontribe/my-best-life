@@ -40,6 +40,7 @@ const CheckboxItem = styled.div`
   flex: 0 0 calc(100% / 3);
   padding: 0 0.5rem;
   margin: 0.5rem 0;
+  min-width: 0;
 
   ${(props) => props.theme.screenSizes.tabletPortraitPlus} {
     flex: 0 0 calc(100% / 4);
