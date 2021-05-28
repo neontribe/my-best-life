@@ -10,6 +10,28 @@ import { MyBestLifeTheme, GlobalStyle } from '../src/Theme'
 import { NotificationsProvider } from '../src/context/NotificationsContext'
 import { QuizProvider } from '../src/context/QuizContext'
 
+declare global {
+  interface Window {
+    hj: (
+      identity: string,
+      userId: string,
+      config: { ['Number of visits']: number }
+    ) => void
+  }
+}
+
+const incrementVisits = () => {
+  //get number of visits from local storage
+  const numberOfVisits = parseInt(
+    localStorage.getItem('Number of visits') || '0'
+  )
+  //set number of visits to previous number plus 1 to local storage
+  const incrementNumOfVisits = (numberOfVisits + 1).toString()
+  localStorage.setItem('Number of visits', incrementNumOfVisits)
+  //return previous number of visits
+  return numberOfVisits
+}
+
 const metaData = {
   name: 'My Best Life',
   description:
@@ -26,6 +48,11 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     )
     if (isHotjarCookiesAccepted === 'true') {
       hotjar.initialize(2392323, 6)
+      const userId = ''
+      const numberOfVisits = incrementVisits()
+      window.hj('identify', userId, {
+        'Number of visits': numberOfVisits,
+      })
     }
   })
   return (
