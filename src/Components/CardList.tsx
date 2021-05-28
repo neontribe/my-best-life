@@ -56,52 +56,72 @@ export const CardList = ({
   const interestWeight = 1
   const feelingWeight = 1
 
-  // Slightly hacky way of checking if we have changed the stuff that's in the card list
-  // by changing filter settings or other means.
-  const { recall: recallNumItems } = useRemember({
-    name: 'numItems',
-    value: () => (numServices ? numServices.toString() : '0'),
-  })
-
-  let previousItems
-
-  useEffect(() => {
-    previousItems = recallNumItems()
-  })
-
-  const startItems =
-    previousItems !== null && previousItems !== undefined
-      ? parseInt(previousItems)
-      : ITEMS_PER_PAGE
-
-  const [loadedRef, setLoadedRef] = useState<HTMLLIElement | null>(null)
-  const [numServices, setNumServices] = useState<number>(startItems)
-  const [scrollHeight, setScrollHeight] = useState<number>(0)
+  const [loadedServices, setLoadedServices] = useState<number>(0)
+  const [loadMoreClicked, setLoadMoreClicked] = useState<boolean>(false)
 
   const [filteredServices, setFilteredServices] =
     useState<Array<ServicePreview> | null>(null)
 
-  const toRender = filteredServices
-    ? filteredServices.slice(0, numServices)
-    : []
+  const toRender =
+    loadedServices !== null && filteredServices
+      ? filteredServices.slice(0, loadedServices)
+      : []
 
-  const { resumePosition } = useScrollRemember()
+  // We use a reference to the last element in the card list so that we can
+  // tell when the card list has rendered, and thus know when it is ok
+  // to set the scroll position.
+  const [loadedRef, setLoadedRef] = useState<HTMLLIElement | null>(null)
+
+  const { resumePosition, resetPosition } = useScrollRemember()
+  const { recall: recallNum } = useRemember({
+    name: 'servicesLoaded',
+    value: () => (loadedServices ? loadedServices.toString() : '0'),
+  })
+
+  // Slightly hacky way of checking if we have changed the stuff that's in the card list
+  // by changing filter settings or other means.
+  const { recall: recallNumItems } = useRemember({
+    name: 'numItems',
+    value: () => (filteredServices ? filteredServices.length.toString() : '0'),
+  })
+
+  useEffect(() => {
+    if (filteredServices === null) {
+      return
+    }
+
+    // Recall pagination position, but make sure the number of items
+    // hasn't changed since we were last here, and if it has, reset to
+    // the start of the list.
+    if (parseInt(recallNumItems() || '0') !== filteredServices.length) {
+      setLoadedServices(ITEMS_PER_PAGE)
+      resetPosition()
+    } else {
+      setLoadedServices(parseInt(recallNum() || '0'))
+    }
+
+    // We only want to run this once, once the filtered services list has been loaded
+    // eslint-disable-next-line
+  }, [filteredServices === null])
 
   useEffect(() => {
     if (loadedRef === null) return
+
+    // if the loadedRef has changed because we added more results, don't resume position
+    if (loadMoreClicked) {
+      setLoadMoreClicked(false)
+      return
+    }
+
     resumePosition()
     // eslint-disable-next-line
   }, [loadedRef])
 
-  useEffect(() => {
-    window.scrollTo(0, scrollHeight)
-  }, [numServices, scrollHeight])
-
   const totalServicesAvailable = filteredServices?.length
 
-  const addPage = () => {
-    setScrollHeight(window.pageYOffset)
-    setNumServices(numServices + ITEMS_PER_PAGE)
+  const loadMore = () => {
+    setLoadMoreClicked(true)
+    setLoadedServices(loadedServices + ITEMS_PER_PAGE)
   }
 
   const ageFilter = useCallback(
@@ -314,10 +334,12 @@ export const CardList = ({
           />
         ))}
       </List>
-      {totalServicesAvailable && totalServicesAvailable > numServices ? (
+      {totalServicesAvailable &&
+      loadedServices &&
+      totalServicesAvailable > loadedServices ? (
         <div>
           <VerticalSpacing />
-          <LoadMore onClick={() => addPage()}>Load more</LoadMore>
+          <LoadMore onClick={() => loadMore()}>Load more</LoadMore>
         </div>
       ) : null}
       <VerticalSpacing />
