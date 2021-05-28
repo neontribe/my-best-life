@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 const StyledBurger = styled.button`
-  appearance: none;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -10,7 +9,7 @@ const StyledBurger = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 4px;
   margin-left: auto;
   margin-top: 1rem;
 
@@ -19,14 +18,10 @@ const StyledBurger = styled.button`
     outline-offset: 2px;
   }
 
-  div {
-    width: 100%;
-    height: 4px;
-    background: ${(props) => props.theme.colours.purple};
-    border-radius: 10px;
-    transition: all 0.3s linear;
-    position: relative;
-    transform-origin: 1px;
+  svg {
+    height: 40px;
+    width: 40px;
+    stroke: ${(props) => props.theme.colours.purple};
   }
 
   ${(props) => props.theme.screenSizes.tabletLandscapePlus} {
@@ -41,10 +36,25 @@ interface BurgerProps {
 
 export const Burger = ({ open, setOpen }: BurgerProps): JSX.Element => {
   return (
-    <StyledBurger onClick={() => setOpen(!open)} aria-label="Menu">
-      <div />
-      <div />
-      <div />
+    <StyledBurger
+      type="button"
+      onClick={() => setOpen(!open)}
+      aria-label="Menu"
+      aria-expanded={open}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
     </StyledBurger>
   )
 }
