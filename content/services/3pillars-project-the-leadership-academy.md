@@ -32,8 +32,6 @@ location: 3Pillars Project, Black Prince Trust, 5 Beaufoy Walk, London, SE11 6AA
 makeMapLink: true
 area:
   - Prince's
-  - Thurlow Park
-  - Clapham Common
 contactExplanation: Send an email or visit the website for more info.
 email: " info@3pillarsproject.com"
 website: https://www.3pillarsproject.com/our-work
