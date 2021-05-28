@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 const StyledBurger = styled.button`
+  appearance: none;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
