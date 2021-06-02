@@ -47,7 +47,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       'hotjarCookiesAccepted'
     )
     if (isHotjarCookiesAccepted === 'true') {
-      hotjar.initialize(2392323, 6)
+      hotjar.initialize(2431809, 6)
       const userId = ''
       const numberOfVisits = incrementVisits()
       window.hj('identify', userId, {
