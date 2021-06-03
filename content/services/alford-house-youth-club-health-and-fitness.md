@@ -14,7 +14,7 @@ interests:
   - Sports
 costValue: 0.25
 costQualifier: 25p subscription per session
-costExplanation: 25p subscription payable on any night you attend the club
+costExplanation: ""
 age:
   minAge: 12
   maxAge: 21
@@ -25,6 +25,7 @@ area:
   - Prince's
 time: "Mondays 3pm - 6pm, Tuesdays 3pm - 6pm, Wednesdays 3pm - 6pm and Thursdays
   3pm - 6pm. "
+expectation: Subscription payable on any night you attend the club
 contactExplanation: Get in touch before or just drop-in.
 email: theclub@alfordhouse.org.uk
 phone: 020 7735 1519
