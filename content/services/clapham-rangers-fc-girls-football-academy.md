@@ -22,7 +22,7 @@ feelings:
   - excited
   - calm
 costValue: 7.5
-costQualifier: per session
+costQualifier: £7.50 per session
 age:
   minAge: 6
   maxAge: 11
