@@ -16,6 +16,8 @@ feelings:
 costValue: 0
 age:
   maxAge: 25
+gender:
+  - transgender
 format: Online
 time: Open from 9am to 9pm Monday to Friday
 expectation: >-
