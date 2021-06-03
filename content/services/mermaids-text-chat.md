@@ -18,6 +18,8 @@ costValue: 0
 age:
   minAge: ""
   maxAge: 25
+gender:
+  - transgender
 format: One to one chats
 expectation: "You can text the Crisis Messenger Text Service free and
   anonymously from EE, O2, Vodafone 3, Virgin Mobile, BT Mobile, GiffGaff, Tesco
