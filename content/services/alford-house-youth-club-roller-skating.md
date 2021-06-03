@@ -20,7 +20,7 @@ feelings:
   - anxious
   - excited
 costValue: 0.25
-costQualifier: Subscription payable on any night you attend the club
+costQualifier: 25p per session
 age:
   minAge: 11
   maxAge: 13
@@ -30,9 +30,9 @@ makeMapLink: true
 area:
   - Prince's
 time: Tuesdays 6.30pm - 8pm.
+expectation: Subscription payable on any night you attend the club
 contactExplanation: Just drop in or alternatively visit the website for more info.
 email: theclub@alfordhouse.org.uk
 phone: 020 7735 1519
 website: https://alfordhouse.org.uk/youth-club/whats-on/
- 
 ---
