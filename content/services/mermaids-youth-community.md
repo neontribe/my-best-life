@@ -21,6 +21,8 @@ costValue: 0
 age:
   minAge: 12
   maxAge: 25
+gender:
+  - transgender
 format: Online
 expectation: "Read the code of conduct before you apply, then fill out an online
   application. There are different forms for each age group. On the form, there
