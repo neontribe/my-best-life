@@ -15,6 +15,13 @@ categories:
   category1: Sex and Relationships
   category2: Mental Health
 costValue: 0
+gender:
+  - non-binary
+  - transgender
+  - intersex
+  - gender non-conforming
+  - genderqueer
+  - agender
 format: Online
 time: Timings change regularly, but the most up-to-date timings can be found on
   the MindOut homepage
