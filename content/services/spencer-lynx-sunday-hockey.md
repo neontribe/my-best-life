@@ -3,8 +3,8 @@ organisation: Spencer Lynx
 title: Sunday Hockey
 shortDescription: "Sunday hockey sessions "
 image:
-  image: img/field-hockey-player-girls-game-163526.jpeg
-  imageAlt: Girls playing hockney
+  image: img/untitled.png
+  imageAlt: Boys playing hockney
 description: "Sessions built around fun and enjoyment. Teaching hockey skills.
   Nurturing general sporting ability. Can provide a pathway into Spencer Hockey
   Club, with financial support if needed. Aims to inspire. Lynx 2 is Year 5
