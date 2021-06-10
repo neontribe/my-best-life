@@ -14,7 +14,7 @@ declare global {
   interface Window {
     hj: (
       identity: string,
-      userId: string,
+      userId: string | null,
       config: { ['Number of visits']: number }
     ) => void
   }
@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     )
     if (isHotjarCookiesAccepted === 'true') {
       hotjar.initialize(867522, 6)
-      const userId = ''
+      const userId = null
       const numberOfVisits = incrementVisits()
       window.hj('identify', userId, {
         'Number of visits': numberOfVisits,
