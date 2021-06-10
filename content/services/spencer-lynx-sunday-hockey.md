@@ -4,7 +4,7 @@ title: Sunday Hockey
 shortDescription: "Sunday hockey sessions "
 image:
   image: img/untitled.png
-  imageAlt: Boys playing hockney
+  imageAlt: Boys playing hockey
 description: "Sessions built around fun and enjoyment. Teaching hockey skills.
   Nurturing general sporting ability. Can provide a pathway into Spencer Hockey
   Club, with financial support if needed. Aims to inspire. Lynx 2 is Year 5
