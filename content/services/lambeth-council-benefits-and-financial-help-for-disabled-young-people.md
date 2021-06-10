@@ -2,6 +2,9 @@
 organisation: Lambeth Council
 title: Benefits and financial help for disabled young people
 shortDescription: Financial help for disabled young people
+image:
+  image: img/pexels-steve-johnson-1006060.jpg
+  imageAlt: A close up of coins
 description: Information about the key benefits or financial help you might be
   able to claim.
 categories:
