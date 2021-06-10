@@ -2,6 +2,9 @@
 organisation: Clapham Rangers FC
 title: Football Club
 shortDescription: Youth football club in Clapham
+image:
+  image: img/182788603_471348357489803_7837971403919643890_n.jpg
+  imageAlt: A football team sitting on grass
 description: Training at least once a week to build fitness, learn new skills
   and work on match tactics. Fun, secure place to play football. 60+ young
   people turn up for Saturday morning sessions. Parents/guardians must stay for
