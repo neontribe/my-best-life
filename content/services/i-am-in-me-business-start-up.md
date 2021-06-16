@@ -2,6 +2,9 @@
 organisation: I am in me
 title: Business start up
 shortDescription: Business start up coaching
+image:
+  image: img/business-startup.jpg
+  imageAlt: Image of a someone holding a lighbulb by their laptop
 description: "Work with the team to explore why you want to start a business and
   develop your business idea through regular business coaching. "
 categories:
@@ -23,5 +26,11 @@ contactExplanation: "You can call the number below or text 'call me' to book an
 email: info@iaminme.co.uk
 phone: 07398 356747
 website: https://www.iaminme.co.uk/
-reviews: []
+reviews:
+  - comment: Sasha's holistic approach really helped me to address different areas
+      in my life which I want to improve on. I found that the importance of this
+      motivated and gave me that extra confidence boost to relentlessly work on
+      self-development as well as build my business.
+    author: DC
+    rating: 5
 ---
