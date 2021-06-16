@@ -2,6 +2,9 @@
 organisation: I am in me
 title: Employability
 shortDescription: Employability qualification
+image:
+  image: img/pexels-photo-5699456.jpeg
+  imageAlt: "Close up image of someone writing on a clipboard "
 description: "Work with the team to explore and build your skills to improve
   your employability. Together you will produce a CV, practice for interviews,
   complete work experience placements and gain support to apply find and apply
