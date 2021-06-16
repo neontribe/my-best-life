@@ -3,8 +3,8 @@ organisation: Indoamerican Refugee & Migrant Organisation (IRMO)
 title: Latin American Youth Forum
 shortDescription: Support for Spanish and Portugese speakers
 image:
-  image: img/image-11-300x225.jpg
-  imageAlt: Photo of the young latin american centre
+  image: img/together-as-one.png
+  imageAlt: Photo of a group of latin american young people
 description: >-
   Learn English, get creative, learn new skills and make friends in a trilingual
   space (Spanish, Portuguese and English.)
