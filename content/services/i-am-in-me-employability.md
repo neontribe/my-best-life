@@ -1,7 +1,7 @@
 ---
 organisation: I am in me
 title: Employability
-shortDescription: Employability qualification
+shortDescription: "Employability support "
 image:
   image: img/pexels-photo-5699456.jpeg
   imageAlt: "Close up image of someone writing on a clipboard "
