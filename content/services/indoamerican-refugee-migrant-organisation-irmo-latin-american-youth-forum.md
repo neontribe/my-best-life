@@ -7,9 +7,9 @@ image:
   imageAlt: Photo of the young latin american centre
 description: >-
   Learn English, get creative, learn new skills and make friends in a trilingual
-  space (Spanish, Portuguese and English.) 
+  space (Spanish, Portuguese and English.)
 
-  You can learn English in weekly classes, and learn new skills in art, film making, photography and event organisation. You can also access volunteering and employment opportunities and explore London on day trips and residentials. 
+  Learn new skills in weekly classes, such as English, art, film making, photography and event organisation. You can also access volunteering and employment opportunities and explore London on day trips and residentials. 
 categories:
   category1: School and College
   category2: Friends
