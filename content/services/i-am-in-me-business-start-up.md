@@ -1,5 +1,5 @@
 ---
-organisation: I am in me
+organisation: I AM IN ME
 title: Business start up
 shortDescription: Business start up coaching
 image:
