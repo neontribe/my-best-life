@@ -3,7 +3,7 @@ organisation: I AM IN ME
 title: Business start up
 shortDescription: Business start up coaching
 image:
-  image: img/i-am-in-me-logo.jpg
+  image: img/business-startup.jpg
   imageAlt: Image of a someone holding a lighbulb by their laptop
 description: "Work with the team to explore why you want to start a business and
   develop your business idea through regular business coaching. "
