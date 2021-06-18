@@ -1,5 +1,5 @@
 ---
-organisation: I am in me
+organisation: I AM IN ME
 title: Employability
 shortDescription: Support to help you get a job
 image:
