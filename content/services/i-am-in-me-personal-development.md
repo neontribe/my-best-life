@@ -1,5 +1,5 @@
 ---
-organisation: I am in me
+organisation: I AM IN ME
 title: Personal Development
 shortDescription: 1-2-1 personal development sessions
 image:
