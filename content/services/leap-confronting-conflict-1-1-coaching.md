@@ -21,7 +21,7 @@ format: One to one chats
 location: Leap Confronting Conflict, Wells House (Unit 7), 5 – 7 Wells Terrace,
   London N4 3JU
 time: "The course is eight weeks long. "
-expectation: "The course's curriculum is shaped around you and your project worker. "
+expectation: "The coaching's curriculum is shaped around you and your project worker. "
 contactExplanation: "Go to Leap's referrals page and fill in the online form,
   letting them know which course you're requesting to join. "
 form: https://leapconfrontingconflict.org.uk/confront-conflict/referrals-landing-page
