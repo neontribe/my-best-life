@@ -1442,10 +1442,10 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
-"@types/google-spreadsheet@3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@types/google-spreadsheet/-/google-spreadsheet-3.0.2.tgz#7de085873ccfa06a12959f2939ece2291bbcc9b4"
-  integrity sha512-866PHvBTTEIsaRdMv/Ypz/KK3r2Bi9qwQ8WRF/h4My9lT7cJhVwTD06cTvNHHKO0qiDRjUP9TubAXY3PBJrN9w==
+"@types/google-spreadsheet@3.1.4":
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/@types/google-spreadsheet/-/google-spreadsheet-3.1.4.tgz#2bc43febd3b8b6808b875a4ff458f058eabf222f"
+  integrity sha512-mTg3ZDSWn2TTcVEWXdCLql/j2xWwiBBQtGOYnvnbwaUrjMCPkH7SLyEgIdP0l7KujF8WK1xHHI9FyTusPf8e1Q==
 
 "@types/hoist-non-react-statics@*", "@types/hoist-non-react-statics@^3.3.0":
   version "3.3.1"
