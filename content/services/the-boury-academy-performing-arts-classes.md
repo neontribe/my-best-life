@@ -2,6 +2,9 @@
 organisation: The Boury Academy
 title: Performing Arts Classes
 shortDescription: Performing Arts Classes
+image:
+  image: img/boury-academy.jfif
+  imageAlt: A group of young people sitting on a stage
 description: No experience needed performing arts classes from West End
   professionals. Build your confidence, imagination and creativity through
   learning skills in dance, singing, theatre and film.
