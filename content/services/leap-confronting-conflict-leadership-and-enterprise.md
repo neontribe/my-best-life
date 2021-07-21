@@ -19,14 +19,18 @@ age:
   maxAge: 25
 eligibility: "The programme is for friendship groups living in Lambeth and Southwark. "
 format: Meeting a group of people
-location: Leap Confronting Conflict, Wells House (Unit 7), 5 – 7 Wells Terrace,
-  London N4 3JU
+location: "Multiple locations: This programme is based in Lambeth and Southwark.
+  There is the option of working out of the location of the organisation that
+  referred you or to work online. Either option can be explored and discussed
+  once referral has been made."
 expectation: "During Covid, the programme has shifted from group work to
   one-to-one work and is now taking place online. The new online curriculum
   explores friendship groups, relationships, networks, and what these give you
   and what you give to them. "
 contactExplanation: "Go to Leap's referrals page and fill in the online form,
-  letting them know which course you're requesting to join. "
+  letting them know which course you're requesting to join. You can do this by
+  clicking the 'Training for young people in London' option and adding 'I am
+  interested in the Leadership and Enterprise programme' in the text box. "
 form: https://leapconfrontingconflict.org.uk/confront-conflict/referrals-landing-page
 website: https://leapconfrontingconflict.org.uk/confront-conflict/training/young-people-landing-page
 reviews: []
