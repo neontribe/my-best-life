@@ -18,8 +18,8 @@ age:
   minAge: 11
   maxAge: 25
 format: One to one chats
-location: Leap Confronting Conflict, Wells House (Unit 7), 5 – 7 Wells Terrace,
-  London N4 3JU
+location: "Multiple locations: Leap’s address (Wells House N4 3JU), online or at
+  one of our partner venues in Lambeth"
 time: "The course is eight weeks long. "
 expectation: "The coaching's curriculum is shaped around you and your project worker. "
 contactExplanation: "Go to Leap's referrals page and fill in the online form,
