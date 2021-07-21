@@ -5,11 +5,12 @@ shortDescription: Friendship and community programme
 image:
   image: img/leap-confronting-conflict-leadership-and-enterprise.jpg
   imageAlt: Young man in grey hoodie and black baseball cap
-description: "Centred around improving relationships within your friendship
-  group and community. Open and safe spaces for you to share your experiences,
-  challenges, and perspectives around living in Lambeth and Southwark. For
-  friendship groups of any gender to attend together. Guided by Leap Trainers
-  and Project Staff. "
+description: A fun and interactive programme centred around improving
+  relationships within your friendship group. Open and safe spaces for you to
+  explore your experiences, challenges, and perspectives with a focus on
+  Identity, Conflict Management and Emotional Intelligence training for
+  friendship groups of any gender to attend together. This programme also
+  includes free trips and a 3-day residential.
 categories:
   category1: Friends
 costValue: 0
