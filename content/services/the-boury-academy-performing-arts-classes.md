@@ -27,5 +27,6 @@ area:
 time: Classes run from 2pm - 5pm every Sunday
 email: info@thebouryacademy.co.uk
 phone: 07487 309247
+website: https://thebouryacademy.co.uk/home
 reviews: []
 ---
