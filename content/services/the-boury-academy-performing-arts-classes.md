@@ -12,7 +12,7 @@ interests:
   - Drama
   - Films and TV
 costValue: 15
-costQualifier: 15 per week
+costQualifier: £15 per week
 age:
   minAge: 4
   maxAge: 18
