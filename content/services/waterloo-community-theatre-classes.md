@@ -1,6 +1,6 @@
 ---
 organisation: Waterloo Community Theatre
-title: Classes
+title: Drama Classes
 shortDescription: Free drama classes
 image:
   image: img/waterloo-community-theatre.jpg
