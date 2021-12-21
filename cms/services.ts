@@ -113,6 +113,7 @@ export type ServiceDetail = Pick<
   | 'title'
   | 'image'
   | 'categories'
+  | 'costValue'
   | 'eligibility'
   | 'age'
   | 'costExplanation'
