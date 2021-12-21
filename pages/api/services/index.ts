@@ -33,7 +33,12 @@ const service: NextApiHandler = ({ query }, res) => {
   const data = serviceData
     .map((data) => {
       const serviceId = getUuid(data.id)
-      const email = (data.email || '').trim()
+
+      // normalises:
+      // * "name@email.com "
+      // * "first@email.com or second@email.com"
+      const email = (data.email || '').trim().split(' ')[0]
+
       const costValue =
         data.costValue !== undefined ? data.costValue.toString() : undefined
 
@@ -50,7 +55,7 @@ const service: NextApiHandler = ({ query }, res) => {
         const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 
         if (!isValidEmail) {
-          console.warn(`${email} is not a valid email address.`)
+          console.warn(`${data.email} is not a valid email address.`)
         }
 
         response.email = (isValidEmail && email) || undefined

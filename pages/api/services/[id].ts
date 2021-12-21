@@ -26,7 +26,11 @@ const service: NextApiHandler = (req, res) => {
     return
   }
 
-  const email = (data.email || '').trim()
+  // normalises:
+  // * "name@email.com "
+  // * "first@email.com or second@email.com"
+  const email = (data.email || '').trim().split(' ')[0]
+
   const costValue =
     data.costValue !== undefined ? data.costValue.toString() : undefined
 
@@ -44,7 +48,7 @@ const service: NextApiHandler = (req, res) => {
     const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 
     if (!isValidEmail) {
-      console.warn(`${email} is not a valid email address.`)
+      console.warn(`${data.email} is not a valid email address.`)
     }
 
     response.email = (isValidEmail && email) || undefined
