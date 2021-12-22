@@ -10,7 +10,6 @@ const getParam = (arg: string | string[], fallback: number) => {
   )
 }
 
-// Open Referral UK Data Standard
 interface Organization {
   id: string
   name: string
@@ -21,7 +20,13 @@ interface Organization {
   uri?: string
 }
 
-// Open Referral UK Data Standard
+interface CostOption {
+  id: string
+  service_id: string
+  amount?: number
+  amount_description?: string
+}
+
 interface Service {
   id: string
   organization: Organization
@@ -29,7 +34,7 @@ interface Service {
   description?: string
   url?: string
   email?: string
-  fees?: string
+  cost_options: CostOption[]
 }
 
 const service: NextApiHandler = ({ query }, res) => {
@@ -50,9 +55,6 @@ const service: NextApiHandler = ({ query }, res) => {
       // * "first@email.com or second@email.com"
       const email = (data.email || '').trim().split(' ')[0]
 
-      const costValue =
-        data.costValue !== undefined ? data.costValue.toString() : undefined
-
       const response: Service = {
         id: serviceId,
         organization: {
@@ -63,7 +65,14 @@ const service: NextApiHandler = ({ query }, res) => {
         name: data.title,
         description: data.description?.trim(),
         url: data.website,
-        fees: data.costExplanation || costValue,
+        cost_options: [
+          {
+            id: `amount-${serviceId}`,
+            service_id: serviceId,
+            amount_description: (data.costExplanation || '').trim(),
+            amount: data.costValue,
+          },
+        ],
       }
 
       if (email) {
