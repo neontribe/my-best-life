@@ -4,9 +4,20 @@ import getUuid from 'uuid-by-string'
 import { getServices } from '../../../cms/services'
 
 // Open Referral UK Data Standard
+interface Organization {
+  id: string
+  name: string
+  description: string
+  email?: string
+  url?: string
+  logo?: string
+  uri?: string
+}
+
+// Open Referral UK Data Standard
 interface Service {
   id: string
-  organization_id: string
+  organization: Organization
   name: string
   description?: string
   url?: string
@@ -36,7 +47,11 @@ const service: NextApiHandler = (req, res) => {
 
   const response: Service = {
     id: data.id,
-    organization_id: data.organisation,
+    organization: {
+      id: getUuid(data.organisation),
+      name: data.organisation,
+      description: '',
+    },
     name: data.title,
     description: data.description,
     url: data.website,
