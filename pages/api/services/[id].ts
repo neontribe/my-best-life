@@ -3,7 +3,6 @@ import getUuid from 'uuid-by-string'
 
 import { getServices } from '../../../cms/services'
 
-// Open Referral UK Data Standard
 interface Organization {
   id: string
   name: string
@@ -14,7 +13,13 @@ interface Organization {
   uri?: string
 }
 
-// Open Referral UK Data Standard
+interface CostOption {
+  id: string
+  service_id: string
+  amount?: number
+  amount_description?: string
+}
+
 interface Service {
   id: string
   organization: Organization
@@ -22,7 +27,7 @@ interface Service {
   description?: string
   url?: string
   email?: string
-  fees?: string
+  cost_options: CostOption[]
 }
 
 const service: NextApiHandler = (req, res) => {
@@ -42,9 +47,6 @@ const service: NextApiHandler = (req, res) => {
   // * "first@email.com or second@email.com"
   const email = (data.email || '').trim().split(' ')[0]
 
-  const costValue =
-    data.costValue !== undefined ? data.costValue.toString() : undefined
-
   const response: Service = {
     id: data.id,
     organization: {
@@ -56,7 +58,14 @@ const service: NextApiHandler = (req, res) => {
     description: data.description,
     url: data.website,
     email,
-    fees: data.costExplanation || costValue,
+    cost_options: [
+      {
+        id: `amount-${data.id}`,
+        service_id: data.id,
+        amount_description: (data.costExplanation || '').trim(),
+        amount: data.costValue,
+      },
+    ],
   }
 
   if (email) {
