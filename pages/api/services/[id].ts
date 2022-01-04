@@ -48,7 +48,7 @@ const service: NextApiHandler = (req, res) => {
   const email = (data.email || '').trim().split(' ')[0]
 
   const response: Service = {
-    id: data.id,
+    id,
     organization: {
       id: getUuid(data.organisation),
       name: data.organisation,
