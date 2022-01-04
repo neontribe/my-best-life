@@ -47,7 +47,7 @@ const service: NextApiHandler = (req, res) => {
     data.costValue !== undefined ? data.costValue.toString() : undefined
 
   const response: Service = {
-    id: data.id,
+    id,
     // organization_id: data.organisation,
     organization: {
       id: getUuid(data.organisation),
