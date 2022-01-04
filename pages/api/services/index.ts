@@ -40,13 +40,15 @@ interface Service {
 const service: NextApiHandler = ({ query }, res) => {
   const page = getParam(query.page, 1)
   const size = getParam(query.size, 50)
+  const text = (Array.isArray(query.text) ? query.text.pop() : query.text) || ''
+  // const keywords = text?.split(' ')
 
   const serviceData = getServices()
 
   const start = size * page - size
   const end = start + size
 
-  const data = serviceData
+  const results = serviceData
     .map((data) => {
       const serviceId = getUuid(data.id)
 
@@ -87,19 +89,52 @@ const service: NextApiHandler = ({ query }, res) => {
 
       return response
     })
-    .slice(start, end)
+    .filter((data) => {
+      if (!text.length) {
+        return true
+      }
 
-  const totalElements = serviceData.length
-  const totalPages = totalElements / size
+      return [data.name, data.organization.name, data.description].some(
+        (value) => value && value.includes(text)
+      )
+    })
+    .sort((a, b) => {
+      if (!text.length) {
+        return 0
+      }
+
+      // order by "most appropriate data richness"
+      //
+      // https://github.com/OpenReferralUK/human-services/blob/gh-pages/pages/API/APIValidation.md#level-2-compliance
+      //
+      // 1. data.name exact match
+      // 2. data.name includes
+      // 3. other fields
+
+      if (a.name === text && b.name !== text) {
+        return -1
+      }
+
+      if (a.name.includes(text) && !b.name.includes(text)) {
+        return -1
+      }
+
+      return 0
+    })
+
+  const totalElements = results.length
+  const totalPages = Math.ceil(totalElements / size)
+  const content = results.slice(start, end)
 
   res.status(200).json({
     totalElements,
     totalPages,
     number: page,
-    size,
+    size: totalElements < size ? totalElements : size,
     first: page === 1,
     last: page === totalPages,
-    content: data,
+    empty: !content.length,
+    content,
   })
 }
 
