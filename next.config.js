@@ -8,4 +8,15 @@ module.exports = withPWA({
   pwa: {
     dest: 'public',
   },
+  async headers() {
+    return [
+      {
+        // match all API routes
+        source: '/api/:path*',
+        headers: [
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+        ],
+      },
+    ]
+  }
 })
