@@ -2,6 +2,7 @@
 organisation: The Hebe Foundation
 title: Digital Disruptors
 shortDescription: Digital workshops
+promoted: true
 image:
   image: img/digital-disruptors.jpg
   imageAlt: Close up of two young people looking at ahead
@@ -37,15 +38,17 @@ contactExplanation: "If you live in South/South West London and would like to
 email: hellodigitaldisruptors@gmail.com
 form: https://www.surveymonkey.co.uk/r/Disruptors2019
 website: https://digitaldisruptors.org.uk/
-reviews: [{comment: "I really enjoyed the programme. All the workshops were interesting
-      and informative and I learnt much more than I thought I would. Not just
-      about advers, which is what initially came to my mind when I thought of
-      'digital marketing'but about film-making, storytelling, and even colour
-      psychology. My favourite part of the programme was definitely the final
-      pitch. ... I realise now how many careers there are in the digital
-      marketing field, and although I’m still not completely sure about the path
-      I’m going to take, it’s been an invaluable insight into the industry. It’s
-      shown me that entrepreneurship and changing the community around me isn’t
-      as difficult as it seems. ... If you want to build your confidence and use
-      your creativity while developing a digital solution that will help others
-      around you, go for it!"}]
+reviews:
+  - comment: I really enjoyed the programme. All the workshops were interesting and
+      informative and I learnt much more than I thought I would. Not just about
+      advers, which is what initially came to my mind when I thought of 'digital
+      marketing'but about film-making, storytelling, and even colour psychology.
+      My favourite part of the programme was definitely the final pitch. ... I
+      realise now how many careers there are in the digital marketing field, and
+      although I’m still not completely sure about the path I’m going to take,
+      it’s been an invaluable insight into the industry. It’s shown me that
+      entrepreneurship and changing the community around me isn’t as difficult
+      as it seems. ... If you want to build your confidence and use your
+      creativity while developing a digital solution that will help others
+      around you, go for it!
+---
