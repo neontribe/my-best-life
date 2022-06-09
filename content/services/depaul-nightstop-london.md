@@ -2,7 +2,7 @@
 organisation: DePaul
 title: Nightstop London
 shortDescription: Free overnight accommodation for under 25s
-promoted: true
+promoted: false
 image:
   image: img/pexels-rachel-claire-5490380.jpg
   imageAlt: A close up of a bed
@@ -29,5 +29,4 @@ contactExplanation: "You will need to give the team a call. "
 email: nightstop.london@depaulcharity.org.uk
 phone: 0207 9391 234, 0207 9391 226, or 0207 9391 240
 website: https://uk.depaulcharity.org/nightstop/nightstop-london/
- 
 ---
