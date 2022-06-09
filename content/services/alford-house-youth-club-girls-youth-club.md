@@ -1,7 +1,7 @@
 ---
 organisation: Alford House Youth Club
 title: Girls Youth Club
-shortDescription: Youth club open to girls only on Wednesday evenings
+shortDescription: Girls only youth club on Wednesday evenings
 image:
   image: img/alfredhouse.jpeg
   imageAlt: Young people lined up for rafting
