@@ -2,6 +2,7 @@
 organisation: Film & Chill
 title: Monthly screenings
 shortDescription: Monthly cinema screenings
+promoted: true
 image:
   image: img/film-and-chill.jpg
   imageAlt: People sitting in a cinema
