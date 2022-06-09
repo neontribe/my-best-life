@@ -2,6 +2,7 @@
 organisation: Code 7
 title: Studio Engineering
 shortDescription: Training to do music studio recording
+promoted: true
 image:
   image: img/dj.jpeg
   imageAlt: Close up of a man using DJ mixing decks
