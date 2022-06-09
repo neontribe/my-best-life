@@ -2,7 +2,7 @@
 organisation: Depaul
 title: Alone in London
 shortDescription: Free support for homelessness and family difficulties
-promoted: true
+promoted: false
 image:
   image: img/pexels-photo-101808.jpeg
   imageAlt: A close of keys in a door
@@ -27,5 +27,4 @@ contactExplanation: You can call or email the team.
 email: alshousingadvice@depaulcharity.org.uk
 phone: 0207 278 4224 then press option 2
 website: http://uk.depaulcharity.org/alone-london
- 
 ---
