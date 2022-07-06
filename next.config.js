@@ -13,10 +13,8 @@ module.exports = withPWA({
       {
         // match all API routes
         source: '/api/:path*',
-        headers: [
-          { key: 'Access-Control-Allow-Origin', value: '*' },
-        ],
+        headers: [{ key: 'Access-Control-Allow-Origin', value: '*' }],
       },
     ]
-  }
+  },
 })
