@@ -8,7 +8,7 @@ interface IReviewShape {
   usedService: boolean
 }
 
-export default async (req: NowRequest, res: NowResponse): Promise<void> => {
+const review = async (req: NowRequest, res: NowResponse): Promise<void> => {
   if (
     !process.env.REVIEW_SHEET_ID ||
     !process.env.REVIEW_CLIENT_EMAIL ||
@@ -57,3 +57,5 @@ export default async (req: NowRequest, res: NowResponse): Promise<void> => {
   res.status(200).send('OK')
   return
 }
+
+export default review
