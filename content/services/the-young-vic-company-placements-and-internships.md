@@ -30,7 +30,7 @@ format: Meeting a group of people
 location: Young Vic, 66 The Cut, Waterloo, London SE1 8LZ
 makeMapLink: true
 area:
-  - Bishop's
+  - North Lambeth
 contactExplanation: "Check out the website link and send a current CV and cover
   letter (or email) to the Production Administrator,
   rachelsalenius@youngvic.org, following the instructions on the website. "

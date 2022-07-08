@@ -30,7 +30,7 @@ format: Meeting a group of people
 location: La Retraite School, Atkins Road, London SW12 0AB
 makeMapLink: true
 area:
-  - Thornton
+  - Clapham and Brixton Hill
 time: Sundays
 contactExplanation: Email at spencerlynxhockey@gmail.com
 email: spencerlynxhockey@gmail.com

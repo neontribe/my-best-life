@@ -37,7 +37,7 @@ format: Meeting a group of people
 location: Clapham Common Long Road, opposite Victoria Rise, SW4 0AA
 makeMapLink: true
 area:
-  - Clapham Common
+  - Clapham and Brixton Hill
 time: Saturdays, 10:00 to 11:30
 expectation: ""
 contactExplanation: New players need to register in advance by completing the

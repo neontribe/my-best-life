@@ -83,27 +83,12 @@ export type Interest =
   | 'Gaming'
 
 export type Area =
-  | 'Gipsy Hill'
-  | 'Thurlow Park'
-  | 'Herne Hill'
-  | 'Clapham Common'
-  | 'Clapham Town'
-  | "Bishop's"
-  | 'Streatham South'
-  | 'Thornton'
-  | "Knight's Hill"
-  | "St Leonard's"
-  | "Prince's"
-  | 'Oval'
-  | 'Stockwell'
-  | 'Vassall'
-  | 'Coldharbour'
-  | 'Streatham Wells'
-  | 'Streatham Hill'
-  | 'Ferndale'
-  | 'Tulse Hill'
-  | 'Brixton Hill'
-  | 'Larkhall'
+  | 'Brixton Stockwell'
+  | 'Brixton Tulse Hill'
+  | 'Clapham and Brixton Hill'
+  | 'Norwood'
+  | 'Streatham'
+  | 'North Lambeth'
 
 export type ServiceDetail = Pick<
   Service,

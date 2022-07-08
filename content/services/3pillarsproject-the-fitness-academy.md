@@ -22,7 +22,7 @@ format: One to one chats
 location: 3Pillars Project, Black Prince Trust, 5 Beaufoy Walk, London, SE11 6AA
 makeMapLink: true
 area:
-  - Prince's
+  - North Lambeth
 contactExplanation: Get in touch with the details below
 email: " info@3pillarsproject.com"
 form: https://www.3pillarsproject.com/contact-us

@@ -23,7 +23,7 @@ format: Meeting a group of people
 location: The Yellow Cube CIC, 63 Christchurch Road, SW2 3DH
 makeMapLink: true
 area:
-  - Tulse Hill
+  - Brixton Tulse Hill
 contactExplanation: Email to express your interest
 email: info@grooveschool.co.uk
 phone: 020 8671 3822

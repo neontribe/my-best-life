@@ -39,7 +39,7 @@ format: Meeting a group of people
 location: Alford House, Aveline Street, Kennington, London, SE11 5DQ
 makeMapLink: true
 area:
-  - Prince's
+  - North Lambeth
 time: Wednesdays 6.15-9pm
 contactExplanation: Just drop in or alternatively visit the website for more info.
 email: theclub@alfordhouse.org.uk

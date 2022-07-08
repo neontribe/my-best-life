@@ -22,7 +22,7 @@ format: One to one chats
 location: Alford House, Aveline Street, Kennington, London, SE11 5DQ
 makeMapLink: true
 area:
-  - Prince's
+  - North Lambeth
 time: "Mondays 3pm - 6pm, Tuesdays 3pm - 6pm, Wednesdays 3pm - 6pm and Thursdays
   3pm - 6pm. "
 expectation: Subscription payable on any night you attend the club

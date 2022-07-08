@@ -25,7 +25,7 @@ location: Grooveschool, Business Launchpad, 3Space, International House,
   Canterbury Cres, Brixton, London SW9 7QD
 makeMapLink: true
 area:
-  - Coldharbour
+  - Brixton Tulse Hill
 time: Various times, subject to availability.
 contactExplanation: To apply, email, call or use the online form.
 email: "info@grooveschool.org "

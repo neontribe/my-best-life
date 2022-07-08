@@ -22,12 +22,11 @@ location: >+
   Gracefield Gardens Health Centre (under 21s) and Park Campus Academy.
 
 area:
-  - Oval
-  - Larkhall
-  - Brixton Hill
-  - Clapham Common
-  - Streatham Wells
-  - Gipsy Hill
+  - Brixton Stockwell
+  - Clapham and Brixton Hill
+  - North Lambeth
+  - Norwood
+  - Streatham
 time: "Walk-in sessions. The team generally work Mondays to Fridays, but you can
   leave a message in the evening and over weekends. "
 expectation: If you have got in touch or you have been referred to the service,

@@ -25,7 +25,7 @@ format: Meeting a group of people
 location: London Philharmonic Orchestra Ltd. 89 Albert Embankment, London SE1 7TP
 makeMapLink: true
 area:
-  - Prince's
+  - North Lambeth
 time: "Courses run three times a year in school holidays. Morning group for
   those with little or no musical experience. Afternoon group for those with
   more musical experience. Both are two hours long, with time to get to know the

@@ -29,9 +29,9 @@ location: "They are based in multiple hospitals across London including; King's
   College Hospital, St Mary's Hospital, St George's Hospital and The Royal
   London. "
 area:
-  - Herne Hill
+  - Brixton Tulse Hill
 contactExplanation: "If you find yourself in hospital due to youth violence you
   may be approached by a redthread worker. "
 phone: 0203 744 6888
-website: https://www.redthread.org.uk/what-we-do/ 
+website: https://www.redthread.org.uk/what-we-do/
 ---

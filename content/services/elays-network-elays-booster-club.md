@@ -16,7 +16,7 @@ format: Meeting a group of people
 location: 2 Thessaly Road, Nine Elms, London SW8 4HT
 makeMapLink: true
 area:
-  - Larkhall
+  - Brixton Stockwell
 time: Sundays, 10.00am - 4.00pm
 contactExplanation: "Use the online form to register. If you're interested or
   want to find out more, get in touch. "

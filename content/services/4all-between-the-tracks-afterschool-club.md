@@ -21,7 +21,7 @@ location: " Rosendale Community Centre, 147 Peabody Cottages, Rosendale Road
   Estate, SE24 9DR"
 makeMapLink: true
 area:
-  - Thurlow Park
+  - Norwood
 time: Wednesdays from 6.30 – 8.30pm
 contactExplanation: "Get in touch for more information about the club. "
 email: info@4-all.org.uk

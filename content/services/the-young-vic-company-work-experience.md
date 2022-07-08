@@ -28,7 +28,7 @@ format: Meeting a group of people
 location: Young Vic, 66 The Cut, Waterloo, London SE1 8LZ
 makeMapLink: true
 area:
-  - Bishop's
+  - North Lambeth
 time: "Runs year-round (except August) and usually lasts one week. Often booked
   up to a year in advance. "
 email: schools@youngvic.org

@@ -26,7 +26,7 @@ format: Meeting a group of people
 location: The Baytree Centre, 300-302 Brixton Road, London SW9 6AE
 makeMapLink: true
 area:
-  - Ferndale
+  - Clapham and Brixton Hill
 time: Wednesdays from 5pm to 6.30pm
 contactExplanation: "To register email, call or text (07494 679982) or visit the Baytree Centre. "
 email: youth@baytreecentre.org.uk or rosanna@baytreecentre.org.uk

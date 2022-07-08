@@ -21,12 +21,11 @@ location: "There are six DASH Lambeth sites across Lambeth: Lillian Bayliss
   (under 21s), Gracefield Gardens Health Centre (under 21s) and Park Campus
   Academy."
 area:
-  - Clapham Common
-  - Oval
-  - Gipsy Hill
-  - Streatham Wells
-  - Brixton Hill
-  - Larkhall
+  - Brixton Stockwell
+  - Clapham and Brixton Hill
+  - North Lambeth
+  - Norwood
+  - Streatham
 time: "The team generally work Mondays to Fridays, but you can leave a message
   in the evening and over weekends. "
 contactExplanation: Contact Valentina via phone or email.

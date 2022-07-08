@@ -23,7 +23,7 @@ format: Meeting a group of people
 location: The Baytree Centre, 300-302 Brixton Road, London SW9 6AE
 makeMapLink: true
 area:
-  - Ferndale
+  - Clapham and Brixton Hill
 time: "Classes Monday to Wednesday. Currently operating remotely, with two
   lessons from 11am to 12pm and from 12pm to 1pm. "
 contactExplanation: "You will need a parents/guardian or youth worker to sign
