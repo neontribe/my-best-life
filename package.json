@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@vercel/node": "2.4.0",
+    "csv-parser": "3.0.0",
     "google-spreadsheet": "3.3.0",
     "gray-matter": "4.0.3",
     "next": "12.2.0",

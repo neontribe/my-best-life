@@ -1,6 +1,7 @@
 import fs from 'fs'
 import matter from 'gray-matter'
 import path from 'path'
+import csvparser from 'csv-parser'
 
 // This interface should match the config of the CMS
 export interface Service {
@@ -11,11 +12,11 @@ export interface Service {
   image?: { image: string; imageAlt: string }
   description: string
   categories?: { category1: Category; category2: Category }
-  interests: Array<Interest>
-  feelings: Array<string>
+  interests?: Array<Interest>
+  feelings?: Array<string>
   costValue: number
   costQualifier?: string
-  costExplanation: string
+  costExplanation?: string
   age?: { minAge: number; maxAge: number }
   gender?: Array<Gender>
   eligibility?: string
@@ -31,9 +32,9 @@ export interface Service {
   phone?: string
   website?: string
   reviews?: Array<Review>
-  saved: boolean
-  score: number
-  promoted: boolean
+  saved?: boolean
+  score?: number
+  promoted?: boolean
   area?: Array<Area>
 }
 
@@ -144,8 +145,11 @@ interface idParams {
 }
 
 const contentDirectory = path.join(process.cwd(), './content/services')
+const fixtureDirectory = path.join(process.cwd(), './fixtures')
 
 export function getServices(): Array<Service> {
+  createMarkdownFromCSV(true)
+
   const fileNames = fs.readdirSync(contentDirectory)
 
   const allServices: Array<Service> = fileNames
@@ -194,4 +198,75 @@ export function getServiceData(id: string): ServiceDetail {
   return {
     ...serviceDetails,
   }
+}
+
+/*
+ * Automatically create CMS markdown entries from imported CSVs.
+ * @param {boolean} overwriteEntries - whether to overwrite content in existing md files
+ */
+export function createMarkdownFromCSV(overwriteEntries: boolean = false) {
+  // Data delivered in 15 CSVs, majority of data comes from Provider main.csv
+  const mainFile = path.join(fixtureDirectory, `Provider main.csv`)
+
+  const results: any = []
+
+  fs.createReadStream(mainFile)
+    .pipe(
+      csvparser({
+        // map over headers returned, normalise and replace first header with id
+        mapHeaders: ({ header, index }) => {
+          if (index === 0) {
+            return 'id'
+          }
+          return header.trim().replace(/\s+/g, '_').toLowerCase()
+        },
+      })
+    )
+    .on('data', (data) => results.push(data))
+    .on('end', () => {
+      // Let's try with a subset for now
+      const serviceToMake = results.slice(0, 25)
+
+      serviceToMake.map((data: any) => {
+        const filename =
+          data.name.toLowerCase().replace(/\s+/g, '-') +
+          '-summer-of-food-and-fun'
+        const fullPath = path.join(contentDirectory, `${filename}.md`)
+
+        // Skip over files that already exist
+        if (fs.existsSync(fullPath) && !overwriteEntries) {
+          return
+        }
+
+        const md = `---
+organisation: ${data.name}
+title: Summer of Food & Fun
+shortDescription: ${data.name}
+image:
+  image: img/fid_placeholder.png
+  imageAlt: Gradient image
+description: "${data.service_description}"
+costValue: 0
+email: ${data.e_mail}
+website: ${data.websitecorrected}
+---
+
+`
+
+        const overwrite = overwriteEntries ? 'w' : ''
+
+        fs.writeFile(
+          fullPath,
+          md,
+          {
+            flag: overwrite,
+          },
+          (err) => {
+            if (err) {
+              console.error(err)
+            }
+          }
+        )
+      })
+    })
 }
