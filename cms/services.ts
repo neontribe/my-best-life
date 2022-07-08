@@ -60,12 +60,8 @@ type Formats =
 export type Gender =
   | 'male'
   | 'female'
-  | 'non-binary'
+  | 'non-binary / non-conforming'
   | 'transgender'
-  | 'intersex'
-  | 'gender non-conforming'
-  | 'genderqueer'
-  | 'agender'
 
 export type Interest =
   | 'Sports'

@@ -237,14 +237,13 @@ const config = {
           required: false,
           hint: 'Specify if a service will only allow certain genders. Leave blank if unknown',
           options: [
-            { label: 'men', value: 'men' },
-            { label: 'women', value: 'women' },
-            { label: 'non-binary', value: 'non-binary' },
+            { label: 'male', value: 'male' },
+            { label: 'female', value: 'female' },
+            {
+              label: 'non-binary / non-conforming',
+              value: 'non-binary / non-conforming',
+            },
             { label: 'transgender', value: 'transgender' },
-            { label: 'intersex', value: 'intersex' },
-            { label: 'gender non-conforming', value: 'gender non-conforming' },
-            { label: 'genderqueer', value: 'genderqueer' },
-            { label: 'agender', value: 'agender' },
           ],
         },
         {

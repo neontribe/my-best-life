@@ -16,12 +16,8 @@ categories:
   category2: Mental Health
 costValue: 0
 gender:
-  - non-binary
+  - non-binary / non-conforming
   - transgender
-  - intersex
-  - gender non-conforming
-  - genderqueer
-  - agender
 format: Online
 time: Timings change regularly, but the most up-to-date timings can be found on
   the MindOut homepage

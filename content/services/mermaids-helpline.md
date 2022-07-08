@@ -17,7 +17,7 @@ age:
   maxAge: 25
 gender:
   - transgender
-  - non-binary
+  - non-binary / non-conforming
 format: Over the phone
 time: "Open Monday to Friday, 9am to 9pm. Voicemails and emails will be
   responded to as soon as possible during opening hours. "
