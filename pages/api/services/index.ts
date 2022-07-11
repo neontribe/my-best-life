@@ -3,7 +3,7 @@ import getUuid from 'uuid-by-string'
 
 import { getServices } from '../../../cms/services'
 
-const getParam = (arg: string | string[], fallback: number) => {
+const getParam = (arg: string | string[] | undefined, fallback: number) => {
   return parseInt(
     (Array.isArray(arg) ? arg.pop() : arg) || fallback.toString(),
     10

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Link from 'next/link'
 
 export const StyledMenu = styled.nav<{ open: boolean }>`
   display: flex;
@@ -40,10 +41,10 @@ interface MenuProps {
 export const Menu = ({ open }: MenuProps): JSX.Element => {
   return (
     <StyledMenu open={open} aria-expanded={open}>
-      <a href="/about">About</a>
-      <a href="/helplines">Urgent Help</a>
-      <a href="/privacy-policy">Privacy Policy</a>
-      <a href="/cookies">Cookies</a>
+      <Link href="/about">About</Link>
+      <Link href="/helplines">Urgent Help</Link>
+      <Link href="/privacy-policy">Privacy Policy</Link>
+      <Link href="/cookies">Cookies</Link>
     </StyledMenu>
   )
 }
