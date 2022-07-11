@@ -3,6 +3,7 @@ organisation: Test Organisation
 title: Test Service
 shortDescription: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   Quisque et ipsum ac sem aliquam accumsan.
+promoted: true
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et
   ipsum ac sem aliquam accumsan. Suspendisse venenatis diam et magna auctor, nec
   convallis orci laoreet. Vivamus a sapien lacinia, egestas nunc at, tincidunt
