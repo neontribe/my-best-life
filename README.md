@@ -3,7 +3,10 @@
 ## Links
 
 - Staging: [https://my-best-life.vercel.app/](https://my-best-life.vercel.app/)
+
 - CMS: [https://my-best-life.vercel.app/admin](https://my-best-life.vercel.app/admin)
+
+- Live: [https://mybestlife.app/](https://mybestlife.app/)
 
 ## Development
 
@@ -22,8 +25,17 @@ This project was created with [`create-next-app`](https://github.com/vercel/next
 - Run `yarn dev`
 - Browse to [http://localhost:3000](http://localhost:3000)
 
+### Working with CMS Data Locally
+
+The site content is managed by Netlify CMS. The admin UI provided by Netlify stores content inside this git repository by creating branches and merging them into into staging. This happens whether the admin UI is being used locally or on the staging site. To use the CMS locally without affecting the staging site:
+
+- Add `local_backend: true` as a top level property to [config.js](./cms/config.js)
+- In a separate terminal run `npx netlify-cms-proxy-server`
+
+For more information, check out Netlify's docs on [working with a local git repository](https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository).
+
 ## 📃 License
 
 This program is distributed under the GNU GPLv3 licence, see the [LICENSE](/LICENSE) file for details.
 
-Copyright (c) 2021 New Philanthropy Capital
+Copyright (c) 2022 New Philanthropy Capital
