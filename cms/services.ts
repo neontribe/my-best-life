@@ -206,7 +206,7 @@ export function getServiceData(id: string): ServiceDetail {
  */
 export function createMarkdownFromCSV(overwriteEntries: boolean = false) {
   // Data delivered in 15 CSVs, majority of data comes from Provider main.csv
-  const mainFile = path.join(fixtureDirectory, `Provider main.csv`)
+  const mainFile = path.join(fixtureDirectory, `MBL main details.csv`)
 
   const results: any = []
 
@@ -229,8 +229,12 @@ export function createMarkdownFromCSV(overwriteEntries: boolean = false) {
 
       serviceToMake.map((data: any) => {
         const filename =
-          data.name.toLowerCase().replace(/\s+/g, '-') +
-          '-summer-of-food-and-fun'
+          data.fis_registration_name
+            .toLowerCase()
+            // remove whitespace
+            .replace(/\s+/g, '-')
+            // replace some special characters
+            .replace(/\/|\(|\)|&/g, '') + '-summer-of-food-and-fun'
         const fullPath = path.join(contentDirectory, `${filename}.md`)
 
         // Skip over files that already exist
@@ -239,16 +243,19 @@ export function createMarkdownFromCSV(overwriteEntries: boolean = false) {
         }
 
         const md = `---
-organisation: ${data.name}
-title: Summer of Food & Fun
-shortDescription: ${data.name}
+organisation: ${data.fis_registration_name}
+title: ${data.provider_name}
+shortDescription: ${data.provider_name} + description
 image:
   image: img/fid_placeholder.png
-  imageAlt: Gradient image
+  imageAlt: ""
 description: "${data.service_description}"
 costValue: 0
 email: ${data.e_mail}
-website: ${data.websitecorrected}
+phone: ${data.telephone || data.mobile}
+website: ${data.web_site}
+location: ${data.full_address}
+makeMapLink: ${Boolean(data.full_address)}
 ---
 
 `
