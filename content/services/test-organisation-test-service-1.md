@@ -12,6 +12,9 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et
   Aenean egestas elit eros. Suspendisse quis ipsum ac quam sagittis pellentesque
   eget vitae odio.
 costValue: 0
+age:
+  minAge: 10
+  maxAge: 12
 format: Online
 reviews: []
 ---
