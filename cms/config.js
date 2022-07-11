@@ -1,4 +1,4 @@
-export default {
+const config = {
   cms_manual_init: true,
   backend: {
     name: 'github',
@@ -456,3 +456,5 @@ export default {
     },
   ],
 }
+
+export default config

@@ -2,7 +2,7 @@ import { NowRequest, NowResponse } from '@vercel/node'
 
 import { create, renderBody } from './_lib/oauth2'
 
-export default async (req: NowRequest, res: NowResponse): Promise<void> => {
+const callback = async (req: NowRequest, res: NowResponse): Promise<void> => {
   const code = req.query.code as string
   const { host } = req.headers
 
@@ -25,3 +25,5 @@ export default async (req: NowRequest, res: NowResponse): Promise<void> => {
     res.status(200).send(renderBody('error', e))
   }
 }
+
+export default callback
