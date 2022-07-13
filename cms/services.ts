@@ -13,8 +13,8 @@ export interface Service {
   image?: { image: string; imageAlt: string }
   description: string
   categories?: { category1: Category; category2: Category }
-  interests?: Array<Interest>
-  feelings?: Array<string>
+  interests: Array<Interest>
+  feelings: Array<string>
   costValue: number
   costQualifier?: string
   costExplanation?: string
@@ -32,9 +32,9 @@ export interface Service {
   phone?: string
   website?: string
   reviews?: Array<Review>
-  saved?: boolean
-  score?: number
-  promoted?: boolean
+  saved: boolean
+  score: number
+  promoted: boolean
   area?: Array<Area>
 }
 
@@ -237,9 +237,9 @@ function createMarkdownFromCSV(overwriteEntries: boolean = false) {
         const filename =
           service.fis_registration_name
             .toLowerCase()
-            // replace some special characters
-            .replace(/\/|\(|\)|&|\.|-/g, '')
-            // remove whitespace
+            // replace special characters
+            .replace(/[^a-zA-Z0-9\s]/g, '')
+            // replace whitespace with -
             .replace(/\s+/g, '-') +
           '-' +
           service.id
@@ -259,6 +259,8 @@ image:
   image: img/fid_placeholder.png
   imageAlt: ""
 costValue: 0
+interests:
+feelings:
 description: "${service.service_description}"
 format: ${service.delivery_channel_description}
 expectation: "${service.note}"
