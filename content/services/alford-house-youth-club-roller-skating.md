@@ -1,10 +1,10 @@
 ---
 organisation: Alford House Youth Club
-title: Roller Skating
-shortDescription: Learn how to roller skate
+title: Youth Club - Dance class
+shortDescription: Learn to dance
 image:
-  image: img/roller1.jpeg
-  imageAlt: lady roller skating
+  image: img/danielle-cerullo-3ckwunacxzc-unsplash.jpg
+  imageAlt: "Dance class "
 description: Alford House is open to all young people aged 8-21 and offers a
   variety of sports, games, creative and recreational activities in a safe and
   secure environment that is managed by a team of staff and volunteers.
