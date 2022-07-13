@@ -6,6 +6,7 @@ import csvparser from 'csv-parser'
 // This interface should match the config of the CMS
 export interface Service {
   id: string
+  fidId?: string
   organisation: string
   title: string
   shortDescription: string
@@ -23,7 +24,6 @@ export interface Service {
   format: Formats
   time?: string
   expectation?: string
-  access?: string
   location?: string
   makeMapLink?: boolean
   contactExplanation?: string
@@ -148,7 +148,8 @@ const contentDirectory = path.join(process.cwd(), './content/services')
 const fixtureDirectory = path.join(process.cwd(), './fixtures')
 
 export function getServices(): Array<Service> {
-  createMarkdownFromCSV(true)
+  // This will be re-enabled when the source files are received from emails
+  //createMarkdownFromCSV(true)
 
   const fileNames = fs.readdirSync(contentDirectory)
 
@@ -200,16 +201,19 @@ export function getServiceData(id: string): ServiceDetail {
   }
 }
 
+// We know we are not using this function until we have email data
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 /*
  * Automatically create CMS markdown entries from imported CSVs.
  * @param {boolean} overwriteEntries - whether to overwrite content in existing md files
  */
-export function createMarkdownFromCSV(overwriteEntries: boolean = false) {
-  // Data delivered in 15 CSVs, majority of data comes from Provider main.csv
+function createMarkdownFromCSV(overwriteEntries: boolean = false) {
+  // Data delivered in several CSVs, majority of data comes from MBL main details.csv
   const mainFile = path.join(fixtureDirectory, `MBL main details.csv`)
 
+  // Main data
   const results: any = []
-
   fs.createReadStream(mainFile)
     .pipe(
       csvparser({
@@ -224,17 +228,21 @@ export function createMarkdownFromCSV(overwriteEntries: boolean = false) {
     )
     .on('data', (data) => results.push(data))
     .on('end', () => {
-      // Let's try with a subset for now
-      const serviceToMake = results.slice(0, 25)
+      results.map((service: any) => {
+        // The last CSV row can be empty, bail out if we can't retrieve data
+        if (service.fis_registration_name === undefined) {
+          return
+        }
 
-      serviceToMake.map((data: any) => {
         const filename =
-          data.fis_registration_name
+          service.fis_registration_name
             .toLowerCase()
-            // remove whitespace
-            .replace(/\s+/g, '-')
             // replace some special characters
-            .replace(/\/|\(|\)|&/g, '') + '-summer-of-food-and-fun'
+            .replace(/\/|\(|\)|&|\.|-/g, '')
+            // remove whitespace
+            .replace(/\s+/g, '-') +
+          '-' +
+          service.id
         const fullPath = path.join(contentDirectory, `${filename}.md`)
 
         // Skip over files that already exist
@@ -243,19 +251,22 @@ export function createMarkdownFromCSV(overwriteEntries: boolean = false) {
         }
 
         const md = `---
-organisation: ${data.fis_registration_name}
-title: ${data.provider_name}
-shortDescription: ${data.provider_name} + description
+organisation: ${service.fis_registration_name}
+fidId: ${service.id}
+title: ${service.provider_name}
+shortDescription: ${service.provider_name} + description
 image:
   image: img/fid_placeholder.png
   imageAlt: ""
-description: "${data.service_description}"
 costValue: 0
-email: ${data.e_mail}
-phone: ${data.telephone || data.mobile}
-website: ${data.web_site}
-location: ${data.full_address}
-makeMapLink: ${Boolean(data.full_address)}
+description: "${service.service_description}"
+format: ${service.delivery_channel_description}
+expectation: "${service.note}"
+email: ${service.e_mail}
+phone: ${service.telephone || service.mobile}
+website: ${service.web_site}
+location: ${service.full_address}
+makeMapLink: ${Boolean(service.full_address)}
 ---
 
 `
