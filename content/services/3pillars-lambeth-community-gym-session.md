@@ -2,6 +2,9 @@
 organisation: 3Pillars
 title: Lambeth Community Gym Session
 shortDescription: Free gym sessions
+image:
+  image: img/3pillars-gym-sessions.webp
+  imageAlt: A close up of someone's back watching people box
 description: Free gym sessions with people of all ages from your community to
   help you to meet your fitness goals.
 categories:
