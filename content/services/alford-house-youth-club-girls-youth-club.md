@@ -1,13 +1,14 @@
 ---
 organisation: Alford House Youth Club
 title: Girls Youth Club
-shortDescription: Girls only youth club on Wednesday evenings
+shortDescription: Youth club for girls
 image:
   image: img/alfredhouse.jpeg
   imageAlt: Young people lined up for rafting
-description: Alford House is open to all young people aged 8-21 and offers a
-  variety of sports, games, creative and recreational activities in a safe and
-  secure environment that is managed by a team of staff and volunteers.
+description: "A youth club for girls. Alford House is open to all young people
+  aged 8-21 and offers a variety of sports, games, creative and recreational
+  activities in a safe and secure environment that is managed by a team of staff
+  and volunteers. "
 categories:
   category1: School and College
   category2: Friends
@@ -22,8 +23,6 @@ feelings:
   - excited
   - ignored
   - unsure
-  - scared
-  - unsafe
   - angry
   - confused
   - hopeful
@@ -34,7 +33,7 @@ age:
   minAge: 8
   maxAge: 17
 gender:
-  - female
+  - women
 format: Meeting a group of people
 location: Alford House, Aveline Street, Kennington, London, SE11 5DQ
 makeMapLink: true
