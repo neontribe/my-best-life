@@ -7,7 +7,8 @@
     "start": "next start",
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write .",
-    "lint": "eslint . --cache --ext ts --ext tsx --ext js"
+    "lint": "eslint . --cache --ext ts --ext tsx --ext js",
+    "test": "jest --watch"
   },
   "husky": {
     "hooks": {
@@ -41,6 +42,8 @@
   "devDependencies": {
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
+    "@testing-library/jest-dom": "5.16.4",
+    "@testing-library/react": "13.3.0",
     "@types/google-spreadsheet": "3.2.3",
     "@types/node": "16.11.43",
     "@types/react": "18.0.15",
@@ -55,6 +58,8 @@
     "eslint-config-next": "12.2.0",
     "eslint-config-prettier": "8.5.0",
     "husky": "4.3.8",
+    "jest": "28.1.2",
+    "jest-environment-jsdom": "28.1.2",
     "lint-staged": "13.0.3",
     "netlify-cms-app": "2.15.72",
     "prettier": "2.7.1",
