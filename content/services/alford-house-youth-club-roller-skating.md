@@ -29,10 +29,10 @@ location: Alford House, Aveline Street, Kennington, London, SE11 5DQ
 makeMapLink: true
 area:
   - Prince's
-time: Tuesdays 6.30pm - 8pm.
+time: Mondays 7:30pm - 8:30pm during term time.
 expectation: Subscription payable on any night you attend the club
 contactExplanation: Just drop in or alternatively visit the website for more info.
 email: theclub@alfordhouse.org.uk
 phone: 020 7735 1519
-website: https://alfordhouse.org.uk/youth-club/whats-on/
+website: https://alfordhouse.org.uk/youth-club/whats-on/term-time/
 ---
