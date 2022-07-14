@@ -1,6 +1,6 @@
 ---
 organisation: 3Pillars
-title: Lambeth Community Gym Session
+title: Lambeth Community Gym Sessions
 shortDescription: Free gym sessions
 image:
   image: img/3pillars-gym-sessions.webp
