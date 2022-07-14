@@ -195,3 +195,9 @@ export function getServiceData(id: string): ServiceDetail {
     ...serviceDetails,
   }
 }
+
+export function test() {
+  const x = ['one', 'two']
+
+  return x
+}
