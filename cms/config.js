@@ -3,7 +3,7 @@ const config = {
   backend: {
     name: 'github',
     repo: 'neontribe/my-best-life',
-    branch: 'main',
+    branch: 'development',
     base_url: 'https://my-best-life.vercel.app',
     auth_endpoint: 'api/auth',
   },
