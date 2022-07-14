@@ -5,11 +5,11 @@ shortDescription: Creative youth club (boys and girls sessions)
 image:
   image: img/elays.jpeg
   imageAlt: A group of young people stood at the side of the road
-description: A girls only creative youth club that encourages you to try
-  something new and increase your confidence. The group sessions include
-  activities such as podcasting, discussions, and youth debates that focuses in
-  youth issues; such as peer pressure, exams stresses, knife crime and further
-  education and employment.
+description: A creative youth club that encourages you to try something new and
+  increase your confidence. The group sessions include activities such as
+  podcasting, discussions, and youth debates that focuses in youth issues; such
+  as peer pressure, exams stresses, knife crime and further education and
+  employment. The sessions are run as girls only and boys only sessions.
 categories:
   category1: Friends
   category2: Job Stuff
