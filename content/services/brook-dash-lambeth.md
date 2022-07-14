@@ -28,9 +28,9 @@ area:
   - Streatham
 time: "The team generally work Mondays to Fridays, but you can leave a message
   in the evening and over weekends. "
-contactExplanation: Contact Valentina via phone or email.
+contactExplanation: Contact Emily or Georgia via phone or email.
 email: Lambeth@Brook.org
-phone: 07917 460749
+phone: Emily on 07917460395 or Georgia on 07787272209
 website: https://www.brook.org.uk/services/dash-lambeth/#gethelpfromDASH
 reviews:
   - comment: I am so grateful to have someone to call and get advice from no matter
