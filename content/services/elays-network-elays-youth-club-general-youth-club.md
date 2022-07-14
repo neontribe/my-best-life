@@ -4,7 +4,7 @@ title: "Elays Youth Club: General Youth Club"
 shortDescription: Girls only creative youth club
 image:
   image: img/pexels-rodnae-productions-4911252.jpg
-  imageAlt: A group of women taking a selfie
+  imageAlt: A group of women wearing head scarves, taking a selfie
 description: A girls only creative youth club that encourages you to try
   something new and increase your confidence. The group sessions include
   activities such as podcasting, discussions, and youth debates that focuses in
