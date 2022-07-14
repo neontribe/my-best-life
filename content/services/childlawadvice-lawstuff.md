@@ -10,14 +10,18 @@ description: "Free online legal information for young people. Topics range from
 categories:
   category1: My Rights and the Law
   category2: Keeping Safe
+feelings:
+  - anxious
+  - unsafe
+  - ignored
 costValue: 0
 age:
   minAge: 10
   maxAge: 25
 format: Online
 time: Online content available 24/7, but office open Monday to Friday, 8am-6pm.
-contactExplanation: Browse the content on the website and, if you need further help, fill in
-  their form.
+contactExplanation: Browse the content on the website and, if you need further
+  help, fill in their form.
 form: https://lawstuff.org.uk/contact-us/
 website: https://lawstuff.org.uk/
 ---
