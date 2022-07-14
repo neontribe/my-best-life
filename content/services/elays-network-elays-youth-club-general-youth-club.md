@@ -1,10 +1,10 @@
 ---
 organisation: Elays Network
 title: Elays Corner
-shortDescription: Girls only creative youth club
+shortDescription: Creative youth club (boys and girls sessions)
 image:
-  image: img/pexels-rodnae-productions-4911252.jpg
-  imageAlt: A group of women wearing head scarves, taking a selfie
+  image: img/elays.jpeg
+  imageAlt: A group of young people stood at the side of the road
 description: A girls only creative youth club that encourages you to try
   something new and increase your confidence. The group sessions include
   activities such as podcasting, discussions, and youth debates that focuses in
@@ -24,14 +24,13 @@ costQualifier: ""
 age:
   minAge: 15
   maxAge: 19
-gender:
-  - women
+gender: null
 format: Meeting a group of people
 location: 68 St Rule Street, Battersea, London SW8 3ED
 makeMapLink: true
 area:
   - Clapham Common
-time: Fridays 5pm - 8pm
+time: Thursday 5pm - 8pm (boys only) and Fridays 5pm - 8pm (Girls only)
 contactExplanation: "To sign up fill out the online form. To find out more, get
   in touch via email or phone. "
 email: info@elaysnetwork.com
