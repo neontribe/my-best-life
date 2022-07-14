@@ -1,6 +1,6 @@
 ---
 organisation: Elays Network
-title: "Elays Youth Club: General Youth Club"
+title: Elays Corner
 shortDescription: Girls only creative youth club
 image:
   image: img/pexels-rodnae-productions-4911252.jpg
