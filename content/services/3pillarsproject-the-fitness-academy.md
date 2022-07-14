@@ -22,7 +22,7 @@ age:
   minAge: 15
   maxAge: 25
 gender:
-  - men
+  - male
 eligibility: This is designed for male ex-offenders only.
 format: One to one chats
 location: 3Pillars Project, Black Prince Trust, 5 Beaufoy Walk, London, SE11 6AA

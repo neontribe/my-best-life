@@ -27,7 +27,7 @@ age:
   minAge: 15
   maxAge: 25
 gender:
-  - men
+  - male
 eligibility: "For Male ex-offenders only and you have to have completed the
   3Pillars Project's Fitness Academy or Rugby Academy. "
 format: One to one chats
