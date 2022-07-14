@@ -23,7 +23,7 @@ import { getServices } from '../cms/services'
   format: Formats
 */
 
-const services = getServices()
+const services = getServices();
 
 it('Card component test', () => {
   services.map((service) => {
