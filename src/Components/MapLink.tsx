@@ -52,7 +52,7 @@ export const MapLink = ({ location }: MapLinkProps): JSX.Element => {
     <InvisibleLink href={formMapLink(location)} target="_blank" rel="noopener">
       <MapLinkContainer>
         <MapPin />
-        <div>view on Google Maps</div>
+        <div>view on Google Maps - {location}</div>
       </MapLinkContainer>
     </InvisibleLink>
   )
