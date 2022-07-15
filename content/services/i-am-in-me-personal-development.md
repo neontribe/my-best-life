@@ -14,7 +14,7 @@ categories:
 costValue: 0
 age:
   minAge: 14
-  maxAge: 22
+  maxAge: 25
 format: One to one chats
 location: I AM IN ME CIC, Impact Brixton, 17A Electric Lane, London, SW9 8LA
 time: "Monday to Friday: 9am – 5pm"
