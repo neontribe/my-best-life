@@ -71,12 +71,8 @@ const CheckboxGroup = styled.ul``
 const categories: Array<Gender> = [
   'male',
   'female',
-  'non-binary',
+  'non-binary / non-conforming',
   'transgender',
-  'intersex',
-  'gender non-conforming',
-  'genderqueer',
-  'agender',
 ]
 
 export const GenderPage = (): JSX.Element => {

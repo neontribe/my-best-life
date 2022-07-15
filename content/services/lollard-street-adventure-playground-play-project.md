@@ -29,17 +29,17 @@ format: Meeting a group of people
 location: 102 Lollard Street, Kennington, London SE11 6PX
 makeMapLink: true
 area:
-  - Prince's
+  - North Lambeth
 time: After school and in all school holidays
 contactExplanation: >-
   For all enquiries get in touch via phone or email. You must be registered
   before you attend. This can be done online, or you will be given a form to
-  take home when you first arrive. 
+  take home when you first arrive.
 
 
-  This must be filled out by a parent/carer and returned to the playground on the next day you attend. An open-access policy means you can come and go on your own unless an arrangement has been made with your carer. 
+  This must be filled out by a parent/carer and returned to the playground on the next day you attend. An open-access policy means you can come and go on your own unless an arrangement has been made with your carer.
 email: "info@lollardstplay.org.uk "
 phone: 0207 793 9592
 website: https://www.lollardstplay.org.uk/what-happens-here/
- 
+
 ---

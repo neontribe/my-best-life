@@ -26,7 +26,7 @@ location: |-
   SW9 8PB
 makeMapLink: true
 area:
-  - Ferndale
+  - Clapham and Brixton Hill
 time: Saturdays 10am to 12pm (except summer holiday period)
 reviews: [{comment: "Coming to St. Matthew’s has really helped me as a person because
   playing here is like a dream. In Madrid, I used to play football, but on the

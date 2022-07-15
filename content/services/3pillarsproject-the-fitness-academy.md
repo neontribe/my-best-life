@@ -22,13 +22,13 @@ age:
   minAge: 15
   maxAge: 25
 gender:
-  - men
+  - male
 eligibility: This is designed for male ex-offenders only.
 format: One to one chats
 location: 3Pillars Project, Black Prince Trust, 5 Beaufoy Walk, London, SE11 6AA
 makeMapLink: true
 area:
-  - Prince's
+  - North Lambeth
 time: "The programme starts in January each year. Sessions run each day from
   Monday - Friday. "
 expectation: "To apply, you will need to write an expression of interest, attend

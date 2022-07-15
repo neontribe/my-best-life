@@ -23,8 +23,7 @@ location: "YellowQube, 63 Christchurch Road, SW2 3DH (Mondays). Business
   Launchpad, International House, Canterbury Cres, Brixton, London SW9 7QD
   (Tuesdays and Wednesdays). "
 area:
-  - Tulse Hill
-  - Coldharbour
+  - Brixton Tulse Hill
 time: "Mondays, 4pm - 5pm (8-12 years) and 5pm - 7pm (13-19 years). Tuesdays and
   Wednesdays, 5pm - 7pm (13-19 years). "
 contactExplanation: "For all enquiries, email info@grooveschool.org, telephone

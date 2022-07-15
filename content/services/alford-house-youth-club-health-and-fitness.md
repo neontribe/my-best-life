@@ -6,10 +6,10 @@ image:
   image: img/sunset-570881__340.webp
   imageAlt: Two people jumping with a sunset behind
 description: >-
-  Drop in to see staff and discuss your health and fitness. 
+  Drop in to see staff and discuss your health and fitness.
 
 
-  Alford House also offers a variety of sports, games, creative and recreational activities, such as art and music production. 
+  Alford House also offers a variety of sports, games, creative and recreational activities, such as art and music production.
 categories:
   category1: Physical Health
   category2: Mental Health
@@ -30,7 +30,7 @@ format: One to one chats
 location: Alford House, Aveline Street, Kennington, London, SE11 5DQ
 makeMapLink: true
 area:
-  - Prince's
+  - North Lambeth
 time: "Mondays 4pm - 7pm, Tuesdays 2pm - 6pm and Thursdays 2pm - 6pm during term
   time. Any holiday activities will be "
 expectation: Subscription payable on any night you attend the club

@@ -27,14 +27,14 @@ age:
   minAge: 15
   maxAge: 25
 gender:
-  - men
+  - male
 eligibility: "For Male ex-offenders only and you have to have completed the
   3Pillars Project's Fitness Academy or Rugby Academy. "
 format: One to one chats
 location: 3Pillars Project, Black Prince Trust, 5 Beaufoy Walk, London, SE11 6AA
 makeMapLink: true
 area:
-  - Prince's
+  - North Lambeth
 contactExplanation: You can be referred onto a programme by someone acting on
   your behalf. They must fill in the online referral form with your details.
 email: info@3pillarsproject.com

@@ -19,7 +19,7 @@ age:
   minAge: 14
   maxAge: 25
 gender:
-  - women
+  - female
 eligibility: "For young women living in London. "
 format: One to one chats
 time: "The course is eight to ten weeks long. "

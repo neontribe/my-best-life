@@ -21,7 +21,7 @@ format: Meeting a group of people
 location: Young Vic, 66 The Cut, Waterloo, London SE1 8LZ
 makeMapLink: true
 area:
-  - Bishop's
+  - North Lambeth
 time: "Throughout the year. "
 contactExplanation: "Email Lorna McGinty or pop in to the Young Vic’s box office
   and pick up a red sign-up form. "

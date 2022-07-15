@@ -16,7 +16,7 @@ format: Meeting a group of people
 location: Yellow Cube CIC, 63 Christchurch Road, SW2 3DH
 makeMapLink: true
 area:
-  - Tulse Hill
+  - Brixton Tulse Hill
 time: Thursdays 4-7 pm during term time
 email: info@yellowqube.org
 phone: 020 8671 3822

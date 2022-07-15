@@ -21,7 +21,7 @@ format: One to one chats
 location: 127 Lambeth Walk, London, SE11 6EE
 makeMapLink: true
 area:
-  - Prince's
+  - North Lambeth
 contactExplanation: "You will need a referral from an adult. "
 email: info@youngfutures.org.uk
 website: https://www.youngfutures.org.uk/what-we-do

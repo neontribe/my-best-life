@@ -25,7 +25,7 @@ format: Meeting a group of people
 location: St Martin’s Learning Centre, 220 Upper Tulse Hill, London SW2 2NS
 makeMapLink: true
 area:
-  - Tulse Hill
+  - Brixton Tulse Hill
 time: Every Monday to Thursday from 3:30pm - 7:00pm and Saturdays from 12:30pm -
   3:30pm
 reviews: [{comment: "When I first came to the Adventure Playground, I didn’t chat to the
@@ -40,5 +40,5 @@ email: youth@high-trees.org or graham.weston@high-trees.org
 form: https://www.high-trees.org/activities-for-young-people/#calendar
 phone: 020 8674 3975
 website: https://www.high-trees.org/activity/youth/
- 
+
 ---
