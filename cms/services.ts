@@ -2,6 +2,8 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import path from 'path'
 import csvparser from 'csv-parser'
+import { format, parse } from 'date-fns'
+import en_GB from 'date-fns/locale/en-GB'
 
 // This interface should match the config of the CMS
 export interface Service {
@@ -23,6 +25,7 @@ export interface Service {
   eligibility?: string
   format: Formats
   time?: string
+  timeList?: TimeList
   expectation?: string
   location?: string
   makeMapLink?: boolean
@@ -102,6 +105,7 @@ export type ServiceDetail = Pick<
   | 'location'
   | 'makeMapLink'
   | 'time'
+  | 'timeList'
   | 'expectation'
   | 'contactExplanation'
   | 'email'
@@ -119,10 +123,36 @@ export interface Review {
   author?: number
 }
 
+export interface TimeList {
+  startDate?: string
+  endDate?: string
+  days?: Array<FidTimeEntry>
+}
+
 interface idParams {
   params: {
     id: string
   }
+}
+
+interface FidAgeEntry {
+  id: string
+  fis_provider_name: string
+  age_group_description: string
+}
+
+interface FidTimeEntry {
+  id: string
+  fis_provider_name: string
+  day: string
+  start_time: string
+  end_time: string
+}
+
+interface FidGenderEntry {
+  id: string
+  provider_name: string
+  eligibility_criteria_description: string
 }
 
 const contentDirectory = path.join(process.cwd(), './content/services')
@@ -189,9 +219,19 @@ export function getServiceData(id: string): ServiceDetail {
  * Automatically create CMS markdown entries from imported CSVs.
  * @param {boolean} overwriteEntries - whether to overwrite content in existing md files
  */
-function createMarkdownFromCSV(overwriteEntries: boolean = false) {
+async function createMarkdownFromCSV(overwriteEntries: boolean = false) {
   // Data delivered in several CSVs, majority of data comes from MBL main details.csv
   const mainFile = path.join(fixtureDirectory, `MBL main details.csv`)
+  const ageFile = path.join(
+    fixtureDirectory,
+    `MBL minimum and maximum age range.csv`
+  )
+  const timeFile = path.join(fixtureDirectory, `MBL Time info.csv`)
+  const genderFile = path.join(fixtureDirectory, `MBL Gender.csv`)
+
+  const fidAgeData = await fileToArray<FidAgeEntry>(ageFile)
+  const fidTimeData = await fileToArray<FidTimeEntry>(timeFile)
+  const fidGenderData = await fileToArray<FidGenderEntry>(genderFile)
 
   // Main data
   const results: any = []
@@ -231,6 +271,90 @@ function createMarkdownFromCSV(overwriteEntries: boolean = false) {
           return
         }
 
+        // Add cost info from the main sheet
+        let costValue: string | number = ''
+        let costQualifier = ''
+        if (service.is_free === 'True') {
+          costValue = 0
+        } else if (service.per_hour === 'True') {
+          costValue = service.total_cost__hour
+          costQualifier = `£${costValue} per hour`
+        } else if (service.per_day === 'True') {
+          costValue = service.total_cost__day
+          costQualifier = `£${costValue} per day`
+        } else if (service.per_session === 'True') {
+          costValue = service.total_cost__session
+          costQualifier = `£${costValue} per session`
+        } else if (service.per_week === 'True') {
+          costValue = service.total_cost__week
+          costQualifier = `£${costValue} per week`
+        }
+
+        // Add date info from the main sheet
+        const start = parse(
+          service.availability_start_date.split(' ')[0],
+          'MM/dd/yyyy',
+          new Date(),
+          {
+            locale: en_GB,
+          }
+        )
+        const startFormatted = format(start, 'dd/MM/yyyy', {
+          locale: en_GB,
+        })
+
+        const end = parse(
+          service.availability_end_date.split(' ')[0],
+          'MM/dd/yyyy',
+          new Date(),
+          {
+            locale: en_GB,
+          }
+        )
+        const endFormatted = format(end, 'dd/MM/yyyy', {
+          locale: en_GB,
+        })
+
+        // Add opening hours from the separate CSV
+        let daysOpen: Array<FidTimeEntry> = []
+
+        if (fidTimeData !== undefined && fidTimeData.length) {
+          daysOpen = fidTimeData.filter((item) => {
+            return item.id === service.id
+          })
+        }
+
+        // Add age range info from the separate CSV
+        let age: Array<string>
+        let min: string = ''
+        let max: string = ''
+
+        if (fidAgeData !== undefined && fidAgeData.length) {
+          // The result of Array.find is possibly undefined
+          const maybeAgeData: FidAgeEntry | undefined = fidAgeData.find(
+            (item: FidAgeEntry) => item.id === service.id
+          )
+
+          if (maybeAgeData !== undefined) {
+            age = maybeAgeData.age_group_description.split('-')
+            min = age[0]
+            max = age[1]
+          }
+        }
+
+        // Add gender info from the separate CSV
+        let genderEntries: Array<FidGenderEntry> = []
+
+        if (fidGenderData !== undefined && fidGenderData.length) {
+          genderEntries = fidGenderData.filter((item) => {
+            return item.id === service.id
+          })
+        }
+
+        const genders = genderEntries.map((entry) =>
+          entry.eligibility_criteria_description.toLowerCase()
+        )
+
         const md = `---
 organisation: ${service.fis_registration_name}
 fidId: ${service.id}
@@ -239,10 +363,11 @@ shortDescription: ${service.provider_name} + description
 image:
   image: img/fid_placeholder.png
   imageAlt: ""
-costValue: 0
 interests:
 feelings:
 description: "${service.service_description}"
+costValue: ${costValue}
+costQualifier: ${costQualifier}
 format: ${service.delivery_channel_description}
 expectation: "${service.note}"
 email: ${service.e_mail}
@@ -250,6 +375,13 @@ phone: ${service.telephone || service.mobile}
 website: ${service.web_site}
 location: ${service.full_address}
 makeMapLink: ${Boolean(service.full_address)}
+age:
+  minAge: ${min}
+  maxAge: ${max}
+timeList: {startDate: ${startFormatted}, endDate: ${endFormatted}, days: ${JSON.stringify(
+          daysOpen
+        )} }
+gender: ${JSON.stringify(genders)}
 ---
 
 `
@@ -270,4 +402,33 @@ makeMapLink: ${Boolean(service.full_address)}
         )
       })
     })
+}
+
+/*
+ * Generic helper function to create arrays from CSV files
+ * @param {string} file - the file path to the CSV
+ * @param Type - the expect type of the resolved value
+ */
+function fileToArray<Type>(file: string): Promise<Array<Type>> {
+  const dataArray: Array<Type> = []
+
+  return new Promise((resolve, reject) => {
+    fs.createReadStream(file)
+      .pipe(
+        csvparser({
+          // map over headers returned, normalise and replace first header with id
+          mapHeaders: ({ header, index }) => {
+            if (index === 0) {
+              return 'id'
+            }
+            return header.trim().replace(/\s+/g, '_').toLowerCase()
+          },
+        })
+      )
+      .on('data', (data) => dataArray.push(data))
+      .on('error', (err) => reject(err))
+      .on('end', () => {
+        resolve(dataArray)
+      })
+  })
 }
