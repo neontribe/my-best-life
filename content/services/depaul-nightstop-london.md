@@ -1,7 +1,7 @@
 ---
 organisation: DePaul
 title: Nightstop London
-shortDescription: Free overnight accommodation for under 25s
+shortDescription: "Free overnight accommodation "
 promoted: false
 image:
   image: img/pexels-rachel-claire-5490380.jpg
@@ -12,10 +12,17 @@ description: Nightstop London places young people who have nowhere to stay in
 categories:
   category1: Housing
   category2: Keeping Safe
+feelings:
+  - unsafe
+  - scared
+  - ignored
+  - confused
 costValue: 0
 age:
   minAge: 16
   maxAge: 25
+eligibility: Available for anyone aged 16 to 25 and needing somewhere to stay
+  tonight, across all of London.
 format: One to one chats
 location: Sherborne House, 34 Decima St, London, SE1 4QQ
 makeMapLink: true
@@ -26,7 +33,7 @@ expectation: You will need to give them a call so the team can understand your
   and somewhere safe to stay for the night, whilst they help you find more
   permanent accommodation, if needed.
 contactExplanation: "You will need to give the team a call. "
-email: nightstop.london@depaulcharity.org.uk
-phone: 0207 9391 234, 0207 9391 226, or 0207 9391 240
-website: https://uk.depaulcharity.org/nightstop/nightstop-london/
+email: " nightstop.london@depaulcharity.org.uk"
+phone: 0207 9391 234
+website: https://www.depaul.org.uk/nightstop/nightstop-london/
 ---
