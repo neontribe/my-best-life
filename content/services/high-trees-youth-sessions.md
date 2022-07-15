@@ -21,12 +21,11 @@ age:
   minAge: 8
   maxAge: 16
 format: Meeting a group of people
-location: St Martin’s Learning Centre, 220 Upper Tulse Hill, London SW2 2NS
+location: Tulse Hill Adventure Playground, SW2 2EY
 makeMapLink: true
 area:
   - Brixton Tulse Hill
-time: Every Monday to Thursday from 3:30pm - 7:00pm and Saturdays from 12:30pm -
-  3:30pm
+time: "Every Monday to Thursday 3:30pm - 7:00pm and Saturdays 12:30pm - 3:30pm. "
 expectation: "Youth workers will be there to provide a supportive and engaging
   environment. "
 contactExplanation: "Go to the Activities page on the website and scroll down to
