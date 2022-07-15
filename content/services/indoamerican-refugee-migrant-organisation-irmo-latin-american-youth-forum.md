@@ -1,7 +1,7 @@
 ---
 organisation: Indoamerican Refugee & Migrant Organisation (IRMO)
 title: Latin American Youth Forum
-shortDescription: Support for Spanish and Portugese speakers
+shortDescription: Learn English (Spanish and Portuguese young people)
 image:
   image: img/together-as-one.png
   imageAlt: Photo of a group of latin american young people
@@ -16,13 +16,15 @@ categories:
 interests:
   - Art and Design
   - Volunteering
+feelings:
+  - unsure
 costValue: 0
 age:
   minAge: 13
   maxAge: 19
 format: Meeting a group of people
 location: IRMO, Unit 8, Warwick House, Overton Road, London, SW9 7JP
-time: Wednesday 10am-1pm and 2pm-4pm
+time: Monday to Friday from 10am to 1pm and from 2pm to 5pm
 expectation: You will need register to the projects with a parent/carer before
   they can start the activities.
 email: layf@irmo.org.uk
