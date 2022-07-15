@@ -1,6 +1,6 @@
 ---
 organisation: Alford House Youth Club
-title: Youth Club - Dance class
+title: Dance class
 shortDescription: Learn to dance
 image:
   image: img/danielle-cerullo-3ckwunacxzc-unsplash.jpg
