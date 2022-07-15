@@ -5,11 +5,23 @@ shortDescription: Business start up coaching
 image:
   image: img/business-startup.jpg
   imageAlt: Image of a someone holding a lighbulb by their laptop
-description: "Work with the team to explore why you want to start a business and
-  develop your business idea through regular business coaching. "
+description: >-
+  Work with the team to explore why you want to start a business and develop
+  your business idea through regular business coaching. The programme is made up
+  on three parts:
+
+
+  1. Why Am I the Best Person to do this? - Exploration of what it is to run your own business
+
+  2. Will this work – Is my plan viable?
+
+  3. Regular Business Coaching sessions - up to 1 year after the business is set up.
 categories:
   category1: Job Stuff
   category2: Money
+feelings:
+  - hopeful
+  - excited
 costValue: 0
 age:
   minAge: 14
