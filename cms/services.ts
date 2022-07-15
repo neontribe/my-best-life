@@ -144,6 +144,11 @@ interface idParams {
   }
 }
 
+interface FidAgeEntry {
+  id: string
+  fis_provider_name: string
+  age_group_description: string
+}
 const contentDirectory = path.join(process.cwd(), './content/services')
 const fixtureDirectory = path.join(process.cwd(), './fixtures')
 
@@ -260,6 +265,42 @@ async function createMarkdownFromCSV(overwriteEntries: boolean = false) {
           return
         }
 
+        // Add cost info from the main sheet
+        let costValue: string | number = ''
+        let costQualifier = ''
+        if (service.is_free === 'True') {
+          costValue = 0
+        } else if (service.per_hour === 'True') {
+          costValue = service.total_cost__hour
+          costQualifier = `£${costValue} per hour`
+        } else if (service.per_day === 'True') {
+          costValue = service.total_cost__day
+          costQualifier = `£${costValue} per day`
+        } else if (service.per_session === 'True') {
+          costValue = service.total_cost__session
+          costQualifier = `£${costValue} per session`
+        } else if (service.per_week === 'True') {
+          costValue = service.total_cost__week
+          costQualifier = `£${costValue} per week`
+        }
+
+        // Add age range info from the separate CSV
+        let age: Array<string>
+        let min: string = ''
+        let max: string = ''
+
+        if (fidAgeData !== undefined && fidAgeData.length) {
+          // The result of Array.find is possibly undefined
+          const maybeAgeData: FidAgeEntry | undefined = fidAgeData.find(
+            (item: FidAgeEntry) => item.id === service.id
+          )
+
+          if (maybeAgeData !== undefined) {
+            age = maybeAgeData.age_group_description.split('-')
+            min = age[0]
+            max = age[1]
+          }
+        }
         const md = `---
 organisation: ${service.fis_registration_name}
 fidId: ${service.id}
@@ -268,10 +309,11 @@ shortDescription: ${service.provider_name} + description
 image:
   image: img/fid_placeholder.png
   imageAlt: ""
-costValue: 0
 interests:
 feelings:
 description: "${service.service_description}"
+costValue: ${costValue}
+costQualifier: ${costQualifier}
 format: ${service.delivery_channel_description}
 expectation: "${service.note}"
 email: ${service.e_mail}
@@ -279,6 +321,9 @@ phone: ${service.telephone || service.mobile}
 website: ${service.web_site}
 location: ${service.full_address}
 makeMapLink: ${Boolean(service.full_address)}
+age:
+  minAge: ${min}
+  maxAge: ${max}
 ---
 
 `
