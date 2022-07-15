@@ -11,14 +11,15 @@ description: "Learn the individual skills to DJ and how to incorporate this into
   rehearse a set for live performance. "
 categories:
   category1: Job Stuff
-  category2: Mental Health
+  category2: null
 interests:
   - Music
 costValue: 35
-costQualifier: ""
-costExplanation: Prices start at £35 per hour
+costQualifier: £35 per hour
+costExplanation: £35 per hour
 age:
   minAge: 8
+  maxAge: 25
 eligibility: Open to all ages and abilities
 format: One to one chats
 location: Grooveschool, Business Launchpad, 3Space, International House,
@@ -26,7 +27,7 @@ location: Grooveschool, Business Launchpad, 3Space, International House,
 makeMapLink: true
 area:
   - Brixton Tulse Hill
-time: Various times, subject to availability.
+time: Bookings made on request, depending on availability.
 contactExplanation: To apply, email, call or use the online form.
 email: "info@grooveschool.org "
 form: https://www.grooveschool.org/contact
@@ -38,4 +39,16 @@ reviews:
       after just one session I was able to go away and put together my first
       mix! Thanks I'll be back soon
     author: Amy Lee
+  - comment: As friends with a similar interest in house music, we wanted to learn
+      to DJ together back-to-back. Our aim being to learn the basic techniques
+      of DJing + put a mix together. Through the few sessions we have had with
+      Richie so far, we feel we've made progress — now understanding the basics
+      better and having a clear foundation on which to build upon. We're now in
+      the process of putting the mix together and look forward to continuing our
+      work on this. As one of us is also blind, we were looking for a DJing
+      instructor who would be able to take account of this, understanding the
+      accessibility issues surrounding it and coming up with solutions. Richie
+      has been extremely helpful in this regard — recommending the most
+      appropriate equipment for us to practice with.”
+    author: Charlie and David
 ---
