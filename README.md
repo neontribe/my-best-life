@@ -46,7 +46,7 @@ The MBL app uses styled components with each component consisting of their own s
 
 ### App Wrapper
 
-The MBL app is wrapped which can be seen in ./pages/\_app.tsx. This structure keeps a styling and semantic consistency across the entire app.
+The MBL app is wrapped which can be seen in ./pages/_app.tsx. This structure keeps a styling and semantic consistency across the entire app.
 
 ### Creating Tests
 
