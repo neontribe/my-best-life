@@ -208,9 +208,19 @@ export function getServiceData(id: string): ServiceDetail {
  * Automatically create CMS markdown entries from imported CSVs.
  * @param {boolean} overwriteEntries - whether to overwrite content in existing md files
  */
-function createMarkdownFromCSV(overwriteEntries: boolean = false) {
+async function createMarkdownFromCSV(overwriteEntries: boolean = false) {
   // Data delivered in several CSVs, majority of data comes from MBL main details.csv
   const mainFile = path.join(fixtureDirectory, `MBL main details.csv`)
+  const ageFile = path.join(
+    fixtureDirectory,
+    `MBL minimum and maximum age range.csv`
+  )
+  const timeFile = path.join(fixtureDirectory, `MBL Time info.csv`)
+  const genderFile = path.join(fixtureDirectory, `MBL Gender.csv`)
+
+  const fidAgeData = await fileToArray<FidAgeEntry>(ageFile)
+  const fidTimeData = await fileToArray<FidTimeEntry>(timeFile)
+  const fidGenderData = await fileToArray<FidGenderEntry>(genderFile)
 
   // Main data
   const results: any = []
@@ -289,4 +299,33 @@ makeMapLink: ${Boolean(service.full_address)}
         )
       })
     })
+}
+
+/*
+ * Generic helper function to create arrays from CSV files
+ * @param {string} file - the file path to the CSV
+ * @param Type - the expect type of the resolved value
+ */
+function fileToArray<Type>(file: string): Promise<Array<Type>> {
+  const dataArray: Array<Type> = []
+
+  return new Promise((resolve, reject) => {
+    fs.createReadStream(file)
+      .pipe(
+        csvparser({
+          // map over headers returned, normalise and replace first header with id
+          mapHeaders: ({ header, index }) => {
+            if (index === 0) {
+              return 'id'
+            }
+            return header.trim().replace(/\s+/g, '_').toLowerCase()
+          },
+        })
+      )
+      .on('data', (data) => dataArray.push(data))
+      .on('error', (err) => reject(err))
+      .on('end', () => {
+        resolve(dataArray)
+      })
+  })
 }
