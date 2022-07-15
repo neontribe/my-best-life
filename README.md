@@ -29,6 +29,28 @@ This project was created with [`create-next-app`](https://github.com/vercel/next
 
 - Committing to repo will throw a warning message if the structure isn't inline with the [commitlint](https://github.com/conventional-changelog/commitlint#what-is-commitlint)
 
+## 📃 Useful Information
+
+### Global styles
+
+The MBL app uses styled components with each component consisting of their own set and a global default theme with set variables such as colour scheme, font sizes and gutter sizes which are held separately and acessed globally. This provides conistency and allows each component to reference these variables in ./src/Theme.ts.
+
+### App Wrapper
+
+The MBL app is wrapped which can be seen in ./pages/_app.tsx. This structure keeps a styling and semantic consistency across the entire app.
+
+### Creating Tests
+
+When creating new tests it's important to keep a similar structure otherwise Jest will thrown an error as the props passed to component via the global theme will appear undefined. The best way around this is the following:
+
+- import { ThemeProvider } from 'styled-components'
+- import { MyBestLifeTheme, GlobalStyle } from '../src/Theme'
+- When using the render method ensure to wrap the component with the following render( [COMPONENT HERE] )
+
+### The Services
+
+The services functions are located ./cms/services.ts. The getServices() function returns all the services based on the .md (markdown files) held within ./cms/content/services
+
 ## 📃 License
 
 This program is distributed under the GNU GPLv3 licence, see the [LICENSE](/LICENSE) file for details.
