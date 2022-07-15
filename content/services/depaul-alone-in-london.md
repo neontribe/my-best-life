@@ -44,6 +44,6 @@ expectation: You will need to call to make an appointment. You will be offered
   offered a confidential space to discuss your needs.
 contactExplanation: Call to make an appointment.
 email: alshousingadvice@depaulcharity.org.uk
-phone: 020 7278 4224 then press option 2
+phone: "020 7278 4224 "
 website: http://uk.depaulcharity.org/alone-london
 ---
