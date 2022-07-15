@@ -22,7 +22,7 @@ This project was created with [`create-next-app`](https://github.com/vercel/next
 
 - nvm [Linux/macOS](https://github.com/nvm-sh/nvm), [Windows](https://github.com/coreybutler/nvm-windows)
 - [yarn](https://classic.yarnpkg.com/en/docs/install)
-- For Windows machines ensure the [VC_redist.x64](https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022). This is helpful with installing 3rd party software such as Microsoft Build Tools which can be necessary for certain node packages and can help avoid running into errors when running scripts. There is a Yarn package windows-build-tools that can installed but it has been reported as buggy and gets stuck when trying to install. [See stackoverflow issue which mentions and soles this](https://stackoverflow.com/questions/70902056/installing-global-windows-build-tools-never-completes)
+- For Windows machines ensure the [VC_redist.x64](https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022). This is helpful with installing 3rd party software such as Microsoft Build Tools which can be necessary for certain node packages and can help avoid running into errors when running scripts. There is a Yarn package windows-build-tools that can installed but it has been reported as buggy and gets stuck when trying to install. [See stackoverflow issue which mentions and solves this](https://stackoverflow.com/questions/70902056/installing-global-windows-build-tools-never-completes)
 
 ### ⚛ Install and Develop
 
