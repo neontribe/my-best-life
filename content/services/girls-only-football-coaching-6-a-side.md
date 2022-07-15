@@ -1,6 +1,6 @@
 ---
 organisation: The St Matthew's Project
-title: " Girls only football coaching & 6-a-side"
+title: " Girls only football "
 shortDescription: Girls football coaching and 6-a-side games
 image:
   image: img/girls-only-football-coaching2.jpg
