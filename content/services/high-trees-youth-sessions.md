@@ -31,7 +31,7 @@ expectation: "Youth workers will be there to provide a supportive and engaging
 contactExplanation: "Go to the Activities page on the website and scroll down to
   the Calendar to book your slot at an individual session. You must complete a
   registration form before attending. "
-email: youth@high-trees.org or graham.weston@high-trees.org
+email: youth@high-trees.org
 form: https://www.high-trees.org/activities-for-young-people/#calendar
 phone: 020 8674 3975
 website: https://www.high-trees.org/activity/youth/
