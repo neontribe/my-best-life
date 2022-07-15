@@ -6,27 +6,29 @@ promoted: false
 image:
   image: img/come-correct1.jpg
   imageAlt: Come Correct logo
-description: "Access to free condoms in lots of places (called Outlets) across
-  London. Confidential service. The first time you visit, you'll speak with a
-  trained advisor who will explain how the scheme works and run through the
-  importance of using condoms to avoid STIs and pregnancy. They will also make
-  sure you know how to use a condom correctly. Advisors can also answer
-  questions you may have. Once you’ve met an advisor, you’ll be given a card so
-  that you can collect condoms or get advice - just look for any Outlet
-  displaying the Come Correct logo. "
+description: Access to free condoms every 7 days in lots of places across
+  London. This is a confidential service. Register online with the form link
+  below, and watch a video. You will then receive an email with details on how
+  to pick up condoms from your choice of outlet. If you want to speak someone,
+  go to a location with the Come Correct logo (the image above).
 categories:
   category1: Sex and Relationships
   category2: Physical Health
 costValue: 0
 age:
-  maxAge: 25
-format: One to one chats
+  maxAge: 24
+  minAge: 16
+format: Online
 location: "Wherever you see the Come Correct logo (at the top of this page) in
   clinics, youth centres and pharmacies throughout Lambeth and surrounding
   boroughs. "
-contactExplanation: "Register either at the outlet or online - check on the
-  website to see what to do in your borough. Call ahead or check online to make
-  sure the outlet you wish to visit is open. "
-form: http://www.comecorrect.org.uk/Map.aspx
-website: http://www.comecorrect.org.uk/Default.aspx
+expectation: "Fill in the form below and you will receive an email explaining
+  where you can collect your condoms. Any future requests, you can go to any
+  outlet with the Come Correct logo and show your card and receive free condoms.
+  Alternatively, you can sign up in person, by going to one of the outlets
+  listed on the website (link below). "
+contactExplanation: "Register either at the outlet or online. Call ahead or
+  check online to make sure the outlet you wish to visit is open. "
+form: https://ccard.therapyaudit.com/london/public/CCard/Register.aspx?ID=23
+website: http://www.comecorrect.org.uk/Participating.aspx?List=1&tabletype=click&ID=23
 ---

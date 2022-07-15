@@ -1,10 +1,10 @@
 ---
 organisation: Alford House Youth Club
-title: Roller Skating
-shortDescription: Learn how to roller skate
+title: Youth Club - Dance class
+shortDescription: Learn to dance
 image:
-  image: img/roller1.jpeg
-  imageAlt: lady roller skating
+  image: img/danielle-cerullo-3ckwunacxzc-unsplash.jpg
+  imageAlt: "Dance class "
 description: Alford House is open to all young people aged 8-21 and offers a
   variety of sports, games, creative and recreational activities in a safe and
   secure environment that is managed by a team of staff and volunteers.
@@ -29,10 +29,10 @@ location: Alford House, Aveline Street, Kennington, London, SE11 5DQ
 makeMapLink: true
 area:
   - Prince's
-time: Tuesdays 6.30pm - 8pm.
+time: Mondays 7:30pm - 8:30pm during term time.
 expectation: Subscription payable on any night you attend the club
 contactExplanation: Just drop in or alternatively visit the website for more info.
 email: theclub@alfordhouse.org.uk
 phone: 020 7735 1519
-website: https://alfordhouse.org.uk/youth-club/whats-on/
+website: https://alfordhouse.org.uk/youth-club/whats-on/term-time/
 ---
