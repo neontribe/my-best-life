@@ -1,6 +1,6 @@
 ---
 organisation: Depaul
-title: Alone in London
+title: Housing advice
 shortDescription: Free housing advice
 promoted: false
 image:
