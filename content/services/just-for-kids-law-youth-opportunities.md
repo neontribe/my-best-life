@@ -1,5 +1,5 @@
 ---
-organisation: Just for Kids Law
+organisation: "Just for Kids Law2 "
 title: Youth Opportunities
 shortDescription: Support with education and jobs
 image:
@@ -35,5 +35,4 @@ email: info@justforkidslaw.org
 form: https://justforkidslaw.org/referral
 phone: 020 3174 2279
 website: https://justforkidslaw.org/what-we-do/supporting-young-people/how-can-just-kids-law-help-me
- 
 ---
