@@ -21,7 +21,7 @@ feelings:
   - confused
   - hopeful
 costValue: 0.25
-costQualifier: 25p per session
+costQualifier: 25p a session
 costExplanation: ""
 age:
   minAge: 12
