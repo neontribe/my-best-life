@@ -55,7 +55,7 @@ This sets which branches we are looking to merge, and the order is important. Af
 
 - Choose the `Files changed` tab
 - Scroll through and check that the changes match expectations of what you want to release
-- If they do, click `New pull request`
+- If they do, click `Create pull request`
 - If not, use the CMS to amend content. This will update the content in the development branch
 
 The next page lets you add a title and description to the PR. This is probably unnecessary for a PR that just moves content between branches.
@@ -67,7 +67,7 @@ Your PR should now be made, but we need to merge it for the live site to update.
 
 You can use the deploy preview link as another check to make sure what you are deploying matches expectations.
 
-The other status check is for the PR should be reviewed. An admin can bypass this, though this should only be done for copy changes from the CMS. Either:
+The other status check is for the PR to be reviewed. An admin can bypass this, though this should only be done for copy changes from the CMS. Either:
 
 - Ask for the PR to be reviewed
 - After approval, click `Merge pull request`
@@ -89,7 +89,7 @@ The MBL app uses styled components with each component consisting of their own s
 
 ### App Wrapper
 
-The MBL app is wrapped which can be seen in ./pages/_app.tsx. This structure keeps a styling and semantic consistency across the entire app.
+The MBL app is wrapped which can be seen in ./pages/\_app.tsx. This structure keeps a styling and semantic consistency across the entire app.
 
 ### Creating Tests
 
