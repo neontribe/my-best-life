@@ -89,13 +89,21 @@ const InfoContainer = styled.div`
   margin: 0 1rem;
   margin-bottom: 1rem;
   order: 4;
+`
 
-  div {
-    background-color: #edf7f6;
-    border-radius: 0.5rem;
-    padding: 0.25rem 0.5rem;
-    margin-right: 1rem;
-  }
+const LabelButton = styled.div`
+  background-color: #edf7f6;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  margin-right: 1rem;
+`
+
+const LabelButton2 = styled(LabelButton)`
+  width: fit-content;
+  position: absolute;
+  top: 9rem;
+  right: 1rem;
+  background-color: ${(props) => props.theme.colours.yellow_light};
 `
 
 const SaveButtonContainer = styled.div`
@@ -126,6 +134,8 @@ export const Card = React.forwardRef(function Card(
       ? formatCostDisplay(costValue, costQualifier)
       : null
 
+  const thisMonth = true
+
   const cardLink = useRef<HTMLAnchorElement | null>(null)
 
   return (
@@ -147,11 +157,13 @@ export const Card = React.forwardRef(function Card(
         )}
       </ImageContainer>
 
+      {thisMonth && <LabelButton2>this month</LabelButton2>}
+
       <ServiceName>{title}</ServiceName>
 
       <InfoContainer>
-        {costDisplay && <div>{costDisplay}</div>}
-        {ageDisplay && <div>{ageDisplay}</div>}
+        {costDisplay && <LabelButton>{costDisplay}</LabelButton>}
+        {ageDisplay && <LabelButton>{ageDisplay}</LabelButton>}
       </InfoContainer>
 
       <SaveButtonContainer>
