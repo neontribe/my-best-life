@@ -18,6 +18,7 @@ export type CardDisplay = Pick<
   | 'age'
   | 'gender'
   | 'format'
+  | 'provider'
 >
 
 const CardContainer = styled.li`
@@ -57,7 +58,6 @@ const Description = styled.h2`
   font-family: 'Catamaran', sans-serif;
   font-size: ${(props) => props.theme.fontSizes.heading};
   font-weight: bold;
-  margin-bottom: 1rem;
   order: 3;
   padding: 0 1rem;
   text-transform: capitalize;
@@ -84,25 +84,25 @@ const ImageContainer = styled.div`
 
 const InfoContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   font-family: 'Lato', sans-serif;
   font-size: ${(props) => props.theme.fontSizes.small};
   margin: 0 1rem;
   margin-bottom: 1rem;
+  margin-top: 1rem;
   order: 4;
 `
 
 const LabelButton = styled.div`
-  background-color: #edf7f6;
-  border-radius: 0.5rem;
+  background-color: ${(props) => props.theme.colours.aqua_light};
+  border-radius: 1.5rem;
   padding: 0.25rem 0.5rem;
   margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 `
 
 const LabelButton2 = styled(LabelButton)`
-  width: fit-content;
-  position: absolute;
-  top: 9rem;
-  right: 1rem;
   background-color: ${(props) => props.theme.colours.yellow_light};
 `
 
@@ -122,6 +122,7 @@ export const Card = React.forwardRef(function Card(
     costValue,
     costQualifier,
     age,
+    provider,
   }: CardDisplay,
   ref: React.Ref<HTMLLIElement>
 ): JSX.Element {
@@ -134,10 +135,10 @@ export const Card = React.forwardRef(function Card(
       ? formatCostDisplay(costValue, costQualifier)
       : null
 
-  const thisMonth = true
-
   const cardLink = useRef<HTMLAnchorElement | null>(null)
 
+  const thisMonth = provider ? provider : true
+  S
   return (
     <CardContainer ref={ref} onClick={() => cardLink.current?.click()}>
       <Description>
@@ -157,13 +158,12 @@ export const Card = React.forwardRef(function Card(
         )}
       </ImageContainer>
 
-      {thisMonth && <LabelButton2>this month</LabelButton2>}
-
       <ServiceName>{title}</ServiceName>
 
       <InfoContainer>
         {costDisplay && <LabelButton>{costDisplay}</LabelButton>}
         {ageDisplay && <LabelButton>{ageDisplay}</LabelButton>}
+        {thisMonth && <LabelButton2>this month</LabelButton2>}
       </InfoContainer>
 
       <SaveButtonContainer>
