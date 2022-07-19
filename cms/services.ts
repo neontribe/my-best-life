@@ -39,6 +39,7 @@ export interface Service {
   score: number
   promoted: boolean
   area?: Array<Area>
+  provider?: string
 }
 
 export type Category =
@@ -154,6 +155,19 @@ interface FidGenderEntry {
   provider_name: string
   eligibility_criteria_description: string
 }
+interface FidAreaEntry {
+  id: string
+  provider_name: string
+  area_covered_description: string
+}
+
+interface FidCategoryEntry {
+  id: string
+  fis_provider_name: string
+  level_1_description: string
+  level_2_description: string
+  level_3_description: string
+}
 
 const contentDirectory = path.join(process.cwd(), './content/services')
 const fixtureDirectory = path.join(process.cwd(), './fixtures')
@@ -228,10 +242,17 @@ async function createMarkdownFromCSV(overwriteEntries: boolean = false) {
   )
   const timeFile = path.join(fixtureDirectory, `MBL Time info.csv`)
   const genderFile = path.join(fixtureDirectory, `MBL Gender.csv`)
+  const areaFile = path.join(fixtureDirectory, `MBL area covered.csv`)
+  const categoryFile = path.join(
+    fixtureDirectory,
+    `MBL Interests and Category.csv`
+  )
 
   const fidAgeData = await fileToArray<FidAgeEntry>(ageFile)
   const fidTimeData = await fileToArray<FidTimeEntry>(timeFile)
   const fidGenderData = await fileToArray<FidGenderEntry>(genderFile)
+  const fidAreaData = await fileToArray<FidAreaEntry>(areaFile)
+  const fidCategoryData = await fileToArray<FidCategoryEntry>(categoryFile)
 
   // Main data
   const results: any = []
@@ -355,6 +376,34 @@ async function createMarkdownFromCSV(overwriteEntries: boolean = false) {
           entry.eligibility_criteria_description.toLowerCase()
         )
 
+        // Add area info from the separate CSV
+        let areaEntries: Array<FidAreaEntry> = []
+
+        if (fidAreaData !== undefined && fidAreaData.length) {
+          areaEntries = fidAreaData.filter((item) => {
+            return item.id === service.id
+          })
+        }
+
+        const areas = areaEntries.map((entry) =>
+          entry.area_covered_description.trim()
+        )
+
+        // Add category info from the separate CSV
+        let categoryEntries: Array<FidCategoryEntry> = []
+
+        if (fidCategoryData !== undefined && fidCategoryData.length) {
+          categoryEntries = fidCategoryData.filter((item) => {
+            return item.id === service.id
+          })
+        }
+
+        const interests = categoryEntries.map((entry) => {
+          if (entry.level_2_description === 'Interests') {
+            return entry.level_3_description.trim()
+          }
+        })
+
         const md = `---
 organisation: ${service.fis_registration_name}
 fidId: ${service.id}
@@ -363,7 +412,7 @@ shortDescription: ${service.provider_name} + description
 image:
   image: img/fid_placeholder.png
   imageAlt: ""
-interests:
+interests: ${JSON.stringify(interests)}
 feelings:
 description: "${service.service_description}"
 costValue: ${costValue}
@@ -374,6 +423,7 @@ email: ${service.e_mail}
 phone: ${service.telephone || service.mobile}
 website: ${service.web_site}
 location: ${service.full_address}
+area: ${JSON.stringify(areas)}
 makeMapLink: ${Boolean(service.full_address)}
 age:
   minAge: ${min}
@@ -382,6 +432,7 @@ timeList: {startDate: ${startFormatted}, endDate: ${endFormatted}, days: ${JSON.
           daysOpen
         )} }
 gender: ${JSON.stringify(genders)}
+provider: ${service.provider_type_description || ''}
 ---
 
 `
