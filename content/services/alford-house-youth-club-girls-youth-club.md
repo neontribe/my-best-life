@@ -39,10 +39,11 @@ format: Meeting a group of people
 location: Alford House, Aveline Street, Kennington, London, SE11 5DQ
 makeMapLink: true
 area:
-  - Prince's
-time: Wednesdays 6.15-9pm
+  - North Lambeth
+time: Wednesdays 6.15-9pm during term time
+expectation: ""
 contactExplanation: Just drop in or alternatively visit the website for more info.
 email: theclub@alfordhouse.org.uk
 phone: 020 7735 1519
-website: https://alfordhouse.org.uk/youth-club/whats-on/
+website: https://alfordhouse.org.uk/youth-club/whats-on/term-time/
 ---

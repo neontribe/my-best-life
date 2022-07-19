@@ -23,7 +23,7 @@ format: Meeting a group of people
 location: Henry Fawcett Primary School, Bowling Green Street, SE11 5BZ
 makeMapLink: true
 area:
-  - Oval
+  - North Lambeth
 time: Classes run from 2pm - 5pm every Sunday
 email: info@thebouryacademy.co.uk
 phone: 07487 309247

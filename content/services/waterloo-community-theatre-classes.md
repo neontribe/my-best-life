@@ -23,7 +23,7 @@ format: Meeting a group of people
 location: Chandler Community Hall, 15 Lambeth Walk, London SE11 6DU
 makeMapLink: true
 area:
-  - Bishop's
+  - North Lambeth
 time: Fridays
 contactExplanation: "You will need to fill in the online form on their website.
   Make sure to click the 'new member' option and share a bit about yourself.

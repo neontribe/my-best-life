@@ -39,7 +39,7 @@ location: |-
   England & Wales
 makeMapLink: true
 area:
-  - St Leonard's
+  - Streatham
 time: ""
 contactExplanation: Use the email link or phone number below to contact the
   organisation about what's on.

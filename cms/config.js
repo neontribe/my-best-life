@@ -1,9 +1,9 @@
-export default {
+const config = {
   cms_manual_init: true,
   backend: {
     name: 'github',
     repo: 'neontribe/my-best-life',
-    branch: 'main',
+    branch: 'development',
     base_url: 'https://my-best-life.vercel.app',
     auth_endpoint: 'api/auth',
   },
@@ -237,14 +237,13 @@ export default {
           required: false,
           hint: 'Specify if a service will only allow certain genders. Leave blank if unknown',
           options: [
-            { label: 'men', value: 'men' },
-            { label: 'women', value: 'women' },
-            { label: 'non-binary', value: 'non-binary' },
+            { label: 'male', value: 'male' },
+            { label: 'female', value: 'female' },
+            {
+              label: 'non-binary / non-conforming',
+              value: 'non-binary / non-conforming',
+            },
             { label: 'transgender', value: 'transgender' },
-            { label: 'intersex', value: 'intersex' },
-            { label: 'gender non-conforming', value: 'gender non-conforming' },
-            { label: 'genderqueer', value: 'genderqueer' },
-            { label: 'agender', value: 'agender' },
           ],
         },
         {
@@ -291,27 +290,15 @@ export default {
           required: false,
           hint: 'Select the ward(s) the service operates in. Leave blank for online services',
           options: [
-            { label: 'Gipsy Hill', value: 'Gipsy Hill' },
-            { label: 'Thurlow Park', value: 'Thurlow Park' },
-            { label: 'Herne Hill', value: 'Herne Hill' },
-            { label: 'Clapham Common', value: 'Clapham Common' },
-            { label: 'Clapham Town', value: 'Clapham Town' },
-            { label: "Bishop's", value: "Bishop's" },
-            { label: 'Streatham South', value: 'Streatham South' },
-            { label: 'Thornton', value: 'Thornton' },
-            { label: "Knight's Hill", value: "Knight's Hill" },
-            { label: "St Leonard's", value: "St Leonard's" },
-            { label: "Prince's", value: "Prince's" },
-            { label: 'Oval', value: 'Oval' },
-            { label: 'Stockwell', value: 'Stockwell' },
-            { label: 'Vassall', value: 'Vassall' },
-            { label: 'Coldharbour', value: 'Coldharbour' },
-            { label: 'Streatham Wells', value: 'Streatham Wells' },
-            { label: 'Streatham Hill', value: 'Streatham Hill' },
-            { label: 'Ferndale', value: 'Ferndale' },
-            { label: 'Tulse Hill', value: 'Tulse Hill' },
-            { label: 'Brixton Hill', value: 'Brixton Hill' },
-            { label: 'Larkhall', value: 'Larkhall' },
+            { label: 'Brixton Stockwell', value: 'Brixton Stockwell' },
+            { label: 'Brixton Tulse Hill', value: 'Brixton Tulse Hill' },
+            {
+              label: 'Clapham and Brixton Hill',
+              value: 'Clapham and Brixton Hill',
+            },
+            { label: 'Norwood', value: 'Norwood' },
+            { label: 'Streatham', value: 'Streatham' },
+            { label: 'North Lambeth', value: 'North Lambeth' },
           ],
         },
         {
@@ -456,3 +443,5 @@ export default {
     },
   ],
 }
+
+export default config

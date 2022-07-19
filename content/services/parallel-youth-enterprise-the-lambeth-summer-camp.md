@@ -26,7 +26,7 @@ format: Meeting a group of people
 location: The 2020 Lambeth Summer Camp took place at St Martin's High School,
   155 Tulse Hill, London SW2 3UP
 area:
-  - Thurlow Park
+  - Norwood
 time: Weekdays between 10am and 4pm for 4 weeks during July and August 2021
 expectation: ""
 contactExplanation: "Register an Interest for the 2021 Lambeth Summer Camp by

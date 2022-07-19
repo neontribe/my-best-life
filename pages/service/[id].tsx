@@ -68,6 +68,12 @@ const Heading = styled.h1`
   font-size: ${(props) => props.theme.fontSizes.heading};
 `
 
+const SubHeading = styled.h3`
+  color: ${(props) => props.theme.colours.purple};
+  font-family: 'Catamaran', sans-serif;
+  font-size: ${(props) => props.theme.fontSizes.highlight};
+`
+
 const Organisation = styled.p`
   font-family: 'Catamaran', sans-serif;
   font-weight: bold;
@@ -154,6 +160,16 @@ const SubmitButtonContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   width: 100%;
+`
+
+const TimeTable = styled.table`
+  th {
+    text-align: left;
+  }
+
+  td {
+    min-width: 6rem;
+  }
 `
 
 interface ReviewState {
@@ -340,6 +356,40 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
               <>
                 <Heading as="h2">Time info:</Heading>
                 <p>{serviceData.time}</p>
+              </>
+            ) : null}
+            {serviceData.timeList ? (
+              <>
+                <Heading as="h2">Time info:</Heading>
+                <p>
+                  Start date: {serviceData.timeList.startDate} <br />
+                  End date: {serviceData.timeList.endDate}
+                </p>
+                <VerticalSpacing size={1} />
+                {serviceData.timeList.days &&
+                serviceData.timeList.days.length ? (
+                  <>
+                    <SubHeading as="h3">Opening times</SubHeading>
+                    <TimeTable>
+                      <thead>
+                        <th>Day</th>
+                        <th>Start</th>
+                        <th>End</th>
+                      </thead>
+                      <tbody>
+                        {serviceData.timeList.days.map((item) => {
+                          return (
+                            <tr key={item.day}>
+                              <td>{item.day}</td>
+                              <td>{item.start_time}</td>
+                              <td>{item.end_time}</td>
+                            </tr>
+                          )
+                        })}
+                      </tbody>
+                    </TimeTable>
+                  </>
+                ) : null}
               </>
             ) : null}
           </Section>

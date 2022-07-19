@@ -33,7 +33,7 @@ format: One to one chats
 location: 3Space International House, 6 Canterbury Crescent, Brixton SW9 7QD
 makeMapLink: true
 area:
-  - Coldharbour
+  - Brixton Tulse Hill
 time: Timings TBC. Summer course.
 contactExplanation: "Book online if you're not a member. Phone to book if you're a member. "
 email: education@photofusion.org

@@ -1,19 +1,20 @@
 ---
 organisation: BIGKID Foundation
 title: Holiday Programme
-shortDescription: Half-term and summer holiday sessions
+shortDescription: Holiday sports activities
 image:
   image: img/bigkid-foundation-holiday-programme.jpg
   imageAlt: Large group of young people in lifejackets
-description: "Sports sessions, residential trips (including a sailing programme)
-  and excursions. Get the chance to try out alternative sports, including
-  white-water rafting, sailing and kayaking. Sessions during all three half-term
-  breaks and the six-week summer holiday. "
+description: Try something new, make new friends and get outside of your comfort
+  zone with BIGKID Holiday Programme.  Sessions run throughout half-term and
+  summer holidays. You will get the chance to try out alternative sports,
+  including white-water rafting, sailing and kayaking and residential trips too.
 categories:
   category1: Physical Health
   category2: Friends
 interests:
   - Sports
+  - Outdoor Activities
 costValue: 0
 costExplanation: "This service is free to access. "
 age:

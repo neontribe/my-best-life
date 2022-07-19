@@ -1,16 +1,7 @@
 {
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:import/errors",
-    "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/recommended",
-    "prettier",
-    "prettier/@typescript-eslint"
-  ],
+  "extends": ["prettier", "next/core-web-vitals"],
   "env": {
     "es6": true,
     "browser": true,
@@ -31,6 +22,7 @@
     "react/react-in-jsx-scope": 0,
     "react/display-name": 0,
     "react/prop-types": 0,
+    "@next/next/no-img-element": "off",
     "jsx-a11y/anchor-is-valid": [
       "error",
       {

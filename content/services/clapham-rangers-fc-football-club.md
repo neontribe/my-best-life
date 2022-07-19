@@ -14,6 +14,7 @@ categories:
   category2: Physical Health
 interests:
   - Sports
+  - Outdoor Activities
 feelings:
   - unsure
   - okay
@@ -22,11 +23,9 @@ feelings:
   - confused
   - excited
   - ignored
-costValue: 7.5
-costQualifier: £7.50 per week
-costExplanation: £7.50 per week. All payments taken via the Love Admin website.
-  Parents should activate the direct debit via the Love Admin registration form.
-  Cash payments are no longer permitted.
+costValue: 360
+costQualifier: £360 per year
+costExplanation: "Annual fee of £360 in weekly payments. "
 age:
   minAge: 7
   maxAge: 16
@@ -37,13 +36,19 @@ format: Meeting a group of people
 location: Clapham Common Long Road, opposite Victoria Rise, SW4 0AA
 makeMapLink: true
 area:
-  - Clapham Common
-time: Saturdays, 10:00 to 11:30
-expectation: ""
-contactExplanation: New players need to register in advance by completing the
-  Love Admin form. Run on a first-come-first-served basis, so arrive and get in
-  registration line early to ensure a place. You may go through trials and have
-  your ability assessed to ensure you play in a team of a similar skill set.
+  - Clapham and Brixton Hill
+time: Saturdays 10:00 to 11:30
+expectation: >-
+  The Club plays on hired pitches on Clapham Common. It also uses the training
+  facilities of local sports clubs and schools. 
+
+
+  There is an annual fee of £360, but weekly payments are taken via the Love Admin website. Parents should activate the direct debit via the Love Admin registration form. Cash payments are no longer permitted. The Club offers bursaries for families who cannot afford the full fee. If you need to apply for a bursary you can email treasurer@claphamrangersfc.com. 
+contactExplanation: "New players need to register in advance on the club
+  database, by using the online form on the registration page. Click on the form
+  link below to register. The club will email registered players before each
+  weekend to invite them to book for a session.  Space is limited, so if you are
+  interested, please look out for the email. "
 form: https://claphamrangersfc.com/registration/
-website: https://claphamrangersfc.com/
+website: https://claphamrangersfc.com
 ---
