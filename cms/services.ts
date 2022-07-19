@@ -160,7 +160,7 @@ const fixtureDirectory = path.join(process.cwd(), './fixtures')
 
 export function getServices(): Array<Service> {
   // This will be re-enabled when the source files are received from emails
-  //createMarkdownFromCSV(true)
+  createMarkdownFromCSV(true)
 
   const fileNames = fs.readdirSync(contentDirectory)
 
@@ -351,12 +351,9 @@ async function createMarkdownFromCSV(overwriteEntries: boolean = false) {
           })
         }
 
-        const imagePath =
+        const image =
           'img/fidfallback_' + Math.floor(Math.random() * 3 + 1) + '.jpg'
-        const image = service.image.image ? service.image.image : imagePath
-        const imageAlt = service.image.imageAlt
-          ? service.image.imageAlt
-          : 'Family Information Directory fallback image'
+        const imageAlt = 'Family Information Directory fallback image'
 
         const genders = genderEntries.map((entry) =>
           entry.eligibility_criteria_description.toLowerCase()
