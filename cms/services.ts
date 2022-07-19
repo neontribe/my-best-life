@@ -351,6 +351,13 @@ async function createMarkdownFromCSV(overwriteEntries: boolean = false) {
           })
         }
 
+        const imagePath =
+          'img/fidfallback_' + Math.floor(Math.random() * 3 + 1) + '.jpg'
+        const image = service.image.image ? service.image.image : imagePath
+        const imageAlt = service.image.imageAlt
+          ? service.image.imageAlt
+          : 'Family Information Directory fallback image'
+
         const genders = genderEntries.map((entry) =>
           entry.eligibility_criteria_description.toLowerCase()
         )
@@ -361,8 +368,8 @@ fidId: ${service.id}
 title: ${service.provider_name}
 shortDescription: ${service.provider_name} + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "${image}"
+  imageAlt: "${imageAlt}"
 interests:
 feelings:
 description: "${service.service_description}"
