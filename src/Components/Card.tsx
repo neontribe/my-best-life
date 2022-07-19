@@ -137,8 +137,6 @@ export const Card = React.forwardRef(function Card(
 
   const cardLink = useRef<HTMLAnchorElement | null>(null)
 
-  const thisMonth = provider ? provider : true
-  S
   return (
     <CardContainer ref={ref} onClick={() => cardLink.current?.click()}>
       <Description>
@@ -163,7 +161,7 @@ export const Card = React.forwardRef(function Card(
       <InfoContainer>
         {costDisplay && <LabelButton>{costDisplay}</LabelButton>}
         {ageDisplay && <LabelButton>{ageDisplay}</LabelButton>}
-        {thisMonth && <LabelButton2>this month</LabelButton2>}
+        {provider && <LabelButton2>this month</LabelButton2>}
       </InfoContainer>
 
       <SaveButtonContainer>
