@@ -38,6 +38,49 @@ This project was created with [`create-next-app`](https://github.com/vercel/next
 
 - Committing to repo will throw a warning message if the structure isn't inline with the [commitlint](https://github.com/conventional-changelog/commitlint#what-is-commitlint)
 
+## Deploying to Live
+
+Our hosting provider Vercel will automatically build and redeploy the live site when any changes are detected on the `main` branch of this repo. Therefore, to deploy from staging to live we need to merge our changes from the `development` branch into `main`. We can do this by making and merging a pull request.
+
+- Click the [Pull requests](https://github.com/neontribe/my-best-life/pulls) tab at the top of the page
+- From here, choose `New pull request` to reach the [Compare changes](https://github.com/neontribe/my-best-life/compare) page.
+
+This is where we can make a new pull request.
+
+- Using the dropdowns, select:
+- base: main
+- compare: development
+
+This sets which branches we are looking to merge, and the order is important. After selecting, a list of commits and files changed should load. Outside of sprint development, the files changed should _only_ be the copy files for the services.
+
+- Choose the `Files changed` tab
+- Scroll through and check that the changes match expectations of what you want to release
+- If they do, click `New pull request`
+- If not, use the CMS to amend content. This will update the content in the development branch
+
+The next page lets you add a title and description to the PR. This is probably unnecessary for a PR that just moves content between branches.
+
+- Add any title/description you'd like, or leave the default values
+- Click `Create pull request`
+
+Your PR should now be made, but we need to merge it for the live site to update. Deploy branches are protected from merging by status checks. Vercel bot will comment shortly after a PR is made with a link to the build status check and a deploy preview. A yellow circle means the build is in progress, a green tick means the build was successful and passes the status check, and a red cross means the build has failed. If the build has failed, the logs will need to be checked to find out why.
+
+You can use the deploy preview link as another check to make sure what you are deploying matches expectations.
+
+The other status check is for the PR should be reviewed. An admin can bypass this, though this should only be done for copy changes from the CMS. Either:
+
+- Ask for the PR to be reviewed
+- After approval, click `Merge pull request`
+- Click `Confirm merge`
+
+Or
+
+- Use the checkbox `Merge without waiting for requirements to be met (administrators only)`
+- Click `Merge pull request`
+- Click `Confirm merge`
+
+Your PR should now be merged and the live site will update shortly!
+
 ## 📃 Useful Information
 
 ### Global styles
