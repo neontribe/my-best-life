@@ -38,7 +38,7 @@ contactExplanation: Applications for LPO Junior Artists 2022/23 are now closed.
   in touch with Rebecca at juniorartists@lpo.org.uk
 email: juniorartists@lpo.org.uk
 phone: 020 784 4203
-website: ""
+website: https://www.lpo.org.uk/education/edu-junior-artists.html
 reviews:
   - comment: The experience you gain is invaluable, from working with LPO players to
       talking to panels with artists like Sheku Kanneh-Mason and Angel Blue, and
