@@ -3,7 +3,7 @@ organisation: Grooveschool
 title: One-2-One
 shortDescription: 1-2-1 DJ and music production lessons
 image:
-  image: img/dj.jpeg
+  image: img/dj2.jpg
   imageAlt: Hands turning dials on DJ decks
 description: "Learn the individual skills to DJ and how to incorporate this into
   an electronic instrument ensemble. Learn how to use Vinyl Turntables, CDJ's
