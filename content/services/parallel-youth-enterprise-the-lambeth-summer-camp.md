@@ -1,41 +1,48 @@
 ---
 organisation: Parallel Youth Enterprise
 title: The Lambeth Summer Camp
-shortDescription: 4-week summer activity camp
+shortDescription: 4-week summer camp
 image:
   image: img/group-stood-on-cliff.jpeg
   imageAlt: Four young people hugging and look out at the view
-description: "A 4-week summer camp coming soon in July and August 2021. It will
-  involve workshops, (e.g. for music, dance, computers, filming), day-long
-  sports (e.g. badminton, football, table tennis, cricket), daily trips outside
-  London, unusual activities (e.g sailing, canoeing, rock climbing, ice
-  skating). There will also be trips to museums, cinemas, the park, Quasar, the
-  London Dungeon, and London Zoo. "
+description: >-
+  A 4-week summer camp coming soon in July and August 2022. There will be a
+  series of workshops, including music, dance, computers, filming, beautician,
+  face painting, and arts & crafts.  There will be ongoing day-long sports,
+  including badminton, football, table tennis, cricket, basketball and
+  athletics. 
+
+  Off-site, there will be daily trips outside London to enjoy time in the countryside. These will involve more unusual activities: sailing, canoeing, rock climbing, ice skating, Adventure Camps and more. 
+
+  There will also be trips to museums, cinemas, the park, Quasar, the London Dungeon, and London Zoo. 
 categories:
   category1: Friends
-  category2: Housing
-costValue: 150
-costQualifier: £150 per person
-costExplanation: £150 per person for the 4-week camp
+  category2: null
+interests:
+  - Sports
+  - Music
+  - Outdoor Activities
+feelings:
+  - anxious
+  - hopeful
+costValue: 180
+costQualifier: £180 per person
+costExplanation: £180 per person
 age:
   minAge: 9
   maxAge: 16
-eligibility: "You must live or attend school in Lambeth. You must be aged
-  between 9 and 16 on 20th July 2021. "
+eligibility: "For those who live or attend school in Lambeth or Southwark. "
 format: Meeting a group of people
-location: The 2020 Lambeth Summer Camp took place at St Martin's High School,
-  155 Tulse Hill, London SW2 3UP
+location: St Martin-in-the-Field High School, 155 Tulse Hill, SW2 3UP
+makeMapLink: true
 area:
   - Norwood
-time: Weekdays between 10am and 4pm for 4 weeks during July and August 2021
+time: "Weekdays from Tuesday 26th July to Thursday 18th August 2022. "
 expectation: ""
-contactExplanation: "Register an Interest for the 2021 Lambeth Summer Camp by
-  emailing with your name, address and post code, age and date of birth, whether
-  you're male or female, the contact phone number and email address of your
-  parent / guardian, and which of the two projects you want to join (Lambeth or
-  Wandsworth). A place will be reserved, and an enrolment form will then be
-  emailed once they are ready. The charity will only accept the Registration of
-  Interest for those attending for the full 18 days. "
+contactExplanation: "To request an enrolment form, your parent, guardian or
+  another referrer send an email including your full name, gender, age and date
+  of birth, your postcode, and the name and contact number of the parent /
+  guardian / referrer. "
 email: lsptlspt1@gmail.com
 website: https://www.lambethsummercamps.org/projects
 ---
