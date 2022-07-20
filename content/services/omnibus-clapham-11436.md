@@ -4,8 +4,8 @@ fidId: 11436
 title: Routes With Omnibus Theatre
 shortDescription: Routes With Omnibus Theatre + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_1.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Drama"]
 feelings:
 description: "Alongside receiving breakfast, lunch and healthy snacks, 15 to 20 young people work together under the guidance of our facilitators to create their own production which they perform to friends and family at the end of the week in our Theatre. The aims for the week are simple; to have fun, work as a team, challenge yourself and use your imagination!

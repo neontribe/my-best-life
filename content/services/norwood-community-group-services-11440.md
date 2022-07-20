@@ -4,8 +4,8 @@ fidId: 11440
 title: Karate/ Fitness Training And Self Defence Classes
 shortDescription: Karate/ Fitness Training And Self Defence Classes + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_1.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Sports"]
 feelings:
 description: "Norwood Community Group Services invites you to attend our Karate, Fitness & Self Defence classes. You will become accredited (AQA) with the skills that will not only help you to defend yourself. Casual dress is recommended (track suit). 

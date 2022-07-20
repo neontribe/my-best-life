@@ -4,8 +4,8 @@ fidId: 11453
 title: KPCC's Summer Of Fun And Food 2022
 shortDescription: KPCC's Summer Of Fun And Food 2022 + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_3.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Drama","Music","Art and Design"]
 feelings:
 description: "KPCC and our partners, Simply Smiley Productions, will be offering a programme of fun and creative activities 4 days a week for 5 weeks this summer. A free, healthy hot lunch, cooked on-site, as well as fruit and snacks, will be provided every day; and at the end of the week children will be invited to ‘shop’ for food kindly donated by the Felix Project to take home with them. 

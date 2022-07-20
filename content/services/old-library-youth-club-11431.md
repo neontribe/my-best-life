@@ -4,8 +4,8 @@ fidId: 11431
 title: Rathbone Summer Fit And Fun Activities Programme
 shortDescription: Rathbone Summer Fit And Fun Activities Programme + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_1.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Cooking","Art and Design"]
 feelings:
 description: "A fun packed summer programme filled with a diverse range of sports and other physical activities suitable for all abilities. Young people will have the opportunity to participate in creative arts and crafts, digital and social media workshops, music and indoor games. At the heart of our programme will be our 'Chef and Share' cooking sessions, young people will prepare a healthy balanced meal that all young people will sit down to eat. The menu will be planned weekly utilizing our Phunky food nutritional resource and eat well meal planning guide.

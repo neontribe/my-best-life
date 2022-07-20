@@ -4,8 +4,8 @@ fidId: 11478
 title: Brixton Topcats Summer Basketball Camp
 shortDescription: Brixton Topcats Summer Basketball Camp + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_3.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Sports"]
 feelings:
 description: "Brixton Topcats Summer Basketball Camp provides fun and engaging basketball sessions for children and young people aged 5 - 15. Topcats have been running their summer basketball camps for over three decades. This year our camps will be delivered by our team of highly experienced coaches. 

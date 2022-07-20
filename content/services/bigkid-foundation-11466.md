@@ -4,8 +4,8 @@ fidId: 11466
 title: BIGKID Summer Holiday programme
 shortDescription: BIGKID Summer Holiday programme + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_3.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: []
 feelings:
 description: "BIGKID Summer Holiday programme is a 4 week programme filled with different activities Monday to Friday. Each day we will be open for 4 hours and run sports and youth club activities. The sports activities include but are not limited to basketball, roller skating, American flag football and fitness. 

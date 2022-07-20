@@ -4,8 +4,8 @@ fidId: 11463
 title: BIG Summer 2022 Holiday Football Programme
 shortDescription: BIG Summer 2022 Holiday Football Programme + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_3.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Sports","Volunteering","Outdoor Activities"]
 feelings:
 description: "Enrol for our 2 programmes in 1 holiday activity - a football programme for children and young people (CYP) between 7 and 13 years old, and work experience opportunity for teenagers between 14 and 16 years old.  

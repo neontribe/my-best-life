@@ -4,8 +4,8 @@ fidId: 11472
 title: Upper Norwood Library Hub Summer Camps For Children
 shortDescription: Upper Norwood Library Hub Summer Camps For Children + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_2.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Drama","Art and Design"]
 feelings:
 description: "Performing Arts August summer camp 1-5 August & 8-12 August

@@ -4,8 +4,8 @@ fidId: 11413
 title: Whippersnappers Summer Playscheme 2022
 shortDescription: Whippersnappers Summer Playscheme 2022 + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_3.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Sports","Music","Art and Design"]
 feelings:
 description: "Is your child:

@@ -4,8 +4,8 @@ fidId: 11456
 title: Artist Minds With 198 Contemporary Arts And Learning And Photofusion
 shortDescription: Artist Minds With 198 Contemporary Arts And Learning And Photofusion + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_3.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Art and Design","Outdoor Activities"]
 feelings:
 description: "The project will be photography, Photowalks, shooting in a photography studio, T-shirt design and art and crafts.

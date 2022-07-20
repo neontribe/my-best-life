@@ -4,8 +4,8 @@ fidId: 11457
 title: Activities 4 U Multisports and Arts Camp
 shortDescription: Activities 4 U Multisports and Arts Camp + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_1.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Sports","Volunteering","Outdoor Activities"]
 feelings:
 description: "Multi-sports & Arts Camp 5+ Years- An enriching programme of fun and engaging activities over the summer, including:

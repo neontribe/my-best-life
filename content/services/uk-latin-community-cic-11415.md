@@ -4,8 +4,8 @@ fidId: 11415
 title: Latin Holiday Camp Vauxhall 5 Community Centre
 shortDescription: Latin Holiday Camp Vauxhall 5 Community Centre + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_1.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Sports","Films and TV","Art and Design"]
 feelings:
 description: "We will deliver a programme that will focus on Arts and crafts, food and nutrition, sports and well-being.

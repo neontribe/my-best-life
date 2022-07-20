@@ -4,8 +4,8 @@ fidId: 11419
 title: Summer 2022 With The Boury Academy
 shortDescription: Summer 2022 With The Boury Academy + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_2.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Drama"]
 feelings:
 description: "Join us this Summer for an exciting week of workshops!

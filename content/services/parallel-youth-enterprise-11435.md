@@ -4,8 +4,8 @@ fidId: 11435
 title: Lambeth Summer Camp Parallel Youth Enterprise
 shortDescription: Lambeth Summer Camp Parallel Youth Enterprise + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_3.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Sports","Art and Design","Outdoor Activities"]
 feelings:
 description: "During July and August, we will deliver an 18 day  programme of workshops, trips out and sport at St Marin in the Fields School Tulse Hill for one hundred and fifty young people.

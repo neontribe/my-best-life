@@ -4,8 +4,8 @@ fidId: 11476
 title: Summer HAF Lifelong Family Links
 shortDescription: Summer HAF Lifelong Family Links + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_2.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Sports","Cooking","Gaming"]
 feelings:
 description: "Activities will include cycling at our partner organisation Wheels for Well-being, bowling, swimming, football, gym work, boating at Crystal Palace Boating Lake and adventure playground sessions at Willington Road. We will also offer fruit picking sessions and visits to Godstone Farm where participants will be encouraged to interact with the animals. In addition to our trained play staff, we will be using trained disability sports coaches from Active Living, Disability Sport Coach and Lambeth Sport.

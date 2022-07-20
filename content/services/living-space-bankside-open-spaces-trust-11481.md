@@ -4,8 +4,8 @@ fidId: 11481
 title: Football Food & Fun With Bankside Open Spaces Trust
 shortDescription: Football Food & Fun With Bankside Open Spaces Trust + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_2.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Sports","Cooking","Outdoor Activities"]
 feelings:
 description: "Professionally coached football sessions, adventure play, pool, table tennis, Xbox. cookery and food.

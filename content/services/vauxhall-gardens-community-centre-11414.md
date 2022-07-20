@@ -4,8 +4,8 @@ fidId: 11414
 title: Culture Chic Shock Play Scheme With Vauxhall Gardens Community Centre
 shortDescription: Culture Chic Shock Play Scheme With Vauxhall Gardens Community Centre + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_2.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Drama","Art and Design","Outdoor Activities"]
 feelings:
 description: "Combined arts and play scheme for 8 to 16 year olds. 

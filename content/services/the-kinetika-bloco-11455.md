@@ -4,8 +4,8 @@ fidId: 11455
 title: Kinetika Bloco Senior Summer School
 shortDescription: Kinetika Bloco Senior Summer School + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_3.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Music"]
 feelings:
 description: "Kinetika Bloco Senior Summer School brings young people together to learn and play brass and woodwind, steel pans, drums and dance to create a spectacular costumed show. Over 10 days we will learn music together and develop creative and social skills and then perform on the final day to a huge audience at the Royal Festival Hall. 

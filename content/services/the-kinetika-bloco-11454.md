@@ -4,8 +4,8 @@ fidId: 11454
 title: Kinetika Bloco Junior Summer School
 shortDescription: Kinetika Bloco Junior Summer School + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_1.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Music","Art and Design"]
 feelings:
 description: "The Junior Summer School will see 100 young people come together to learn either drums, steel pans, brass or woodwind. Over the 5 days the young people will learn tunes and develop skills together and on the final day perform a carnival showcase. 

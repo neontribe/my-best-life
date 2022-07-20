@@ -4,8 +4,8 @@ fidId: 11474
 title: Lambeth Tigers Summer Camp
 shortDescription: Lambeth Tigers Summer Camp + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_3.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Sports","Volunteering","Outdoor Activities"]
 feelings:
 description: "Football Camp - Drills and skills, strength and conditioning, 1v1’s and Football matches.

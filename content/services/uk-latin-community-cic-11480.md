@@ -4,8 +4,8 @@ fidId: 11480
 title: Latin Holiday Camp Notre Dame
 shortDescription: Latin Holiday Camp Notre Dame + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_3.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Sports","Films and TV","Art and Design"]
 feelings:
 description: "We will deliver a programme that will focus on Arts and crafts, food and nutrition, sports and well-being. 

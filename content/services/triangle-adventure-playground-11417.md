@@ -4,8 +4,8 @@ fidId: 11417
 title: Triangle Adventure Playground Summer Holiday Playscheme
 shortDescription: Triangle Adventure Playground Summer Holiday Playscheme + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_3.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Sports","Art and Design","Outdoor Activities"]
 feelings:
 description: "Triangle Adventure Playground will be offering adventure play, sports, arts & crafts, outdoor play, games, nature play and free play.

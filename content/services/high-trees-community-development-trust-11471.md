@@ -4,8 +4,8 @@ fidId: 11471
 title: Tulse Hill Adventure Playground Summer Playscheme
 shortDescription: Tulse Hill Adventure Playground Summer Playscheme + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_2.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Sports","Cooking","Outdoor Activities"]
 feelings:
 description: "Open access holiday play sessions with activities including cooking, adventure play, forest school, multi sports, water fights, table tennis, woodwork, hair and beauty workshop, roller-skating and much more. Additional optional trips out including kayaking, water wipe out, flip out, BMX riding and a trip to the seaside.

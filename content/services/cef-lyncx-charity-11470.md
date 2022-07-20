@@ -4,8 +4,8 @@ fidId: 11470
 title: SHARP Summer 2022 with CEF Lyncx
 shortDescription: SHARP Summer 2022 with CEF Lyncx + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_3.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Cooking","Volunteering","Outdoor Activities"]
 feelings:
 description: "SHARP (school holidays active & recreational programme) 

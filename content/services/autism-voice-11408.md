@@ -4,8 +4,8 @@ fidId: 11408
 title: Summer Holiday Food And Fun Activities For Autistic Children
 shortDescription: Summer Holiday Food And Fun Activities For Autistic Children + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_1.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Cooking","Music","Art and Design","Outdoor Activities"]
 feelings:
 description: "We will provide the following activities: indoor and outdoor sports, arts and crafts, music and dance, food matters workshop, Lego therapy, Free play, Sensory activities, Water play, Messy play, Gardening, Nature walk and Trips out. 

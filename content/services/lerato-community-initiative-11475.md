@@ -4,8 +4,8 @@ fidId: 11475
 title: Lerato Summer Camp
 shortDescription: Lerato Summer Camp + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_3.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Sports","Music","Outdoor Activities"]
 feelings:
 description: "Daily Multi-sports, including badminton and rounders, arts and crafts, indoor and outdoor play, table games Baking, Tie-dye & music workshops. Trip to Stubbers Adventure Centre in Essex for water sports, climbing & target sports, trip to Gravity for e-karting & bowling, talent show. Time to just relax, socialise and make new friends.

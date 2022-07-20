@@ -4,8 +4,8 @@ fidId: 11462
 title: Oasis Summer Activities At Living Space
 shortDescription: Oasis Summer Activities At Living Space + description
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: "img/fidfallback_1.jpg"
+  imageAlt: "Family Information Directory fallback image"
 interests: ["Sports","Cooking","Outdoor Activities"]
 feelings:
 description: "Teens summer activities run by Oasis Youth Hub at Living Space in Waterloo including cooking, arts and crafts, outdoor sports in football cage, CV and school prep, various workshops.

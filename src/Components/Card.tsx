@@ -51,10 +51,18 @@ const ServiceName = styled.p`
 `
 
 const ImageText = styled(ServiceName)`
+  font-family: 'Catamaran', sans-serif;
+  font-size: 28px;
+  line-height: 100%;
   position: absolute;
   left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 1.5rem;
+  z-index: 1;
+
+  ${(props) => props.theme.screenSizes.smallPhoneOnly} {
+    font-size: 22px;
+    top: 2.5rem;
+  }
 `
 
 const Description = styled.h2`
@@ -145,7 +153,9 @@ export const Card = React.forwardRef(function Card(
 
       <ImageContainer>
         {image?.image.includes('fidfallback_') && (
-          <ImageText>Banner will go here</ImageText>
+          <ImageText>
+            Summer of food <br></br> and fun
+          </ImageText>
         )}
         {image?.image && (
           <Image
