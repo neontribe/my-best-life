@@ -39,6 +39,7 @@ contactExplanation: >-
 
 
   Please include in the subject line which department you would like a placement with. Clearly state your relevant experience in your cover letter, along with what you would hope to gain from a placement. 
-email: schools@youngvic.org
+email: mengfeiliu@youngvic.org or kateaislingjones@youngvic.org or
+  learning@youngvic.org
 website: https://www.youngvic.org/about-us/work-experience-and-placements
 ---
