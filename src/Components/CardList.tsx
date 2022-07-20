@@ -330,6 +330,7 @@ export const CardList = ({
             costQualifier={service.costQualifier}
             age={service.age}
             format={service.format}
+            provider={service.provider}
             ref={id === toRender.length - 1 ? (ref) => setLoadedRef(ref) : null}
           />
         ))}
