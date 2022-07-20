@@ -137,6 +137,9 @@ export const Card = React.forwardRef(function Card(
       </Description>
 
       <ImageContainer>
+        {image?.image.includes('fidfallback_') && (
+          <span>Banner will go here</span>
+        )}
         {image?.image && (
           <Image
             src={`/${image.image}`}
