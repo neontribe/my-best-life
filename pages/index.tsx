@@ -79,7 +79,7 @@ export const getStaticProps: GetStaticProps = async () => {
         score: 0,
         promoted: service.promoted || false,
         area: service.area || [],
-        provider: service.provider || undefined,
+        provider: service.provider || '',
 
         ...(service.image?.image && {
           image: {
