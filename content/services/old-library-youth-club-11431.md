@@ -8,21 +8,23 @@ image:
   imageAlt: ""
 interests: ["Cooking","Art and Design"]
 feelings:
-description: "A fun packed summer programme filled with a diverse range of sports and other physical activities suitable for all abilities. Young people will have the opportunity to participate in creative arts and crafts, digital and social media workshops, music and indoor games. At the heart of our programme will be our 'Chef and Share' cooking sessions, young people will prepare a healthy balanced meal that all young people will sit down to eat. The menu will be planned weekly utilizing our Phunky food nutritional resource and eat well meal planning guide.
-Each week will culminate with enrichment trips to fun offsite places of interest. (Trips will be chargeable).
-
-This is a NUT FREE site. No food containing nuts will be permitted on site. 
-
-Suitable for children and young people with special educational needs and disabilities.
-
-"
+description: >
+  A fun packed summer programme filled with a diverse range of sports and other physical activities suitable for all abilities. Young people will have the opportunity to participate in creative arts and crafts, digital and social media workshops, music and indoor games. At the heart of our programme will be our 'Chef and Share' cooking sessions, young people will prepare a healthy balanced meal that all young people will sit down to eat. The menu will be planned weekly utilizing our Phunky food nutritional resource and eat well meal planning guide.
+  Each week will culminate with enrichment trips to fun offsite places of interest. (Trips will be chargeable).
+  
+  This is a NUT FREE site. No food containing nuts will be permitted on site. 
+  
+  Suitable for children and young people with special educational needs and disabilities.
+  
+  
 costValue: 
 costQualifier: 
 format: Meeting a group of people
-expectation: "Our activities 1can accomodate young people with SEND up to the age 25 years old. 
-
-Free to access onsite days however offsite  trips are chargeable, please ask us for more information. 
-"
+expectation: >
+  Our activities 1can accomodate young people with SEND up to the age 25 years old. 
+  
+  Free to access onsite days however offsite  trips are chargeable, please ask us for more information. 
+  
 email: c.king@rathbonesociety.org.uk
 phone: 020 8766 9280
 website: https://rathbonesociety.org.uk/

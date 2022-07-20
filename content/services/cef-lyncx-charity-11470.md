@@ -8,23 +8,25 @@ image:
   imageAlt: ""
 interests: ["Cooking","Volunteering","Outdoor Activities"]
 feelings:
-description: "SHARP (school holidays active & recreational programme) 
- 
-Our SHARP is offering opportunities for young people in Lambeth to engage in 25 days ‘Boot-Camp’ filled with structured active, recreation, learning and food programmes. 
-
-Our SHARP Boot-Camp is for young people aged 7 to 16 and provides volunteering/work experience opportunities for young people aged 16 years and over and it will run from Monday, 25 July to Friday, 26 August (Monday to Friday). 
- 
-StEP (Saturdays the Extra Project)
-Our Creative StEP is also running every Saturday throughout the summer holidays. This project run from our GreenHouse, the Brixton Windmill One O’clock Club building, Windmill Gardens SW2 5DA, a safe space where young people aged 11 to 16 years old can seize the opportunity to explore and develop their #Creative/Performing Arts skills; see This Clip, an example production by the young people leading our Creative StEP.
- 
-To find out more and to register, see poster and/or go to our website, https://cefi.org.uk/our-sharp-offer select ‘Project’ tab and then, ‘Our SHARP Offer’, scroll through and you will find all the information about these two initiatives of contact us directly. 
-
-Suitable for children and young people with special educational needs and disabilities.
-"
+description: >
+  SHARP (school holidays active & recreational programme) 
+   
+  Our SHARP is offering opportunities for young people in Lambeth to engage in 25 days ‘Boot-Camp’ filled with structured active, recreation, learning and food programmes. 
+  
+  Our SHARP Boot-Camp is for young people aged 7 to 16 and provides volunteering/work experience opportunities for young people aged 16 years and over and it will run from Monday, 25 July to Friday, 26 August (Monday to Friday). 
+   
+  StEP (Saturdays the Extra Project)
+  Our Creative StEP is also running every Saturday throughout the summer holidays. This project run from our GreenHouse, the Brixton Windmill One O’clock Club building, Windmill Gardens SW2 5DA, a safe space where young people aged 11 to 16 years old can seize the opportunity to explore and develop their #Creative/Performing Arts skills; see This Clip, an example production by the young people leading our Creative StEP.
+   
+  To find out more and to register, see poster and/or go to our website, https://cefi.org.uk/our-sharp-offer select ‘Project’ tab and then, ‘Our SHARP Offer’, scroll through and you will find all the information about these two initiatives of contact us directly. 
+  
+  Suitable for children and young people with special educational needs and disabilities.
+  
 costValue: 0
 costQualifier: 
 format: Meeting a group of people
-expectation: "Lunch provided"
+expectation: >
+  Lunch provided
 email: christian@cefi.org.uk
 phone: 020 7737 4274
 website: 

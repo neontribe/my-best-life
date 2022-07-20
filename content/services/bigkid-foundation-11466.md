@@ -8,15 +8,17 @@ image:
   imageAlt: ""
 interests: []
 feelings:
-description: "BIGKID Summer Holiday programme is a 4 week programme filled with different activities Monday to Friday. Each day we will be open for 4 hours and run sports and youth club activities. The sports activities include but are not limited to basketball, roller skating, American flag football and fitness. 
-
-All sessions are free and catered towards 11 to 18yr olds, food and refreshments will be provided. Some sessions will be held at Larkhall Park, contact us for more details.
-
-We're operating from both Dexters Adventure Playground and Larkhall Park. Instagram - Bigkidfoundation Twitter - BIGKIDCharity. When attending sports sessions we would recommend wearing appropriate trainers (Larkhall Sessions require plastic studded boots)."
+description: >
+  BIGKID Summer Holiday programme is a 4 week programme filled with different activities Monday to Friday. Each day we will be open for 4 hours and run sports and youth club activities. The sports activities include but are not limited to basketball, roller skating, American flag football and fitness. 
+  
+  All sessions are free and catered towards 11 to 18yr olds, food and refreshments will be provided. Some sessions will be held at Larkhall Park, contact us for more details.
+  
+  We're operating from both Dexters Adventure Playground and Larkhall Park. Instagram - Bigkidfoundation Twitter - BIGKIDCharity. When attending sports sessions we would recommend wearing appropriate trainers (Larkhall Sessions require plastic studded boots).
 costValue: 0
 costQualifier: 
 format: Meeting a group of people
-expectation: ""
+expectation: >
+  
 email: unika@bigkidfoundation.org
 phone: 07865 274 806
 website: https://www.bigkidfoundation.org/

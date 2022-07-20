@@ -8,26 +8,28 @@ image:
   imageAlt: ""
 interests: ["Sports","Art and Design","Outdoor Activities"]
 feelings:
-description: "Triangle Adventure Playground will be offering adventure play, sports, arts & crafts, outdoor play, games, nature play and free play.
- 
-Suitable for children and young people with special educational needs and disabilities.
-
-"
+description: >
+  Triangle Adventure Playground will be offering adventure play, sports, arts & crafts, outdoor play, games, nature play and free play.
+   
+  Suitable for children and young people with special educational needs and disabilities.
+  
+  
 costValue: 0
 costQualifier: 
 format: Meeting a group of people
-expectation: "Young people must be registered via our website before attending the playground for the first time. 
-
-http://triangleadventureplayground.com/parents-info-1
-
-Twitter - https://twitter.com/TRIANGLE_APG
-
-IG - https://www.instagram.com/triangle_adventure_playground/
-
-A fun and playful open access adventure playground for  6 to 17 years old, with outdoor play, arts and crafts, sports, trips, learning new skills, making new friends and space to chill. 
-
-Come and go as you please once registered!
-"
+expectation: >
+  Young people must be registered via our website before attending the playground for the first time. 
+  
+  http://triangleadventureplayground.com/parents-info-1
+  
+  Twitter - https://twitter.com/TRIANGLE_APG
+  
+  IG - https://www.instagram.com/triangle_adventure_playground/
+  
+  A fun and playful open access adventure playground for  6 to 17 years old, with outdoor play, arts and crafts, sports, trips, learning new skills, making new friends and space to chill. 
+  
+  Come and go as you please once registered!
+  
 email: triangleapg@gmail.com
 phone: 07900 475 143
 website: http://triangleadventureplayground.com/

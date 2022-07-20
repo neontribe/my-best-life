@@ -8,36 +8,38 @@ image:
   imageAlt: ""
 interests: ["Drama","Art and Design"]
 feelings:
-description: "Performing Arts August summer camp 1-5 August & 8-12 August
-Your young performers will have the opportunity to discover new skills, techniques and make some new friends as they spend the holidays having fun, creating and exploring drama, movement and music.                    
-         
-Little Brushstrokes: August summer camp 15-19 August & 22-26 August 
-Your young budding artists will have the opportunity to discover new skills, techniques and learn about famous artists form around the world and their work as they spend the holidays having fun, creating and exploring art.
-
-All the sessions are facilitated by local artist Cherelle Morris of Brushstrokes Art. 
-
-Parents/carers will be responsible at all times for ensuring that children to do not attend on the day if they are showing any signs or symptoms or illness. 
-
-Hand washing will be regular and compulsory for all children and staff throughout the days.
-
-Please note, children will be provided with a healthy lunch
-Please send them with a water bottle as well as suitable clothing for each day.
-
-Price: free for families who receive free school meals
-
-Drop off and pick up is at the back of the library on Beardell Street.
-
-Please double check your ticket type before finalising any purchases.
-
-If you have any other questions or require clarification, please contact us via email or telephone.
-"
+description: >
+  Performing Arts August summer camp 1-5 August & 8-12 August
+  Your young performers will have the opportunity to discover new skills, techniques and make some new friends as they spend the holidays having fun, creating and exploring drama, movement and music.                    
+           
+  Little Brushstrokes: August summer camp 15-19 August & 22-26 August 
+  Your young budding artists will have the opportunity to discover new skills, techniques and learn about famous artists form around the world and their work as they spend the holidays having fun, creating and exploring art.
+  
+  All the sessions are facilitated by local artist Cherelle Morris of Brushstrokes Art. 
+  
+  Parents/carers will be responsible at all times for ensuring that children to do not attend on the day if they are showing any signs or symptoms or illness. 
+  
+  Hand washing will be regular and compulsory for all children and staff throughout the days.
+  
+  Please note, children will be provided with a healthy lunch
+  Please send them with a water bottle as well as suitable clothing for each day.
+  
+  Price: free for families who receive free school meals
+  
+  Drop off and pick up is at the back of the library on Beardell Street.
+  
+  Please double check your ticket type before finalising any purchases.
+  
+  If you have any other questions or require clarification, please contact us via email or telephone.
+  
 costValue: 30
 costQualifier: £30 per day
 format: Meeting a group of people
-expectation: "- During the performing arts weeks you will have fun learning acting, drama and improvisation. 
-
-- During the visual arts weeks you will have fun learning arts & crafts activities, things like drawing painting and sculpture. 
-"
+expectation: >
+  - During the performing arts weeks you will have fun learning acting, drama and improvisation. 
+  
+  - During the visual arts weeks you will have fun learning arts & crafts activities, things like drawing painting and sculpture. 
+  
 email: info@unlt.org
 phone: 020 8670 4321
 website: https://www.uppernorwoodlibraryhub.org/summercamps2022

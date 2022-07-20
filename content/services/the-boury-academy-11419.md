@@ -8,21 +8,23 @@ image:
   imageAlt: ""
 interests: ["Drama"]
 feelings:
-description: "Join us this Summer for an exciting week of workshops!
-Participants will create a Show In A Week! They will have classes in dance, drama and singing all with the Amazing Boury Academy Teachers and be ready to perform a full musical in just five days!
-
-Mini B''s for ages 4 to 7 years old will run every day between 10:00 to 13:00.
- 
-Our Main School will run from 10:00 to 16:00 every day.
- 
-LUNCH INCLUDED FOR ALL PARTICIPANTS!
-
-We hope to safely produce a performance at 5.30pm for main school and 12pm for Minis on the last day of the week
-"
+description: >
+  Join us this Summer for an exciting week of workshops!
+  Participants will create a Show In A Week! They will have classes in dance, drama and singing all with the Amazing Boury Academy Teachers and be ready to perform a full musical in just five days!
+  
+  Mini B''s for ages 4 to 7 years old will run every day between 10:00 to 13:00.
+   
+  Our Main School will run from 10:00 to 16:00 every day.
+   
+  LUNCH INCLUDED FOR ALL PARTICIPANTS!
+  
+  We hope to safely produce a performance at 5.30pm for main school and 12pm for Minis on the last day of the week
+  
 costValue: 0
 costQualifier: 
 format: Meeting a group of people
-expectation: ""
+expectation: >
+  
 email: info@thebouryacademy.co.uk
 phone: 07487 309 247
 website: 

@@ -8,18 +8,20 @@ image:
   imageAlt: ""
 interests: ["Sports","Cooking","Outdoor Activities"]
 feelings:
-description: "Professionally coached football sessions, adventure play, pool, table tennis, Xbox. cookery and food.
-
-Come along to play some football, hang out and play pool, table tennis, help prepare lunch, learn nutrition or enjoy the adventure playground.
-
-Suitable for children and young people with special educational needs and disabilities"
+description: >
+  Professionally coached football sessions, adventure play, pool, table tennis, Xbox. cookery and food.
+  
+  Come along to play some football, hang out and play pool, table tennis, help prepare lunch, learn nutrition or enjoy the adventure playground.
+  
+  Suitable for children and young people with special educational needs and disabilities
 costValue: 0
 costQualifier: 
 format: Meeting a group of people
-expectation: "Please note the session times are 13:00 to 18:00 and 11:00 to 16:00, contact the provider for more information. 
-
-You can register through this link https://forms.office.com/r/HUv8CYVU00
-"
+expectation: >
+  Please note the session times are 13:00 to 18:00 and 11:00 to 16:00, contact the provider for more information. 
+  
+  You can register through this link https://forms.office.com/r/HUv8CYVU00
+  
 email: livingspace@bost.org.uk
 phone: 020 8127 4392
 website: 

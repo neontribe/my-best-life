@@ -8,21 +8,23 @@ image:
   imageAlt: ""
 interests: ["Sports","Volunteering","Outdoor Activities"]
 feelings:
-description: "Multi-sports & Arts Camp 5+ Years- An enriching programme of fun and engaging activities over the summer, including:
-
--Sports and Dance Workshops
--Arts and Crafts
--Trips including the beach, theatre and more!
--Drama workshops
--Team games
-
-A wide range of fun activities throughout the summer, learn new skills, gain new experiences and meet new friends!
-
-"
+description: >
+  Multi-sports & Arts Camp 5+ Years- An enriching programme of fun and engaging activities over the summer, including:
+  
+  -Sports and Dance Workshops
+  -Arts and Crafts
+  -Trips including the beach, theatre and more!
+  -Drama workshops
+  -Team games
+  
+  A wide range of fun activities throughout the summer, learn new skills, gain new experiences and meet new friends!
+  
+  
 costValue: 0
 costQualifier: 
 format: Meeting a group of people
-expectation: ""
+expectation: >
+  
 email: admin@activities4u.org.uk
 phone: 020 7735 8181
 website: https://activities4u.org.uk/

@@ -8,18 +8,20 @@ image:
   imageAlt: ""
 interests: ["Sports","Music","Outdoor Activities"]
 feelings:
-description: "Daily Multi-sports, including badminton and rounders, arts and crafts, indoor and outdoor play, table games Baking, Tie-dye & music workshops. Trip to Stubbers Adventure Centre in Essex for water sports, climbing & target sports, trip to Gravity for e-karting & bowling, talent show. Time to just relax, socialise and make new friends.
-
-Suitable for children and young people with special educational needs and disabilities"
+description: >
+  Daily Multi-sports, including badminton and rounders, arts and crafts, indoor and outdoor play, table games Baking, Tie-dye & music workshops. Trip to Stubbers Adventure Centre in Essex for water sports, climbing & target sports, trip to Gravity for e-karting & bowling, talent show. Time to just relax, socialise and make new friends.
+  
+  Suitable for children and young people with special educational needs and disabilities
 costValue: 10
 costQualifier: £10 per week
 format: Meeting a group of people
-expectation: "Booking process with web link for online registration, hot meal & drinks. 
-
-Follow us on Instagram @leratocic and Twitter @LeratoCIC
-
-Activities that challenge, build self-esteem and confidence. Onsite activities such as multi-sport, arts and crafts, music, baking, plus trips to adventure centres for water sports, climbing, e-karting and bowling.
-"
+expectation: >
+  Booking process with web link for online registration, hot meal & drinks. 
+  
+  Follow us on Instagram @leratocic and Twitter @LeratoCIC
+  
+  Activities that challenge, build self-esteem and confidence. Onsite activities such as multi-sport, arts and crafts, music, baking, plus trips to adventure centres for water sports, climbing, e-karting and bowling.
+  
 email: info@leratocommunityinitiative.org.uk
 phone: 020 8033 2375
 website: https://www.leratocommunityinitiative.org.uk/
