@@ -126,6 +126,15 @@ export const DesktopNav = (): JSX.Element => {
           </Link>
         </li>
         <li>
+          <Link href={'/summer-of-food-and-fun'} passHref>
+            <SmallLinkItem
+              activePage={currentPage === '/summer-of-food-and-fun'}
+            >
+              Summer of Food and Fun
+            </SmallLinkItem>
+          </Link>
+        </li>
+        <li>
           <Link href={'/about'} passHref>
             <SmallLinkItem activePage={currentPage === '/about'}>
               About
