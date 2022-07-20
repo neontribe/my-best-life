@@ -8,20 +8,22 @@ image:
   imageAlt: ""
 interests: ["Sports"]
 feelings:
-description: "Norwood Community Group Services invites you to attend our Karate, Fitness & Self Defence classes. You will become accredited (AQA) with the skills that will not only help you to defend yourself. Casual dress is recommended (track suit). 
-
-Teaching children how to deal with confrontational situation. How to deal with the streets and how best to conduct themselves. All ways to live in harmony. 
-
-We will also provide each young person with a food box at the end of each session.
-"
+description: >
+  Norwood Community Group Services invites you to attend our Karate, Fitness & Self Defence classes. You will become accredited (AQA) with the skills that will not only help you to defend yourself. Casual dress is recommended (track suit). 
+  
+  Teaching children how to deal with confrontational situation. How to deal with the streets and how best to conduct themselves. All ways to live in harmony. 
+  
+  We will also provide each young person with a food box at the end of each session.
+  
 costValue: 0
 costQualifier: 
 format: Meeting a group of people
-expectation: "All users will be required to complete a membership/registration form when joining our programs, Parents/carers must complete this process.
-
-Sessions; 
-Monday - Karate and fitness classes
-Tuesday - Fitness training and self defence classes "
+expectation: >
+  All users will be required to complete a membership/registration form when joining our programs, Parents/carers must complete this process.
+  
+  Sessions; 
+  Monday - Karate and fitness classes
+  Tuesday - Fitness training and self defence classes 
 email: info@norwoodcommunitygroup.co.uk
 phone: 0208 766 9286
 website: https://norwoodcommunitygroup.co.uk/sports/free-karate-fitness-training-and-self-defence-activities-throughout-the-summer/

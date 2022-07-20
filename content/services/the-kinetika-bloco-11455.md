@@ -8,20 +8,22 @@ image:
   imageAlt: ""
 interests: ["Music"]
 feelings:
-description: "Kinetika Bloco Senior Summer School brings young people together to learn and play brass and woodwind, steel pans, drums and dance to create a spectacular costumed show. Over 10 days we will learn music together and develop creative and social skills and then perform on the final day to a huge audience at the Royal Festival Hall. 
-
-Following the summer school young people will be invited back to be a part of many performances through the year including Notting Hill Carnival, the London Jazz Festival and many more.
-
-£35 but free bursary places are available.
-
-Please book your place at www.kinetikabloco.co.uk/join-us
-
-At Senior Summer School you will get the opportunity to make loads of new friends and develop your creative skills in dance or music. You'll also get the chance to develop performance skills, improvisation, communication, develop a network of likeminded individuals and have a lot of FUN! You'll create a performance together that will showcase your talent as part of a large band of young people.
-"
+description: >
+  Kinetika Bloco Senior Summer School brings young people together to learn and play brass and woodwind, steel pans, drums and dance to create a spectacular costumed show. Over 10 days we will learn music together and develop creative and social skills and then perform on the final day to a huge audience at the Royal Festival Hall. 
+  
+  Following the summer school young people will be invited back to be a part of many performances through the year including Notting Hill Carnival, the London Jazz Festival and many more.
+  
+  £35 but free bursary places are available.
+  
+  Please book your place at www.kinetikabloco.co.uk/join-us
+  
+  At Senior Summer School you will get the opportunity to make loads of new friends and develop your creative skills in dance or music. You'll also get the chance to develop performance skills, improvisation, communication, develop a network of likeminded individuals and have a lot of FUN! You'll create a performance together that will showcase your talent as part of a large band of young people.
+  
 costValue: 0
 costQualifier: 
 format: Meeting a group of people
-expectation: ""
+expectation: >
+  
 email: tamzyn@kinetikabloco.co.uk
 phone: 07795 142 535
 website: https://www.kinetikabloco.co.uk/join-us/

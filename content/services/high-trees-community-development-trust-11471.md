@@ -8,22 +8,24 @@ image:
   imageAlt: ""
 interests: ["Sports","Cooking","Outdoor Activities"]
 feelings:
-description: "Open access holiday play sessions with activities including cooking, adventure play, forest school, multi sports, water fights, table tennis, woodwork, hair and beauty workshop, roller-skating and much more. Additional optional trips out including kayaking, water wipe out, flip out, BMX riding and a trip to the seaside.
-
-We will have free lunch and snacks for everyone attending.
-
-All children must complete a registration form to join. 
-
-Children need to book onto trips in advance. All trips will take place on Thursdays.  
-                                                                                 
-Follow us on instagram @high_treescdt Twitter @HighTreesCDT and Facebook @hightreescommunity
-"
+description: >
+  Open access holiday play sessions with activities including cooking, adventure play, forest school, multi sports, water fights, table tennis, woodwork, hair and beauty workshop, roller-skating and much more. Additional optional trips out including kayaking, water wipe out, flip out, BMX riding and a trip to the seaside.
+  
+  We will have free lunch and snacks for everyone attending.
+  
+  All children must complete a registration form to join. 
+  
+  Children need to book onto trips in advance. All trips will take place on Thursdays.  
+                                                                                   
+  Follow us on instagram @high_treescdt Twitter @HighTreesCDT and Facebook @hightreescommunity
+  
 costValue: 0
 costQualifier: 
 format: Meeting a group of people
-expectation: "Come to our adventure playground and chose to take part in whatever you like. We will have planned activities including cooking, treasure hunt, sports activities, arts and crafts, water fights, team challenges and trips out. 
-
-All you need to join is get a parent to fill in a registration form (which you can get by ringing, emailing us or popping by to one of our sessions). "
+expectation: >
+  Come to our adventure playground and chose to take part in whatever you like. We will have planned activities including cooking, treasure hunt, sports activities, arts and crafts, water fights, team challenges and trips out. 
+  
+  All you need to join is get a parent to fill in a registration form (which you can get by ringing, emailing us or popping by to one of our sessions). 
 email: youth@high-trees.org
 phone: 020 8674 3975
 website: https://www.high-trees.org/activities-for-young-people/

@@ -8,19 +8,21 @@ image:
   imageAlt: ""
 interests: ["Art and Design","Outdoor Activities"]
 feelings:
-description: "The project will be photography, Photowalks, shooting in a photography studio, T-shirt design and art and crafts.
-
-Please email us for more information. 
-"
+description: >
+  The project will be photography, Photowalks, shooting in a photography studio, T-shirt design and art and crafts.
+  
+  Please email us for more information. 
+  
 costValue: 0
 costQualifier: 
 format: Meeting a group of people
-expectation: "The workshop will have at least one hour of structured physical activity through photgraphy, games etc.  These workshops aim to demonstrate how creativity can be used to improve health and wellbeing by using photography and graphics as the primary tool. Each session, a different artistic technique will be demonstrated and practised, so that participants can experience a range of skills to try out.  
-
-During each session, information about mental health and healthy eating will be presented and discussed in the group, whilst undertaking the activity which will allow for a space where participants can be creative, social and share ideas. 
-
-Part of summer school we will be providing lunch for all participants. 
-"
+expectation: >
+  The workshop will have at least one hour of structured physical activity through photgraphy, games etc.  These workshops aim to demonstrate how creativity can be used to improve health and wellbeing by using photography and graphics as the primary tool. Each session, a different artistic technique will be demonstrated and practised, so that participants can experience a range of skills to try out.  
+  
+  During each session, information about mental health and healthy eating will be presented and discussed in the group, whilst undertaking the activity which will allow for a space where participants can be creative, social and share ideas. 
+  
+  Part of summer school we will be providing lunch for all participants. 
+  
 email: thefactoryproductionhouse@photofusion.org
 phone: 020 7978 8309
 website: https://www.198.org.uk/

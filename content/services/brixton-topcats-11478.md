@@ -8,17 +8,19 @@ image:
   imageAlt: ""
 interests: ["Sports"]
 feelings:
-description: "Brixton Topcats Summer Basketball Camp provides fun and engaging basketball sessions for children and young people aged 5 - 15. Topcats have been running their summer basketball camps for over three decades. This year our camps will be delivered by our team of highly experienced coaches. 
-
-Camps are suitable for beginners and more experienced players and involve a variety of game-based activities that help children and young people have fun, be active and develop a range of skills. 
-
-Follow our social media and website for more information and booking details. @brixton.topcats and brixtontopcats.org
-
-"
+description: >
+  Brixton Topcats Summer Basketball Camp provides fun and engaging basketball sessions for children and young people aged 5 - 15. Topcats have been running their summer basketball camps for over three decades. This year our camps will be delivered by our team of highly experienced coaches. 
+  
+  Camps are suitable for beginners and more experienced players and involve a variety of game-based activities that help children and young people have fun, be active and develop a range of skills. 
+  
+  Follow our social media and website for more information and booking details. @brixton.topcats and brixtontopcats.org
+  
+  
 costValue: 0
 costQualifier: 
 format: Meeting a group of people
-expectation: ""
+expectation: >
+  
 email: southlondontopcats@gmail.com
 phone: 07894 452 505
 website: https://www.brixtontopcats.org/

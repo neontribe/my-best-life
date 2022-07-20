@@ -8,20 +8,22 @@ image:
   imageAlt: ""
 interests: ["Drama","Art and Design","Outdoor Activities"]
 feelings:
-description: "Combined arts and play scheme for 8 to 16 year olds. 
-
-Join us for a series of dance, drama, arts and crafts and music workshops celebrating London's diverse colourful and multicultural heritage through an exploration of music and fashion and food.
-
-Suitable for children and young people with special educational needs and disabilities.
-"
+description: >
+  Combined arts and play scheme for 8 to 16 year olds. 
+  
+  Join us for a series of dance, drama, arts and crafts and music workshops celebrating London's diverse colourful and multicultural heritage through an exploration of music and fashion and food.
+  
+  Suitable for children and young people with special educational needs and disabilities.
+  
 costValue: 
 costQualifier: 
 format: Meeting a group of people
-expectation: "Spaces limited, book by email through admin@vgcc.org.uk, subject: culture chic shock. 
-
-Meals provided.
-
-"
+expectation: >
+  Spaces limited, book by email through admin@vgcc.org.uk, subject: culture chic shock. 
+  
+  Meals provided.
+  
+  
 email: sophyab@vgcc.org.uk
 phone: 07907 333 108
 website: http://www.vgcc.org.uk/

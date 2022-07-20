@@ -8,16 +8,18 @@ image:
   imageAlt: ""
 interests: ["Sports","Cooking","Outdoor Activities"]
 feelings:
-description: "Teens summer activities run by Oasis Youth Hub at Living Space in Waterloo including cooking, arts and crafts, outdoor sports in football cage, CV and school prep, various workshops.
-
-Hang out with your peers to take part in interesting activities, chill out or make it high energy - its up to you. Lots of activities to chose from, also mentoring from experienced youth workers if you need a chat!"
+description: >
+  Teens summer activities run by Oasis Youth Hub at Living Space in Waterloo including cooking, arts and crafts, outdoor sports in football cage, CV and school prep, various workshops.
+  
+  Hang out with your peers to take part in interesting activities, chill out or make it high energy - its up to you. Lots of activities to chose from, also mentoring from experienced youth workers if you need a chat!
 costValue: 0
 costQualifier: 
 format: Meeting a group of people
-expectation: "The sessions will run on Monday's, Tuesday's, Wednesday's and Friday's but the times vary. please email Jordan Gayle for more information. 
-
-Booking in advance is essential. 
-"
+expectation: >
+  The sessions will run on Monday's, Tuesday's, Wednesday's and Friday's but the times vary. please email Jordan Gayle for more information. 
+  
+  Booking in advance is essential. 
+  
 email: Jordan.Gayle@oasiswaterloo.org
 phone: 020 7921 4209
 website: 

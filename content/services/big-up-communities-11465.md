@@ -8,13 +8,15 @@ image:
   imageAlt: ""
 interests: ["Outdoor Activities"]
 feelings:
-description: "We will be running a summer playscheme for young people aged 8 to 16 years. Activities include adventure play, football, basketball, organised games, music production, MMA fitness and art and crafts.
-
-For up to date information of our activities please follow us on Instagram @bigupcommunities "
+description: >
+  We will be running a summer playscheme for young people aged 8 to 16 years. Activities include adventure play, football, basketball, organised games, music production, MMA fitness and art and crafts.
+  
+  For up to date information of our activities please follow us on Instagram @bigupcommunities 
 costValue: 0
 costQualifier: 
 format: Meeting a group of people
-expectation: ""
+expectation: >
+  
 email: admin@bigupcommunities.com
 phone: 07436 918 367
 website: https://www.bigupcommunities.com/

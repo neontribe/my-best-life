@@ -8,16 +8,18 @@ image:
   imageAlt: ""
 interests: ["Sports","Cooking","Gaming"]
 feelings:
-description: "Activities will include cycling at our partner organisation Wheels for Well-being, bowling, swimming, football, gym work, boating at Crystal Palace Boating Lake and adventure playground sessions at Willington Road. We will also offer fruit picking sessions and visits to Godstone Farm where participants will be encouraged to interact with the animals. In addition to our trained play staff, we will be using trained disability sports coaches from Active Living, Disability Sport Coach and Lambeth Sport.
-
-Our sessions are fun and safe for disabled young people we will pick up and drop off young people.We will also offer practical cooking and baking sessions. In addition, we will lead and encourage discussions on healthy lifestyles. In recognition of the importance of healthy eating to SEND young people in particular, we will also offer advice to participants’ parents/carers on providing nutritious and low-cost food.
-
-Suitable for children and young people with special educational needs and disabilities.
-"
+description: >
+  Activities will include cycling at our partner organisation Wheels for Well-being, bowling, swimming, football, gym work, boating at Crystal Palace Boating Lake and adventure playground sessions at Willington Road. We will also offer fruit picking sessions and visits to Godstone Farm where participants will be encouraged to interact with the animals. In addition to our trained play staff, we will be using trained disability sports coaches from Active Living, Disability Sport Coach and Lambeth Sport.
+  
+  Our sessions are fun and safe for disabled young people we will pick up and drop off young people.We will also offer practical cooking and baking sessions. In addition, we will lead and encourage discussions on healthy lifestyles. In recognition of the importance of healthy eating to SEND young people in particular, we will also offer advice to participants’ parents/carers on providing nutritious and low-cost food.
+  
+  Suitable for children and young people with special educational needs and disabilities.
+  
 costValue: 0
 costQualifier: 
 format: Meeting a group of people
-expectation: ""
+expectation: >
+  
 email: admin1@lifelongfamilylinks.org.uk
 phone: 020 8671 8939
 website: 
