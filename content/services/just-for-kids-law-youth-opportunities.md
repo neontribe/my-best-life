@@ -4,6 +4,7 @@ title: Youth Opportunities
 shortDescription: Support with education and jobs
 image:
   image: img/pexels-photo.jpg
+  imageAlt: Red telephone on white background
 description: >-
   Youth opportunities workers will help you to get into education, find a job
   and get involved in other positive activities. 
@@ -15,10 +16,10 @@ categories:
   category2: null
 costValue: 0
 age:
-  minAge: 10
-  maxAge: 25
+  minAge: 14
+  maxAge: 24
 eligibility: "The charity works with anyone who lives in London. "
-format: Over the phone
+format: One to one chats
 time: "Phone lines are open Monday to Friday, 9.30am - 5.30pm. Closed all day on
   weekends and bank holidays. "
 expectation: >-
@@ -35,5 +36,4 @@ email: info@justforkidslaw.org
 form: https://justforkidslaw.org/referral
 phone: 020 3174 2279
 website: https://justforkidslaw.org/what-we-do/supporting-young-people/how-can-just-kids-law-help-me
- 
 ---

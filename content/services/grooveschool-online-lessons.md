@@ -3,8 +3,8 @@ organisation: Grooveschool
 title: Online Lessons
 shortDescription: Online DJ and music production lessons
 image:
-  image: img/dj.jpeg
-  imageAlt: Hands turn dials on DJ decks
+  image: img/dj1.jpg
+  imageAlt: A girl turning dials on DJ decks
 description: DJs learn software to compile, construct, perform and record their
   own mixes. Musicians learn music production software to create and arrange
   original compositions. Coaching, mentoring and tutoring. 1-2-1, paired, and

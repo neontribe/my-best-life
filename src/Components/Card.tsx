@@ -50,6 +50,13 @@ const ServiceName = styled.p`
   padding: 0 1rem;
 `
 
+const ImageText = styled(ServiceName)`
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+`
+
 const Description = styled.h2`
   align-items: center;
   color: ${(props) => props.theme.colours.purple};
@@ -138,7 +145,7 @@ export const Card = React.forwardRef(function Card(
 
       <ImageContainer>
         {image?.image.includes('fidfallback_') && (
-          <span>Banner will go here</span>
+          <ImageText>Banner will go here</ImageText>
         )}
         {image?.image && (
           <Image
