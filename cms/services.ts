@@ -174,7 +174,7 @@ const fixtureDirectory = path.join(process.cwd(), './fixtures')
 
 export function getServices(): Array<Service> {
   // This will be re-enabled when the source files are received from emails
-  createMarkdownFromCSV(true)
+  // createMarkdownFromCSV(true)
 
   const fileNames = fs.readdirSync(contentDirectory)
 
