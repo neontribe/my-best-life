@@ -17,7 +17,9 @@ description: >
 categories:
   category1: Physical Health
   category2: Friends
-interests: []
+interests:
+  - Sports
+  - Outdoor Activities
 feelings:
   - hopeful
   - anxious
@@ -62,10 +64,14 @@ timeList:
       end_time: 6:00 PM
 area:
   - Brixton/Stockwell
-expectation: ""
+expectation: "You'll get the chance to try new things, experience something
+  outside your comfort zone, make new friendships, and engage in more positive
+  activities when not in school. "
+email: unika@bigkidfoundation.org
 phone: 07865 274 806
 provider: Summer of Food and Fun 2022
-email: unika@bigkidfoundation.org
+contactExplanation: "Get in touch with BIGKID Foundation for a copy of the
+  timetable, or to find out more about what they offer. "
 website: https://www.bigkidfoundation.org/
 fidId: 11466
 ---
