@@ -3,8 +3,8 @@ organisation: Big Up Communities
 title: Big Up Communities At The Stewarts Road Adventure Playground Summer Playscheme
 shortDescription: Music production, sports and crafts
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: img/group-sitting-outside.jpeg
+  imageAlt: A  group sitting outside on grass
 description: >
   We will be running a summer playscheme for young people aged 8 to 16 years.
   Activities include adventure play, football, basketball, organised games,
@@ -13,7 +13,7 @@ description: >
   For up to date information of our activities please follow us on Instagram @bigupcommunities 
 categories:
   category1: Physical Health
-  category2: Friends
+  category2: null
 interests:
   - Outdoor Activities
 feelings:
