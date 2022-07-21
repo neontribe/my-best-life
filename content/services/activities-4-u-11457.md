@@ -1,7 +1,7 @@
 ---
 organisation: Activities 4 U
 title: Activities 4 U Multisports and Arts Camp
-shortDescription: Activities 4 U Multisports and Arts Camp + description
+shortDescription: Drama, sports and day trips
 image:
   image: img/basketball-activities-4-u.jpg
   imageAlt: A basketball team laughing
