@@ -61,7 +61,7 @@ timeList:
       start_time: 10:00 AM
       end_time: 2:00 PM
 area:
-  - Clapham/Brixton Hill
+  - Clapham and Brixton Hill
 expectation: >
   https://forms.gle/UNZYgndiJnnE8nZS9
 
