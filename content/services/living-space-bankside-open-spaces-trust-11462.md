@@ -3,8 +3,8 @@ organisation: Living Space Bankside Open Spaces Trust
 title: Oasis Summer Activities At Living Space
 shortDescription: Crafts, sports and workshops
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: img/oasis-activity.jpeg
+  imageAlt: Three boys playing in a basketball court
 description: >
   Teens summer activities run by Oasis Youth Hub at Living Space in Waterloo
   including cooking, arts and crafts, outdoor sports in football cage, CV and
