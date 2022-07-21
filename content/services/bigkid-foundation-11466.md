@@ -3,8 +3,8 @@ organisation: Bigkid Foundation
 title: BIGKID Summer Holiday programme
 shortDescription: Sports and youth club
 image:
-  image: img/skipping.jpg
-  imageAlt: Young people playing with a skipping rope
+  image: img/bigkid-foundation-holiday-programme.jpg
+  imageAlt: Large group of young people in lifejackets
 description: >
   BIGKID Summer Holiday programme is a 4 week programme filled with different
   activities Monday to Friday. Each day we will be open for 4 hours and run
@@ -17,7 +17,9 @@ description: >
 categories:
   category1: Physical Health
   category2: Friends
-interests: []
+interests:
+  - Sports
+  - Outdoor Activities
 feelings:
   - hopeful
   - anxious
@@ -62,10 +64,14 @@ timeList:
       end_time: 6:00 PM
 area:
   - Brixton/Stockwell
-expectation: ""
+expectation: "You'll get the chance to try new things, experience something
+  outside your comfort zone, make new friendships, and engage in more positive
+  activities when not in school. "
+email: unika@bigkidfoundation.org
 phone: 07865 274 806
 provider: Summer of Food and Fun 2022
-email: unika@bigkidfoundation.org
+contactExplanation: "Get in touch with BIGKID Foundation for a copy of the
+  timetable, or to find out more about what they offer. "
 website: https://www.bigkidfoundation.org/
 fidId: 11466
 ---
