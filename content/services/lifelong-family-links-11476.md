@@ -3,8 +3,8 @@ organisation: Lifelong Family Links
 title: Summer HAF Lifelong Family Links
 shortDescription: Outdoor sports, games and cookery
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: img/kayaking-paddles.jpg
+  imageAlt: A line of kayak paddles
 description: >
   Activities will include cycling at our partner organisation Wheels for
   Well-being, bowling, swimming, football, gym work, boating at Crystal Palace
