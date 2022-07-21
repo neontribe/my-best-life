@@ -11,6 +11,7 @@ import {
   allAges,
   allFormats,
   allAreas,
+  allProviders,
 } from '../src/context/FilterContext'
 import { ButtonBase } from '../src/Components/ButtonBase'
 import { NotificationsContext } from '../src/context/NotificationsContext'
@@ -139,8 +140,17 @@ const CloseButton = styled.a`
 
 export const FilterPage: NextPage = () => {
   const { notify } = useContext(NotificationsContext)
-  const { age, ageUpdate, formats, formatUpdate, areas, areaUpdate, clearAll } =
-    useContext(FilterContext)
+  const {
+    age,
+    ageUpdate,
+    formats,
+    formatUpdate,
+    areas,
+    areaUpdate,
+    providers,
+    providerUpdate,
+    clearAll,
+  } = useContext(FilterContext)
 
   const saveNotify = () => {
     notify({
@@ -213,9 +223,23 @@ export const FilterPage: NextPage = () => {
             </RadioGroup>
           </fieldset>
         </FilterSection>
-        {/* <FilterSection>
-        <h3>Cost</h3>
-      </FilterSection> */}
+        <FilterSection borderBottom>
+          <fieldset>
+            <legend>Provider</legend>
+            <CheckboxGroup>
+              {allProviders.map((provider) => {
+                return (
+                  <Checkbox
+                    key={provider}
+                    label={provider}
+                    checked={providers.includes(provider)}
+                    onChange={() => providerUpdate(provider)}
+                  />
+                )
+              })}
+            </CheckboxGroup>
+          </fieldset>
+        </FilterSection>
         <FilterSection borderBottom>
           <fieldset>
             <legend>Format of Support / Activity</legend>
