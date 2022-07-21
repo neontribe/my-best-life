@@ -3,8 +3,8 @@ organisation: Upper Norwood Library Trust
 title: Upper Norwood Library Hub Summer Camps For Children
 shortDescription: Drama, dance and music sessions
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: img/dance-1.jpg
+  imageAlt: The silhouette of three people dancing
 description: >
   Performing Arts August summer camp 1-5 August & 8-12 August Your young
   performers will have the opportunity to discover new skills, techniques and
