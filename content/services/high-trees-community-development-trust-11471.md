@@ -1,7 +1,7 @@
 ---
 organisation: High Trees Community Development Trust
 title: Tulse Hill Adventure Playground Summer Playscheme
-shortDescription: Games and daytrips
+shortDescription: "Games and daytrips "
 image:
   image: img/high-trees.jpg
   imageAlt: A group of young people on a tire swing
