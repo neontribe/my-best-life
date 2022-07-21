@@ -3,8 +3,8 @@ organisation: Bigkid Foundation
 title: BIGKID Summer Holiday programme
 shortDescription: Sports and youth club
 image:
-  image: img/skipping.jpg
-  imageAlt: Young people playing with a skipping rope
+  image: img/bigkid-foundation-holiday-programme.jpg
+  imageAlt: Large group of young people in lifejackets
 description: >
   BIGKID Summer Holiday programme is a 4 week programme filled with different
   activities Monday to Friday. Each day we will be open for 4 hours and run
