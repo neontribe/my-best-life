@@ -130,7 +130,7 @@ export const DesktopNav = (): JSX.Element => {
             <SmallLinkItem
               activePage={currentPage === '/summer-of-food-and-fun'}
             >
-              Summer of Food and Fun
+              Summer Activities
             </SmallLinkItem>
           </Link>
         </li>

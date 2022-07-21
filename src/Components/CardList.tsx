@@ -221,7 +221,13 @@ export const CardList = ({
 
   const providerFilter = useCallback(
     (item: ServicePreview, providerInput: string | undefined) => {
-      if (item.provider === providerInput) return true
+      if (providerInput === undefined) {
+        return true
+      }
+
+      if (item.provider === providerInput) {
+        return true
+      }
     },
     []
   )
