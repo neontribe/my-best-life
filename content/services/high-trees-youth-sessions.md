@@ -1,10 +1,10 @@
 ---
 organisation: High Trees
 title: Youth Sessions
-shortDescription: Cookery, games and daytrips
+shortDescription: Adventure playground and games
 image:
   image: img/powderpaint-980x715.jpg
-  imageAlt: A group of young people on a tire swing
+  imageAlt: An adventure playground
 description: Table tennis, table football, air hockey and pool. Video games
   (PS3, PS4 and Wii). Quizzes, card games and board games. Sports sessions and
   team games. Woodwork and construction activities. Cooking. Work together to
