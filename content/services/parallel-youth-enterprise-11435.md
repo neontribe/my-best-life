@@ -24,6 +24,7 @@ feelings:
   - hopeful
 costValue: 10
 costQualifier: £10 per day
+costExplanation: £10 per day
 age:
   minAge: 9
   maxAge: 16
@@ -65,7 +66,8 @@ timeList:
       start_time: 10:00 AM
       end_time: 4:00 PM
 area:
-  - Brixton/Stockwell
+  - Brixton Tulse Hill
+time: ""
 expectation: >
   Family rates and concessions available please let us know if you would like
   more information. 
@@ -79,6 +81,10 @@ expectation: >
   The projects offer some an alternative to young people being involved in anti-social conduct and crime, or perhaps being a victim of crime. The projects are an ideal non-confrontational platform for both police officers and young people to meet. This often helps develop harmony from both sides.
 
   Discovering new skills and understanding within the project workshops can be a foundation stone for future personal development and maybe a route out of deprivation and a road to employment and self-esteem.
+contactExplanation: "To request an enrolment form, your parent, guardian or
+  another referrer send an email including your full name, gender, age and date
+  of birth, your postcode, and the name and contact number of the parent /
+  guardian / referrer. "
 phone: 07767 352 610
 provider: Summer of Food and Fun 2022
 email: street.john@talk21.com
