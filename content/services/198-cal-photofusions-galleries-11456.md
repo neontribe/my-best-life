@@ -58,7 +58,7 @@ timeList:
       start_time: 11:00 AM
       end_time: 3:30 PM
 area:
-  - Brixton/Stockwell
+  - Clapham and Brixton Hill
 expectation: >
   The workshop will have at least one hour of structured physical activity
   through photgraphy, games etc.  These workshops aim to demonstrate how
