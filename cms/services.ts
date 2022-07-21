@@ -374,7 +374,6 @@ async function createMarkdownFromCSV(overwriteEntries: boolean = false) {
 
         const image =
           'img/fidfallback_' + Math.floor(Math.random() * 3 + 1) + '.jpg'
-        const imageAlt = 'Family Information Directory fallback image'
 
         const genders = genderEntries.map((entry) =>
           entry.eligibility_criteria_description.toLowerCase()
@@ -415,7 +414,7 @@ title: ${service.provider_name}
 shortDescription: ${service.provider_name} + description
 image:
   image: "${image}"
-  imageAlt: "${imageAlt}"
+  imageAlt: ""
 interests: ${JSON.stringify(interests)}
 feelings:
 description: "${service.service_description}"
