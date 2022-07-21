@@ -32,7 +32,7 @@ format: Meeting a group of people
 location: Vauxhall Five Community Centre, St Oswald's Place, London, SE11 5JF
 makeMapLink: true
 area:
-  - Brixton/Stockwell
+  - North Lambeth
 email: info@uklatincommunity.org
 form: https://forms.gle/dywWJPBLrkXYJ3eE8
 timeList:
