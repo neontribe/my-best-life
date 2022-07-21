@@ -56,7 +56,7 @@ timeList:
       start_time: 10:00 AM
       end_time: 4:00 PM
 area:
-  - Brixton/Stockwell
+  - Brixton Stockwell
 expectation: ""
 phone: 07894 452 505
 provider: Summer of Food and Fun 2022
