@@ -1,7 +1,7 @@
 ---
 organisation: Bigkid Foundation
 title: BIGKID Summer Holiday programme
-shortDescription: Sports and youth club
+shortDescription: Summer sports club
 image:
   image: img/bigkid-foundation-holiday-programme.jpg
   imageAlt: Large group of young people in lifejackets
@@ -63,7 +63,7 @@ timeList:
       start_time: 2:00 PM
       end_time: 6:00 PM
 area:
-  - Brixton/Stockwell
+  - Brixton Tulse Hill
 expectation: "You'll get the chance to try new things, experience something
   outside your comfort zone, make new friendships, and engage in more positive
   activities when not in school. "
