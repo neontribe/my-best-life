@@ -3,8 +3,8 @@ organisation: Triangle Adventure Playground
 title: Triangle Adventure Playground Summer Holiday Playscheme
 shortDescription: Outdoor games and activities
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: img/triangle.jpg
+  imageAlt: A group of young people playing in an adventure playground
 description: >
   Triangle Adventure Playground will be offering adventure play, sports, arts &
   crafts, outdoor play, games, nature play and free play.
