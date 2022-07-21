@@ -1,6 +1,6 @@
 import { createContext, FC, PropsWithChildren, useState } from 'react'
 
-import { Area, Provider } from '../../cms/services'
+import { Area } from '../../cms/services'
 
 interface FilterContextValue {
   age: string | undefined
@@ -9,8 +9,8 @@ interface FilterContextValue {
   formatUpdate: (input: string) => void
   areas: Array<Area>
   areaUpdate: (input: Area) => void
-  providers: Array<Provider>
-  providerUpdate: (input: Provider) => void
+  provider: string | undefined
+  providerUpdate: (input: string) => void
   clearAll: () => void
 }
 
@@ -21,7 +21,7 @@ const defaultValueShape = {
   formatUpdate: () => undefined,
   areas: [],
   areaUpdate: () => undefined,
-  providers: [],
+  provider: '',
   providerUpdate: () => undefined,
   clearAll: () => undefined,
 }
@@ -44,7 +44,7 @@ export const allAreas: Array<Area> = [
   'North Lambeth',
 ]
 
-export const allProviders: Array<Provider> = ['Summer of Food and Fun 2022']
+export const allProviders = ['Summer of Food and Fun 2022']
 
 export const FilterContext =
   createContext<FilterContextValue>(defaultValueShape)
@@ -53,7 +53,7 @@ export const FilterProvider: FC<PropsWithChildren<any>> = ({ children }) => {
   const [formats, setFormats] = useState<Array<string>>([])
   const [age, setAge] = useState<string | undefined>()
   const [areas, setAreas] = useState<Array<Area>>([])
-  const [providers, setProviders] = useState<Array<Provider>>([])
+  const [provider, setProvider] = useState<string | undefined>()
 
   function ageUpdate(input: string) {
     setAge(input)
@@ -81,21 +81,14 @@ export const FilterProvider: FC<PropsWithChildren<any>> = ({ children }) => {
     }
   }
 
-  function providerUpdate(input: Provider) {
-    const currentItems = providers
-
-    if (currentItems.includes(input)) {
-      setProviders(currentItems.filter((item) => item !== input))
-    } else {
-      currentItems.push(input)
-      setProviders([...currentItems])
-    }
+  function providerUpdate(input: string) {
+    setProvider(input)
   }
 
   function clearAll() {
     setAge(undefined)
     setFormats([])
-    setProviders([])
+    setProvider(undefined)
     setAreas([])
   }
 
@@ -108,7 +101,7 @@ export const FilterProvider: FC<PropsWithChildren<any>> = ({ children }) => {
         formatUpdate,
         areas,
         areaUpdate,
-        providers,
+        provider,
         providerUpdate,
         clearAll,
       }}

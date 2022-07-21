@@ -147,7 +147,7 @@ export const FilterPage: NextPage = () => {
     formatUpdate,
     areas,
     areaUpdate,
-    providers,
+    provider,
     providerUpdate,
     clearAll,
   } = useContext(FilterContext)
@@ -226,18 +226,20 @@ export const FilterPage: NextPage = () => {
         <FilterSection borderBottom>
           <fieldset>
             <legend>Provider</legend>
-            <CheckboxGroup>
-              {allProviders.map((provider) => {
+            <VerticalSpacing size={1} />
+            <RadioGroup>
+              {allProviders.map((item) => {
                 return (
-                  <Checkbox
-                    key={provider}
-                    label={provider}
-                    checked={providers.includes(provider)}
-                    onChange={() => providerUpdate(provider)}
+                  <RadioButton
+                    key={item}
+                    label={item}
+                    name={'provider'}
+                    checked={item === provider}
+                    onChange={providerUpdate}
                   />
                 )
               })}
-            </CheckboxGroup>
+            </RadioGroup>
           </fieldset>
         </FilterSection>
         <FilterSection borderBottom>

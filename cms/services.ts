@@ -91,8 +91,6 @@ export type Area =
   | 'Streatham'
   | 'North Lambeth'
 
-export type Provider = 'Summer of Food and Fun 2022'
-
 export type ServiceDetail = Pick<
   Service,
   | 'id'
