@@ -73,7 +73,7 @@ timeList:
       start_time: 10:30 AM
       end_time: 2:30 PM
 area:
-  - Brixton/Stockwell
+  - Clapham and Brixton Hill
 expectation: >
   Free for children with free school meals.
 
