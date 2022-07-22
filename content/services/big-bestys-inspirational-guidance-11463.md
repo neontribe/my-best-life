@@ -52,7 +52,7 @@ area:
   - Norwood
 expectation: >
   Please contact the provider directly for more information regarding delivery
-  times and prices. 
+  times and prices.
 
   You will engage in fun football activities in a family-like environment. You can be at any level and you will still be welcome and will not feel out of place. You will get lots of physical exercise, and through challenging yourself, with exercise your brain as well as testing yourself in a safe fun environment with ‘stretchy’ learning, which will develop your resilience.
 

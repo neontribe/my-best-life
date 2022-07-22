@@ -16,7 +16,7 @@ description: >
   meal planning guide. Each week will culminate with enrichment trips to fun
   offsite places of interest. (Trips will be chargeable).
 
-  This is a NUT FREE site. No food containing nuts will be permitted on site. 
+  This is a NUT FREE site. No food containing nuts will be permitted on site.
 
   Suitable for children and young people with special educational needs and disabilities.
 categories:
@@ -67,9 +67,9 @@ area:
   - Norwood
 expectation: >
   Our activities 1can accomodate young people with SEND up to the age 25 years
-  old. 
+  old.
 
-  Free to access onsite days however offsite  trips are chargeable, please ask us for more information. 
+  Free to access onsite days however offsite  trips are chargeable, please ask us for more information.
 phone: 020 8766 9280
 provider: Summer of Food and Fun 2022
 email: c.king@rathbonesociety.org.uk

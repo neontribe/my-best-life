@@ -81,7 +81,7 @@ expectation: >
 
   The club is an inclusive setting for eight to sixteen-year-olds. On arrival, our playworkers will support the young people to prepare a healthy meal which they will sit down and eat together in our dining area.
 
-  Please note the mobile number is only in use 10am to 7pm Tuesday to Friday. 
+  Please note the mobile number is only in use 10am to 7pm Tuesday to Friday.
 phone: 020 7738 6633
 provider: Summer of Food and Fun 2022
 email: yjama@whippersnappers.org

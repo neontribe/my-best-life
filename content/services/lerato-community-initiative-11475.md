@@ -61,7 +61,7 @@ timeList:
 area:
   - Brixton Stockwell
 expectation: >
-  Booking process with web link for online registration, hot meal & drinks. 
+  Booking process with web link for online registration, hot meal & drinks.
 
   Follow us on Instagram @leratocic and Twitter @LeratoCIC
 

@@ -8,7 +8,7 @@ image:
 description: >
   Triangle Adventure Playground will be offering adventure play, sports, arts &
   crafts, outdoor play, games, nature play and free play.
-   
+
   Suitable for children and young people with special educational needs and disabilities.
 categories:
   category1: Friends
@@ -64,7 +64,7 @@ area:
   - North Lambeth
 expectation: >
   Young people must be registered via our website before attending the
-  playground for the first time. 
+  playground for the first time.
 
   http://triangleadventureplayground.com/parents-info-1
 
@@ -72,7 +72,7 @@ expectation: >
 
   IG - https://www.instagram.com/triangle_adventure_playground/
 
-  A fun and playful open access adventure playground for  6 to 17 years old, with outdoor play, arts and crafts, sports, trips, learning new skills, making new friends and space to chill. 
+  A fun and playful open access adventure playground for  6 to 17 years old, with outdoor play, arts and crafts, sports, trips, learning new skills, making new friends and space to chill.
 
   Come and go as you please once registered!
 phone: 07900 475 143
