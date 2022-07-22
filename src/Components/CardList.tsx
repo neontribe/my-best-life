@@ -46,7 +46,7 @@ export const CardList = ({
   services,
   listType,
 }: CardListProps): JSX.Element => {
-  const { age, formats, areas } = useContext(FilterContext)
+  const { age, formats, areas, provider } = useContext(FilterContext)
   const { saved } = useContext(SaveContext)
   const { fullDataGet } = useContext(QuizContext)
 
@@ -219,6 +219,19 @@ export const CardList = ({
     []
   )
 
+  const providerFilter = useCallback(
+    (item: ServicePreview, providerInput: string | undefined) => {
+      if (providerInput === undefined) {
+        return true
+      }
+
+      if (item.provider === providerInput) {
+        return true
+      }
+    },
+    []
+  )
+
   const assignQuizScore = useCallback(
     (item: ServicePreview) => {
       item.score = 0
@@ -282,6 +295,7 @@ export const CardList = ({
         .filter((item) => ageFilter(item, age))
         .filter(formatFilter)
         .filter(areaFilter)
+        .filter((item) => providerFilter(item, provider))
         .sort((a, b) => {
           if (a.promoted && !b.promoted) return -1
           if (b.promoted && !a.promoted) return 1
@@ -294,12 +308,14 @@ export const CardList = ({
     quizAnswers,
     saved,
     age,
+    provider,
     services,
     listType,
     ageFilter,
     genderFilter,
     formatFilter,
     areaFilter,
+    providerFilter,
     assignQuizScore,
   ])
 
