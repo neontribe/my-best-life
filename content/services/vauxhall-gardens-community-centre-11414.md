@@ -15,7 +15,7 @@ description: >
   
   Suitable for children and young people with special educational needs and disabilities.
   
-costValue: 
+costValue: 0
 costQualifier: 
 format: Meeting a group of people
 expectation: >

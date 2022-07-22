@@ -30,7 +30,7 @@ age:
   minAge: 5
   maxAge: 16
 timeList: {startDate: 25/07/2022, endDate: 02/09/2022, days: [{"id":"11474","fis_provider_name":"Lambeth Tigers Summer Camp","day":"Monday","start_time":"9:30 AM","end_time":"3:30 PM"},{"id":"11474","fis_provider_name":"Lambeth Tigers Summer Camp","day":"Tuesday","start_time":"9:30 AM","end_time":"3:30 PM"},{"id":"11474","fis_provider_name":"Lambeth Tigers Summer Camp","day":"Wednesday","start_time":"9:30 AM","end_time":"3:30 PM"},{"id":"11474","fis_provider_name":"Lambeth Tigers Summer Camp","day":"Thursday","start_time":"9:30 AM","end_time":"3:30 PM"},{"id":"11474","fis_provider_name":"Lambeth Tigers Summer Camp","day":"Friday","start_time":"9:30 AM","end_time":"3:30 PM"}] }
-gender: ["male"]
+gender: ["female","male","non-binary/non-conforming","transgender"]
 provider: Summer of Food and Fun 2022
 ---
 

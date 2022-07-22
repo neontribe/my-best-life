@@ -17,7 +17,7 @@ description: >
   Suitable for children and young people with special educational needs and disabilities.
   
   
-costValue: 
+costValue: 0
 costQualifier: 
 format: Meeting a group of people
 expectation: >
@@ -27,7 +27,7 @@ expectation: >
   
 email: c.king@rathbonesociety.org.uk
 phone: 020 8766 9280
-website: https://rathbonesociety.org.uk/
+website: 
 location: The Old Library , 14 - 16 Knight's Hill, London, SE27 0HY
 area: ["Norwood"]
 makeMapLink: true
@@ -35,7 +35,7 @@ age:
   minAge: 11
   maxAge: 19
 timeList: {startDate: 26/07/2022, endDate: 26/08/2022, days: [{"id":"11431","fis_provider_name":"Rathbone Summer Fit And Fun Activities Programme","day":"Tuesday","start_time":"1:00 PM","end_time":"6:00 PM"},{"id":"11431","fis_provider_name":"Rathbone Summer Fit And Fun Activities Programme","day":"Wednesday","start_time":"1:00 PM","end_time":"6:00 PM"},{"id":"11431","fis_provider_name":"Rathbone Summer Fit And Fun Activities Programme","day":"Thursday","start_time":"1:00 PM","end_time":"6:00 PM"},{"id":"11431","fis_provider_name":"Rathbone Summer Fit And Fun Activities Programme","day":"Friday","start_time":"1:00 PM","end_time":"6:00 PM"}] }
-gender: ["female"]
+gender: ["female","male","non-binary/non-conforming","transgender"]
 provider: Summer of Food and Fun 2022
 ---
 

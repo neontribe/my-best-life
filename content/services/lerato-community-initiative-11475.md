@@ -24,7 +24,7 @@ expectation: >
   
 email: info@leratocommunityinitiative.org.uk
 phone: 020 8033 2375
-website: https://www.leratocommunityinitiative.org.uk/
+website: 
 location: Mursell Community Hall, Portland Grove, London, SW8 1JB
 area: ["Brixton/Stockwell"]
 makeMapLink: true
@@ -32,7 +32,7 @@ age:
   minAge: 8
   maxAge: 16
 timeList: {startDate: 01/08/2022, endDate: 26/08/2022, days: [{"id":"11475","fis_provider_name":"Lerato Summer Camp","day":"Monday","start_time":"12:30 PM","end_time":"4:30 PM"},{"id":"11475","fis_provider_name":"Lerato Summer Camp","day":"Tuesday","start_time":"12:30 PM","end_time":"4:30 PM"},{"id":"11475","fis_provider_name":"Lerato Summer Camp","day":"Wednesday","start_time":"12:30 PM","end_time":"4:30 PM"},{"id":"11475","fis_provider_name":"Lerato Summer Camp","day":"Thursday","start_time":"12:30 PM","end_time":"4:30 PM"}] }
-gender: ["female"]
+gender: ["female","male","non-binary/non-conforming","transgender"]
 provider: Summer of Food and Fun 2022
 ---
 

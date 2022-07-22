@@ -32,7 +32,7 @@ expectation: >
   
 email: triangleapg@gmail.com
 phone: 07900 475 143
-website: http://triangleadventureplayground.com/
+website: 
 location: Ashmole Street, , London, SW8 1NE
 area: ["North Lambeth"]
 makeMapLink: true
@@ -40,7 +40,7 @@ age:
   minAge: 6
   maxAge: 17
 timeList: {startDate: 25/07/2022, endDate: 02/09/2022, days: [{"id":"11417","fis_provider_name":"Triangle Adventure Playground Summer Holiday Playscheme","day":"Monday","start_time":"12:00 PM","end_time":"6:00 PM"},{"id":"11417","fis_provider_name":"Triangle Adventure Playground Summer Holiday Playscheme","day":"Tuesday","start_time":"12:00 PM","end_time":"6:00 PM"},{"id":"11417","fis_provider_name":"Triangle Adventure Playground Summer Holiday Playscheme","day":"Wednesday","start_time":"12:00 PM","end_time":"6:00 PM"},{"id":"11417","fis_provider_name":"Triangle Adventure Playground Summer Holiday Playscheme","day":"Thursday","start_time":"12:00 PM","end_time":"6:00 PM"},{"id":"11417","fis_provider_name":"Triangle Adventure Playground Summer Holiday Playscheme","day":"Friday","start_time":"12:00 PM","end_time":"6:00 PM"}] }
-gender: ["male"]
+gender: ["female","male","non-binary/non-conforming","transgender"]
 provider: Summer of Food and Fun 2022
 ---
 
