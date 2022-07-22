@@ -2,32 +2,13 @@ import React, { useState, useEffect } from 'react'
 import { NextPage, GetStaticProps } from 'next'
 
 import { Service, getServices } from '../cms/services'
+import { ServicePreview } from './index'
 import { CardList } from '../src/Components/CardList'
 import { Layout } from '../src/Components/Layout'
 
 interface ListPageProps {
   services: Array<ServicePreview>
 }
-
-export type ServicePreview = Pick<
-  Service,
-  | 'id'
-  | 'organisation'
-  | 'title'
-  | 'shortDescription'
-  | 'image'
-  | 'costValue'
-  | 'costQualifier'
-  | 'age'
-  | 'categories'
-  | 'interests'
-  | 'feelings'
-  | 'gender'
-  | 'format'
-  | 'score'
-  | 'promoted'
-  | 'area'
->
 
 export const ListPage: NextPage<ListPageProps> = ({ services }) => {
   // Default to showing the welcome screen
@@ -60,7 +41,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const allServices = getServices()
 
   const allServicePreviews: Array<ServicePreview> = allServices
-    .filter((service) => service.provider === 'Summer of Food and Fun 2022')
+    .filter((service) => service.provider !== undefined)
     .map((service: Service) => {
       const servicePreview = {
         id: service.id,
