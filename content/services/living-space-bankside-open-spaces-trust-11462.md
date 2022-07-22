@@ -1,34 +1,60 @@
 ---
 organisation: Living Space Bankside Open Spaces Trust
-fidId: 11462
 title: Oasis Summer Activities At Living Space
-shortDescription: Oasis Summer Activities At Living Space + description
+shortDescription: Crafts, sports and workshops
 image:
+<<<<<<< HEAD
   image: "img/fidfallback_1.jpg"
   imageAlt: "Family Information Directory fallback image"
 interests: ["Sports","Cooking","Outdoor Activities"]
+=======
+  image: img/oasis-activity.jpeg
+  imageAlt: Three boys playing in a basketball court
+description: >
+  Teens summer activities run by Oasis Youth Hub at Living Space in Waterloo
+  including cooking, arts and crafts, outdoor sports in football cage, CV and
+  school prep, various workshops.
+
+  Hang out with your peers to take part in interesting activities, chill out or make it high energy - its up to you. Lots of activities to chose from, also mentoring from experienced youth workers if you need a chat!
+categories:
+  category1: Physical Health
+  category2: Friends
+interests:
+  - Sports
+  - Cooking
+  - Outdoor Activities
+>>>>>>> development
 feelings:
-description: "Teens summer activities run by Oasis Youth Hub at Living Space in Waterloo including cooking, arts and crafts, outdoor sports in football cage, CV and school prep, various workshops.
-
-Hang out with your peers to take part in interesting activities, chill out or make it high energy - its up to you. Lots of activities to chose from, also mentoring from experienced youth workers if you need a chat!"
+  - hopeful
+  - anxious
+  - okay
 costValue: 0
-costQualifier: 
-format: Meeting a group of people
-expectation: "The sessions will run on Monday's, Tuesday's, Wednesday's and Friday's but the times vary. please email Jordan Gayle for more information. 
-
-Booking in advance is essential. 
-"
-email: Jordan.Gayle@oasiswaterloo.org
-phone: 020 7921 4209
-website: 
-location: Living Space, 1 Coral Street, London, SE1 7BE
-area: ["North Lambeth"]
-makeMapLink: true
+costQualifier: null
 age:
   minAge: 11
   maxAge: 16
-timeList: {startDate: 25/07/2022, endDate: 26/08/2022, days: [] }
-gender: ["female","male","non-binary/non-conforming","transgender"]
-provider: Summer of Food and Fun 2022
----
+gender:
+  - female
+  - male
+  - non-binary/non-conforming
+  - transgender
+format: Meeting a group of people
+location: Living Space, 1 Coral Street, London, SE1 7BE
+makeMapLink: true
+timeList:
+  startDate: 25/07/2022
+  endDate: 26/08/2022
+  days: []
+area:
+  - North Lambeth
+expectation: >
+  The sessions will run on Monday's, Tuesday's, Wednesday's and Friday's but the
+  times vary. please email Jordan Gayle for more information. 
 
+  Booking in advance is essential. 
+phone: 020 7921 4209
+provider: Summer of Food and Fun 2022
+email: Jordan.Gayle@oasiswaterloo.org
+website: null
+fidId: 11462
+---

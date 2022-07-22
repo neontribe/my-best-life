@@ -18,6 +18,7 @@ export type CardDisplay = Pick<
   | 'age'
   | 'gender'
   | 'format'
+  | 'provider'
 >
 
 const CardContainer = styled.li`
@@ -72,7 +73,6 @@ const Description = styled.h2`
   font-family: 'Catamaran', sans-serif;
   font-size: ${(props) => props.theme.fontSizes.heading};
   font-weight: bold;
-  margin-bottom: 1rem;
   order: 3;
   padding: 0 1rem;
   text-transform: capitalize;
@@ -99,18 +99,26 @@ const ImageContainer = styled.div`
 
 const InfoContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   font-family: 'Lato', sans-serif;
   font-size: ${(props) => props.theme.fontSizes.small};
   margin: 0 1rem;
   margin-bottom: 1rem;
+  margin-top: 1rem;
   order: 4;
+`
 
-  div {
-    background-color: #edf7f6;
-    border-radius: 0.5rem;
-    padding: 0.25rem 0.5rem;
-    margin-right: 1rem;
-  }
+const LabelButton = styled.div`
+  background-color: ${(props) => props.theme.colours.aqua_light};
+  border-radius: 1.5rem;
+  padding: 0.25rem 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+`
+
+const LabelButton2 = styled(LabelButton)`
+  background-color: ${(props) => props.theme.colours.yellow_light};
 `
 
 const SaveButtonContainer = styled.div`
@@ -129,6 +137,7 @@ export const Card = React.forwardRef(function Card(
     costValue,
     costQualifier,
     age,
+    provider,
   }: CardDisplay,
   ref: React.Ref<HTMLLIElement>
 ): JSX.Element {
@@ -170,8 +179,9 @@ export const Card = React.forwardRef(function Card(
       <ServiceName>{title}</ServiceName>
 
       <InfoContainer>
-        {costDisplay && <div>{costDisplay}</div>}
-        {ageDisplay && <div>{ageDisplay}</div>}
+        {costDisplay && <LabelButton>{costDisplay}</LabelButton>}
+        {ageDisplay && <LabelButton>{ageDisplay}</LabelButton>}
+        {provider && <LabelButton2>this month</LabelButton2>}
       </InfoContainer>
 
       <SaveButtonContainer>
