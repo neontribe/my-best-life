@@ -34,7 +34,7 @@ format: Meeting a group of people
 location: The Clapham Park Cube, 116 Kings Avenue, London, SW4 8DF
 makeMapLink: true
 area:
-  - Brixton/Stockwell
+  - Clapham and Brixton Hill
 email: Theresa.Agyeman@mtvh.co.uk or Wahid.Islam@mtvh.co.uk
 form: "https://forms.office.com/r/03URFBUjVu "
 timeList:
