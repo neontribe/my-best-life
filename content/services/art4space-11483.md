@@ -3,8 +3,8 @@ organisation: Art4space
 title: Art4space Summer Scrap Club
 shortDescription: Upcycling, cookery & exercise sessions
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: img/art4space.jpg
+  imageAlt: Rainbow wheel made from found plastic toys.
 description: >
   Zero Waste holiday workshops with Art4Space. 
 
