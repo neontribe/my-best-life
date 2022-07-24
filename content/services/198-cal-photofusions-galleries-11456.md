@@ -1,7 +1,7 @@
 ---
 organisation: 198 Cal/& Photofusion’s Galleries
 title: Artist Minds With 198 Contemporary Arts And Learning And Photofusion
-shortDescription: Photography and crafts sessions
+shortDescription: "Photography and crafts sessions "
 image:
   image: img/photography-4.jpg
   imageAlt: A guy with a camera posing for a photo
