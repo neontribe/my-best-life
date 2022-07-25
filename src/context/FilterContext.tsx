@@ -9,6 +9,8 @@ interface FilterContextValue {
   formatUpdate: (input: string) => void
   areas: Array<Area>
   areaUpdate: (input: Area) => void
+  provider: string | undefined
+  providerUpdate: (input: string) => void
   clearAll: () => void
 }
 
@@ -19,6 +21,8 @@ const defaultValueShape = {
   formatUpdate: () => undefined,
   areas: [],
   areaUpdate: () => undefined,
+  provider: '',
+  providerUpdate: () => undefined,
   clearAll: () => undefined,
 }
 
@@ -40,6 +44,8 @@ export const allAreas: Array<Area> = [
   'North Lambeth',
 ]
 
+export const allProviders = ['Summer of Food and Fun 2022']
+
 export const FilterContext =
   createContext<FilterContextValue>(defaultValueShape)
 
@@ -47,6 +53,7 @@ export const FilterProvider: FC<PropsWithChildren<any>> = ({ children }) => {
   const [formats, setFormats] = useState<Array<string>>([])
   const [age, setAge] = useState<string | undefined>()
   const [areas, setAreas] = useState<Array<Area>>([])
+  const [provider, setProvider] = useState<string | undefined>()
 
   function ageUpdate(input: string) {
     setAge(input)
@@ -74,9 +81,14 @@ export const FilterProvider: FC<PropsWithChildren<any>> = ({ children }) => {
     }
   }
 
+  function providerUpdate(input: string) {
+    setProvider(input)
+  }
+
   function clearAll() {
     setAge(undefined)
     setFormats([])
+    setProvider(undefined)
     setAreas([])
   }
 
@@ -89,6 +101,8 @@ export const FilterProvider: FC<PropsWithChildren<any>> = ({ children }) => {
         formatUpdate,
         areas,
         areaUpdate,
+        provider,
+        providerUpdate,
         clearAll,
       }}
     >

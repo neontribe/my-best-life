@@ -180,7 +180,7 @@ const fixtureDirectory = path.join(process.cwd(), './fixtures')
 
 export function getServices(): Array<Service> {
   // This will be re-enabled when the source files are received from emails
-  //createMarkdownFromCSV(true)
+  // createMarkdownFromCSV(true)
 
   const fileNames = fs.readdirSync(contentDirectory)
 
@@ -424,7 +424,8 @@ description: >
 costValue: ${costValue || 0}
 costQualifier: ${costQualifier}
 format: ${service.delivery_channel_description}
-expectation: "${service.note}"
+expectation: >
+  ${service.note.replace(/\r\n/g, '\r\n  ')}
 email: ${service.e_mail}
 phone: ${service.telephone || service.mobile}
 website: ${service.web_site}

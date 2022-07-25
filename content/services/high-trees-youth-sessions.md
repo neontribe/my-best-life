@@ -1,10 +1,10 @@
 ---
 organisation: High Trees
 title: Youth Sessions
-shortDescription: Youth sessions with a variety of activities
+shortDescription: Adventure playground and games
 image:
   image: img/powderpaint-980x715.jpg
-  imageAlt: A child playing on a climbing frame
+  imageAlt: An adventure playground
 description: Table tennis, table football, air hockey and pool. Video games
   (PS3, PS4 and Wii). Quizzes, card games and board games. Sports sessions and
   team games. Woodwork and construction activities. Cooking. Work together to
@@ -16,6 +16,10 @@ interests:
   - Cooking
   - Sports
   - Gaming
+feelings:
+  - hopeful
+  - excited
+  - okay
 costValue: 0
 age:
   minAge: 8

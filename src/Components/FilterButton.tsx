@@ -49,10 +49,12 @@ const ActiveFilters = styled.div`
 `
 
 export const FilterButton = (): JSX.Element => {
-  const { age, formats, areas } = useContext(FilterContext)
+  const { age, formats, areas, provider } = useContext(FilterContext)
 
   const ageValue = age?.length ? 1 : 0
-  const activeFilterItems = formats.length + areas.length + ageValue
+  const providerValue = provider?.length ? 1 : 0
+  const activeFilterItems =
+    formats.length + areas.length + ageValue + providerValue
 
   return (
     <ButtonContainer>
