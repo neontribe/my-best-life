@@ -20,6 +20,9 @@ interests:
   - Sports
   - Art and Design
   - Cooking
+feelings:
+  - okay
+  - excited
 costValue: 0
 age:
   minAge: 6
@@ -41,5 +44,4 @@ contactExplanation: >-
 email: "info@lollardstplay.org.uk "
 phone: 0207 793 9592
 website: https://www.lollardstplay.org.uk/what-happens-here/
-
 ---
