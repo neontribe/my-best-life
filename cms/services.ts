@@ -4,6 +4,9 @@ import path from 'path'
 import csvparser from 'csv-parser'
 import { format, parse } from 'date-fns'
 import en_GB from 'date-fns/locale/en-GB'
+import { google } from 'googleapis'
+import type { gmail_v1 } from 'googleapis'
+import type { GaxiosResponse } from 'gaxios'
 
 // This interface should match the config of the CMS
 export interface Service {
@@ -170,6 +173,9 @@ interface FidCategoryEntry {
 }
 
 const contentDirectory = path.join(process.cwd(), './content/services')
+const csvDirectory = path.join(process.cwd(), './content/csv/')
+// We are aware this is unused - it is for testing
+// eslint-disable-next-line
 const fixtureDirectory = path.join(process.cwd(), './fixtures')
 
 export function getServices(): Array<Service> {
@@ -234,19 +240,18 @@ export function getServiceData(id: string): ServiceDetail {
  * @param {boolean} overwriteEntries - whether to overwrite content in existing md files
  */
 async function createMarkdownFromCSV(overwriteEntries: boolean = false) {
+  downloadData()
+
   // Data delivered in several CSVs, majority of data comes from MBL main details.csv
-  const mainFile = path.join(fixtureDirectory, `MBL main details.csv`)
+  const mainFile = path.join(csvDirectory, `MBL main details.csv`)
   const ageFile = path.join(
-    fixtureDirectory,
+    csvDirectory,
     `MBL minimum and maximum age range.csv`
   )
-  const timeFile = path.join(fixtureDirectory, `MBL Time info.csv`)
-  const genderFile = path.join(fixtureDirectory, `MBL Gender.csv`)
-  const areaFile = path.join(fixtureDirectory, `MBL area covered.csv`)
-  const categoryFile = path.join(
-    fixtureDirectory,
-    `MBL Interests and Category.csv`
-  )
+  const timeFile = path.join(csvDirectory, `MBL Time info.csv`)
+  const genderFile = path.join(csvDirectory, `MBL Gender.csv`)
+  const areaFile = path.join(csvDirectory, `MBL area covered.csv`)
+  const categoryFile = path.join(csvDirectory, `MBL Interests and Category.csv`)
 
   const fidAgeData = await fileToArray<FidAgeEntry>(ageFile)
   const fidTimeData = await fileToArray<FidTimeEntry>(timeFile)
@@ -414,8 +419,9 @@ image:
   imageAlt: ""
 interests: ${JSON.stringify(interests)}
 feelings:
-description: "${service.service_description}"
-costValue: ${costValue}
+description: >
+  ${service.service_description.replace(/\n/g, '\n  ')}
+costValue: ${costValue || 0}
 costQualifier: ${costQualifier}
 format: ${service.delivery_channel_description}
 expectation: "${service.note}"
@@ -482,4 +488,127 @@ function fileToArray<Type>(file: string): Promise<Array<Type>> {
         resolve(dataArray)
       })
   })
+}
+
+const gmail = google.gmail('v1')
+
+async function downloadData() {
+  const oauth2Client = new google.auth.OAuth2(
+    process.env.CLIENT_ID,
+    process.env.CLIENT_SECRET,
+    process.env.REDIRECT_URIS
+  )
+
+  const tokens = {
+    access_token: process.env.ACCESS_TOKEN,
+    scope: 'https://www.googleapis.com/auth/gmail.readonly',
+    token_type: 'Bearer',
+    expires_in: 3599,
+    refresh_token: process.env.REFRESH_TOKEN,
+  }
+
+  oauth2Client.setCredentials(tokens)
+
+  google.options({ auth: oauth2Client })
+
+  // Attempt to retrieve emails from the expected address that have been sent in the last day
+  let messageListResponse: GaxiosResponse<gmail_v1.Schema$ListMessagesResponse>
+  try {
+    messageListResponse = await gmail.users.messages.list({
+      userId: 'me',
+      q: `from:${process.env.DATA_ADDRESS} newer_than:1d`,
+    })
+  } catch (err) {
+    console.error(err)
+    return
+  }
+
+  if (messageListResponse.data.messages === undefined) {
+    console.error('Message list is undefined')
+    return
+  }
+  if (!messageListResponse.data.messages.length) {
+    console.error('Message list is empty')
+    return
+  }
+
+  // Using the message IDs, retrieve attachment IDs and their names
+  let AttachmentIds
+  AttachmentIds = await Promise.all(
+    messageListResponse.data.messages?.map(async (msg) => {
+      try {
+        const message = await gmail.users.messages.get({
+          userId: 'me',
+          id: msg.id || '',
+        })
+
+        if (
+          message.data.payload?.parts !== undefined &&
+          message.data.payload.parts?.length &&
+          message.data.payload.parts[1]?.parts
+        ) {
+          return {
+            filename: message.data.payload.parts[1].parts[0].filename || '',
+            id:
+              message.data.payload.parts[1]?.parts[0]?.body?.attachmentId || '',
+          }
+        }
+      } catch (err) {
+        console.error(err)
+        return
+      }
+    })
+  )
+
+  if (AttachmentIds !== undefined && AttachmentIds.length) {
+    await Promise.all(
+      AttachmentIds.map(async (attachment, index) => {
+        if (!messageListResponse?.data?.messages) {
+          console.error('Email IDs missing')
+          return
+        }
+
+        let dataToWrite
+        try {
+          dataToWrite = await gmail.users.messages.attachments.get({
+            userId: 'me',
+            messageId: messageListResponse?.data?.messages[index].id || '',
+            id: attachment?.id || '',
+          })
+
+          const fullPath = path.join(
+            path.join(process.cwd(), './content/csv/'),
+            `${attachment?.filename}`
+          )
+
+          const escapedData = decodeURIComponent(
+            escape(
+              atob(
+                dataToWrite?.data?.data
+                  ?.replace(/-/g, '+')
+                  .replace(/_/g, '/') || ''
+              )
+            )
+          )
+
+          fs.writeFile(
+            fullPath,
+            escapedData,
+            {
+              flag: 'w',
+              encoding: 'utf8',
+            },
+            (err) => {
+              if (err) {
+                console.error(err)
+              }
+            }
+          )
+        } catch (err) {
+          console.error(err)
+          return
+        }
+      })
+    )
+  }
 }
