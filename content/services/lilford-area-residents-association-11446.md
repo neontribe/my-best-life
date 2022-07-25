@@ -35,7 +35,7 @@ format: Meeting a group of people
 location: 46, Lilford House, London, SE5 9QD
 makeMapLink: true
 area:
-  - Brixton Tulse Hill
+  - Brixton/Tulse Hill
 email: admin@lara.community
 form: "https://forms.gle/2Ku3zYenpNFiAQvs6 "
 timeList:

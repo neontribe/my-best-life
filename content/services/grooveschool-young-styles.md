@@ -26,7 +26,7 @@ location: >-
 
   Tuesdays and Wednesdays: Business Launchpad, International House, Canterbury Cres, Brixton, London SW9 7QD. 
 area:
-  - Brixton Tulse Hill
+  - Brixton/Tulse Hill
 time: "Mondays: 5pm - 7pm. Tuesdays and Wednesdays, 5pm - 7pm."
 expectation: ""
 contactExplanation: "For all enquiries, email, phone or use the online form. "

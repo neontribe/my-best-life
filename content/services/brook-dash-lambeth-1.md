@@ -25,8 +25,8 @@ location: >+
   Gracefield Gardens Health Centre (under 21s) and Park Campus Academy.
 
 area:
-  - Brixton Stockwell
-  - Clapham and Brixton Hill
+  - Brixton/Stockwell
+  - Clapham/Brixton Hill
   - North Lambeth
   - Norwood
   - Streatham

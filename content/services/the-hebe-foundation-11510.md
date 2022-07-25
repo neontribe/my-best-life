@@ -75,7 +75,7 @@ timeList:
       start_time: 9:00 AM
       end_time: 5:00 PM
 area:
-  - Clapham and Brixton Hill
+  - Clapham/Brixton Hill
 expectation: ""
 phone: 07807 222 010
 provider: Create Your Future summer programme

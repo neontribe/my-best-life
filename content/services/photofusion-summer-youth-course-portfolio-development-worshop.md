@@ -34,7 +34,7 @@ format: One to one chats
 location: 3Space International House, 6 Canterbury Crescent, Brixton SW9 7QD
 makeMapLink: true
 area:
-  - Brixton Tulse Hill
+  - Brixton/Tulse Hill
 time: ""
 expectation: "There are 8 full-fee places on this course, and 2 free places for
   young people who can prove they are eligible for free school meals. "

@@ -25,7 +25,7 @@ format: Meeting a group of people
 location: Ferndale Community Sports Centre, 30 Nursery Road, Brixton SW9 8PB
 makeMapLink: true
 area:
-  - Clapham and Brixton Hill
+  - Clapham/Brixton Hill
 time: Saturdays 10am to 12pm (except summer holiday period)
 expectation: "Astroturf pitches – no studs or blades allowed. "
 contactExplanation: "Get in touch with the St Matthew's Project via phone or email. "

@@ -19,7 +19,7 @@ costValue: 0
 format: Meeting a group of people
 location: Near the Angel Town Estate in Brixton
 area:
-  - Brixton Tulse Hill
+  - Brixton/Tulse Hill
 time: "The course currently runs on Wednesday evening, with another fitness
   class running on Saturday morning. "
 contactExplanation: "For more information about the Boxing Project, or to enrol,

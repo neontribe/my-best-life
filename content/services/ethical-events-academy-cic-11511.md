@@ -56,7 +56,7 @@ location: |-
   , Lambeth Town Hall, London, SW2 1RW
 makeMapLink: true
 area:
-  - Brixton Stockwell
+  - Brixton/Stockwell
 email: info@ethicaleventsacademy.org
 form: https://forms.gle/3HWP592PA7D21Kzi6
 timeList:

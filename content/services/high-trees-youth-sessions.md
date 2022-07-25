@@ -28,7 +28,7 @@ format: Meeting a group of people
 location: Tulse Hill Adventure Playground, SW2 2EY
 makeMapLink: true
 area:
-  - Brixton Tulse Hill
+  - Brixton/Tulse Hill
 time: "Every Monday to Thursday 3:30pm - 7:00pm and Saturdays 12:30pm - 3:30pm. "
 expectation: "Youth workers will be there to provide a supportive and engaging
   environment. "
