@@ -69,7 +69,7 @@ timeList:
       start_time: 12:30 PM
       end_time: 3:15 PM
 area:
-  - Brixton Tulse Hill
+  - Brixton/Tulse Hill
 expectation: >
   Come to our adventure playground and chose to take part in whatever you like.
   We will have planned activities including cooking, treasure hunt, sports

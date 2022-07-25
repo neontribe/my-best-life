@@ -34,7 +34,7 @@ format: Meeting a group of people
 location: Max Roach, Wiltshire Road, London, SW9 7NE
 makeMapLink: true
 area:
-  - Brixton Tulse Hill
+  - Brixton/Tulse Hill
 time: Monday - Thursday 10.30am - 3.30pm
 email: info@lccmaxroach.co.uk
 form: https://docs.google.com/forms/d/e/1FAIpQLSen8kqTg-xCmc0d8Q_BvhLrjkJXgG28Dx08pRRZOmpNDiAm2A/viewform

@@ -31,7 +31,7 @@ format: Meeting a group of people
 location: 3space International House, Canterbury Crescent, Brixton SW9 7QD
 makeMapLink: true
 area:
-  - Brixton Tulse Hill
+  - Brixton/Tulse Hill
 contactExplanation: "By referral. "
 email: jenni@jennisteele.co.uk
 form: https://www.jennisteele.co.uk/contact/

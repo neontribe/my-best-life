@@ -39,7 +39,7 @@ timeList:
   endDate: 26/08/2022
   days: []
 area:
-  - Brixton Stockwell
+  - Brixton/Stockwell
 expectation: ""
 phone: 07816 386 270
 provider: Summer of Food and Fun 2022

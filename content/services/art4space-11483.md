@@ -55,7 +55,7 @@ timeList:
       start_time: 10:00 AM
       end_time: 1:00 PM
 area:
-  - Brixton Stockwell
+  - Brixton/Stockwell
 expectation: >
   Please note there is no session Wednesday 3 August 2022.
 
