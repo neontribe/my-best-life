@@ -62,7 +62,7 @@ export default class MyDocument extends Document {
             async
             defer
             data-domain="mybestlife.app"
-            src="https://plausible.io/js/plausible.js"
+            src="https://plausible.io/js/script.outbound-links.js"
           ></script>
         </Head>
         <body>
