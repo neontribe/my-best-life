@@ -21,6 +21,7 @@ location: 3Pillars Project, Black Prince Trust, 5 Beaufoy Walk, London, SE11 6AA
 makeMapLink: true
 area:
   - North Lambeth
+  - Brixton/Stockwell
 time: Tuesdays 1-2pm for ages 18-30. If you are 16-18, please get in touch to
   arrange.
 contactExplanation: "If you are 18-30 book your first session with the Google
