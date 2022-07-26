@@ -11,6 +11,7 @@ import {
   allAges,
   allFormats,
   allAreas,
+  allProviders,
 } from '../src/context/FilterContext'
 import { ButtonBase } from '../src/Components/ButtonBase'
 import { NotificationsContext } from '../src/context/NotificationsContext'
@@ -139,8 +140,17 @@ const CloseButton = styled.a`
 
 export const FilterPage: NextPage = () => {
   const { notify } = useContext(NotificationsContext)
-  const { age, ageUpdate, formats, formatUpdate, areas, areaUpdate, clearAll } =
-    useContext(FilterContext)
+  const {
+    age,
+    ageUpdate,
+    formats,
+    formatUpdate,
+    areas,
+    areaUpdate,
+    provider,
+    providerUpdate,
+    clearAll,
+  } = useContext(FilterContext)
 
   const saveNotify = () => {
     notify({
@@ -213,9 +223,25 @@ export const FilterPage: NextPage = () => {
             </RadioGroup>
           </fieldset>
         </FilterSection>
-        {/* <FilterSection>
-        <h3>Cost</h3>
-      </FilterSection> */}
+        <FilterSection borderBottom>
+          <fieldset>
+            <legend>Provider</legend>
+            <VerticalSpacing size={1} />
+            <RadioGroup>
+              {allProviders.map((item) => {
+                return (
+                  <RadioButton
+                    key={item}
+                    label={item}
+                    name={'provider'}
+                    checked={item === provider}
+                    onChange={providerUpdate}
+                  />
+                )
+              })}
+            </RadioGroup>
+          </fieldset>
+        </FilterSection>
         <FilterSection borderBottom>
           <fieldset>
             <legend>Format of Support / Activity</legend>

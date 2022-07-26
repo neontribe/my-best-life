@@ -6,7 +6,7 @@ image:
   image: img/rapping-1.jpg
   imageAlt: A group of teenage boys singing on a stage
 description: >
-  Combined arts and play scheme for 8 to 16 year olds. 
+  Combined arts and play scheme for 8 to 16 year olds.
 
   Join us for a series of dance, drama, arts and crafts and music workshops celebrating London's diverse colourful and multicultural heritage through an exploration of music and fashion and food.
 
@@ -63,7 +63,7 @@ area:
   - North Lambeth
 expectation: >
   Spaces limited, book by email through admin@vgcc.org.uk, subject: culture chic
-  shock. 
+  shock.
 
   Meals provided.
 phone: 07907 333 108

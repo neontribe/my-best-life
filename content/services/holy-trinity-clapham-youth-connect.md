@@ -18,7 +18,7 @@ format: Meeting a group of people
 location: The hall of Trinity House Clapham, SW4 0BN
 makeMapLink: true
 area:
-  - Clapham and Brixton Hill
+  - Clapham/Brixton Hill
 time: "Mondays 7.30 - 8.30pm (Years 9-11). Mondays 7.30 - 8.45pm (Years 12-13). "
 expectation: "You will be in a group with young people of a similar age to
   yourself. Classes are divided into Years 6 to 9 and Years 10 to 13. "

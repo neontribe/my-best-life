@@ -28,7 +28,7 @@ format: Online
 location: The Baytree Centre, 300-302 Brixton Road, London SW9 6AE
 makeMapLink: true
 area:
-  - Clapham and Brixton Hill
+  - Clapham/Brixton Hill
 time: "Monday to Thursday between 4.00 pm and 6.00 pm and Saturdays between
   10.00 am and 12.30 pm. Scheduled according to your availability. A one-to-one
   session each week for at least one year. "

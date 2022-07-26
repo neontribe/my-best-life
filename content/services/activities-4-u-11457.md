@@ -57,7 +57,7 @@ timeList:
       start_time: 9:00 AM
       end_time: 1:00 PM
 area:
-  - Clapham and Brixton Hill
+  - Clapham/Brixton Hill
 expectation: ""
 phone: 020 7735 8181
 provider: Summer of Food and Fun 2022
