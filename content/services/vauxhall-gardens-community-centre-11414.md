@@ -1,6 +1,6 @@
 ---
 organisation: Vauxhall Gardens Community Centre
-title: Culture Chic Shock Play Scheme With Vauxhall Gardens Community Centre - TEST
+title: "Culture Chic Shock Play Scheme With Vauxhall Gardens Community Centre "
 shortDescription: Music, drama and art sessions
 image:
   image: img/rapping-1.jpg
