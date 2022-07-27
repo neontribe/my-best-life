@@ -1,5 +1,5 @@
 ---
-organisation: Whippersnappers Cic
+organisation: Whippersnappers Cic - TEST
 title: Whippersnappers Summer Playscheme 2022
 shortDescription: Sports activities and food
 image:
