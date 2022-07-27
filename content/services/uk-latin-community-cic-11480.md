@@ -1,7 +1,7 @@
 ---
 organisation: Uk Latin Community Cic
 title: Latin Holiday Camp Notre Dame
-shortDescription: Crafts, sports and cookery - TEST
+shortDescription: Crafts, sports and cookery
 image:
   image: img/hands-in.jpg
   imageAlt: A close up of young people's hands in
