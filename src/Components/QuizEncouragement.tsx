@@ -1,11 +1,10 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import styled from 'styled-components'
 
 import { VerticalSpacing } from './VerticalSpacing'
 
 const QuizCard = styled.a`
-  background-color: ${(props) => props.theme.colours.yellow_light};
+  background-color: ${(props) => props.theme.colours.blue_light};
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -26,26 +25,106 @@ const QuizCard = styled.a`
 
   h2 {
     font-family: 'Catamaran', sans-serif;
-    font-size: ${(props) => props.theme.fontSizes.heading};
+    font-size: ${(props) => props.theme.fontSizes.highlight};
     font-weight: bold;
     width: 90%;
     color: ${(props) => props.theme.colours.blue};
+    margin-bottom: 2rem;
+
+    ${(props) => props.theme.screenSizes.tabletLandscapePlus} {
+      font-size: 26px;
+    }
   }
 `
 
 const ImageContainer = styled.div`
-  bottom: -1rem;
+  width: 40%;
   height: 7rem;
   position: absolute;
-  right: 0;
-  width: 35%;
+  right: 1rem;
+  bottom: 0;
+
+  ${(props) => props.theme.screenSizes.tabletLandscapePlus} {
+    height: 8rem;
+  }
+
+  img {
+    position: absolute;
+  }
+
+  img:nth-of-type(1) {
+    width: 100px;
+    height: auto;
+    right: 0;
+    bottom: 0;
+
+    ${(props) => props.theme.screenSizes.smallPhoneOnly} {
+    }
+
+    ${(props) => props.theme.screenSizes.tabletPortraitPlus} {
+      width: 140px;
+      right: 4rem;
+    }
+
+    ${(props) => props.theme.screenSizes.tabletLandscapePlus} {
+      width: 200px;
+      right: 0;
+    }
+  }
+
+  img:nth-of-type(2) {
+    width: 30px;
+    right: 0rem;
+    top: 1rem;
+
+    ${(props) => props.theme.screenSizes.smallPhoneOnly} {
+    }
+
+    ${(props) => props.theme.screenSizes.tabletPortraitPlus} {
+      width: 35px;
+      right: 1.5rem;
+      top: 0;
+    }
+
+    ${(props) => props.theme.screenSizes.tabletLandscapePlus} {
+      width: 42px;
+      right: 2.8rem;
+      top: -1.2rem;
+    }
+  }
+
+  img:nth-of-type(3) {
+    width: 23px;
+    right: 2.5rem;
+    top: 2rem;
+
+    ${(props) => props.theme.screenSizes.smallPhoneOnly} {
+    }
+
+    ${(props) => props.theme.screenSizes.tabletPortraitPlus} {
+      width: 25px;
+      right: 6.5rem;
+      top: 0.5rem;
+    }
+
+    ${(props) => props.theme.screenSizes.tabletLandscapePlus} {
+      width: 34px;
+      right: 11.5rem;
+      top: 0.5rem;
+    }
+  }
 `
 const Content = styled.div`
   position: relative;
-  max-width: 400px;
+  max-width: 750px;
   height: 100%;
-  margin: auto;
   padding: 1rem;
+
+  ${(props) => props.theme.screenSizes.tabletLandscapePlus} {
+    width: 550px;
+    margin: auto;
+    padding: 2rem;
+  }
 `
 
 const QuizButton = styled.div`
@@ -61,6 +140,10 @@ const QuizButton = styled.div`
   align-self: flex-start;
   background-color: ${(props) => props.theme.colours.blue};
   display: inline-block;
+
+  ${(props) => props.theme.screenSizes.tabletPortraitPlus} {
+    padding: 0.5rem 3.2rem;
+  }
 `
 
 export const QuizEncouragement = (): JSX.Element => {
@@ -68,16 +151,13 @@ export const QuizEncouragement = (): JSX.Element => {
     <Link href={`/quiz`} passHref>
       <QuizCard>
         <Content>
-          <h2>Want more personalised results?</h2>
+          <h2>Summer Activities</h2>
           <VerticalSpacing size={1} />
-          <QuizButton>Take our quiz</QuizButton>
+          <QuizButton>See what&apos;s on</QuizButton>
           <ImageContainer>
-            <Image
-              src="/img/try-quiz.png"
-              alt={''}
-              layout="fill"
-              objectFit="contain"
-            />
+            <img src="/img/summer_activities_mask.png" alt="" />
+            <img src="/img/summer_activities_racket.png" alt="" />
+            <img src="/img/summer_activities_watermelon.png" alt="" />
           </ImageContainer>
         </Content>
       </QuizCard>
