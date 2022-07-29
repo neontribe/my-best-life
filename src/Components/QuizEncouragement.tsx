@@ -116,14 +116,18 @@ const ImageContainer = styled.div`
 `
 const Content = styled.div`
   position: relative;
-  max-width: 750px;
+  width: 270px;
   height: 100%;
   padding: 1rem;
+  margin: auto;
+
+  ${(props) => props.theme.screenSizes.tabletPortraitPlus} {
+    width: 500px;
+    padding: 2rem;
+  }
 
   ${(props) => props.theme.screenSizes.tabletLandscapePlus} {
     width: 550px;
-    margin: auto;
-    padding: 2rem;
   }
 `
 
