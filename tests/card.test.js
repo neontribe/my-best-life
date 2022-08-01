@@ -66,7 +66,7 @@ it('Card component test', () => {
     const shortDescription    = container.querySelector('p').textContent;
     const title               = container.querySelector('h2 a').textContent;
     const costValue           = container.querySelector('div:nth-of-type(2) > div').textContent;
-    const img                 = container.querySelector('img').src;
+    const img                 = container.querySelector('img');
 
     console.log( img )
 
