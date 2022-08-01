@@ -29,7 +29,7 @@ format: Meeting a group of people
 location: 68 St Rule Street, Battersea, London SW8 3ED
 makeMapLink: true
 area:
-  - Clapham Common
+  - Clapham/Brixton Hill
 time: Thursday 5pm - 8pm (boys only) and Fridays 5pm - 8pm (Girls only)
 contactExplanation: "To sign up fill out the online form. To find out more, get
   in touch via email or phone. "

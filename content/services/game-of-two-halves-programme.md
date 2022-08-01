@@ -23,8 +23,8 @@ location: "The programme runs from three locations:  Brockwell Park Bowling
   Green Pavilion, the Ferndale Community Sports Centre and the Tooting & Mitcham
   Community Sports Club."
 area:
-  - Herne Hill
-  - Ferndale
+  - Brixton/Tulse Hill
+  - Clapham/Brixton Hill
 contactExplanation: "Get in touch with the St Matthew's Project via phone or email. "
 email: l.dema@thesmp.net
 phone: 07944 101 134
