@@ -24,7 +24,6 @@ const services = getServices()
 it('Card component test', () => { 
   /*
    * service - real data
-   * testObj - dummy data
    * Switch between the two objects above to confirm the test runs correctly
    */
   services.map((service) => {

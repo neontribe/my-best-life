@@ -17,12 +17,32 @@ const getImages = () => {
   return fileNames
 }
 
+const testObj = [
+  {
+    "title": "one",
+    "image": { "image": 'img/we-rise-projects.jpg', "imageAlt": 'A group of young people' },
+  },
+  {
+    "title": "two",
+    "image": { "image": 'img/we-rise-projects.jpg', "imageAlt": 'A group of young people' },
+  }
+]
+
 const images = getImages()
 const services = getServices()
 
 it('Services images exist', () => {
   services.map((service) => {
-    const imageExists = images.includes(service.image.image.replace('img/', ''))
-    expect(imageExists).toBe(true); 
+
+    /* Ensure only markdowns with image property are tested */
+    if ( service.hasOwnProperty('image') ) {
+
+      const image = service.image.image.replace("img/", "")
+      const imageExists = images.includes(image)
+    
+      expect(imageExists).toBe(true)
+
+    }
+
   })
 })
