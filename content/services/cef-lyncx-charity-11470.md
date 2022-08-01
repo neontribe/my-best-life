@@ -73,7 +73,7 @@ timeList:
       start_time: 10:00 AM
       end_time: 4:00 PM
 area:
-  - Clapham and Brixton Hill
+  - Clapham/Brixton Hill
 expectation: |
   Lunch provided
 phone: 020 7737 4274

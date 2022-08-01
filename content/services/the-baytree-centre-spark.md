@@ -28,7 +28,7 @@ format: Meeting a group of people
 location: The Baytree Centre, 300-302 Brixton Road, London SW9 6AE
 makeMapLink: true
 area:
-  - Clapham and Brixton Hill
+  - Clapham/Brixton Hill
 time: "Spark Youth Club runs on Wednesdays from 5pm to 7pm. Sparking Futures
   employability workshops take place every two to four weeks on a Tuesday, from
   5pm to 7pm, and during school holidays. Fridays Pizza & Chill sessions take

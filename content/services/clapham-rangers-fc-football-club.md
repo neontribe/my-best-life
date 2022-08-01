@@ -36,7 +36,7 @@ format: Meeting a group of people
 location: Clapham Common Long Road, opposite Victoria Rise, SW4 0AA
 makeMapLink: true
 area:
-  - Clapham and Brixton Hill
+  - Clapham/Brixton Hill
 time: Saturdays 10:00 to 11:30
 expectation: >-
   The Club plays on hired pitches on Clapham Common. It also uses the training

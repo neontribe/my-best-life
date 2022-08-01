@@ -32,7 +32,7 @@ eligibility: Based on Lambeth
 format: Meeting a group of people
 location: 3Space International House, Canterbury Crescent, Brixton, London SW9 7QD
 area:
-  - Brixton Tulse Hill
+  - Brixton/Tulse Hill
 expectation: You will work with the We Rise Coaches, your team and the client to
   understand the Brief and what the project will deliver, come up with creative
   ideas to fulfil the Brief, plan and deliver the work, present your completed

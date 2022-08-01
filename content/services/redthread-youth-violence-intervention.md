@@ -27,7 +27,7 @@ location: "They are based in multiple hospitals across London including; King's
   College Hospital, St Mary's Hospital, St George's Hospital and The Royal
   London. "
 area:
-  - Brixton Tulse Hill
+  - Brixton/Tulse Hill
 expectation: ""
 contactExplanation: "If you find yourself in hospital due to youth violence, you
   may be approached by a Redthread worker. "

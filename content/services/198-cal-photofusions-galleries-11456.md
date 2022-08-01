@@ -1,7 +1,7 @@
 ---
 organisation: 198 Cal/& Photofusion’s Galleries
 title: Artist Minds With 198 Contemporary Arts And Learning And Photofusion
-shortDescription: Photography and crafts sessions
+shortDescription: "Photography and crafts sessions "
 image:
 <<<<<<< HEAD
   image: "img/fidfallback_3.jpg"
@@ -64,7 +64,7 @@ timeList:
       start_time: 11:00 AM
       end_time: 3:30 PM
 area:
-  - Clapham and Brixton Hill
+  - Clapham/Brixton Hill
 expectation: >
   The workshop will have at least one hour of structured physical activity
   through photgraphy, games etc.  These workshops aim to demonstrate how

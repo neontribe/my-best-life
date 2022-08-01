@@ -37,7 +37,7 @@ location: Herne Hill Group Practice, 74 Herne Hill, London  SE24 9QP (entrance
   via Kestrel Avenue)
 makeMapLink: true
 area:
-  - Brixton Tulse Hill
+  - Brixton/Tulse Hill
 time: "Monday to Thursdays: 11.00am - 6.30pm and Fridays: 8am - 4pm"
 expectation: "Health & Wellbeing Practitioners (HWPs) offer 3 months’ worth of
   sessions to eligible young people. They can support you to identify one or two

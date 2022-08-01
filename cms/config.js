@@ -290,11 +290,11 @@ const config = {
           required: false,
           hint: 'Select the ward(s) the service operates in. Leave blank for online services',
           options: [
-            { label: 'Brixton Stockwell', value: 'Brixton Stockwell' },
-            { label: 'Brixton Tulse Hill', value: 'Brixton Tulse Hill' },
+            { label: 'Brixton/Stockwell', value: 'Brixton/Stockwell' },
+            { label: 'Brixton/Tulse Hill', value: 'Brixton/Tulse Hill' },
             {
-              label: 'Clapham and Brixton Hill',
-              value: 'Clapham and Brixton Hill',
+              label: 'Clapham/Brixton Hill',
+              value: 'Clapham/Brixton Hill',
             },
             { label: 'Norwood', value: 'Norwood' },
             { label: 'Streatham', value: 'Streatham' },

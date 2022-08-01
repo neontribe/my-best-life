@@ -69,7 +69,7 @@ timeList:
       start_time: 2:00 PM
       end_time: 6:00 PM
 area:
-  - Brixton Tulse Hill
+  - Brixton/Tulse Hill
 expectation: "You'll get the chance to try new things, experience something
   outside your comfort zone, make new friendships, and engage in more positive
   activities when not in school. "

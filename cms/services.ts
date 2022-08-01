@@ -84,9 +84,9 @@ export type Interest =
   | 'Gaming'
 
 export type Area =
-  | 'Brixton Stockwell'
-  | 'Brixton Tulse Hill'
-  | 'Clapham and Brixton Hill'
+  | 'Brixton/Stockwell'
+  | 'Brixton/Tulse Hill'
+  | 'Clapham/Brixton Hill'
   | 'Norwood'
   | 'Streatham'
   | 'North Lambeth'

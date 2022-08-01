@@ -72,7 +72,7 @@ timeList:
       start_time: 9:30 AM
       end_time: 2:30 PM
 area:
-  - Clapham and Brixton Hill
+  - Clapham/Brixton Hill
 expectation: >
   All our activities are SEND focus. Expect a fun and nonjudgmental environment
   where autistic children are encouraged and supported to be themselves.  

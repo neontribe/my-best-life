@@ -20,6 +20,9 @@ interests:
   - Sports
   - Art and Design
   - Cooking
+feelings:
+  - okay
+  - excited
 costValue: 0
 age:
   minAge: 6
@@ -31,15 +34,13 @@ makeMapLink: true
 area:
   - North Lambeth
 time: After school and in all school holidays
-contactExplanation: >-
-  For all enquiries get in touch via phone or email. You must be registered
-  before you attend. This can be done online, or you will be given a form to
-  take home when you first arrive.
-
-
-  This must be filled out by a parent/carer and returned to the playground on the next day you attend. An open-access policy means you can come and go on your own unless an arrangement has been made with your carer.
+contactExplanation: "For all enquiries, email info@lollardstplay.org.uk or call
+  0207 793 9592. You must be registered before you attend. This can be done
+  online, or you will be given a form to take home when you first arrive. This
+  must be filled out by a parent/carer and returned to the playground on the
+  next day you attend. An open-access policy means you can come and go on your
+  own unless an arrangement has been made with your carer. "
 email: "info@lollardstplay.org.uk "
 phone: 0207 793 9592
 website: https://www.lollardstplay.org.uk/what-happens-here/
-
 ---

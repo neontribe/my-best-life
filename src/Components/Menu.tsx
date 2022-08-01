@@ -43,8 +43,8 @@ export const Menu = ({ open }: MenuProps): JSX.Element => {
     <StyledMenu open={open} aria-expanded={open}>
       <Link href="/about">About</Link>
       <Link href="/helplines">Urgent Help</Link>
+      <Link href="/summer-activities">Summer Activities</Link>
       <Link href="/privacy-policy">Privacy Policy</Link>
-      <Link href="/cookies">Cookies</Link>
     </StyledMenu>
   )
 }

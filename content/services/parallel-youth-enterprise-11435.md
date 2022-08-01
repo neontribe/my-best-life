@@ -74,7 +74,7 @@ timeList:
       start_time: 10:00 AM
       end_time: 4:00 PM
 area:
-  - Brixton Tulse Hill
+  - Brixton/Tulse Hill
 time: ""
 expectation: >
   Family rates and concessions available please let us know if you would like

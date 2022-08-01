@@ -67,9 +67,9 @@ timeList:
       start_time: 12:30 PM
       end_time: 4:30 PM
 area:
-  - Brixton Stockwell
+  - Brixton/Stockwell
 expectation: >
-  Booking process with web link for online registration, hot meal & drinks. 
+  Booking process with web link for online registration, hot meal & drinks.
 
   Follow us on Instagram @leratocic and Twitter @LeratoCIC
 
