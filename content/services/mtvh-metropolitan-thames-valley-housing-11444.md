@@ -6,7 +6,7 @@ image:
   image: img/sports-cone.jpg
   imageAlt: A close of a sports cone on a field with white lines behind
 description: >
-  A fun filled programme for all. 
+  A fun filled programme for all.
 
   Volunteering opportunities available.
 
@@ -34,7 +34,7 @@ format: Meeting a group of people
 location: Moorlands Community Centre, 58 Corry Drive, London, SW9 8QT
 makeMapLink: true
 area:
-  - Clapham and Brixton Hill
+  - Clapham/Brixton Hill
 email: Theresa.Agyeman@mtvh.co.uk
 form: https://forms.office.com/r/03URFBUjVu
 timeList:
