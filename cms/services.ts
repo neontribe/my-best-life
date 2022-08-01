@@ -372,6 +372,9 @@ async function createMarkdownFromCSV(overwriteEntries: boolean = false) {
           })
         }
 
+        const image =
+          'img/fidfallback_' + Math.floor(Math.random() * 3 + 1) + '.jpg'
+
         const genders = genderEntries.map((entry) =>
           entry.eligibility_criteria_description.toLowerCase()
         )
@@ -410,7 +413,7 @@ fidId: ${service.id}
 title: ${service.provider_name}
 shortDescription: ${service.provider_name} + description
 image:
-  image: img/fid_placeholder.png
+  image: "${image}"
   imageAlt: ""
 interests: ${JSON.stringify(interests)}
 feelings:
