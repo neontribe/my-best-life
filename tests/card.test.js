@@ -32,7 +32,7 @@ const testObj = [
   "id" : 2,
   "title": "Girls Youth Club",
   "shortDescription": "Girls only youth club on Wednesday evenings",
-  "costValue": 0.25
+  "costValue": 0.25 
   },
   {
   "id" : 3,
@@ -48,7 +48,7 @@ it('Card component test', () => {
   * testObj - dummy data
   * Switch between the two objects above to confirm the test runs correctly
   */
-  testObj.map((service) => {
+  services.map((service) => {
     const { container } = render(
       <ThemeProvider theme={MyBestLifeTheme}>
         <GlobalStyle />
@@ -58,18 +58,22 @@ it('Card component test', () => {
           title={service.title}
           shortDescription={service.shortDescription}
           costValue={service.costValue}
+          image={service.image}
         />
       </ThemeProvider>
     )
 
-    const title               = container.querySelector('p').textContent;
-    const shortDescription    = container.querySelector('h2 a').textContent;
+    const shortDescription    = container.querySelector('p').textContent;
+    const title               = container.querySelector('h2 a').textContent;
     const costValue           = container.querySelector('div:nth-of-type(2) > div').textContent;
+    const img                 = container.querySelector('img').src;
 
-    console.log( typeOf(testObj) )
+    console.log( img )
 
-    expect(title).toBeTruthy()
     expect(shortDescription).toBeTruthy()
+    expect(title).toBeTruthy()
     expect(costValue).toBeTruthy()
+    expect(img).toBeTruthy()
+
   })
 })
