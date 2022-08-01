@@ -48,8 +48,8 @@ it('Card component test', () => {
       'div:nth-of-type(2) > div'
     ).textContent
 
-    expect(shortDescription).toBeTruthy()
-    expect(title).toBeTruthy()
-    expect(costValue).toBeTruthy()
+    expect(shortDescription).toBeTruthy();
+    expect(title).toBeTruthy();
+    expect(costValue).toBeTruthy();
   })
 })
