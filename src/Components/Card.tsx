@@ -51,7 +51,7 @@ const ServiceName = styled.p`
   padding: 0 1rem;
 `
 
-const ImageText = styled(ServiceName)`
+const ImageText = styled.p`
   font-family: 'Catamaran', sans-serif;
   font-size: 28px;
   line-height: 100%;
