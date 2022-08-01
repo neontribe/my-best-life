@@ -3,8 +3,8 @@ organisation: Lerato Community Initiative
 title: Lerato Summer Programme
 shortDescription: Sports & finance workshops
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
+  image: img/course.jpg
+  imageAlt: A group of diverse young people holding books
 description: >
   There will a range of activities, workshops and things to do such as 
 
