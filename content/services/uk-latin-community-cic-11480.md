@@ -3,11 +3,6 @@ organisation: Uk Latin Community Cic
 title: Latin Holiday Camp Notre Dame
 shortDescription: "Crafts, sports and cookery "
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_3.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Sports","Films and TV","Art and Design"]
-=======
   image: img/hands-in.jpg
   imageAlt: A close up of young people's hands in
 description: >
@@ -28,7 +23,6 @@ interests:
   - Sports
   - Films and TV
   - Art and Design
->>>>>>> development
 feelings:
   - okay
   - unsure

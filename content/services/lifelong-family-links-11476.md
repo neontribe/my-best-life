@@ -3,11 +3,6 @@ organisation: Lifelong Family Links
 title: Summer HAF Lifelong Family Links
 shortDescription: Outdoor sports, games and cookery
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_2.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Sports","Cooking","Gaming"]
-=======
   image: img/kayaking-paddles.jpg
   imageAlt: A line of kayak paddles
 description: >
@@ -29,7 +24,6 @@ interests:
   - Sports
   - Cooking
   - Gaming
->>>>>>> development
 feelings:
   - ignored
   - hopeful

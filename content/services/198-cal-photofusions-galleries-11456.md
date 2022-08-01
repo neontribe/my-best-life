@@ -3,11 +3,6 @@ organisation: 198 Cal/& Photofusion’s Galleries
 title: Artist Minds With 198 Contemporary Arts And Learning And Photofusion
 shortDescription: "Photography and crafts sessions "
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_3.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Art and Design","Outdoor Activities"]
-=======
   image: img/photography-4.jpg
   imageAlt: A guy with a camera posing for a photo
 description: >
@@ -20,7 +15,6 @@ categories:
 interests:
   - Art and Design
   - Outdoor Activities
->>>>>>> development
 feelings:
   - hopeful
   - okay

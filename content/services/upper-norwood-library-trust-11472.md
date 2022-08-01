@@ -3,11 +3,6 @@ organisation: Upper Norwood Library Trust
 title: Upper Norwood Library Hub Summer Camps For Children
 shortDescription: Drama, dance and music sessions
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_2.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Drama","Art and Design"]
-=======
   image: img/dance-1.jpg
   imageAlt: The silhouette of three people dancing
 description: >
@@ -38,7 +33,6 @@ categories:
 interests:
   - Drama
   - Art and Design
->>>>>>> development
 feelings:
   - hopeful
   - excited

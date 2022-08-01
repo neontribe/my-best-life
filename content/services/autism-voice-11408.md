@@ -3,11 +3,6 @@ organisation: Autism Voice
 title: Summer Holiday Food And Fun Activities For Autistic Children
 shortDescription: Fun activities for young people with autism
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_1.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Cooking","Music","Art and Design","Outdoor Activities"]
-=======
   image: img/autism-1-.jpg
   imageAlt: A group of young people and adults standing in a circle
 description: >
@@ -24,7 +19,6 @@ interests:
   - Cooking
   - Art and Design
   - Outdoor Activities
->>>>>>> development
 feelings:
   - hopeful
   - excited

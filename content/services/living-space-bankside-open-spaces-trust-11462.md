@@ -3,11 +3,6 @@ organisation: Living Space Bankside Open Spaces Trust
 title: Oasis Summer Activities At Living Space
 shortDescription: Crafts, sports and workshops
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_1.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Sports","Cooking","Outdoor Activities"]
-=======
   image: img/oasis-activity.jpeg
   imageAlt: Three boys playing in a basketball court
 description: >
@@ -23,7 +18,6 @@ interests:
   - Sports
   - Cooking
   - Outdoor Activities
->>>>>>> development
 feelings:
   - hopeful
   - anxious

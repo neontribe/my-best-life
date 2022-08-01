@@ -3,11 +3,6 @@ organisation: Triangle Adventure Playground
 title: Triangle Adventure Playground Summer Holiday Playscheme
 shortDescription: Outdoor games and activities
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_3.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Sports","Art and Design","Outdoor Activities"]
-=======
   image: img/triangle.jpg
   imageAlt: A group of young people playing in an adventure playground
 description: >
@@ -22,7 +17,6 @@ interests:
   - Sports
   - Art and Design
   - Outdoor Activities
->>>>>>> development
 feelings:
   - hopeful
   - anxious

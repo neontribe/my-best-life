@@ -3,13 +3,6 @@ organisation: Lerato Community Initiative
 title: Lerato Summer Camp
 shortDescription: Sports, crafts and music workshops
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_3.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Sports","Music","Outdoor Activities"]
-feelings:
-description: "Daily Multi-sports, including badminton and rounders, arts and crafts, indoor and outdoor play, table games Baking, Tie-dye & music workshops. Trip to Stubbers Adventure Centre in Essex for water sports, climbing & target sports, trip to Gravity for e-karting & bowling, talent show. Time to just relax, socialise and make new friends.
-=======
   image: img/girls-dancing.jpg
   imageAlt: A girl dancing with her friend
 description: >
@@ -18,7 +11,6 @@ description: >
   Stubbers Adventure Centre in Essex for water sports, climbing & target sports,
   trip to Gravity for e-karting & bowling, talent show. Time to just relax,
   socialise and make new friends.
->>>>>>> development
 
   Suitable for children and young people with special educational needs and disabilities
 categories:

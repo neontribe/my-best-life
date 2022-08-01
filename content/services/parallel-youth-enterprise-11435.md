@@ -3,20 +3,12 @@ organisation: Parallel Youth Enterprise
 title: Lambeth Summer Camp Parallel Youth Enterprise
 shortDescription: Lambeth Summer Camp Parallel Youth Enterprise + description
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_3.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Sports","Art and Design","Outdoor Activities"]
-feelings:
-description: "During July and August, we will deliver an 18 day  programme of workshops, trips out and sport at St Marin in the Fields School Tulse Hill for one hundred and fifty young people.
-=======
   image: img/football-skateboard.jpg
   imageAlt: "A close up of two boys feet, one on a skateboard and one with a football. "
 description: >
   During July and August, we will deliver an 18 day  programme of workshops,
   trips out and sport at St Marin in the Fields School Tulse Hill for one
   hundred and fifty young people.
->>>>>>> development
 
   There will be over 14 diverse on-site workshops which will include music,  dance, computers, filming, beautician, circus skills, hair care, face painting and arts & crafts. We can offer an ongoing day long sports timetable which will include badminton, football, table tennis, cricket, 
 categories:

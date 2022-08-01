@@ -3,11 +3,6 @@ organisation: The Boury Academy
 title: Summer 2022 With The Boury Academy
 shortDescription: Create a musical in a week
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_2.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Drama"]
-=======
   image: img/boury.jpg
   imageAlt: A close up of young boy singing to another young person.
 description: >
@@ -27,7 +22,6 @@ categories:
   category1: Friends
 interests:
   - Drama
->>>>>>> development
 feelings:
   - anxious
   - excited

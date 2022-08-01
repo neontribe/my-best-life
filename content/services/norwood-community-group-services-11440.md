@@ -3,11 +3,6 @@ organisation: Norwood Community Group Services
 title: Karate/ Fitness Training And Self Defence Classes
 shortDescription: Karate & Self Defence classes
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_1.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Sports"]
-=======
   image: img/karate.jpg
   imageAlt: A group of young people in karate uniform
 description: >
@@ -24,7 +19,6 @@ categories:
   category2: Physical Health
 interests:
   - Sports
->>>>>>> development
 feelings:
   - anxious
   - hopeful

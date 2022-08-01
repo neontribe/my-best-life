@@ -3,11 +3,6 @@ organisation: Old Library Youth Club
 title: Rathbone Summer Fit And Fun Activities Programme
 shortDescription: Sports, crafts and cooking sessions
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_1.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Cooking","Art and Design"]
-=======
   image: img/indoor-sports.jpg
   imageAlt: A group of young people playing sports in a sports hall
 description: >
@@ -30,7 +25,6 @@ categories:
 interests:
   - Cooking
   - Art and Design
->>>>>>> development
 feelings:
   - confused
   - hopeful

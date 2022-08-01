@@ -3,11 +3,6 @@ organisation: Activities 4 U
 title: Activities 4 U Multisports and Arts Camp
 shortDescription: Drama, sports and day trips
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_1.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Sports","Volunteering","Outdoor Activities"]
-=======
   image: img/basketball-activities-4-u.jpg
   imageAlt: A basketball team laughing
 description: >
@@ -24,7 +19,6 @@ interests:
   - Sports
   - Volunteering
   - Outdoor Activities
->>>>>>> development
 feelings:
   - hopeful
   - okay

@@ -3,11 +3,6 @@ organisation: Bigkid Foundation
 title: BIGKID Summer Holiday programme
 shortDescription: Summer sports club
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_3.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: []
-=======
   image: img/bigkid-foundation-holiday-programme.jpg
   imageAlt: Large group of young people in lifejackets
 description: >
@@ -25,7 +20,6 @@ categories:
 interests:
   - Sports
   - Outdoor Activities
->>>>>>> development
 feelings:
   - hopeful
   - anxious

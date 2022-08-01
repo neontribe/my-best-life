@@ -3,11 +3,6 @@ organisation: The Kinetika Bloco
 title: Kinetika Bloco Senior Summer School
 shortDescription: "Senior carnival performance classes "
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_3.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Music"]
-=======
   image: img/carnival-2.jpg
   imageAlt: A pile of colourful streamers
 description: >
@@ -28,7 +23,6 @@ categories:
   category1: Friends
 interests:
   - Music
->>>>>>> development
 feelings:
   - hopeful
   - okay

@@ -3,11 +3,6 @@ organisation: Brixton Topcats
 title: Brixton Topcats Summer Basketball Camp
 shortDescription: Summer basketball sessions
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_3.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Sports"]
-=======
   image: img/basketball.jpg
   imageAlt: A close up of a basketball hoop
 description: >
@@ -24,7 +19,6 @@ categories:
   category2: Friends
 interests:
   - Sports
->>>>>>> development
 feelings:
   - hopeful
   - okay

@@ -3,11 +3,6 @@ organisation: Vauxhall Gardens Community Centre
 title: Culture Chic Shock Play Scheme With Vauxhall Gardens Community Centre
 shortDescription: Music, drama and art sessions
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_2.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Drama","Art and Design","Outdoor Activities"]
-=======
   image: img/rapping-1.jpg
   imageAlt: A group of teenage boys singing on a stage
 description: >
@@ -22,7 +17,6 @@ interests:
   - Drama
   - Art and Design
   - Outdoor Activities
->>>>>>> development
 feelings:
   - hopeful
   - excited

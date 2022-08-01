@@ -3,11 +3,6 @@ organisation: Living Space Bankside Open Spaces Trust
 title: Football Food & Fun With Bankside Open Spaces Trust
 shortDescription: Football, food and games
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_2.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Sports","Cooking","Outdoor Activities"]
-=======
   image: img/football.webp
   imageAlt: A football on grass
 description: >
@@ -23,7 +18,6 @@ interests:
   - Sports
   - Cooking
   - Outdoor Activities
->>>>>>> development
 feelings:
   - hopeful
   - okay

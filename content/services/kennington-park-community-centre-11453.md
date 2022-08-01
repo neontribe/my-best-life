@@ -3,11 +3,6 @@ organisation: Kennington Park Community Centre
 title: KPCC's Summer Of Fun And Food 2022
 shortDescription: Sports, crafts, daytrips and cookery
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_3.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Drama","Music","Art and Design"]
-=======
   image: img/kpcc-kennington.jpg
   imageAlt: A group of young people pretending to be pirates
 description: >
@@ -27,7 +22,6 @@ interests:
   - Drama
   - Music
   - Art and Design
->>>>>>> development
 feelings:
   - hopeful
   - okay

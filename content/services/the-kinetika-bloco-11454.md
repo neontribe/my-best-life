@@ -3,11 +3,6 @@ organisation: The Kinetika Bloco
 title: Kinetika Bloco Junior Summer School
 shortDescription: "Junior carnival performance classes "
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_1.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Music","Art and Design"]
-=======
   image: img/carnival-1.jpg
   imageAlt: A pile of colourful streamers and a mask
 description: >
@@ -28,7 +23,6 @@ categories:
 interests:
   - Music
   - Art and Design
->>>>>>> development
 feelings:
   - hopeful
   - excited

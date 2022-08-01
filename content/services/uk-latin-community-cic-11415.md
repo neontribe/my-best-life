@@ -3,19 +3,11 @@ organisation: Uk Latin Community Cic
 title: Latin Holiday Camp Vauxhall 5 Community Centre
 shortDescription: Sports, crafts and food sessions
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_1.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Sports","Films and TV","Art and Design"]
-feelings:
-description: "We will deliver a programme that will focus on Arts and crafts, food and nutrition, sports and well-being.
-=======
   image: img/football-skateboard.jpg
   imageAlt: "A close up of two boys feet, one on a skateboard and one with a football. "
 description: >
   We will deliver a programme that will focus on Arts and crafts, food and
   nutrition, sports and well-being.
->>>>>>> development
 
   Our schedule will include a healthy lunch, one hour of structured physical activities such as dance and multi-sports, an hour of arts and crafts such as creating musical instruments out of recyclable materials, an hour of healthy eating awareness, as well as outdoor activities such as visiting the local city farm, visiting a local museum or a local attraction. 
 

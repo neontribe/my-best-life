@@ -3,11 +3,6 @@ organisation: BiG (Besty's Inspirational Guidance)
 title: BIG Summer 2022 Holiday Football Programme
 shortDescription: Summer football club
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_3.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Sports","Volunteering","Outdoor Activities"]
-=======
   image: img/girls-football3.jpg
   imageAlt: A close up of someone kicking a football
 description: >
@@ -32,7 +27,6 @@ interests:
   - Sports
   - Volunteering
   - Outdoor Activities
->>>>>>> development
 feelings:
   - hopeful
   - anxious

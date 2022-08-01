@@ -3,13 +3,6 @@ organisation: Omnibus - Clapham
 title: Routes With Omnibus Theatre
 shortDescription: Create and perform a show
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_1.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Drama"]
-feelings:
-description: "Alongside receiving breakfast, lunch and healthy snacks, 15 to 20 young people work together under the guidance of our facilitators to create their own production which they perform to friends and family at the end of the week in our Theatre. The aims for the week are simple; to have fun, work as a team, challenge yourself and use your imagination!
-=======
   image: img/omnibus.jpg
   imageAlt: A young girl performing on a stage
 description: >
@@ -18,7 +11,6 @@ description: >
   production which they perform to friends and family at the end of the week in
   our Theatre. The aims for the week are simple; to have fun, work as a team,
   challenge yourself and use your imagination!
->>>>>>> development
 
   Suitable for children and young people with special educational needs and disabilities.
 categories:

@@ -3,11 +3,6 @@ organisation: Lambeth Tigers
 title: Lambeth Tigers Summer Camp
 shortDescription: Football sessions
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_3.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Sports","Volunteering","Outdoor Activities"]
-=======
   image: img/boys-football-1.jpg
   imageAlt: Two boys playing football
 description: >
@@ -24,7 +19,6 @@ interests:
   - Sports
   - Volunteering
   - Outdoor Activities
->>>>>>> development
 feelings:
   - excited
   - okay

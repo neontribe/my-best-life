@@ -3,11 +3,6 @@ organisation: Whippersnappers Cic
 title: Whippersnappers Summer Playscheme 2022
 shortDescription: Sports activities and food
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_3.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Sports","Music","Art and Design"]
-=======
   image: img/basketball-1.jpg
   imageAlt: A close up of a boy about to throw a basketball into the hoop
 description: >
@@ -31,7 +26,6 @@ interests:
   - Sports
   - Music
   - Art and Design
->>>>>>> development
 feelings:
   - hopeful
   - confused

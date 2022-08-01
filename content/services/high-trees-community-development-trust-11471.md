@@ -3,11 +3,6 @@ organisation: High Trees Community Development Trust
 title: Tulse Hill Adventure Playground Summer Playscheme
 shortDescription: "Games and daytrips "
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_2.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Sports","Cooking","Outdoor Activities"]
-=======
   image: img/high-trees.jpg
   imageAlt: A group of young people on a tire swing
 description: >
@@ -28,7 +23,6 @@ interests:
   - Sports
   - Cooking
   - Outdoor Activities
->>>>>>> development
 feelings:
   - anxious
   - hopeful

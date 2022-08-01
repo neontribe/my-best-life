@@ -3,11 +3,6 @@ organisation: C.E.F. Lyncx Charity
 title: SHARP Summer 2022 with CEF Lyncx
 shortDescription: Music, sports and skills workshops
 image:
-<<<<<<< HEAD
-  image: "img/fidfallback_3.jpg"
-  imageAlt: "Family Information Directory fallback image"
-interests: ["Cooking","Volunteering","Outdoor Activities"]
-=======
   image: img/sunset-jump.jpg
   imageAlt: Four people jumping in the air
 description: >
@@ -29,7 +24,6 @@ interests:
   - Cooking
   - Volunteering
   - Outdoor Activities
->>>>>>> development
 feelings:
   - anxious
   - hopeful
