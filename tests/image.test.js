@@ -23,7 +23,6 @@ const services = getServices()
 it('Services images exist', () => {
   services.map((service) => {
     const imageExists = images.includes(service.image.image.replace('img/', ''))
-
-    expect(imageExists).toBe(true);
+    expect(imageExists).toBe(true); 
   })
 })

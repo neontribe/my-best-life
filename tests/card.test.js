@@ -21,7 +21,7 @@ const services = getServices()
  * Third object is missing shortDescription
  */
 
-it('Card component test', () => {
+it('Card component test', () => { 
   /*
    * service - real data
    * testObj - dummy data
