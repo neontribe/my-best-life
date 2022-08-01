@@ -1,32 +1,42 @@
 ---
 organisation: Streatham Academy Football Club
-fidId: 11426
 title: Streatham Academy Summer Programme
-shortDescription: Streatham Academy Summer Programme + description
+shortDescription: "Football & games "
 image:
-  image: img/fid_placeholder.png
-  imageAlt: ""
-interests: ["Sports","Outdoor Activities"]
-feelings:
-description: >
+  image: img/football5.jpg
+  imageAlt: "A young guy spinnning a football on his finger "
+description: |
   Football programme with other activities. 
+categories:
+  category1: Physical Health
+  category2: Friends
+interests:
+  - Sports
+  - Outdoor Activities
+feelings:
+  - hopeful
+  - okay
 costValue: 0
-costQualifier: 
-format: Meeting a group of people
-expectation: >
-  Please contact the provider directly for more information regarding sessions times and delivery days. 
-  
-email: streathamacademy@gmail.com
-phone: 07743 522 547
-website: 
-location: Larkhall Park, Courland Grove, London, SW8 2PX
-area: ["Brixton/Stockwell"]
-makeMapLink: true
+costQualifier: null
 age:
   minAge: 5
   maxAge: 15
-timeList: {startDate: 25/07/2022, endDate: 26/08/2022, days: [] }
 gender: []
+format: Meeting a group of people
+location: Larkhall Park, Courland Grove, London, SW8 2PX
+makeMapLink: true
+timeList:
+  startDate: 25/07/2022
+  endDate: 26/08/2022
+  days: []
+area:
+  - Brixton/Stockwell
+expectation: >
+  Please contact the provider directly for more information regarding sessions
+  times and delivery days. 
+phone: 07743 522 547
 provider: Summer of Food and Fun 2022
+email: streathamacademy@gmail.com
+website: null
+fidId: 11426
 ---
-
