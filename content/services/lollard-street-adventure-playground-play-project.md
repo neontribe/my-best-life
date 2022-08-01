@@ -1,7 +1,7 @@
 ---
 organisation: Lollard Street Adventure Playground
 title: Play project
-shortDescription: Free after school and holiday play sessions
+shortDescription: Holiday play sessions
 image:
   image: img/lollard-street-adventure-playground.jpg
   imageAlt: A group of children climbing on an adventure playground
