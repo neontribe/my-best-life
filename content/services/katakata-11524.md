@@ -3,7 +3,7 @@ organisation: Katakata
 title: Katakata Summer Programme
 shortDescription: Cybersecurity course & job help
 image:
-  image: img/fid_placeholder.png
+  image: img/fidfallback_1.jpg
   imageAlt: A close up of the word security on a computer screen
 description: >
   Comprehensive Training course in cybersecurity and CV writing workshop. 
