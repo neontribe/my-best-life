@@ -152,7 +152,7 @@ const QuizButton = styled.div`
 
 export const QuizEncouragement = (): JSX.Element => {
   return (
-    <Link href={`/quiz`} passHref>
+    <Link href={`/summer-activities`} passHref>
       <QuizCard>
         <Content>
           <h2>Summer Activities</h2>
