@@ -46,9 +46,12 @@ it('Card component test', () => {
     const costValue = container.querySelector(
       'div:nth-of-type(2) > div'
     ).textContent
+    const image = container.querySelector('img').src;
 
     expect(shortDescription).toBeTruthy();
     expect(title).toBeTruthy();
     expect(costValue).toBeTruthy();
+    expect(image).toBeTruthy();
+    
   })
 })

@@ -17,17 +17,6 @@ const getImages = () => {
   return fileNames
 }
 
-const testObj = [
-  {
-    "title": "one",
-    "image": { "image": 'img/we-rise-projects.jpg', "imageAlt": 'A group of young people' },
-  },
-  {
-    "title": "two",
-    "image": { "image": 'img/we-rise-projects.jpg', "imageAlt": 'A group of young people' },
-  }
-]
-
 const images = getImages()
 const services = getServices()
 
