@@ -36,9 +36,9 @@ export const allFormats = [
 ]
 
 export const allAreas: Array<Area> = [
-  'Brixton Stockwell',
-  'Brixton Tulse Hill',
-  'Clapham and Brixton Hill',
+  'Brixton/Stockwell',
+  'Brixton/Tulse Hill',
+  'Clapham/Brixton Hill',
   'Norwood',
   'Streatham',
   'North Lambeth',

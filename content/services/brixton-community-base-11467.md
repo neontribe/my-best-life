@@ -62,7 +62,7 @@ timeList:
       start_time: 11:00 AM
       end_time: 3:00 PM
 area:
-  - Brixton Tulse Hill
+  - Brixton/Tulse Hill
 expectation: |
   Please check website to download a registration form.
 phone: 07958 448 690

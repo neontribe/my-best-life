@@ -64,7 +64,7 @@ timeList:
       start_time: 9:00 AM
       end_time: 1:00 PM
 area:
-  - Clapham and Brixton Hill
+  - Clapham/Brixton Hill
 expectation: >
   Routes at Omnibus Theatre is a chance to create your very own play, working
   with a group of other young people, based on whatever story you want to

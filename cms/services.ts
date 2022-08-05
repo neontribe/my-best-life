@@ -87,9 +87,9 @@ export type Interest =
   | 'Gaming'
 
 export type Area =
-  | 'Brixton Stockwell'
-  | 'Brixton Tulse Hill'
-  | 'Clapham and Brixton Hill'
+  | 'Brixton/Stockwell'
+  | 'Brixton/Tulse Hill'
+  | 'Clapham/Brixton Hill'
   | 'Norwood'
   | 'Streatham'
   | 'North Lambeth'
@@ -377,6 +377,9 @@ async function createMarkdownFromCSV(overwriteEntries: boolean = false) {
           })
         }
 
+        const image =
+          'img/fidfallback_' + Math.floor(Math.random() * 3 + 1) + '.jpg'
+
         const genders = genderEntries.map((entry) =>
           entry.eligibility_criteria_description.toLowerCase()
         )
@@ -415,7 +418,7 @@ fidId: ${service.id}
 title: ${service.provider_name}
 shortDescription: ${service.provider_name} + description
 image:
-  image: img/fid_placeholder.png
+  image: "${image}"
   imageAlt: ""
 interests: ${JSON.stringify(interests)}
 feelings:

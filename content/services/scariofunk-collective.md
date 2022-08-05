@@ -21,7 +21,7 @@ format: Meeting a group of people
 location: 63 Christchurch Road, SW2 3DH
 makeMapLink: true
 area:
-  - Brixton Tulse Hill
+  - Brixton/Tulse Hill
 time: Saturdays 2-3pm
 contactExplanation: "Email to express your interest. "
 email: info@yellowqube.org

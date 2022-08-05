@@ -66,7 +66,7 @@ timeList:
       start_time: 8:00 AM
       end_time: 6:00 PM
 area:
-  - Brixton Stockwell
+  - Brixton/Stockwell
 expectation: |
   We have a number of free spaces and other prices can be found on our website 
   Please note 10:00 to 16:00 (free spaces) 

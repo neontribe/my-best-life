@@ -17,21 +17,23 @@ categories:
 costValue: 0
 age:
   minAge: 14
-  maxAge: 24
+  maxAge: 20
 eligibility: "The charity works with anyone who lives in London. "
 format: One to one chats
 time: "Phone lines are open Monday to Friday, 9.30am - 5.30pm. Closed all day on
   weekends and bank holidays. "
-expectation: >-
+expectation: ""
+contactExplanation: >-
   The information you give will go to a staff member who will read it to see if
   they have all the information they need. If they need any more information,
   they will get in touch with you as soon as possible using the contact details
-  you give them.
+  you give them. 
 
 
-  When they have all the information they need, their team will work out whether they can help. They will try to do this as quickly as possible, but it could take up to 3 working days. Once they have made a decision, they will contact you to let you know whether they can help. If they can’t, they will give you contact details for other services who may be able to help. If you have any questions, just email or call again. 
-contactExplanation: "You can get in touch to tell them you need help in three
-  different ways: by filling in a web form, by email, or by phone. "
+  When they have all the information they need, their team will work out whether they can help. They will try to do this as quickly as possible, but it could take up to 3 working days.  Once they have made a decision, they will contact you to let you know whether they can help. If they can’t, they will give you contact details for other services who may be able to help. 
+
+
+  If you have any questions, just email or call again. 
 email: info@justforkidslaw.org
 form: https://justforkidslaw.org/referral
 phone: 020 3174 2279

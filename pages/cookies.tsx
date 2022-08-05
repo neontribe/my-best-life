@@ -5,6 +5,8 @@ import { useState, useEffect, useContext } from 'react'
 
 import { NotificationsContext } from '../src/context/NotificationsContext'
 
+import { VerticalSpacing } from '../src/Components/VerticalSpacing'
+
 const Heading = styled.h2`
   border-bottom: 1px solid ${(props) => props.theme.colours.yellow};
   display: inline-block;
@@ -184,6 +186,7 @@ export const Cookies = (): JSX.Element => {
             </Text>
             <Text>They always need to be on.</Text>
             <SubmitButton type="submit">Save changes</SubmitButton>
+            <VerticalSpacing size={1} />
           </form>
         </MainBody>
       </Content>

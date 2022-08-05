@@ -59,7 +59,7 @@ timeList:
       start_time: 11:00 AM
       end_time: 1:30 PM
 area:
-  - Brixton Tulse Hill
+  - Brixton/Tulse Hill
 expectation: |
   Free second-hand football boots available on request.
 email: l.dema@themsmp.net

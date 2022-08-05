@@ -24,7 +24,7 @@ format: Meeting a group of people
 location: The Yellow Cube CIC, 63 Christchurch Road, SW2 3DH
 makeMapLink: true
 area:
-  - Brixton Tulse Hill
+  - Brixton/Tulse Hill
 time: Mondays 5pm to 7pm
 expectation: "Grooveschool offers 1-2-1, paired and small group lessons. (1-2-1
   bookings are made on request, subject to availability.) DJs learn software to

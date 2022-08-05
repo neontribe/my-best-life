@@ -28,7 +28,7 @@ format: Meeting a group of people
 location: The Baytree Centre, 300-302 Brixton Road, London SW9 6AE
 makeMapLink: true
 area:
-  - Clapham and Brixton Hill
+  - Clapham/Brixton Hill
 time: "Classes from Monday to Wednesday. Currently delivering hybrid
   face-to-face and online sessions. "
 expectation: "Those who live further away can join online. "
