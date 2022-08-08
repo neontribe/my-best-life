@@ -1,18 +1,18 @@
 ---
 organisation: Lollard Street Adventure Playground
 title: Play project
-shortDescription: Free after school and holiday play sessions
+shortDescription: Holiday play sessions
 image:
   image: img/lollard-street-adventure-playground.jpg
   imageAlt: A group of children climbing on an adventure playground
-description: 'Free adventurous play sessions after school and in all school
+description: Free adventurous play sessions after school and in all school
   holidays. Sports, climbing, zip lining, table tennis, pool, drumming,
   painting, planting, cooking, campfires, den building, and more. Bikes, pedal
   go-karts, skateboards, crash mats, wheel barrows, and collections of scrap
   material ("loose parts"). A large outdoor space consisting of a nature garden
   with pond, a firepit and planters. Two sports pitches, a large grassy area and
   a play building with kitchen, toilets and indoor space. Playworkers on hand if
-  you need them. '
+  you need them.
 categories:
   category1: Friends
   category2: Mental Health
