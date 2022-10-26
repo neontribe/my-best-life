@@ -6,7 +6,7 @@ import { Card } from './Card'
 import { Content } from './Layout'
 import { EmptyList } from './EmptyList'
 import { FilterButton } from './FilterButton'
-import { SummerActivitiesEncouragement } from './SummerActivitiesEncouragement'
+import { QuizEncouragement } from './QuizEncouragement'
 import { VerticalSpacing } from './VerticalSpacing'
 import { VisuallyHidden } from './VisuallyHidden'
 import { ServicePreview } from '../../pages/index'
@@ -323,7 +323,7 @@ export const CardList = ({
 
   return filteredServices && filteredServices.length > 0 ? (
     <Content as="main">
-      {listType === 'filtered' ? <SummerActivitiesEncouragement /> : null}
+      {listType === 'filtered' ? <QuizEncouragement /> : null}
       {listType === 'filtered' ? <FilterButton /> : null}
       <VisuallyHidden>
         <svg width="0" height="0">
