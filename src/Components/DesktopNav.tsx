@@ -125,13 +125,14 @@ export const DesktopNav = (): JSX.Element => {
             </LinkItem>
           </Link>
         </li>
-        <li>
+        {/* Commenting out so this can be repurposed for next HAF */}
+        {/* <li>
           <Link href={'/summer-activities'} passHref>
             <SmallLinkItem activePage={currentPage === '/summer-activities'}>
               Summer Activities
             </SmallLinkItem>
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link href={'/about'} passHref>
             <SmallLinkItem activePage={currentPage === '/about'}>

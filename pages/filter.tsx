@@ -11,7 +11,7 @@ import {
   allAges,
   allFormats,
   allAreas,
-  allProviders,
+  // allProviders,
 } from '../src/context/FilterContext'
 import { ButtonBase } from '../src/Components/ButtonBase'
 import { NotificationsContext } from '../src/context/NotificationsContext'
@@ -147,8 +147,8 @@ export const FilterPage: NextPage = () => {
     formatUpdate,
     areas,
     areaUpdate,
-    provider,
-    providerUpdate,
+    // provider,
+    // providerUpdate,
     clearAll,
   } = useContext(FilterContext)
 
@@ -223,7 +223,7 @@ export const FilterPage: NextPage = () => {
             </RadioGroup>
           </fieldset>
         </FilterSection>
-        <FilterSection borderBottom>
+        {/* <FilterSection borderBottom>
           <fieldset>
             <legend>Provider</legend>
             <VerticalSpacing size={1} />
@@ -241,7 +241,7 @@ export const FilterPage: NextPage = () => {
               })}
             </RadioGroup>
           </fieldset>
-        </FilterSection>
+        </FilterSection> */}
         <FilterSection borderBottom>
           <fieldset>
             <legend>Format of Support / Activity</legend>
