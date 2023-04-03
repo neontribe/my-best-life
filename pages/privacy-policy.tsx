@@ -56,35 +56,6 @@ const Text = styled.p`
   text-align: left;
 `
 
-const CookieButton = styled.a`
-  align-items: center;
-  background-color: ${(props) => props.theme.colours.blue};
-  border-radius: 5rem;
-  color: ${(props) => props.theme.colours.white};
-  display: flex;
-  font-family: 'Catamaran', sans-serif;
-  font-size: ${(props) => props.theme.fontSizes.highlight};
-  font-weight: bold;
-  justify-content: center;
-  margin-bottom: 1em;
-  margin-top: 0.5em;
-  max-width: 300px;
-  padding: 0.5rem 1.2rem;
-  padding: 0.5rem;
-  position: relative;
-  text-decoration: none;
-
-  &:hover {
-    background-color: ${(props) => props.theme.colours.purple};
-    transition: 0.3s background-color, 0.3s color;
-  }
-
-  &:focus {
-    outline: 2px dashed ${(props) => props.theme.colours.blue};
-    outline-offset: 2px;
-  }
-`
-
 export const PrivacyPage: NextPage<PrivacyPageProps> = ({ content }) => {
   return (
     <Layout>
@@ -97,9 +68,10 @@ export const PrivacyPage: NextPage<PrivacyPageProps> = ({ content }) => {
           Cookies are files saved on your phone, tablet or computer when you
           visit a website.
         </Text>
-        <CookieButton href="/cookies">
-          Manage my cookie preferences
-        </CookieButton>
+        <Text>
+          We use essential cookies to remember your quiz answers and saved
+          events.
+        </Text>
       </Content>
     </Layout>
   )

@@ -116,4 +116,4 @@ For more information, check out Netlify's docs on [working with a local git repo
 
 This program is distributed under the GNU GPLv3 licence, see the [LICENSE](/LICENSE) file for details.
 
-Copyright (c) 2022 New Philanthropy Capital
+Copyright (c) 2023 Mind Of My Own

@@ -1,4 +1,4 @@
-import { useState, useRef, useContext } from 'react'
+import { useContext } from 'react'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
@@ -14,16 +14,11 @@ import { VisuallyHidden } from '../../src/Components/VisuallyHidden'
 import { MyBestLifeTheme } from '../../src/Theme'
 import { formatAgeDisplay } from '../../src/Components/Card'
 import { MapLink } from '../../src/Components/MapLink'
-import { ReviewDisplay } from '../../src/Components/ReviewDisplay'
 import { SaveButton } from '../../src/Components/SaveButton'
 import { SaveContext } from '../../src/context/SaveContext'
-import { FiveStar } from '../../src/Components/FiveStar'
-import { Checkbox } from '../../src/Components/Checkbox'
 import { ButtonBase } from '../../src/Components/ButtonBase'
 import { LinkButton } from '../../src/Components/LinkButton'
 import { VerticalSpacing } from '../../src/Components/VerticalSpacing'
-
-import { NotificationsContext } from '../../src/context/NotificationsContext'
 
 interface ServicePageProps {
   serviceData: ServiceDetail
@@ -143,25 +138,6 @@ const ContactLink = styled.a`
   }
 `
 
-const TextInput = styled.textarea`
-  border: 1px solid ${(props) => props.theme.colours.blue};
-  border-radius: 0.25rem;
-  padding: 0.5rem;
-  resize: none;
-  width: 100%;
-
-  &:focus {
-    outline: 2px dashed ${(props) => props.theme.colours.blue};
-    outline-offset: 2px;
-  }
-`
-
-const SubmitButtonContainer = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-`
-
 const TimeTable = styled.table`
   th {
     text-align: left;
@@ -172,98 +148,9 @@ const TimeTable = styled.table`
   }
 `
 
-interface ReviewState {
-  rating?: number
-  usedService: boolean
-  comment?: string
-}
-
 export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
   const { saved } = useContext(SaveContext)
-  const { notify } = useContext(NotificationsContext)
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [lastSubmission, setLastSubmission] = useState(0)
-  const rateLimit = 30 * 1000
   const router = useRouter()
-
-  const initialReviewState = {
-    rating: undefined,
-    usedService: false,
-    comment: undefined,
-  }
-
-  const [reviewState, setReviewState] =
-    useState<ReviewState>(initialReviewState)
-
-  const commentInputRef = useRef<HTMLTextAreaElement | null>(null)
-
-  const onRatingChange = (v: number) =>
-    setReviewState((s: ReviewState) => ({ ...s, rating: v }))
-
-  const onUsedServiceChange = () =>
-    setReviewState((s: ReviewState) => ({
-      ...s,
-      usedService: !s.usedService,
-    }))
-
-  const onCommentChange = (v: string) =>
-    setReviewState((s: ReviewState) => ({ ...s, comment: v }))
-
-  const clearForm = () => {
-    setReviewState(initialReviewState)
-    if (commentInputRef.current) commentInputRef.current.value = ''
-  }
-
-  const submitReview = () => {
-    if (isSubmitting) {
-      return
-    }
-
-    if (Date.now() - lastSubmission < rateLimit) {
-      notify({
-        msg: 'You are doing that too much, try again later',
-        time: 5000,
-      })
-      return
-    }
-
-    const postOK = () => {
-      notify({
-        msg: 'Thank you for submitting your review!',
-        time: 5000,
-      })
-      clearForm()
-      setLastSubmission(Date.now())
-    }
-
-    const postErr = () => {
-      notify({
-        msg: 'Sorry, there was an error submitting your review',
-        time: 5000,
-      })
-    }
-
-    setIsSubmitting(true)
-    fetch('/api/review', {
-      method: 'POST',
-      body: JSON.stringify({
-        ...reviewState,
-        serviceId: serviceData.id,
-      }),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    })
-      .then((res: Response) => {
-        if (res.ok) postOK()
-        else postErr()
-        setIsSubmitting(false)
-      })
-      .catch(() => {
-        postErr()
-        setIsSubmitting(false)
-      })
-  }
 
   return (
     <Layout hideNav>
@@ -394,16 +281,6 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
             ) : null}
           </Section>
 
-          {/*  Young person quotation and Reviews */}
-          {serviceData.reviews && serviceData.reviews.length > 0 ? (
-            <Section divider={MyBestLifeTheme.colours.aqua}>
-              <Heading as="h2">What do other people say?</Heading>
-              {serviceData.reviews.map((data, i) => {
-                return <ReviewDisplay data={data} key={i} />
-              })}
-            </Section>
-          ) : null}
-
           {/* Expectation info */}
           {serviceData.expectation ? (
             <Section divider={MyBestLifeTheme.colours.aqua}>
@@ -467,53 +344,6 @@ export const ServicePage = ({ serviceData }: ServicePageProps): JSX.Element => {
                 </>
               ) : null}
             </ContactList>
-          </Section>
-
-          <Section divider={'transparent'}>
-            <Heading as="h3">
-              <label htmlFor="reviewBody">Leave a review</label>
-            </Heading>
-            <TextInput
-              id="reviewBody"
-              rows={5}
-              onChange={(e) => onCommentChange(e.target.value)}
-              ref={commentInputRef}
-            />
-            <VerticalSpacing size={1} />
-            <FiveStar
-              currentRating={reviewState.rating}
-              onChange={onRatingChange}
-            />
-            <VerticalSpacing />
-            <Checkbox
-              singleCheckbox
-              label={
-                <span>
-                  I confirm that I am over 13 years old, the review is my own
-                  genuine experience and I have read the{' '}
-                  <a
-                    href="/privacy-policy"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    privacy policy
-                  </a>
-                  .
-                </span>
-              }
-              checked={reviewState.usedService}
-              onChange={onUsedServiceChange}
-            />
-            <VerticalSpacing />
-            <SubmitButtonContainer>
-              <ButtonBase
-                as="button"
-                onClick={submitReview}
-                disabled={!reviewState.usedService}
-              >
-                <span>{isSubmitting ? 'Posting...' : 'Post review'}</span>
-              </ButtonBase>
-            </SubmitButtonContainer>
           </Section>
         </Content>
       </main>

@@ -58,12 +58,6 @@ export default class MyDocument extends Document {
             type="font/ttf"
             crossOrigin="anonymous"
           />
-          <script
-            async
-            defer
-            data-domain="mybestlife.app"
-            src="https://plausible.io/js/script.outbound-links.js"
-          ></script>
         </Head>
         <body>
           <Main />

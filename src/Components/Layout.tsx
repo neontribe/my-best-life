@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
-import { CookieBanner } from './CookieBanner'
 import { HeaderComponent } from './Header'
 import { StickyNavBar } from './StickyNavBar'
 
@@ -28,20 +27,28 @@ export const Content = styled.div`
 `
 
 export const Layout = ({ children, hideNav }: LayoutProps): JSX.Element => {
-  // Check cookies haven't already been selected and if so don't show banner
-  const [showCookieBanner, setCookieBanner] = useState<boolean>()
-
   useEffect(() => {
-    // Try and find cookie preference in local storage
-    const stored = window.localStorage.getItem('hotjarCookiesAccepted')
+    // This site previously used Hotjar cookies, which we want to remove for any users now visiting the site
+    document.cookie.split(';').forEach((entry) => {
+      document.cookie = entry
+        // strip out spaces
+        .replace(/^ +/, '')
+        // replace expiry date with now
+        .replace(/=.*/, '=;expires=' + new Date().toUTCString() + ';path=/')
+    })
 
-    // If it is stored then setCookieBanner should be false, if it is not stored then we set true to show it
-    stored ? setCookieBanner(false) : setCookieBanner(true)
-  }, [showCookieBanner])
+    // HotJar also sets data into local and session storage
+    localStorage.removeItem('_hjUserAttributes')
+    sessionStorage.removeItem('hjViewportId')
+    sessionStorage.removeItem('_hjRecordingLastActivity')
+    sessionStorage.removeItem('_hjRecordingEnabled')
+
+    // Remove our local storage flag, if present
+    localStorage.removeItem('hotjarCookiesAccepted')
+  }, [])
 
   return (
     <PageLayout hideNav={hideNav || false}>
-      {showCookieBanner ? <CookieBanner /> : <></>}
       {!hideNav && <HeaderComponent />}
       {children}
       {!hideNav && <StickyNavBar />}
